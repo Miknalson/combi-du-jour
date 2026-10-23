@@ -23,6 +23,7 @@ LEAGUES = {
     'soccer_uefa_europa_league': 'UEL',
     'soccer_uefa_europa_conference_league': 'UECL',
 }
+EXCHANGES = {'betfair_ex_eu', 'betfair_ex_uk', 'matchbook', 'smarkets', 'betfair'}
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 
 
@@ -67,7 +68,8 @@ def summarise(event, league):
                 for oc in mk['outcomes']:
                     k = '1' if oc['name'] == home else '2' if oc['name'] == away else 'X'
                     h2h[k].append(oc['price'])
-                    if oc['price'] > best.get(k, {}).get('odds', 0):
+                    # exchanges quote before commission, so they don't count as the best bookmaker price
+                    if bk['key'] not in EXCHANGES and oc['price'] > best.get(k, {}).get('odds', 0):
                         best[k] = {'odds': oc['price'], 'book': bk['title']}
             elif mk['key'] == 'totals':
                 for oc in mk['outcomes']:
