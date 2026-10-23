@@ -1,27 +1,77 @@
 {
  "date": "2026-10-30",
- "updatedAt": "2026-10-23T17:00:00Z",
- "source": "oddsportal.com (cotes moyennes 1N2)",
+ "updatedAt": "2026-10-23T21:39:57Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
-   "id": "l1-le-havre-psg",
+   "id": "l1-le-havre-paris-saint-germain",
    "league": "L1",
    "kickoff": "2026-10-30T18:00Z",
    "home": "Le Havre",
-   "away": "PSG",
-   "o1": 10.0,
-   "oX": 6.5,
-   "o2": 1.25
+   "away": "Paris Saint Germain",
+   "o1": 10.021,
+   "oX": 6.594,
+   "o2": 1.228,
+   "best": {
+    "1": {
+     "odds": 11.5,
+     "book": "Betfair"
+    },
+    "2": {
+     "odds": 1.27,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 7.5,
+     "book": "Tipico"
+    }
+   },
+   "books": 18,
+   "ou": {
+    "3.5": {
+     "o": 1.838,
+     "u": 1.923
+    },
+    "2.5": {
+     "o": 1.32,
+     "u": 3.357
+    }
+   }
   },
   {
-   "id": "bl-elversberg-mainz",
+   "id": "bl-elversberg-fsv-mainz-05",
    "league": "BL",
    "kickoff": "2026-10-30T19:30Z",
    "home": "Elversberg",
-   "away": "Mainz",
-   "o1": 3.2,
-   "oX": 4.0,
-   "o2": 2.05
+   "away": "FSV Mainz 05",
+   "o1": 3.166,
+   "oX": 3.707,
+   "o2": 2.031,
+   "best": {
+    "1": {
+     "odds": 3.5,
+     "book": "Tipico"
+    },
+    "2": {
+     "odds": 2.18,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 4.07,
+     "book": "1xBet"
+    }
+   },
+   "books": 17,
+   "ou": {
+    "3.5": {
+     "o": 2.265,
+     "u": 1.652
+    },
+    "2.5": {
+     "o": 1.541,
+     "u": 2.397
+    }
+   }
   },
   {
    "id": "liga-villarreal-espanyol",
@@ -29,19 +79,92 @@
    "kickoff": "2026-10-30T20:00Z",
    "home": "Villarreal",
    "away": "Espanyol",
-   "o1": 1.57,
-   "oX": 4.5,
-   "o2": 5.5
+   "o1": 1.536,
+   "oX": 4.275,
+   "o2": 5.273,
+   "best": {
+    "2": {
+     "odds": 5.75,
+     "book": "Unibet (NL)"
+    },
+    "1": {
+     "odds": 1.6,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.62,
+     "book": "1xBet"
+    }
+   },
+   "books": 15,
+   "ou": {
+    "2.5": {
+     "o": 1.586,
+     "u": 2.323
+    }
+   }
   },
   {
-   "id": "l1-lille-lens",
+   "id": "l1-lille-rc-lens",
    "league": "L1",
    "kickoff": "2026-10-30T20:05Z",
    "home": "Lille",
-   "away": "Lens",
-   "o1": 2.3,
-   "oX": 3.6,
-   "o2": 2.95
+   "away": "RC Lens",
+   "o1": 2.186,
+   "oX": 3.421,
+   "o2": 2.818,
+   "best": {
+    "1": {
+     "odds": 2.45,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 3.1,
+     "book": "Tipico"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "LeoVegas (SE)"
+    }
+   },
+   "books": 18,
+   "ou": {
+    "2.5": {
+     "o": 1.675,
+     "u": 2.149
+    }
+   }
+  },
+  {
+   "id": "por-casa-pia-sporting-lisbon",
+   "league": "POR",
+   "kickoff": "2026-10-30T20:15Z",
+   "home": "Casa Pia",
+   "away": "Sporting Lisbon",
+   "o1": 11.0,
+   "oX": 5.713,
+   "o2": 1.182,
+   "best": {
+    "1": {
+     "odds": 11.0,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 1.19,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 5.75,
+     "book": "Unibet (NL)"
+    }
+   },
+   "books": 4,
+   "ou": {
+    "3.5": {
+     "o": 2.27,
+     "u": 1.52
+    }
+   }
   }
  ]
 }

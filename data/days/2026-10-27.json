@@ -1,7 +1,7 @@
 {
  "date": "2026-10-27",
- "updatedAt": "2026-10-23T17:00:00Z",
- "source": "oddsportal.com (cotes moyennes 1N2)",
+ "updatedAt": "2026-10-23T21:39:57Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
    "id": "sa-sassuolo-lazio",
@@ -9,29 +9,92 @@
    "kickoff": "2026-10-27T17:30Z",
    "home": "Sassuolo",
    "away": "Lazio",
-   "o1": 2.85,
-   "oX": 3.4,
-   "o2": 2.45
+   "o1": 2.829,
+   "oX": 3.416,
+   "o2": 2.38,
+   "best": {
+    "2": {
+     "odds": 2.53,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.98,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.65,
+     "book": "Betfair"
+    }
+   },
+   "books": 21,
+   "ou": {
+    "2.5": {
+     "o": 1.725,
+     "u": 2.088
+    }
+   }
   },
   {
-   "id": "sa-as-rome-cagliari",
+   "id": "sa-as-roma-cagliari",
    "league": "SA",
    "kickoff": "2026-10-27T19:45Z",
-   "home": "AS Rome",
+   "home": "AS Roma",
    "away": "Cagliari",
-   "o1": 1.36,
-   "oX": 5.0,
-   "o2": 9.0
+   "o1": 1.339,
+   "oX": 4.835,
+   "o2": 8.605,
+   "best": {
+    "1": {
+     "odds": 1.4,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 10.0,
+     "book": "Tipico"
+    },
+    "X": {
+     "odds": 5.2,
+     "book": "1xBet"
+    }
+   },
+   "books": 21,
+   "ou": {
+    "2.5": {
+     "o": 1.694,
+     "u": 2.121
+    }
+   }
   },
   {
-   "id": "sa-torino-come",
+   "id": "sa-torino-como",
    "league": "SA",
    "kickoff": "2026-10-27T19:45Z",
    "home": "Torino",
-   "away": "Côme",
-   "o1": 4.5,
-   "oX": 3.6,
-   "o2": 1.76
+   "away": "Como",
+   "o1": 4.453,
+   "oX": 3.68,
+   "o2": 1.752,
+   "best": {
+    "2": {
+     "odds": 1.83,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 4.9,
+     "book": "BetOnline.ag"
+    },
+    "X": {
+     "odds": 3.9,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 21,
+   "ou": {
+    "2.5": {
+     "o": 1.723,
+     "u": 2.098
+    }
+   }
   }
  ]
 }

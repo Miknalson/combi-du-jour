@@ -1,7 +1,7 @@
 {
  "date": "2026-10-29",
- "updatedAt": "2026-10-23T17:00:00Z",
- "source": "oddsportal.com (cotes moyennes 1N2)",
+ "updatedAt": "2026-10-23T21:39:57Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
    "id": "sa-frosinone-lecce",
@@ -9,19 +9,65 @@
    "kickoff": "2026-10-29T17:30Z",
    "home": "Frosinone",
    "away": "Lecce",
-   "o1": 1.93,
-   "oX": 3.6,
-   "o2": 3.8
+   "o1": 1.864,
+   "oX": 3.697,
+   "o2": 3.735,
+   "best": {
+    "1": {
+     "odds": 1.97,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 4.05,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.95,
+     "book": "Unibet (NL)"
+    }
+   },
+   "books": 19,
+   "ou": {
+    "3.5": {
+     "o": 2.41,
+     "u": 1.605
+    },
+    "2.5": {
+     "o": 1.546,
+     "u": 2.393
+    }
+   }
   },
   {
-   "id": "sa-fiorentina-atalanta",
+   "id": "sa-fiorentina-atalanta-bc",
    "league": "SA",
    "kickoff": "2026-10-29T19:45Z",
    "home": "Fiorentina",
-   "away": "Atalanta",
-   "o1": 2.3,
-   "oX": 3.5,
-   "o2": 3.0
+   "away": "Atalanta BC",
+   "o1": 2.235,
+   "oX": 3.47,
+   "o2": 2.982,
+   "best": {
+    "2": {
+     "odds": 3.1,
+     "book": "Tipico"
+    },
+    "1": {
+     "odds": 2.4,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.69,
+     "book": "1xBet"
+    }
+   },
+   "books": 19,
+   "ou": {
+    "2.5": {
+     "o": 1.699,
+     "u": 2.124
+    }
+   }
   }
  ]
 }
