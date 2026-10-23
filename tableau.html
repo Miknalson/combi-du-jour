@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tableau de bord · Combiné du Jour</title>
+<meta name="theme-color" content="#17222B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Combiné">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi .lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);font-weight:600}
+.kpi .val{font-family:var(--f-display);font-weight:800;font-size:32px;line-height:1.05}
+.kpi .note{font-size:12px;color:var(--ink-2)}
+.pos{color:var(--good)} .neg{color:var(--bad)}
+.bank{display:flex;gap:12px;align-items:end;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.bank input{width:140px;background:var(--surface-2);border:1px solid var(--line);border-radius:7px;padding:8px 10px}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{font-family:var(--f-mono);font-size:11px;fill:var(--ink-3)}
+.cmp td.num,.cmp th{text-align:right}
+.cmp td:first-child,.cmp th:first-child{text-align:left}
+.chip{display:inline-block;font-family:var(--f-mono);font-size:10.5px;font-weight:600;border-radius:4px;padding:1px 6px;letter-spacing:.04em}
+.chip.algo{background:var(--accent-soft);color:var(--accent)}
+.chip.perso{background:var(--surface-2);color:var(--ink-2)}
+.legline{font-size:13px;color:var(--ink-2)}
+.legline .ok{color:var(--good);font-weight:700} .legline .ko{color:var(--bad);font-weight:700}
+.acts{display:flex;gap:6px;flex-wrap:wrap}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.verdict{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div>
+      <div class="kicker">Suivi de mes paris</div>
+      <h1>Tableau de bord</h1>
+    </div>
+    <nav class="nav" aria-label="Pages"><a href="./">Combiné</a><a href="tableau.html" aria-current="page">Tableau de bord</a></nav>
+  </header>
+
+  <form class="bank" id="bankForm">
+    <div class="field"><label for="bankStart">Bankroll de départ (€)</label><input type="number" id="bankStart" step="any" min="0" inputmode="decimal" placeholder="ex. 100"></div>
+    <button type="submit" class="btn small">Enregistrer</button>
+    <span class="status" id="bankNote"></span>
+  </form>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+    <div class="head"><h2>Évolution de la bankroll</h2><div class="hint">Après chaque pari terminé, dans l'ordre des matchs.</div></div>
+    <div class="chart" id="chart"></div>
+  </section>
+
+  <section>
+    <div class="head"><h2>L'algo marche-t-il ?</h2><div class="hint">Compare les combinés proposés par l'algo à tes propres tickets, et le nombre de tickets gagnés à celui que les probabilités annonçaient.</div></div>
+    <div class="tbl-wrap"><table class="cmp">
+      <thead><tr><th></th><th>Paris</th><th>Gagnés</th><th>Gagnés attendus</th><th>Misé</th><th>Gain net</th><th>ROI</th></tr></thead>
+      <tbody id="cmpRows"></tbody>
+    </table></div>
+    <p class="verdict" id="verdict" style="margin-top:12px"></p>
+  </section>
+
+  <section>
+    <div class="head"><h2>Mes paris</h2><div class="hint">Le résultat se met à jour tout seul avec les scores. Tu peux aussi le fixer à la main.</div></div>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Date</th><th>Sélections</th><th>Cote</th><th>Mise</th><th>Résultat</th><th></th></tr></thead>
+      <tbody id="betRows"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <div class="head"><h2>Sauvegarde</h2><div class="hint">Tes paris sont enregistrés sur cet appareil seulement. Exporte-les de temps en temps pour ne rien perdre.</div></div>
+    <div class="tools">
+      <button type="button" class="btn ghost small" id="exportBtn">Exporter mes paris</button>
+      <label class="btn ghost small" for="importFile" style="display:inline-block">Importer un fichier</label>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+      <span class="status" id="toolNote"></span>
+    </div>
+  </section>
+
+  <footer>
+    <span>Un ticket est gagné quand toutes ses sélections passent, au score du temps réglementaire. Le gain net d'un ticket gagné vaut mise × (cote − 1).</span>
+    <span>« Gagnés attendus » additionne les probabilités estimées de chaque ticket : si l'algo est bien calibré, les deux colonnes se rapprochent avec le temps. Il faut plusieurs dizaines de tickets avant de pouvoir conclure quoi que ce soit.</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+var TZ = 'Europe/Paris';
+var store = {
+  get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
+  set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
+};
+var matches = {}; // matchId -> match from the data files
+
+function esc(s){ return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+function eur(x){ return x.toLocaleString('fr-FR',{style:'currency',currency:'EUR'}); }
+function signed(x){ return (x>0?'+':'')+eur(x); }
+function pct(p){ return (p*100).toFixed(0)+' %'; }
+function odds(o){ return o.toFixed(2).replace('.',','); }
+function day(iso){ return new Date(iso).toLocaleDateString('fr-FR',{timeZone:TZ,weekday:'short',day:'numeric',month:'short'}); }
+
+// Same bet codes as the main page: 1, X, 2, 1X, X2, O2.5, U3.5…
+function settle(code, h, a){
+  if(code==='1') return h>a;
+  if(code==='2') return h<a;
+  if(code==='X') return h===a;
+  if(code==='1X') return h>=a;
+  if(code==='X2') return h<=a;
+  var L = parseFloat(code.slice(1));
+  if(code[0]==='O') return h+a>L;
+  if(code[0]==='U') return h+a<L;
+  return null;
+}
+function legState(l){
+  var m = matches[l.matchId];
+  if(!m || !m.score) return null;
+  var s = String(m.score).split('-').map(Number);
+  if(s.length!==2 || !isFinite(s[0]) || !isFinite(s[1])) return null;
+  return {ok: settle(l.code, s[0], s[1]), score: m.score};
+}
+function betState(b){
+  if(b.manual) return b.manual;
+  var done = true, lost = false;
+  b.legs.forEach(function(l){ var st = legState(l); if(!st) done = false; else if(!st.ok) lost = true; });
+  return lost ? 'lost' : (done ? 'won' : 'wait');
+}
+function net(b, st){ return st==='won' ? b.stake*(b.odds-1) : st==='lost' ? -b.stake : 0; }
+function lastKick(b){ return b.legs.reduce(function(a,l){ return l.kickoff>a ? l.kickoff : a; }, ''); }
+
+function render(){
+  var bets = store.get('bets', []);
+  var start = store.get('bankStart', null);
+  var bs = document.getElementById('bankStart');
+  if(document.activeElement !== bs) bs.value = start===null ? '' : start;
+
+  var rows = bets.map(function(b){ var st = betState(b); return {b:b, st:st, net:net(b,st)}; });
+  var settled = rows.filter(function(r){ return r.st!=='wait'; });
+  var profit = settled.reduce(function(a,r){ return a+r.net; },0);
+  var staked = settled.reduce(function(a,r){ return a+r.b.stake; },0);
+  var pending = rows.filter(function(r){ return r.st==='wait'; }).reduce(function(a,r){ return a+r.b.stake; },0);
+  var won = settled.filter(function(r){ return r.st==='won'; }).length;
+  var bank = (start||0) + profit;
+
+  document.getElementById('bankNote').textContent = start===null ? 'Indique ta mise de départ pour suivre ta bankroll.' : '';
+  document.getElementById('kpis').innerHTML =
+    kpi('Bankroll', start===null ? '—' : eur(bank), start===null ? 'mise de départ non renseignée' : 'départ '+eur(start)+(start>0?' · '+(bank>=start?'+':'')+((bank/start-1)*100).toFixed(1).replace('.',',')+' %':''), start===null?'':(bank>=start?'pos':'neg')) +
+    kpi('Gain net', signed(profit), settled.length+' pari'+(settled.length>1?'s':'')+' terminé'+(settled.length>1?'s':''), profit>0?'pos':profit<0?'neg':'') +
+    kpi('Réussite', settled.length ? pct(won/settled.length) : '—', won+' gagné'+(won>1?'s':'')+' sur '+settled.length) +
+    kpi('En jeu', eur(pending), rows.length-settled.length+' pari'+(rows.length-settled.length>1?'s':'')+' en attente');
+
+  renderChart(settled, start||0);
+  renderCompare(rows);
+  renderBets(rows);
+}
+function kpi(lab, val, note, cls){
+  return '<div class="kpi"><div class="lab">'+lab+'</div><div class="val mono '+(cls||'')+'">'+val+'</div><div class="note">'+note+'</div></div>';
+}
+
+function renderChart(settled, start){
+  var pts = settled.slice().sort(function(a,b){ return lastKick(a.b)<lastKick(b.b)?-1:1; });
+  var el = document.getElementById('chart');
+  if(!pts.length){ el.innerHTML = '<div class="empty">La courbe apparaîtra après ton premier pari terminé.</div>'; return; }
+  var vals=[start], v=start;
+  pts.forEach(function(r){ v+=r.net; vals.push(v); });
+  var W=640, H=220, L=56, R=12, T=14, B=26;
+  var lo=Math.min.apply(null,vals), hi=Math.max.apply(null,vals);
+  if(hi===lo){ hi+=1; lo-=1; }
+  var pad=(hi-lo)*0.1; lo-=pad; hi+=pad;
+  function x(i){ return L + (W-L-R)*(vals.length===1?0:i/(vals.length-1)); }
+  function y(val){ return T + (H-T-B)*(1-(val-lo)/(hi-lo)); }
+  var line = vals.map(function(val,i){ return (i?'L':'M')+x(i).toFixed(1)+' '+y(val).toFixed(1); }).join(' ');
+  var area = line+' L'+x(vals.length-1).toFixed(1)+' '+(H-B)+' L'+x(0).toFixed(1)+' '+(H-B)+' Z';
+  var ticks = [lo+pad, (lo+hi)/2, hi-pad];
+  var last = vals[vals.length-1], col = last>=start ? 'var(--good)' : 'var(--bad)';
+  el.innerHTML = '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Bankroll de '+eur(start)+' à '+eur(last)+'">' +
+    ticks.map(function(t){ return '<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(t)+'" y2="'+y(t)+'" stroke="var(--line)" stroke-width="1"/><text x="'+(L-8)+'" y="'+(y(t)+4)+'" text-anchor="end">'+Math.round(t)+' €</text>'; }).join('') +
+    '<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(start)+'" y2="'+y(start)+'" stroke="var(--ink-3)" stroke-dasharray="4 4" stroke-width="1"/>' +
+    '<path d="'+area+'" fill="var(--accent-soft)" stroke="none"/>' +
+    '<path d="'+line+'" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>' +
+    '<circle cx="'+x(vals.length-1)+'" cy="'+y(last)+'" r="5" fill="'+col+'" stroke="var(--surface)" stroke-width="2"/>' +
+    '<text x="'+L+'" y="'+(H-6)+'">départ</text><text x="'+(W-R)+'" y="'+(H-6)+'" text-anchor="end">'+pts.length+' pari'+(pts.length>1?'s':'')+'</text>' +
+    '</svg>';
+}
+
+function renderCompare(rows){
+  function agg(list){
+    var s = list.filter(function(r){ return r.st!=='wait'; });
+    var staked = s.reduce(function(a,r){ return a+r.b.stake; },0), n = s.reduce(function(a,r){ return a+r.net; },0);
+    return {n:s.length, won:s.filter(function(r){ return r.st==='won'; }).length,
+      exp:s.reduce(function(a,r){ return a+(r.b.estProb||0); },0), staked:staked, net:n, roi: staked ? n/staked : null};
+  }
+  var groups = [['Combinés de l\'algo', rows.filter(function(r){ return r.b.source==='algo'; })],
+                ['Mes tickets', rows.filter(function(r){ return r.b.source!=='algo'; })],
+                ['Total', rows]];
+  var res = {};
+  document.getElementById('cmpRows').innerHTML = groups.map(function(g){
+    var a = agg(g[1]); res[g[0]] = a;
+    return '<tr'+(g[0]==='Total'?' style="font-weight:700"':'')+'><td>'+g[0]+'</td><td class="num">'+a.n+'</td><td class="num">'+a.won+'</td><td class="num">'+a.exp.toFixed(1).replace('.',',')+'</td>' +
+      '<td class="num">'+eur(a.staked)+'</td><td class="num '+(a.net>0?'pos':a.net<0?'neg':'')+'">'+signed(a.net)+'</td><td class="num">'+(a.roi===null?'—':(a.roi>0?'+':'')+(a.roi*100).toFixed(1).replace('.',',')+' %')+'</td></tr>';
+  }).join('');
+  var al = res['Combinés de l\'algo'], v;
+  if(al.n < 10) v = 'Pas encore assez de combinés de l\'algo terminés ('+al.n+' sur 10 minimum) pour juger. Avec une chance de gain autour de 30 %, une série de 5 ou 6 tickets perdus d\'affilée arrive souvent et ne prouve rien.';
+  else {
+    var diff = al.won - al.exp;
+    v = 'Sur '+al.n+' combinés de l\'algo, '+al.won+' sont passés pour '+al.exp.toFixed(1).replace('.',',')+' attendus. ' +
+      (Math.abs(diff) <= Math.max(2, Math.sqrt(al.exp)) ? 'C\'est dans la fourchette normale : les probabilités annoncées tiennent la route.' :
+       diff > 0 ? 'C\'est mieux que prévu, mais une bonne série peut l\'expliquer : continue de suivre.' :
+       'C\'est en dessous de ce qui était annoncé : les probabilités affichées sont peut-être trop optimistes.') +
+      ' ROI : '+(al.roi>0?'+':'')+(al.roi*100).toFixed(1).replace('.',',')+' %.';
+  }
+  document.getElementById('verdict').textContent = v;
+}
+
+function renderBets(rows){
+  var html = rows.slice().sort(function(a,b){ return a.b.createdAt<b.b.createdAt?1:-1; }).map(function(r){
+    var b = r.b;
+    var legs = b.legs.map(function(l){
+      var st = legState(l);
+      return '<div class="legline">'+esc(l.home)+' – '+esc(l.away)+' : <strong>'+esc(l.label)+'</strong>'+(st?' <span class="'+(st.ok?'ok':'ko')+'">'+esc(st.score)+(st.ok?' ✓':' ✗')+'</span>':'')+'</div>';
+    }).join('');
+    var badge = r.st==='won' ? '<span class="badge won">Gagné '+signed(r.net)+'</span>' : r.st==='lost' ? '<span class="badge lost">Perdu '+signed(r.net)+'</span>' : '<span class="badge wait">En attente</span>';
+    return '<tr><td style="white-space:nowrap">'+esc(day(b.legs[0] ? b.legs[0].kickoff : b.createdAt))+'<br><span class="chip '+(b.source==='algo'?'algo':'perso')+'">'+(b.source==='algo'?'ALGO':'PERSO')+'</span></td>' +
+      '<td>'+legs+'</td><td class="num">'+odds(b.odds)+'<br><span class="status">'+pct(b.estProb||0)+'</span></td><td class="num">'+eur(b.stake)+'</td>' +
+      '<td>'+badge+(b.manual?'<br><span class="status">fixé à la main</span>':'')+'</td>' +
+      '<td><div class="acts" data-id="'+b.id+'">' +
+        (b.manual ? '<button type="button" class="btn ghost small" data-act="auto">Auto</button>' :
+          '<button type="button" class="btn ghost small" data-act="won">Gagné</button><button type="button" class="btn ghost small" data-act="lost">Perdu</button>') +
+        '<button type="button" class="btn ghost small" data-act="del">Suppr.</button></div></td></tr>';
+  }).join('');
+  document.getElementById('betRows').innerHTML = html || '<tr><td colspan="6"><div class="empty">Aucun pari pour l\'instant. Sur la page Combiné, choisis tes sélections dans « Mon ticket » ou touche « Jouer ce combiné », puis valide avec ta mise.</div></td></tr>';
+}
+
+document.getElementById('betRows').addEventListener('click', function(e){
+  var btn = e.target.closest('button[data-act]'); if(!btn) return;
+  var id = btn.parentElement.dataset.id, act = btn.dataset.act;
+  if(act==='del' && btn.dataset.armed!=='1'){
+    btn.dataset.armed='1'; btn.textContent='Confirmer'; btn.classList.remove('ghost');
+    setTimeout(function(){ if(btn.isConnected){ btn.dataset.armed=''; btn.textContent='Suppr.'; btn.classList.add('ghost'); } }, 3000);
+    return;
+  }
+  var bets = store.get('bets', []);
+  bets = act==='del' ? bets.filter(function(b){ return b.id!==id; }) :
+    bets.map(function(b){ if(b.id===id) b.manual = act==='auto' ? null : act; return b; });
+  store.set('bets', bets); render();
+});
+document.getElementById('bankForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var v = parseFloat(document.getElementById('bankStart').value.replace(',','.'));
+  store.set('bankStart', isFinite(v) && v>=0 ? v : null);
+  document.getElementById('bankStart').blur(); render();
+});
+document.getElementById('exportBtn').addEventListener('click', function(){
+  var data = JSON.stringify({app:'combine-du-jour', exportedAt:new Date().toISOString(), bankStart:store.get('bankStart',null), bets:store.get('bets',[])}, null, 1);
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([data],{type:'application/json'}));
+  a.download = 'mes-paris-'+new Date().toISOString().slice(0,10)+'.json';
+  document.body.appendChild(a); a.click(); a.remove();
+  document.getElementById('toolNote').textContent = 'Fichier exporté.';
+});
+document.getElementById('importFile').addEventListener('change', function(){
+  var f = this.files && this.files[0]; if(!f) return;
+  var note = document.getElementById('toolNote');
+  f.text().then(function(t){
+    var d = JSON.parse(t);
+    if(!d || !Array.isArray(d.bets)) throw new Error('format');
+    var cur = store.get('bets', []), ids = {};
+    cur.forEach(function(b){ ids[b.id]=true; });
+    var added = d.bets.filter(function(b){ return b && b.id && !ids[b.id]; });
+    store.set('bets', cur.concat(added));
+    if(store.get('bankStart', null)===null && d.bankStart!==null && d.bankStart!==undefined) store.set('bankStart', d.bankStart);
+    note.textContent = added.length+' pari'+(added.length>1?'s':'')+' importé'+(added.length>1?'s':'')+'.';
+    render();
+  }).catch(function(){ note.textContent = 'Ce fichier n\'est pas une sauvegarde de l\'appli.'; });
+  this.value = '';
+});
+
+// Scores come from the same data files as the main page.
+render();
+(async function(){
+  try{
+    var idx = await (await fetch('data/index.json',{cache:'no-store'})).json();
+    var need = {};
+    store.get('bets',[]).forEach(function(b){ b.legs.forEach(function(l){ need[l.date]=true; }); });
+    var dates = (idx.dates||[]).filter(function(d){ return need[d]; });
+    var docs = await Promise.all(dates.map(function(d){ return fetch('data/days/'+d+'.json',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }); }));
+    docs.forEach(function(doc){ if(doc) doc.matches.forEach(function(m){ matches[m.id]=m; }); });
+    render();
+  }catch(e){ /* scores unavailable: bets stay pending, manual results still work */ }
+})();
+})();
+</script>
+</body>
+</html>
