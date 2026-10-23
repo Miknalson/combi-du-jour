@@ -117,6 +117,9 @@ def main():
                    commenceTimeTo=horizon.strftime('%Y-%m-%dT%H:%M:%SZ'))
         n = 0
         for ev in odds:
+            # in-play prices (e.g. 1.01 / 41 / 51) would distort the model, and started matches are frozen
+            if datetime.datetime.fromisoformat(ev['commence_time'].replace('Z', '+00:00')) <= now:
+                continue
             res = summarise(ev, league)
             if res:
                 fresh.setdefault(res[1], []).append(res[0]); n += 1
