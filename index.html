@@ -435,11 +435,16 @@ function renderDays(){
   document.getElementById('days').innerHTML = html || '<span class="status">Aucun match à venir dans les données.</span>';
 }
 
+// Best single-bookmaker price for a 1/N/2 leg, when the data has it.
+function bestOf(l){
+  var b = l.match.best && l.match.best[l.code];
+  return b && b.odds > l.o ? b : null;
+}
 function legRow(l){
-  var m=l.match;
+  var m=l.match, b=bestOf(l);
   return '<li class="leg"><div class="when"><b>'+hhmm(m.kickoff)+'</b>'+esc(m.league)+'</div>' +
     '<div class="match"><span class="lg">'+esc(LEAGUES[m.league]||m.league)+'</span><br>'+esc(m.home)+' – '+esc(m.away)+legBadge(l) +
-    '<div class="pick">Pari : <strong>'+esc(l.label)+'</strong></div></div>' +
+    '<div class="pick">Pari : <strong>'+esc(l.label)+'</strong>'+(b?' · meilleure cote <strong>'+odds(b.odds)+'</strong> chez '+esc(b.book):'')+'</div></div>' +
     '<div class="nums"><b>'+(l.est?'≈':'')+odds(l.o)+'</b><br>'+pct(l.p)+'</div></li>';
 }
 
@@ -463,6 +468,7 @@ function renderTicket(dayMatches){
       '<div class="fig"><div class="lab">Probabilité estimée</div><div class="val prob mono">'+pct(c.prob)+'</div><div class="note">environ 1 chance sur '+n+'</div></div>' +
     '</div></div><ol class="legs">'+c.legs.map(legRow).join('')+'</ol>' +
     '<div class="ticket-foot"><div class="meter" role="img" aria-label="Probabilité estimée '+pct(c.prob)+'"><i style="width:'+(c.prob*100).toFixed(1)+'%;background:var(--accent)"></i></div>' +
+    (function(){ var bo=c.legs.reduce(function(a,l){ var b=bestOf(l); return a*(b?b.odds:l.o); },1); return bo>c.odds+0.005 ? '<span>En jouant chaque match chez le bookmaker le mieux placé, la cote monte à <strong class="mono">'+odds(bo)+'</strong>.</span>' : ''; })() +
     '<span>La cote '+odds(c.odds)+' annonce '+pct(bookP)+' de chances marge comprise. Une fois la marge retirée, l\'estimation tombe à '+pct(c.prob)+'. Sur 10 jours joués avec ce type de combiné, compte environ '+Math.round(c.prob*10)+' tickets gagnants.</span></div></article>';
   area.innerHTML = html;
 
