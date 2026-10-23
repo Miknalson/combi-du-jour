@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Combiné du Jour</title>
+<meta name="theme-color" content="#17222B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Combiné">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
 /* Layout: same match-sheet identity as Feuille de Match. Day strip, then the ticket (the combo), then settings, matches and history. */
@@ -165,12 +173,13 @@ footer{font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--line);padd
       <div class="field"><label for="oMax">Cote maxi</label><input type="number" id="oMax" step="0.1" min="1.5" max="50" value="5"></div>
       <div class="field"><label for="minLegs">Matchs minimum</label><select id="minLegs"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
       <div class="field"><label for="maxLegs">Matchs maximum</label><select id="maxLegs"><option>2</option><option>3</option><option>4</option><option selected>5</option></select></div>
-      <div class="field"><label for="minLeg">Cote mini par match</label><input type="number" id="minLeg" step="0.05" min="1.01" max="3" value="1.15"></div>
+      <div class="field"><label for="minLeg">Cote mini par match</label><input type="number" id="minLeg" step="0.05" min="1.01" max="3" value="1.10"></div>
       <div class="field wide"><span class="lab">Types de paris</span>
         <div class="checks">
           <label><input type="checkbox" id="mWin" checked> Victoire (1 ou 2)</label>
           <label><input type="checkbox" id="mDc" checked> Double chance (1N, N2)</label>
           <label><input type="checkbox" id="mDraw"> Match nul</label>
+          <label><input type="checkbox" id="mGoals" checked> Buts (plus/moins 0,5 à 4,5)</label>
         </div>
       </div>
       <div class="field wide"><span class="lab">Championnats</span><div class="checks" id="leagueChecks"></div></div>
@@ -202,7 +211,7 @@ footer{font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--line);padd
 
   <footer>
     <span id="sourceLine">Source des cotes : —</span>
-    <span>Méthode : probabilités 1N2 calculées par la méthode « puissance » (retire la marge du bookmaker en corrigeant le biais favori/outsider). Les cotes de double chance sont estimées à partir des cotes 1N2 et signalées par ≈ : vérifie-les chez ton bookmaker. Les matchs sont supposés indépendants. Les cotes bougent jusqu'au coup d'envoi.</span>
+    <span>Méthode : probabilités 1N2 calculées par la méthode « puissance » (retire la marge du bookmaker en corrigeant le biais favori/outsider). Les buts sont estimés par une loi de Poisson ajustée sur les cotes 1N2 de chaque match. Les cotes de double chance et de buts sont estimées (marge de 5 % supposée) et signalées par ≈ : vérifie-les chez ton bookmaker. Les matchs sont supposés indépendants. Les cotes bougent jusqu'au coup d'envoi.</span>
   </footer>
 </div>
 
@@ -222,7 +231,7 @@ var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
-var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.15,mWin:true,mDc:true,mDraw:false,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,mWin:true,mDc:true,mDraw:false,mGoals:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
 var excluded = store.get('excluded',{});
 
 function bindSettings(){
@@ -234,7 +243,7 @@ function bindSettings(){
   ml.addEventListener('change', function(){ settings.maxLegs=parseInt(ml.value,10); saveRender(); });
   var mn = document.getElementById('minLegs'); mn.value = String(settings.minLegs);
   mn.addEventListener('change', function(){ settings.minLegs=parseInt(mn.value,10); saveRender(); });
-  ['mWin','mDc','mDraw','skipStarted'].forEach(function(id){
+  ['mWin','mDc','mDraw','mGoals','skipStarted'].forEach(function(id){
     var el = document.getElementById(id); el.checked = !!settings[id];
     el.addEventListener('change', function(){ settings[id]=el.checked; saveRender(); });
   });
@@ -265,25 +274,61 @@ function devig(o1,oX,o2){
   return { p:p.map(function(x){return x/t;}), margin:inv[0]+inv[1]+inv[2]-1 };
 }
 
-function outcomeOf(m){
+function scoreOf(m){
   if(!m.score) return null;
   var s = String(m.score).split('-').map(Number);
   if(s.length!==2 || !isFinite(s[0]) || !isFinite(s[1])) return null;
-  return s[0]>s[1] ? '1' : (s[0]<s[1] ? '2' : 'X');
+  return s;
 }
+
+// Goals model: fit home/away Poisson means so the score grid reproduces the de-vigged 1N2 probabilities.
+function pois(l){ var out=[], f=Math.exp(-l); for(var k=0;k<=10;k++){ out.push(f); f*=l/(k+1); } return out; }
+function grid(lh,la){
+  var a=pois(lh), b=pois(la), g=[];
+  for(var i=0;i<=10;i++){ g.push([]); for(var j=0;j<=10;j++) g[i].push(a[i]*b[j]); }
+  return g;
+}
+function hda(g){ var h=0,d=0,a=0; for(var i=0;i<=10;i++) for(var j=0;j<=10;j++){ if(i>j) h+=g[i][j]; else if(i===j) d+=g[i][j]; else a+=g[i][j]; } return [h,d,a]; }
+var lamCache={};
+function goalsModel(m, p){
+  var key=m.id+'|'+m.o1+'|'+m.oX+'|'+m.o2;
+  if(lamCache[key]) return lamCache[key];
+  function err(lh,la){ var r=hda(grid(lh,la)); return (r[0]-p[0])*(r[0]-p[0])+(r[2]-p[2])*(r[2]-p[2]); }
+  var best=[1.4,1.1], be=Infinity, lh, la, e;
+  for(lh=0.2;lh<=4.01;lh+=0.1) for(la=0.2;la<=4.01;la+=0.1){ e=err(lh,la); if(e<be){ be=e; best=[lh,la]; } }
+  var c=best.slice();
+  for(lh=c[0]-0.1;lh<=c[0]+0.101;lh+=0.01) for(la=c[1]-0.1;la<=c[1]+0.101;la+=0.01){ if(lh<=0.05||la<=0.05) continue; e=err(lh,la); if(e<be){ be=e; best=[lh,la]; } }
+  var g=grid(best[0],best[1]), tot=[];
+  for(var t=0;t<=20;t++) tot.push(0);
+  for(var i=0;i<=10;i++) for(var j=0;j<=10;j++) tot[i+j]+=g[i][j];
+  var over={};
+  [0.5,1.5,2.5,3.5,4.5].forEach(function(L){ var s=0; for(var t=Math.ceil(L);t<=20;t++) s+=tot[t]; over[L]=s; });
+  return lamCache[key]={lh:best[0], la:best[1], over:over};
+}
+function line(L){ return String(L).replace('.',','); }
 
 function candidates(m){
   var dv = devig(m.o1,m.oX,m.o2), p=dv.p, out=[];
   var implied = [1/m.o1, 1/m.oX, 1/m.o2];
-  function add(code,label,prob,o,est,wins){ out.push({match:m, code:code, label:label, p:prob, o:o, est:est, wins:wins}); }
+  function add(code,label,prob,o,est,win){ out.push({match:m, code:code, label:label, p:prob, o:o, est:est, win:win}); }
   if(settings.mWin){
-    add('1','Victoire '+m.home,p[0],m.o1,false,['1']);
-    add('2','Victoire '+m.away,p[2],m.o2,false,['2']);
+    add('1','Victoire '+m.home,p[0],m.o1,false,function(h,a){return h>a;});
+    add('2','Victoire '+m.away,p[2],m.o2,false,function(h,a){return h<a;});
   }
-  if(settings.mDraw) add('X','Match nul',p[1],m.oX,false,['X']);
+  if(settings.mDraw) add('X','Match nul',p[1],m.oX,false,function(h,a){return h===a;});
   if(settings.mDc){
-    add('1X',m.home+' ou nul',p[0]+p[1],1/(implied[0]+implied[1]),true,['1','X']);
-    add('X2','Nul ou '+m.away,p[1]+p[2],1/(implied[1]+implied[2]),true,['X','2']);
+    add('1X',m.home+' ou nul',p[0]+p[1],1/(implied[0]+implied[1]),true,function(h,a){return h>=a;});
+    add('X2','Nul ou '+m.away,p[1]+p[2],1/(implied[1]+implied[2]),true,function(h,a){return h<=a;});
+  }
+  if(settings.mGoals){
+    var gm = goalsModel(m,p), real = m.ou || {};
+    [0.5,1.5,2.5,3.5,4.5].forEach(function(L){
+      var po=gm.over[L], r=real[String(L)];
+      // Without a real price, assume a 5 % two-way bookmaker margin.
+      var oo = r && r.o ? r.o : 1/(po*1.05), ou = r && r.u ? r.u : 1/((1-po)*1.05);
+      add('O'+L,'Plus de '+line(L)+' buts',po,oo,!(r&&r.o),function(h,a){return h+a>L;});
+      add('U'+L,'Moins de '+line(L)+' buts',1-po,ou,!(r&&r.u),function(h,a){return h+a<L;});
+    });
   }
   return out;
 }
@@ -295,42 +340,69 @@ function eligible(m){
   return true;
 }
 
-// Pick at most maxLegs selections (one per match) whose odds product sits in [oMin,oMax]
-// and whose probability product is highest. Pre-filter by -ln(p)/ln(o): probability given up per unit of odds.
+// Exact search: for each day, a knapsack over matches (one bet per match at most) on log-odds,
+// discretised to 1/1000, maximising the summed log-probability. Alternatives drop one match of the best ticket.
 function bestCombos(matches, n, liveFilter){
-  var now = Date.now(), pool = [];
+  var now = Date.now(), groups = [];
   matches.forEach(function(m){
     if(!eligible(m)) return;
     if(liveFilter && settings.skipStarted && new Date(m.kickoff).getTime() <= now) return;
-    candidates(m).forEach(function(c){
-      if(c.o >= settings.minLeg && c.p > 0.2) pool.push(c);
-    });
+    var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p > 0.2; });
+    cs.forEach(function(c){ c.bin = Math.round(Math.log(c.o)*1000); c.lp = Math.log(c.p); });
+    if(cs.length) groups.push(cs);
   });
-  pool.forEach(function(c){ c.ratio = -Math.log(c.p)/Math.log(c.o); });
-  pool.sort(function(a,b){ return a.ratio-b.ratio; });
-  pool = pool.slice(0,30);
-  var lo=Math.log(settings.oMin), hi=Math.log(settings.oMax), maxL=settings.maxLegs, found=[];
-  function dfs(start, legs, lo2, lp, used){
-    if(legs.length>=Math.max(1,settings.minLegs) && lo2>=lo && lo2<=hi) found.push({legs:legs.slice(), lo:lo2, lp:lp});
-    if(legs.length>=maxL) return;
-    for(var i=start;i<pool.length;i++){
-      var c=pool[i], lc=Math.log(c.o);
-      if(used[c.match.id] || lo2+lc>hi+1e-9) continue;
-      used[c.match.id]=true; legs.push(c);
-      dfs(i+1, legs, lo2+lc, lp+Math.log(c.p), used);
-      legs.pop(); used[c.match.id]=false;
+  var LO = Math.round(Math.log(settings.oMin)*1000), HI = Math.round(Math.log(settings.oMax)*1000);
+  var maxL = Math.min(5, settings.maxLegs), minL = Math.max(1, settings.minLegs);
+  function solve(skipId){
+    var W = HI+1, dp = [], choice = [];
+    for(var k=0;k<=maxL;k++){ dp.push(new Float64Array(W).fill(-Infinity)); }
+    dp[0][0] = 0;
+    groups.forEach(function(cs, gi){
+      var layer = [];
+      for(var k=0;k<=maxL;k++) layer.push(new Int16Array(W).fill(-1));
+      choice.push(layer);
+      if(cs[0].match.id === skipId) return;
+      for(var k2=maxL-1;k2>=0;k2--){
+        var row = dp[k2], next = dp[k2+1], ch = layer[k2+1];
+        for(var b=W-1;b>=0;b--){
+          if(row[b] === -Infinity) continue;
+          for(var ci=0;ci<cs.length;ci++){
+            var nb = b + cs[ci].bin; if(nb > HI) continue;
+            var v = row[b] + cs[ci].lp;
+            if(v > next[nb]){ next[nb] = v; ch[nb] = ci; }
+          }
+        }
+      }
+    });
+    var best = null;
+    for(var k3=minL;k3<=maxL;k3++) for(var b2=LO;b2<=HI;b2++) if(dp[k3][b2] > -Infinity && (!best || dp[k3][b2] > best.v)) best = {v:dp[k3][b2], k:k3, b:b2};
+    if(!best) return null;
+    // walk back: the last layer that set (k,b) is the one that chose it
+    var legs = [], k4 = best.k, b4 = best.b;
+    for(var gi2=groups.length-1; gi2>=0 && k4>0; gi2--){
+      var ci2 = choice[gi2][k4][b4];
+      if(ci2 < 0) continue;
+      var c = groups[gi2][ci2];
+      legs.push(c); k4--; b4 -= c.bin;
     }
+    if(k4 !== 0 || b4 !== 0) return null;
+    var o = legs.reduce(function(a,c){ return a*c.o; },1), p = legs.reduce(function(a,c){ return a*c.p; },1);
+    legs.sort(function(a,c){ return a.match.kickoff<c.match.kickoff?-1:1; });
+    return {legs:legs, odds:o, prob:p};
   }
-  dfs(0, [], 0, 0, {});
-  found.sort(function(a,b){ return b.lp-a.lp; });
-  // keep combos that differ in their set of matches
-  var out=[], seen={};
-  for(var i=0;i<found.length && out.length<n;i++){
-    var key = found[i].legs.map(function(l){return l.match.id;}).sort().join('|');
-    if(seen[key]) continue; seen[key]=true;
-    var f=found[i];
-    f.legs.sort(function(a,b){ return a.match.kickoff<b.match.kickoff?-1:1; });
-    out.push({legs:f.legs, odds:Math.exp(f.lo), prob:Math.exp(f.lp)});
+  var first = solve(null);
+  if(!first) return [];
+  var out = [first];
+  if(n > 1){
+    var alts = [], seen = {};
+    seen[first.legs.map(function(l){return l.match.id;}).sort().join('|')] = true;
+    first.legs.forEach(function(l){
+      var a = solve(l.match.id); if(!a) return;
+      var key = a.legs.map(function(x){return x.match.id;}).sort().join('|');
+      if(!seen[key]){ seen[key]=true; alts.push(a); }
+    });
+    alts.sort(function(a,b){ return b.prob-a.prob; });
+    out = out.concat(alts.slice(0,n-1));
   }
   return out;
 }
@@ -338,14 +410,14 @@ function bestCombos(matches, n, liveFilter){
 function comboResult(c){
   var allDone=true, lost=false;
   c.legs.forEach(function(l){
-    var r=outcomeOf(l.match);
-    if(r===null) allDone=false; else if(l.wins.indexOf(r)<0) lost=true;
+    var sc=scoreOf(l.match);
+    if(sc===null) allDone=false; else if(!l.win(sc[0],sc[1])) lost=true;
   });
   return lost ? 'lost' : (allDone ? 'won' : 'wait');
 }
 function legBadge(l){
-  var r=outcomeOf(l.match); if(r===null) return '';
-  var ok=l.wins.indexOf(r)>-1;
+  var sc=scoreOf(l.match); if(sc===null) return '';
+  var ok=l.win(sc[0],sc[1]);
   return '<span class="res '+(ok?'won':'lost')+'">'+esc(l.match.score)+(ok?' ✓':' ✗')+'</span>';
 }
 
@@ -417,7 +489,8 @@ function renderMatches(dayMatches, combo){
       '<td class="num">'+hhmm(m.kickoff)+'</td>' +
       '<td><span class="lg">'+esc(m.league)+'</span>'+esc(m.home)+' – '+esc(m.away)+(m.score?' <span class="mono">('+esc(m.score)+')</span>':'')+'</td>' +
       '<td><div class="split" title="'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'"><span style="width:'+(p[0]*100)+'%;background:var(--home)"></span><span style="width:'+(p[1]*100)+'%;background:var(--draw)"></span><span style="width:'+(p[2]*100)+'%;background:var(--away)"></span></div>' +
-        '<div class="mono" style="font-size:11.5px;color:var(--ink-2);margin-top:3px">'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'</div></td>' +
+        '<div class="mono" style="font-size:11.5px;color:var(--ink-2);margin-top:3px">'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'</div>' +
+        (function(){ var gm=goalsModel(m,p); return '<div class="mono" style="font-size:11.5px;color:var(--ink-3)">+1,5 : '+pct(gm.over[1.5])+' · +2,5 : '+pct(gm.over[2.5])+'</div>'; })() + '</td>' +
       '<td class="num">'+odds(m.o1)+' · '+odds(m.oX)+' · '+odds(m.o2)+'</td>' +
       '<td>'+(best?esc(best.label)+' <span class="mono" style="color:var(--ink-2)">'+pct(best.p)+'</span>':'—')+'</td>' +
       '<td>'+(leagueOff?'<span class="status">ligue masquée</span>':'<button type="button" class="toggle" data-id="'+esc(m.id)+'" aria-pressed="'+(!excluded[m.id])+'">'+(excluded[m.id]?'Retiré':'Inclus')+'</button>')+'</td></tr>';
