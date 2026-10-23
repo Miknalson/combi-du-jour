@@ -1,0 +1,327 @@
+{
+ "date": "2026-10-25",
+ "updatedAt": "2026-10-23T16:55:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "ere-fortuna-sittard-excelsior",
+   "league": "ERE",
+   "kickoff": "2026-10-25T11:15Z",
+   "home": "Fortuna Sittard",
+   "away": "Excelsior",
+   "o1": 2.4,
+   "oX": 3.7,
+   "o2": 2.88
+  },
+  {
+   "id": "sa-inter-fiorentina",
+   "league": "SA",
+   "kickoff": "2026-10-25T11:30Z",
+   "home": "Inter",
+   "away": "Fiorentina",
+   "o1": 1.37,
+   "oX": 5.5,
+   "o2": 9.0
+  },
+  {
+   "id": "liga-athletic-bilbao-getafe",
+   "league": "LIGA",
+   "kickoff": "2026-10-25T13:00Z",
+   "home": "Athletic Bilbao",
+   "away": "Getafe",
+   "o1": 1.58,
+   "oX": 4.0,
+   "o2": 6.5
+  },
+  {
+   "id": "ere-psv-feyenoord",
+   "league": "ERE",
+   "kickoff": "2026-10-25T13:30Z",
+   "home": "PSV",
+   "away": "Feyenoord",
+   "o1": 2.05,
+   "oX": 4.2,
+   "o2": 3.25
+  },
+  {
+   "id": "ere-nec-nimegue-groningen",
+   "league": "ERE",
+   "kickoff": "2026-10-25T13:30Z",
+   "home": "NEC Nimègue",
+   "away": "Groningen",
+   "o1": 2.3,
+   "oX": 4.0,
+   "o2": 2.8
+  },
+  {
+   "id": "pl-manchester-utd-bournemouth",
+   "league": "PL",
+   "kickoff": "2026-10-25T14:00Z",
+   "home": "Manchester Utd",
+   "away": "Bournemouth",
+   "o1": 2.15,
+   "oX": 3.7,
+   "o2": 3.3
+  },
+  {
+   "id": "pl-hull-brentford",
+   "league": "PL",
+   "kickoff": "2026-10-25T14:00Z",
+   "home": "Hull",
+   "away": "Brentford",
+   "o1": 5.0,
+   "oX": 4.1,
+   "o2": 1.72
+  },
+  {
+   "id": "pl-liverpool-brighton",
+   "league": "PL",
+   "kickoff": "2026-10-25T14:00Z",
+   "home": "Liverpool",
+   "away": "Brighton",
+   "o1": 2.15,
+   "oX": 3.9,
+   "o2": 3.25
+  },
+  {
+   "id": "pl-crystal-palace-newcastle",
+   "league": "PL",
+   "kickoff": "2026-10-25T14:00Z",
+   "home": "Crystal Palace",
+   "away": "Newcastle",
+   "o1": 3.0,
+   "oX": 3.7,
+   "o2": 2.3
+  },
+  {
+   "id": "sa-atalanta-frosinone",
+   "league": "SA",
+   "kickoff": "2026-10-25T14:00Z",
+   "home": "Atalanta",
+   "away": "Frosinone",
+   "o1": 1.8,
+   "oX": 4.2,
+   "o2": 4.33
+  },
+  {
+   "id": "sa-genoa-venise",
+   "league": "SA",
+   "kickoff": "2026-10-25T14:00Z",
+   "home": "Genoa",
+   "away": "Venise",
+   "o1": 2.1,
+   "oX": 3.4,
+   "o2": 3.7
+  },
+  {
+   "id": "l1-monaco-lille",
+   "league": "L1",
+   "kickoff": "2026-10-25T14:00Z",
+   "home": "Monaco",
+   "away": "Lille",
+   "o1": 2.05,
+   "oX": 3.5,
+   "o2": 3.8
+  },
+  {
+   "id": "bl-hoffenheim-leverkusen",
+   "league": "BL",
+   "kickoff": "2026-10-25T14:30Z",
+   "home": "Hoffenheim",
+   "away": "Leverkusen",
+   "o1": 2.88,
+   "oX": 4.0,
+   "o2": 2.3
+  },
+  {
+   "id": "liga-celta-vigo-betis",
+   "league": "LIGA",
+   "kickoff": "2026-10-25T15:15Z",
+   "home": "Celta Vigo",
+   "away": "Betis",
+   "o1": 3.0,
+   "oX": 3.45,
+   "o2": 2.4
+  },
+  {
+   "id": "por-estoril-moreirense",
+   "league": "POR",
+   "kickoff": "2026-10-25T15:30Z",
+   "home": "Estoril",
+   "away": "Moreirense",
+   "o1": 1.95,
+   "oX": 3.6,
+   "o2": 4.0
+  },
+  {
+   "id": "ere-sparta-rotterdam-ajax",
+   "league": "ERE",
+   "kickoff": "2026-10-25T15:45Z",
+   "home": "Sparta Rotterdam",
+   "away": "Ajax",
+   "o1": 5.5,
+   "oX": 4.75,
+   "o2": 1.55
+  },
+  {
+   "id": "l1-angers-lorient",
+   "league": "L1",
+   "kickoff": "2026-10-25T16:15Z",
+   "home": "Angers",
+   "away": "Lorient",
+   "o1": 3.1,
+   "oX": 3.4,
+   "o2": 2.5
+  },
+  {
+   "id": "l1-auxerre-le-mans",
+   "league": "L1",
+   "kickoff": "2026-10-25T16:15Z",
+   "home": "Auxerre",
+   "away": "Le Mans",
+   "o1": 2.15,
+   "oX": 3.7,
+   "o2": 3.7
+  },
+  {
+   "id": "l1-marseille-le-havre",
+   "league": "L1",
+   "kickoff": "2026-10-25T16:15Z",
+   "home": "Marseille",
+   "away": "Le Havre",
+   "o1": 1.58,
+   "oX": 4.7,
+   "o2": 5.25
+  },
+  {
+   "id": "l1-rennes-strasbourg",
+   "league": "L1",
+   "kickoff": "2026-10-25T16:15Z",
+   "home": "Rennes",
+   "away": "Strasbourg",
+   "o1": 1.76,
+   "oX": 4.5,
+   "o2": 4.1
+  },
+  {
+   "id": "l1-toulouse-troyes",
+   "league": "L1",
+   "kickoff": "2026-10-25T16:15Z",
+   "home": "Toulouse",
+   "away": "Troyes",
+   "o1": 1.63,
+   "oX": 4.3,
+   "o2": 5.5
+  },
+  {
+   "id": "bl-fribourg-bayern-munich",
+   "league": "BL",
+   "kickoff": "2026-10-25T16:30Z",
+   "home": "Fribourg",
+   "away": "Bayern Munich",
+   "o1": 7.0,
+   "oX": 6.25,
+   "o2": 1.39
+  },
+  {
+   "id": "pl-sunderland-leeds",
+   "league": "PL",
+   "kickoff": "2026-10-25T16:30Z",
+   "home": "Sunderland",
+   "away": "Leeds",
+   "o1": 3.2,
+   "oX": 3.3,
+   "o2": 2.4
+  },
+  {
+   "id": "sa-lecce-juventus",
+   "league": "SA",
+   "kickoff": "2026-10-25T17:00Z",
+   "home": "Lecce",
+   "away": "Juventus",
+   "o1": 8.0,
+   "oX": 4.4,
+   "o2": 1.46
+  },
+  {
+   "id": "liga-real-sociedad-levante",
+   "league": "LIGA",
+   "kickoff": "2026-10-25T17:30Z",
+   "home": "Real Sociedad",
+   "away": "Levante",
+   "o1": 1.66,
+   "oX": 4.5,
+   "o2": 5.1
+  },
+  {
+   "id": "por-nacional-braga",
+   "league": "POR",
+   "kickoff": "2026-10-25T18:00Z",
+   "home": "Nacional",
+   "away": "Braga",
+   "o1": 6.0,
+   "oX": 4.1,
+   "o2": 1.57
+  },
+  {
+   "id": "por-rio-ave-famalicao",
+   "league": "POR",
+   "kickoff": "2026-10-25T18:00Z",
+   "home": "Rio Ave",
+   "away": "Famalicão",
+   "o1": 3.8,
+   "oX": 3.3,
+   "o2": 2.05
+  },
+  {
+   "id": "ere-az-alkmaar-twente",
+   "league": "ERE",
+   "kickoff": "2026-10-25T19:00Z",
+   "home": "AZ Alkmaar",
+   "away": "Twente",
+   "o1": 2.25,
+   "oX": 3.9,
+   "o2": 3.0
+  },
+  {
+   "id": "sa-udinese-ac-milan",
+   "league": "SA",
+   "kickoff": "2026-10-25T19:45Z",
+   "home": "Udinese",
+   "away": "AC Milan",
+   "o1": 5.25,
+   "oX": 3.8,
+   "o2": 1.7
+  },
+  {
+   "id": "l1-psg-lyon",
+   "league": "L1",
+   "kickoff": "2026-10-25T19:45Z",
+   "home": "PSG",
+   "away": "Lyon",
+   "o1": 1.46,
+   "oX": 5.25,
+   "o2": 6.5
+  },
+  {
+   "id": "liga-barcelone-real-madrid",
+   "league": "LIGA",
+   "kickoff": "2026-10-25T20:00Z",
+   "home": "Barcelone",
+   "away": "Real Madrid",
+   "o1": 1.62,
+   "oX": 5.75,
+   "o2": 4.2
+  },
+  {
+   "id": "por-sporting-cp-academico-viseu",
+   "league": "POR",
+   "kickoff": "2026-10-25T20:30Z",
+   "home": "Sporting CP",
+   "away": "Académico Viseu",
+   "o1": 1.24,
+   "oX": 6.5,
+   "o2": 11.0
+  }
+ ]
+}

@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Combiné du Jour</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: same match-sheet identity as Feuille de Match. Day strip, then the ticket (the combo), then settings, matches and history. */
+:root{
+  --bg:#F4F1E8; --surface:#FFFFFF; --surface-2:#ECE7D8; --line:#D8D2BE;
+  --ink:#17222B; --ink-2:#55636D; --ink-3:#83919A;
+  --accent:#C6821F; --accent-soft:rgba(198,130,31,0.14);
+  --home:#C6821F; --draw:#1D63B0; --away:#2E8B57;
+  --good:#2E8B57; --good-soft:rgba(46,139,87,0.14); --bad:#B4472B; --bad-soft:rgba(180,71,43,0.12);
+  --shadow:0 1px 2px rgba(23,34,43,0.06), 0 8px 24px -12px rgba(23,34,43,0.18);
+  --f-display:'Big Shoulders Display','Arial Narrow',sans-serif;
+  --f-body:'Source Sans 3',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1116; --surface:#131A21; --surface-2:#1B2530; --line:#2A3540;
+    --ink:#ECE7DA; --ink-2:#9AA7B0; --ink-3:#6C7982;
+    --accent:#E3A03A; --accent-soft:rgba(227,160,58,0.16);
+    --home:#BC8228; --draw:#4C8AD1; --away:#2F9C6E;
+    --good:#3FB080; --good-soft:rgba(63,176,128,0.16); --bad:#D9694A; --bad-soft:rgba(217,105,74,0.15);
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.5);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1116; --surface:#131A21; --surface-2:#1B2530; --line:#2A3540;
+  --ink:#ECE7DA; --ink-2:#9AA7B0; --ink-3:#6C7982;
+  --accent:#E3A03A; --accent-soft:rgba(227,160,58,0.16);
+  --home:#BC8228; --draw:#4C8AD1; --away:#2F9C6E;
+  --good:#3FB080; --good-soft:rgba(63,176,128,0.16); --bad:#D9694A; --bad-soft:rgba(217,105,74,0.15);
+  --shadow:0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.5);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);line-height:1.5;font-size:15px}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance;margin:0}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.wrap{max-width:980px;margin:0 auto;padding-block:24px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+button,select,input{font-family:inherit;font-size:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.masthead h1{font-size:clamp(32px,6vw,48px);line-height:.95;margin-top:4px}
+.status{font-family:var(--f-mono);font-size:12px;color:var(--ink-3);text-align:right}
+.status b{color:var(--ink-2);font-weight:500}
+
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.day{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:8px 14px;cursor:pointer;text-align:left;display:flex;flex-direction:column;line-height:1.15}
+.day .d1{font-family:var(--f-display);font-weight:800;font-size:18px;text-transform:uppercase}
+.day .d2{font-size:11.5px;color:var(--ink-3)}
+.day[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.day[aria-pressed="true"] .d2{color:var(--bg);opacity:.75}
+.day.past .d1::after{content:" ·";color:var(--ink-3)}
+
+/* The ticket */
+.ticket{background:var(--surface);border:1.5px solid var(--accent);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.ticket-head{display:grid;grid-template-columns:1fr auto;gap:20px;padding:20px 22px;background:var(--accent-soft);align-items:end}
+@media (max-width:640px){.ticket-head{grid-template-columns:1fr}}
+.ticket-head h2{font-size:24px}
+.ticket-head .sub{font-size:13px;color:var(--ink-2);margin-top:2px}
+.figures{display:flex;gap:26px;flex-wrap:wrap}
+.fig .lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);font-weight:600}
+.fig .val{font-family:var(--f-display);font-weight:800;font-size:44px;line-height:1}
+.fig .val.prob{color:var(--accent)}
+.fig .note{font-size:12px;color:var(--ink-2)}
+.legs{list-style:none;margin:0;padding:0}
+.leg{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 22px;border-top:1px solid var(--line)}
+.leg .when{font-family:var(--f-mono);font-size:12px;color:var(--ink-3);line-height:1.3}
+.leg .when b{display:block;color:var(--ink);font-size:14px;font-weight:600}
+.leg .match{font-weight:600;min-width:0}
+.leg .pick{font-size:13.5px;color:var(--ink-2)}
+.leg .pick strong{color:var(--ink)}
+.leg .nums{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums;font-size:13px;color:var(--ink-2);line-height:1.35}
+.leg .nums b{color:var(--ink);font-size:16px}
+.lg{display:inline-block;font-family:var(--f-mono);font-size:10.5px;font-weight:600;letter-spacing:.04em;border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-right:6px;color:var(--ink-2);vertical-align:1px}
+.res{font-family:var(--f-mono);font-size:11px;font-weight:600;border-radius:20px;padding:1px 8px;margin-left:6px}
+.res.won{background:var(--good-soft);color:var(--good)}
+.res.lost{background:var(--bad-soft);color:var(--bad)}
+.ticket-foot{padding:14px 22px;border-top:1px dashed var(--line);font-size:13px;color:var(--ink-2);display:flex;flex-direction:column;gap:6px}
+.meter{height:10px;border-radius:5px;background:var(--surface-2);overflow:hidden;display:flex}
+.meter i{display:block;height:100%}
+.empty{border:1.5px dashed var(--line);border-radius:10px;padding:30px 20px;text-align:center;color:var(--ink-2);background:var(--surface-2)}
+
+.alts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.alts{grid-template-columns:1fr}}
+.alt{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.alt .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.alt .top .p{font-family:var(--f-display);font-size:26px;font-weight:800;color:var(--accent)}
+.alt ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-2)}
+.alt ul strong{color:var(--ink)}
+
+section > .head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+section > .head h2{font-size:22px}
+section > .head .hint{font-size:13px;color:var(--ink-2);max-width:52ch}
+
+.settings{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+@media (max-width:760px){.settings{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.field label,.field .lab{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);font-weight:600;margin-bottom:5px}
+.field input[type=number],.field select{width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:7px;padding:8px 10px}
+.checks{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:13.5px}
+.checks label{display:flex;align-items:center;gap:5px;text-transform:none;letter-spacing:0;font-size:13.5px;color:var(--ink);font-weight:500;margin:0}
+.settings .wide{grid-column:span 5}
+@media (max-width:760px){.settings .wide{grid-column:1/-1}}
+
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);font-weight:600;padding:10px 10px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.in-combo td{background:var(--accent-soft)}
+tr.off td{opacity:.45}
+.split{display:flex;height:16px;border-radius:4px;overflow:hidden;min-width:120px}
+.split span{display:block;height:100%}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--ink-2);margin-top:8px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.toggle{border:1px solid var(--line);background:var(--surface-2);border-radius:6px;padding:3px 9px;font-size:12px;cursor:pointer;white-space:nowrap}
+.toggle[aria-pressed="false"]{color:var(--ink-3)}
+
+.hist-sum{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:12px}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap}
+.badge.won{background:var(--good-soft);color:var(--good)}
+.badge.lost{background:var(--bad-soft);color:var(--bad)}
+.badge.wait{background:var(--surface-2);color:var(--ink-3)}
+
+.warn{background:var(--bad-soft);border:1px solid var(--bad);color:var(--ink);border-radius:10px;padding:14px 16px;font-size:13.5px;display:flex;flex-direction:column;gap:6px}
+.warn strong{color:var(--bad)}
+footer{font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:6px;max-width:80ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div>
+      <div class="kicker">Combiné quotidien · 7 championnats européens</div>
+      <h1>Combiné du Jour</h1>
+    </div>
+    <div class="status" id="status">Chargement des matchs…</div>
+  </header>
+
+  <nav class="days" id="days" aria-label="Choisir le jour"></nav>
+
+  <div id="ticketArea"><div class="empty">Chargement des matchs et des cotes…</div></div>
+
+  <section id="altsSection" hidden>
+    <div class="head"><h2>Autres combinaisons</h2><div class="hint">Les meilleures options suivantes dans la même fourchette de cote.</div></div>
+    <div class="alts" id="alts"></div>
+  </section>
+
+  <section>
+    <div class="head"><h2>Réglages</h2><div class="hint">Enregistrés sur cet appareil.</div></div>
+    <div class="settings">
+      <div class="field"><label for="oMin">Cote mini</label><input type="number" id="oMin" step="0.1" min="1.5" max="20" value="3"></div>
+      <div class="field"><label for="oMax">Cote maxi</label><input type="number" id="oMax" step="0.1" min="1.5" max="50" value="5"></div>
+      <div class="field"><label for="minLegs">Matchs minimum</label><select id="minLegs"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+      <div class="field"><label for="maxLegs">Matchs maximum</label><select id="maxLegs"><option>2</option><option>3</option><option>4</option><option selected>5</option></select></div>
+      <div class="field"><label for="minLeg">Cote mini par match</label><input type="number" id="minLeg" step="0.05" min="1.01" max="3" value="1.15"></div>
+      <div class="field wide"><span class="lab">Types de paris</span>
+        <div class="checks">
+          <label><input type="checkbox" id="mWin" checked> Victoire (1 ou 2)</label>
+          <label><input type="checkbox" id="mDc" checked> Double chance (1N, N2)</label>
+          <label><input type="checkbox" id="mDraw"> Match nul</label>
+        </div>
+      </div>
+      <div class="field wide"><span class="lab">Championnats</span><div class="checks" id="leagueChecks"></div></div>
+      <div class="field wide"><span class="lab">Options</span>
+        <div class="checks"><label><input type="checkbox" id="skipStarted" checked> Ignorer les matchs déjà commencés</label></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><h2>Tous les matchs du jour</h2><div class="hint">Probabilités tirées des cotes, marge du bookmaker retirée. Retire un match si tu ne veux pas le jouer.</div></div>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Heure</th><th>Match</th><th>1 · N · 2</th><th>Cotes</th><th>Meilleur choix</th><th></th></tr></thead>
+      <tbody id="matchRows"></tbody>
+    </table></div>
+    <div class="legend"><span><i style="background:var(--home)"></i>Domicile</span><span><i style="background:var(--draw)"></i>Nul</span><span><i style="background:var(--away)"></i>Extérieur</span></div>
+  </section>
+
+  <section>
+    <div class="head"><h2>Historique</h2><div class="hint">Le combiné que l'appli aurait proposé chaque jour passé, avec les mêmes réglages, et s'il est passé.</div></div>
+    <div id="history"></div>
+  </section>
+
+  <div class="warn">
+    <strong>À lire avant de jouer</strong>
+    <span>Une cote entre 3 et 5 correspond à une chance de gain de l'ordre de 20 à 33 %. Aucun combiné dans cette fourchette n'a une probabilité « forte » au sens de plus d'une chance sur deux : la plupart des jours, il sera perdant.</span>
+    <span>Les probabilités viennent des cotes du marché, qui sont la meilleure estimation publique disponible. Le bookmaker garde sa marge sur chaque match, donc sur le long terme un combiné perd de l'argent en moyenne. Mise uniquement ce que tu acceptes de perdre. Besoin d'aide : Joueurs Info Service, 09 74 75 13 13 (appel non surtaxé).</span>
+  </div>
+
+  <footer>
+    <span id="sourceLine">Source des cotes : —</span>
+    <span>Méthode : probabilités 1N2 calculées par la méthode « puissance » (retire la marge du bookmaker en corrigeant le biais favori/outsider). Les cotes de double chance sont estimées à partir des cotes 1N2 et signalées par ≈ : vérifie-les chez ton bookmaker. Les matchs sont supposés indépendants. Les cotes bougent jusqu'au coup d'envoi.</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var LEAGUES = {
+  PL:'Premier League', LIGA:'LaLiga', SA:'Serie A', BL:'Bundesliga', L1:'Ligue 1',
+  ERE:'Eredivisie', POR:'Liga Portugal', UCL:'Ligue des champions', UEL:'Ligue Europa', UECL:'Conference League'
+};
+var TZ = 'Europe/Paris';
+var state = { days:{}, selected:null, loaded:false };
+
+// ---------- per-device settings ----------
+var store = {
+  get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
+  set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
+};
+var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.15,mWin:true,mDc:true,mDraw:false,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var excluded = store.get('excluded',{});
+
+function bindSettings(){
+  ['oMin','oMax','minLeg'].forEach(function(id){
+    var el = document.getElementById(id); el.value = settings[id];
+    el.addEventListener('change', function(){ var v=parseFloat(el.value); if(isFinite(v)){ settings[id]=v; saveRender(); } });
+  });
+  var ml = document.getElementById('maxLegs'); ml.value = String(settings.maxLegs);
+  ml.addEventListener('change', function(){ settings.maxLegs=parseInt(ml.value,10); saveRender(); });
+  var mn = document.getElementById('minLegs'); mn.value = String(settings.minLegs);
+  mn.addEventListener('change', function(){ settings.minLegs=parseInt(mn.value,10); saveRender(); });
+  ['mWin','mDc','mDraw','skipStarted'].forEach(function(id){
+    var el = document.getElementById(id); el.checked = !!settings[id];
+    el.addEventListener('change', function(){ settings[id]=el.checked; saveRender(); });
+  });
+}
+function saveRender(){ store.set('settings', settings); render(); }
+
+// ---------- helpers ----------
+function esc(s){ return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+function pct(p,dp){ return (p*100).toFixed(dp===undefined?0:dp).replace('.',',')+' %'; }
+function odds(o){ return o.toFixed(2).replace('.',','); }
+function parisDate(d){ return new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d); }
+function hhmm(iso){ return new Date(iso).toLocaleTimeString('fr-FR',{timeZone:TZ,hour:'2-digit',minute:'2-digit'}); }
+function dayLabel(date){
+  var d = new Date(date+'T12:00:00Z');
+  return { d1:d.toLocaleDateString('fr-FR',{weekday:'short',timeZone:'UTC'}).replace('.',''),
+           d2:d.toLocaleDateString('fr-FR',{day:'numeric',month:'short',timeZone:'UTC'}) };
+}
+function longDay(date){ return new Date(date+'T12:00:00Z').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'}); }
+
+// Power de-vig: p_i = (1/o_i)^k with k chosen so the three sum to 1.
+function devig(o1,oX,o2){
+  var inv=[1/o1,1/oX,1/o2], lo=0.5, hi=3;
+  for(var it=0;it<60;it++){
+    var k=(lo+hi)/2, s=inv[0]**k+inv[1]**k+inv[2]**k;
+    if(s>1) lo=k; else hi=k;
+  }
+  var k2=(lo+hi)/2, p=inv.map(function(x){return x**k2;}), t=p[0]+p[1]+p[2];
+  return { p:p.map(function(x){return x/t;}), margin:inv[0]+inv[1]+inv[2]-1 };
+}
+
+function outcomeOf(m){
+  if(!m.score) return null;
+  var s = String(m.score).split('-').map(Number);
+  if(s.length!==2 || !isFinite(s[0]) || !isFinite(s[1])) return null;
+  return s[0]>s[1] ? '1' : (s[0]<s[1] ? '2' : 'X');
+}
+
+function candidates(m){
+  var dv = devig(m.o1,m.oX,m.o2), p=dv.p, out=[];
+  var implied = [1/m.o1, 1/m.oX, 1/m.o2];
+  function add(code,label,prob,o,est,wins){ out.push({match:m, code:code, label:label, p:prob, o:o, est:est, wins:wins}); }
+  if(settings.mWin){
+    add('1','Victoire '+m.home,p[0],m.o1,false,['1']);
+    add('2','Victoire '+m.away,p[2],m.o2,false,['2']);
+  }
+  if(settings.mDraw) add('X','Match nul',p[1],m.oX,false,['X']);
+  if(settings.mDc){
+    add('1X',m.home+' ou nul',p[0]+p[1],1/(implied[0]+implied[1]),true,['1','X']);
+    add('X2','Nul ou '+m.away,p[1]+p[2],1/(implied[1]+implied[2]),true,['X','2']);
+  }
+  return out;
+}
+
+function eligible(m){
+  if(excluded[m.id]) return false;
+  if(settings.offLeagues.indexOf(m.league)>-1) return false;
+  if(!(m.o1>1 && m.oX>1 && m.o2>1)) return false;
+  return true;
+}
+
+// Pick at most maxLegs selections (one per match) whose odds product sits in [oMin,oMax]
+// and whose probability product is highest. Pre-filter by -ln(p)/ln(o): probability given up per unit of odds.
+function bestCombos(matches, n, liveFilter){
+  var now = Date.now(), pool = [];
+  matches.forEach(function(m){
+    if(!eligible(m)) return;
+    if(liveFilter && settings.skipStarted && new Date(m.kickoff).getTime() <= now) return;
+    candidates(m).forEach(function(c){
+      if(c.o >= settings.minLeg && c.p > 0.2) pool.push(c);
+    });
+  });
+  pool.forEach(function(c){ c.ratio = -Math.log(c.p)/Math.log(c.o); });
+  pool.sort(function(a,b){ return a.ratio-b.ratio; });
+  pool = pool.slice(0,30);
+  var lo=Math.log(settings.oMin), hi=Math.log(settings.oMax), maxL=settings.maxLegs, found=[];
+  function dfs(start, legs, lo2, lp, used){
+    if(legs.length>=Math.max(1,settings.minLegs) && lo2>=lo && lo2<=hi) found.push({legs:legs.slice(), lo:lo2, lp:lp});
+    if(legs.length>=maxL) return;
+    for(var i=start;i<pool.length;i++){
+      var c=pool[i], lc=Math.log(c.o);
+      if(used[c.match.id] || lo2+lc>hi+1e-9) continue;
+      used[c.match.id]=true; legs.push(c);
+      dfs(i+1, legs, lo2+lc, lp+Math.log(c.p), used);
+      legs.pop(); used[c.match.id]=false;
+    }
+  }
+  dfs(0, [], 0, 0, {});
+  found.sort(function(a,b){ return b.lp-a.lp; });
+  // keep combos that differ in their set of matches
+  var out=[], seen={};
+  for(var i=0;i<found.length && out.length<n;i++){
+    var key = found[i].legs.map(function(l){return l.match.id;}).sort().join('|');
+    if(seen[key]) continue; seen[key]=true;
+    var f=found[i];
+    f.legs.sort(function(a,b){ return a.match.kickoff<b.match.kickoff?-1:1; });
+    out.push({legs:f.legs, odds:Math.exp(f.lo), prob:Math.exp(f.lp)});
+  }
+  return out;
+}
+
+function comboResult(c){
+  var allDone=true, lost=false;
+  c.legs.forEach(function(l){
+    var r=outcomeOf(l.match);
+    if(r===null) allDone=false; else if(l.wins.indexOf(r)<0) lost=true;
+  });
+  return lost ? 'lost' : (allDone ? 'won' : 'wait');
+}
+function legBadge(l){
+  var r=outcomeOf(l.match); if(r===null) return '';
+  var ok=l.wins.indexOf(r)>-1;
+  return '<span class="res '+(ok?'won':'lost')+'">'+esc(l.match.score)+(ok?' ✓':' ✗')+'</span>';
+}
+
+// ---------- rendering ----------
+function sortedDates(){ return Object.keys(state.days).sort(); }
+function today(){ return parisDate(new Date()); }
+
+function renderDays(){
+  var t = today(), html='';
+  sortedDates().filter(function(d){ return d>=t; }).forEach(function(d){
+    var L = dayLabel(d), n = state.days[d].matches.length;
+    html += '<button type="button" class="day" data-date="'+d+'" aria-pressed="'+(d===state.selected)+'">' +
+      '<span class="d1">'+(d===t?'Aujourd\'hui':esc(L.d1)+' '+esc(L.d2))+'</span><span class="d2">'+n+' match'+(n>1?'s':'')+'</span></button>';
+  });
+  document.getElementById('days').innerHTML = html || '<span class="status">Aucun match à venir dans les données.</span>';
+}
+
+function legRow(l){
+  var m=l.match;
+  return '<li class="leg"><div class="when"><b>'+hhmm(m.kickoff)+'</b>'+esc(m.league)+'</div>' +
+    '<div class="match"><span class="lg">'+esc(LEAGUES[m.league]||m.league)+'</span><br>'+esc(m.home)+' – '+esc(m.away)+legBadge(l) +
+    '<div class="pick">Pari : <strong>'+esc(l.label)+'</strong></div></div>' +
+    '<div class="nums"><b>'+(l.est?'≈':'')+odds(l.o)+'</b><br>'+pct(l.p)+'</div></li>';
+}
+
+function renderTicket(dayMatches){
+  var area=document.getElementById('ticketArea'), altsSec=document.getElementById('altsSection');
+  var isToday = state.selected===today();
+  var combos = bestCombos(dayMatches, 3, true);
+  if(!combos.length){
+    area.innerHTML = '<div class="empty">Aucune combinaison entre '+odds(settings.oMin)+' et '+odds(settings.oMax)+' avec ces réglages pour '+esc(longDay(state.selected))+'.<br>Élargis la fourchette de cote, ajoute des types de paris ou des championnats.</div>';
+    altsSec.hidden = true; return;
+  }
+  var c=combos[0], bookP=1/c.odds, n=Math.round(1/c.prob);
+  var res = comboResult(c);
+  var html = '<article class="ticket"><div class="ticket-head"><div>' +
+    '<div class="kicker">'+(isToday?'Combiné du jour':'Combiné prévu')+' · '+esc(longDay(state.selected))+'</div>' +
+    '<h2>'+c.legs.length+' sélection'+(c.legs.length>1?'s':'')+'</h2>' +
+    '<div class="sub">La combinaison la plus probable dont la cote totale tombe entre '+odds(settings.oMin)+' et '+odds(settings.oMax)+'.'+
+      (res!=='wait' ? ' <span class="badge '+res+'">'+(res==='won'?'Gagné':'Perdu')+'</span>' : '')+'</div>' +
+    '</div><div class="figures">' +
+      '<div class="fig"><div class="lab">Cote totale</div><div class="val mono">'+(c.legs.some(function(l){return l.est;})?'≈':'')+odds(c.odds)+'</div></div>' +
+      '<div class="fig"><div class="lab">Probabilité estimée</div><div class="val prob mono">'+pct(c.prob)+'</div><div class="note">environ 1 chance sur '+n+'</div></div>' +
+    '</div></div><ol class="legs">'+c.legs.map(legRow).join('')+'</ol>' +
+    '<div class="ticket-foot"><div class="meter" role="img" aria-label="Probabilité estimée '+pct(c.prob)+'"><i style="width:'+(c.prob*100).toFixed(1)+'%;background:var(--accent)"></i></div>' +
+    '<span>La cote '+odds(c.odds)+' annonce '+pct(bookP)+' de chances marge comprise. Une fois la marge retirée, l\'estimation tombe à '+pct(c.prob)+'. Sur 10 jours joués avec ce type de combiné, compte environ '+Math.round(c.prob*10)+' tickets gagnants.</span></div></article>';
+  area.innerHTML = html;
+
+  var alts = combos.slice(1);
+  altsSec.hidden = !alts.length;
+  document.getElementById('alts').innerHTML = alts.map(function(a){
+    return '<div class="alt"><div class="top"><span class="mono">Cote '+(a.legs.some(function(l){return l.est;})?'≈':'')+odds(a.odds)+' · '+a.legs.length+' matchs</span><span class="p">'+pct(a.prob)+'</span></div><ul>' +
+      a.legs.map(function(l){ return '<li>'+esc(l.match.home)+' – '+esc(l.match.away)+' : <strong>'+esc(l.label)+'</strong> <span class="mono">'+(l.est?'≈':'')+odds(l.o)+'</span>'+legBadge(l)+'</li>'; }).join('') +
+      '</ul></div>';
+  }).join('');
+  return c;
+}
+
+function renderMatches(dayMatches, combo){
+  var inCombo = {};
+  if(combo) combo.legs.forEach(function(l){ inCombo[l.match.id]=l; });
+  var html = dayMatches.slice().sort(function(a,b){ return a.kickoff<b.kickoff?-1:1; }).map(function(m){
+    var dv=devig(m.o1,m.oX,m.o2), p=dv.p;
+    var cands = candidates(m).sort(function(a,b){ return b.p-a.p; });
+    var best = cands.filter(function(c){ return c.o>=settings.minLeg; })[0];
+    var off = !eligible(m);
+    var leagueOff = settings.offLeagues.indexOf(m.league)>-1;
+    return '<tr class="'+(inCombo[m.id]?'in-combo':'')+(off?' off':'')+'">' +
+      '<td class="num">'+hhmm(m.kickoff)+'</td>' +
+      '<td><span class="lg">'+esc(m.league)+'</span>'+esc(m.home)+' – '+esc(m.away)+(m.score?' <span class="mono">('+esc(m.score)+')</span>':'')+'</td>' +
+      '<td><div class="split" title="'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'"><span style="width:'+(p[0]*100)+'%;background:var(--home)"></span><span style="width:'+(p[1]*100)+'%;background:var(--draw)"></span><span style="width:'+(p[2]*100)+'%;background:var(--away)"></span></div>' +
+        '<div class="mono" style="font-size:11.5px;color:var(--ink-2);margin-top:3px">'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'</div></td>' +
+      '<td class="num">'+odds(m.o1)+' · '+odds(m.oX)+' · '+odds(m.o2)+'</td>' +
+      '<td>'+(best?esc(best.label)+' <span class="mono" style="color:var(--ink-2)">'+pct(best.p)+'</span>':'—')+'</td>' +
+      '<td>'+(leagueOff?'<span class="status">ligue masquée</span>':'<button type="button" class="toggle" data-id="'+esc(m.id)+'" aria-pressed="'+(!excluded[m.id])+'">'+(excluded[m.id]?'Retiré':'Inclus')+'</button>')+'</td></tr>';
+  }).join('');
+  document.getElementById('matchRows').innerHTML = html || '<tr><td colspan="6">Aucun match ce jour.</td></tr>';
+}
+
+function renderHistory(){
+  var t = today(), rows=[], won=0, lost=0;
+  sortedDates().filter(function(d){ return d<t; }).reverse().slice(0,30).forEach(function(d){
+    var c = bestCombos(state.days[d].matches, 1, false)[0];
+    if(!c) return;
+    var r = comboResult(c);
+    if(r==='won') won++; else if(r==='lost') lost++;
+    rows.push('<tr><td>'+esc(longDay(d))+'</td><td>'+c.legs.map(function(l){ return esc(l.match.home)+' – '+esc(l.match.away)+' : '+esc(l.label)+legBadge(l); }).join('<br>')+'</td>' +
+      '<td class="num">'+odds(c.odds)+'</td><td class="num">'+pct(c.prob)+'</td><td><span class="badge '+r+'">'+(r==='won'?'Gagné':r==='lost'?'Perdu':'En attente')+'</span></td></tr>');
+  });
+  var el=document.getElementById('history');
+  if(!rows.length){ el.innerHTML='<div class="empty">L\'historique se remplira jour après jour, une fois les scores des matchs passés enregistrés.</div>'; return; }
+  el.innerHTML = '<div class="hist-sum"><div class="fig"><div class="lab">Gagnés</div><div class="val mono" style="font-size:32px;color:var(--good)">'+won+'</div></div>' +
+    '<div class="fig"><div class="lab">Perdus</div><div class="val mono" style="font-size:32px;color:var(--bad)">'+lost+'</div></div>' +
+    '<div class="fig"><div class="lab">Taux de réussite</div><div class="val mono" style="font-size:32px">'+(won+lost?pct(won/(won+lost)):'—')+'</div></div></div>' +
+    '<div class="tbl-wrap"><table><thead><tr><th>Jour</th><th>Sélections</th><th>Cote</th><th>Prob.</th><th>Résultat</th></tr></thead><tbody>'+rows.join('')+'</tbody></table></div>';
+}
+
+function renderLeagues(){
+  var present = {};
+  Object.keys(state.days).forEach(function(d){ state.days[d].matches.forEach(function(m){ present[m.league]=true; }); });
+  document.getElementById('leagueChecks').innerHTML = Object.keys(LEAGUES).filter(function(k){ return present[k]; }).map(function(k){
+    return '<label><input type="checkbox" data-league="'+k+'"'+(settings.offLeagues.indexOf(k)<0?' checked':'')+'> '+esc(LEAGUES[k])+'</label>';
+  }).join('');
+}
+
+function render(){
+  if(!state.loaded) return;
+  var t=today(), dates=sortedDates().filter(function(d){ return d>=t; });
+  if(!state.selected || dates.indexOf(state.selected)<0) state.selected = dates[0] || null;
+  renderDays(); renderLeagues(); renderHistory();
+  if(!state.selected){
+    document.getElementById('ticketArea').innerHTML='<div class="empty">Pas encore de matchs à venir. Les cotes sont mises à jour chaque matin.</div>';
+    document.getElementById('altsSection').hidden=true;
+    document.getElementById('matchRows').innerHTML='';
+    return;
+  }
+  var dm = state.days[state.selected].matches;
+  var combo = renderTicket(dm);
+  renderMatches(dm, combo);
+  var doc = state.days[state.selected];
+  document.getElementById('sourceLine').textContent = 'Source des cotes : '+(doc.source||'—')+(doc.updatedAt?' · mises à jour le '+new Date(doc.updatedAt).toLocaleString('fr-FR',{timeZone:TZ,day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'}):'');
+}
+
+// ---------- events ----------
+document.getElementById('days').addEventListener('click', function(e){
+  var b=e.target.closest('.day'); if(!b) return; state.selected=b.dataset.date; render();
+});
+document.getElementById('matchRows').addEventListener('click', function(e){
+  var b=e.target.closest('.toggle'); if(!b) return;
+  var id=b.dataset.id; if(excluded[id]) delete excluded[id]; else excluded[id]=true;
+  store.set('excluded', excluded); render();
+});
+document.getElementById('leagueChecks').addEventListener('change', function(e){
+  var k=e.target.dataset.league; if(!k) return;
+  var i=settings.offLeagues.indexOf(k);
+  if(e.target.checked && i>-1) settings.offLeagues.splice(i,1);
+  if(!e.target.checked && i<0) settings.offLeagues.push(k);
+  saveRender();
+});
+bindSettings();
+
+// ---------- data ----------
+(async function(){
+  var statusEl=document.getElementById('status');
+  try{
+    var idx = await (await fetch('data/index.json',{cache:'no-store'})).json();
+    var cutoff = parisDate(new Date(Date.now()-30*86400000));
+    var dates = (idx.dates||[]).filter(function(d){ return d>=cutoff; });
+    var docs = await Promise.all(dates.map(function(d){
+      return fetch('data/days/'+d+'.json',{cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; });
+    }));
+    var days={};
+    docs.forEach(function(v){ if(v && Array.isArray(v.matches)) days[v.date]=v; });
+    state.days=days; state.loaded=true;
+    statusEl.innerHTML = idx.updatedAt ? 'Cotes mises à jour<br><b>'+esc(new Date(idx.updatedAt).toLocaleString('fr-FR',{timeZone:TZ,weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}))+'</b>' : 'Aucune donnée';
+    render();
+  }catch(e){
+    statusEl.textContent='Données indisponibles';
+    document.getElementById('ticketArea').innerHTML='<div class="empty">Impossible de charger les matchs. Recharge la page dans quelques instants.</div>';
+  }
+})();
+})();
+</script>
+
+</body>
+</html>

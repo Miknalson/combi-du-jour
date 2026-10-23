@@ -1,0 +1,47 @@
+{
+ "date": "2026-10-30",
+ "updatedAt": "2026-10-23T17:00:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "l1-le-havre-psg",
+   "league": "L1",
+   "kickoff": "2026-10-30T18:00Z",
+   "home": "Le Havre",
+   "away": "PSG",
+   "o1": 10.0,
+   "oX": 6.5,
+   "o2": 1.25
+  },
+  {
+   "id": "bl-elversberg-mainz",
+   "league": "BL",
+   "kickoff": "2026-10-30T19:30Z",
+   "home": "Elversberg",
+   "away": "Mainz",
+   "o1": 3.2,
+   "oX": 4.0,
+   "o2": 2.05
+  },
+  {
+   "id": "liga-villarreal-espanyol",
+   "league": "LIGA",
+   "kickoff": "2026-10-30T20:00Z",
+   "home": "Villarreal",
+   "away": "Espanyol",
+   "o1": 1.57,
+   "oX": 4.5,
+   "o2": 5.5
+  },
+  {
+   "id": "l1-lille-lens",
+   "league": "L1",
+   "kickoff": "2026-10-30T20:05Z",
+   "home": "Lille",
+   "away": "Lens",
+   "o1": 2.3,
+   "oX": 3.6,
+   "o2": 2.95
+  }
+ ]
+}

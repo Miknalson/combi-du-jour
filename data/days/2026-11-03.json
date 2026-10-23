@@ -1,0 +1,97 @@
+{
+ "date": "2026-11-03",
+ "updatedAt": "2026-10-23T17:00:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "ucl-galatasaray-stuttgart",
+   "league": "UCL",
+   "kickoff": "2026-11-03T17:45Z",
+   "home": "Galatasaray",
+   "away": "Stuttgart",
+   "o1": 2.3,
+   "oX": 4.0,
+   "o2": 2.85
+  },
+  {
+   "id": "ucl-shakhtar-donetsk-sporting-cp",
+   "league": "UCL",
+   "kickoff": "2026-11-03T17:45Z",
+   "home": "Shakhtar Donetsk",
+   "away": "Sporting CP",
+   "o1": 3.8,
+   "oX": 3.9,
+   "o2": 1.93
+  },
+  {
+   "id": "ucl-manchester-utd-as-rome",
+   "league": "UCL",
+   "kickoff": "2026-11-03T20:00Z",
+   "home": "Manchester Utd",
+   "away": "AS Rome",
+   "o1": 2.05,
+   "oX": 3.8,
+   "o2": 3.6
+  },
+  {
+   "id": "ucl-barcelone-aston-villa",
+   "league": "UCL",
+   "kickoff": "2026-11-03T20:00Z",
+   "home": "Barcelone",
+   "away": "Aston Villa",
+   "o1": 1.28,
+   "oX": 6.5,
+   "o2": 10.0
+  },
+  {
+   "id": "ucl-atletico-madrid-bayern-munich",
+   "league": "UCL",
+   "kickoff": "2026-11-03T20:00Z",
+   "home": "Atlético Madrid",
+   "away": "Bayern Munich",
+   "o1": 3.3,
+   "oX": 4.1,
+   "o2": 2.05
+  },
+  {
+   "id": "ucl-bod-glimt-lille",
+   "league": "UCL",
+   "kickoff": "2026-11-03T20:00Z",
+   "home": "Bodø/Glimt",
+   "away": "Lille",
+   "o1": 2.0,
+   "oX": 4.0,
+   "o2": 3.5
+  },
+  {
+   "id": "ucl-feyenoord-inter",
+   "league": "UCL",
+   "kickoff": "2026-11-03T20:00Z",
+   "home": "Feyenoord",
+   "away": "Inter",
+   "o1": 4.5,
+   "oX": 4.4,
+   "o2": 1.68
+  },
+  {
+   "id": "ucl-lask-slovan-bratislava",
+   "league": "UCL",
+   "kickoff": "2026-11-03T20:00Z",
+   "home": "LASK",
+   "away": "Slovan Bratislava",
+   "o1": 1.46,
+   "oX": 4.8,
+   "o2": 7.0
+  },
+  {
+   "id": "ucl-villarreal-psg",
+   "league": "UCL",
+   "kickoff": "2026-11-03T20:00Z",
+   "home": "Villarreal",
+   "away": "PSG",
+   "o1": 5.0,
+   "oX": 4.6,
+   "o2": 1.63
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "date": "2026-10-26",
+ "updatedAt": "2026-10-23T16:55:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "por-santa-clara-benfica",
+   "league": "POR",
+   "kickoff": "2026-10-26T18:45Z",
+   "home": "Santa Clara",
+   "away": "Benfica",
+   "o1": 9.0,
+   "oX": 4.75,
+   "o2": 1.39
+  },
+  {
+   "id": "liga-seville-osasuna",
+   "league": "LIGA",
+   "kickoff": "2026-10-26T20:00Z",
+   "home": "Séville",
+   "away": "Osasuna",
+   "o1": 1.95,
+   "oX": 3.4,
+   "o2": 4.33
+  }
+ ]
+}

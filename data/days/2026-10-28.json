@@ -1,0 +1,57 @@
+{
+ "date": "2026-10-28",
+ "updatedAt": "2026-10-23T17:00:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "sa-ac-milan-bologne",
+   "league": "SA",
+   "kickoff": "2026-10-28T17:30Z",
+   "home": "AC Milan",
+   "away": "Bologne",
+   "o1": 1.6,
+   "oX": 4.1,
+   "o2": 5.5
+  },
+  {
+   "id": "sa-venise-inter",
+   "league": "SA",
+   "kickoff": "2026-10-28T17:30Z",
+   "home": "Venise",
+   "away": "Inter",
+   "o1": 8.5,
+   "oX": 5.75,
+   "o2": 1.33
+  },
+  {
+   "id": "sa-parme-udinese",
+   "league": "SA",
+   "kickoff": "2026-10-28T17:30Z",
+   "home": "Parme",
+   "away": "Udinese",
+   "o1": 3.0,
+   "oX": 3.2,
+   "o2": 2.4
+  },
+  {
+   "id": "sa-genoa-juventus",
+   "league": "SA",
+   "kickoff": "2026-10-28T19:45Z",
+   "home": "Genoa",
+   "away": "Juventus",
+   "o1": 5.5,
+   "oX": 3.8,
+   "o2": 1.66
+  },
+  {
+   "id": "sa-monza-naples",
+   "league": "SA",
+   "kickoff": "2026-10-28T19:45Z",
+   "home": "Monza",
+   "away": "Naples",
+   "o1": 4.0,
+   "oX": 3.8,
+   "o2": 1.9
+  }
+ ]
+}

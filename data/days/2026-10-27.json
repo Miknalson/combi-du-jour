@@ -1,0 +1,37 @@
+{
+ "date": "2026-10-27",
+ "updatedAt": "2026-10-23T17:00:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "sa-sassuolo-lazio",
+   "league": "SA",
+   "kickoff": "2026-10-27T17:30Z",
+   "home": "Sassuolo",
+   "away": "Lazio",
+   "o1": 2.85,
+   "oX": 3.4,
+   "o2": 2.45
+  },
+  {
+   "id": "sa-as-rome-cagliari",
+   "league": "SA",
+   "kickoff": "2026-10-27T19:45Z",
+   "home": "AS Rome",
+   "away": "Cagliari",
+   "o1": 1.36,
+   "oX": 5.0,
+   "o2": 9.0
+  },
+  {
+   "id": "sa-torino-come",
+   "league": "SA",
+   "kickoff": "2026-10-27T19:45Z",
+   "home": "Torino",
+   "away": "Côme",
+   "o1": 4.5,
+   "oX": 3.6,
+   "o2": 1.76
+  }
+ ]
+}

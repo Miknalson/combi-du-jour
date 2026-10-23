@@ -1,0 +1,97 @@
+{
+ "date": "2026-11-04",
+ "updatedAt": "2026-10-23T17:00:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "ucl-aek-athenes-real-madrid",
+   "league": "UCL",
+   "kickoff": "2026-11-04T17:45Z",
+   "home": "AEK Athènes",
+   "away": "Real Madrid",
+   "o1": 8.0,
+   "oX": 6.0,
+   "o2": 1.36
+  },
+  {
+   "id": "ucl-fenerbahce-liverpool",
+   "league": "UCL",
+   "kickoff": "2026-11-04T17:45Z",
+   "home": "Fenerbahçe",
+   "away": "Liverpool",
+   "o1": 4.6,
+   "oX": 4.4,
+   "o2": 1.68
+  },
+  {
+   "id": "ucl-slavia-prague-arsenal",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "Slavia Prague",
+   "away": "Arsenal",
+   "o1": 10.5,
+   "oX": 6.5,
+   "o2": 1.27
+  },
+  {
+   "id": "ucl-dortmund-betis",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "Dortmund",
+   "away": "Betis",
+   "o1": 1.8,
+   "oX": 4.1,
+   "o2": 4.2
+  },
+  {
+   "id": "ucl-psv-club-bruges",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "PSV",
+   "away": "Club Bruges",
+   "o1": 2.3,
+   "oX": 4.1,
+   "o2": 2.8
+  },
+  {
+   "id": "ucl-lens-come",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "Lens",
+   "away": "Côme",
+   "o1": 3.0,
+   "oX": 3.8,
+   "o2": 2.25
+  },
+  {
+   "id": "ucl-fc-porto-naples",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "FC Porto",
+   "away": "Naples",
+   "o1": 2.15,
+   "oX": 3.6,
+   "o2": 3.3
+  },
+  {
+   "id": "ucl-rb-leipzig-manchester-city",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "RB Leipzig",
+   "away": "Manchester City",
+   "o1": 5.3,
+   "oX": 4.8,
+   "o2": 1.6
+  },
+  {
+   "id": "ucl-viking-sabah",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "Viking",
+   "away": "Sabah",
+   "o1": 1.65,
+   "oX": 4.5,
+   "o2": 5.3
+  }
+ ]
+}

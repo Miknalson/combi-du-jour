@@ -1,0 +1,27 @@
+{
+ "date": "2026-10-29",
+ "updatedAt": "2026-10-23T17:00:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "sa-frosinone-lecce",
+   "league": "SA",
+   "kickoff": "2026-10-29T17:30Z",
+   "home": "Frosinone",
+   "away": "Lecce",
+   "o1": 1.93,
+   "oX": 3.6,
+   "o2": 3.8
+  },
+  {
+   "id": "sa-fiorentina-atalanta",
+   "league": "SA",
+   "kickoff": "2026-10-29T19:45Z",
+   "home": "Fiorentina",
+   "away": "Atalanta",
+   "o1": 2.3,
+   "oX": 3.5,
+   "o2": 3.0
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "date": "2026-11-02",
+ "updatedAt": "2026-10-23T17:00:00Z",
+ "source": "oddsportal.com (cotes moyennes 1N2)",
+ "matches": [
+  {
+   "id": "pl-newcastle-everton",
+   "league": "PL",
+   "kickoff": "2026-11-02T20:00Z",
+   "home": "Newcastle",
+   "away": "Everton",
+   "o1": 2.2,
+   "oX": 3.7,
+   "o2": 3.1
+  },
+  {
+   "id": "liga-deportivo-la-corogne-osasuna",
+   "league": "LIGA",
+   "kickoff": "2026-11-02T20:00Z",
+   "home": "Deportivo La Corogne",
+   "away": "Osasuna",
+   "o1": 2.3,
+   "oX": 3.3,
+   "o2": 3.1
+  }
+ ]
+}
