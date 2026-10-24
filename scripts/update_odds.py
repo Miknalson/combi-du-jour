@@ -4,25 +4,44 @@
 Needs ODDS_API_KEY in the environment and network access to api.the-odds-api.com.
 Usage: python3 scripts/update_odds.py [--days 10] [--dry-run]
 
-Credit use: the events listing is free; odds cost 2 credits per league (h2h + totals,
-region eu), and a league is only priced when it has a match in the window.
+Credit use: the sports and events listings are free; odds cost 2 credits per core league
+(h2h + totals) and 1 per extra league (h2h), region eu. The script spreads the remaining
+monthly credits over the days left in the month, prices leagues with a match in the next
+48 hours first, and prints "FALLBACK <oddsportal path>" for every league it did not price.
 """
 import argparse, datetime, json, os, re, ssl, sys, unicodedata, urllib.parse, urllib.request, zoneinfo
 
 API = 'https://api.the-odds-api.com/v4'
 PARIS = zoneinfo.ZoneInfo('Europe/Paris')
-LEAGUES = {
-    'soccer_epl': 'PL',
-    'soccer_spain_la_liga': 'LIGA',
-    'soccer_italy_serie_a': 'SA',
-    'soccer_germany_bundesliga': 'BL',
-    'soccer_france_ligue_one': 'L1',
-    'soccer_netherlands_eredivisie': 'ERE',
-    'soccer_portugal_primeira_liga': 'POR',
-    'soccer_uefa_champs_league': 'UCL',
-    'soccer_uefa_europa_league': 'UEL',
-    'soccer_uefa_europa_conference_league': 'UECL',
-}
+# (API sport key, app code, priced with goals totals?, oddsportal path used as fallback)
+# Core leagues come first: when credits run short they are priced before the extra ones.
+LEAGUES = [
+    ('soccer_epl', 'PL', True, 'england/premier-league'),
+    ('soccer_spain_la_liga', 'LIGA', True, 'spain/laliga'),
+    ('soccer_italy_serie_a', 'SA', True, 'italy/serie-a'),
+    ('soccer_germany_bundesliga', 'BL', True, 'germany/bundesliga'),
+    ('soccer_france_ligue_one', 'L1', True, 'france/ligue-1'),
+    ('soccer_uefa_champs_league', 'UCL', True, 'europe/champions-league'),
+    ('soccer_uefa_europa_league', 'UEL', True, 'europe/europa-league'),
+    ('soccer_netherlands_eredivisie', 'ERE', True, 'netherlands/eredivisie'),
+    ('soccer_portugal_primeira_liga', 'POR', True, 'portugal/liga-portugal'),
+    ('soccer_uefa_europa_conference_league', 'UECL', False, 'europe/conference-league'),
+    ('soccer_efl_champ', 'CHA', False, 'england/championship'),
+    ('soccer_germany_bundesliga2', 'BL2', False, 'germany/2-bundesliga'),
+    ('soccer_spain_segunda_division', 'LIGA2', False, 'spain/laliga2'),
+    ('soccer_france_ligue_two', 'L2', False, 'france/ligue-2'),
+    ('soccer_belgium_first_div', 'BEL', False, 'belgium/jupiler-pro-league'),
+    ('soccer_turkey_super_league', 'TUR', False, 'turkey/super-lig'),
+    ('soccer_denmark_superliga', 'DEN', False, 'denmark/superliga'),
+    ('soccer_sweden_allsvenskan', 'SWE', False, 'sweden/allsvenskan'),
+    ('soccer_poland_ekstraklasa', 'POL', False, 'poland/ekstraklasa'),
+    ('soccer_league_of_ireland', 'IRL', False, 'ireland/premier-division'),
+    ('soccer_russia_premier_league', 'RUS', False, 'russia/premier-league'),
+    ('soccer_portugal_segunda_liga', 'POR2', False, 'portugal/liga-portugal-2'),
+    ('soccer_romania_liga_1', 'ROU', False, 'romania/superliga'),
+    ('soccer_serbia_super_liga', 'SRB', False, 'serbia/super-liga'),
+    ('soccer_ukraine_premier_league', 'UKR', False, 'ukraine/premier-league'),
+]
 EXCHANGES = {'betfair_ex_eu', 'betfair_ex_uk', 'matchbook', 'smarkets', 'betfair'}
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 
@@ -94,6 +113,14 @@ def summarise(event, league):
     return m, kick.astimezone(PARIS).strftime('%Y-%m-%d')
 
 
+def credits_budget(now, reserve=4):
+    """Spread what is left of the monthly quota evenly over the rest of the calendar month."""
+    left = int(float(credits_left or 0))
+    nxt = (now.replace(day=1) + datetime.timedelta(days=32)).replace(day=1)
+    days_left = max(1, (nxt.date() - now.date()).days)
+    return max(0, (left - reserve) // days_left), left
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--days', type=int, default=10)
@@ -104,23 +131,47 @@ def main():
 
     now = datetime.datetime.now(datetime.timezone.utc)
     horizon = now + datetime.timedelta(days=args.days)
-    fresh = {}  # paris date -> list of matches
-    for sport, league in LEAGUES.items():
-        try:
-            events = get(f'/sports/{sport}/events')
-        except Exception as e:  # league out of season or unknown key
-            print(f'{league}: events unavailable ({e})')
+    soon_limit = now + datetime.timedelta(hours=48)
+    available = {sp['key'] for sp in get('/sports')}  # free call; also reads the credit header
+    budget, left = credits_budget(now)
+    print(f'credits left: {left}, budget today: {budget}')
+
+    def start(e):
+        return datetime.datetime.fromisoformat(e['commence_time'].replace('Z', '+00:00'))
+
+    # Free pass: which leagues have matches in the window, and how soon.
+    todo = []
+    for i, (sport, league, totals, path) in enumerate(LEAGUES):
+        if sport not in available:
+            print(f'{league}: not offered by the API -> FALLBACK {path}')
             continue
-        soon = [e for e in events if now < datetime.datetime.fromisoformat(e['commence_time'].replace('Z', '+00:00')) < horizon]
-        if not soon:
+        try:
+            events = [e for e in get(f'/sports/{sport}/events') if now < start(e) < horizon]
+        except Exception as e:
+            print(f'{league}: events unavailable ({e}) -> FALLBACK {path}')
+            continue
+        if not events:
             print(f'{league}: no match in window')
             continue
-        odds = get(f'/sports/{sport}/odds', regions='eu', markets='h2h,totals', oddsFormat='decimal',
-                   commenceTimeTo=horizon.strftime('%Y-%m-%dT%H:%M:%SZ'))
+        urgent = any(start(e) < soon_limit for e in events)
+        todo.append((0 if urgent else 1, i, sport, league, totals, path))
+    todo.sort()
+
+    fresh = {}  # paris date -> list of matches
+    priced = set()
+    for _, _, sport, league, totals, path in todo:
+        cost = 2 if totals else 1
+        if cost > budget:
+            print(f'{league}: skipped to save credits -> FALLBACK {path}')
+            continue
+        odds = get(f'/sports/{sport}/odds', regions='eu', markets='h2h,totals' if totals else 'h2h',
+                   oddsFormat='decimal', commenceTimeTo=horizon.strftime('%Y-%m-%dT%H:%M:%SZ'))
+        budget -= cost
+        priced.add(league)
         n = 0
         for ev in odds:
             # in-play prices (e.g. 1.01 / 41 / 51) would distort the model, and started matches are frozen
-            if datetime.datetime.fromisoformat(ev['commence_time'].replace('Z', '+00:00')) <= now:
+            if start(ev) <= now:
                 continue
             res = summarise(ev, league)
             if res:
@@ -133,8 +184,10 @@ def main():
     for date, matches in sorted(fresh.items()):
         path = os.path.join(days_dir, f'{date}.json')
         doc = json.load(open(path, encoding='utf8')) if os.path.exists(path) else {'date': date, 'matches': []}
-        # keep matches that already kicked off (their odds and scores are frozen); replace the rest
-        kept = [m for m in doc['matches'] if datetime.datetime.fromisoformat(m['kickoff'].replace('Z', '+00:00')) <= now]
+        # Replace only the upcoming matches of leagues priced in this run; started matches
+        # (frozen odds, scores) and leagues filled from the fallback stay as they are.
+        kept = [m for m in doc['matches']
+                if m['league'] not in priced or datetime.datetime.fromisoformat(m['kickoff'].replace('Z', '+00:00')) <= now]
         kept_ids = {m['id'] for m in kept}
         doc['matches'] = sorted(kept + [m for m in matches if m['id'] not in kept_ids], key=lambda m: m['kickoff'])
         doc.update(date=date, updatedAt=stamp, source='The Odds API (moyenne des bookmakers européens)')

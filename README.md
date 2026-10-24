@@ -1,6 +1,6 @@
 # Combiné du Jour
 
-Chaque jour, l'appli choisit de 2 à 5 matchs européens (Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Eredivisie, Liga Portugal, coupes d'Europe) dont la cote totale tombe entre 3 et 5, en gardant la combinaison la plus probable.
+Chaque jour, l'appli choisit des matchs européens (5 grands championnats, Eredivisie, Liga Portugal, coupes d'Europe, plus Championship, 2. Bundesliga, LaLiga2, Ligue 2, Liga Portugal 2, Belgique, Danemark, Irlande, Pologne, Roumanie, Russie, Serbie, Suède, Turquie et Ukraine) dont la cote totale tombe entre 3 et 5, en gardant la combinaison la plus probable. Par défaut, seuls les paris à 80 % de probabilité ou plus sont retenus (réglable).
 
 - `index.html` : l'appli (page statique, servie par GitHub Pages).
 - `data/index.json` : liste des jours disponibles et date de mise à jour.

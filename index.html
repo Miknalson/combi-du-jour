@@ -19,7 +19,7 @@
 <div class="wrap">
   <header class="masthead">
     <div>
-      <div class="kicker">Combiné quotidien · 7 championnats européens</div>
+      <div class="kicker">Combiné quotidien · Championnats et coupes d'Europe</div>
       <h1>Combiné du Jour</h1>
     </div>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
@@ -44,6 +44,7 @@
       <div class="field"><label for="oMax">Cote maxi</label><input type="number" id="oMax" step="0.1" min="1.5" max="50" value="5"></div>
       <div class="field"><label for="minLegs">Matchs minimum</label><select id="minLegs"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
       <div class="field"><label for="maxLegs">Matchs maximum</label><select id="maxLegs"><option>2</option><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
+      <div class="field"><label for="minProb">Probabilité mini par pari</label><select id="minProb"><option value="0.5">50 %</option><option value="0.6">60 %</option><option value="0.7">70 %</option><option value="0.75">75 %</option><option value="0.8" selected>80 %</option><option value="0.85">85 %</option><option value="0.9">90 %</option></select></div>
       <div class="field"><label for="minLeg">Cote mini par match</label><input type="number" id="minLeg" step="0.05" min="1.01" max="3" value="1.10"></div>
       <div class="field wide"><span class="lab">Types de paris</span>
         <div class="checks">
@@ -111,7 +112,11 @@
 
 var LEAGUES = {
   PL:'Premier League', LIGA:'LaLiga', SA:'Serie A', BL:'Bundesliga', L1:'Ligue 1',
-  ERE:'Eredivisie', POR:'Liga Portugal', UCL:'Ligue des champions', UEL:'Ligue Europa', UECL:'Conference League'
+  ERE:'Eredivisie', POR:'Liga Portugal', UCL:'Ligue des champions', UEL:'Ligue Europa', UECL:'Conference League',
+  CHA:'Championship', BL2:'2. Bundesliga', LIGA2:'LaLiga2', L2:'Ligue 2', POR2:'Liga Portugal 2',
+  BEL:'Pro League (Belgique)', DEN:'Superliga (Danemark)', IRL:'Premier Division (Irlande)', POL:'Ekstraklasa (Pologne)',
+  ROU:'Superliga (Roumanie)', RUS:'Premier League (Russie)', SRB:'Super Liga (Serbie)', SWE:'Allsvenskan (Suède)',
+  TUR:'Süper Lig (Turquie)', UKR:'Premier League (Ukraine)'
 };
 var TZ = 'Europe/Paris';
 var state = { days:{}, selected:null, loaded:false };
@@ -121,7 +126,7 @@ var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
-var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,mWin:true,mDc:true,mDraw:false,mGoals:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.8,mWin:true,mDc:true,mDraw:false,mGoals:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
 var excluded = store.get('excluded',{});
 
 function bindSettings(){
@@ -131,6 +136,8 @@ function bindSettings(){
   });
   var ml = document.getElementById('maxLegs'); ml.value = String(settings.maxLegs);
   ml.addEventListener('change', function(){ settings.maxLegs=parseInt(ml.value,10); saveRender(); });
+  var mp = document.getElementById('minProb'); mp.value = String(settings.minProb);
+  mp.addEventListener('change', function(){ settings.minProb=parseFloat(mp.value); saveRender(); });
   var mn = document.getElementById('minLegs'); mn.value = String(settings.minLegs);
   mn.addEventListener('change', function(){ settings.minLegs=parseInt(mn.value,10); saveRender(); });
   ['mWin','mDc','mDraw','mGoals','skipStarted'].forEach(function(id){
@@ -239,7 +246,7 @@ function bestCombos(matches, n, liveFilter){
   matches.forEach(function(m){
     if(!eligible(m)) return;
     if(liveFilter && settings.skipStarted && new Date(m.kickoff).getTime() <= now) return;
-    var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p > 0.2; });
+    var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p >= Math.max(0.2, settings.minProb); });
     cs.forEach(function(c){ c.bin = Math.round(Math.log(c.o)*1000); c.lp = Math.log(c.p); });
     if(cs.length) groups.push(cs);
   });
@@ -345,7 +352,13 @@ function renderTicket(dayMatches){
   var isToday = state.selected===today();
   var combos = bestCombos(dayMatches, 3, true);
   if(!combos.length){
-    area.innerHTML = '<div class="empty">Aucune combinaison entre '+odds(settings.oMin)+' et '+odds(settings.oMax)+' avec ces réglages pour '+esc(longDay(state.selected))+'.<br>Élargis la fourchette de cote, ajoute des types de paris ou des championnats.</div>';
+    // Safe picks (>= 80 %) pay about 1.15-1.25 each, so a 3+ ticket usually needs 6 to 8 of them.
+    var few = settings.minProb >= 0.7 && settings.maxLegs < 8;
+    area.innerHTML = '<div class="empty">Aucune combinaison entre '+odds(settings.oMin)+' et '+odds(settings.oMax)+' avec des paris à '+pct(settings.minProb)+' ou plus pour '+esc(longDay(state.selected))+'.<br>' +
+      (few ? 'Un pari aussi sûr rapporte environ 1,20 : pour atteindre une cote de '+odds(settings.oMin)+', il faut souvent 6 à 8 matchs.<br><button type="button" class="btn" id="moreLegs" style="margin-top:10px">Autoriser jusqu\'à 8 matchs</button>'
+           : 'Élargis la fourchette de cote, baisse la probabilité mini, ajoute des types de paris ou des championnats.') + '</div>';
+    var more = document.getElementById('moreLegs');
+    if(more) more.addEventListener('click', function(){ settings.maxLegs = 8; document.getElementById('maxLegs').value = '8'; saveRender(); });
     altsSec.hidden = true; return;
   }
   var c=combos[0], bookP=1/c.odds, n=Math.round(1/c.prob);
@@ -380,10 +393,16 @@ function renderTicket(dayMatches){
 function renderMatches(dayMatches, combo){
   var inCombo = {};
   if(combo) combo.legs.forEach(function(l){ inCombo[l.match.id]=l; });
-  var html = dayMatches.slice().sort(function(a,b){ return a.kickoff<b.kickoff?-1:1; }).map(function(m){
+  var hidden = 0;
+  var html = dayMatches.slice().sort(function(a,b){ return a.kickoff<b.kickoff?-1:1; }).filter(function(m){
+    // Only list matches with at least one bet at the minimum probability (ticket legs always stay).
+    var ok = inCombo[m.id] || !(m.o1>1 && m.oX>1 && m.o2>1) || candidates(m).some(function(c){ return c.o>=settings.minLeg && c.p>=settings.minProb; });
+    if(!ok) hidden++;
+    return ok;
+  }).map(function(m){
     var dv=devig(m.o1,m.oX,m.o2), p=dv.p;
     var cands = candidates(m).sort(function(a,b){ return b.p-a.p; });
-    var best = cands.filter(function(c){ return c.o>=settings.minLeg; })[0];
+    var best = cands.filter(function(c){ return c.o>=settings.minLeg && c.p>=settings.minProb; })[0] || cands.filter(function(c){ return c.o>=settings.minLeg; })[0];
     var off = !eligible(m);
     var leagueOff = settings.offLeagues.indexOf(m.league)>-1;
     return '<tr class="'+(inCombo[m.id]?'in-combo':'')+(off?' off':'')+'">' +
@@ -397,6 +416,7 @@ function renderMatches(dayMatches, combo){
       '<td>'+pickSelect(m)+'</td>' +
       '<td>'+(leagueOff?'<span class="status">ligue masquée</span>':'<button type="button" class="toggle" data-id="'+esc(m.id)+'" aria-pressed="'+(!excluded[m.id])+'">'+(excluded[m.id]?'Retiré':'Inclus')+'</button>')+'</td></tr>';
   }).join('');
+  if(hidden) html += '<tr><td colspan="7" style="color:var(--ink-3)">'+hidden+' match'+(hidden>1?'s':'')+' sans pari à '+pct(settings.minProb)+' ou plus, masqué'+(hidden>1?'s':'')+'.</td></tr>';
   document.getElementById('matchRows').innerHTML = html || '<tr><td colspan="7">Aucun match ce jour.</td></tr>';
 }
 
