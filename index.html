@@ -44,7 +44,7 @@
       <div class="field"><label for="oMax">Cote maxi</label><input type="number" id="oMax" step="0.1" min="1.5" max="50" value="5"></div>
       <div class="field"><label for="minLegs">Matchs minimum</label><select id="minLegs"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
       <div class="field"><label for="maxLegs">Matchs maximum</label><select id="maxLegs"><option>2</option><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
-      <div class="field"><label for="minProb">Probabilité mini par pari</label><select id="minProb"><option value="0.5">50 %</option><option value="0.6">60 %</option><option value="0.7">70 %</option><option value="0.75">75 %</option><option value="0.8" selected>80 %</option><option value="0.85">85 %</option><option value="0.9">90 %</option></select></div>
+      <div class="field"><label for="minProb">Probabilité mini par pari</label><select id="minProb"><option value="0.5" selected>50 %</option><option value="0.6">60 %</option><option value="0.7">70 %</option><option value="0.75">75 %</option><option value="0.8">80 %</option><option value="0.85">85 %</option><option value="0.9">90 %</option></select></div>
       <div class="field"><label for="minLeg">Cote mini par match</label><input type="number" id="minLeg" step="0.05" min="1.01" max="3" value="1.10"></div>
       <div class="field wide"><span class="lab">Types de paris</span>
         <div class="checks">
@@ -128,7 +128,9 @@ var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
-var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.8,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+// 24/10/2026: the default moved from 80 % per bet to the most likely ticket overall; reset devices saved under the old default once.
+if(settings.probV !== 2){ settings.minProb = 0.5; settings.probV = 2; store.set('settings', settings); }
 var excluded = store.get('excluded',{});
 
 function bindSettings(){
