@@ -1,6 +1,6 @@
 {
  "date": "2026-11-02",
- "updatedAt": "2026-10-23T21:39:57Z",
+ "updatedAt": "2026-10-24T06:48:19Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -18,8 +18,8 @@
      "book": "1xBet"
     },
     "1": {
-     "odds": 2.32,
-     "book": "Betfair"
+     "odds": 2.26,
+     "book": "1xBet"
     },
     "X": {
      "odds": 3.78,

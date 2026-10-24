@@ -1,6 +1,6 @@
 {
  "date": "2026-10-31",
- "updatedAt": "2026-10-23T21:39:57Z",
+ "updatedAt": "2026-10-24T06:48:19Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -11,19 +11,19 @@
    "away": "Manchester United",
    "o1": 1.808,
    "oX": 3.974,
-   "o2": 3.825,
+   "o2": 3.819,
    "best": {
     "1": {
      "odds": 1.9,
      "book": "1xBet"
     },
     "2": {
-     "odds": 4.2,
-     "book": "Betfair"
+     "odds": 4.1,
+     "book": "Tipico"
     },
     "X": {
-     "odds": 4.4,
-     "book": "Betfair"
+     "odds": 4.25,
+     "book": "Unibet (NL)"
     }
    },
    "books": 18,
@@ -44,8 +44,8 @@
    "kickoff": "2026-10-31T13:00Z",
    "home": "Levante",
    "away": "Atlético Madrid",
-   "o1": 4.751,
-   "oX": 4.296,
+   "o1": 4.729,
+   "oX": 4.285,
    "o2": 1.592,
    "best": {
     "2": {
@@ -79,17 +79,17 @@
    "kickoff": "2026-10-31T14:30Z",
    "home": "Augsburg",
    "away": "SC Freiburg",
-   "o1": 2.877,
-   "oX": 3.723,
-   "o2": 2.172,
+   "o1": 2.919,
+   "oX": 3.739,
+   "o2": 2.135,
    "best": {
     "1": {
      "odds": 3.1,
      "book": "Tipico"
     },
     "2": {
-     "odds": 2.4,
-     "book": "Unibet (SE)"
+     "odds": 2.25,
+     "book": "1xBet"
     },
     "X": {
      "odds": 4.07,
@@ -99,8 +99,8 @@
    "books": 16,
    "ou": {
     "3.5": {
-     "o": 2.169,
-     "u": 1.664
+     "o": 2.164,
+     "u": 1.671
     },
     "2.5": {
      "o": 1.47,
@@ -114,9 +114,9 @@
    "kickoff": "2026-10-31T14:30Z",
    "home": "Bayer Leverkusen",
    "away": "VfB Stuttgart",
-   "o1": 1.732,
-   "oX": 4.258,
-   "o2": 3.8,
+   "o1": 1.734,
+   "oX": 4.254,
+   "o2": 3.795,
    "best": {
     "1": {
      "odds": 1.81,
@@ -138,8 +138,8 @@
      "u": 2.013
     },
     "2.5": {
-     "o": 1.31,
-     "u": 3.357
+     "o": 1.317,
+     "u": 3.323
     }
    }
   },
@@ -184,8 +184,8 @@
    "kickoff": "2026-10-31T14:30Z",
    "home": "FC Schalke 04",
    "away": "RB Leipzig",
-   "o1": 3.604,
-   "oX": 3.914,
+   "o1": 3.611,
+   "oX": 3.908,
    "o2": 1.844,
    "best": {
     "1": {
@@ -256,7 +256,7 @@
    "away": "Leeds United",
    "o1": 2.131,
    "oX": 3.417,
-   "o2": 3.267,
+   "o2": 3.264,
    "best": {
     "1": {
      "odds": 2.24,
@@ -267,8 +267,8 @@
      "book": "1xBet"
     },
     "X": {
-     "odds": 3.65,
-     "book": "Betfair"
+     "odds": 3.6,
+     "book": "Unibet (SE)"
     }
    },
    "books": 18,
@@ -285,17 +285,17 @@
    "kickoff": "2026-10-31T15:00Z",
    "home": "Brentford",
    "away": "Nottingham Forest",
-   "o1": 1.984,
-   "oX": 3.64,
-   "o2": 3.446,
+   "o1": 1.987,
+   "oX": 3.647,
+   "o2": 3.432,
    "best": {
     "1": {
      "odds": 2.07,
      "book": "1xBet"
     },
     "2": {
-     "odds": 3.75,
-     "book": "Betfair"
+     "odds": 3.65,
+     "book": "1xBet"
     },
     "X": {
      "odds": 3.88,
@@ -305,8 +305,8 @@
    "books": 18,
    "ou": {
     "2.5": {
-     "o": 1.706,
-     "u": 2.095
+     "o": 1.705,
+     "u": 2.099
     }
    }
   },
@@ -316,13 +316,13 @@
    "kickoff": "2026-10-31T15:00Z",
    "home": "Manchester City",
    "away": "Brighton and Hove Albion",
-   "o1": 1.654,
+   "o1": 1.653,
    "oX": 4.241,
-   "o2": 4.391,
+   "o2": 4.386,
    "best": {
     "2": {
-     "odds": 4.7,
-     "book": "Betfair"
+     "odds": 4.67,
+     "book": "1xBet"
     },
     "1": {
      "odds": 1.74,
@@ -330,7 +330,7 @@
     },
     "X": {
      "odds": 4.5,
-     "book": "Betfair"
+     "book": "Tipico"
     }
    },
    "books": 18,
@@ -360,8 +360,8 @@
      "book": "1xBet"
     },
     "2": {
-     "odds": 2.64,
-     "book": "Betfair"
+     "odds": 2.58,
+     "book": "Betsson"
     },
     "X": {
      "odds": 3.55,
@@ -382,17 +382,17 @@
    "kickoff": "2026-10-31T15:00Z",
    "home": "Hull City",
    "away": "Ipswich Town",
-   "o1": 2.564,
-   "oX": 3.373,
-   "o2": 2.622,
+   "o1": 2.555,
+   "oX": 3.401,
+   "o2": 2.617,
    "best": {
     "1": {
      "odds": 2.69,
      "book": "1xBet"
     },
     "2": {
-     "odds": 2.74,
-     "book": "Betfair"
+     "odds": 2.73,
+     "book": "1xBet"
     },
     "X": {
      "odds": 3.6,
@@ -464,8 +464,8 @@
    "books": 14,
    "ou": {
     "3.5": {
-     "o": 1.59,
-     "u": 2.238
+     "o": 1.577,
+     "u": 2.258
     },
     "2.5": {
      "o": 1.217,
@@ -499,8 +499,8 @@
    "books": 17,
    "ou": {
     "2.5": {
-     "o": 1.556,
-     "u": 2.403
+     "o": 1.563,
+     "u": 2.393
     }
    }
   },
@@ -510,27 +510,27 @@
    "kickoff": "2026-10-31T17:30Z",
    "home": "Tottenham Hotspur",
    "away": "Crystal Palace",
-   "o1": 1.602,
-   "oX": 4.148,
-   "o2": 4.949,
+   "o1": 1.604,
+   "oX": 4.153,
+   "o2": 4.927,
    "best": {
     "2": {
-     "odds": 5.4,
-     "book": "Betfair"
+     "odds": 5.38,
+     "book": "1xBet"
     },
     "1": {
      "odds": 1.67,
      "book": "1xBet"
     },
     "X": {
-     "odds": 4.4,
-     "book": "Betfair"
+     "odds": 4.33,
+     "book": "Pinnacle"
     }
    },
    "books": 18,
    "ou": {
     "2.5": {
-     "o": 1.615,
+     "o": 1.614,
      "u": 2.275
     }
    }
@@ -541,13 +541,13 @@
    "kickoff": "2026-10-31T17:30Z",
    "home": "Real Betis",
    "away": "Málaga",
-   "o1": 1.384,
-   "oX": 5.01,
-   "o2": 6.822,
+   "o1": 1.385,
+   "oX": 4.963,
+   "o2": 6.888,
    "best": {
     "2": {
-     "odds": 7.6,
-     "book": "Betfair"
+     "odds": 7.5,
+     "book": "Unibet (SE)"
     },
     "1": {
      "odds": 1.46,
@@ -561,7 +561,7 @@
    "books": 16,
    "ou": {
     "3.5": {
-     "o": 2.256,
+     "o": 2.259,
      "u": 1.616
     },
     "2.5": {
@@ -577,8 +577,8 @@
    "home": "Bayern Munich",
    "away": "Borussia Dortmund",
    "o1": 1.315,
-   "oX": 5.745,
-   "o2": 7.032,
+   "oX": 5.727,
+   "o2": 7.069,
    "best": {
     "1": {
      "odds": 1.36,
@@ -682,8 +682,8 @@
    "home": "Lyon",
    "away": "Angers",
    "o1": 1.375,
-   "oX": 4.658,
-   "o2": 6.474,
+   "oX": 4.646,
+   "o2": 6.503,
    "best": {
     "2": {
      "odds": 7.7,
@@ -732,8 +732,8 @@
    "books": 17,
    "ou": {
     "2.5": {
-     "o": 1.878,
-     "u": 1.899
+     "o": 1.874,
+     "u": 1.903
     }
    }
   },
@@ -745,7 +745,7 @@
    "away": "Le Mans FC",
    "o1": 2.098,
    "oX": 3.325,
-   "o2": 3.226,
+   "o2": 3.227,
    "best": {
     "2": {
      "odds": 3.5,
@@ -775,16 +775,16 @@
    "home": "Aston Villa",
    "away": "Fulham",
    "o1": 2.022,
-   "oX": 3.599,
-   "o2": 3.371,
+   "oX": 3.602,
+   "o2": 3.365,
    "best": {
     "1": {
      "odds": 2.14,
      "book": "1xBet"
     },
     "2": {
-     "odds": 3.65,
-     "book": "Betfair"
+     "odds": 3.6,
+     "book": "Tipico"
     },
     "X": {
      "odds": 3.8,
@@ -805,9 +805,9 @@
    "kickoff": "2026-10-31T20:00Z",
    "home": "Barcelona",
    "away": "Alavés",
-   "o1": 1.131,
-   "oX": 7.83,
-   "o2": 18.706,
+   "o1": 1.13,
+   "oX": 7.836,
+   "o2": 18.565,
    "best": {
     "2": {
      "odds": 24.0,
@@ -829,8 +829,8 @@
      "u": 2.343
     },
     "2.5": {
-     "o": 1.247,
-     "u": 3.957
+     "o": 1.24,
+     "u": 4.023
     }
    }
   },

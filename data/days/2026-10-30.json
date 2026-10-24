@@ -1,21 +1,121 @@
 {
  "date": "2026-10-30",
- "updatedAt": "2026-10-23T21:39:57Z",
+ "updatedAt": "2026-10-24T06:48:19Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
+  {
+   "id": "tur-torku-konyaspor-galatasaray",
+   "league": "TUR",
+   "kickoff": "2026-10-30T17:00Z",
+   "home": "Torku Konyaspor",
+   "away": "Galatasaray",
+   "o1": 4.662,
+   "oX": 4.009,
+   "o2": 1.586,
+   "best": {
+    "2": {
+     "odds": 1.68,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 5.17,
+     "book": "Betsson"
+    },
+    "X": {
+     "odds": 4.3,
+     "book": "Betsson"
+    }
+   },
+   "books": 14
+  },
+  {
+   "id": "pol-cracovia-krakow-motor-lublin",
+   "league": "POL",
+   "kickoff": "2026-10-30T17:00Z",
+   "home": "Cracovia Kraków",
+   "away": "Motor Lublin",
+   "o1": 1.888,
+   "oX": 3.522,
+   "o2": 3.409,
+   "best": {
+    "1": {
+     "odds": 2.0,
+     "book": "Coolbet"
+    },
+    "2": {
+     "odds": 3.6,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "Coolbet"
+    }
+   },
+   "books": 13
+  },
+  {
+   "id": "bl2-arminia-bielefeld-eintracht-braunschweig",
+   "league": "BL2",
+   "kickoff": "2026-10-30T17:30Z",
+   "home": "Arminia Bielefeld",
+   "away": "Eintracht Braunschweig",
+   "o1": 1.788,
+   "oX": 3.673,
+   "o2": 3.713,
+   "best": {
+    "1": {
+     "odds": 1.9,
+     "book": "Coolbet"
+    },
+    "2": {
+     "odds": 4.5,
+     "book": "Tipico"
+    },
+    "X": {
+     "odds": 4.0,
+     "book": "Tipico"
+    }
+   },
+   "books": 13
+  },
+  {
+   "id": "bl2-fc-energie-cottbus-vfl-bochum",
+   "league": "BL2",
+   "kickoff": "2026-10-30T17:30Z",
+   "home": "FC Energie Cottbus",
+   "away": "VfL Bochum",
+   "o1": 2.515,
+   "oX": 3.688,
+   "o2": 2.305,
+   "best": {
+    "1": {
+     "odds": 2.65,
+     "book": "Unibet (SE)"
+    },
+    "2": {
+     "odds": 2.6,
+     "book": "Tipico"
+    },
+    "X": {
+     "odds": 4.0,
+     "book": "Coolbet"
+    }
+   },
+   "books": 13
+  },
   {
    "id": "l1-le-havre-paris-saint-germain",
    "league": "L1",
    "kickoff": "2026-10-30T18:00Z",
    "home": "Le Havre",
    "away": "Paris Saint Germain",
-   "o1": 10.021,
-   "oX": 6.594,
-   "o2": 1.228,
+   "o1": 9.961,
+   "oX": 6.596,
+   "o2": 1.231,
    "best": {
     "1": {
      "odds": 11.5,
-     "book": "Betfair"
+     "book": "Unibet (SE)"
     },
     "2": {
      "odds": 1.27,
@@ -26,11 +126,11 @@
      "book": "Tipico"
     }
    },
-   "books": 18,
+   "books": 19,
    "ou": {
     "3.5": {
-     "o": 1.838,
-     "u": 1.923
+     "o": 1.837,
+     "u": 1.926
     },
     "2.5": {
      "o": 1.32,
@@ -39,14 +139,64 @@
    }
   },
   {
+   "id": "den-lyngby-randers-fc",
+   "league": "DEN",
+   "kickoff": "2026-10-30T18:00Z",
+   "home": "Lyngby",
+   "away": "Randers FC",
+   "o1": 2.018,
+   "oX": 3.593,
+   "o2": 2.966,
+   "best": {
+    "1": {
+     "odds": 2.13,
+     "book": "GTbets"
+    },
+    "2": {
+     "odds": 3.1,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "GTbets"
+    }
+   },
+   "books": 10
+  },
+  {
+   "id": "l2-metz-pau-fc",
+   "league": "L2",
+   "kickoff": "2026-10-30T19:00Z",
+   "home": "Metz",
+   "away": "Pau FC",
+   "o1": 1.95,
+   "oX": 3.358,
+   "o2": 3.438,
+   "best": {
+    "1": {
+     "odds": 2.06,
+     "book": "Pinnacle"
+    },
+    "2": {
+     "odds": 3.58,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.58,
+     "book": "1xBet"
+    }
+   },
+   "books": 11
+  },
+  {
    "id": "bl-elversberg-fsv-mainz-05",
    "league": "BL",
    "kickoff": "2026-10-30T19:30Z",
    "home": "Elversberg",
    "away": "FSV Mainz 05",
-   "o1": 3.166,
-   "oX": 3.707,
-   "o2": 2.031,
+   "o1": 3.169,
+   "oX": 3.718,
+   "o2": 2.033,
    "best": {
     "1": {
      "odds": 3.5,
@@ -61,17 +211,192 @@
      "book": "1xBet"
     }
    },
-   "books": 17,
+   "books": 18,
    "ou": {
     "3.5": {
-     "o": 2.265,
-     "u": 1.652
+     "o": 2.26,
+     "u": 1.648
     },
     "2.5": {
      "o": 1.541,
      "u": 2.397
     }
    }
+  },
+  {
+   "id": "pol-gornik-zabrze-legia-warszawa",
+   "league": "POL",
+   "kickoff": "2026-10-30T19:30Z",
+   "home": "Górnik Zabrze",
+   "away": "Legia Warszawa",
+   "o1": 2.252,
+   "oX": 3.254,
+   "o2": 2.818,
+   "best": {
+    "1": {
+     "odds": 2.35,
+     "book": "Coolbet"
+    },
+    "2": {
+     "odds": 2.95,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.5,
+     "book": "Coolbet"
+    }
+   },
+   "books": 13
+  },
+  {
+   "id": "bel-sv-zulte-waregem-club-brugge",
+   "league": "BEL",
+   "kickoff": "2026-10-30T19:45Z",
+   "home": "SV Zulte-Waregem",
+   "away": "Club Brugge",
+   "o1": 4.524,
+   "oX": 3.967,
+   "o2": 1.552,
+   "best": {
+    "2": {
+     "odds": 1.64,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 4.97,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.25,
+     "book": "1xBet"
+    }
+   },
+   "books": 9
+  },
+  {
+   "id": "irl-st-patricks-athletic-bohemians",
+   "league": "IRL",
+   "kickoff": "2026-10-30T19:45Z",
+   "home": "St Patricks Athletic",
+   "away": "Bohemians",
+   "o1": 1.979,
+   "oX": 3.393,
+   "o2": 3.274,
+   "best": {
+    "2": {
+     "odds": 3.45,
+     "book": "Unibet (SE)"
+    },
+    "1": {
+     "odds": 2.12,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.55,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 13
+  },
+  {
+   "id": "irl-sligo-rovers-derry-city",
+   "league": "IRL",
+   "kickoff": "2026-10-30T19:45Z",
+   "home": "Sligo Rovers",
+   "away": "Derry City",
+   "o1": 4.868,
+   "oX": 3.842,
+   "o2": 1.558,
+   "best": {
+    "2": {
+     "odds": 1.63,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 5.4,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 4.05,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 13
+  },
+  {
+   "id": "irl-drogheda-united-galway-united",
+   "league": "IRL",
+   "kickoff": "2026-10-30T19:45Z",
+   "home": "Drogheda United",
+   "away": "Galway United",
+   "o1": 2.15,
+   "oX": 3.348,
+   "o2": 2.917,
+   "best": {
+    "1": {
+     "odds": 2.3,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 3.16,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.54,
+     "book": "1xBet"
+    }
+   },
+   "books": 13
+  },
+  {
+   "id": "irl-dundalk-shamrock-rovers",
+   "league": "IRL",
+   "kickoff": "2026-10-30T19:45Z",
+   "home": "Dundalk",
+   "away": "Shamrock Rovers",
+   "o1": 3.172,
+   "oX": 3.394,
+   "o2": 2.005,
+   "best": {
+    "1": {
+     "odds": 3.34,
+     "book": "Pinnacle"
+    },
+    "2": {
+     "odds": 2.1,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.62,
+     "book": "1xBet"
+    }
+   },
+   "books": 13
+  },
+  {
+   "id": "irl-shelbourne-dublin-waterford-fc",
+   "league": "IRL",
+   "kickoff": "2026-10-30T19:45Z",
+   "home": "Shelbourne Dublin",
+   "away": "Waterford FC",
+   "o1": 1.868,
+   "oX": 3.65,
+   "o2": 3.369,
+   "best": {
+    "1": {
+     "odds": 2.05,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 3.65,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 4.01,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 13
   },
   {
    "id": "liga-villarreal-espanyol",
@@ -105,14 +430,39 @@
    }
   },
   {
+   "id": "cha-sheffield-united-wrexham-afc",
+   "league": "CHA",
+   "kickoff": "2026-10-30T20:00Z",
+   "home": "Sheffield United",
+   "away": "Wrexham AFC",
+   "o1": 2.366,
+   "oX": 3.242,
+   "o2": 2.661,
+   "best": {
+    "1": {
+     "odds": 2.55,
+     "book": "LeoVegas (SE)"
+    },
+    "2": {
+     "odds": 2.88,
+     "book": "LeoVegas (SE)"
+    },
+    "X": {
+     "odds": 3.45,
+     "book": "LeoVegas (SE)"
+    }
+   },
+   "books": 10
+  },
+  {
    "id": "l1-lille-rc-lens",
    "league": "L1",
    "kickoff": "2026-10-30T20:05Z",
    "home": "Lille",
    "away": "RC Lens",
-   "o1": 2.186,
-   "oX": 3.421,
-   "o2": 2.818,
+   "o1": 2.257,
+   "oX": 3.542,
+   "o2": 2.909,
    "best": {
     "1": {
      "odds": 2.45,
@@ -127,11 +477,11 @@
      "book": "LeoVegas (SE)"
     }
    },
-   "books": 18,
+   "books": 19,
    "ou": {
     "2.5": {
-     "o": 1.675,
-     "u": 2.149
+     "o": 1.673,
+     "u": 2.155
     }
    }
   },

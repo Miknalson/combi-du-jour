@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "updatedAt": "2026-10-23T21:39:57Z",
+ "updatedAt": "2026-10-24T06:48:19Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -9,9 +9,9 @@
    "kickoff": "2026-10-29T17:30Z",
    "home": "Frosinone",
    "away": "Lecce",
-   "o1": 1.864,
-   "oX": 3.697,
-   "o2": 3.735,
+   "o1": 1.869,
+   "oX": 3.743,
+   "o2": 3.739,
    "best": {
     "1": {
      "odds": 1.97,
@@ -29,14 +29,89 @@
    "books": 19,
    "ou": {
     "3.5": {
-     "o": 2.41,
-     "u": 1.605
+     "o": 2.407,
+     "u": 1.577
     },
     "2.5": {
      "o": 1.546,
-     "u": 2.393
+     "u": 2.392
     }
    }
+  },
+  {
+   "id": "swe-hammarby-if-ik-sirius",
+   "league": "SWE",
+   "kickoff": "2026-10-29T17:30Z",
+   "home": "Hammarby IF",
+   "away": "IK Sirius",
+   "o1": 1.485,
+   "oX": 4.287,
+   "o2": 5.069,
+   "best": {
+    "1": {
+     "odds": 1.56,
+     "book": "Unibet (SE)"
+    },
+    "2": {
+     "odds": 5.75,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 4.7,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 10
+  },
+  {
+   "id": "swe-kalmar-ff-gais",
+   "league": "SWE",
+   "kickoff": "2026-10-29T18:00Z",
+   "home": "Kalmar FF",
+   "away": "GAIS",
+   "o1": 3.082,
+   "oX": 3.293,
+   "o2": 2.121,
+   "best": {
+    "2": {
+     "odds": 2.23,
+     "book": "Unibet (SE)"
+    },
+    "1": {
+     "odds": 3.35,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.5,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 10
+  },
+  {
+   "id": "swe-orgryte-is-mjallby-aif",
+   "league": "SWE",
+   "kickoff": "2026-10-29T18:00Z",
+   "home": "Örgryte IS",
+   "away": "Mjällby AIF",
+   "o1": 3.232,
+   "oX": 3.515,
+   "o2": 1.968,
+   "best": {
+    "2": {
+     "odds": 2.1,
+     "book": "Unibet (SE)"
+    },
+    "1": {
+     "odds": 3.5,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.8,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 10
   },
   {
    "id": "sa-fiorentina-atalanta-bc",

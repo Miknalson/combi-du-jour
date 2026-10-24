@@ -1,36 +1,136 @@
 {
  "date": "2026-10-26",
- "updatedAt": "2026-10-23T21:39:57Z",
+ "updatedAt": "2026-10-24T06:48:19Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
+  {
+   "id": "tur-besiktas-jk-basaksehir",
+   "league": "TUR",
+   "kickoff": "2026-10-26T16:00Z",
+   "home": "Besiktas JK",
+   "away": "Basaksehir",
+   "o1": 1.342,
+   "oX": 5.169,
+   "o2": 7.078,
+   "best": {
+    "2": {
+     "odds": 8.15,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 1.39,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 5.7,
+     "book": "Tipico"
+    }
+   },
+   "books": 20
+  },
+  {
+   "id": "tur-caykur-rizespor-trabzonspor",
+   "league": "TUR",
+   "kickoff": "2026-10-26T16:00Z",
+   "home": "Çaykur Rizespor",
+   "away": "Trabzonspor",
+   "o1": 3.44,
+   "oX": 3.758,
+   "o2": 1.905,
+   "best": {
+    "2": {
+     "odds": 1.98,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 3.65,
+     "book": "BetOnline.ag"
+    },
+    "X": {
+     "odds": 4.0,
+     "book": "Coolbet"
+    }
+   },
+   "books": 20
+  },
+  {
+   "id": "den-fc-copenhagen-ob-odense-bk",
+   "league": "DEN",
+   "kickoff": "2026-10-26T18:00Z",
+   "home": "FC Copenhagen",
+   "away": "OB Odense BK",
+   "o1": 1.423,
+   "oX": 4.661,
+   "o2": 5.973,
+   "best": {
+    "1": {
+     "odds": 1.47,
+     "book": "Pinnacle"
+    },
+    "2": {
+     "odds": 6.75,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 4.99,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 20
+  },
+  {
+   "id": "tur-galatasaray-fenerbahce",
+   "league": "TUR",
+   "kickoff": "2026-10-26T18:30Z",
+   "home": "Galatasaray",
+   "away": "Fenerbahce",
+   "o1": 2.131,
+   "oX": 3.709,
+   "o2": 2.896,
+   "best": {
+    "2": {
+     "odds": 3.06,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.28,
+     "book": "GTbets"
+    },
+    "X": {
+     "odds": 4.0,
+     "book": "Coolbet"
+    }
+   },
+   "books": 20
+  },
   {
    "id": "por-santa-clara-benfica",
    "league": "POR",
    "kickoff": "2026-10-26T18:45Z",
    "home": "Santa Clara",
    "away": "Benfica",
-   "o1": 8.169,
-   "oX": 4.606,
-   "o2": 1.348,
+   "o1": 8.343,
+   "oX": 4.595,
+   "o2": 1.347,
    "best": {
     "2": {
      "odds": 1.4,
      "book": "GTbets"
     },
     "1": {
-     "odds": 9.6,
-     "book": "Betfair"
+     "odds": 10.0,
+     "book": "Tipico"
     },
     "X": {
-     "odds": 5.3,
-     "book": "Betfair"
+     "odds": 4.9,
+     "book": "Winamax (DE)"
     }
    },
    "books": 20,
    "ou": {
     "2.5": {
      "o": 1.783,
-     "u": 1.939
+     "u": 1.937
     }
    }
   },
@@ -40,30 +140,109 @@
    "kickoff": "2026-10-26T19:30Z",
    "home": "Paris Saint Germain",
    "away": "Lyon",
-   "o1": 1.425,
-   "oX": 5.21,
-   "o2": 6.205,
+   "o1": 1.416,
+   "oX": 5.186,
+   "o2": 6.316,
    "best": {
     "2": {
-     "odds": 7.0,
-     "book": "Betfair"
+     "odds": 6.88,
+     "book": "1xBet"
     },
     "1": {
      "odds": 1.47,
      "book": "1xBet"
     },
     "X": {
-     "odds": 5.8,
-     "book": "Betfair"
+     "odds": 5.54,
+     "book": "Pinnacle"
     }
    },
-   "books": 19,
+   "books": 22,
    "ou": {
     "3.5": {
-     "o": 1.966,
-     "u": 1.818
+     "o": 1.965,
+     "u": 1.819
+    },
+    "2.5": {
+     "o": 1.383,
+     "u": 2.95
     }
    }
+  },
+  {
+   "id": "liga2-andorra-cf-burgos-cf",
+   "league": "LIGA2",
+   "kickoff": "2026-10-26T19:30Z",
+   "home": "Andorra CF",
+   "away": "Burgos CF",
+   "o1": 1.846,
+   "oX": 3.391,
+   "o2": 3.97,
+   "best": {
+    "1": {
+     "odds": 1.9,
+     "book": "Coolbet"
+    },
+    "2": {
+     "odds": 4.33,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.6,
+     "book": "Coolbet"
+    }
+   },
+   "books": 20
+  },
+  {
+   "id": "l2-boulogne-stade-de-reims",
+   "league": "L2",
+   "kickoff": "2026-10-26T19:45Z",
+   "home": "Boulogne",
+   "away": "Stade de Reims",
+   "o1": 3.119,
+   "oX": 3.088,
+   "o2": 2.236,
+   "best": {
+    "1": {
+     "odds": 3.3,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 2.35,
+     "book": "Coolbet"
+    },
+    "X": {
+     "odds": 3.3,
+     "book": "Coolbet"
+    }
+   },
+   "books": 20
+  },
+  {
+   "id": "l2-montpellier-red-star",
+   "league": "L2",
+   "kickoff": "2026-10-26T19:45Z",
+   "home": "Montpellier",
+   "away": "Red Star",
+   "o1": 2.351,
+   "oX": 3.301,
+   "o2": 2.752,
+   "best": {
+    "1": {
+     "odds": 2.45,
+     "book": "Coolbet"
+    },
+    "2": {
+     "odds": 2.93,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.5,
+     "book": "Coolbet"
+    }
+   },
+   "books": 21
   },
   {
    "id": "liga-sevilla-ca-osasuna",
@@ -71,13 +250,13 @@
    "kickoff": "2026-10-26T20:00Z",
    "home": "Sevilla",
    "away": "CA Osasuna",
-   "o1": 1.918,
-   "oX": 3.408,
-   "o2": 4.152,
+   "o1": 1.92,
+   "oX": 3.388,
+   "o2": 4.15,
    "best": {
     "2": {
-     "odds": 4.6,
-     "book": "Betfair"
+     "odds": 4.35,
+     "book": "Coolbet"
     },
     "1": {
      "odds": 2.02,
@@ -88,11 +267,11 @@
      "book": "1xBet"
     }
    },
-   "books": 20,
+   "books": 21,
    "ou": {
     "2.5": {
-     "o": 2.112,
-     "u": 1.705
+     "o": 2.119,
+     "u": 1.703
     }
    }
   }
