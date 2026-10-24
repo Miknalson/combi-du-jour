@@ -1,6 +1,6 @@
 {
  "date": "2026-10-26",
- "updatedAt": "2026-10-24T06:48:19Z",
+ "updatedAt": "2026-10-24T18:41:45Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -10,8 +10,8 @@
    "home": "Besiktas JK",
    "away": "Basaksehir",
    "o1": 1.342,
-   "oX": 5.169,
-   "o2": 7.078,
+   "oX": 5.202,
+   "o2": 7.125,
    "best": {
     "2": {
      "odds": 8.15,
@@ -19,14 +19,21 @@
     },
     "1": {
      "odds": 1.39,
-     "book": "Pinnacle"
+     "book": "BetOnline.ag"
     },
     "X": {
      "odds": 5.7,
      "book": "Tipico"
     }
    },
-   "books": 20
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.37,
+    "oX": 5.35,
+    "o2": 7.02,
+    "ou": {}
+   }
   },
   {
    "id": "tur-caykur-rizespor-trabzonspor",
@@ -34,8 +41,8 @@
    "kickoff": "2026-10-26T16:00Z",
    "home": "Çaykur Rizespor",
    "away": "Trabzonspor",
-   "o1": 3.44,
-   "oX": 3.758,
+   "o1": 3.486,
+   "oX": 3.748,
    "o2": 1.905,
    "best": {
     "2": {
@@ -43,15 +50,22 @@
      "book": "1xBet"
     },
     "1": {
-     "odds": 3.65,
-     "book": "BetOnline.ag"
+     "odds": 3.63,
+     "book": "1xBet"
     },
     "X": {
      "odds": 4.0,
      "book": "Coolbet"
     }
    },
-   "books": 20
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.44,
+    "oX": 3.97,
+    "o2": 1.96,
+    "ou": {}
+   }
   },
   {
    "id": "den-fc-copenhagen-ob-odense-bk",
@@ -59,9 +73,9 @@
    "kickoff": "2026-10-26T18:00Z",
    "home": "FC Copenhagen",
    "away": "OB Odense BK",
-   "o1": 1.423,
-   "oX": 4.661,
-   "o2": 5.973,
+   "o1": 1.427,
+   "oX": 4.67,
+   "o2": 5.951,
    "best": {
     "1": {
      "odds": 1.47,
@@ -76,7 +90,14 @@
      "book": "Pinnacle"
     }
    },
-   "books": 20
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.47,
+    "oX": 4.99,
+    "o2": 5.69,
+    "ou": {}
+   }
   },
   {
    "id": "tur-galatasaray-fenerbahce",
@@ -84,13 +105,13 @@
    "kickoff": "2026-10-26T18:30Z",
    "home": "Galatasaray",
    "away": "Fenerbahce",
-   "o1": 2.131,
-   "oX": 3.709,
-   "o2": 2.896,
+   "o1": 2.096,
+   "oX": 3.722,
+   "o2": 2.962,
    "best": {
     "2": {
-     "odds": 3.06,
-     "book": "1xBet"
+     "odds": 3.15,
+     "book": "Unibet (SE)"
     },
     "1": {
      "odds": 2.28,
@@ -101,7 +122,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 20
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.18,
+    "oX": 3.8,
+    "o2": 3.05,
+    "ou": {}
+   }
   },
   {
    "id": "por-santa-clara-benfica",
@@ -109,9 +137,9 @@
    "kickoff": "2026-10-26T18:45Z",
    "home": "Santa Clara",
    "away": "Benfica",
-   "o1": 8.343,
-   "oX": 4.595,
-   "o2": 1.347,
+   "o1": 8.383,
+   "oX": 4.611,
+   "o2": 1.344,
    "best": {
     "2": {
      "odds": 1.4,
@@ -129,9 +157,16 @@
    "books": 20,
    "ou": {
     "2.5": {
-     "o": 1.783,
-     "u": 1.937
+     "o": 1.788,
+     "u": 1.935
     }
+   },
+   "sharp": {
+    "book": "Betfair",
+    "o1": 10.5,
+    "oX": 5.2,
+    "o2": 1.37,
+    "ou": {}
    }
   },
   {
@@ -140,32 +175,44 @@
    "kickoff": "2026-10-26T19:30Z",
    "home": "Paris Saint Germain",
    "away": "Lyon",
-   "o1": 1.416,
-   "oX": 5.186,
-   "o2": 6.316,
+   "o1": 1.411,
+   "oX": 5.222,
+   "o2": 6.33,
    "best": {
     "2": {
-     "odds": 6.88,
+     "odds": 6.91,
      "book": "1xBet"
     },
     "1": {
-     "odds": 1.47,
+     "odds": 1.46,
      "book": "1xBet"
     },
     "X": {
-     "odds": 5.54,
-     "book": "Pinnacle"
+     "odds": 5.5,
+     "book": "Tipico"
     }
    },
    "books": 22,
    "ou": {
     "3.5": {
-     "o": 1.965,
-     "u": 1.819
+     "o": 1.955,
+     "u": 1.823
     },
     "2.5": {
-     "o": 1.383,
-     "u": 2.95
+     "o": 1.367,
+     "u": 3.023
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.42,
+    "oX": 5.35,
+    "o2": 6.49,
+    "ou": {
+     "3.5": {
+      "o": 1.99,
+      "u": 1.88
+     }
     }
    }
   },
@@ -175,24 +222,31 @@
    "kickoff": "2026-10-26T19:30Z",
    "home": "Andorra CF",
    "away": "Burgos CF",
-   "o1": 1.846,
-   "oX": 3.391,
-   "o2": 3.97,
+   "o1": 2.027,
+   "oX": 3.253,
+   "o2": 3.467,
    "best": {
     "1": {
-     "odds": 1.9,
-     "book": "Coolbet"
-    },
-    "2": {
-     "odds": 4.33,
+     "odds": 2.12,
      "book": "Pinnacle"
     },
+    "2": {
+     "odds": 3.8,
+     "book": "Unibet (SE)"
+    },
     "X": {
-     "odds": 3.6,
+     "odds": 3.5,
      "book": "Coolbet"
     }
    },
-   "books": 20
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.12,
+    "oX": 3.24,
+    "o2": 3.7,
+    "ou": {}
+   }
   },
   {
    "id": "l2-boulogne-stade-de-reims",
@@ -201,8 +255,8 @@
    "home": "Boulogne",
    "away": "Stade de Reims",
    "o1": 3.119,
-   "oX": 3.088,
-   "o2": 2.236,
+   "oX": 3.087,
+   "o2": 2.232,
    "best": {
     "1": {
      "odds": 3.3,
@@ -217,7 +271,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 20
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.24,
+    "oX": 3.18,
+    "o2": 2.32,
+    "ou": {}
+   }
   },
   {
    "id": "l2-montpellier-red-star",
@@ -225,9 +286,9 @@
    "kickoff": "2026-10-26T19:45Z",
    "home": "Montpellier",
    "away": "Red Star",
-   "o1": 2.351,
-   "oX": 3.301,
-   "o2": 2.752,
+   "o1": 2.352,
+   "oX": 3.307,
+   "o2": 2.75,
    "best": {
     "1": {
      "odds": 2.45,
@@ -242,7 +303,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.39,
+    "oX": 3.38,
+    "o2": 2.93,
+    "ou": {}
+   }
   },
   {
    "id": "liga-sevilla-ca-osasuna",
@@ -250,13 +318,13 @@
    "kickoff": "2026-10-26T20:00Z",
    "home": "Sevilla",
    "away": "CA Osasuna",
-   "o1": 1.92,
-   "oX": 3.388,
-   "o2": 4.15,
+   "o1": 1.906,
+   "oX": 3.404,
+   "o2": 4.203,
    "best": {
     "2": {
-     "odds": 4.35,
-     "book": "Coolbet"
+     "odds": 4.4,
+     "book": "Tipico"
     },
     "1": {
      "odds": 2.02,
@@ -270,8 +338,20 @@
    "books": 21,
    "ou": {
     "2.5": {
-     "o": 2.119,
-     "u": 1.703
+     "o": 2.123,
+     "u": 1.702
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.93,
+    "oX": 3.46,
+    "o2": 4.38,
+    "ou": {
+     "2.25": {
+      "o": 1.95,
+      "u": 1.93
+     }
     }
    }
   }

@@ -1,6 +1,6 @@
 {
  "date": "2026-10-24",
- "updatedAt": "2026-10-24T06:48:19Z",
+ "updatedAt": "2026-10-24T18:41:45Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -1626,28 +1626,40 @@
    "kickoff": "2026-10-24T18:45Z",
    "home": "Lazio",
    "away": "Parma",
-   "o1": 1.452,
-   "oX": 4.335,
-   "o2": 7.209,
+   "o1": 1.423,
+   "oX": 4.447,
+   "o2": 7.698,
    "best": {
     "1": {
-     "odds": 1.52,
-     "book": "1xBet"
+     "odds": 1.49,
+     "book": "Pinnacle"
     },
     "2": {
-     "odds": 7.95,
-     "book": "BetOnline.ag"
+     "odds": 8.6,
+     "book": "Marathon Bet"
     },
     "X": {
-     "odds": 4.6,
+     "odds": 4.75,
      "book": "Unibet (SE)"
     }
    },
    "books": 24,
    "ou": {
     "2.5": {
-     "o": 1.892,
-     "u": 1.904
+     "o": 1.835,
+     "u": 1.965
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.49,
+    "oX": 4.39,
+    "o2": 7.33,
+    "ou": {
+     "2.5": {
+      "o": 1.89,
+      "u": 2.02
+     }
     }
    }
   },
@@ -1657,32 +1669,44 @@
    "kickoff": "2026-10-24T18:45Z",
    "home": "RC Lens",
    "away": "Paris FC",
-   "o1": 2.495,
-   "oX": 3.603,
-   "o2": 2.644,
+   "o1": 2.313,
+   "oX": 3.487,
+   "o2": 2.95,
    "best": {
     "2": {
-     "odds": 2.8,
-     "book": "Unibet (SE)"
+     "odds": 3.11,
+     "book": "1xBet"
     },
     "1": {
-     "odds": 2.61,
-     "book": "Pinnacle"
+     "odds": 2.44,
+     "book": "Coolbet"
     },
     "X": {
-     "odds": 3.8,
-     "book": "Unibet (SE)"
+     "odds": 3.65,
+     "book": "Winamax (DE)"
     }
    },
    "books": 22,
    "ou": {
     "2.5": {
-     "o": 1.613,
-     "u": 2.265
+     "o": 1.601,
+     "u": 2.276
     },
     "3.0": {
-     "o": 2.037,
-     "u": 1.82
+     "o": 2.057,
+     "u": 1.84
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.39,
+    "oX": 3.48,
+    "o2": 3.1,
+    "ou": {
+     "3.0": {
+      "o": 2.05,
+      "u": 1.86
+     }
     }
    }
   },
@@ -1692,24 +1716,31 @@
    "kickoff": "2026-10-24T18:45Z",
    "home": "Saint Etienne",
    "away": "Nantes",
-   "o1": 1.718,
-   "oX": 3.687,
-   "o2": 4.325,
+   "o1": 1.728,
+   "oX": 3.678,
+   "o2": 4.296,
    "best": {
     "2": {
-     "odds": 4.7,
-     "book": "Pinnacle"
+     "odds": 4.75,
+     "book": "Coolbet"
     },
     "1": {
-     "odds": 1.75,
-     "book": "Nordic Bet"
+     "odds": 1.81,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 3.85,
+     "odds": 4.0,
      "book": "Coolbet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.81,
+    "oX": 3.71,
+    "o2": 4.52,
+    "ou": {}
+   }
   },
   {
    "id": "bel-raal-la-louviere-sv-zulte-waregem",
@@ -1717,16 +1748,16 @@
    "kickoff": "2026-10-24T18:45Z",
    "home": "RAAL La Louvière",
    "away": "SV Zulte-Waregem",
-   "o1": 3.008,
-   "oX": 3.254,
-   "o2": 2.269,
+   "o1": 2.974,
+   "oX": 3.25,
+   "o2": 2.299,
    "best": {
     "1": {
-     "odds": 3.21,
-     "book": "Pinnacle"
+     "odds": 3.18,
+     "book": "1xBet"
     },
     "2": {
-     "odds": 2.35,
+     "odds": 2.39,
      "book": "Pinnacle"
     },
     "X": {
@@ -1734,7 +1765,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.17,
+    "oX": 3.34,
+    "o2": 2.39,
+    "ou": {}
+   }
   },
   {
    "id": "bel-westerlo-sk-beveren",
@@ -1742,24 +1780,31 @@
    "kickoff": "2026-10-24T18:45Z",
    "home": "Westerlo",
    "away": "SK Beveren",
-   "o1": 2.023,
-   "oX": 3.67,
-   "o2": 3.213,
+   "o1": 1.829,
+   "oX": 3.79,
+   "o2": 3.723,
    "best": {
     "2": {
-     "odds": 3.45,
-     "book": "Pinnacle"
-    },
-    "1": {
-     "odds": 2.14,
+     "odds": 3.96,
      "book": "1xBet"
     },
+    "1": {
+     "odds": 1.9,
+     "book": "Pinnacle"
+    },
     "X": {
-     "odds": 3.85,
-     "book": "Coolbet"
+     "odds": 4.0,
+     "book": "Tipico"
     }
    },
-   "books": 20
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.9,
+    "oX": 3.89,
+    "o2": 3.96,
+    "ou": {}
+   }
   },
   {
    "id": "liga-atletico-madrid-deportivo-la-coruna",
@@ -1767,36 +1812,48 @@
    "kickoff": "2026-10-24T19:00Z",
    "home": "Atlético Madrid",
    "away": "Deportivo La Coruña",
-   "o1": 1.267,
-   "oX": 5.934,
-   "o2": 10.415,
+   "o1": 1.254,
+   "oX": 6.189,
+   "o2": 10.534,
    "best": {
     "1": {
-     "odds": 1.34,
+     "odds": 1.33,
      "book": "1xBet"
     },
     "2": {
-     "odds": 12.0,
-     "book": "Coolbet"
+     "odds": 12.5,
+     "book": "Unibet (NL)"
     },
     "X": {
-     "odds": 6.25,
-     "book": "Winamax (DE)"
+     "odds": 6.7,
+     "book": "Tipico"
     }
    },
    "books": 19,
    "ou": {
-    "2.5": {
-     "o": 1.551,
-     "u": 2.413
-    },
     "3.5": {
-     "o": 2.303,
-     "u": 1.57
+     "o": 2.269,
+     "u": 1.606
+    },
+    "2.5": {
+     "o": 1.45,
+     "u": 2.66
     },
     "3.0": {
-     "o": 1.9,
-     "u": 1.963
+     "o": 1.775,
+     "u": 2.125
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.25,
+    "oX": 6.51,
+    "o2": 11.69,
+    "ou": {
+     "3.25": {
+      "o": 1.98,
+      "u": 1.9
+     }
     }
    }
   },
@@ -1806,12 +1863,12 @@
    "kickoff": "2026-10-24T19:00Z",
    "home": "ADO Den Haag",
    "away": "Heerenveen",
-   "o1": 3.311,
-   "oX": 3.796,
-   "o2": 1.978,
+   "o1": 3.273,
+   "oX": 3.789,
+   "o2": 1.999,
    "best": {
     "1": {
-     "odds": 3.5,
+     "odds": 3.45,
      "book": "Unibet (NL)"
     },
     "2": {
@@ -1826,16 +1883,28 @@
    "books": 22,
    "ou": {
     "3.5": {
-     "o": 2.097,
-     "u": 1.688
+     "o": 2.113,
+     "u": 1.684
     },
     "2.5": {
-     "o": 1.427,
-     "u": 2.703
+     "o": 1.443,
+     "u": 2.637
     },
     "3.25": {
-     "o": 1.885,
-     "u": 1.92
+     "o": 1.93,
+     "u": 1.88
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.44,
+    "oX": 3.88,
+    "o2": 2.06,
+    "ou": {
+     "3.25": {
+      "o": 1.95,
+      "u": 1.93
+     }
     }
    }
   },
@@ -1845,24 +1914,31 @@
    "kickoff": "2026-10-24T19:00Z",
    "home": "Almería",
    "away": "Oviedo",
-   "o1": 1.646,
-   "oX": 3.682,
-   "o2": 4.882,
+   "o1": 1.707,
+   "oX": 3.642,
+   "o2": 4.498,
    "best": {
     "1": {
-     "odds": 1.72,
-     "book": "Pinnacle"
+     "odds": 1.81,
+     "book": "BetOnline.ag"
     },
     "2": {
-     "odds": 5.5,
-     "book": "Unibet (SE)"
+     "odds": 5.19,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 3.98,
+     "odds": 3.85,
      "book": "1xBet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.72,
+    "oX": 3.8,
+    "o2": 5.19,
+    "ou": {}
+   }
   },
   {
    "id": "por-gil-vicente-fc-porto",
@@ -1870,28 +1946,40 @@
    "kickoff": "2026-10-24T19:30Z",
    "home": "Gil Vicente",
    "away": "FC Porto",
-   "o1": 7.133,
-   "oX": 4.306,
-   "o2": 1.413,
+   "o1": 7.069,
+   "oX": 4.297,
+   "o2": 1.416,
    "best": {
     "2": {
      "odds": 1.47,
-     "book": "Pinnacle"
+     "book": "Coolbet"
     },
     "1": {
-     "odds": 8.0,
-     "book": "LeoVegas (SE)"
+     "odds": 7.5,
+     "book": "Coolbet"
     },
     "X": {
-     "odds": 4.42,
+     "odds": 4.65,
      "book": "Pinnacle"
     }
    },
    "books": 20,
    "ou": {
     "2.5": {
-     "o": 1.866,
-     "u": 1.872
+     "o": 1.875,
+     "u": 1.869
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 7.38,
+    "oX": 4.65,
+    "o2": 1.45,
+    "ou": {
+     "2.5": {
+      "o": 1.91,
+      "u": 1.98
+     }
     }
    }
   }

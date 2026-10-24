@@ -1,6 +1,6 @@
 {
  "date": "2026-10-25",
- "updatedAt": "2026-10-24T06:48:19Z",
+ "updatedAt": "2026-10-24T18:41:45Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -9,13 +9,13 @@
    "kickoff": "2026-10-25T10:45Z",
    "home": "FK Rostov",
    "away": "Lokomotiv Moscow",
-   "o1": 2.27,
-   "oX": 3.246,
-   "o2": 3.228,
+   "o1": 2.296,
+   "oX": 3.26,
+   "o2": 3.222,
    "best": {
     "1": {
-     "odds": 2.34,
-     "book": "1xBet"
+     "odds": 2.35,
+     "book": "Pinnacle"
     },
     "2": {
      "odds": 3.4,
@@ -26,7 +26,14 @@
      "book": "1xBet"
     }
    },
-   "books": 5
+   "books": 5,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.35,
+    "oX": 3.28,
+    "o2": 3.24,
+    "ou": {}
+   }
   },
   {
    "id": "ere-fortuna-sittard-excelsior",
@@ -34,36 +41,48 @@
    "kickoff": "2026-10-25T11:15Z",
    "home": "Fortuna Sittard",
    "away": "Excelsior",
-   "o1": 2.31,
-   "oX": 3.537,
-   "o2": 2.772,
+   "o1": 2.322,
+   "oX": 3.559,
+   "o2": 2.77,
    "best": {
     "2": {
-     "odds": 2.95,
+     "odds": 2.9,
      "book": "Unibet (NL)"
     },
     "1": {
-     "odds": 2.42,
-     "book": "1xBet"
+     "odds": 2.43,
+     "book": "Unibet (NL)"
     },
     "X": {
      "odds": 3.75,
      "book": "Coolbet"
     }
    },
-   "books": 21,
+   "books": 22,
    "ou": {
     "2.5": {
-     "o": 1.571,
-     "u": 2.271
+     "o": 1.584,
+     "u": 2.253
     },
     "3.0": {
-     "o": 1.93,
-     "u": 1.845
+     "o": 1.978,
+     "u": 1.823
     },
-    "2.75": {
-     "o": 1.79,
-     "u": 2.025
+    "3.5": {
+     "o": 2.375,
+     "u": 1.53
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.42,
+    "oX": 3.63,
+    "o2": 2.86,
+    "ou": {
+     "3.0": {
+      "o": 2.05,
+      "u": 1.83
+     }
     }
    }
   },
@@ -73,16 +92,16 @@
    "kickoff": "2026-10-25T11:15Z",
    "home": "Śląsk Wrocław",
    "away": "Wieczysta Kraków",
-   "o1": 2.827,
-   "oX": 3.598,
-   "o2": 2.159,
+   "o1": 2.859,
+   "oX": 3.606,
+   "o2": 2.169,
    "best": {
     "2": {
      "odds": 2.3,
      "book": "Unibet (NL)"
     },
     "1": {
-     "odds": 2.94,
+     "odds": 2.97,
      "book": "Pinnacle"
     },
     "X": {
@@ -90,7 +109,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 19
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.97,
+    "oX": 3.84,
+    "o2": 2.23,
+    "ou": {}
+   }
   },
   {
    "id": "sa-inter-milan-fiorentina",
@@ -98,32 +124,44 @@
    "kickoff": "2026-10-25T11:30Z",
    "home": "Inter Milan",
    "away": "Fiorentina",
-   "o1": 1.344,
-   "oX": 5.467,
-   "o2": 7.647,
+   "o1": 1.336,
+   "oX": 5.539,
+   "o2": 7.878,
    "best": {
     "2": {
      "odds": 8.5,
-     "book": "Coolbet"
+     "book": "1xBet"
     },
     "1": {
-     "odds": 1.41,
+     "odds": 1.37,
      "book": "1xBet"
     },
     "X": {
-     "odds": 5.85,
-     "book": "BetOnline.ag"
+     "odds": 5.87,
+     "book": "1xBet"
     }
    },
    "books": 24,
    "ou": {
     "3.5": {
-     "o": 2.057,
-     "u": 1.745
+     "o": 2.03,
+     "u": 1.768
     },
     "2.5": {
      "o": 1.407,
-     "u": 2.857
+     "u": 2.907
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.34,
+    "oX": 5.81,
+    "o2": 8.16,
+    "ou": {
+     "3.25": {
+      "o": 1.85,
+      "u": 2.05
+     }
     }
    }
   },
@@ -133,24 +171,31 @@
    "kickoff": "2026-10-25T12:30Z",
    "home": "Holstein Kiel",
    "away": "Dynamo Dresden",
-   "o1": 2.224,
-   "oX": 3.661,
-   "o2": 2.796,
+   "o1": 2.226,
+   "oX": 3.683,
+   "o2": 2.803,
    "best": {
     "2": {
      "odds": 3.0,
      "book": "Unibet (SE)"
     },
     "1": {
-     "odds": 2.34,
+     "odds": 2.36,
      "book": "Pinnacle"
     },
     "X": {
-     "odds": 3.85,
-     "book": "Coolbet"
+     "odds": 3.88,
+     "book": "Pinnacle"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.36,
+    "oX": 3.88,
+    "o2": 2.81,
+    "ou": {}
+   }
   },
   {
    "id": "bl2-eintracht-braunschweig-hannover-96",
@@ -158,9 +203,9 @@
    "kickoff": "2026-10-25T12:30Z",
    "home": "Eintracht Braunschweig",
    "away": "Hannover 96",
-   "o1": 2.847,
-   "oX": 3.706,
-   "o2": 2.179,
+   "o1": 2.841,
+   "oX": 3.7,
+   "o2": 2.198,
    "best": {
     "1": {
      "odds": 3.05,
@@ -175,7 +220,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.97,
+    "oX": 3.79,
+    "o2": 2.29,
+    "ou": {}
+   }
   },
   {
    "id": "bl2-vfl-osnabruck-greuther-furth",
@@ -183,24 +235,31 @@
    "kickoff": "2026-10-25T12:30Z",
    "home": "VfL Osnabrück",
    "away": "Greuther Fürth",
-   "o1": 2.199,
-   "oX": 3.574,
-   "o2": 2.878,
+   "o1": 2.203,
+   "oX": 3.599,
+   "o2": 2.881,
    "best": {
     "2": {
-     "odds": 3.03,
+     "odds": 3.05,
      "book": "Pinnacle"
     },
     "1": {
      "odds": 2.3,
-     "book": "Tipico"
+     "book": "Pinnacle"
     },
     "X": {
      "odds": 3.75,
      "book": "Coolbet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.3,
+    "oX": 3.64,
+    "o2": 3.05,
+    "ou": {}
+   }
   },
   {
    "id": "bel-genk-standard-liege",
@@ -208,24 +267,31 @@
    "kickoff": "2026-10-25T12:30Z",
    "home": "Genk",
    "away": "Standard Liege",
-   "o1": 1.708,
-   "oX": 3.729,
-   "o2": 4.322,
+   "o1": 1.716,
+   "oX": 3.725,
+   "o2": 4.316,
    "best": {
     "1": {
-     "odds": 1.78,
-     "book": "1xBet"
+     "odds": 1.77,
+     "book": "Pinnacle"
     },
     "2": {
-     "odds": 4.75,
-     "book": "Unibet (SE)"
+     "odds": 4.72,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 3.85,
-     "book": "Nordic Bet"
+     "odds": 4.0,
+     "book": "Tipico"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.77,
+    "oX": 3.77,
+    "o2": 4.72,
+    "ou": {}
+   }
   },
   {
    "id": "liga-athletic-bilbao-getafe",
@@ -233,32 +299,44 @@
    "kickoff": "2026-10-25T13:00Z",
    "home": "Athletic Bilbao",
    "away": "Getafe",
-   "o1": 1.567,
-   "oX": 3.923,
-   "o2": 6.138,
+   "o1": 1.568,
+   "oX": 3.914,
+   "o2": 6.11,
    "best": {
     "1": {
      "odds": 1.63,
      "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 6.6,
+     "odds": 6.7,
      "book": "Betsson"
     },
     "X": {
-     "odds": 4.2,
-     "book": "Coolbet"
+     "odds": 4.13,
+     "book": "BetOnline.ag"
     }
    },
    "books": 21,
    "ou": {
     "2.5": {
-     "o": 2.255,
-     "u": 1.618
+     "o": 2.269,
+     "u": 1.61
     },
     "2.0": {
      "o": 1.745,
      "u": 2.145
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.6,
+    "oX": 4.1,
+    "o2": 5.89,
+    "ou": {
+     "2.25": {
+      "o": 2.08,
+      "u": 1.83
+     }
     }
    }
   },
@@ -268,24 +346,31 @@
    "kickoff": "2026-10-25T13:00Z",
    "home": "Sabadell FC",
    "away": "Tenerife",
-   "o1": 1.871,
-   "oX": 3.149,
-   "o2": 4.213,
+   "o1": 1.875,
+   "oX": 3.159,
+   "o2": 4.255,
    "best": {
     "1": {
      "odds": 1.95,
      "book": "Coolbet"
     },
     "2": {
-     "odds": 4.58,
-     "book": "Pinnacle"
+     "odds": 4.7,
+     "book": "Tipico"
     },
     "X": {
      "odds": 3.33,
      "book": "1xBet"
     }
    },
-   "books": 20
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.91,
+    "oX": 3.3,
+    "o2": 4.66,
+    "ou": {}
+   }
   },
   {
    "id": "tur-torku-konyaspor-genclerbirligi-sk",
@@ -293,24 +378,31 @@
    "kickoff": "2026-10-25T13:00Z",
    "home": "Torku Konyaspor",
    "away": "Genclerbirligi SK",
-   "o1": 1.827,
-   "oX": 3.442,
-   "o2": 4.124,
+   "o1": 1.84,
+   "oX": 3.425,
+   "o2": 4.118,
    "best": {
     "2": {
      "odds": 4.4,
-     "book": "Tipico"
+     "book": "Pinnacle"
     },
     "1": {
-     "odds": 1.91,
-     "book": "1xBet"
+     "odds": 1.92,
+     "book": "Pinnacle"
     },
     "X": {
      "odds": 3.67,
      "book": "1xBet"
     }
    },
-   "books": 20
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.92,
+    "oX": 3.42,
+    "o2": 4.4,
+    "ou": {}
+   }
   },
   {
    "id": "den-fc-midtjylland-lyngby",
@@ -318,9 +410,9 @@
    "kickoff": "2026-10-25T13:00Z",
    "home": "FC Midtjylland",
    "away": "Lyngby",
-   "o1": 1.416,
-   "oX": 4.756,
-   "o2": 6.058,
+   "o1": 1.424,
+   "oX": 4.801,
+   "o2": 6.1,
    "best": {
     "1": {
      "odds": 1.5,
@@ -331,11 +423,18 @@
      "book": "Unibet (SE)"
     },
     "X": {
-     "odds": 5.0,
-     "book": "Codere (IT)"
+     "odds": 5.03,
+     "book": "Pinnacle"
     }
    },
-   "books": 22
+   "books": 23,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.45,
+    "oX": 5.03,
+    "o2": 6.33,
+    "ou": {}
+   }
   },
   {
    "id": "den-silkeborg-if-fc-nordsjaelland",
@@ -343,9 +442,9 @@
    "kickoff": "2026-10-25T13:00Z",
    "home": "Silkeborg IF",
    "away": "FC Nordsjaelland",
-   "o1": 4.313,
-   "oX": 4.195,
-   "o2": 1.635,
+   "o1": 4.33,
+   "oX": 4.224,
+   "o2": 1.646,
    "best": {
     "2": {
      "odds": 1.7,
@@ -360,7 +459,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 22
+   "books": 23,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 4.47,
+    "oX": 4.46,
+    "o2": 1.68,
+    "ou": {}
+   }
   },
   {
    "id": "swe-gais-ifk-goteborg",
@@ -368,24 +474,31 @@
    "kickoff": "2026-10-25T13:00Z",
    "home": "GAIS",
    "away": "IFK Goteborg",
-   "o1": 2.337,
-   "oX": 3.348,
-   "o2": 2.845,
+   "o1": 2.374,
+   "oX": 3.359,
+   "o2": 2.824,
    "best": {
     "1": {
      "odds": 2.5,
      "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 2.97,
-     "book": "Pinnacle"
+     "odds": 2.95,
+     "book": "Coolbet"
     },
     "X": {
      "odds": 3.6,
      "book": "Unibet (SE)"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.45,
+    "oX": 3.37,
+    "o2": 2.92,
+    "ou": {}
+   }
   },
   {
    "id": "rus-cska-moscow-spartak-moscow",
@@ -393,9 +506,9 @@
    "kickoff": "2026-10-25T13:00Z",
    "home": "CSKA Moscow",
    "away": "Spartak Moscow",
-   "o1": 2.976,
-   "oX": 3.56,
-   "o2": 2.268,
+   "o1": 2.974,
+   "oX": 3.6,
+   "o2": 2.284,
    "best": {
     "1": {
      "odds": 3.12,
@@ -406,11 +519,18 @@
      "book": "1xBet"
     },
     "X": {
-     "odds": 3.69,
-     "book": "1xBet"
+     "odds": 3.71,
+     "book": "Pinnacle"
     }
    },
-   "books": 5
+   "books": 5,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.01,
+    "oX": 3.71,
+    "o2": 2.29,
+    "ou": {}
+   }
   },
   {
    "id": "ere-psv-eindhoven-feyenoord",
@@ -418,36 +538,48 @@
    "kickoff": "2026-10-25T13:30Z",
    "home": "PSV Eindhoven",
    "away": "Feyenoord",
-   "o1": 1.994,
-   "oX": 4.098,
-   "o2": 3.033,
+   "o1": 1.998,
+   "oX": 4.08,
+   "o2": 3.075,
    "best": {
     "2": {
-     "odds": 3.25,
+     "odds": 3.4,
      "book": "Unibet (NL)"
     },
     "1": {
-     "odds": 2.08,
-     "book": "Nordic Bet"
+     "odds": 2.07,
+     "book": "Pinnacle"
     },
     "X": {
      "odds": 4.4,
      "book": "BetOnline.ag"
     }
    },
-   "books": 21,
+   "books": 22,
    "ou": {
     "2.5": {
-     "o": 1.267,
-     "u": 3.56
+     "o": 1.28,
+     "u": 3.463
     },
     "3.5": {
-     "o": 1.719,
-     "u": 2.03
+     "o": 1.727,
+     "u": 2.037
     },
     "3.75": {
-     "o": 1.835,
-     "u": 1.965
+     "o": 1.935,
+     "u": 1.87
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.07,
+    "oX": 4.24,
+    "o2": 3.12,
+    "ou": {
+     "3.75": {
+      "o": 1.96,
+      "u": 1.91
+     }
     }
    }
   },
@@ -457,13 +589,13 @@
    "kickoff": "2026-10-25T13:30Z",
    "home": "NEC Nijmegen",
    "away": "Groningen",
-   "o1": 2.234,
+   "o1": 2.242,
    "oX": 3.785,
-   "o2": 2.753,
+   "o2": 2.758,
    "best": {
     "2": {
-     "odds": 2.9,
-     "book": "Unibet (NL)"
+     "odds": 2.91,
+     "book": "Pinnacle"
     },
     "1": {
      "odds": 2.35,
@@ -474,19 +606,31 @@
      "book": "Coolbet"
     }
    },
-   "books": 21,
+   "books": 22,
    "ou": {
     "2.5": {
-     "o": 1.397,
-     "u": 2.803
+     "o": 1.407,
+     "u": 2.763
     },
     "3.5": {
-     "o": 2.053,
-     "u": 1.704
+     "o": 2.054,
+     "u": 1.714
     },
     "3.25": {
-     "o": 1.825,
+     "o": 1.835,
      "u": 1.98
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.29,
+    "oX": 3.85,
+    "o2": 2.91,
+    "ou": {
+     "3.25": {
+      "o": 1.87,
+      "u": 2.01
+     }
     }
    }
   },
@@ -496,16 +640,16 @@
    "kickoff": "2026-10-25T13:45Z",
    "home": "Jagiellonia Białystok",
    "away": "Wisła Płock",
-   "o1": 1.959,
-   "oX": 3.552,
-   "o2": 3.324,
+   "o1": 1.97,
+   "oX": 3.57,
+   "o2": 3.341,
    "best": {
     "1": {
-     "odds": 2.02,
-     "book": "Nordic Bet"
+     "odds": 2.04,
+     "book": "Pinnacle"
     },
     "2": {
-     "odds": 3.51,
+     "odds": 3.56,
      "book": "Pinnacle"
     },
     "X": {
@@ -513,7 +657,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 19
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.04,
+    "oX": 3.65,
+    "o2": 3.56,
+    "ou": {}
+   }
   },
   {
    "id": "pl-manchester-united-bournemouth",
@@ -521,32 +672,44 @@
    "kickoff": "2026-10-25T14:00Z",
    "home": "Manchester United",
    "away": "Bournemouth",
-   "o1": 2.166,
+   "o1": 2.19,
    "oX": 3.618,
-   "o2": 3.159,
+   "o2": 3.125,
    "best": {
     "2": {
      "odds": 3.35,
      "book": "1xBet"
     },
     "1": {
-     "odds": 2.27,
+     "odds": 2.29,
      "book": "Coolbet"
     },
     "X": {
-     "odds": 3.75,
+     "odds": 3.76,
      "book": "1xBet"
     }
    },
    "books": 25,
    "ou": {
     "2.5": {
-     "o": 1.619,
-     "u": 2.256
+     "o": 1.628,
+     "u": 2.243
     },
     "3.0": {
-     "o": 2.045,
-     "u": 1.815
+     "o": 2.04,
+     "u": 1.818
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.21,
+    "oX": 3.72,
+    "o2": 3.2,
+    "ou": {
+     "3.0": {
+      "o": 2.07,
+      "u": 1.83
+     }
     }
    }
   },
@@ -556,32 +719,44 @@
    "kickoff": "2026-10-25T14:00Z",
    "home": "Hull City",
    "away": "Brentford",
-   "o1": 4.752,
-   "oX": 3.996,
-   "o2": 1.687,
+   "o1": 4.656,
+   "oX": 3.976,
+   "o2": 1.708,
    "best": {
     "2": {
      "odds": 1.78,
      "book": "GTbets"
     },
     "1": {
-     "odds": 5.25,
+     "odds": 5.0,
      "book": "Unibet (SE)"
     },
     "X": {
-     "odds": 4.21,
-     "book": "1xBet"
+     "odds": 4.2,
+     "book": "Unibet (SE)"
     }
    },
    "books": 25,
    "ou": {
     "2.5": {
-     "o": 1.655,
-     "u": 2.183
+     "o": 1.651,
+     "u": 2.202
     },
     "3.0": {
-     "o": 2.09,
+     "o": 2.093,
      "u": 1.77
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 4.68,
+    "oX": 4.06,
+    "o2": 1.74,
+    "ou": {
+     "2.75": {
+      "o": 1.86,
+      "u": 2.03
+     }
     }
    }
   },
@@ -591,36 +766,48 @@
    "kickoff": "2026-10-25T14:00Z",
    "home": "Liverpool",
    "away": "Brighton and Hove Albion",
-   "o1": 2.081,
-   "oX": 3.817,
-   "o2": 3.193,
+   "o1": 2.079,
+   "oX": 3.855,
+   "o2": 3.188,
    "best": {
     "2": {
-     "odds": 3.35,
-     "book": "Unibet (SE)"
+     "odds": 3.3,
+     "book": "Tipico"
     },
     "1": {
-     "odds": 2.16,
+     "odds": 2.15,
      "book": "1xBet"
     },
     "X": {
-     "odds": 4.03,
+     "odds": 4.04,
      "book": "1xBet"
     }
    },
    "books": 25,
    "ou": {
     "3.5": {
-     "o": 2.282,
-     "u": 1.61
+     "o": 2.287,
+     "u": 1.613
     },
     "2.5": {
-     "o": 1.516,
-     "u": 2.49
+     "o": 1.52,
+     "u": 2.477
     },
     "3.0": {
-     "o": 1.848,
-     "u": 2.007
+     "o": 1.84,
+     "u": 2.015
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.08,
+    "oX": 4.0,
+    "o2": 3.3,
+    "ou": {
+     "3.0": {
+      "o": 1.85,
+      "u": 2.05
+     }
     }
    }
   },
@@ -630,36 +817,48 @@
    "kickoff": "2026-10-25T14:00Z",
    "home": "Crystal Palace",
    "away": "Newcastle United",
-   "o1": 2.876,
-   "oX": 3.595,
-   "o2": 2.325,
+   "o1": 2.873,
+   "oX": 3.629,
+   "o2": 2.322,
    "best": {
     "1": {
      "odds": 3.04,
      "book": "1xBet"
     },
     "2": {
-     "odds": 2.44,
+     "odds": 2.41,
      "book": "Coolbet"
     },
     "X": {
      "odds": 3.75,
-     "book": "Unibet (SE)"
+     "book": "Winamax (DE)"
     }
    },
    "books": 25,
    "ou": {
     "3.5": {
-     "o": 2.247,
-     "u": 1.567
+     "o": 2.223,
+     "u": 1.59
     },
     "2.5": {
-     "o": 1.571,
-     "u": 2.377
+     "o": 1.562,
+     "u": 2.396
     },
     "3.0": {
-     "o": 1.905,
-     "u": 1.945
+     "o": 1.887,
+     "u": 1.965
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.95,
+    "oX": 3.68,
+    "o2": 2.36,
+    "ou": {
+     "3.0": {
+      "o": 1.9,
+      "u": 1.99
+     }
     }
    }
   },
@@ -670,12 +869,12 @@
    "home": "Atalanta BC",
    "away": "Frosinone",
    "o1": 1.812,
-   "oX": 4.088,
-   "o2": 3.819,
+   "oX": 4.082,
+   "o2": 3.838,
    "best": {
     "1": {
      "odds": 1.85,
-     "book": "Pinnacle"
+     "book": "1xBet"
     },
     "2": {
      "odds": 4.22,
@@ -689,12 +888,24 @@
    "books": 24,
    "ou": {
     "3.5": {
-     "o": 2.015,
-     "u": 1.79
+     "o": 2.019,
+     "u": 1.783
     },
     "2.5": {
      "o": 1.403,
      "u": 2.89
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.84,
+    "oX": 4.18,
+    "o2": 3.94,
+    "ou": {
+     "3.25": {
+      "o": 1.83,
+      "u": 2.07
+     }
     }
    }
   },
@@ -704,28 +915,40 @@
    "kickoff": "2026-10-25T14:00Z",
    "home": "Genoa",
    "away": "Venezia",
-   "o1": 2.136,
-   "oX": 3.243,
-   "o2": 3.56,
+   "o1": 2.135,
+   "oX": 3.262,
+   "o2": 3.551,
    "best": {
     "1": {
-     "odds": 2.2,
-     "book": "1xBet"
+     "odds": 2.23,
+     "book": "Unibet (NL)"
     },
     "2": {
      "odds": 3.85,
      "book": "Coolbet"
     },
     "X": {
-     "odds": 3.45,
-     "book": "Unibet (NL)"
+     "odds": 3.42,
+     "book": "GTbets"
     }
    },
    "books": 24,
    "ou": {
     "2.5": {
-     "o": 1.939,
-     "u": 1.852
+     "o": 1.949,
+     "u": 1.845
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.18,
+    "oX": 3.25,
+    "o2": 3.73,
+    "ou": {
+     "2.5": {
+      "o": 2.02,
+      "u": 1.88
+     }
     }
    }
   },
@@ -735,16 +958,16 @@
    "kickoff": "2026-10-25T14:00Z",
    "home": "AS Monaco",
    "away": "Lille",
-   "o1": 2.049,
-   "oX": 3.403,
-   "o2": 3.627,
+   "o1": 2.048,
+   "oX": 3.41,
+   "o2": 3.634,
    "best": {
     "1": {
      "odds": 2.15,
      "book": "1xBet"
     },
     "2": {
-     "odds": 3.95,
+     "odds": 3.91,
      "book": "Pinnacle"
     },
     "X": {
@@ -755,8 +978,20 @@
    "books": 22,
    "ou": {
     "2.5": {
-     "o": 1.806,
-     "u": 1.983
+     "o": 1.805,
+     "u": 1.985
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.08,
+    "oX": 3.37,
+    "o2": 3.91,
+    "ou": {
+     "2.5": {
+      "o": 1.83,
+      "u": 2.07
+     }
     }
    }
   },
@@ -766,8 +1001,8 @@
    "kickoff": "2026-10-25T14:30Z",
    "home": "TSG Hoffenheim",
    "away": "Bayer Leverkusen",
-   "o1": 2.734,
-   "oX": 3.938,
+   "o1": 2.744,
+   "oX": 3.93,
    "o2": 2.274,
    "best": {
     "2": {
@@ -786,12 +1021,24 @@
    "books": 23,
    "ou": {
     "3.5": {
-     "o": 1.92,
-     "u": 1.87
+     "o": 1.893,
+     "u": 1.899
     },
     "2.5": {
-     "o": 1.377,
-     "u": 3.017
+     "o": 1.363,
+     "u": 3.083
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.81,
+    "oX": 4.07,
+    "o2": 2.31,
+    "ou": {
+     "3.5": {
+      "o": 1.89,
+      "u": 1.99
+     }
     }
    }
   },
@@ -801,24 +1048,31 @@
    "kickoff": "2026-10-25T15:00Z",
    "home": "Club Brugge",
    "away": "Sint Truiden",
-   "o1": 1.317,
-   "oX": 5.444,
-   "o2": 7.019,
+   "o1": 1.315,
+   "oX": 5.499,
+   "o2": 7.142,
    "best": {
     "1": {
      "odds": 1.36,
      "book": "1xBet"
     },
     "2": {
-     "odds": 7.75,
-     "book": "Coolbet"
+     "odds": 7.83,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 6.0,
-     "book": "Tipico"
+     "odds": 6.08,
+     "book": "Pinnacle"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.33,
+    "oX": 6.08,
+    "o2": 7.83,
+    "ou": {}
+   }
   },
   {
    "id": "den-ac-horsens-sonderjyske",
@@ -826,16 +1080,16 @@
    "kickoff": "2026-10-25T15:00Z",
    "home": "AC Horsens",
    "away": "SonderjyskE",
-   "o1": 2.335,
-   "oX": 3.439,
-   "o2": 2.759,
+   "o1": 2.351,
+   "oX": 3.45,
+   "o2": 2.773,
    "best": {
     "1": {
-     "odds": 2.43,
+     "odds": 2.46,
      "book": "Pinnacle"
     },
     "2": {
-     "odds": 2.86,
+     "odds": 2.89,
      "book": "Pinnacle"
     },
     "X": {
@@ -843,7 +1097,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 22
+   "books": 23,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.46,
+    "oX": 3.51,
+    "o2": 2.89,
+    "ou": {}
+   }
   },
   {
    "id": "liga-celta-vigo-real-betis",
@@ -851,28 +1112,40 @@
    "kickoff": "2026-10-25T15:15Z",
    "home": "Celta Vigo",
    "away": "Real Betis",
-   "o1": 3.056,
-   "oX": 3.437,
-   "o2": 2.278,
+   "o1": 3.089,
+   "oX": 3.488,
+   "o2": 2.247,
    "best": {
     "1": {
-     "odds": 3.23,
-     "book": "1xBet"
-    },
-    "2": {
-     "odds": 2.4,
+     "odds": 3.3,
      "book": "Unibet (NL)"
     },
+    "2": {
+     "odds": 2.36,
+     "book": "1xBet"
+    },
     "X": {
-     "odds": 3.63,
-     "book": "Pinnacle"
+     "odds": 3.65,
+     "book": "Unibet (NL)"
     }
    },
    "books": 21,
    "ou": {
     "2.5": {
-     "o": 1.765,
-     "u": 2.027
+     "o": 1.735,
+     "u": 2.071
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.16,
+    "oX": 3.64,
+    "o2": 2.26,
+    "ou": {
+     "2.75": {
+      "o": 1.95,
+      "u": 1.93
+     }
     }
    }
   },
@@ -882,24 +1155,31 @@
    "kickoff": "2026-10-25T15:15Z",
    "home": "Cádiz CF",
    "away": "AD Ceuta FC",
-   "o1": 1.834,
-   "oX": 3.422,
-   "o2": 3.927,
+   "o1": 1.846,
+   "oX": 3.448,
+   "o2": 3.956,
    "best": {
     "2": {
      "odds": 4.25,
      "book": "Unibet (SE)"
     },
     "1": {
-     "odds": 1.91,
-     "book": "1xBet"
+     "odds": 1.93,
+     "book": "Pinnacle"
     },
     "X": {
      "odds": 3.63,
      "book": "1xBet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.93,
+    "oX": 3.53,
+    "o2": 4.2,
+    "ou": {}
+   }
   },
   {
    "id": "liga2-albacete-cd-eldense",
@@ -907,24 +1187,31 @@
    "kickoff": "2026-10-25T15:15Z",
    "home": "Albacete",
    "away": "CD Eldense",
-   "o1": 2.173,
-   "oX": 3.358,
-   "o2": 3.021,
+   "o1": 2.2,
+   "oX": 3.351,
+   "o2": 3.013,
    "best": {
     "1": {
-     "odds": 2.3,
-     "book": "Coolbet"
+     "odds": 2.33,
+     "book": "Pinnacle"
     },
     "2": {
-     "odds": 3.19,
-     "book": "Pinnacle"
+     "odds": 3.17,
+     "book": "1xBet"
     },
     "X": {
      "odds": 3.65,
      "book": "1xBet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.33,
+    "oX": 3.41,
+    "o2": 3.16,
+    "ou": {}
+   }
   },
   {
    "id": "por-estoril-moreirense-fc",
@@ -932,17 +1219,17 @@
    "kickoff": "2026-10-25T15:30Z",
    "home": "Estoril",
    "away": "Moreirense FC",
-   "o1": 1.898,
-   "oX": 3.477,
-   "o2": 3.718,
+   "o1": 1.891,
+   "oX": 3.513,
+   "o2": 3.753,
    "best": {
     "1": {
-     "odds": 1.97,
-     "book": "Tipico"
+     "odds": 1.95,
+     "book": "Coolbet"
     },
     "2": {
-     "odds": 3.88,
-     "book": "GTbets"
+     "odds": 3.95,
+     "book": "Pinnacle"
     },
     "X": {
      "odds": 3.71,
@@ -952,8 +1239,20 @@
    "books": 20,
    "ou": {
     "2.5": {
-     "o": 1.866,
-     "u": 1.864
+     "o": 1.867,
+     "u": 1.87
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.95,
+    "oX": 3.64,
+    "o2": 3.95,
+    "ou": {
+     "2.5": {
+      "o": 1.94,
+      "u": 1.93
+     }
     }
    }
   },
@@ -963,24 +1262,31 @@
    "kickoff": "2026-10-25T15:30Z",
    "home": "Mjällby AIF",
    "away": "Hammarby IF",
-   "o1": 5.887,
-   "oX": 4.456,
-   "o2": 1.46,
+   "o1": 5.833,
+   "oX": 4.445,
+   "o2": 1.471,
    "best": {
     "2": {
      "odds": 1.55,
      "book": "GTbets"
     },
     "1": {
-     "odds": 6.75,
-     "book": "Unibet (SE)"
+     "odds": 6.4,
+     "book": "Coolbet"
     },
     "X": {
-     "odds": 4.7,
-     "book": "Unibet (SE)"
+     "odds": 4.62,
+     "book": "Betsson"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 6.18,
+    "oX": 4.59,
+    "o2": 1.49,
+    "ou": {}
+   }
   },
   {
    "id": "rus-zenit-st-petersburg-fc-dynamo-makhachkala",
@@ -988,9 +1294,9 @@
    "kickoff": "2026-10-25T15:30Z",
    "home": "Zenit St Petersburg",
    "away": "FC Dynamo Makhachkala",
-   "o1": 1.28,
-   "oX": 5.522,
-   "o2": 10.086,
+   "o1": 1.284,
+   "oX": 5.602,
+   "o2": 10.318,
    "best": {
     "2": {
      "odds": 11.3,
@@ -1001,11 +1307,18 @@
      "book": "1xBet"
     },
     "X": {
-     "odds": 5.85,
+     "odds": 6.05,
      "book": "Pinnacle"
     }
    },
-   "books": 5
+   "books": 5,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.27,
+    "oX": 6.05,
+    "o2": 11.09,
+    "ou": {}
+   }
   },
   {
    "id": "ere-sparta-rotterdam-ajax",
@@ -1013,32 +1326,44 @@
    "kickoff": "2026-10-25T15:45Z",
    "home": "Sparta Rotterdam",
    "away": "Ajax",
-   "o1": 5.856,
-   "oX": 4.932,
-   "o2": 1.423,
+   "o1": 5.943,
+   "oX": 4.989,
+   "o2": 1.422,
    "best": {
     "2": {
-     "odds": 1.51,
+     "odds": 1.48,
      "book": "1xBet"
     },
     "1": {
-     "odds": 6.7,
-     "book": "Tipico"
+     "odds": 6.75,
+     "book": "Unibet (NL)"
     },
     "X": {
-     "odds": 5.3,
+     "odds": 5.4,
      "book": "Unibet (NL)"
     }
    },
-   "books": 21,
+   "books": 22,
    "ou": {
     "3.5": {
-     "o": 1.831,
-     "u": 1.907
+     "o": 1.828,
+     "u": 1.924
     },
     "2.5": {
      "o": 1.327,
      "u": 3.143
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 6.3,
+    "oX": 5.34,
+    "o2": 1.43,
+    "ou": {
+     "3.5": {
+      "o": 1.88,
+      "u": 1.99
+     }
     }
    }
   },
@@ -1048,24 +1373,31 @@
    "kickoff": "2026-10-25T16:00Z",
    "home": "Goztepe",
    "away": "Çorum FK",
-   "o1": 2.147,
-   "oX": 3.548,
-   "o2": 3.007,
+   "o1": 2.152,
+   "oX": 3.565,
+   "o2": 3.005,
    "best": {
     "1": {
      "odds": 2.3,
      "book": "Unibet (NL)"
     },
     "2": {
-     "odds": 3.3,
-     "book": "Tipico"
+     "odds": 3.22,
+     "book": "Pinnacle"
     },
     "X": {
      "odds": 3.77,
      "book": "1xBet"
     }
    },
-   "books": 20
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.2,
+    "oX": 3.66,
+    "o2": 3.22,
+    "ou": {}
+   }
   },
   {
    "id": "l1-angers-lorient",
@@ -1073,17 +1405,17 @@
    "kickoff": "2026-10-25T16:15Z",
    "home": "Angers",
    "away": "Lorient",
-   "o1": 2.955,
-   "oX": 3.271,
-   "o2": 2.411,
+   "o1": 2.956,
+   "oX": 3.28,
+   "o2": 2.418,
    "best": {
     "1": {
      "odds": 3.1,
      "book": "1xBet"
     },
     "2": {
-     "odds": 2.55,
-     "book": "Coolbet"
+     "odds": 2.52,
+     "book": "1xBet"
     },
     "X": {
      "odds": 3.4,
@@ -1093,8 +1425,20 @@
    "books": 22,
    "ou": {
     "2.5": {
-     "o": 2.004,
+     "o": 2.001,
      "u": 1.782
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.98,
+    "oX": 3.34,
+    "o2": 2.51,
+    "ou": {
+     "2.25": {
+      "o": 1.79,
+      "u": 2.12
+     }
     }
    }
   },
@@ -1104,28 +1448,40 @@
    "kickoff": "2026-10-25T16:15Z",
    "home": "Auxerre",
    "away": "Le Mans FC",
-   "o1": 2.064,
-   "oX": 3.578,
-   "o2": 3.391,
+   "o1": 2.029,
+   "oX": 3.616,
+   "o2": 3.473,
    "best": {
     "1": {
-     "odds": 2.15,
-     "book": "1xBet"
-    },
-    "2": {
-     "odds": 3.55,
+     "odds": 2.12,
      "book": "LeoVegas (SE)"
     },
+    "2": {
+     "odds": 3.71,
+     "book": "1xBet"
+    },
     "X": {
-     "odds": 3.77,
+     "odds": 3.78,
      "book": "1xBet"
     }
    },
    "books": 22,
    "ou": {
     "2.5": {
-     "o": 1.702,
-     "u": 2.122
+     "o": 1.71,
+     "u": 2.11
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.03,
+    "oX": 3.72,
+    "o2": 3.65,
+    "ou": {
+     "2.75": {
+      "o": 1.93,
+      "u": 1.96
+     }
     }
    }
   },
@@ -1135,36 +1491,48 @@
    "kickoff": "2026-10-25T16:15Z",
    "home": "Marseille",
    "away": "Le Havre",
-   "o1": 1.546,
-   "oX": 4.57,
-   "o2": 5.189,
+   "o1": 1.526,
+   "oX": 4.64,
+   "o2": 5.342,
    "best": {
     "2": {
-     "odds": 5.7,
-     "book": "Nordic Bet"
-    },
-    "1": {
-     "odds": 1.62,
+     "odds": 6.0,
      "book": "LeoVegas (SE)"
     },
+    "1": {
+     "odds": 1.6,
+     "book": "1xBet"
+    },
     "X": {
-     "odds": 4.89,
-     "book": "BetOnline.ag"
+     "odds": 4.93,
+     "book": "Pinnacle"
     }
    },
    "books": 22,
    "ou": {
     "3.5": {
-     "o": 2.334,
-     "u": 1.59
+     "o": 2.314,
+     "u": 1.58
     },
     "2.5": {
-     "o": 1.536,
-     "u": 2.401
+     "o": 1.507,
+     "u": 2.527
     },
     "3.0": {
-     "o": 1.89,
-     "u": 1.953
+     "o": 1.843,
+     "u": 2.007
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.54,
+    "oX": 4.93,
+    "o2": 5.36,
+    "ou": {
+     "3.0": {
+      "o": 1.85,
+      "u": 2.05
+     }
     }
    }
   },
@@ -1174,9 +1542,9 @@
    "kickoff": "2026-10-25T16:15Z",
    "home": "Rennes",
    "away": "Strasbourg",
-   "o1": 1.761,
-   "oX": 4.212,
-   "o2": 3.93,
+   "o1": 1.764,
+   "oX": 4.216,
+   "o2": 3.91,
    "best": {
     "1": {
      "odds": 1.83,
@@ -1188,18 +1556,30 @@
     },
     "X": {
      "odds": 4.4,
-     "book": "Pinnacle"
+     "book": "LeoVegas (SE)"
     }
    },
    "books": 22,
    "ou": {
     "3.5": {
-     "o": 2.091,
-     "u": 1.714
+     "o": 2.088,
+     "u": 1.715
     },
     "2.5": {
      "o": 1.423,
      "u": 2.82
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.81,
+    "oX": 4.39,
+    "o2": 3.91,
+    "ou": {
+     "3.25": {
+      "o": 1.88,
+      "u": 2.0
+     }
     }
    }
   },
@@ -1209,12 +1589,12 @@
    "kickoff": "2026-10-25T16:15Z",
    "home": "Toulouse",
    "away": "Troyes",
-   "o1": 1.602,
-   "oX": 4.201,
-   "o2": 5.103,
+   "o1": 1.601,
+   "oX": 4.221,
+   "o2": 5.112,
    "best": {
     "1": {
-     "odds": 1.67,
+     "odds": 1.65,
      "book": "LeoVegas (SE)"
     },
     "2": {
@@ -1222,19 +1602,31 @@
      "book": "1xBet"
     },
     "X": {
-     "odds": 4.4,
-     "book": "LeoVegas (SE)"
+     "odds": 4.44,
+     "book": "Pinnacle"
     }
    },
    "books": 21,
    "ou": {
     "2.5": {
-     "o": 1.594,
-     "u": 2.302
+     "o": 1.582,
+     "u": 2.325
     },
     "3.0": {
      "o": 2.025,
      "u": 1.83
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.61,
+    "oX": 4.44,
+    "o2": 5.24,
+    "ou": {
+     "2.75": {
+      "o": 1.78,
+      "u": 2.14
+     }
     }
    }
   },
@@ -1244,17 +1636,17 @@
    "kickoff": "2026-10-25T16:30Z",
    "home": "Sunderland",
    "away": "Leeds United",
-   "o1": 2.943,
-   "oX": 3.196,
-   "o2": 2.491,
+   "o1": 2.942,
+   "oX": 3.201,
+   "o2": 2.492,
    "best": {
     "2": {
-     "odds": 2.61,
-     "book": "Coolbet"
+     "odds": 2.58,
+     "book": "1xBet"
     },
     "1": {
-     "odds": 3.1,
-     "book": "Tipico"
+     "odds": 3.12,
+     "book": "Coolbet"
     },
     "X": {
      "odds": 3.36,
@@ -1264,8 +1656,20 @@
    "books": 25,
    "ou": {
     "2.5": {
-     "o": 2.115,
-     "u": 1.721
+     "o": 2.122,
+     "u": 1.719
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.01,
+    "oX": 3.24,
+    "o2": 2.55,
+    "ou": {
+     "2.25": {
+      "o": 1.89,
+      "u": 1.99
+     }
     }
    }
   },
@@ -1275,36 +1679,48 @@
    "kickoff": "2026-10-25T16:30Z",
    "home": "SC Freiburg",
    "away": "Bayern Munich",
-   "o1": 6.532,
-   "oX": 5.696,
-   "o2": 1.37,
+   "o1": 6.433,
+   "oX": 5.571,
+   "o2": 1.382,
    "best": {
     "2": {
-     "odds": 1.43,
-     "book": "Unibet (SE)"
+     "odds": 1.41,
+     "book": "Pinnacle"
     },
     "1": {
-     "odds": 7.25,
-     "book": "Coolbet"
+     "odds": 7.11,
+     "book": "1xBet"
     },
     "X": {
-     "odds": 6.12,
-     "book": "BetOnline.ag"
+     "odds": 5.99,
+     "book": "1xBet"
     }
    },
    "books": 23,
    "ou": {
     "4.0": {
-     "o": 2.013,
-     "u": 1.833
+     "o": 2.017,
+     "u": 1.83
     },
     "3.5": {
-     "o": 1.616,
-     "u": 2.238
+     "o": 1.613,
+     "u": 2.239
     },
     "2.5": {
-     "o": 1.24,
-     "u": 4.023
+     "o": 1.247,
+     "u": 3.957
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 6.56,
+    "oX": 5.71,
+    "o2": 1.41,
+    "ou": {
+     "4.0": {
+      "o": 2.09,
+      "u": 1.82
+     }
     }
    }
   },
@@ -1314,13 +1730,13 @@
    "kickoff": "2026-10-25T16:30Z",
    "home": "Legia Warszawa",
    "away": "Lech Poznań",
-   "o1": 2.599,
-   "oX": 3.389,
-   "o2": 2.397,
+   "o1": 2.569,
+   "oX": 3.434,
+   "o2": 2.446,
    "best": {
     "2": {
-     "odds": 2.55,
-     "book": "Coolbet"
+     "odds": 2.65,
+     "book": "Pinnacle"
     },
     "1": {
      "odds": 2.8,
@@ -1331,7 +1747,14 @@
      "book": "Coolbet"
     }
    },
-   "books": 19
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.62,
+    "oX": 3.51,
+    "o2": 2.65,
+    "ou": {}
+   }
   },
   {
    "id": "sa-lecce-juventus",
@@ -1339,28 +1762,40 @@
    "kickoff": "2026-10-25T17:00Z",
    "home": "Lecce",
    "away": "Juventus",
-   "o1": 7.431,
-   "oX": 4.293,
-   "o2": 1.448,
+   "o1": 7.268,
+   "oX": 4.234,
+   "o2": 1.463,
    "best": {
     "2": {
-     "odds": 1.5,
-     "book": "1xBet"
+     "odds": 1.51,
+     "book": "Pinnacle"
     },
     "1": {
-     "odds": 8.5,
+     "odds": 8.0,
      "book": "Unibet (SE)"
     },
     "X": {
-     "odds": 4.6,
-     "book": "Unibet (SE)"
+     "odds": 4.53,
+     "book": "1xBet"
     }
    },
    "books": 24,
    "ou": {
     "2.5": {
-     "o": 1.839,
-     "u": 1.954
+     "o": 1.845,
+     "u": 1.947
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 7.5,
+    "oX": 4.17,
+    "o2": 1.51,
+    "ou": {
+     "2.75": {
+      "o": 2.13,
+      "u": 1.79
+     }
     }
    }
   },
@@ -1370,9 +1805,9 @@
    "kickoff": "2026-10-25T17:00Z",
    "home": "AGF Aarhus",
    "away": "Viborg FF",
-   "o1": 2.311,
-   "oX": 3.552,
-   "o2": 2.711,
+   "o1": 2.33,
+   "oX": 3.565,
+   "o2": 2.714,
    "best": {
     "1": {
      "odds": 2.45,
@@ -1380,14 +1815,21 @@
     },
     "2": {
      "odds": 2.8,
-     "book": "Unibet (NL)"
+     "book": "Codere (IT)"
     },
     "X": {
      "odds": 3.75,
      "book": "Coolbet"
     }
    },
-   "books": 22
+   "books": 23,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.45,
+    "oX": 3.71,
+    "o2": 2.77,
+    "ou": {}
+   }
   },
   {
    "id": "liga-real-sociedad-levante",
@@ -1395,32 +1837,44 @@
    "kickoff": "2026-10-25T17:30Z",
    "home": "Real Sociedad",
    "away": "Levante",
-   "o1": 1.59,
-   "oX": 4.358,
-   "o2": 5.063,
+   "o1": 1.591,
+   "oX": 4.34,
+   "o2": 5.06,
    "best": {
     "2": {
-     "odds": 5.4,
-     "book": "Unibet (NL)"
+     "odds": 5.3,
+     "book": "Coolbet"
     },
     "1": {
      "odds": 1.67,
      "book": "1xBet"
     },
     "X": {
-     "odds": 4.57,
-     "book": "Pinnacle"
+     "odds": 4.54,
+     "book": "BetOnline.ag"
     }
    },
    "books": 21,
    "ou": {
     "2.5": {
-     "o": 1.56,
-     "u": 2.392
+     "o": 1.563,
+     "u": 2.383
     },
     "3.0": {
-     "o": 1.937,
-     "u": 1.933
+     "o": 1.95,
+     "u": 1.917
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.61,
+    "oX": 4.49,
+    "o2": 5.14,
+    "ou": {
+     "3.0": {
+      "o": 1.97,
+      "u": 1.91
+     }
     }
    }
   },
@@ -1430,13 +1884,13 @@
    "kickoff": "2026-10-25T17:30Z",
    "home": "CD Castellón",
    "away": "Sporting Gijón",
-   "o1": 1.463,
-   "oX": 4.257,
-   "o2": 5.855,
+   "o1": 1.467,
+   "oX": 4.27,
+   "o2": 5.887,
    "best": {
     "1": {
-     "odds": 1.51,
-     "book": "1xBet"
+     "odds": 1.52,
+     "book": "Pinnacle"
     },
     "2": {
      "odds": 6.25,
@@ -1447,7 +1901,14 @@
      "book": "1xBet"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.52,
+    "oX": 4.47,
+    "o2": 6.18,
+    "ou": {}
+   }
   },
   {
    "id": "bel-gent-anderlecht",
@@ -1455,24 +1916,31 @@
    "kickoff": "2026-10-25T17:30Z",
    "home": "Gent",
    "away": "Anderlecht",
-   "o1": 2.285,
-   "oX": 3.132,
-   "o2": 3.048,
+   "o1": 2.277,
+   "oX": 3.164,
+   "o2": 3.064,
    "best": {
     "2": {
-     "odds": 3.32,
+     "odds": 3.36,
      "book": "Pinnacle"
     },
     "1": {
-     "odds": 2.38,
-     "book": "888sport"
+     "odds": 2.35,
+     "book": "1xBet"
     },
     "X": {
      "odds": 3.3,
      "book": "Tipico"
     }
    },
-   "books": 21
+   "books": 21,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.33,
+    "oX": 3.2,
+    "o2": 3.36,
+    "ou": {}
+   }
   },
   {
    "id": "por-nacional-braga",
@@ -1480,8 +1948,8 @@
    "kickoff": "2026-10-25T18:00Z",
    "home": "Nacional",
    "away": "Braga",
-   "o1": 5.749,
-   "oX": 3.992,
+   "o1": 5.852,
+   "oX": 3.99,
    "o2": 1.518,
    "best": {
     "2": {
@@ -1489,19 +1957,31 @@
      "book": "Coolbet"
     },
     "1": {
-     "odds": 6.25,
-     "book": "LeoVegas (SE)"
+     "odds": 6.5,
+     "book": "Tipico"
     },
     "X": {
-     "odds": 4.1,
+     "odds": 4.2,
      "book": "Pinnacle"
     }
    },
    "books": 20,
    "ou": {
     "2.5": {
-     "o": 1.819,
+     "o": 1.822,
      "u": 1.915
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 5.93,
+    "oX": 4.2,
+    "o2": 1.57,
+    "ou": {
+     "2.5": {
+      "o": 1.87,
+      "u": 2.0
+     }
     }
    }
   },
@@ -1511,9 +1991,9 @@
    "kickoff": "2026-10-25T18:00Z",
    "home": "Rio Ave FC",
    "away": "Famalicão",
-   "o1": 3.62,
-   "oX": 3.252,
-   "o2": 1.985,
+   "o1": 3.614,
+   "oX": 3.266,
+   "o2": 2.0,
    "best": {
     "2": {
      "odds": 2.08,
@@ -1531,12 +2011,24 @@
    "books": 20,
    "ou": {
     "2.5": {
-     "o": 2.013,
-     "u": 1.72
+     "o": 2.006,
+     "u": 1.729
     },
     "2.25": {
-     "o": 1.81,
-     "u": 1.995
+     "o": 1.805,
+     "u": 2.015
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.88,
+    "oX": 3.34,
+    "o2": 2.07,
+    "ou": {
+     "2.25": {
+      "o": 1.83,
+      "u": 2.05
+     }
     }
    }
   },
@@ -1546,9 +2038,9 @@
    "kickoff": "2026-10-25T18:15Z",
    "home": "Union Saint-Gilloise",
    "away": "Cercle Brugge KSV",
-   "o1": 1.283,
-   "oX": 5.415,
-   "o2": 8.242,
+   "o1": 1.286,
+   "oX": 5.441,
+   "o2": 8.302,
    "best": {
     "2": {
      "odds": 9.0,
@@ -1559,11 +2051,18 @@
      "book": "1xBet"
     },
     "X": {
-     "odds": 5.8,
-     "book": "Tipico"
+     "odds": 5.87,
+     "book": "Pinnacle"
     }
    },
-   "books": 20
+   "books": 20,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.32,
+    "oX": 5.87,
+    "o2": 8.44,
+    "ou": {}
+   }
   },
   {
    "id": "ere-az-alkmaar-fc-twente-enschede",
@@ -1571,16 +2070,16 @@
    "kickoff": "2026-10-25T19:00Z",
    "home": "AZ Alkmaar",
    "away": "FC Twente Enschede",
-   "o1": 2.136,
-   "oX": 3.778,
-   "o2": 2.91,
+   "o1": 2.143,
+   "oX": 3.785,
+   "o2": 2.894,
    "best": {
     "1": {
-     "odds": 2.23,
-     "book": "1xBet"
+     "odds": 2.25,
+     "book": "Unibet (NL)"
     },
     "2": {
-     "odds": 3.1,
+     "odds": 3.05,
      "book": "Unibet (NL)"
     },
     "X": {
@@ -1591,16 +2090,28 @@
    "books": 21,
    "ou": {
     "3.5": {
-     "o": 2.072,
-     "u": 1.689
+     "o": 2.085,
+     "u": 1.678
     },
     "2.5": {
-     "o": 1.42,
-     "u": 2.72
+     "o": 1.43,
+     "u": 2.693
     },
     "3.25": {
-     "o": 1.83,
-     "u": 1.965
+     "o": 1.835,
+     "u": 1.97
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.18,
+    "oX": 3.97,
+    "o2": 2.94,
+    "ou": {
+     "3.25": {
+      "o": 1.87,
+      "u": 1.99
+     }
     }
    }
   },
@@ -1610,28 +2121,40 @@
    "kickoff": "2026-10-25T19:45Z",
    "home": "Udinese",
    "away": "AC Milan",
-   "o1": 5.067,
-   "oX": 3.842,
-   "o2": 1.668,
+   "o1": 4.657,
+   "oX": 3.678,
+   "o2": 1.757,
    "best": {
     "2": {
-     "odds": 1.75,
+     "odds": 1.86,
      "book": "1xBet"
     },
     "1": {
-     "odds": 5.4,
-     "book": "Unibet (SE)"
+     "odds": 4.87,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 4.04,
-     "book": "1xBet"
+     "odds": 3.85,
+     "book": "GTbets"
     }
    },
    "books": 24,
    "ou": {
     "2.5": {
-     "o": 1.858,
-     "u": 1.93
+     "o": 1.879,
+     "u": 1.912
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 4.87,
+    "oX": 3.8,
+    "o2": 1.76,
+    "ou": {
+     "2.5": {
+      "o": 1.92,
+      "u": 1.97
+     }
     }
    }
   },
@@ -1641,32 +2164,44 @@
    "kickoff": "2026-10-25T20:00Z",
    "home": "Barcelona",
    "away": "Real Madrid",
-   "o1": 1.611,
-   "oX": 5.72,
-   "o2": 3.869,
+   "o1": 1.606,
+   "oX": 5.756,
+   "o2": 3.874,
    "best": {
     "1": {
      "odds": 1.66,
      "book": "Coolbet"
     },
     "2": {
-     "odds": 4.32,
+     "odds": 4.37,
      "book": "1xBet"
     },
     "X": {
-     "odds": 6.0,
-     "book": "Winamax (DE)"
+     "odds": 6.1,
+     "book": "Unibet (NL)"
     }
    },
    "books": 21,
    "ou": {
     "4.5": {
-     "o": 2.073,
-     "u": 1.732
+     "o": 2.09,
+     "u": 1.718
     },
     "2.5": {
-     "o": 1.167,
-     "u": 5.033
+     "o": 1.16,
+     "u": 5.113
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.65,
+    "oX": 5.96,
+    "o2": 3.82,
+    "ou": {
+     "4.25": {
+      "o": 1.92,
+      "u": 1.97
+     }
     }
    }
   },
@@ -1677,12 +2212,12 @@
    "home": "Sporting Lisbon",
    "away": "Académico de Viseu",
    "o1": 1.206,
-   "oX": 6.231,
-   "o2": 10.942,
+   "oX": 6.203,
+   "o2": 11.025,
    "best": {
     "2": {
-     "odds": 12.5,
-     "book": "LeoVegas (SE)"
+     "odds": 13.0,
+     "book": "Tipico"
     },
     "1": {
      "odds": 1.25,
@@ -1695,18 +2230,25 @@
    },
    "books": 19,
    "ou": {
-    "2.5": {
-     "o": 1.427,
-     "u": 2.66
-    },
     "3.5": {
-     "o": 2.083,
-     "u": 1.635
+     "o": 2.061,
+     "u": 1.664
+    },
+    "2.5": {
+     "o": 1.42,
+     "u": 2.687
     },
     "3.25": {
-     "o": 1.895,
+     "o": 1.9,
      "u": 1.785
     }
+   },
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.24,
+    "oX": 7.2,
+    "o2": 14.5,
+    "ou": {}
    }
   }
  ]
