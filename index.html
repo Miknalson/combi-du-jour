@@ -56,7 +56,8 @@
       </div>
       <div class="field wide"><span class="lab">Championnats</span><div class="checks" id="leagueChecks"></div></div>
       <div class="field wide"><span class="lab">Options</span>
-        <div class="checks"><label><input type="checkbox" id="skipStarted" checked> Ignorer les matchs déjà commencés</label></div>
+        <div class="checks"><label><input type="checkbox" id="skipStarted" checked> Ignorer les matchs déjà commencés</label>
+          <label><input type="checkbox" id="realGoals" checked> Buts : seulement avec de vraies cotes</label></div>
       </div>
     </div>
   </section>
@@ -119,6 +120,7 @@ var LEAGUES = {
   TUR:'Süper Lig (Turquie)', UKR:'Premier League (Ukraine)'
 };
 var TZ = 'Europe/Paris';
+var MIN_BOOKS = 5;
 var state = { days:{}, selected:null, loaded:false };
 
 // ---------- per-device settings ----------
@@ -126,7 +128,7 @@ var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
-var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.8,mWin:true,mDc:true,mDraw:false,mGoals:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.8,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
 var excluded = store.get('excluded',{});
 
 function bindSettings(){
@@ -140,7 +142,7 @@ function bindSettings(){
   mp.addEventListener('change', function(){ settings.minProb=parseFloat(mp.value); saveRender(); });
   var mn = document.getElementById('minLegs'); mn.value = String(settings.minLegs);
   mn.addEventListener('change', function(){ settings.minLegs=parseInt(mn.value,10); saveRender(); });
-  ['mWin','mDc','mDraw','mGoals','skipStarted'].forEach(function(id){
+  ['mWin','mDc','mDraw','mGoals','skipStarted','realGoals'].forEach(function(id){
     var el = document.getElementById(id); el.checked = !!settings[id];
     el.addEventListener('change', function(){ settings[id]=el.checked; saveRender(); });
   });
@@ -204,8 +206,20 @@ function goalsModel(m, p){
 }
 function line(L){ return String(L).replace('.',','); }
 
+// Probabilities from the bookmaker average, checked against a sharp book (Pinnacle or an exchange)
+// when the data has one: each bet keeps the lower of the two, so a pick needs both to agree it is likely.
 function candidates(m){
-  var dv = devig(m.o1,m.oX,m.o2), p=dv.p, out=[];
+  var out = rawCandidates(m, m.o1, m.oX, m.o2, m.ou);
+  var s = m.sharp;
+  if(s && s.o1>1 && s.oX>1 && s.o2>1){
+    var sp = {};
+    rawCandidates(m, s.o1, s.oX, s.o2, s.ou || {}, m.ou).forEach(function(c){ sp[c.code]=c.p; });
+    out.forEach(function(c){ if(sp[c.code]!==undefined){ c.pAvg=c.p; c.pSharp=sp[c.code]; c.p=Math.min(c.p, sp[c.code]); } });
+  }
+  return out;
+}
+function rawCandidates(m, o1, oX, o2, realOu, fallbackOu){
+  var dv = devig(o1,oX,o2), p=dv.p, out=[];
   var implied = [1/m.o1, 1/m.oX, 1/m.o2];
   function add(code,label,prob,o,est,win){ out.push({match:m, code:code, label:label, p:prob, o:o, est:est, win:win}); }
   if(settings.mWin){
@@ -218,15 +232,18 @@ function candidates(m){
     add('X2','Nul ou '+m.away,p[1]+p[2],1/(implied[1]+implied[2]),true,function(h,a){return h<=a;});
   }
   if(settings.mGoals){
-    var gm = goalsModel(m,p), real = m.ou || {};
+    var gm = goalsModel({id:m.id, o1:o1, oX:oX, o2:o2}, p), real = realOu || {}, avgOu = m.ou || {};
     [0.5,1.5,2.5,3.5,4.5].forEach(function(L){
-      var r=real[String(L)], po=gm.over[L];
+      var r=real[String(L)] || (fallbackOu||{})[String(L)], po=gm.over[L];
+      // The Poisson estimate is the shakiest number in the app: by default only lines with a real price are bet.
+      if(settings.realGoals && !(avgOu[String(L)] && avgOu[String(L)].o > 1 && avgOu[String(L)].u > 1)) return;
       // A real two-way price beats the Poisson estimate: take its margin-free probability instead.
       if(r && r.o > 1 && r.u > 1) po = (1/r.o)/((1/r.o)+(1/r.u));
       // Without a real price, assume a 5 % two-way bookmaker margin.
-      var oo = r && r.o ? r.o : 1/(po*1.05), ou = r && r.u ? r.u : 1/((1-po)*1.05);
-      add('O'+L,'Plus de '+line(L)+' buts',po,oo,!(r&&r.o),function(h,a){return h+a>L;});
-      add('U'+L,'Moins de '+line(L)+' buts',1-po,ou,!(r&&r.u),function(h,a){return h+a<L;});
+      var ra = avgOu[String(L)];
+      var oo = ra && ra.o ? ra.o : 1/(po*1.05), ou = ra && ra.u ? ra.u : 1/((1-po)*1.05);
+      add('O'+L,'Plus de '+line(L)+' buts',po,oo,!(ra&&ra.o),function(h,a){return h+a>L;});
+      add('U'+L,'Moins de '+line(L)+' buts',1-po,ou,!(ra&&ra.u),function(h,a){return h+a<L;});
     });
   }
   return out;
@@ -246,6 +263,8 @@ function bestCombos(matches, n, liveFilter){
   matches.forEach(function(m){
     if(!eligible(m)) return;
     if(liveFilter && settings.skipStarted && new Date(m.kickoff).getTime() <= now) return;
+    // Markets quoted by only a handful of bookmakers are thin and their odds less reliable.
+    if(m.books !== undefined && m.books < MIN_BOOKS) return;
     var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p >= Math.max(0.2, settings.minProb); });
     cs.forEach(function(c){ c.bin = Math.round(Math.log(c.o)*1000); c.lp = Math.log(c.p); });
     if(cs.length) groups.push(cs);
@@ -468,8 +487,8 @@ function render(){
 // ---------- my ticket ----------
 // Every market, whatever the settings say, so any bet can go on a personal ticket.
 function allCandidates(m){
-  var keep = {mWin:settings.mWin, mDc:settings.mDc, mDraw:settings.mDraw, mGoals:settings.mGoals};
-  settings.mWin = settings.mDc = settings.mDraw = settings.mGoals = true;
+  var keep = {mWin:settings.mWin, mDc:settings.mDc, mDraw:settings.mDraw, mGoals:settings.mGoals, realGoals:settings.realGoals};
+  settings.mWin = settings.mDc = settings.mDraw = settings.mGoals = true; settings.realGoals = false;
   var out = candidates(m);
   Object.assign(settings, keep);
   return out;

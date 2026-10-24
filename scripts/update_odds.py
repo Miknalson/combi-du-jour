@@ -43,6 +43,8 @@ LEAGUES = [
     ('soccer_ukraine_premier_league', 'UKR', False, 'ukraine/premier-league'),
 ]
 EXCHANGES = {'betfair_ex_eu', 'betfair_ex_uk', 'matchbook', 'smarkets', 'betfair'}
+# Low-margin books whose prices track the true odds most closely, best first.
+SHARP = ['pinnacle', 'betfair_ex_eu', 'matchbook']
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 
 
@@ -81,7 +83,16 @@ def summarise(event, league):
     h2h = {'1': [], 'X': [], '2': []}
     best = {}
     totals = {}
+    sharp = {}  # book key -> {'1':…, 'X':…, '2':…, 'ou': {line: {'o','u'}}}
     for bk in event.get('bookmakers', []):
+        if bk['key'] in SHARP:
+            sb = sharp.setdefault(bk['key'], {'title': bk['title'], 'ou': {}})
+            for mk in bk.get('markets', []):
+                for oc in mk['outcomes']:
+                    if mk['key'] == 'h2h':
+                        sb['1' if oc['name'] == home else '2' if oc['name'] == away else 'X'] = oc['price']
+                    elif mk['key'] == 'totals':
+                        sb['ou'].setdefault(str(oc.get('point')), {})['o' if oc['name'] == 'Over' else 'u'] = oc['price']
         for mk in bk.get('markets', []):
             if mk['key'] == 'h2h':
                 for oc in mk['outcomes']:
@@ -110,6 +121,12 @@ def summarise(event, league):
     ou = {line: {'o': avg(v['o']), 'u': avg(v['u'])} for line, v in totals.items() if v['o'] and v['u'] and len(v['o']) >= 2}
     if ou:
         m['ou'] = ou
+    for key in SHARP:
+        sb = sharp.get(key)
+        if sb and all(k in sb for k in ('1', 'X', '2')):
+            m['sharp'] = {'book': sb['title'], 'o1': sb['1'], 'oX': sb['X'], 'o2': sb['2'],
+                          'ou': {l: v for l, v in sb['ou'].items() if 'o' in v and 'u' in v}}
+            break
     return m, kick.astimezone(PARIS).strftime('%Y-%m-%d')
 
 
