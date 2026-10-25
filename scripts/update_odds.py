@@ -45,6 +45,8 @@ LEAGUES = [
 EXCHANGES = {'betfair_ex_eu', 'betfair_ex_uk', 'matchbook', 'smarkets', 'betfair'}
 # Low-margin books whose prices track the true odds most closely, best first.
 SHARP = ['pinnacle', 'betfair_ex_eu', 'matchbook']
+# The bookmaker Nano actually plays with: its own prices are stored so tickets show what can really be bet.
+MY_BOOKS = ['winamax_fr', 'winamax_de']
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 
 
@@ -83,9 +85,9 @@ def summarise(event, league):
     h2h = {'1': [], 'X': [], '2': []}
     best = {}
     totals = {}
-    sharp = {}  # book key -> {'1':…, 'X':…, '2':…, 'ou': {line: {'o','u'}}}
+    sharp = {}  # sharp or own book key -> {'1':…, 'X':…, '2':…, 'ou': {line: {'o','u'}}}
     for bk in event.get('bookmakers', []):
-        if bk['key'] in SHARP:
+        if bk['key'] in SHARP or bk['key'] in MY_BOOKS:
             sb = sharp.setdefault(bk['key'], {'title': bk['title'], 'ou': {}})
             for mk in bk.get('markets', []):
                 for oc in mk['outcomes']:
@@ -126,6 +128,12 @@ def summarise(event, league):
         if sb and all(k in sb for k in ('1', 'X', '2')):
             m['sharp'] = {'book': sb['title'], 'o1': sb['1'], 'oX': sb['X'], 'o2': sb['2'],
                           'ou': {l: v for l, v in sb['ou'].items() if 'o' in v and 'u' in v}}
+            break
+    for key in MY_BOOKS:
+        sb = sharp.get(key)
+        if sb and all(k in sb for k in ('1', 'X', '2')):
+            m['mine'] = {'book': sb['title'], 'o1': sb['1'], 'oX': sb['X'], 'o2': sb['2'],
+                         'ou': {l: v for l, v in sb['ou'].items() if 'o' in v and 'u' in v}}
             break
     return m, kick.astimezone(PARIS).strftime('%Y-%m-%d')
 

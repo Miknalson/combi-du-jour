@@ -60,7 +60,9 @@
       <div class="field wide"><span class="lab">Championnats</span><div class="checks" id="leagueChecks"></div></div>
       <div class="field wide"><span class="lab">Options</span>
         <div class="checks"><label><input type="checkbox" id="skipStarted" checked> Ignorer les matchs déjà commencés</label>
-          <label><input type="checkbox" id="realGoals" checked> Buts : seulement avec de vraies cotes</label></div>
+          <label><input type="checkbox" id="myBook" checked> Utiliser les cotes Winamax (seulement les matchs que Winamax propose)</label>
+          <label><input type="checkbox" id="realGoals" checked> Buts : seulement avec de vraies cotes</label>
+          <label><input type="checkbox" id="algoEst"> L'algo peut choisir des cotes estimées (handicaps, score exact, combinés sur un match)</label></div>
       </div>
     </div>
   </section>
@@ -75,7 +77,7 @@
   </section>
 
   <section>
-    <div class="head"><h2>Historique</h2><div class="hint">Le combiné que l'appli aurait proposé chaque jour passé, avec les mêmes réglages, et s'il est passé.</div></div>
+    <div class="head"><h2>Historique</h2><div class="hint">Le combiné proposé chaque jour passé (enregistré sur cet appareil), ou recalculé avec tes réglages actuels si tu n'avais pas ouvert l'appli ce jour-là.</div></div>
     <div id="history"></div>
   </section>
 
@@ -131,7 +133,7 @@ var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
-var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,mAh:true,mCs:true,mSame:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,mAh:true,mCs:true,mSame:true,algoEst:false,myBook:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
 // 24/10/2026: the default moved from 80 % per bet to the most likely ticket overall; reset devices saved under the old default once.
 if(settings.probV !== 2){ settings.minProb = 0.5; settings.probV = 2; store.set('settings', settings); }
 var excluded = store.get('excluded',{});
@@ -147,7 +149,7 @@ function bindSettings(){
   mp.addEventListener('change', function(){ settings.minProb=parseFloat(mp.value); saveRender(); });
   var mn = document.getElementById('minLegs'); mn.value = String(settings.minLegs);
   mn.addEventListener('change', function(){ settings.minLegs=parseInt(mn.value,10); saveRender(); });
-  ['mWin','mDc','mDraw','mGoals','mAh','mCs','mSame','skipStarted','realGoals'].forEach(function(id){
+  ['mWin','mDc','mDraw','mGoals','mAh','mCs','mSame','algoEst','myBook','skipStarted','realGoals'].forEach(function(id){
     var el = document.getElementById(id); el.checked = !!settings[id];
     el.addEventListener('change', function(){ settings[id]=el.checked; saveRender(); });
   });
@@ -228,6 +230,19 @@ function candidates(m){
     var sp = {};
     rawCandidates(m, s.o1, s.oX, s.o2, s.ou || {}, m.ou).forEach(function(c){ sp[c.code]=c.p; });
     out.forEach(function(c){ if(sp[c.code]!==undefined){ c.pAvg=c.p; c.pSharp=sp[c.code]; c.p=Math.min(c.p, sp[c.code]); } });
+  }
+  // Odds actually on offer at the user's own bookmaker (Winamax) replace the market average, so the ticket's
+  // total is what can really be bet. Double chance is derived from its 1N2 prices (≈).
+  var w = settings.myBook && m.mine;
+  if(w && w.o1>1 && w.oX>1 && w.o2>1){
+    var mo = {'1':w.o1, 'X':w.oX, '2':w.o2, '1X':1/(1/w.o1+1/w.oX), 'X2':1/(1/w.oX+1/w.o2)};
+    out.forEach(function(c){
+      if(mo[c.code]){ c.o=mo[c.code]; c.mine=true; c.est=c.code.length===2; return; }
+      if(/^[OU][0-9.]+$/.test(c.code)){
+        var r=(w.ou||{})[c.code.slice(1)], v=r && r[c.code[0]==='O'?'o':'u'];
+        if(v){ c.o=v; c.est=false; c.mine=true; }
+      }
+    });
   }
   return out;
 }
@@ -321,12 +336,17 @@ function eligible(m){
 // discretised to 1/1000, maximising the summed log-probability. Alternatives drop one match of the best ticket.
 function bestCombos(matches, n, liveFilter){
   var now = Date.now(), groups = [];
+  // Once the data carries Winamax prices, only bets that can be placed there are considered.
+  var onlyMine = settings.myBook && matches.some(function(m){ return m.mine; });
   matches.forEach(function(m){
     if(!eligible(m)) return;
+    if(onlyMine && !m.mine) return;
     if(liveFilter && settings.skipStarted && new Date(m.kickoff).getTime() <= now) return;
     // Markets quoted by only a handful of bookmakers are thin and their odds less reliable.
     if(m.books !== undefined && m.books < MIN_BOOKS) return;
-    var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p >= Math.max(0.2, settings.minProb); });
+    // Grid-only markets have no bookmaker price in the data and our estimates proved too generous
+    // (a ≈1,55 ticket was about 1,20 at the bookmaker), so the algo leaves them out unless asked.
+    var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p >= Math.max(0.2, settings.minProb) && (settings.algoEst || !c.grid) && (!onlyMine || c.mine || c.grid); });
     // Prices for grid-only markets are our own estimates, and the search would happily exploit any error in them:
     // count them 3 % lower so they are only picked when clearly better than a priced bet.
     cs.forEach(function(c){ c.bin = Math.round(Math.log(c.grid ? c.o/1.03 : c.o)*1000); c.lp = Math.log(c.p); });
@@ -422,6 +442,7 @@ function renderDays(){
 
 // Best single-bookmaker price for a 1/N/2 leg, when the data has it.
 function bestOf(l){
+  if(l.mine) return null;
   var b = l.match.best && l.match.best[l.code];
   return b && b.odds > l.o ? b : null;
 }
@@ -429,7 +450,7 @@ function legRow(l){
   var m=l.match, b=bestOf(l);
   return '<li class="leg"><div class="when"><b>'+hhmm(m.kickoff)+'</b>'+esc(m.league)+'</div>' +
     '<div class="match"><span class="lg">'+esc(LEAGUES[m.league]||m.league)+'</span><br>'+esc(m.home)+' – '+esc(m.away)+legBadge(l) +
-    '<div class="pick">Pari : <strong>'+esc(l.label)+'</strong>'+(b?' · meilleure cote <strong>'+odds(b.odds)+'</strong> chez '+esc(b.book):'')+'</div></div>' +
+    '<div class="pick">Pari : <strong>'+esc(l.label)+'</strong>'+(l.mine?' · cote '+esc(m.mine.book):b?' · meilleure cote <strong>'+odds(b.odds)+'</strong> chez '+esc(b.book):'')+'</div></div>' +
     '<div class="nums"><b>'+(l.est?'≈':'')+odds(l.o)+'</b><br>'+pct(l.p)+'</div></li>';
 }
 
@@ -448,6 +469,7 @@ function renderTicket(dayMatches){
     altsSec.hidden = true; return;
   }
   var c=combos[0], bookP=1/c.odds, n=Math.round(1/c.prob);
+  saveProposal(state.selected, c);
   var res = comboResult(c);
   var html = '<article class="ticket"><div class="ticket-head"><div>' +
     '<div class="kicker">'+(isToday?'Combiné du jour':'Combiné prévu')+' · '+esc(longDay(state.selected))+'</div>' +
@@ -506,14 +528,34 @@ function renderMatches(dayMatches, combo){
   document.getElementById('matchRows').innerHTML = html || '<tr><td colspan="7">Aucun match ce jour.</td></tr>';
 }
 
+// The ticket shown for a day is saved on this device and frozen once one of its matches has started,
+// so the history can show what was really proposed instead of a recomputation with today's settings.
+var proposals = store.get('proposals', {});
+function saveProposal(date, c){
+  var now = Date.now(), old = proposals[date];
+  if(old && old.legs.some(function(l){ return new Date(l.kickoff).getTime() <= now; })) return;
+  if(c.legs.some(function(l){ return new Date(l.match.kickoff).getTime() <= now; })) return;
+  proposals[date] = {odds:c.odds, prob:c.prob, legs:c.legs.map(function(l){ return {matchId:l.match.id, kickoff:l.match.kickoff, code:l.code, label:l.label, o:l.o, p:l.p, est:!!l.est}; })};
+  var keys = Object.keys(proposals).sort();
+  while(keys.length > 60) delete proposals[keys.shift()];
+  store.set('proposals', proposals);
+}
+function proposalCombo(date){
+  var pr = proposals[date]; if(!pr) return null;
+  var byId = {}; ((state.days[date]||{}).matches||[]).forEach(function(m){ byId[m.id]=m; });
+  return {odds:pr.odds, prob:pr.prob, saved:true, legs:pr.legs.map(function(l){
+    var m = byId[l.matchId] || findMatch(l.matchId) || {id:l.matchId, home:'?', away:'?', kickoff:l.kickoff};
+    return {match:m, code:l.code, label:l.label, o:l.o, p:l.p, est:l.est, win:function(h,a){ return settleCode(l.code,h,a); }};
+  })};
+}
 function renderHistory(){
   var t = today(), rows=[], won=0, lost=0;
   sortedDates().filter(function(d){ return d<t; }).reverse().slice(0,30).forEach(function(d){
-    var c = bestCombos(state.days[d].matches, 1, false)[0];
+    var c = proposalCombo(d) || bestCombos(state.days[d].matches, 1, false)[0];
     if(!c) return;
     var r = comboResult(c);
     if(r==='won') won++; else if(r==='lost') lost++;
-    rows.push('<tr><td>'+esc(longDay(d))+'</td><td>'+c.legs.map(function(l){ return esc(l.match.home)+' – '+esc(l.match.away)+' : '+esc(l.label)+legBadge(l); }).join('<br>')+'</td>' +
+    rows.push('<tr><td>'+esc(longDay(d))+'<br><span class="status">'+(c.saved?'proposé':'recalculé')+'</span></td><td>'+c.legs.map(function(l){ return esc(l.match.home)+' – '+esc(l.match.away)+' : '+esc(l.label)+legBadge(l); }).join('<br>')+'</td>' +
       '<td class="num">'+odds(c.odds)+'</td><td class="num">'+pct(c.prob)+'</td><td><span class="badge '+r+'">'+(r==='won'?'Gagné':r==='lost'?'Perdu':'En attente')+'</span></td></tr>');
   });
   var el=document.getElementById('history');
