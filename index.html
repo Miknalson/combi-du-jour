@@ -52,6 +52,9 @@
           <label><input type="checkbox" id="mDc" checked> Double chance (1N, N2)</label>
           <label><input type="checkbox" id="mDraw"> Match nul</label>
           <label><input type="checkbox" id="mGoals" checked> Buts (plus/moins 0,5 à 4,5)</label>
+          <label><input type="checkbox" id="mAh" checked> Handicaps (±1,5 et ±2,5)</label>
+          <label><input type="checkbox" id="mCs" checked> Score exact</label>
+          <label><input type="checkbox" id="mSame" checked> Plusieurs paris sur un même match (ex. 1N + plus de 2,5)</label>
         </div>
       </div>
       <div class="field wide"><span class="lab">Championnats</span><div class="checks" id="leagueChecks"></div></div>
@@ -128,7 +131,7 @@ var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
-var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,mAh:true,mCs:true,mSame:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
 // 24/10/2026: the default moved from 80 % per bet to the most likely ticket overall; reset devices saved under the old default once.
 if(settings.probV !== 2){ settings.minProb = 0.5; settings.probV = 2; store.set('settings', settings); }
 var excluded = store.get('excluded',{});
@@ -144,7 +147,7 @@ function bindSettings(){
   mp.addEventListener('change', function(){ settings.minProb=parseFloat(mp.value); saveRender(); });
   var mn = document.getElementById('minLegs'); mn.value = String(settings.minLegs);
   mn.addEventListener('change', function(){ settings.minLegs=parseInt(mn.value,10); saveRender(); });
-  ['mWin','mDc','mDraw','mGoals','skipStarted','realGoals'].forEach(function(id){
+  ['mWin','mDc','mDraw','mGoals','mAh','mCs','mSame','skipStarted','realGoals'].forEach(function(id){
     var el = document.getElementById(id); el.checked = !!settings[id];
     el.addEventListener('change', function(){ settings[id]=el.checked; saveRender(); });
   });
@@ -191,10 +194,18 @@ function grid(lh,la){
 }
 function hda(g){ var h=0,d=0,a=0; for(var i=0;i<=10;i++) for(var j=0;j<=10;j++){ if(i>j) h+=g[i][j]; else if(i===j) d+=g[i][j]; else a+=g[i][j]; } return [h,d,a]; }
 var lamCache={};
-function goalsModel(m, p){
-  var key=m.id+'|'+m.o1+'|'+m.oX+'|'+m.o2;
+function goalsModel(m, p, ou){
+  // Fit to the de-vigged 1N2 and, when the data has them, to the real over/under lines too,
+  // so the score grid (used for handicaps, exact scores and same-match combos) agrees with both markets.
+  var targets = [];
+  Object.keys(ou||{}).forEach(function(k){ var r=ou[k], L=parseFloat(k); if(r && r.o>1 && r.u>1 && L>0 && L<6) targets.push([L,(1/r.o)/((1/r.o)+(1/r.u))]); });
+  var key=m.id+'|'+m.o1+'|'+m.oX+'|'+m.o2+'|'+JSON.stringify(targets);
   if(lamCache[key]) return lamCache[key];
-  function err(lh,la){ var r=hda(grid(lh,la)); return (r[0]-p[0])*(r[0]-p[0])+(r[2]-p[2])*(r[2]-p[2]); }
+  function err(lh,la){
+    var g=grid(lh,la), r=hda(g), e=(r[0]-p[0])*(r[0]-p[0])+(r[2]-p[2])*(r[2]-p[2]);
+    targets.forEach(function(t){ var s=0; for(var i=0;i<=10;i++) for(var j=0;j<=10;j++) if(i+j>t[0]) s+=g[i][j]; e+=(s-t[1])*(s-t[1]); });
+    return e;
+  }
   var best=[1.4,1.1], be=Infinity, lh, la, e;
   for(lh=0.2;lh<=4.01;lh+=0.1) for(la=0.2;la<=4.01;la+=0.1){ e=err(lh,la); if(e<be){ be=e; best=[lh,la]; } }
   var c=best.slice();
@@ -204,7 +215,7 @@ function goalsModel(m, p){
   for(var i=0;i<=10;i++) for(var j=0;j<=10;j++) tot[i+j]+=g[i][j];
   var over={};
   [0.5,1.5,2.5,3.5,4.5].forEach(function(L){ var s=0; for(var t=Math.ceil(L);t<=20;t++) s+=tot[t]; over[L]=s; });
-  return lamCache[key]={lh:best[0], la:best[1], over:over};
+  return lamCache[key]={lh:best[0], la:best[1], over:over, grid:g};
 }
 function line(L){ return String(L).replace('.',','); }
 
@@ -220,21 +231,44 @@ function candidates(m){
   }
   return out;
 }
+// One settlement rule for every bet code: 1 X 2 1X X2, O2.5 / U2.5, handicaps H1-1.5 / H2+1.5,
+// exact scores CS2-1, and same-match combos joined with "&" (all parts must win).
+function settleCode(code, h, a){
+  if(code.indexOf('&')>-1) return code.split('&').every(function(c){ return settleCode(c,h,a); });
+  if(code==='1') return h>a;
+  if(code==='2') return h<a;
+  if(code==='X') return h===a;
+  if(code==='1X') return h>=a;
+  if(code==='X2') return h<=a;
+  if(code.slice(0,2)==='CS'){ var s=code.slice(2).split('-').map(Number); return h===s[0] && a===s[1]; }
+  if(code[0]==='H'){ var L=parseFloat(code.slice(2)); return code[1]==='1' ? h+L>a : a+L>h; }
+  if(code[0]==='O') return h+a>parseFloat(code.slice(1));
+  if(code[0]==='U') return h+a<parseFloat(code.slice(1));
+  return null;
+}
+function gridProb(g, code){ var s=0; for(var i=0;i<=10;i++) for(var j=0;j<=10;j++) if(settleCode(code,i,j)) s+=g[i][j]; return s; }
+// Estimated price with bookmaker margin m: multiplicative for long shots, power-shaped near certainty so odds stay above 1.
+function estOdds(p, m){ return 1/Math.min(p*(1+m), Math.pow(p, 1/(1+m))); }
+function signed(L){ return (L>0?'+':'')+line(L); }
+
 function rawCandidates(m, o1, oX, o2, realOu, fallbackOu){
   var dv = devig(o1,oX,o2), p=dv.p, out=[];
   var implied = [1/m.o1, 1/m.oX, 1/m.o2];
-  function add(code,label,prob,o,est,win){ out.push({match:m, code:code, label:label, p:prob, o:o, est:est, win:win}); }
+  var avgOu = m.ou || {}, real = realOu || {};
+  var gm = goalsModel({id:m.id, o1:o1, oX:oX, o2:o2}, p, Object.keys(real).length ? real : (fallbackOu||{}));
+  function add(code,label,prob,o,est,fam){ if(!(o >= 1.02)) return; out.push({match:m, code:code, label:label, p:prob, o:o, est:est, fam:fam, grid:['Handicap','Score exact','Combiné sur le match'].indexOf(fam)>-1, win:function(h,a){ return settleCode(code,h,a); }}); }
+  var results = [], goals = [];
   if(settings.mWin){
-    add('1','Victoire '+m.home,p[0],m.o1,false,function(h,a){return h>a;});
-    add('2','Victoire '+m.away,p[2],m.o2,false,function(h,a){return h<a;});
+    add('1','Victoire '+m.home,p[0],m.o1,false,'Résultat');
+    add('2','Victoire '+m.away,p[2],m.o2,false,'Résultat');
   }
-  if(settings.mDraw) add('X','Match nul',p[1],m.oX,false,function(h,a){return h===a;});
+  if(settings.mDraw) add('X','Match nul',p[1],m.oX,false,'Résultat');
   if(settings.mDc){
-    add('1X',m.home+' ou nul',p[0]+p[1],1/(implied[0]+implied[1]),true,function(h,a){return h>=a;});
-    add('X2','Nul ou '+m.away,p[1]+p[2],1/(implied[1]+implied[2]),true,function(h,a){return h<=a;});
+    add('1X',m.home+' ou nul',p[0]+p[1],1/(implied[0]+implied[1]),true,'Résultat');
+    add('X2','Nul ou '+m.away,p[1]+p[2],1/(implied[1]+implied[2]),true,'Résultat');
   }
+  results = out.slice();
   if(settings.mGoals){
-    var gm = goalsModel({id:m.id, o1:o1, oX:oX, o2:o2}, p), real = realOu || {}, avgOu = m.ou || {};
     [0.5,1.5,2.5,3.5,4.5].forEach(function(L){
       var r=real[String(L)] || (fallbackOu||{})[String(L)], po=gm.over[L];
       // The Poisson estimate is the shakiest number in the app: by default only lines with a real price are bet.
@@ -243,10 +277,35 @@ function rawCandidates(m, o1, oX, o2, realOu, fallbackOu){
       if(r && r.o > 1 && r.u > 1) po = (1/r.o)/((1/r.o)+(1/r.u));
       // Without a real price, assume a 5 % two-way bookmaker margin.
       var ra = avgOu[String(L)];
-      var oo = ra && ra.o ? ra.o : 1/(po*1.05), ou = ra && ra.u ? ra.u : 1/((1-po)*1.05);
-      add('O'+L,'Plus de '+line(L)+' buts',po,oo,!(ra&&ra.o),function(h,a){return h+a>L;});
-      add('U'+L,'Moins de '+line(L)+' buts',1-po,ou,!(ra&&ra.u),function(h,a){return h+a<L;});
+      var oo = ra && ra.o ? ra.o : estOdds(po,0.05), ou = ra && ra.u ? ra.u : estOdds(1-po,0.05);
+      add('O'+L,'Plus de '+line(L)+' buts',po,oo,!(ra&&ra.o),'Buts');
+      add('U'+L,'Moins de '+line(L)+' buts',1-po,ou,!(ra&&ra.u),'Buts');
     });
+    goals = out.slice(results.length);
+  }
+  // The markets below have no price in the data: probabilities come from the fitted score grid,
+  // odds are estimates with a typical bookmaker margin (≈).
+  if(settings.mAh){
+    [-2.5,-1.5,1.5,2.5].forEach(function(L){
+      var k=(L>0?'+':'')+L, ph=gridProb(gm.grid,'H1'+k), pa=gridProb(gm.grid,'H2'+k);
+      add('H1'+k,'Handicap '+m.home+' '+signed(L),ph,estOdds(ph,0.05),true,'Handicap');
+      add('H2'+k,'Handicap '+m.away+' '+signed(L),pa,estOdds(pa,0.05),true,'Handicap');
+    });
+  }
+  if(settings.mCs){
+    for(var i=0;i<=4;i++) for(var j=0;j<=4;j++){
+      var pc=gm.grid[i][j];
+      if(pc>=0.03) add('CS'+i+'-'+j,'Score exact '+i+'-'+j,pc,estOdds(pc,0.2),true,'Score exact');
+    }
+  }
+  // Same-match combos: the two bets are correlated (a favourite's win and many goals go together),
+  // so the joint chance is read off the score grid instead of multiplying the two.
+  if(settings.mSame){
+    results.forEach(function(r){ goals.forEach(function(gl){
+      var pj = Math.min(gridProb(gm.grid, r.code+'&'+gl.code), r.p, gl.p);
+      if(pj < 0.05 || pj > Math.min(r.p, gl.p)-0.01) return;  // impossible, or the goals part adds nothing
+      add(r.code+'&'+gl.code, r.label+' + '+gl.label.toLowerCase(), pj, estOdds(pj,0.08), true, 'Combiné sur le match');
+    }); });
   }
   return out;
 }
@@ -268,7 +327,13 @@ function bestCombos(matches, n, liveFilter){
     // Markets quoted by only a handful of bookmakers are thin and their odds less reliable.
     if(m.books !== undefined && m.books < MIN_BOOKS) return;
     var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p >= Math.max(0.2, settings.minProb); });
-    cs.forEach(function(c){ c.bin = Math.round(Math.log(c.o)*1000); c.lp = Math.log(c.p); });
+    // Prices for grid-only markets are our own estimates, and the search would happily exploit any error in them:
+    // count them 3 % lower so they are only picked when clearly better than a priced bet.
+    cs.forEach(function(c){ c.bin = Math.round(Math.log(c.grid ? c.o/1.03 : c.o)*1000); c.lp = Math.log(c.p); });
+    // Within one match only one bet is picked, so a bet beaten on both odds and chance by another can never be best.
+    cs.sort(function(a,b){ return b.bin-a.bin || b.lp-a.lp; });
+    var top = -Infinity;
+    cs = cs.filter(function(c){ if(c.lp > top){ top = c.lp; return true; } return false; });
     if(cs.length) groups.push(cs);
   });
   var LO = Math.round(Math.log(settings.oMin)*1000), HI = Math.round(Math.log(settings.oMax)*1000);
@@ -431,7 +496,7 @@ function renderMatches(dayMatches, combo){
       '<td><span class="lg">'+esc(m.league)+'</span>'+esc(m.home)+' – '+esc(m.away)+(m.score?' <span class="mono">('+esc(m.score)+')</span>':'')+'</td>' +
       '<td><div class="split" title="'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'"><span style="width:'+(p[0]*100)+'%;background:var(--home)"></span><span style="width:'+(p[1]*100)+'%;background:var(--draw)"></span><span style="width:'+(p[2]*100)+'%;background:var(--away)"></span></div>' +
         '<div class="mono" style="font-size:11.5px;color:var(--ink-2);margin-top:3px">'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'</div>' +
-        (function(){ var gm=goalsModel(m,p); return '<div class="mono" style="font-size:11.5px;color:var(--ink-3)">+1,5 : '+pct(gm.over[1.5])+' · +2,5 : '+pct(gm.over[2.5])+'</div>'; })() + '</td>' +
+        (function(){ var gm=goalsModel(m,p,m.ou); return '<div class="mono" style="font-size:11.5px;color:var(--ink-3)">+1,5 : '+pct(gm.over[1.5])+' · +2,5 : '+pct(gm.over[2.5])+'</div>'; })() + '</td>' +
       '<td class="num">'+odds(m.o1)+' · '+odds(m.oX)+' · '+odds(m.o2)+'</td>' +
       '<td>'+(best?esc(best.label)+' <span class="mono" style="color:var(--ink-2)">'+pct(best.p)+'</span>':'—')+'</td>' +
       '<td>'+pickSelect(m)+'</td>' +
@@ -489,8 +554,8 @@ function render(){
 // ---------- my ticket ----------
 // Every market, whatever the settings say, so any bet can go on a personal ticket.
 function allCandidates(m){
-  var keep = {mWin:settings.mWin, mDc:settings.mDc, mDraw:settings.mDraw, mGoals:settings.mGoals, realGoals:settings.realGoals};
-  settings.mWin = settings.mDc = settings.mDraw = settings.mGoals = true; settings.realGoals = false;
+  var keep = {mWin:settings.mWin, mDc:settings.mDc, mDraw:settings.mDraw, mGoals:settings.mGoals, mAh:settings.mAh, mCs:settings.mCs, mSame:settings.mSame, realGoals:settings.realGoals};
+  settings.mWin = settings.mDc = settings.mDraw = settings.mGoals = settings.mAh = settings.mCs = settings.mSame = true; settings.realGoals = false;
   var out = candidates(m);
   Object.assign(settings, keep);
   return out;
@@ -505,8 +570,12 @@ function pickSelect(m){
   var cur = slip.legs.filter(function(l){ return l.matchId===m.id; })[0];
   var started = new Date(m.kickoff).getTime() <= Date.now();
   if(started) return cur ? '<span class="status">'+esc(cur.label)+'</span>' : '<span class="status">commencé</span>';
-  var opts = '<option value="">Ajouter…</option>' + allCandidates(m).map(function(c){
-    return '<option value="'+esc(c.code)+'"'+(cur && cur.code===c.code?' selected':'')+'>'+esc(c.label)+' · '+(c.est?'≈':'')+odds(c.o)+' · '+pct(c.p)+'</option>';
+  var fams = {}, order = [];
+  allCandidates(m).forEach(function(c){ if(!fams[c.fam]){ fams[c.fam]=[]; order.push(c.fam); } fams[c.fam].push(c); });
+  var opts = '<option value="">Ajouter…</option>' + order.map(function(f){
+    return '<optgroup label="'+esc(f)+'">' + fams[f].map(function(c){
+      return '<option value="'+esc(c.code)+'"'+(cur && cur.code===c.code?' selected':'')+'>'+esc(c.label)+' · '+(c.est?'≈':'')+odds(c.o)+' · '+pct(c.p)+'</option>';
+    }).join('') + '</optgroup>';
   }).join('');
   return '<select class="pick'+(cur?' on':'')+'" data-id="'+esc(m.id)+'" aria-label="Pari pour '+esc(m.home)+' – '+esc(m.away)+'">'+opts+'</select>';
 }

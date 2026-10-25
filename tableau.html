@@ -113,15 +113,18 @@ function odds(o){ return o.toFixed(2).replace('.',','); }
 function day(iso){ return new Date(iso).toLocaleDateString('fr-FR',{timeZone:TZ,weekday:'short',day:'numeric',month:'short'}); }
 
 // Same bet codes as the main page: 1, X, 2, 1X, X2, O2.5, U3.5…
+// Same rules as the main page: 1 X 2 1X X2, O2.5 / U2.5, handicaps H1-1.5 / H2+1.5, exact scores CS2-1, combos joined with "&".
 function settle(code, h, a){
+  if(code.indexOf('&')>-1) return code.split('&').every(function(c){ return settle(c,h,a); });
   if(code==='1') return h>a;
   if(code==='2') return h<a;
   if(code==='X') return h===a;
   if(code==='1X') return h>=a;
   if(code==='X2') return h<=a;
-  var L = parseFloat(code.slice(1));
-  if(code[0]==='O') return h+a>L;
-  if(code[0]==='U') return h+a<L;
+  if(code.slice(0,2)==='CS'){ var s=code.slice(2).split('-').map(Number); return h===s[0] && a===s[1]; }
+  if(code[0]==='H'){ var L=parseFloat(code.slice(2)); return code[1]==='1' ? h+L>a : a+L>h; }
+  if(code[0]==='O') return h+a>parseFloat(code.slice(1));
+  if(code[0]==='U') return h+a<parseFloat(code.slice(1));
   return null;
 }
 function legState(l){
