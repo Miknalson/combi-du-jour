@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "updatedAt": "2026-10-24T18:41:45Z",
+ "updatedAt": "2026-10-25T07:48:32Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -10,8 +10,8 @@
    "home": "Frosinone",
    "away": "Lecce",
    "o1": 1.869,
-   "oX": 3.727,
-   "o2": 3.736,
+   "oX": 3.725,
+   "o2": 3.763,
    "best": {
     "1": {
      "odds": 1.97,
@@ -29,8 +29,8 @@
    "books": 19,
    "ou": {
     "3.5": {
-     "o": 2.38,
-     "u": 1.58
+     "o": 2.373,
+     "u": 1.587
     },
     "2.5": {
      "o": 1.542,
@@ -48,6 +48,13 @@
       "u": 1.93
      }
     }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.8,
+    "oX": 3.55,
+    "o2": 3.3,
+    "ou": {}
    }
   },
   {
@@ -73,7 +80,14 @@
      "book": "Unibet (SE)"
     }
    },
-   "books": 10
+   "books": 10,
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.44,
+    "oX": 4.1,
+    "o2": 4.6,
+    "ou": {}
+   }
   },
   {
    "id": "swe-kalmar-ff-gais",
@@ -98,7 +112,14 @@
      "book": "Unibet (SE)"
     }
    },
-   "books": 10
+   "books": 10,
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.85,
+    "oX": 3.25,
+    "o2": 2.05,
+    "ou": {}
+   }
   },
   {
    "id": "swe-orgryte-is-mjallby-aif",
@@ -123,7 +144,14 @@
      "book": "Unibet (SE)"
     }
    },
-   "books": 10
+   "books": 10,
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 3.0,
+    "oX": 3.4,
+    "o2": 1.88,
+    "ou": {}
+   }
   },
   {
    "id": "sa-fiorentina-atalanta-bc",
@@ -166,6 +194,13 @@
       "u": 1.93
      }
     }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.05,
+    "oX": 3.25,
+    "o2": 2.7,
+    "ou": {}
    }
   }
  ]
