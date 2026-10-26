@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "updatedAt": "2026-10-25T07:48:32Z",
+ "updatedAt": "2026-10-26T07:48:36Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -9,51 +9,51 @@
    "kickoff": "2026-10-29T17:30Z",
    "home": "Frosinone",
    "away": "Lecce",
-   "o1": 1.869,
-   "oX": 3.725,
-   "o2": 3.763,
+   "o1": 1.697,
+   "oX": 4.035,
+   "o2": 4.436,
    "best": {
     "1": {
-     "odds": 1.97,
+     "odds": 1.78,
      "book": "1xBet"
     },
     "2": {
-     "odds": 4.05,
-     "book": "Pinnacle"
+     "odds": 4.79,
+     "book": "BetOnline.ag"
     },
     "X": {
-     "odds": 3.95,
-     "book": "Unibet (SE)"
+     "odds": 4.2,
+     "book": "Codere (IT)"
     }
    },
-   "books": 19,
+   "books": 21,
    "ou": {
     "3.5": {
-     "o": 2.373,
-     "u": 1.587
+     "o": 2.183,
+     "u": 1.658
     },
     "2.5": {
-     "o": 1.542,
-     "u": 2.391
+     "o": 1.443,
+     "u": 2.713
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 1.88,
-    "oX": 3.68,
-    "o2": 4.05,
+    "o1": 1.71,
+    "oX": 4.13,
+    "o2": 4.77,
     "ou": {
-     "3.0": {
-      "o": 1.9,
-      "u": 1.93
+     "3.25": {
+      "o": 1.98,
+      "u": 1.91
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 1.8,
-    "oX": 3.55,
-    "o2": 3.3,
+    "o1": 1.6,
+    "oX": 3.75,
+    "o2": 4.0,
     "ou": {}
    }
   },
@@ -63,29 +63,36 @@
    "kickoff": "2026-10-29T17:30Z",
    "home": "Hammarby IF",
    "away": "IK Sirius",
-   "o1": 1.485,
-   "oX": 4.287,
-   "o2": 5.069,
+   "o1": 1.495,
+   "oX": 4.385,
+   "o2": 5.218,
    "best": {
     "1": {
-     "odds": 1.56,
+     "odds": 1.61,
      "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 5.75,
-     "book": "Unibet (SE)"
+     "odds": 5.9,
+     "book": "Betsson"
     },
     "X": {
-     "odds": 4.7,
-     "book": "Unibet (SE)"
+     "odds": 4.61,
+     "book": "Pinnacle"
     }
    },
-   "books": 10,
+   "books": 17,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.5,
+    "oX": 4.61,
+    "o2": 5.54,
+    "ou": {}
+   },
    "mine": {
     "book": "Winamax (FR)",
     "o1": 1.44,
-    "oX": 4.1,
-    "o2": 4.6,
+    "oX": 4.4,
+    "o2": 4.7,
     "ou": {}
    }
   },
@@ -95,29 +102,36 @@
    "kickoff": "2026-10-29T18:00Z",
    "home": "Kalmar FF",
    "away": "GAIS",
-   "o1": 3.082,
-   "oX": 3.293,
-   "o2": 2.121,
+   "o1": 2.461,
+   "oX": 3.252,
+   "o2": 2.667,
    "best": {
     "2": {
-     "odds": 2.23,
-     "book": "Unibet (SE)"
+     "odds": 2.81,
+     "book": "Pinnacle"
     },
     "1": {
-     "odds": 3.35,
+     "odds": 2.7,
      "book": "Unibet (SE)"
     },
     "X": {
-     "odds": 3.5,
-     "book": "Unibet (SE)"
+     "odds": 3.42,
+     "book": "Betsson"
     }
    },
-   "books": 10,
+   "books": 17,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.49,
+    "oX": 3.32,
+    "o2": 2.81,
+    "ou": {}
+   },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 2.85,
+    "o1": 2.3,
     "oX": 3.25,
-    "o2": 2.05,
+    "o2": 2.55,
     "ou": {}
    }
   },
@@ -127,29 +141,36 @@
    "kickoff": "2026-10-29T18:00Z",
    "home": "Örgryte IS",
    "away": "Mjällby AIF",
-   "o1": 3.232,
-   "oX": 3.515,
-   "o2": 1.968,
+   "o1": 3.627,
+   "oX": 3.593,
+   "o2": 1.866,
    "best": {
     "2": {
-     "odds": 2.1,
-     "book": "Unibet (SE)"
+     "odds": 1.97,
+     "book": "Betsson"
     },
     "1": {
-     "odds": 3.5,
-     "book": "Unibet (SE)"
+     "odds": 3.9,
+     "book": "Tipico"
     },
     "X": {
-     "odds": 3.8,
+     "odds": 3.85,
      "book": "Unibet (SE)"
     }
    },
-   "books": 10,
+   "books": 17,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.77,
+    "oX": 3.76,
+    "o2": 1.88,
+    "ou": {}
+   },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 3.0,
-    "oX": 3.4,
-    "o2": 1.88,
+    "o1": 3.35,
+    "oX": 3.55,
+    "o2": 1.8,
     "ou": {}
    }
   },
@@ -159,47 +180,47 @@
    "kickoff": "2026-10-29T19:45Z",
    "home": "Fiorentina",
    "away": "Atalanta BC",
-   "o1": 2.239,
-   "oX": 3.491,
-   "o2": 2.972,
+   "o1": 2.193,
+   "oX": 3.577,
+   "o2": 3.052,
    "best": {
     "2": {
-     "odds": 3.1,
+     "odds": 3.2,
      "book": "Tipico"
     },
     "1": {
-     "odds": 2.4,
+     "odds": 2.3,
      "book": "1xBet"
     },
     "X": {
-     "odds": 3.69,
+     "odds": 3.77,
      "book": "1xBet"
     }
    },
-   "books": 19,
+   "books": 21,
    "ou": {
     "2.5": {
-     "o": 1.702,
-     "u": 2.121
+     "o": 1.644,
+     "u": 2.225
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 2.25,
-    "oX": 3.54,
-    "o2": 3.09,
+    "o1": 2.23,
+    "oX": 3.76,
+    "o2": 3.13,
     "ou": {
      "2.75": {
-      "o": 1.91,
-      "u": 1.93
+      "o": 1.81,
+      "u": 2.1
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
     "o1": 2.05,
-    "oX": 3.25,
-    "o2": 2.7,
+    "oX": 3.35,
+    "o2": 2.8,
     "ou": {}
    }
   }

@@ -1,55 +1,125 @@
 {
  "date": "2026-11-02",
- "updatedAt": "2026-10-25T07:48:32Z",
+ "updatedAt": "2026-10-26T07:48:36Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
-   "id": "pl-newcastle-united-everton",
-   "league": "PL",
-   "kickoff": "2026-11-02T20:00Z",
-   "home": "Newcastle United",
-   "away": "Everton",
-   "o1": 2.189,
-   "oX": 3.588,
-   "o2": 2.999,
+   "id": "rou-fc-voluntari-farul-constanta",
+   "league": "ROU",
+   "kickoff": "2026-11-02T15:30Z",
+   "home": "FC Voluntari",
+   "away": "Farul Constanta",
+   "o1": 3.1,
+   "oX": 3.2,
+   "o2": 2.25
+  },
+  {
+   "id": "sa-sassuolo-fiorentina",
+   "league": "SA",
+   "kickoff": "2026-11-02T17:30Z",
+   "home": "Sassuolo",
+   "away": "Fiorentina",
+   "o1": 2.425,
+   "oX": 3.509,
+   "o2": 2.614,
    "best": {
     "2": {
-     "odds": 3.23,
+     "odds": 2.83,
      "book": "1xBet"
     },
     "1": {
-     "odds": 2.26,
+     "odds": 2.57,
      "book": "1xBet"
     },
     "X": {
-     "odds": 3.78,
-     "book": "1xBet"
+     "odds": 3.7,
+     "book": "Tipico"
     }
    },
-   "books": 19,
+   "books": 14,
    "ou": {
     "2.5": {
-     "o": 1.68,
-     "u": 2.13
+     "o": 1.635,
+     "u": 2.225
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 2.24,
+    "o1": 2.49,
     "oX": 3.65,
-    "o2": 3.03,
+    "o2": 2.67,
     "ou": {
      "2.75": {
-      "o": 1.91,
-      "u": 1.93
+      "o": 1.81,
+      "u": 2.03
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 2.05,
-    "oX": 3.35,
-    "o2": 2.7,
+    "o1": 2.25,
+    "oX": 3.3,
+    "o2": 2.4,
+    "ou": {}
+   }
+  },
+  {
+   "id": "rou-u-cluj-fcsb",
+   "league": "ROU",
+   "kickoff": "2026-11-02T18:30Z",
+   "home": "U. Cluj",
+   "away": "FCSB",
+   "o1": 2.6,
+   "oX": 3.1,
+   "o2": 2.65
+  },
+  {
+   "id": "sa-atalanta-bc-parma",
+   "league": "SA",
+   "kickoff": "2026-11-02T19:45Z",
+   "home": "Atalanta BC",
+   "away": "Parma",
+   "o1": 1.433,
+   "oX": 4.379,
+   "o2": 6.469,
+   "best": {
+    "1": {
+     "odds": 1.5,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 7.16,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.8,
+     "book": "Tipico"
+    }
+   },
+   "books": 14,
+   "ou": {
+    "2.5": {
+     "o": 1.714,
+     "u": 2.087
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.45,
+    "oX": 4.57,
+    "o2": 6.71,
+    "ou": {
+     "2.75": {
+      "o": 1.99,
+      "u": 1.85
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.37,
+    "oX": 4.0,
+    "o2": 5.6,
     "ou": {}
    }
   },
@@ -59,42 +129,97 @@
    "kickoff": "2026-11-02T20:00Z",
    "home": "Deportivo La Coruña",
    "away": "CA Osasuna",
-   "o1": 2.204,
-   "oX": 3.19,
-   "o2": 3.232,
+   "o1": 2.131,
+   "oX": 3.223,
+   "o2": 3.436,
    "best": {
     "2": {
-     "odds": 3.4,
+     "odds": 3.7,
      "book": "Tipico"
     },
     "1": {
-     "odds": 2.36,
+     "odds": 2.28,
      "book": "1xBet"
     },
     "X": {
-     "odds": 3.38,
+     "odds": 3.42,
      "book": "1xBet"
     }
    },
-   "books": 12,
+   "books": 13,
    "ou": {
     "2.5": {
-     "o": 2.203,
-     "u": 1.661
+     "o": 2.193,
+     "u": 1.67
     }
    },
    "sharp": {
-    "book": "Betfair",
-    "o1": 2.22,
-    "oX": 3.2,
-    "o2": 3.3,
+    "book": "Pinnacle",
+    "o1": 2.16,
+    "oX": 3.29,
+    "o2": 3.67,
+    "ou": {
+     "2.25": {
+      "o": 1.95,
+      "u": 1.92
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.0,
+    "oX": 3.05,
+    "o2": 3.05,
     "ou": {}
+   }
+  },
+  {
+   "id": "pl-newcastle-united-everton",
+   "league": "PL",
+   "kickoff": "2026-11-02T20:00Z",
+   "home": "Newcastle United",
+   "away": "Everton",
+   "o1": 2.194,
+   "oX": 3.575,
+   "o2": 3.016,
+   "best": {
+    "2": {
+     "odds": 3.23,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.28,
+     "book": "Coolbet"
+    },
+    "X": {
+     "odds": 3.78,
+     "book": "1xBet"
+    }
+   },
+   "books": 20,
+   "ou": {
+    "2.5": {
+     "o": 1.678,
+     "u": 2.142
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.26,
+    "oX": 3.7,
+    "o2": 3.06,
+    "ou": {
+     "2.75": {
+      "o": 1.93,
+      "u": 1.94
+     }
+    }
    },
    "mine": {
     "book": "Winamax (FR)",
     "o1": 2.05,
-    "oX": 3.0,
-    "o2": 2.95,
+    "oX": 3.35,
+    "o2": 2.7,
     "ou": {}
    }
   }
