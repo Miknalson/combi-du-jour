@@ -40,7 +40,8 @@
     "oX": 5.1,
     "o2": 6.0,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "tur-caykur-rizespor-trabzonspor",
@@ -79,7 +80,8 @@
     "oX": 3.65,
     "o2": 1.84,
     "ou": {}
-   }
+   },
+   "score": "3-4"
   },
   {
    "id": "rou-sepsi-sf-gheorghe-univ-craiova",
@@ -89,7 +91,8 @@
    "away": "Univ. Craiova",
    "o1": 6.0,
    "oX": 4.3,
-   "o2": 1.52
+   "o2": 1.52,
+   "score": "0-5"
   },
   {
    "id": "den-fc-copenhagen-ob-odense-bk",
@@ -128,7 +131,8 @@
     "oX": 4.5,
     "o2": 5.1,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "tur-galatasaray-fenerbahce",
@@ -167,7 +171,8 @@
     "oX": 3.8,
     "o2": 2.95,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "por-santa-clara-benfica",
@@ -212,7 +217,8 @@
     "oX": 4.9,
     "o2": 1.31,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   },
   {
    "id": "l1-paris-saint-germain-lyon",
@@ -266,7 +272,8 @@
     "oX": 5.5,
     "o2": 6.0,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "liga2-andorra-cf-burgos-cf",
@@ -305,7 +312,8 @@
     "oX": 3.2,
     "o2": 3.15,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   },
   {
    "id": "l2-boulogne-stade-de-reims",
@@ -344,7 +352,8 @@
     "oX": 3.15,
     "o2": 2.15,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "l2-montpellier-red-star",
@@ -383,7 +392,8 @@
     "oX": 3.3,
     "o2": 2.8,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "liga-sevilla-ca-osasuna",
@@ -433,7 +443,8 @@
     "oX": 3.3,
     "o2": 3.95,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "por2-torreense-amarante",
@@ -443,7 +454,8 @@
    "away": "Amarante",
    "o1": 1.8,
    "oX": 3.6,
-   "o2": 4.5
+   "o2": 4.5,
+   "score": "1-0"
   }
  ]
 }
