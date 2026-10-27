@@ -1,43 +1,63 @@
 {
  "date": "2026-10-28",
- "updatedAt": "2026-10-26T07:48:36Z",
- "source": "The Odds API (moyenne des bookmakers européens)",
+ "updatedAt": "2026-10-27T07:49:53Z",
+ "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
+  {
+   "id": "srb-radnicki-1923-zeleznicar-pancevo",
+   "league": "SRB",
+   "kickoff": "2026-10-28T14:00Z",
+   "home": "Radnicki 1923",
+   "away": "Zeleznicar Pancevo",
+   "o1": 2.3,
+   "oX": 3.4,
+   "o2": 2.9
+  },
+  {
+   "id": "srb-radnicki-nis-partizan",
+   "league": "SRB",
+   "kickoff": "2026-10-28T16:00Z",
+   "home": "Radnicki Nis",
+   "away": "Partizan",
+   "o1": 4.0,
+   "oX": 3.8,
+   "o2": 1.83
+  },
   {
    "id": "sa-ac-milan-bologna",
    "league": "SA",
    "kickoff": "2026-10-28T17:30Z",
    "home": "AC Milan",
    "away": "Bologna",
-   "o1": 1.608,
-   "oX": 3.969,
-   "o2": 5.398,
+   "o1": 1.605,
+   "oX": 3.975,
+   "o2": 5.499,
    "best": {
     "1": {
      "odds": 1.69,
      "book": "1xBet"
     },
     "2": {
-     "odds": 5.7,
-     "book": "Tipico"
+     "odds": 6.0,
+     "book": "Unibet (SE)"
     },
     "X": {
      "odds": 4.2,
-     "book": "Tipico"
+     "book": "Unibet (SE)"
     }
    },
-   "books": 22,
+   "books": 23,
    "ou": {
     "2.5": {
-     "o": 1.816,
-     "u": 1.976
+     "o": 1.819,
+     "u": 1.984
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 1.62,
-    "oX": 4.16,
-    "o2": 5.6,
+    "o1": 1.63,
+    "oX": 4.08,
+    "o2": 5.57,
     "ou": {
      "2.5": {
       "o": 1.88,
@@ -48,8 +68,8 @@
    "mine": {
     "book": "Winamax (FR)",
     "o1": 1.54,
-    "oX": 3.75,
-    "o2": 4.8,
+    "oX": 3.9,
+    "o2": 4.9,
     "ou": {}
    }
   },
@@ -59,51 +79,51 @@
    "kickoff": "2026-10-28T17:30Z",
    "home": "Venezia",
    "away": "Inter Milan",
-   "o1": 7.942,
-   "oX": 5.704,
-   "o2": 1.32,
+   "o1": 7.693,
+   "oX": 5.637,
+   "o2": 1.336,
    "best": {
     "2": {
-     "odds": 1.36,
-     "book": "1xBet"
+     "odds": 1.37,
+     "book": "Coolbet"
     },
     "1": {
-     "odds": 9.5,
-     "book": "Tipico"
+     "odds": 9.0,
+     "book": "Unibet (SE)"
     },
     "X": {
      "odds": 6.11,
      "book": "1xBet"
     }
    },
-   "books": 22,
+   "books": 23,
    "ou": {
     "3.5": {
-     "o": 1.866,
-     "u": 1.925
+     "o": 1.877,
+     "u": 1.921
     },
     "2.5": {
-     "o": 1.317,
-     "u": 3.323
+     "o": 1.33,
+     "u": 3.253
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 7.92,
-    "oX": 5.97,
-    "o2": 1.34,
+    "o1": 7.54,
+    "oX": 5.76,
+    "o2": 1.36,
     "ou": {
      "3.5": {
-      "o": 1.92,
-      "u": 1.97
+      "o": 1.96,
+      "u": 1.93
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 6.25,
+    "o1": 6.0,
     "oX": 5.4,
-    "o2": 1.28,
+    "o2": 1.32,
     "ou": {}
    }
   },
@@ -113,35 +133,39 @@
    "kickoff": "2026-10-28T17:30Z",
    "home": "Parma",
    "away": "Udinese",
-   "o1": 2.961,
-   "oX": 3.162,
-   "o2": 2.459,
+   "o1": 2.96,
+   "oX": 3.131,
+   "o2": 2.504,
    "best": {
     "1": {
-     "odds": 3.13,
+     "odds": 3.17,
      "book": "1xBet"
     },
     "2": {
-     "odds": 2.58,
-     "book": "Coolbet"
+     "odds": 2.6,
+     "book": "BetOnline.ag"
     },
     "X": {
-     "odds": 3.4,
-     "book": "1xBet"
+     "odds": 3.3,
+     "book": "Unibet (SE)"
     }
    },
-   "books": 22,
+   "books": 23,
    "ou": {
+    "2.25": {
+     "o": 1.96,
+     "u": 1.895
+    },
     "2.5": {
-     "o": 2.15,
-     "u": 1.681
+     "o": 2.168,
+     "u": 1.684
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 3.04,
+    "o1": 3.0,
     "oX": 3.19,
-    "o2": 2.56,
+    "o2": 2.59,
     "ou": {
      "2.25": {
       "o": 1.99,
@@ -152,8 +176,8 @@
    "mine": {
     "book": "Winamax (FR)",
     "o1": 2.7,
-    "oX": 3.05,
-    "o2": 2.3,
+    "oX": 3.1,
+    "o2": 2.4,
     "ou": {}
    }
   },
@@ -163,9 +187,9 @@
    "kickoff": "2026-10-28T18:00Z",
    "home": "IF Brommapojkarna",
    "away": "BK Hacken",
-   "o1": 4.123,
-   "oX": 3.944,
-   "o2": 1.701,
+   "o1": 4.143,
+   "oX": 4.014,
+   "o2": 1.712,
    "best": {
     "2": {
      "odds": 1.78,
@@ -180,7 +204,7 @@
      "book": "Unibet (SE)"
     }
    },
-   "books": 19,
+   "books": 21,
    "sharp": {
     "book": "Pinnacle",
     "o1": 4.21,
@@ -202,29 +226,29 @@
    "kickoff": "2026-10-28T18:00Z",
    "home": "Degerfors IF",
    "away": "Västerås SK",
-   "o1": 2.397,
-   "oX": 3.282,
-   "o2": 2.748,
+   "o1": 2.417,
+   "oX": 3.307,
+   "o2": 2.767,
    "best": {
     "1": {
-     "odds": 2.55,
-     "book": "Unibet (SE)"
+     "odds": 2.6,
+     "book": "Coolbet"
     },
     "2": {
-     "odds": 2.9,
-     "book": "Pinnacle"
+     "odds": 2.88,
+     "book": "Betsson"
     },
     "X": {
      "odds": 3.45,
      "book": "Unibet (SE)"
     }
    },
-   "books": 19,
+   "books": 21,
    "sharp": {
     "book": "Pinnacle",
-    "o1": 2.4,
-    "oX": 3.37,
-    "o2": 2.9,
+    "o1": 2.43,
+    "oX": 3.4,
+    "o2": 2.83,
     "ou": {}
    },
    "mine": {
@@ -241,29 +265,29 @@
    "kickoff": "2026-10-28T18:00Z",
    "home": "IFK Goteborg",
    "away": "Djurgardens IF",
-   "o1": 3.251,
-   "oX": 3.707,
-   "o2": 1.967,
+   "o1": 3.331,
+   "oX": 3.731,
+   "o2": 1.963,
    "best": {
     "2": {
      "odds": 2.06,
-     "book": "1xBet"
+     "book": "GTbets"
     },
     "1": {
-     "odds": 3.65,
+     "odds": 3.6,
      "book": "Unibet (SE)"
     },
     "X": {
-     "odds": 4.0,
-     "book": "Unibet (SE)"
+     "odds": 3.92,
+     "book": "Pinnacle"
     }
    },
-   "books": 18,
+   "books": 21,
    "sharp": {
     "book": "Pinnacle",
-    "o1": 3.34,
-    "oX": 3.9,
-    "o2": 1.98,
+    "o1": 3.37,
+    "oX": 3.92,
+    "o2": 1.96,
     "ou": {}
    },
    "mine": {
@@ -280,9 +304,9 @@
    "kickoff": "2026-10-28T18:00Z",
    "home": "Halmstads BK",
    "away": "Malmo FF",
-   "o1": 4.481,
-   "oX": 3.955,
-   "o2": 1.651,
+   "o1": 4.483,
+   "oX": 3.968,
+   "o2": 1.659,
    "best": {
     "1": {
      "odds": 4.9,
@@ -297,7 +321,7 @@
      "book": "Pinnacle"
     }
    },
-   "books": 19,
+   "books": 21,
    "sharp": {
     "book": "Pinnacle",
     "o1": 4.33,
@@ -319,47 +343,51 @@
    "kickoff": "2026-10-28T19:45Z",
    "home": "Genoa",
    "away": "Juventus",
-   "o1": 5.353,
-   "oX": 3.721,
-   "o2": 1.652,
+   "o1": 5.313,
+   "oX": 3.718,
+   "o2": 1.67,
    "best": {
     "1": {
-     "odds": 5.7,
-     "book": "Tipico"
+     "odds": 5.8,
+     "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 1.7,
-     "book": "Pinnacle"
+     "odds": 1.74,
+     "book": "1xBet"
     },
     "X": {
-     "odds": 4.01,
+     "odds": 3.91,
      "book": "1xBet"
     }
    },
-   "books": 21,
+   "books": 23,
    "ou": {
+    "2.25": {
+     "o": 1.875,
+     "u": 1.98
+    },
     "2.5": {
-     "o": 2.037,
-     "u": 1.745
+     "o": 2.054,
+     "u": 1.744
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 5.43,
-    "oX": 3.8,
-    "o2": 1.7,
+    "o1": 5.37,
+    "oX": 3.76,
+    "o2": 1.71,
     "ou": {
      "2.25": {
-      "o": 1.89,
-      "u": 2.0
+      "o": 1.9,
+      "u": 1.99
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 4.6,
-    "oX": 3.55,
-    "o2": 1.6,
+    "o1": 4.7,
+    "oX": 3.6,
+    "o2": 1.62,
     "ou": {}
    }
   },
@@ -369,47 +397,51 @@
    "kickoff": "2026-10-28T19:45Z",
    "home": "Monza",
    "away": "Napoli",
-   "o1": 4.168,
-   "oX": 3.861,
-   "o2": 1.779,
+   "o1": 4.34,
+   "oX": 3.921,
+   "o2": 1.747,
    "best": {
     "1": {
-     "odds": 4.53,
-     "book": "1xBet"
-    },
-    "2": {
-     "odds": 1.85,
+     "odds": 4.6,
      "book": "Unibet (SE)"
     },
+    "2": {
+     "odds": 1.83,
+     "book": "Coolbet"
+    },
     "X": {
-     "odds": 4.1,
-     "book": "BetOnline.ag"
+     "odds": 4.15,
+     "book": "Pinnacle"
     }
    },
-   "books": 21,
+   "books": 23,
    "ou": {
+    "2.75": {
+     "o": 1.91,
+     "u": 1.94
+    },
     "2.5": {
-     "o": 1.719,
-     "u": 2.092
+     "o": 1.712,
+     "u": 2.121
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 4.19,
-    "oX": 4.07,
-    "o2": 1.81,
+    "o1": 4.37,
+    "oX": 4.15,
+    "o2": 1.76,
     "ou": {
      "2.75": {
-      "o": 1.95,
-      "u": 1.93
+      "o": 1.91,
+      "u": 1.97
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 3.75,
-    "oX": 3.65,
-    "o2": 1.7,
+    "o1": 3.9,
+    "oX": 3.85,
+    "o2": 1.68,
     "ou": {}
    }
   }

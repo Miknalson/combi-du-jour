@@ -1,17 +1,225 @@
 {
  "date": "2026-11-02",
- "updatedAt": "2026-10-26T07:48:36Z",
- "source": "The Odds API (moyenne des bookmakers européens)",
+ "updatedAt": "2026-10-27T07:49:53Z",
+ "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
+  {
+   "id": "rus-kryliya-sovetov-zenit-st-petersburg",
+   "league": "RUS",
+   "kickoff": "2026-11-02T15:00Z",
+   "home": "Kryliya Sovetov",
+   "away": "Zenit St Petersburg",
+   "o1": 5.633,
+   "oX": 4.447,
+   "o2": 1.577,
+   "best": {
+    "1": {
+     "odds": 5.84,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 1.6,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.56,
+     "book": "1xBet"
+    }
+   },
+   "books": 3,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 5.36,
+    "oX": 4.33,
+    "o2": 1.57,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga2-oviedo-las-palmas",
+   "league": "LIGA2",
+   "kickoff": "2026-11-02T15:15Z",
+   "home": "Oviedo",
+   "away": "Las Palmas",
+   "o1": 1.723,
+   "oX": 3.478,
+   "o2": 4.224,
+   "best": {
+    "2": {
+     "odds": 4.64,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 1.88,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.86,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 16,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.74,
+    "oX": 3.86,
+    "o2": 4.56,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.64,
+    "oX": 3.45,
+    "o2": 3.9,
+    "ou": {}
+   }
+  },
   {
    "id": "rou-fc-voluntari-farul-constanta",
    "league": "ROU",
    "kickoff": "2026-11-02T15:30Z",
    "home": "FC Voluntari",
    "away": "Farul Constanta",
-   "o1": 3.1,
+   "o1": 2.65,
+   "oX": 3.4,
+   "o2": 2.35
+  },
+  {
+   "id": "tur-genclerbirligi-sk-alanyaspor",
+   "league": "TUR",
+   "kickoff": "2026-11-02T17:00Z",
+   "home": "Genclerbirligi SK",
+   "away": "Alanyaspor",
+   "o1": 2.619,
+   "oX": 3.187,
+   "o2": 2.551,
+   "best": {
+    "2": {
+     "odds": 2.8,
+     "book": "Unibet (NL)"
+    },
+    "1": {
+     "odds": 2.78,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.42,
+     "book": "1xBet"
+    }
+   },
+   "books": 19,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.74,
+    "oX": 3.26,
+    "o2": 2.65,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.4,
+    "oX": 3.05,
+    "o2": 2.25,
+    "ou": {}
+   }
+  },
+  {
+   "id": "pol-zagebie-lubin-korona-kielce",
+   "league": "POL",
+   "kickoff": "2026-11-02T17:00Z",
+   "home": "Zagłębie Lubin",
+   "away": "Korona Kielce",
+   "o1": 2.599,
+   "oX": 3.177,
+   "o2": 2.459,
+   "best": {
+    "2": {
+     "odds": 2.6,
+     "book": "888sport"
+    },
+    "1": {
+     "odds": 2.8,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.37,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 15,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.71,
+    "oX": 3.37,
+    "o2": 2.57,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.4,
+    "oX": 3.1,
+    "o2": 2.35,
+    "ou": {}
+   }
+  },
+  {
+   "id": "pol-radomiak-radom-slask-wrocaw",
+   "league": "POL",
+   "kickoff": "2026-11-02T17:00Z",
+   "home": "Radomiak Radom",
+   "away": "Śląsk Wrocław",
+   "o1": 2.095,
+   "oX": 3.501,
+   "o2": 2.958,
+   "best": {
+    "1": {
+     "odds": 2.2,
+     "book": "Coolbet"
+    },
+    "2": {
+     "odds": 3.21,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.85,
+     "book": "Coolbet"
+    }
+   },
+   "books": 16,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.13,
+    "oX": 3.63,
+    "o2": 3.21,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.0,
+    "oX": 3.4,
+    "o2": 2.75,
+    "ou": {}
+   }
+  },
+  {
+   "id": "srb-mladost-radnik",
+   "league": "SRB",
+   "kickoff": "2026-11-02T17:00Z",
+   "home": "Mladost",
+   "away": "Radnik",
+   "o1": 2.7,
    "oX": 3.2,
-   "o2": 2.25
+   "o2": 2.63
+  },
+  {
+   "id": "srb-radnicki-nis-zeleznicar-pancevo",
+   "league": "SRB",
+   "kickoff": "2026-11-02T17:00Z",
+   "home": "Radnicki Nis",
+   "away": "Zeleznicar Pancevo",
+   "o1": 3.9,
+   "oX": 3.5,
+   "o2": 1.9
   },
   {
    "id": "sa-sassuolo-fiorentina",
@@ -19,28 +227,28 @@
    "kickoff": "2026-11-02T17:30Z",
    "home": "Sassuolo",
    "away": "Fiorentina",
-   "o1": 2.425,
-   "oX": 3.509,
-   "o2": 2.614,
+   "o1": 2.449,
+   "oX": 3.49,
+   "o2": 2.619,
    "best": {
     "2": {
      "odds": 2.83,
      "book": "1xBet"
     },
     "1": {
-     "odds": 2.57,
-     "book": "1xBet"
+     "odds": 2.6,
+     "book": "Unibet (SE)"
     },
     "X": {
-     "odds": 3.7,
-     "book": "Tipico"
+     "odds": 3.67,
+     "book": "1xBet"
     }
    },
-   "books": 14,
+   "books": 18,
    "ou": {
     "2.5": {
-     "o": 1.635,
-     "u": 2.225
+     "o": 1.642,
+     "u": 2.219
     }
    },
    "sharp": {
@@ -64,14 +272,205 @@
    }
   },
   {
+   "id": "liga2-real-valladolid-cf-leganes",
+   "league": "LIGA2",
+   "kickoff": "2026-11-02T17:30Z",
+   "home": "Real Valladolid CF",
+   "away": "Leganés",
+   "o1": 1.822,
+   "oX": 3.441,
+   "o2": 3.801,
+   "best": {
+    "2": {
+     "odds": 4.2,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 2.02,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.91,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 17,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.79,
+    "oX": 3.91,
+    "o2": 4.2,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.74,
+    "oX": 3.3,
+    "o2": 3.55,
+    "ou": {}
+   }
+  },
+  {
+   "id": "swe-gais-aik",
+   "league": "SWE",
+   "kickoff": "2026-11-02T18:00Z",
+   "home": "GAIS",
+   "away": "AIK",
+   "o1": 1.754,
+   "oX": 3.676,
+   "o2": 3.836,
+   "best": {
+    "2": {
+     "odds": 4.2,
+     "book": "Unibet (SE)"
+    },
+    "1": {
+     "odds": 1.85,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.9,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 10,
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.68,
+    "oX": 3.55,
+    "o2": 3.5,
+    "ou": {}
+   }
+  },
+  {
+   "id": "swe-mjallby-aif-kalmar-ff",
+   "league": "SWE",
+   "kickoff": "2026-11-02T18:00Z",
+   "home": "Mjällby AIF",
+   "away": "Kalmar FF",
+   "o1": 2.185,
+   "oX": 3.322,
+   "o2": 2.896,
+   "best": {
+    "2": {
+     "odds": 3.1,
+     "book": "Unibet (SE)"
+    },
+    "1": {
+     "odds": 2.33,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.5,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 10,
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.05,
+    "oX": 3.25,
+    "o2": 2.7,
+    "ou": {}
+   }
+  },
+  {
+   "id": "den-sonderjyske-fc-copenhagen",
+   "league": "DEN",
+   "kickoff": "2026-11-02T18:00Z",
+   "home": "SonderjyskE",
+   "away": "FC Copenhagen",
+   "o1": 6.269,
+   "oX": 4.613,
+   "o2": 1.392,
+   "best": {
+    "2": {
+     "odds": 1.44,
+     "book": "888sport"
+    },
+    "1": {
+     "odds": 6.9,
+     "book": "Betsson"
+    },
+    "X": {
+     "odds": 4.99,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 18,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 6.24,
+    "oX": 4.99,
+    "o2": 1.44,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 5.4,
+    "oX": 4.4,
+    "o2": 1.35,
+    "ou": {}
+   }
+  },
+  {
+   "id": "por2-penafiel-feirense",
+   "league": "POR2",
+   "kickoff": "2026-11-02T18:00Z",
+   "home": "Penafiel",
+   "away": "Feirense",
+   "o1": 1.89,
+   "oX": 3.3,
+   "o2": 3.8
+  },
+  {
    "id": "rou-u-cluj-fcsb",
    "league": "ROU",
    "kickoff": "2026-11-02T18:30Z",
    "home": "U. Cluj",
    "away": "FCSB",
    "o1": 2.6,
-   "oX": 3.1,
-   "o2": 2.65
+   "oX": 3.4,
+   "o2": 2.4
+  },
+  {
+   "id": "pol-rakow-czestochowa-pogon-szczecin",
+   "league": "POL",
+   "kickoff": "2026-11-02T19:30Z",
+   "home": "Raków Częstochowa",
+   "away": "Pogoń Szczecin",
+   "o1": 2.109,
+   "oX": 3.594,
+   "o2": 2.853,
+   "best": {
+    "2": {
+     "odds": 3.05,
+     "book": "Unibet (NL)"
+    },
+    "1": {
+     "odds": 2.25,
+     "book": "888sport"
+    },
+    "X": {
+     "odds": 3.85,
+     "book": "Coolbet"
+    }
+   },
+   "books": 16,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.2,
+    "oX": 3.84,
+    "o2": 2.94,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.0,
+    "oX": 3.5,
+    "o2": 2.7,
+    "ou": {}
+   }
   },
   {
    "id": "sa-atalanta-bc-parma",
@@ -79,9 +478,9 @@
    "kickoff": "2026-11-02T19:45Z",
    "home": "Atalanta BC",
    "away": "Parma",
-   "o1": 1.433,
-   "oX": 4.379,
-   "o2": 6.469,
+   "o1": 1.436,
+   "oX": 4.402,
+   "o2": 6.533,
    "best": {
     "1": {
      "odds": 1.5,
@@ -92,15 +491,15 @@
      "book": "1xBet"
     },
     "X": {
-     "odds": 4.8,
-     "book": "Tipico"
+     "odds": 4.74,
+     "book": "1xBet"
     }
    },
-   "books": 14,
+   "books": 18,
    "ou": {
     "2.5": {
-     "o": 1.714,
-     "u": 2.087
+     "o": 1.727,
+     "u": 2.077
     }
    },
    "sharp": {
@@ -118,8 +517,97 @@
    "mine": {
     "book": "Winamax (FR)",
     "o1": 1.37,
-    "oX": 4.0,
-    "o2": 5.6,
+    "oX": 4.1,
+    "o2": 5.5,
+    "ou": {}
+   }
+  },
+  {
+   "id": "l2-red-star-nancy",
+   "league": "L2",
+   "kickoff": "2026-11-02T19:45Z",
+   "home": "Red Star",
+   "away": "Nancy",
+   "o1": 2.177,
+   "oX": 3.23,
+   "o2": 2.992,
+   "best": {
+    "2": {
+     "odds": 3.1,
+     "book": "Betsson"
+    },
+    "1": {
+     "odds": 2.31,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.53,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 12,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.31,
+    "oX": 3.53,
+    "o2": 2.95,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.05,
+    "oX": 3.1,
+    "o2": 2.85,
+    "ou": {}
+   }
+  },
+  {
+   "id": "pl-newcastle-united-everton",
+   "league": "PL",
+   "kickoff": "2026-11-02T20:00Z",
+   "home": "Newcastle United",
+   "away": "Everton",
+   "o1": 2.223,
+   "oX": 3.589,
+   "o2": 3.015,
+   "best": {
+    "2": {
+     "odds": 3.23,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.3,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.78,
+     "book": "1xBet"
+    }
+   },
+   "books": 22,
+   "ou": {
+    "2.5": {
+     "o": 1.69,
+     "u": 2.154
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.26,
+    "oX": 3.7,
+    "o2": 3.06,
+    "ou": {
+     "2.75": {
+      "o": 1.93,
+      "u": 1.94
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.15,
+    "oX": 3.5,
+    "o2": 2.8,
     "ou": {}
    }
   },
@@ -129,9 +617,9 @@
    "kickoff": "2026-11-02T20:00Z",
    "home": "Deportivo La Coruña",
    "away": "CA Osasuna",
-   "o1": 2.131,
-   "oX": 3.223,
-   "o2": 3.436,
+   "o1": 2.144,
+   "oX": 3.198,
+   "o2": 3.515,
    "best": {
     "2": {
      "odds": 3.7,
@@ -146,11 +634,11 @@
      "book": "1xBet"
     }
    },
-   "books": 13,
+   "books": 15,
    "ou": {
     "2.5": {
-     "o": 2.193,
-     "u": 1.67
+     "o": 2.207,
+     "u": 1.679
     }
    },
    "sharp": {
@@ -168,58 +656,135 @@
    "mine": {
     "book": "Winamax (FR)",
     "o1": 2.0,
-    "oX": 3.05,
-    "o2": 3.05,
+    "oX": 2.95,
+    "o2": 3.15,
     "ou": {}
    }
   },
   {
-   "id": "pl-newcastle-united-everton",
-   "league": "PL",
+   "id": "liga2-mallorca-cadiz-cf",
+   "league": "LIGA2",
    "kickoff": "2026-11-02T20:00Z",
-   "home": "Newcastle United",
-   "away": "Everton",
-   "o1": 2.194,
-   "oX": 3.575,
-   "o2": 3.016,
+   "home": "Mallorca",
+   "away": "Cádiz CF",
+   "o1": 1.43,
+   "oX": 4.006,
+   "o2": 6.446,
    "best": {
     "2": {
-     "odds": 3.23,
-     "book": "1xBet"
+     "odds": 7.0,
+     "book": "Nordic Bet"
     },
     "1": {
-     "odds": 2.28,
-     "book": "Coolbet"
+     "odds": 1.51,
+     "book": "1xBet"
     },
     "X": {
-     "odds": 3.78,
-     "book": "1xBet"
+     "odds": 4.33,
+     "book": "William Hill"
     }
    },
-   "books": 20,
+   "books": 16,
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.5,
+    "oX": 4.11,
+    "o2": 6.93,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.38,
+    "oX": 3.85,
+    "o2": 5.9,
+    "ou": {}
+   }
+  },
+  {
+   "id": "por-benfica-alverca",
+   "league": "POR",
+   "kickoff": "2026-11-02T20:15Z",
+   "home": "Benfica",
+   "away": "Alverca",
+   "o1": 1.137,
+   "oX": 7.293,
+   "o2": 12.503,
+   "best": {
+    "2": {
+     "odds": 15.0,
+     "book": "Coolbet"
+    },
+    "1": {
+     "odds": 1.2,
+     "book": "888sport"
+    },
+    "X": {
+     "odds": 8.2,
+     "book": "Tipico"
+    }
+   },
+   "books": 15,
+   "ou": {
+    "3.5": {
+     "o": 1.869,
+     "u": 1.824
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.11,
+    "oX": 6.5,
+    "o2": 10.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "por-gil-vicente-vitoria-sc",
+   "league": "POR",
+   "kickoff": "2026-11-02T20:15Z",
+   "home": "Gil Vicente",
+   "away": "Vitória SC",
+   "o1": 2.671,
+   "oX": 3.04,
+   "o2": 2.532,
+   "best": {
+    "1": {
+     "odds": 2.9,
+     "book": "LeoVegas (SE)"
+    },
+    "2": {
+     "odds": 2.75,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.25,
+     "book": "Coolbet"
+    }
+   },
+   "books": 15,
    "ou": {
     "2.5": {
-     "o": 1.678,
-     "u": 2.142
+     "o": 2.211,
+     "u": 1.587
     }
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 2.26,
-    "oX": 3.7,
-    "o2": 3.06,
+    "o1": 2.76,
+    "oX": 3.1,
+    "o2": 2.75,
     "ou": {
-     "2.75": {
-      "o": 1.93,
-      "u": 1.94
+     "2.25": {
+      "o": 1.99,
+      "u": 1.85
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 2.05,
-    "oX": 3.35,
-    "o2": 2.7,
+    "o1": 2.4,
+    "oX": 3.0,
+    "o2": 2.45,
     "ou": {}
    }
   }

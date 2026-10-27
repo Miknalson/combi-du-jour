@@ -1,0 +1,1503 @@
+{
+ "date": "2026-11-05",
+ "matches": [
+  {
+   "id": "uel-ac-milan-ferencvaros-tc",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "AC Milan",
+   "away": "Ferencváros TC",
+   "o1": 1.304,
+   "oX": 5.182,
+   "o2": 8.361,
+   "best": {
+    "1": {
+     "odds": 1.35,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 10.0,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 5.6,
+     "book": "Winamax (DE)"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "3.5": {
+     "o": 2.327,
+     "u": 1.565
+    },
+    "2.5": {
+     "o": 1.523,
+     "u": 2.457
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.28,
+    "oX": 4.89,
+    "o2": 7.32,
+    "ou": {
+     "3.0": {
+      "o": 1.76,
+      "u": 1.93
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.27,
+    "oX": 5.1,
+    "o2": 6.75,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-anderlecht-salzburg",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Anderlecht",
+   "away": "Salzburg",
+   "o1": 1.887,
+   "oX": 3.743,
+   "o2": 3.579,
+   "best": {
+    "1": {
+     "odds": 1.98,
+     "book": "Nordic Bet"
+    },
+    "2": {
+     "odds": 3.93,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.05,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.574,
+     "u": 2.319
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.9,
+    "oX": 3.88,
+    "o2": 3.73,
+    "ou": {
+     "3.0": {
+      "o": 1.97,
+      "u": 1.86
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.82,
+    "oX": 3.6,
+    "o2": 3.2,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-sparta-prague-bournemouth",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Sparta Prague",
+   "away": "Bournemouth",
+   "o1": 4.941,
+   "oX": 4.157,
+   "o2": 1.573,
+   "best": {
+    "2": {
+     "odds": 1.62,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 5.5,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 4.46,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.574,
+     "u": 2.322
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 5.24,
+    "oX": 4.35,
+    "o2": 1.57,
+    "ou": {
+     "3.0": {
+      "o": 1.96,
+      "u": 1.87
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 4.4,
+    "oX": 4.0,
+    "o2": 1.5,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-crystal-palace-tsg-hoffenheim",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Crystal Palace",
+   "away": "TSG Hoffenheim",
+   "o1": 1.841,
+   "oX": 3.809,
+   "o2": 3.676,
+   "best": {
+    "1": {
+     "odds": 1.92,
+     "book": "Nordic Bet"
+    },
+    "2": {
+     "odds": 3.93,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.11,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.573,
+     "u": 2.309
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.9,
+    "oX": 3.94,
+    "o2": 3.68,
+    "ou": {
+     "3.0": {
+      "o": 1.92,
+      "u": 1.92
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.76,
+    "oX": 3.65,
+    "o2": 3.35,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-pfc-levski-sofia-jagiellonia-biaystok",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "PFC Levski Sofia",
+   "away": "Jagiellonia Białystok",
+   "o1": 1.945,
+   "oX": 3.348,
+   "o2": 3.299,
+   "best": {
+    "2": {
+     "odds": 3.79,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.1,
+     "book": "LeoVegas (SE)"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.818,
+     "u": 1.954
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.0,
+    "oX": 3.55,
+    "o2": 3.7,
+    "ou": {
+     "2.5": {
+      "o": 1.84,
+      "u": 2.0
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.92,
+    "oX": 3.4,
+    "o2": 3.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-lillestrom-viktoria-plzen",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Lillestrom",
+   "away": "Viktoria Plzeň",
+   "o1": 2.705,
+   "oX": 3.609,
+   "o2": 2.303,
+   "best": {
+    "1": {
+     "odds": 2.88,
+     "book": "Nordic Bet"
+    },
+    "2": {
+     "odds": 2.41,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.85,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.573,
+     "u": 2.309
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.74,
+    "oX": 3.77,
+    "o2": 2.38,
+    "ou": {
+     "3.0": {
+      "o": 1.92,
+      "u": 1.92
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.5,
+    "oX": 3.5,
+    "o2": 2.2,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-real-sociedad-lyon",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Real Sociedad",
+   "away": "Lyon",
+   "o1": 1.914,
+   "oX": 3.684,
+   "o2": 3.484,
+   "best": {
+    "2": {
+     "odds": 3.73,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.02,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 3.88,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.568,
+     "u": 2.346
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.96,
+    "oX": 3.82,
+    "o2": 3.57,
+    "ou": {
+     "3.0": {
+      "o": 1.93,
+      "u": 1.91
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.88,
+    "oX": 3.5,
+    "o2": 3.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-nec-nijmegen-omonoia-fc",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "NEC Nijmegen",
+   "away": "Omonoia FC",
+   "o1": 1.72,
+   "oX": 3.712,
+   "o2": 3.803,
+   "best": {
+    "1": {
+     "odds": 1.81,
+     "book": "LeoVegas (SE)"
+    },
+    "2": {
+     "odds": 4.35,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 4.25,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "3.5": {
+     "o": 2.31,
+     "u": 1.57
+    },
+    "2.5": {
+     "o": 1.56,
+     "u": 2.407
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.77,
+    "oX": 4.0,
+    "o2": 4.18,
+    "ou": {
+     "3.0": {
+      "o": 1.93,
+      "u": 1.9
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.68,
+    "oX": 3.75,
+    "o2": 3.6,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-rennes-olympiakos-piraeus",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Rennes",
+   "away": "Olympiakos Piraeus",
+   "o1": 2.078,
+   "oX": 3.514,
+   "o2": 3.209,
+   "best": {
+    "2": {
+     "odds": 3.35,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.15,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.73,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.768,
+     "u": 2.009
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.14,
+    "oX": 3.63,
+    "o2": 3.25,
+    "ou": {
+     "2.75": {
+      "o": 1.94,
+      "u": 1.89
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.98,
+    "oX": 3.4,
+    "o2": 3.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-agf-aarhus-sc-braga",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "AGF Aarhus",
+   "away": "SC Braga",
+   "o1": 2.752,
+   "oX": 3.12,
+   "o2": 2.068,
+   "best": {
+    "1": {
+     "odds": 3.05,
+     "book": "Nordic Bet"
+    },
+    "2": {
+     "odds": 2.33,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.56,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-fc-midtjylland-ajax",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "FC Midtjylland",
+   "away": "Ajax",
+   "o1": 2.642,
+   "oX": 3.16,
+   "o2": 2.121,
+   "best": {
+    "2": {
+     "odds": 2.39,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.94,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.61,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.13,
+    "oX": 1.1,
+    "o2": 1.13,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-atalanta-bc-fc-kairat",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Atalanta BC",
+   "away": "FC Kairat",
+   "o1": 1.101,
+   "oX": 6.806,
+   "o2": 16.483,
+   "best": {
+    "1": {
+     "odds": 1.14,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 22.0,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 8.95,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.01,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-fc-thun-hearts",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "FC Thun",
+   "away": "Hearts",
+   "o1": 2.237,
+   "oX": 3.206,
+   "o2": 2.45,
+   "best": {
+    "1": {
+     "odds": 2.58,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 2.75,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.63,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-mjallby-aif-fk-borac-banja-luka",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Mjällby AIF",
+   "away": "FK Borac Banja Luka",
+   "o1": 2.119,
+   "oX": 3.042,
+   "o2": 2.733,
+   "best": {
+    "2": {
+     "odds": 3.05,
+     "book": "Nordic Bet"
+    },
+    "1": {
+     "odds": 2.39,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.48,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-kups-kuopio-gent",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "KuPS Kuopio",
+   "away": "Gent",
+   "o1": 5.146,
+   "oX": 3.582,
+   "o2": 1.471,
+   "best": {
+    "2": {
+     "odds": 1.59,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 6.06,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.14,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-lincoln-red-imps-fc-hajduk-split",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Lincoln Red Imps FC",
+   "away": "Hajduk Split",
+   "o1": 8.449,
+   "oX": 4.371,
+   "o2": 1.273,
+   "best": {
+    "2": {
+     "odds": 1.33,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 10.5,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 5.27,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.14,
+    "oX": 1.12,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-red-star-belgrade-inter-club-d-escaldes",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Red Star Belgrade",
+   "away": "Inter Club d'Escaldes",
+   "o1": 1.074,
+   "oX": 7.778,
+   "o2": 20.761,
+   "best": {
+    "2": {
+     "odds": 30.0,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 1.1,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 10.6,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.01,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-trabzonspor-sc-freiburg",
+   "league": "UECL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Trabzonspor",
+   "away": "SC Freiburg",
+   "o1": 2.526,
+   "oX": 3.04,
+   "o2": 2.258,
+   "best": {
+    "2": {
+     "odds": 2.54,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.81,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.48,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.13,
+    "oX": 1.1,
+    "o2": 1.13,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-az-alkmaar-juventus",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "AZ Alkmaar",
+   "away": "Juventus",
+   "o1": 3.444,
+   "oX": 3.488,
+   "o2": 1.998,
+   "best": {
+    "1": {
+     "odds": 3.67,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 2.08,
+     "book": "LeoVegas (SE)"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.839,
+     "u": 1.919
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 3.64,
+    "oX": 3.73,
+    "o2": 1.97,
+    "ou": {
+     "2.75": {
+      "o": 2.02,
+      "u": 1.82
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 3.1,
+    "oX": 3.35,
+    "o2": 1.94,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-bayer-leverkusen-marseille",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Bayer Leverkusen",
+   "away": "Marseille",
+   "o1": 1.412,
+   "oX": 4.71,
+   "o2": 5.914,
+   "best": {
+    "1": {
+     "odds": 1.46,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 7.5,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 5.14,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "3.5": {
+     "o": 2.225,
+     "u": 1.615
+    },
+    "2.5": {
+     "o": 1.457,
+     "u": 2.69
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.41,
+    "oX": 5.14,
+    "o2": 6.61,
+    "ou": {
+     "3.25": {
+      "o": 1.96,
+      "u": 1.88
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.37,
+    "oX": 4.5,
+    "o2": 5.4,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-benfica-lech-poznan",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Benfica",
+   "away": "Lech Poznań",
+   "o1": 1.185,
+   "oX": 6.628,
+   "o2": 12.555,
+   "best": {
+    "1": {
+     "odds": 1.27,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 17.0,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 8.2,
+     "book": "Nordic Bet"
+    }
+   },
+   "books": 17,
+   "ou": {
+    "3.5": {
+     "o": 1.895,
+     "u": 1.837
+    },
+    "2.5": {
+     "o": 1.337,
+     "u": 3.22
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.19,
+    "oX": 5.6,
+    "o2": 10.03,
+    "ou": {
+     "3.5": {
+      "o": 1.79,
+      "u": 1.89
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.13,
+    "oX": 6.5,
+    "o2": 9.5,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-celtic-besiktas-jk",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Celtic",
+   "away": "Besiktas JK",
+   "o1": 2.826,
+   "oX": 3.564,
+   "o2": 2.251,
+   "best": {
+    "2": {
+     "odds": 2.38,
+     "book": "LeoVegas (SE)"
+    },
+    "1": {
+     "odds": 2.98,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.79,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.643,
+     "u": 2.198
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.87,
+    "oX": 3.78,
+    "o2": 2.29,
+    "ou": {
+     "3.0": {
+      "o": 1.99,
+      "u": 1.85
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 2.7,
+    "oX": 3.4,
+    "o2": 2.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-celta-vigo-union-saint-gilloise",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Celta Vigo",
+   "away": "Union Saint-Gilloise",
+   "o1": 1.941,
+   "oX": 3.457,
+   "o2": 3.169,
+   "best": {
+    "1": {
+     "odds": 2.11,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 3.65,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 3.81,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.661,
+     "u": 2.157
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.01,
+    "oX": 3.79,
+    "o2": 3.44,
+    "ou": {
+     "2.75": {
+      "o": 1.85,
+      "u": 1.98
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.92,
+    "oX": 3.5,
+    "o2": 3.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-sunderland-dinamo-zagreb",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Sunderland",
+   "away": "Dinamo Zagreb",
+   "o1": 1.429,
+   "oX": 4.501,
+   "o2": 6.41,
+   "best": {
+    "2": {
+     "odds": 7.4,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 1.5,
+     "book": "LeoVegas (SE)"
+    },
+    "X": {
+     "odds": 4.96,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.63,
+     "u": 2.219
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.44,
+    "oX": 4.75,
+    "o2": 6.56,
+    "ou": {
+     "3.0": {
+      "o": 2.01,
+      "u": 1.83
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.38,
+    "oX": 4.3,
+    "o2": 5.5,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-torreense-fc-ararat-armenia",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Torreense",
+   "away": "FC Ararat-Armenia",
+   "o1": 1.72,
+   "oX": 3.689,
+   "o2": 4.473,
+   "best": {
+    "2": {
+     "odds": 5.0,
+     "book": "Nordic Bet"
+    },
+    "1": {
+     "odds": 1.8,
+     "book": "LeoVegas (SE)"
+    },
+    "X": {
+     "odds": 3.96,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.962,
+     "u": 1.808
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.74,
+    "oX": 3.96,
+    "o2": 4.4,
+    "ou": {
+     "2.5": {
+      "o": 2.01,
+      "u": 1.83
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.64,
+    "oX": 3.55,
+    "o2": 4.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-hapoel-be-er-sheva-ofi-crete",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Hapoel Be'er Sheva",
+   "away": "OFI Crete",
+   "o1": 2.052,
+   "oX": 3.522,
+   "o2": 3.249,
+   "best": {
+    "1": {
+     "odds": 2.15,
+     "book": "Nordic Bet"
+    },
+    "2": {
+     "odds": 3.53,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.71,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.662,
+     "u": 2.164
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.1,
+    "oX": 3.65,
+    "o2": 3.32,
+    "ou": {
+     "2.75": {
+      "o": 1.84,
+      "u": 2.0
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.96,
+    "oX": 3.45,
+    "o2": 3.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-sk-sturm-graz-nk-celje",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "SK Sturm Graz",
+   "away": "NK Celje",
+   "o1": 1.574,
+   "oX": 4.13,
+   "o2": 4.939,
+   "best": {
+    "2": {
+     "odds": 5.5,
+     "book": "Nordic Bet"
+    },
+    "1": {
+     "odds": 1.65,
+     "book": "LeoVegas (SE)"
+    },
+    "X": {
+     "odds": 4.46,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 1.596,
+     "u": 2.354
+    },
+    "3.5": {
+     "o": 2.57,
+     "u": 1.432
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 1.57,
+    "oX": 4.39,
+    "o2": 5.2,
+    "ou": {
+     "3.0": {
+      "o": 1.92,
+      "u": 1.92
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.52,
+    "oX": 4.0,
+    "o2": 4.3,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-as-monaco-fc-nordsjaelland",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "AS Monaco",
+   "away": "FC Nordsjaelland",
+   "o1": 1.373,
+   "oX": 3.981,
+   "o2": 5.992,
+   "best": {
+    "1": {
+     "odds": 1.47,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 6.95,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.67,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.11,
+    "o2": 1.13,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-getafe-brighton-and-hove-albion",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Getafe",
+   "away": "Brighton and Hove Albion",
+   "o1": 3.57,
+   "oX": 3.224,
+   "o2": 1.802,
+   "best": {
+    "2": {
+     "odds": 1.91,
+     "book": "Unibet (NL)"
+    },
+    "1": {
+     "odds": 4.15,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.1,
+    "o2": 1.55,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-fc-copenhagen-fc-iberia-1999",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "FC Copenhagen",
+   "away": "FC Iberia 1999",
+   "o1": 1.083,
+   "oX": 7.411,
+   "o2": 18.962,
+   "best": {
+    "1": {
+     "odds": 1.12,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 27.0,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 10.4,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.01,
+    "oX": 1.15,
+    "o2": 1.16,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-fc-lugano-fk-kauno-zalgiris",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "FC Lugano",
+   "away": "FK Kauno Žalgiris",
+   "o1": 1.197,
+   "oX": 5.39,
+   "o2": 9.772,
+   "best": {
+    "1": {
+     "odds": 1.24,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 12.6,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 6.56,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-fc-twente-enschede-pafos-fc",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "FC Twente Enschede",
+   "away": "Pafos FC",
+   "o1": 1.337,
+   "oX": 4.666,
+   "o2": 6.891,
+   "best": {
+    "1": {
+     "odds": 1.43,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 8.95,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 5.39,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.36,
+    "oX": 3.25,
+    "o2": 1.12,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-riga-fc-fk-jablonec",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Riga FC",
+   "away": "FK Jablonec",
+   "o1": 2.067,
+   "oX": 2.976,
+   "o2": 2.866,
+   "best": {
+    "2": {
+     "odds": 3.25,
+     "book": "Nordic Bet"
+    },
+    "1": {
+     "odds": 2.35,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.4,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-universitatea-craiova-kf-egnatia",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Universitatea Craiova",
+   "away": "KF Egnatia",
+   "o1": 1.449,
+   "oX": 3.73,
+   "o2": 5.277,
+   "best": {
+    "2": {
+     "odds": 6.1,
+     "book": "Unibet (NL)"
+    },
+    "1": {
+     "odds": 1.56,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.36,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.13,
+    "oX": 1.11,
+    "o2": 1.12,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-panathinaikos-fc-pfc-cska-sofia",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Panathinaikos FC",
+   "away": "PFC CSKA Sofia",
+   "o1": 1.361,
+   "oX": 3.911,
+   "o2": 5.767,
+   "best": {
+    "1": {
+     "odds": 1.46,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 7.1,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.72,
+     "book": "1xBet"
+    }
+   },
+   "books": 7,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.11,
+    "o2": 1.12,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uecl-sint-truiden-sk-brann",
+   "league": "UECL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Sint Truiden",
+   "away": "SK Brann",
+   "o1": 2.017,
+   "oX": 3.086,
+   "o2": 2.884,
+   "best": {
+    "1": {
+     "odds": 2.25,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 3.25,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 3.52,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "sharp": {
+    "book": "Betfair",
+    "o1": 1.1,
+    "oX": 1.1,
+    "o2": 1.1,
+    "ou": {}
+   }
+  }
+ ],
+ "updatedAt": "2026-10-27T07:48:59Z",
+ "source": "The Odds API (moyenne des bookmakers européens)"
+}
