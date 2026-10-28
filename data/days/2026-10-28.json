@@ -11,7 +11,8 @@
    "away": "Zeleznicar Pancevo",
    "o1": 2.3,
    "oX": 3.4,
-   "o2": 2.9
+   "o2": 2.9,
+   "score": "1-2"
   },
   {
    "id": "srb-radnicki-nis-partizan",
@@ -21,7 +22,8 @@
    "away": "Partizan",
    "o1": 4.0,
    "oX": 3.8,
-   "o2": 1.83
+   "o2": 1.83,
+   "score": "2-3"
   },
   {
    "id": "sa-ac-milan-bologna",
@@ -75,7 +77,8 @@
     "oX": 3.55,
     "o2": 4.5,
     "ou": {}
-   }
+   },
+   "score": "2-4"
   },
   {
    "id": "sa-venezia-inter-milan",
@@ -129,7 +132,8 @@
     "oX": 5.7,
     "o2": 1.28,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "sa-parma-udinese",
@@ -183,7 +187,8 @@
     "oX": 3.05,
     "o2": 2.55,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "swe-if-brommapojkarna-bk-hacken",
@@ -222,7 +227,8 @@
     "oX": 4.2,
     "o2": 1.52,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "swe-degerfors-if-vasteras-sk",
@@ -261,7 +267,8 @@
     "oX": 3.25,
     "o2": 2.5,
     "ou": {}
-   }
+   },
+   "score": "0-3"
   },
   {
    "id": "swe-ifk-goteborg-djurgardens-if",
@@ -300,7 +307,8 @@
     "oX": 3.6,
     "o2": 1.94,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "swe-halmstads-bk-malmo-ff",
@@ -339,7 +347,8 @@
     "oX": 3.85,
     "o2": 1.62,
     "ou": {}
-   }
+   },
+   "score": "0-3"
   },
   {
    "id": "sa-genoa-juventus",
@@ -393,7 +402,8 @@
     "oX": 3.4,
     "o2": 1.66,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "sa-monza-napoli",
@@ -447,7 +457,8 @@
     "oX": 4.0,
     "o2": 1.66,
     "ou": {}
-   }
+   },
+   "score": "1-4"
   }
  ]
 }
