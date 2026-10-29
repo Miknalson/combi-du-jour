@@ -59,7 +59,8 @@
     "oX": 3.95,
     "o2": 4.1,
     "ou": {}
-   }
+   },
+   "score": "5-1"
   },
   {
    "id": "swe-hammarby-if-ik-sirius",
@@ -98,7 +99,8 @@
     "oX": 4.3,
     "o2": 5.0,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "swe-kalmar-ff-gais",
@@ -137,7 +139,8 @@
     "oX": 3.15,
     "o2": 2.65,
     "ou": {}
-   }
+   },
+   "score": "0-1"
   },
   {
    "id": "swe-orgryte-is-mjallby-aif",
@@ -176,7 +179,8 @@
     "oX": 3.3,
     "o2": 2.1,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   },
   {
    "id": "sa-fiorentina-atalanta-bc",
@@ -234,7 +238,8 @@
     "oX": 3.5,
     "o2": 2.7,
     "ou": {}
-   }
+   },
+   "score": "2-2"
   }
  ]
 }
