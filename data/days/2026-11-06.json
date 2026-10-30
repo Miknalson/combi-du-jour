@@ -7,9 +7,9 @@
    "kickoff": "2026-11-06T19:00Z",
    "home": "Willem II",
    "away": "FC Zwolle",
-   "o1": 2.911,
-   "oX": 3.621,
-   "o2": 2.097,
+   "o1": 2.928,
+   "oX": 3.63,
+   "o2": 2.1,
    "best": {
     "2": {
      "odds": 2.32,
@@ -24,7 +24,7 @@
      "book": "Unibet (NL)"
     }
    },
-   "books": 14,
+   "books": 13,
    "ou": {
     "2.5": {
      "o": 1.463,
@@ -49,12 +49,12 @@
    "kickoff": "2026-11-06T19:30Z",
    "home": "Hamburger SV",
    "away": "Borussia Monchengladbach",
-   "o1": 2.316,
-   "oX": 3.627,
-   "o2": 2.722,
+   "o1": 2.312,
+   "oX": 3.652,
+   "o2": 2.699,
    "best": {
     "2": {
-     "odds": 3.05,
+     "odds": 2.9,
      "book": "Unibet (SE)"
     },
     "1": {
@@ -66,12 +66,8 @@
      "book": "1xBet"
     }
    },
-   "books": 18,
+   "books": 17,
    "ou": {
-    "3.0": {
-     "o": 1.885,
-     "u": 1.94
-    },
     "2.5": {
      "o": 1.562,
      "u": 2.399
@@ -79,13 +75,13 @@
    },
    "sharp": {
     "book": "Pinnacle",
-    "o1": 2.48,
-    "oX": 3.67,
-    "o2": 2.68,
+    "o1": 2.4,
+    "oX": 3.74,
+    "o2": 2.74,
     "ou": {
      "3.0": {
-      "o": 1.92,
-      "u": 1.92
+      "o": 1.91,
+      "u": 1.93
      }
     }
    },
@@ -103,29 +99,25 @@
    "kickoff": "2026-11-06T19:45Z",
    "home": "Toulouse",
    "away": "Strasbourg",
-   "o1": 2.01,
-   "oX": 3.713,
-   "o2": 3.278,
+   "o1": 1.999,
+   "oX": 3.712,
+   "o2": 3.3,
    "best": {
     "2": {
      "odds": 3.51,
      "book": "1xBet"
     },
     "1": {
-     "odds": 2.1,
-     "book": "Coolbet"
+     "odds": 2.08,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 4.0,
-     "book": "Coolbet"
+     "odds": 3.98,
+     "book": "1xBet"
     }
    },
-   "books": 18,
+   "books": 17,
    "ou": {
-    "3.0": {
-     "o": 1.95,
-     "u": 1.87
-    },
     "2.5": {
      "o": 1.574,
      "u": 2.367
@@ -145,59 +137,9 @@
    },
    "mine": {
     "book": "Winamax (FR)",
-    "o1": 1.9,
-    "oX": 3.4,
+    "o1": 1.88,
+    "oX": 3.45,
     "o2": 2.9,
-    "ou": {}
-   }
-  },
-  {
-   "id": "liga-sevilla-alaves",
-   "league": "LIGA",
-   "kickoff": "2026-11-06T20:00Z",
-   "home": "Sevilla",
-   "away": "Alavés",
-   "o1": 2.057,
-   "oX": 3.229,
-   "o2": 3.594,
-   "best": {
-    "2": {
-     "odds": 3.87,
-     "book": "1xBet"
-    },
-    "1": {
-     "odds": 2.17,
-     "book": "Unibet (SE)"
-    },
-    "X": {
-     "odds": 3.43,
-     "book": "1xBet"
-    }
-   },
-   "books": 16,
-   "ou": {
-    "2.5": {
-     "o": 2.229,
-     "u": 1.629
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "o1": 2.07,
-    "oX": 3.3,
-    "o2": 3.77,
-    "ou": {
-     "2.25": {
-      "o": 1.95,
-      "u": 1.88
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "o1": 1.9,
-    "oX": 3.0,
-    "o2": 3.2,
     "ou": {}
    }
   },
@@ -207,9 +149,9 @@
    "kickoff": "2026-11-06T20:00Z",
    "home": "Everton",
    "away": "Coventry City",
-   "o1": 1.691,
-   "oX": 3.867,
-   "o2": 4.556,
+   "o1": 1.692,
+   "oX": 3.88,
+   "o2": 4.553,
    "best": {
     "2": {
      "odds": 4.93,
@@ -246,12 +188,62 @@
    "mine": {
     "book": "Winamax (FR)",
     "o1": 1.6,
-    "oX": 3.55,
-    "o2": 3.9,
+    "oX": 3.6,
+    "o2": 3.85,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga-sevilla-alaves",
+   "league": "LIGA",
+   "kickoff": "2026-11-06T20:00Z",
+   "home": "Sevilla",
+   "away": "Alavés",
+   "o1": 2.052,
+   "oX": 3.239,
+   "o2": 3.627,
+   "best": {
+    "2": {
+     "odds": 3.9,
+     "book": "Tipico"
+    },
+    "1": {
+     "odds": 2.17,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.43,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "ou": {
+    "2.5": {
+     "o": 2.229,
+     "u": 1.629
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "o1": 2.07,
+    "oX": 3.3,
+    "o2": 3.77,
+    "ou": {
+     "2.25": {
+      "o": 1.95,
+      "u": 1.88
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "o1": 1.88,
+    "oX": 3.05,
+    "o2": 3.25,
     "ou": {}
    }
   }
  ],
- "updatedAt": "2026-10-29T07:50:10Z",
+ "updatedAt": "2026-10-30T07:51:42Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }
