@@ -85,13 +85,24 @@ def summarise(event, league):
     h2h = {'1': [], 'X': [], '2': []}
     best = {}
     totals = {}
+    references = []  # Exclure notre bookmaker et les exchanges du consensus.
+    reference_times = []
     sharp = {}  # sharp or own book key -> {'1':…, 'X':…, '2':…, 'ou': {line: {'o','u'}}}
     for bk in event.get('bookmakers', []):
+        if bk['key'] not in EXCHANGES and bk['key'] not in MY_BOOKS:
+            for market in bk.get('markets', []):
+                if market['key'] != 'h2h':
+                    continue
+                prices = {'1' if x['name'] == home else '2' if x['name'] == away else 'X': x['price'] for x in market['outcomes']}
+                if all(prices.get(k, 0) > 1 for k in ('1', 'X', '2')):
+                    references.append(prices)
+                    reference_times.append(market.get('last_update') or bk.get('last_update'))
         if bk['key'] in SHARP or bk['key'] in MY_BOOKS:
-            sb = sharp.setdefault(bk['key'], {'title': bk['title'], 'ou': {}})
+            sb = sharp.setdefault(bk['key'], {'title': bk['title'], 'bookKey': bk['key'], 'asOf': bk.get('last_update'), 'ou': {}})
             for mk in bk.get('markets', []):
                 for oc in mk['outcomes']:
                     if mk['key'] == 'h2h':
+                        sb['asOf'] = mk.get('last_update') or bk.get('last_update')
                         sb['1' if oc['name'] == home else '2' if oc['name'] == away else 'X'] = oc['price']
                     elif mk['key'] == 'totals':
                         sb['ou'].setdefault(str(oc.get('point')), {})['o' if oc['name'] == 'Over' else 'u'] = oc['price']
@@ -103,11 +114,12 @@ def summarise(event, league):
                     # exchanges quote before commission, so they don't count as the best bookmaker price
                     if bk['key'] not in EXCHANGES and oc['price'] > best.get(k, {}).get('odds', 0):
                         best[k] = {'odds': oc['price'], 'book': bk['title']}
-            elif mk['key'] == 'totals':
+            elif mk['key'] == 'totals' and bk['key'] not in EXCHANGES and bk['key'] not in MY_BOOKS:
                 for oc in mk['outcomes']:
                     line = str(oc.get('point'))
                     side = 'o' if oc['name'] == 'Over' else 'u'
                     totals.setdefault(line, {'o': [], 'u': []})[side].append(oc['price'])
+    h2h = {k: [r[k] for r in references] for k in ('1', 'X', '2')}
     if not all(h2h.values()):
         return None
     kick = datetime.datetime.fromisoformat(event['commence_time'].replace('Z', '+00:00'))
@@ -118,7 +130,8 @@ def summarise(event, league):
         'home': home, 'away': away,
         'o1': avg(h2h['1']), 'oX': avg(h2h['X']), 'o2': avg(h2h['2']),
         'best': best,
-        'books': len(event.get('bookmakers', [])),
+        'books': len(references),
+        'referenceAt': min(reference_times) if reference_times and all(reference_times) else None,
     }
     ou = {line: {'o': avg(v['o']), 'u': avg(v['u'])} for line, v in totals.items() if v['o'] and v['u'] and len(v['o']) >= 2}
     if ou:
@@ -126,13 +139,13 @@ def summarise(event, league):
     for key in SHARP:
         sb = sharp.get(key)
         if sb and all(k in sb for k in ('1', 'X', '2')):
-            m['sharp'] = {'book': sb['title'], 'o1': sb['1'], 'oX': sb['X'], 'o2': sb['2'],
+            m['sharp'] = {'book': sb['title'], 'bookKey': sb['bookKey'], 'asOf': sb['asOf'], 'o1': sb['1'], 'oX': sb['X'], 'o2': sb['2'],
                           'ou': {l: v for l, v in sb['ou'].items() if 'o' in v and 'u' in v}}
             break
     for key in MY_BOOKS:
         sb = sharp.get(key)
         if sb and all(k in sb for k in ('1', 'X', '2')):
-            m['mine'] = {'book': sb['title'], 'o1': sb['1'], 'oX': sb['X'], 'o2': sb['2'],
+            m['mine'] = {'book': sb['title'], 'bookKey': sb['bookKey'], 'asOf': sb['asOf'], 'o1': sb['1'], 'oX': sb['X'], 'o2': sb['2'],
                          'ou': {l: v for l, v in sb['ou'].items() if 'o' in v and 'u' in v}}
             break
     return m, kick.astimezone(PARIS).strftime('%Y-%m-%d')

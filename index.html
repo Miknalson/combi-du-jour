@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Combiné du Jour</title>
-<meta name="theme-color" content="#17222B">
+<meta name="theme-color" content="#101318">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -12,33 +12,35 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=ios-model-v1">
 </head>
 <body>
 <div class="wrap">
   <header class="masthead">
     <div>
-      <div class="kicker">Combiné quotidien · Championnats et coupes d'Europe</div>
+      <div class="kicker">Analyse des cotes · Football européen</div>
       <h1>Combiné du Jour</h1>
     </div>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
-      <nav class="nav" aria-label="Pages"><a href="./" aria-current="page">Combiné</a><a href="tableau.html">Tableau de bord</a></nav>
+      <nav class="nav" aria-label="Pages"><a href="./" aria-current="page"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M8 8h8M8 12h5M8 16h8"/></svg> Analyse</a><a href="tableau.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 19V5M4 19h16M8 15v-4M13 15V7M18 15v-6"/></svg> Tableau de bord</a></nav>
       <div class="status" id="status">Chargement des matchs…</div>
     </div>
   </header>
 
   <nav class="days" id="days" aria-label="Choisir le jour"></nav>
 
+  <div class="mode-switch" role="group" aria-label="Mode d’analyse"><button type="button" data-strategy="value" aria-pressed="true">Modèle prudent</button><button type="button" data-strategy="combo" aria-pressed="false">Simuler un combiné</button></div>
   <div id="ticketArea"><div class="empty">Chargement des matchs et des cotes…</div></div>
+
+  <section class="model-study" id="modelStudy" aria-label="Résultats de l’étude"></section>
 
   <section id="altsSection" hidden>
     <div class="head"><h2>Autres combinaisons</h2><div class="hint">Les meilleures options suivantes dans la même fourchette de cote.</div></div>
     <div class="alts" id="alts"></div>
   </section>
 
-  <section>
-    <div class="head"><h2>Réglages</h2><div class="hint">Enregistrés sur cet appareil.</div></div>
+  <section id="simulationSettings" hidden>
+    <div class="head"><h2>Réglages de simulation</h2><div class="hint">Enregistrés sur cet appareil.</div></div>
     <div class="settings">
       <div class="field"><label for="oMin">Cote mini</label><input type="number" id="oMin" step="0.1" min="1.5" max="20" value="3"></div>
       <div class="field"><label for="oMax">Cote maxi</label><input type="number" id="oMax" step="0.1" min="1.5" max="50" value="5"></div>
@@ -67,19 +69,23 @@
     </div>
   </section>
 
+  <details class="module-disclosure" id="matchModule"><summary>Explorer les matchs et leurs cotes</summary>
   <section>
-    <div class="head"><h2>Tous les matchs du jour</h2><div class="hint">Probabilités tirées des cotes, marge du bookmaker retirée. Choisis un pari dans « Mon ticket » pour composer ta propre combinaison.</div></div>
+    <div class="head"><h2>Tous les matchs du jour</h2><div class="hint">Exploration des marchés, pas des conseils de mise. Les cotes estimées portent le signe ≈. Ton ticket personnel reste enregistré sur cet appareil.</div></div>
     <div class="tbl-wrap"><table>
-      <thead><tr><th>Heure</th><th>Match</th><th>1 · N · 2</th><th>Cotes</th><th>Meilleur choix</th><th>Mon ticket</th><th>Algo</th></tr></thead>
+      <thead><tr><th>Heure</th><th>Match</th><th>1 · N · 2</th><th>Cotes</th><th>Le plus probable, pas un conseil</th><th>Mon ticket</th><th>Algo</th></tr></thead>
       <tbody id="matchRows"></tbody>
     </table></div>
     <div class="legend"><span><i style="background:var(--home)"></i>Domicile</span><span><i style="background:var(--draw)"></i>Nul</span><span><i style="background:var(--away)"></i>Extérieur</span></div>
   </section>
+  </details>
 
+  <details class="module-disclosure"><summary>Consulter les anciennes simulations</summary>
   <section>
-    <div class="head"><h2>Historique</h2><div class="hint">Le combiné proposé chaque jour passé (enregistré sur cet appareil), ou recalculé avec tes réglages actuels si tu n'avais pas ouvert l'appli ce jour-là.</div></div>
+    <div class="head"><h2>Historique des simulations</h2><div class="hint">Le combiné proposé chaque jour passé (enregistré sur cet appareil), ou recalculé avec tes réglages actuels si tu n'avais pas ouvert l'appli ce jour-là.</div></div>
     <div id="history"></div>
   </section>
+  </details>
 
   <div class="warn">
     <strong>À lire avant de jouer</strong>
@@ -104,7 +110,7 @@
       </div>
     </div>
   </aside>
-  <div class="toast" id="toast" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
   <footer>
     <span id="sourceLine">Source des cotes : —</span>
@@ -112,6 +118,8 @@
   </footer>
 </div>
 
+<script src="model.js"></script>
+<script src="model-view.js"></script>
 <script>
 (function(){
 "use strict";
@@ -126,16 +134,17 @@ var LEAGUES = {
 };
 var TZ = 'Europe/Paris';
 var MIN_BOOKS = 5;
-var state = { days:{}, selected:null, loaded:false };
+var state = { days:{}, selected:null, loaded:false, model:null };
 
 // ---------- per-device settings ----------
 var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
-var settings = Object.assign({oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,mAh:true,mCs:true,mSame:true,algoEst:false,myBook:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var settings = Object.assign({strategy:'value',oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,mAh:true,mCs:true,mSame:true,algoEst:false,myBook:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
 // 24/10/2026: the default moved from 80 % per bet to the most likely ticket overall; reset devices saved under the old default once.
 if(settings.probV !== 2){ settings.minProb = 0.5; settings.probV = 2; store.set('settings', settings); }
+if(settings.strategyV!==1){settings.strategy='value';settings.strategyV=1;store.set('settings',settings);}
 var excluded = store.get('excluded',{});
 
 function bindSettings(){
@@ -336,6 +345,7 @@ function eligible(m){
 // discretised to 1/1000, maximising the summed log-probability. Alternatives drop one match of the best ticket.
 function bestCombos(matches, n, liveFilter){
   var now = Date.now(), groups = [];
+  if(!(settings.oMin>1&&settings.oMax>=settings.oMin&&settings.oMax<=100&&settings.minLegs>=1&&settings.maxLegs>=settings.minLegs))return [];
   // Once the data carries Winamax prices, only bets that can be placed there are considered.
   var onlyMine = settings.myBook && matches.some(function(m){ return m.mine; });
   matches.forEach(function(m){
@@ -455,35 +465,47 @@ function legRow(l){
 }
 
 function renderTicket(dayMatches){
+  document.getElementById('simulationSettings').hidden=settings.strategy!=='combo';
+  if(settings.strategy==='combo')document.getElementById('matchModule').open=true;
+  document.querySelectorAll('[data-strategy]').forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.strategy===settings.strategy));});
+  if(settings.strategy==='combo')return renderLegacyTicket(dayMatches);
+  state.combo=null;
+  document.getElementById('altsSection').hidden=true;
+  var report=state.model,assessment=CombiModel.assess(dayMatches,report),area=document.getElementById('ticketArea');
+  if(assessment.status==='unavailable'){
+    area.innerHTML='<article class="model-card"><span class="model-status">Étude indisponible</span><h2>Aucun pari conseillé</h2><p>Le rapport de validation n’a pas pu être chargé. L’application ne remplace pas cette vérification par un combiné calculé au hasard.</p></article>';return;
+  }
+  var upcoming=dayMatches.filter(function(m){return new Date(m.kickoff).getTime()>Date.now()&&!m.score;}).length;
+  var priced=assessment.observations.filter(function(c){return c.eligible;});
+  area.innerHTML='<article class="model-card"><div class="study-top"><span class="eyebrow">Analyse du '+esc(longDay(state.selected))+'</span><span class="model-status">Modèle en observation</span></div><h2>Pas de pari conseillé pour cette journée.</h2><p>Le modèle ne dispose pas encore d’une règle rentable validée sur des cotes Winamax réelles. Il ne force plus un combiné pour atteindre une cote de 3 à 5.</p><p class="model-note">'+upcoming+' matchs à venir dans les données · '+priced.length+' prix passant les filtres d’observation. Cela ne constitue pas une recommandation de mise.</p><div class="model-quote"><span>Pari simple en priorité</span><span>Cotes réelles uniquement</span><span>Un jour sans pari est possible</span></div></article>';
+}
+
+function renderLegacyTicket(dayMatches){
   var area=document.getElementById('ticketArea'), altsSec=document.getElementById('altsSection');
   var isToday = state.selected===today();
   var combos = bestCombos(dayMatches, 3, true);
+  state.combo=null;
   if(!combos.length){
-    // Safe picks (>= 80 %) pay about 1.15-1.25 each, so a 3+ ticket usually needs 6 to 8 of them.
-    var few = settings.minProb >= 0.7 && settings.maxLegs < 8;
-    area.innerHTML = '<div class="empty">Aucune combinaison entre '+odds(settings.oMin)+' et '+odds(settings.oMax)+' avec des paris à '+pct(settings.minProb)+' ou plus pour '+esc(longDay(state.selected))+'.<br>' +
-      (few ? 'Un pari aussi sûr rapporte environ 1,20 : pour atteindre une cote de '+odds(settings.oMin)+', il faut souvent 6 à 8 matchs.<br><button type="button" class="btn" id="moreLegs" style="margin-top:10px">Autoriser jusqu\'à 8 matchs</button>'
-           : 'Élargis la fourchette de cote, baisse la probabilité mini, ajoute des types de paris ou des championnats.') + '</div>';
-    var more = document.getElementById('moreLegs');
-    if(more) more.addEventListener('click', function(){ settings.maxLegs = 8; document.getElementById('maxLegs').value = '8'; saveRender(); });
-    altsSec.hidden = true; return;
+    area.innerHTML='<div class="empty">Aucun scénario ne respecte tes réglages pour '+esc(longDay(state.selected))+'. Il n’est pas nécessaire d’augmenter le nombre de matchs ou d’abaisser les seuils pour obtenir un ticket.</div>';
+    altsSec.hidden=true;return;
   }
   var c=combos[0], bookP=1/c.odds, n=Math.round(1/c.prob);
   saveProposal(state.selected, c);
   var res = comboResult(c);
   var html = '<article class="ticket"><div class="ticket-head"><div>' +
-    '<div class="kicker">'+(isToday?'Combiné du jour':'Combiné prévu')+' · '+esc(longDay(state.selected))+'</div>' +
+    '<div class="kicker">'+(isToday?'Simulation du jour':'Simulation prévue')+' · '+esc(longDay(state.selected))+'</div>' +
     '<h2>'+c.legs.length+' sélection'+(c.legs.length>1?'s':'')+'</h2>' +
     '<div class="sub">La combinaison la plus probable dont la cote totale tombe entre '+odds(settings.oMin)+' et '+odds(settings.oMax)+'.'+
       (res!=='wait' ? ' <span class="badge '+res+'">'+(res==='won'?'Gagné':'Perdu')+'</span>' : '')+'</div>' +
     '</div><div class="figures">' +
       '<div class="fig"><div class="lab">Cote totale</div><div class="val mono">'+(c.legs.some(function(l){return l.est;})?'≈':'')+odds(c.odds)+'</div></div>' +
-      '<div class="fig"><div class="lab">Probabilité estimée</div><div class="val prob mono">'+pct(c.prob)+'</div><div class="note">environ 1 chance sur '+n+'</div></div>' +
+      '<div class="fig"><div class="lab">Probabilité de marché</div><div class="val prob mono">'+pct(c.prob)+'</div><div class="note">environ 1 chance sur '+n+'</div></div>' +
     '</div></div><ol class="legs">'+c.legs.map(legRow).join('')+'</ol>' +
     '<div class="ticket-foot"><div class="meter" role="img" aria-label="Probabilité estimée '+pct(c.prob)+'"><i style="width:'+(c.prob*100).toFixed(1)+'%;background:var(--accent)"></i></div>' +
     (function(){ var bo=c.legs.reduce(function(a,l){ var b=bestOf(l); return a*(b?b.odds:l.o); },1); return bo>c.odds+0.005 ? '<span>En jouant chaque match chez le bookmaker le mieux placé, la cote monte à <strong class="mono">'+odds(bo)+'</strong>.</span>' : ''; })() +
+    '<span>Espérance théorique aux cotes affichées : <strong>'+((c.odds*c.prob-1)*100).toFixed(1).replace('.',',')+' % par unité misée</strong>. Ce calcul ne prouve pas un rendement réel.</span>' +
     '<span>La cote '+odds(c.odds)+' annonce '+pct(bookP)+' de chances marge comprise. Une fois la marge retirée, l\'estimation tombe à '+pct(c.prob)+'. Sur 10 jours joués avec ce type de combiné, compte environ '+Math.round(c.prob*10)+' tickets gagnants.</span>' +
-    (res==='wait' ? '<div><button type="button" class="btn small" id="playAlgo">Jouer ce combiné</button></div>' : '') +
+    (res==='wait' ? '<div><button type="button" class="btn small" id="playAlgo">Ajouter ce scénario à mon ticket</button></div>' : '') +
     '</div></article>';
   area.innerHTML = html;
   state.combo = c;
@@ -535,7 +557,7 @@ function saveProposal(date, c){
   var now = Date.now(), old = proposals[date];
   if(old && old.legs.some(function(l){ return new Date(l.kickoff).getTime() <= now; })) return;
   if(c.legs.some(function(l){ return new Date(l.match.kickoff).getTime() <= now; })) return;
-  proposals[date] = {odds:c.odds, prob:c.prob, legs:c.legs.map(function(l){ return {matchId:l.match.id, kickoff:l.match.kickoff, code:l.code, label:l.label, o:l.o, p:l.p, est:!!l.est}; })};
+  proposals[date] = {createdAt:new Date(now).toISOString(), modelId:'legacy-market-combo', odds:c.odds, prob:c.prob, legs:c.legs.map(function(l){ return {matchId:l.match.id, kickoff:l.match.kickoff, code:l.code, label:l.label, o:l.o, p:l.p, est:!!l.est}; })};
   var keys = Object.keys(proposals).sort();
   while(keys.length > 60) delete proposals[keys.shift()];
   store.set('proposals', proposals);
@@ -543,7 +565,7 @@ function saveProposal(date, c){
 function proposalCombo(date){
   var pr = proposals[date]; if(!pr) return null;
   var byId = {}; ((state.days[date]||{}).matches||[]).forEach(function(m){ byId[m.id]=m; });
-  return {odds:pr.odds, prob:pr.prob, saved:true, legs:pr.legs.map(function(l){
+  return {odds:pr.odds,prob:pr.prob,saved:true,verified:!!pr.createdAt&&pr.legs.every(function(l){return Date.parse(pr.createdAt)<Date.parse(l.kickoff);}),legs:pr.legs.map(function(l){
     var m = byId[l.matchId] || findMatch(l.matchId) || {id:l.matchId, home:'?', away:'?', kickoff:l.kickoff};
     return {match:m, code:l.code, label:l.label, o:l.o, p:l.p, est:l.est, win:function(h,a){ return settleCode(l.code,h,a); }};
   })};
@@ -554,13 +576,13 @@ function renderHistory(){
     var c = proposalCombo(d) || bestCombos(state.days[d].matches, 1, false)[0];
     if(!c) return;
     var r = comboResult(c);
-    if(r==='won') won++; else if(r==='lost') lost++;
-    rows.push('<tr><td>'+esc(longDay(d))+'<br><span class="status">'+(c.saved?'proposé':'recalculé')+'</span></td><td>'+c.legs.map(function(l){ return esc(l.match.home)+' – '+esc(l.match.away)+' : '+esc(l.label)+legBadge(l); }).join('<br>')+'</td>' +
+    if(c.verified&&r==='won')won++;else if(c.verified&&r==='lost')lost++;
+    rows.push('<tr><td>'+esc(longDay(d))+'<br><span class="status">'+(c.verified?'enregistré avant match':c.saved?'ancien enregistrement non horodaté — exclu du bilan':'recalculé après coup — exclu du bilan')+'</span></td><td>'+c.legs.map(function(l){ return esc(l.match.home)+' – '+esc(l.match.away)+' : '+esc(l.label)+legBadge(l); }).join('<br>')+'</td>' +
       '<td class="num">'+odds(c.odds)+'</td><td class="num">'+pct(c.prob)+'</td><td><span class="badge '+r+'">'+(r==='won'?'Gagné':r==='lost'?'Perdu':'En attente')+'</span></td></tr>');
   });
   var el=document.getElementById('history');
   if(!rows.length){ el.innerHTML='<div class="empty">L\'historique se remplira jour après jour, une fois les scores des matchs passés enregistrés.</div>'; return; }
-  el.innerHTML = '<div class="hist-sum"><div class="fig"><div class="lab">Gagnés</div><div class="val mono" style="font-size:32px;color:var(--good)">'+won+'</div></div>' +
+  el.innerHTML = '<p class="hint">Le bilan ci-dessous compte seulement les propositions enregistrées avant le match, pas les recalculs après coup.</p><div class="hist-sum"><div class="fig"><div class="lab">Gagnés</div><div class="val mono" style="font-size:32px;color:var(--good)">'+won+'</div></div>' +
     '<div class="fig"><div class="lab">Perdus</div><div class="val mono" style="font-size:32px;color:var(--bad)">'+lost+'</div></div>' +
     '<div class="fig"><div class="lab">Taux de réussite</div><div class="val mono" style="font-size:32px">'+(won+lost?pct(won/(won+lost)):'—')+'</div></div></div>' +
     '<div class="tbl-wrap"><table><thead><tr><th>Jour</th><th>Sélections</th><th>Cote</th><th>Prob.</th><th>Résultat</th></tr></thead><tbody>'+rows.join('')+'</tbody></table></div>';
@@ -578,7 +600,7 @@ function render(){
   if(!state.loaded) return;
   var t=today(), dates=sortedDates().filter(function(d){ return d>=t; });
   if(!state.selected || dates.indexOf(state.selected)<0) state.selected = dates[0] || null;
-  renderDays(); renderLeagues(); renderHistory();
+  renderDays();renderLeagues();renderHistory();renderModelStudy('modelStudy',state.model);
   if(!state.selected){
     document.getElementById('ticketArea').innerHTML='<div class="empty">Pas encore de matchs à venir. Les cotes sont mises à jour chaque matin.</div>';
     document.getElementById('altsSection').hidden=true;
@@ -715,13 +737,15 @@ document.getElementById('leagueChecks').addEventListener('change', function(e){
   if(!e.target.checked && i<0) settings.offLeagues.push(k);
   saveRender();
 });
+document.querySelectorAll('[data-strategy]').forEach(function(button){button.addEventListener('click',function(){settings.strategy=this.dataset.strategy;saveRender();});});
 bindSettings();
 
 // ---------- data ----------
 (async function(){
   var statusEl=document.getElementById('status');
   try{
-    var idx = await (await fetch('data/index.json',{cache:'no-store'})).json();
+    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('index');return r.json();}),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
+    var idx=pair[0];state.model=pair[1];
     var cutoff = parisDate(new Date(Date.now()-30*86400000));
     var dates = (idx.dates||[]).filter(function(d){ return d>=cutoff; });
     var docs = await Promise.all(dates.map(function(d){
