@@ -28,7 +28,7 @@ jobs:
       - name: Relever les cotes Winamax France
         continue-on-error: true
         env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/update_sports.py --max-credits 6
       - name: Publier les relevés
         if: always()
