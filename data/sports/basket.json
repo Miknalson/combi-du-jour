@@ -1,7 +1,7 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-10-31T04:13:01.903769+00:00",
+  "updatedAt": "2026-10-31T04:33:41.731995+00:00",
   "status": "ok",
   "matches": [
     {
@@ -13,10 +13,43 @@
       "away": "Portland Trail Blazers",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:12:23Z",
+      "asOf": "2026-10-31T04:33:27Z",
       "market": "h2h",
       "o1": 2.5,
-      "o2": 1.33
+      "o2": 1.33,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T04:33:27Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Utah Jazz",
+              "odds": 2.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Portland Trail Blazers",
+              "odds": 1.33,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "basketball_nba",
+      "eventId": "d47417c3b1a2cd427cce74c9d00f1046",
+      "availableMarkets": [
+        "h2h"
+      ]
     },
     {
       "id": "basket-067d97a124c10ea2d206546384500c5e",
@@ -27,10 +60,43 @@
       "away": "Philadelphia 76ers",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:12:23Z",
+      "asOf": "2026-10-31T04:33:27Z",
       "market": "h2h",
       "o1": 1.78,
-      "o2": 1.68
+      "o2": 1.68,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T04:33:27Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Charlotte Hornets",
+              "odds": 1.78,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Philadelphia 76ers",
+              "odds": 1.68,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "basketball_nba",
+      "eventId": "067d97a124c10ea2d206546384500c5e",
+      "availableMarkets": [
+        "h2h"
+      ]
     },
     {
       "id": "basket-77270837bc694d198c10f42937690d75",
@@ -41,10 +107,43 @@
       "away": "Atlanta Hawks",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:12:23Z",
+      "asOf": "2026-10-31T04:33:27Z",
       "market": "h2h",
       "o1": 2.1,
-      "o2": 1.47
+      "o2": 1.47,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T04:33:27Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire New Orleans Pelicans",
+              "odds": 2.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Atlanta Hawks",
+              "odds": 1.47,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "basketball_nba",
+      "eventId": "77270837bc694d198c10f42937690d75",
+      "availableMarkets": [
+        "h2h"
+      ]
     },
     {
       "id": "basket-6d7e1e0af6d568f4435d35a1763a3622",
@@ -55,10 +154,40 @@
       "away": "Cleveland Cavaliers",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:12:23Z",
+      "asOf": "2026-10-31T04:33:27Z",
       "market": "h2h",
       "o1": 3.1,
-      "o2": 1.2
+      "o2": 1.2,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T04:33:27Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Milwaukee Bucks",
+              "odds": 3.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Cleveland Cavaliers",
+              "odds": 1.2,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "basketball_nba",
+      "eventId": "6d7e1e0af6d568f4435d35a1763a3622"
     },
     {
       "id": "basket-863ae1092be42c6b563b2c4f099a3eb3",
@@ -69,10 +198,40 @@
       "away": "Sacramento Kings",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:12:23Z",
+      "asOf": "2026-10-31T04:33:27Z",
       "market": "h2h",
       "o1": 1.14,
-      "o2": 3.6
+      "o2": 3.6,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T04:33:27Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Memphis Grizzlies",
+              "odds": 1.14,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Sacramento Kings",
+              "odds": 3.6,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "basketball_nba",
+      "eventId": "863ae1092be42c6b563b2c4f099a3eb3"
     },
     {
       "id": "basket-06a03fb0ce0f81a970c6000fb71fdc6d",
@@ -83,10 +242,40 @@
       "away": "Minnesota Timberwolves",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:12:23Z",
+      "asOf": "2026-10-31T04:33:27Z",
       "market": "h2h",
       "o1": 1.1,
-      "o2": 4.0
+      "o2": 4.0,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T04:33:27Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire San Antonio Spurs",
+              "odds": 1.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Minnesota Timberwolves",
+              "odds": 4.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "basketball_nba",
+      "eventId": "06a03fb0ce0f81a970c6000fb71fdc6d"
     },
     {
       "id": "basket-c30d3bdf126e98ced5b9389db8617926",
@@ -97,13 +286,43 @@
       "away": "Oklahoma City Thunder",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:12:23Z",
+      "asOf": "2026-10-31T04:33:27Z",
       "market": "h2h",
       "o1": 1.54,
-      "o2": 1.98
+      "o2": 1.98,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T04:33:27Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Houston Rockets",
+              "odds": 1.54,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Oklahoma City Thunder",
+              "odds": 1.98,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "basketball_nba",
+      "eventId": "c30d3bdf126e98ced5b9389db8617926"
     }
   ],
-  "leaguesQueried": 4,
+  "leaguesQueried": 3,
   "leaguesAvailable": 6,
   "partial": true
 }
