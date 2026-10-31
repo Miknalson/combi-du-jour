@@ -1,0 +1,60 @@
+name: Cotes Winamax Basket et Tennis
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_sports.py'
+      - '.github/workflows/cotes-sports.yml'
+  schedule:
+    - cron: '5 6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: cotes-sports
+  cancel-in-progress: false
+jobs:
+  actualiser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vérifier la provenance des cotes
+        run: python -m unittest discover -s tests -p 'test_sports.py'
+      - name: Relever les cotes Winamax France
+        continue-on-error: true
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/update_sports.py --max-credits 6
+      - name: Publier les relevés
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/sports/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Cotes Winamax basket et tennis"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Préparer le site statique
+        run: |
+          mkdir -p /tmp/combi-sports-site
+          cp index.html tableau.html sports.html style.css model.js model-view.js sports.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp -r data icons /tmp/combi-sports-site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: /tmp/combi-sports-site
+  publier:
+    needs: actualiser
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@v4

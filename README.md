@@ -22,3 +22,32 @@ Les données sont mises à jour chaque matin par une tâche programmée de Claud
 Les probabilités sont tirées des cotes 1N2 avec la méthode « puissance », qui retire la marge du bookmaker. Les paris sur les buts (plus/moins 0,5 à 4,5) viennent d'une loi de Poisson ajustée sur ces mêmes cotes. Les cotes de double chance et de buts sont estimées (≈). Les matchs sont supposés indépendants.
 
 Une cote de 3 à 5 correspond à environ 20 à 33 % de chances de gain : la plupart des jours, le combiné sera perdant. Joue uniquement ce que tu acceptes de perdre.
+
+## Basket et Tennis — Winamax France
+
+Les onglets **Basket** et **Tennis** ouvrent `sports.html?sport=basket` et
+`sports.html?sport=tennis`. Ils affichent les marchés vainqueur à deux issues fournis
+par **Winamax France (`winamax_fr`) uniquement**, sans cote estimée ni remplacement
+par un autre bookmaker. Le modèle football et ses probabilités ne sont pas utilisés.
+Les rencontres commencées et les relevés de plus de 24 h sont masqués ; après une
+heure, un relevé est explicitement signalé comme ancien. Les règles de prolongations,
+d’abandon ou de forfait restent celles du marché chez Winamax.
+
+Le workflow `.github/workflows/cotes-sports.yml` relève les cotes chaque matin à
+06:05 UTC, lors d’une modification du collecteur ou sur lancement manuel. Il utilise
+le secret GitHub **`ODDS_API_KEY`**, avec un accès The Odds API incluant Winamax France.
+Aucune clé n’est publiée dans le navigateur. Sans ce secret, l’onglet explique que la
+connexion n’est pas activée ; aucune cote n’est inventée. Les données sont dans
+`data/sports/basket.json` et `data/sports/tennis.json`.
+
+Le collecteur découvre les compétitions basket et les tournois ATP/WTA actifs
+proposés par la source, consulte les événements dans les sept prochains jours,
+puis répartit au maximum six crédits entre les deux sports (en alternance), dans
+la limite de la part quotidienne du quota mensuel restant. La couverture peut être
+partielle et est indiquée comme telle. Le quota est partagé avec le collecteur football.
+Un rafraîchissement du navigateur n’appelle pas l’API payante.
+
+```sh
+python -m unittest discover -s tests -p 'test_sports.py'
+python scripts/update_sports.py --max-credits 6
+```
