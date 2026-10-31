@@ -1,56 +1,9 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-10-31T04:33:41.731995+00:00",
+  "updatedAt": "2026-10-31T12:13:05.912556+00:00",
   "status": "ok",
   "matches": [
-    {
-      "id": "tennis-e1ebafbb26d375e24280b3c08f4c384d",
-      "sport": "tennis",
-      "league": "WTA Pan Pacific Open",
-      "kickoff": "2026-10-31T04:40:00Z",
-      "home": "Diana Shnaider",
-      "away": "Mia Pohánková",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-10-31T04:33:04Z",
-      "market": "h2h",
-      "o1": 1.34,
-      "o2": 3.05,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T04:33:04Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Diana Shnaider",
-              "odds": 1.34,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Mia Pohánková",
-              "odds": 3.05,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_wta_pan_pacific_open",
-      "eventId": "e1ebafbb26d375e24280b3c08f4c384d",
-      "availableMarkets": [
-        "h2h"
-      ]
-    },
     {
       "id": "tennis-5a856de2f4f6df9ea205100c2c304254",
       "sport": "tennis",
@@ -60,7 +13,7 @@
       "away": "Taylor Fritz",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:32:42Z",
+      "asOf": "2026-10-31T12:12:29Z",
       "market": "h2h",
       "o1": 3.35,
       "o2": 1.29,
@@ -73,7 +26,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T04:32:42Z",
+          "asOf": "2026-10-31T12:12:29Z",
           "outcomes": [
             {
               "code": "1",
@@ -107,10 +60,10 @@
       "away": "Carlos Alcaraz",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:33:26Z",
+      "asOf": "2026-10-31T12:12:07Z",
       "market": "h2h",
-      "o1": 2.75,
-      "o2": 1.41,
+      "o1": 2.8,
+      "o2": 1.4,
       "markets": [
         {
           "id": "h2h||None",
@@ -120,20 +73,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T04:33:26Z",
+          "asOf": "2026-10-31T12:12:07Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Daniil Medvedev",
-              "odds": 2.75,
+              "odds": 2.8,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Carlos Alcaraz",
-              "odds": 1.41,
+              "odds": 1.4,
               "participant": ""
             }
           ]
@@ -154,10 +107,10 @@
       "away": "Alex de Minaur",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:33:26Z",
+      "asOf": "2026-10-31T12:12:07Z",
       "market": "h2h",
-      "o1": 1.33,
-      "o2": 2.85,
+      "o1": 1.35,
+      "o2": 2.95,
       "markets": [
         {
           "id": "h2h||None",
@@ -167,20 +120,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T04:33:26Z",
+          "asOf": "2026-10-31T12:12:07Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Alexander Zverev",
-              "odds": 1.33,
+              "odds": 1.35,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Alex de Minaur",
-              "odds": 2.85,
+              "odds": 2.95,
               "participant": ""
             }
           ]
@@ -201,10 +154,10 @@
       "away": "Jan-Lennard Struff",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T04:32:42Z",
+      "asOf": "2026-10-31T12:12:29Z",
       "market": "h2h",
-      "o1": 1.4,
-      "o2": 2.55,
+      "o1": 1.43,
+      "o2": 2.65,
       "markets": [
         {
           "id": "h2h||None",
@@ -214,20 +167,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T04:32:42Z",
+          "asOf": "2026-10-31T12:12:29Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Jiri Lehecka",
-              "odds": 1.4,
+              "odds": 1.43,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Jan-Lennard Struff",
-              "odds": 2.55,
+              "odds": 2.65,
               "participant": ""
             }
           ]
@@ -241,6 +194,6 @@
     }
   ],
   "leaguesQueried": 3,
-  "leaguesAvailable": 3,
-  "partial": false
+  "leaguesAvailable": 4,
+  "partial": true
 }
