@@ -35,7 +35,7 @@ d’abandon ou de forfait restent celles du marché chez Winamax.
 
 Le workflow `.github/workflows/cotes-sports.yml` relève les cotes chaque matin à
 06:05 UTC, lors d’une modification du collecteur ou sur lancement manuel. Il utilise
-le secret GitHub **`ODDS_API`** (ou `ODDS_API_KEY` en secours), avec un accès The Odds API incluant Winamax France.
+le secret GitHub **`ODDS_API_`** (ou `ODDS_API` / `ODDS_API_KEY` en secours), avec un accès The Odds API incluant Winamax France.
 Aucune clé n’est publiée dans le navigateur. Sans ce secret, l’onglet explique que la
 connexion n’est pas activée ; aucune cote n’est inventée. Les données sont dans
 `data/sports/basket.json` et `data/sports/tennis.json`.
