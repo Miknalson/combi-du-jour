@@ -43,7 +43,7 @@ jobs:
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp index.html tableau.html sports.html style.css model.js model-view.js sports.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp index.html tableau.html sports.html style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

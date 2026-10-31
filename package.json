@@ -2,7 +2,7 @@
   "name": "combi-du-jour",
   "private": true,
   "scripts": {
-    "test": "node tests/model.test.cjs",
+    "test": "node tests/model.test.cjs && node tests/sports-combos.test.cjs",
     "test:browser": "node tests/browser-smoke.cjs"
   },
   "devDependencies": {"playwright-core": "1.62.1"}

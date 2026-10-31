@@ -51,3 +51,27 @@ Un rafraîchissement du navigateur n’appelle pas l’API payante.
 python -m unittest discover -s tests -p 'test_sports.py'
 python scripts/update_sports.py --max-credits 6
 ```
+
+### Simuler des combinés Basket / Tennis
+
+Dans chaque onglet, **Composer un combiné** permet de choisir le sport courant ou
+**Basket + Tennis**, un jour (ou tous), 2 à 4 rencontres et une fourchette de cote
+(3 à 5 par défaut). Jusqu’à six variantes sont calculées parmi les vingt prochaines
+rencontres filtrées. Elles utilisent uniquement les cotes Winamax relevées depuis
+moins de 24 h, et jamais les deux côtés du même événement. Le mode mixte exige au
+moins une rencontre de chaque sport. Aucune combinaison hors fourchette n’est forcée.
+
+Ce sont des **simulations**, classées par proximité de la cote cible, sans probabilité
+de gain estimée ni rentabilité démontrée. Une cote ancienne reste signalée. Choisir
+une variante ouvre un ticket : il faut confirmer les cotes chez Winamax et saisir
+une mise avant l’enregistrement **local** dans le tableau de bord (`cdj.bets`). Aucun
+pari n’est transmis à un bookmaker. Les prix changés et matchs commencés bloquent
+l’enregistrement. Les données déjà enregistrées sont conservées.
+
+Les résultats Basket/Tennis sont à renseigner manuellement après règlement chez
+Winamax. Les règles football (score réglementaire) ne leur sont pas appliquées.
+Les annulations et remboursements ne sont pas calculés automatiquement. Sans modèle
+validé, leur probabilité apparaît comme « Non estimée », jamais comme 0 %.
+
+Tests : `npm test`, puis, avec un serveur local sur le port 8001,
+`node tests/sports-combos-browser.cjs` et `node tests/sports-browser.cjs`.
