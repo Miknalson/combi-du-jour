@@ -33,6 +33,22 @@ class SportsTests(unittest.TestCase):
             if kind=='draw':e['bookmakers'][0]['markets'][0]['outcomes'].append({'name':'Draw','price':3})
             if kind=='nan':e['bookmakers'][0]['markets'][0]['outcomes'][0]['price']=float('nan')
             self.assertIsNone(s.extract(e,'tennis','ATP',self.now),kind)
+    def test_paired_totals_handicaps_and_sets_have_actual_prices(self):
+        import copy
+        e=copy.deepcopy(self.event)
+        e['bookmakers'][0]['markets'] += [
+            {'key':'totals','outcomes':[{'name':'Over','point':22.5,'price':1.9},{'name':'Under','point':22.5,'price':1.8}]},
+            {'key':'spreads','outcomes':[{'name':'A','point':-3.5,'price':1.9},{'name':'B','point':3.5,'price':1.8}]},
+            {'key':'player_sets_won','outcomes':[{'name':'Over','description':'B','point':.5,'price':1.3},{'name':'Under','description':'B','point':.5,'price':3.2}]}]
+        groups=s.market_groups(e,'tennis',self.now)
+        self.assertEqual({g['family'] for g in groups},{'h2h','totals','spreads','sets'})
+        self.assertEqual(next(g for g in groups if g['family']=='sets')['outcomes'][0]['odds'],1.3)
+        self.assertTrue(all(g['bookKey']=='winamax_fr' for g in groups))
+        e['bookmakers'][0]['markets'][-1]['outcomes'].pop()
+        self.assertNotIn('sets',{g['family'] for g in s.market_groups(e,'tennis',self.now)})
+    def test_integer_lines_are_not_given_false_push_free_probabilities(self):
+        self.event['bookmakers'][0]['markets'].append({'key':'totals','outcomes':[{'name':'Over','point':220,'price':1.9},{'name':'Under','point':220,'price':1.9}]})
+        self.assertNotIn('totals',{g['family'] for g in s.market_groups(self.event,'basket',self.now)})
     def test_missing_key_creates_honest_empty_data(self):
         with tempfile.TemporaryDirectory() as root,patch.object(s,'ROOT',Path(root)),patch.dict(os.environ,{'ODDS_API_KEY':''}),patch.object(sys,'argv',['update_sports.py']),patch.object(s.api,'get') as get:
             s.main();get.assert_not_called()

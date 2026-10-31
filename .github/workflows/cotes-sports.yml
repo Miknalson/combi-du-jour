@@ -24,12 +24,14 @@ jobs:
         with:
           python-version: '3.12'
       - name: Vérifier la provenance des cotes
-        run: python -m unittest discover -s tests -p 'test_sports.py'
+        run: |
+          python -m unittest discover -s tests -p 'test_sports.py'
+          node tests/sports-combos.test.cjs
       - name: Relever les cotes Winamax France
         continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
-        run: python scripts/update_sports.py --max-credits 6
+        run: python scripts/update_sports.py --max-credits 18
       - name: Publier les relevés
         if: always()
         run: |

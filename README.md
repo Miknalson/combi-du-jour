@@ -25,53 +25,83 @@ Une cote de 3 à 5 correspond à environ 20 à 33 % de chances de gain : la plup
 
 ## Basket et Tennis — Winamax France
 
-Les onglets **Basket** et **Tennis** ouvrent `sports.html?sport=basket` et
-`sports.html?sport=tennis`. Ils affichent les marchés vainqueur à deux issues fournis
-par **Winamax France (`winamax_fr`) uniquement**, sans cote estimée ni remplacement
-par un autre bookmaker. Le modèle football et ses probabilités ne sont pas utilisés.
-Les rencontres commencées et les relevés de plus de 24 h sont masqués ; après une
-heure, un relevé est explicitement signalé comme ancien. Les règles de prolongations,
-d’abandon ou de forfait restent celles du marché chez Winamax.
+Les onglets Basket/Tennis proposent des combinés du sport courant ou mixtes (2 à 4
+rencontres), avec une fourchette de cote, un seuil de probabilité et des familles de
+marchés : vainqueur, total +/−, handicap, au moins un set au tennis, total équipe au
+basket. Les familles sans paire de cotes complète ne donnent aucune sélection.
 
-Le workflow `.github/workflows/cotes-sports.yml` relève les cotes chaque matin à
-06:05 UTC, lors d’une modification du collecteur ou sur lancement manuel. Il utilise
-le secret GitHub **`ODDS_API_`** (ou `ODDS_API` / `ODDS_API_KEY` en secours), avec un accès The Odds API incluant Winamax France.
-Aucune clé n’est publiée dans le navigateur. Sans ce secret, l’onglet explique que la
-connexion n’est pas activée ; aucune cote n’est inventée. Les données sont dans
-`data/sports/basket.json` et `data/sports/tennis.json`.
+### Correction de cohérence et probabilités
 
-Le collecteur découvre les compétitions basket et les tournois ATP/WTA actifs
-proposés par la source, consulte les événements dans les sept prochains jours,
-puis répartit au maximum six crédits entre les deux sports (en alternance), dans
-la limite de la part quotidienne du quota mensuel restant. La couverture peut être
-partielle et est indiquée comme telle. Le quota est partagé avec le collecteur football.
-Un rafraîchissement du navigateur n’appelle pas l’API payante.
+Les anciens combinés exploraient les deux vainqueurs pour approcher une cote cible,
+ce qui pouvait inverser Zverev en changeant seulement le nombre de matchs. Désormais :
+
+- le favori du marché vainqueur est fixé **avant** le choix du nombre de matchs et de
+  la cote cible ; l’adversaire n’est pas ajouté pour remplir la fourchette ;
+- les handicaps automatiques gardent le côté du favori ; les totaux gardent une
+  direction stable par famille/participant ; gagner un set n’équivaut pas à gagner
+  le match, donc les paris « au moins un set » peuvent concerner les deux joueurs ;
+- les probabilités binaires sont déduites des deux cotes Winamax par la méthode
+  puissance : trouver k tel que `(1/oA)^k + (1/oB)^k = 1` ;
+- ces **probabilités de marché hors marge** ne sont pas des prédictions indépendantes
+  fondées sur les résultats des joueurs et leur calibration n’est pas démontrée ;
+- chaque combiné multiplie les probabilités en supposant les rencontres indépendantes,
+  prend une seule sélection par match et évite de répéter le même joueur/équipe ;
+- classement par probabilité indicative décroissante, puis proximité de la cote cible.
+  Recherche bornée aux 12 prochains matchs filtrés et aux meilleures options par famille,
+  au maximum 6 options par match et 6 combinés affichés. Aucune combinaison n’est forcée.
+
+Les lignes entières pouvant entraîner un remboursement ne sont pas estimées comme
+des issues binaires sans nul. Les marchés collectés sont des lignes en demi-point,
+demi-jeu ou, pour gagner au moins un set, la ligne 0,5 set.
+
+### Provenance des marchés
+
+Le collecteur utilise exclusivement **Winamax France (`winamax_fr`)**. Les cotes
+vainqueur, handicaps et totaux viennent des marchés h2h/spreads/totals ; au tennis,
+les handicaps/totaux standards sont exprimés en jeux, au basket en points. Les marchés
+supplémentaires ne sont demandés que s’ils sont annoncés dans la liste des marchés
+Winamax de l’événement (notamment player_sets_won, team_totals et lignes alternatives).
+Une paire incomplète, d’un autre bookmaker, non horodatée ou incohérente est rejetée.
+Un échec du relevé optionnel n’efface pas les cotes standards.
+
+**La couverture de The Odds API ne comprend pas forcément tous les paris de l’app
+Winamax.** Chaque rencontre indique les familles réellement collectées. Pour un
+marché manquant, une saisie locale permet de recopier **les deux côtés du même marché**
+chez Winamax. Elle est marquée « Saisie personnelle Winamax · non vérifiée par l’API »,
+utilise la même méthode de probabilité et peut être retirée. Aucune cote n’est
+inventée à partir d’un autre marché, notamment pour « gagner au moins un set ».
+Les saisies personnelles sont conservées dans `cdj.sportsMarkets` sur cet appareil.
+
+Le workflow `.github/workflows/cotes-sports.yml` tourne à 06:05 UTC chaque matin,
+sur modification du collecteur/workflow ou manuellement. Il utilise le secret
+**ODDS_API_** (ODDS_API ou ODDS_API_KEY en secours). Aucun secret n’est envoyé au navigateur.
+Les compétitions actives et les sept prochains jours sont découverts automatiquement.
+Maximum 18 crédits par passe, plafonnés par la part quotidienne du quota mensuel
+restant, partagés entre les deux sports ; jusqu’à deux crédits sont réservés aux
+marchés supplémentaires, dont la disponibilité est examinée sur huit événements au
+plus. La couverture partielle est signalée. Ce quota est partagé avec le football.
+
+### Ticket et suivi
+
+Les matchs commencés et relevés de plus de 24 h sont masqués ; après une heure, la
+cote est signalée comme ancienne. Une fois les cotes vérifiées chez Winamax et la
+mise saisie, le ticket est enregistré localement dans `cdj.bets`, avec la provenance,
+le marché, les prix, les probabilités indicatives et leur méthode. Les anciens tickets
+sont conservés, sans leur attribuer rétroactivement une probabilité.
+
+Aucun pari n’est transmis au bookmaker. Les changements de cote/probabilité ou le
+début du match bloquent l’enregistrement d’une ancienne sélection. Les résultats
+Basket/Tennis restent à renseigner manuellement après règlement Winamax ; les règles
+football ne leur sont pas appliquées. Les abandons, annulations et remboursements ne
+sont pas calculés automatiquement. Aucune rentabilité future n’est démontrée.
+
+### Vérification
 
 ```sh
+npm test
 python -m unittest discover -s tests -p 'test_sports.py'
-python scripts/update_sports.py --max-credits 6
+# Avec un serveur local sur le port 8001 :
+node tests/sports-browser.cjs
+node tests/sports-combos-browser.cjs
+node tests/sports-markets-browser.cjs
 ```
-
-### Simuler des combinés Basket / Tennis
-
-Dans chaque onglet, **Composer un combiné** permet de choisir le sport courant ou
-**Basket + Tennis**, un jour (ou tous), 2 à 4 rencontres et une fourchette de cote
-(3 à 5 par défaut). Jusqu’à six variantes sont calculées parmi les vingt prochaines
-rencontres filtrées. Elles utilisent uniquement les cotes Winamax relevées depuis
-moins de 24 h, et jamais les deux côtés du même événement. Le mode mixte exige au
-moins une rencontre de chaque sport. Aucune combinaison hors fourchette n’est forcée.
-
-Ce sont des **simulations**, classées par proximité de la cote cible, sans probabilité
-de gain estimée ni rentabilité démontrée. Une cote ancienne reste signalée. Choisir
-une variante ouvre un ticket : il faut confirmer les cotes chez Winamax et saisir
-une mise avant l’enregistrement **local** dans le tableau de bord (`cdj.bets`). Aucun
-pari n’est transmis à un bookmaker. Les prix changés et matchs commencés bloquent
-l’enregistrement. Les données déjà enregistrées sont conservées.
-
-Les résultats Basket/Tennis sont à renseigner manuellement après règlement chez
-Winamax. Les règles football (score réglementaire) ne leur sont pas appliquées.
-Les annulations et remboursements ne sont pas calculés automatiquement. Sans modèle
-validé, leur probabilité apparaît comme « Non estimée », jamais comme 0 %.
-
-Tests : `npm test`, puis, avec un serveur local sur le port 8001,
-`node tests/sports-combos-browser.cjs` et `node tests/sports-browser.cjs`.
