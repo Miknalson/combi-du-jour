@@ -1,163 +1,22 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-10-31T12:13:05.912556+00:00",
+  "updatedAt": "2026-11-01T13:11:04.547735+00:00",
   "status": "ok",
   "matches": [
     {
-      "id": "tennis-5a856de2f4f6df9ea205100c2c304254",
+      "id": "tennis-45420e4ccaa96290ca605d63fe10dcc6",
       "sport": "tennis",
       "league": "ATP Swiss Indoors Basel",
-      "kickoff": "2026-10-31T14:00:00Z",
-      "home": "Valentin Vacherot",
-      "away": "Taylor Fritz",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-10-31T12:12:29Z",
-      "market": "h2h",
-      "o1": 3.35,
-      "o2": 1.29,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T12:12:29Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Valentin Vacherot",
-              "odds": 3.35,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Taylor Fritz",
-              "odds": 1.29,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_swiss_indoors",
-      "eventId": "5a856de2f4f6df9ea205100c2c304254",
-      "availableMarkets": [
-        "h2h"
-      ]
-    },
-    {
-      "id": "tennis-3f0addea74d69db2f1b7595d4fb2b1af",
-      "sport": "tennis",
-      "league": "ATP Vienna Open",
-      "kickoff": "2026-10-31T14:00:00Z",
-      "home": "Daniil Medvedev",
-      "away": "Carlos Alcaraz",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-10-31T12:12:07Z",
-      "market": "h2h",
-      "o1": 2.8,
-      "o2": 1.4,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T12:12:07Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Daniil Medvedev",
-              "odds": 2.8,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Carlos Alcaraz",
-              "odds": 1.4,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_vienna_open",
-      "eventId": "3f0addea74d69db2f1b7595d4fb2b1af",
-      "availableMarkets": [
-        "h2h"
-      ]
-    },
-    {
-      "id": "tennis-e29817fd8c010bb31e6c920398185da1",
-      "sport": "tennis",
-      "league": "ATP Vienna Open",
-      "kickoff": "2026-10-31T15:30:00Z",
-      "home": "Alexander Zverev",
-      "away": "Alex de Minaur",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-10-31T12:12:07Z",
-      "market": "h2h",
-      "o1": 1.35,
-      "o2": 2.95,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T12:12:07Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Alexander Zverev",
-              "odds": 1.35,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Alex de Minaur",
-              "odds": 2.95,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_vienna_open",
-      "eventId": "e29817fd8c010bb31e6c920398185da1",
-      "availableMarkets": [
-        "h2h"
-      ]
-    },
-    {
-      "id": "tennis-552fda4930d6ed5d9fef41d162da947d",
-      "sport": "tennis",
-      "league": "ATP Swiss Indoors Basel",
-      "kickoff": "2026-10-31T16:00:00Z",
+      "kickoff": "2026-11-01T14:30:00Z",
       "home": "Jiri Lehecka",
-      "away": "Jan-Lennard Struff",
+      "away": "Valentin Vacherot",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-10-31T12:12:29Z",
+      "asOf": "2026-11-01T13:10:23Z",
       "market": "h2h",
-      "o1": 1.43,
-      "o2": 2.65,
+      "o1": 1.48,
+      "o2": 2.5,
       "markets": [
         {
           "id": "h2h||None",
@@ -167,33 +26,33 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-10-31T12:12:29Z",
+          "asOf": "2026-11-01T13:10:23Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Jiri Lehecka",
-              "odds": 1.43,
+              "odds": 1.48,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Jan-Lennard Struff",
-              "odds": 2.65,
+              "label": "Victoire Valentin Vacherot",
+              "odds": 2.5,
               "participant": ""
             }
           ]
         }
       ],
       "sportKey": "tennis_atp_swiss_indoors",
-      "eventId": "552fda4930d6ed5d9fef41d162da947d",
+      "eventId": "45420e4ccaa96290ca605d63fe10dcc6",
       "availableMarkets": [
         "h2h"
       ]
     }
   ],
-  "leaguesQueried": 3,
-  "leaguesAvailable": 4,
-  "partial": true
+  "leaguesQueried": 2,
+  "leaguesAvailable": 2,
+  "partial": false
 }
