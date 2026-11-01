@@ -1,7 +1,7 @@
 {
  "date": "2026-11-04",
- "updatedAt": "2026-10-31T07:48:32Z",
- "source": "The Odds API (moyenne des bookmakers européens)",
+ "updatedAt": "2026-11-01T07:52:16Z",
+ "source": "The Odds API (moyenne des bookmakers européens) + oddsportal",
  "matches": [
   {
    "id": "uel-rennes-olympiakos-piraeus",
@@ -181,6 +181,16 @@
    }
   },
   {
+   "id": "bel-kv-kortrijk-kv-mechelen",
+   "league": "BEL",
+   "kickoff": "2026-11-04T19:30Z",
+   "home": "KV Kortrijk",
+   "away": "KV Mechelen",
+   "o1": 2.5,
+   "oX": 3.4,
+   "o2": 2.7
+  },
+  {
    "id": "cha-cardiff-city-west-ham-united",
    "league": "CHA",
    "kickoff": "2026-11-04T19:45Z",
@@ -313,69 +323,6 @@
    }
   },
   {
-   "id": "ucl-slavia-praha-arsenal",
-   "league": "UCL",
-   "kickoff": "2026-11-04T20:00Z",
-   "home": "Slavia Praha",
-   "away": "Arsenal",
-   "o1": 8.838,
-   "oX": 5.561,
-   "o2": 1.306,
-   "best": {
-    "2": {
-     "odds": 1.35,
-     "book": "1xBet"
-    },
-    "1": {
-     "odds": 11.0,
-     "book": "Unibet (NL)"
-    },
-    "X": {
-     "odds": 6.22,
-     "book": "1xBet"
-    }
-   },
-   "books": 17,
-   "referenceAt": "2026-10-31T07:47:19Z",
-   "ou": {
-    "3.0": {
-     "o": 1.92,
-     "u": 1.883
-    },
-    "2.5": {
-     "o": 1.546,
-     "u": 2.392
-    },
-    "3.5": {
-     "o": 2.48,
-     "u": 1.595
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:23Z",
-    "o1": 8.67,
-    "oX": 5.5,
-    "o2": 1.32,
-    "ou": {
-     "3.0": {
-      "o": 1.95,
-      "u": 1.88
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:48:03Z",
-    "o1": 7.5,
-    "oX": 5.4,
-    "o2": 1.27,
-    "ou": {}
-   }
-  },
-  {
    "id": "ucl-borussia-dortmund-real-betis",
    "league": "UCL",
    "kickoff": "2026-11-04T20:00Z",
@@ -439,6 +386,61 @@
    }
   },
   {
+   "id": "ucl-porto-napoli",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "Porto",
+   "away": "Napoli",
+   "o1": 2.162,
+   "oX": 3.572,
+   "o2": 3.151,
+   "best": {
+    "2": {
+     "odds": 3.33,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.24,
+     "book": "Codere (IT)"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "1xBet"
+    }
+   },
+   "books": 17,
+   "referenceAt": "2026-10-31T07:47:19Z",
+   "ou": {
+    "2.5": {
+     "o": 1.742,
+     "u": 2.071
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-10-31T07:48:23Z",
+    "o1": 2.15,
+    "oX": 3.74,
+    "o2": 3.14,
+    "ou": {
+     "2.75": {
+      "o": 1.93,
+      "u": 1.91
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-10-31T07:48:03Z",
+    "o1": 2.05,
+    "oX": 3.55,
+    "o2": 2.9,
+    "ou": {}
+   }
+  },
+  {
    "id": "ucl-psv-eindhoven-club-brugge",
    "league": "UCL",
    "kickoff": "2026-11-04T20:00Z",
@@ -494,6 +496,65 @@
     "o1": 1.98,
     "oX": 4.1,
     "o2": 2.75,
+    "ou": {}
+   }
+  },
+  {
+   "id": "ucl-rb-leipzig-manchester-city",
+   "league": "UCL",
+   "kickoff": "2026-11-04T20:00Z",
+   "home": "RB Leipzig",
+   "away": "Manchester City",
+   "o1": 5.475,
+   "oX": 4.667,
+   "o2": 1.504,
+   "best": {
+    "2": {
+     "odds": 1.57,
+     "book": "Unibet (NL)"
+    },
+    "1": {
+     "odds": 5.96,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 5.03,
+     "book": "1xBet"
+    }
+   },
+   "books": 17,
+   "referenceAt": "2026-10-31T07:47:19Z",
+   "ou": {
+    "3.5": {
+     "o": 1.911,
+     "u": 1.869
+    },
+    "2.5": {
+     "o": 1.347,
+     "u": 3.203
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-10-31T07:48:23Z",
+    "o1": 5.66,
+    "oX": 4.95,
+    "o2": 1.48,
+    "ou": {
+     "3.5": {
+      "o": 1.89,
+      "u": 1.94
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-10-31T07:48:03Z",
+    "o1": 4.8,
+    "oX": 4.7,
+    "o2": 1.45,
     "ou": {}
    }
   },
@@ -561,51 +622,55 @@
    }
   },
   {
-   "id": "ucl-rb-leipzig-manchester-city",
+   "id": "ucl-slavia-praha-arsenal",
    "league": "UCL",
    "kickoff": "2026-11-04T20:00Z",
-   "home": "RB Leipzig",
-   "away": "Manchester City",
-   "o1": 5.475,
-   "oX": 4.667,
-   "o2": 1.504,
+   "home": "Slavia Praha",
+   "away": "Arsenal",
+   "o1": 8.838,
+   "oX": 5.561,
+   "o2": 1.306,
    "best": {
     "2": {
-     "odds": 1.57,
+     "odds": 1.35,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 11.0,
      "book": "Unibet (NL)"
     },
-    "1": {
-     "odds": 5.96,
-     "book": "1xBet"
-    },
     "X": {
-     "odds": 5.03,
+     "odds": 6.22,
      "book": "1xBet"
     }
    },
    "books": 17,
    "referenceAt": "2026-10-31T07:47:19Z",
    "ou": {
+    "3.0": {
+     "o": 1.92,
+     "u": 1.883
+    },
+    "2.5": {
+     "o": 1.546,
+     "u": 2.392
+    },
     "3.5": {
-     "o": 1.911,
-     "u": 1.869
-    },
-    "2.5": {
-     "o": 1.347,
-     "u": 3.203
+     "o": 2.48,
+     "u": 1.595
     }
    },
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
     "asOf": "2026-10-31T07:48:23Z",
-    "o1": 5.66,
-    "oX": 4.95,
-    "o2": 1.48,
+    "o1": 8.67,
+    "oX": 5.5,
+    "o2": 1.32,
     "ou": {
-     "3.5": {
-      "o": 1.89,
-      "u": 1.94
+     "3.0": {
+      "o": 1.95,
+      "u": 1.88
      }
     }
    },
@@ -613,64 +678,9 @@
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
     "asOf": "2026-10-31T07:48:03Z",
-    "o1": 4.8,
-    "oX": 4.7,
-    "o2": 1.45,
-    "ou": {}
-   }
-  },
-  {
-   "id": "ucl-porto-napoli",
-   "league": "UCL",
-   "kickoff": "2026-11-04T20:00Z",
-   "home": "Porto",
-   "away": "Napoli",
-   "o1": 2.162,
-   "oX": 3.572,
-   "o2": 3.151,
-   "best": {
-    "2": {
-     "odds": 3.33,
-     "book": "1xBet"
-    },
-    "1": {
-     "odds": 2.24,
-     "book": "Codere (IT)"
-    },
-    "X": {
-     "odds": 3.75,
-     "book": "1xBet"
-    }
-   },
-   "books": 17,
-   "referenceAt": "2026-10-31T07:47:19Z",
-   "ou": {
-    "2.5": {
-     "o": 1.742,
-     "u": 2.071
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:23Z",
-    "o1": 2.15,
-    "oX": 3.74,
-    "o2": 3.14,
-    "ou": {
-     "2.75": {
-      "o": 1.93,
-      "u": 1.91
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:48:03Z",
-    "o1": 2.05,
-    "oX": 3.55,
-    "o2": 2.9,
+    "o1": 7.5,
+    "oX": 5.4,
+    "o2": 1.27,
     "ou": {}
    }
   },
