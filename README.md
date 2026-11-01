@@ -111,7 +111,7 @@ node tests/sports-markets-browser.cjs
 
 `safe.html` affiche au plus un ticket football, basket, tennis et un combiné avec
 exactement un match de chaque sport. Cote totale entre 1,50 et 2,00 ; probabilité
-indicative strictement supérieure à 70 % par sélection et pour le ticket entier. Les simples, doubles et triples d’un sport sont
+indicative d’au moins 60 % par sélection et pour le ticket entier. Les simples, doubles et triples d’un sport sont
 comparés, sans rencontre ni participant répété. Les quatre tickets sont calculés
 séparément. Un emplacement reste vide si les conditions ne sont pas remplies.
 
@@ -152,9 +152,8 @@ dans `data/days` peuvent compléter les compétitions non interrogées : uniquem
 maximum 24 h. Le timestamp d’origine reste inchangé. Aucun prix moyen, total
 sans horodatage propre, ni prix d’une compétition déjà réinterrogée n’est repris.
 
-Le seuil Safe est désormais strictement supérieur à 70 % sur chaque sélection
-et sur le ticket entier. Avec le modèle uniquement dérivé des prix (marge retirée),
-ce critère est incompatible avec une cote totale de 1,50–2,00 : le mode affiche
-alors zéro ticket et explique cette limite. La liste distincte des petites cotes
-à plus de 70 % ne les présente jamais comme un combiné validé ni comme une
-preuve de rentabilité. Aucun ancien ticket enregistré n’est effacé ou réécrit.
+Le seuil Safe est de 60 % minimum par sélection et pour le ticket entier.
+La cote cible reste 1,50–2,00 et le classement privilégie la probabilité la plus
+élevée. Les sélections isolées sont affichées séparément, sans prétendre que
+leur cumul conserve le même pourcentage. Aucun ticket n’est forcé et les
+anciens résultats ne sont pas réécrits.
