@@ -36,7 +36,8 @@
     "oX": 3.64,
     "o2": 2.12,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "tur-amed-sk-eyupspor",
@@ -80,7 +81,8 @@
     "oX": 5.1,
     "o2": 7.5,
     "ou": {}
-   }
+   },
+   "score": "5-1"
   },
   {
    "id": "por2-vizela-academica",
@@ -90,7 +92,8 @@
    "away": "Academica",
    "o1": 2.35,
    "oX": 3.2,
-   "o2": 3.1
+   "o2": 3.1,
+   "score": "2-1"
   },
   {
    "id": "ukr-kolos-kovalivka-polissya-zhytomyr",
@@ -173,7 +176,8 @@
     "oX": 3.45,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "sa-como-venezia",
@@ -232,7 +236,8 @@
     "oX": 5.7,
     "o2": 7.0,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "rus-fc-dynamo-makhachkala-fk-rostov",
@@ -267,7 +272,8 @@
     "oX": 3.07,
     "o2": 2.34,
     "ou": {}
-   }
+   },
+   "score": "0-3"
   },
   {
    "id": "bel-cercle-brugge-ksv-royal-antwerp",
@@ -311,7 +317,8 @@
     "oX": 3.5,
     "o2": 3.15,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "bl2-fc-st-pauli-1-fc-nurnberg",
@@ -355,7 +362,8 @@
     "oX": 3.4,
     "o2": 2.8,
     "ou": {}
-   }
+   },
+   "score": "1-3"
   },
   {
    "id": "bl2-greuther-furth-holstein-kiel",
@@ -399,7 +407,8 @@
     "oX": 3.45,
     "o2": 2.3,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "bl2-hannover-96-dynamo-dresden",
@@ -443,7 +452,8 @@
     "oX": 3.45,
     "o2": 2.9,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "den-ob-odense-bk-silkeborg-if",
@@ -487,7 +497,8 @@
     "oX": 3.6,
     "o2": 3.4,
     "ou": {}
-   }
+   },
+   "score": "4-1"
   },
   {
    "id": "den-viborg-ff-ac-horsens",
@@ -531,7 +542,8 @@
     "oX": 4.0,
     "o2": 4.7,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "liga-getafe-sevilla",
@@ -594,7 +606,8 @@
     "oX": 2.9,
     "o2": 2.3,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "liga2-cd-eldense-granada-cf",
@@ -638,7 +651,8 @@
     "oX": 3.15,
     "o2": 2.75,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "rou-otelul-sepsi-sf-gheorghe",
@@ -648,7 +662,8 @@
    "away": "Sepsi Sf. Gheorghe",
    "o1": 2.0,
    "oX": 3.45,
-   "o2": 3.65
+   "o2": 3.65,
+   "score": "1-1"
   },
   {
    "id": "srb-imt-novi-beograd-cukaricki",
@@ -658,7 +673,8 @@
    "away": "Cukaricki",
    "o1": 2.1,
    "oX": 3.5,
-   "o2": 3.5
+   "o2": 3.5,
+   "score": "0-0"
   },
   {
    "id": "swe-djurgardens-if-degerfors-if",
@@ -702,7 +718,8 @@
     "oX": 5.2,
     "o2": 7.0,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "swe-malmo-ff-hammarby-if",
@@ -746,7 +763,8 @@
     "oX": 3.8,
     "o2": 1.6,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   },
   {
    "id": "tur-basaksehir-samsunspor",
@@ -790,7 +808,8 @@
     "oX": 3.5,
     "o2": 3.55,
     "ou": {}
-   }
+   },
+   "score": "5-2"
   },
   {
    "id": "tur-trabzonspor-gazisehir-gaziantep",
@@ -834,7 +853,8 @@
     "oX": 4.9,
     "o2": 5.8,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "ere-excelsior-fc-twente-enschede",
@@ -897,7 +917,8 @@
     "oX": 4.3,
     "o2": 1.41,
     "ou": {}
-   }
+   },
+   "score": "0-9"
   },
   {
    "id": "ere-sc-telstar-fc-utrecht",
@@ -960,7 +981,8 @@
     "oX": 3.5,
     "o2": 2.0,
     "ou": {}
-   }
+   },
+   "score": "4-2"
   },
   {
    "id": "l1-strasbourg-auxerre",
@@ -1023,7 +1045,8 @@
     "oX": 3.95,
     "o2": 3.65,
     "ou": {}
-   }
+   },
+   "score": "5-1"
   },
   {
    "id": "por2-tondela-felgueiras",
@@ -1033,7 +1056,8 @@
    "away": "Felgueiras",
    "o1": 1.8,
    "oX": 3.55,
-   "o2": 5.25
+   "o2": 5.25,
+   "score": "3-2"
   },
   {
    "id": "sa-frosinone-torino",
@@ -1092,7 +1116,8 @@
     "oX": 3.8,
     "o2": 2.95,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "sa-lazio-cagliari",
@@ -1147,7 +1172,8 @@
     "oX": 4.2,
     "o2": 5.7,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "srb-ofk-beograd-vojvodina",
@@ -1157,7 +1183,8 @@
    "away": "Vojvodina",
    "o1": 3.5,
    "oX": 3.7,
-   "o2": 1.95
+   "o2": 1.95,
+   "score": "0-2"
   },
   {
    "id": "bl-union-berlin-1-fc-koln",
@@ -1216,7 +1243,8 @@
     "oX": 3.45,
     "o2": 2.4,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "rus-fc-baltika-kaliningrad-fc-akron-tolyatti",
@@ -1251,7 +1279,8 @@
     "oX": 3.65,
     "o2": 5.04,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "bel-sint-truiden-leuven",
@@ -1295,7 +1324,8 @@
     "oX": 3.95,
     "o2": 4.1,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   },
   {
    "id": "den-fc-nordsjaelland-fc-midtjylland",
@@ -1339,7 +1369,8 @@
     "oX": 3.65,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   },
   {
    "id": "srb-radnicki-1923-novi-pazar",
@@ -1349,7 +1380,8 @@
    "away": "Novi Pazar",
    "o1": 1.89,
    "oX": 3.55,
-   "o2": 4.2
+   "o2": 4.2,
+   "score": "2-0"
   },
   {
    "id": "liga-real-racing-club-de-santander-real-madrid",
@@ -1412,7 +1444,8 @@
     "oX": 7.75,
     "o2": 1.15,
     "ou": {}
-   }
+   },
+   "score": "0-3"
   },
   {
    "id": "liga2-ad-ceuta-fc-sporting-gijon",
@@ -1456,7 +1489,8 @@
     "oX": 3.3,
     "o2": 2.45,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "por-arouca-nacional",
@@ -1511,7 +1545,8 @@
     "oX": 3.55,
     "o2": 3.95,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "por2-lusitania-fc-sc-farense",
@@ -1521,7 +1556,8 @@
    "away": "SC Farense",
    "o1": 2.55,
    "oX": 3.25,
-   "o2": 2.8
+   "o2": 2.8,
+   "score": "1-1"
   },
   {
    "id": "rou-univ-craiova-fc-botosani",
@@ -1531,7 +1567,8 @@
    "away": "FC Botosani",
    "o1": 1.29,
    "oX": 5.75,
-   "o2": 9.0
+   "o2": 9.0,
+   "score": "2-1"
   },
   {
    "id": "swe-bk-hacken-ifk-goteborg",
@@ -1575,7 +1612,8 @@
     "oX": 3.9,
     "o2": 3.65,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "swe-if-elfsborg-orgryte-is",
@@ -1619,7 +1657,8 @@
     "oX": 4.7,
     "o2": 5.8,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "swe-vasteras-sk-if-brommapojkarna",
@@ -1663,7 +1702,8 @@
     "oX": 3.45,
     "o2": 3.05,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "ere-groningen-sparta-rotterdam",
@@ -1722,7 +1762,8 @@
     "oX": 3.85,
     "o2": 3.45,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   },
   {
    "id": "srb-partizan-zemun",
@@ -1732,7 +1773,8 @@
    "away": "Zemun",
    "o1": 1.22,
    "oX": 7.0,
-   "o2": 11.5
+   "o2": 11.5,
+   "score": "3-0"
   },
   {
    "id": "tur-kasimpasa-sk-besiktas-jk",
@@ -1776,7 +1818,8 @@
     "oX": 3.9,
     "o2": 1.48,
     "ou": {}
-   }
+   },
+   "score": "2-2"
   },
   {
    "id": "l1-lyon-angers",
@@ -1835,7 +1878,8 @@
     "oX": 4.6,
     "o2": 6.5,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "l1-paris-fc-as-monaco",
@@ -1890,7 +1934,8 @@
     "oX": 3.4,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "bl-eintracht-frankfurt-hamburger-sv",
@@ -1949,7 +1994,8 @@
     "oX": 4.5,
     "o2": 4.7,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "pl-liverpool-arsenal",
@@ -2004,7 +2050,8 @@
     "oX": 3.2,
     "o2": 2.4,
     "ou": {}
-   }
+   },
+   "score": "0-1"
   },
   {
    "id": "rus-lokomotiv-moscow-spartak-moscow",
@@ -2039,7 +2086,8 @@
     "oX": 3.86,
     "o2": 1.75,
     "ou": {}
-   }
+   },
+   "score": "0-4"
   },
   {
    "id": "den-brondby-if-agf-aarhus",
@@ -2083,7 +2131,8 @@
     "oX": 3.45,
     "o2": 2.7,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "sa-lecce-genoa",
@@ -2142,7 +2191,8 @@
     "oX": 2.9,
     "o2": 2.4,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   },
   {
    "id": "bel-lommel-sk-gent",
@@ -2186,7 +2236,8 @@
     "oX": 3.45,
     "o2": 1.68,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "liga-elche-cf-valencia",
@@ -2241,7 +2292,8 @@
     "oX": 3.25,
     "o2": 2.85,
     "ou": {}
-   }
+   },
+   "score": "0-1"
   },
   {
    "id": "liga2-burgos-cf-cd-castellon",
@@ -2285,7 +2337,8 @@
     "oX": 3.25,
     "o2": 2.0,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "por-academico-de-viseu-rio-ave-fc",
@@ -2340,7 +2393,8 @@
     "oX": 3.4,
     "o2": 3.55,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "por-cs-maritimo-santa-clara",
@@ -2399,7 +2453,8 @@
     "oX": 2.95,
     "o2": 2.05,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "bel-charleroi-raal-la-louviere",
@@ -2443,7 +2498,8 @@
     "oX": 4.1,
     "o2": 5.1,
     "ou": {}
-   }
+   },
+   "score": "5-2"
   },
   {
    "id": "rou-dinamo-bucuresti-uta-arad",
@@ -2453,7 +2509,8 @@
    "away": "UTA Arad",
    "o1": 1.57,
    "oX": 4.3,
-   "o2": 5.25
+   "o2": 5.25,
+   "score": "2-0"
   },
   {
    "id": "l1-marseille-toulouse",
@@ -2516,7 +2573,8 @@
     "oX": 4.0,
     "o2": 3.25,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "sa-juventus-napoli",
@@ -2571,7 +2629,8 @@
     "oX": 3.15,
     "o2": 3.1,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "liga-athletic-bilbao-real-sociedad",
@@ -2626,7 +2685,8 @@
     "oX": 3.5,
     "o2": 3.2,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "liga2-tenerife-andorra-cf",
@@ -2725,7 +2785,8 @@
     "oX": 3.4,
     "o2": 4.3,
     "ou": {}
-   }
+   },
+   "score": "3-0"
   }
  ]
 }
