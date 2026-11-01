@@ -157,3 +157,8 @@ La cote cible reste 1,50–2,00 et le classement privilégie la probabilité la 
 élevée. Les sélections isolées sont affichées séparément, sans prétendre que
 leur cumul conserve le même pourcentage. Aucun ticket n’est forcé et les
 anciens résultats ne sont pas réécrits.
+
+Safe exclut désormais tous les marchés h2h (victoire simple), y compris dans
+les sélections isolées. Seuls sets, totaux et handicaps réellement cotés sont
+éligibles. Le collecteur direct Winamax n’est pas encore activé : un emplacement
+peut rester vide si le flux existant ne fournit aucun de ces marchés.

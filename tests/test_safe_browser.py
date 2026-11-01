@@ -9,6 +9,7 @@ def fixture(sport):
  outcomes=[dict(code='1',side='1',label='Victoire Home '+sport,odds=1.52),dict(code='2',side='2',label='Victoire Away '+sport,odds=2.5)]
  if sport=='football':outcomes.append(dict(code='X',side='X',label='Match nul',odds=12))
  markets=[dict(id='h2h',family='h2h',asOf=NOW,bookKey='winamax_fr',outcomes=outcomes),dict(id='total',family='totals',line=3.5,asOf=NOW,bookKey='winamax_fr',outcomes=[dict(code='U3.5',side='under',label='Moins de 3,5',odds=1.15),dict(code='O3.5',side='over',label='Plus de 3,5',odds=6)])]
+ markets.append(dict(id='total-alt',family='totals',line=4.5,asOf=NOW,bookKey='winamax_fr',outcomes=[dict(code='U4.5',side='under',label='Moins de 4,5',odds=1.52),dict(code='O4.5',side='over',label='Plus de 4,5',odds=2.5)]))
  return dict(sport=sport,bookKey='winamax_fr',status='ok',updatedAt=NOW,matches=[dict(id=sport+'1',sport=sport,home='Home '+sport,away='Away '+sport,league='Test only',bookKey='winamax_fr',asOf=NOW,kickoff='2026-11-01T20:00:00Z',markets=markets)])
 with sync_playwright() as p:
  b=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox'])
@@ -31,6 +32,7 @@ with sync_playwright() as p:
  page.goto('https://combi.test/safe.html')
  page.wait_for_selector('[data-slot="mixed"]')
  assert page.locator('[data-slot]').count()==4
+ assert 'Victoire Home' not in page.locator('#safeCards').inner_text()
  assert '60 %' in page.locator('.safe-intro').inner_text()
  assert '70 %' not in page.locator('.safe-intro').inner_text()
  assert 'aucun ticket ne peut actuellement' not in page.locator('.safe-intro').inner_text()
