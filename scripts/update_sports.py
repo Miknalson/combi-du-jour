@@ -116,6 +116,42 @@ def extract(event, sport, league, now):
     return None
 
 
+def enrich_markets(matches, remaining, now, max_events=8):
+    """Check tennis AND basket before checking the next event of either sport."""
+    queues = {sport: sorted(matches.get(sport, []), key=lambda m:m['kickoff']) for sport in SPORTS}
+    checked = 0
+    while checked < max_events and any(queues.values()):
+        for sport in ('tennis', 'basket', 'football'):
+            if not queues[sport] or checked >= max_events:
+                continue
+            m = queues[sport].pop(0)
+            checked += 1
+            m['availableMarkets'] = []
+            try:
+                listing = api.get(f"/sports/{m['sportKey']}/events/{m['eventId']}/markets", bookmakers=BOOK)
+                keys = {x['key'] for b in listing.get('bookmakers',[]) if b.get('key')==BOOK for x in b.get('markets',[])}
+                m['availableMarkets'] = sorted(keys)
+                priorities = (['player_sets_won','spreads','totals','alternate_spreads','alternate_totals'] if sport == 'tennis'
+                              else ['spreads','totals','team_totals','alternate_spreads','alternate_totals','alternate_team_totals'])
+                existing_keys = {g.get('key',g['family']) for g in m['markets']}
+                wanted = [key for key in priorities if key in keys and key not in existing_keys]
+                m['uncollectedMarkets'] = wanted[:]
+                # One optional price call per event in this pass leaves room for the other sports.
+                wanted = wanted[:min(1,remaining)]
+                if wanted:
+                    remaining -= len(wanted)
+                    event = api.get(f"/sports/{m['sportKey']}/events/{m['eventId']}/odds", bookmakers=BOOK,
+                                    markets=','.join(wanted),oddsFormat='decimal')
+                    additions = market_groups(event,sport,now)
+                    existing = {g['id'] for g in m['markets']}
+                    m['markets'].extend(g for g in additions if g['id'] not in existing)
+                    collected = {g.get('key',g['family']) for g in m['markets']}
+                    m['uncollectedMarkets'] = [key for key in m['uncollectedMarkets'] if key not in collected]
+            except Exception:
+                m['marketLookupUnavailable'] = True
+    return remaining
+
+
 def archived_football(now, days, excluded_keys=()):
     """Reuse only real FR quotes in unqueried leagues, never alter their timestamps."""
     records = []
@@ -214,25 +250,8 @@ def main():
                         m['sportKey'] = key
                         m['eventId'] = event['id']
                         matches[sport].append(m)
-        # Discover additional markets instead of requesting guessed market names.
-        remaining = budget + enrichment_budget
-        for m in sorted(matches['tennis'] + matches['football'] + matches['basket'], key=lambda m:(m['sport']!='tennis',m['kickoff']))[:8]:
-            m['availableMarkets'] = []
-            try:
-                listing = api.get(f"/sports/{m['sportKey']}/events/{m['eventId']}/markets", bookmakers=BOOK)
-                keys = {x['key'] for b in listing.get('bookmakers',[]) if b.get('key')==BOOK for x in b.get('markets',[])}
-                m['availableMarkets'] = sorted(keys)
-                wanted = [k for k in ['player_sets_won','team_totals','alternate_spreads','alternate_totals'] if k in keys]
-                wanted = wanted[:remaining]
-                if wanted:
-                    event = api.get(f"/sports/{m['sportKey']}/events/{m['eventId']}/odds", bookmakers=BOOK,markets=','.join(wanted),oddsFormat='decimal')
-                    remaining -= len(wanted)
-                    additions = market_groups(event,m['sport'],now)
-                    existing = {g['id'] for g in m['markets']}
-                    m['markets'].extend(g for g in additions if g['id'] not in existing)
-            except Exception:
-                # Optional market lookup must never erase the standard prices.
-                m['marketLookupUnavailable'] = True
+        # Discover the actual market names, alternating sports rather than exhausting tennis first.
+        enrich_markets(matches, budget + enrichment_budget, now)
         if queried['football'] and queues['football']:
             previous = archived_football(now, args.days, queried_keys)
             # Match identity uses the real kickoff instant, not its string formatting.

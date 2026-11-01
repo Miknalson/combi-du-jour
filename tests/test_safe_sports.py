@@ -38,4 +38,21 @@ class SafeSportsTests(unittest.TestCase):
     got=s.archived_football(self.now,7);self.assertEqual(len(got),1);self.assertEqual(got[0]['asOf'],m['mine']['asOf'])
     self.assertEqual(s.archived_football(self.now,7,{'soccer_france_ligue_one'}),[])
     m['mine']['asOf']=(self.now-dt.timedelta(hours=25)).isoformat();file.write_text(json.dumps({'matches':[m]}));self.assertEqual(s.archived_football(self.now,7),[])
+ def test_enrichment_alternates_sports_and_requests_listed_sets_and_standard_handicaps(self):
+  def make(sport, i):
+   return {'sport':sport,'sportKey':sport,'eventId':str(i),'kickoff':(self.now+dt.timedelta(hours=i+1)).isoformat(),
+           'markets':[{'id':'h2h','family':'h2h','key':'h2h'}]}
+  matches={'tennis':[make('tennis',i) for i in range(12)],'basket':[make('basket',i) for i in range(4)],'football':[]}
+  prices=[];lookups=[]
+  def get(path,**params):
+   sport=path.split('/')[2]
+   self.assertEqual(params['bookmakers'],'winamax_fr')
+   if path.endswith('/markets'):
+    lookups.append(sport);return {'bookmakers':[{'key':'winamax_fr','markets':[{'key':'h2h'},{'key':'player_sets_won' if sport=='tennis' else 'spreads'}]}]}
+   prices.append((sport,params['markets']))
+   return {'home_team':'A','away_team':'B','bookmakers':[]}
+  with patch.object(s.api,'get',side_effect=get):remaining=s.enrich_markets(matches,2,self.now)
+  self.assertEqual(lookups[:2],['tennis','basket']);self.assertEqual(prices,[('tennis','player_sets_won'),('basket','spreads')]);self.assertEqual(remaining,0)
+  self.assertGreater(lookups.count('basket'),0);self.assertEqual(len(lookups),8)
+  self.assertTrue(all(m['markets'][0]['family']=='h2h' for ms in matches.values() for m in ms))
 if __name__=='__main__':unittest.main()
