@@ -20,7 +20,7 @@ function emptyReason(k){
  if(doc.status==='unconfigured')return 'La connexion aux cotes Winamax n’est pas configurée.';
  if(doc.status==='quota')return 'Le quota de consultation est atteint. Aucun prix de remplacement n’est utilisé.';
  if(doc.status!=='ok')return 'La source Winamax est momentanément indisponible.';
- return slate.candidateCounts[k]?'Des sélections atteignent 60 %, mais leur combinaison ne respecte pas les deux critères : 60 % minimum pour le ticket entier et cote 1,50–2,00. Les probabilités se multiplient ; elles ne s’additionnent pas.':'Aucune cote admissible de buts, sets, handicap ou total à 60 % minimum pour ce jour. Les victoires simples sont exclues et ne remplacent pas les marchés manquants.';
+ return slate.candidateCounts[k]?'Des sélections atteignent 60 %, mais leur combinaison ne respecte pas les deux critères : 60 % minimum pour le ticket entier et cote 1,50–2,00. Les probabilités se multiplient ; elles ne s’additionnent pas.':'Aucune sélection Winamax admissible à 60 % minimum pour ce jour. Victoires, buts, sets, handicaps et totaux sont comparés lorsqu’ils sont disponibles.';
 }
 function render(){
  slate=SafeDay.build(pool(),{day:day.value,now:Date.now()});remember(slate);

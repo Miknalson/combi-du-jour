@@ -32,7 +32,6 @@ with sync_playwright() as p:
  page.goto('https://combi.test/safe.html')
  page.wait_for_selector('[data-slot="mixed"]')
  assert page.locator('[data-slot]').count()==4
- assert 'Victoire Home' not in page.locator('#safeCards').inner_text()
  assert '60 %' in page.locator('.safe-intro').inner_text()
  assert '70 %' not in page.locator('.safe-intro').inner_text()
  assert 'aucun ticket ne peut actuellement' not in page.locator('.safe-intro').inner_text()

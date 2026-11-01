@@ -13,7 +13,7 @@ function probabilities(prices){
 function valid(m,now,day){return m&&SPORTS.includes(m.sport)&&typeof m.id==='string'&&m.id&&typeof m.home==='string'&&typeof m.away==='string'&&m.home!==m.away&&m.bookKey==='winamax_fr'&&!m.est&&Date.parse(m.kickoff)>now&&fresh(m.asOf,now)&&(!day||paris(m.kickoff)===day);}
 function marketValid(g,m,now){
  if(!g||g.bookKey!=='winamax_fr'||g.quoteSource==='user'||g.est||!fresh(g.asOf,now)||!Array.isArray(g.outcomes))return false;
- if(g.family==='h2h')return false; // Safe exclut les victoires simples, même si leur cote satisfait le seuil.
+ if(g.family==='h2h'){var sides=g.outcomes.map(function(o){return o.side;}).sort().join(',');return m.sport==='football'?sides==='1,2,X':sides==='1,2';}
  if(!['spreads','totals','sets','team_totals'].includes(g.family)||g.outcomes.length!==2||!Number.isFinite(g.line)||Math.abs(Math.abs(g.line%1)-.5)>1e-8)return false;
  if(['totals','sets','team_totals'].includes(g.family)&&g.line<=0)return false;
  if(g.family==='sets'&&(m.sport!=='tennis'||g.line!==.5||![m.home,m.away].includes(g.participant)))return false;
