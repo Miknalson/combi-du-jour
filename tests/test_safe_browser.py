@@ -29,45 +29,26 @@ with sync_playwright() as p:
   r.fulfill(status=200,content_type=mime,body=f.read_text())
  page.route('https://combi.test/**',route)
  page.goto('https://combi.test/safe.html')
- page.wait_for_selector('[data-slot="mixed"]')
- assert page.locator('[data-slot]').count()==4
+ page.wait_for_selector('#safeShortlist .safe-card')
+ assert page.locator('[data-select]').count()==0
+ assert page.locator('#safeCards .empty').count()==4
+ assert '70 %' in page.locator('.safe-intro').inner_text()
+ assert '66,7 %' in page.locator('.safe-intro').inner_text()
  assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
- page.screenshot(path='/workspace/combi/safe-mobile.png',full_page=True)
- # Lower real Winamax odds must be rejected, without losing old records.
- page.evaluate("localStorage.setItem('cdj.bets',JSON.stringify([{id:'old',source:'perso',legs:[],odds:2,stake:1,createdAt:'2026-10-31T12:00Z',manual:'lost'}]))")
- page.locator('[data-slot="basket"] [data-select]').click()
- page.locator('#safeOdds').fill('1,30');page.locator('#safeStake').fill('1');page.locator('#safeConfirmed').check()
- page.get_by_role('button',name='Enregistrer dans mon suivi').click()
- assert '1,50 et 2,00' in page.locator('#safeNotice').inner_text()
- assert page.evaluate("JSON.parse(localStorage.getItem('cdj.bets')).length")==1
- page.locator('#safeOdds').fill('1,60');page.get_by_role('button',name='Enregistrer dans mon suivi').click()
- page.wait_for_function("JSON.parse(localStorage.getItem('cdj.bets')).length===2")
- bet=page.evaluate("JSON.parse(localStorage.getItem('cdj.bets'))[1]")
- assert bet['source']=='safe' and bet['safeKind']=='basket' and bet['manual'] is None and bet['legs'][0]['bookKey']=='winamax_fr'
- assert page.evaluate("JSON.parse(localStorage.getItem('cdj.bets'))[0].manual")=='lost'
- # No duplicate daily entry.
- page.locator('[data-slot="basket"] [data-select]').click();page.locator('#safeStake').fill('1');page.locator('#safeConfirmed').check()
- page.get_by_role('button',name='Enregistrer dans mon suivi').click();page.wait_for_timeout(80)
- assert 'déjà enregistré' in page.locator('#safeNotice').inner_text()
- # Missing tennis suppresses the mixed ticket, not the other sports.
+ assert page.locator('#safeShortlist li').count()==3
+ assert '61,3 %' not in page.locator('#safeCards').inner_text()
+ assert page.evaluate("JSON.parse(localStorage.getItem('cdj.safeDaily'))['2026-11-01']") == {}
+ # Existing losing tickets are preserved, even if their old estimate was below the new threshold.
+ page.evaluate("localStorage.setItem('cdj.bets',JSON.stringify([{id:'old-safe',source:'safe',safeKind:'basket',legs:[{sport:'basket',home:'A',away:'B',kickoff:'2026-10-31T20:00Z',date:'2026-10-31',label:'Old choice'}],odds:1.52,estProb:.613,stake:1,createdAt:'2026-10-31T12:00Z',manual:'lost'}]))")
+ page.screenshot(path='/workspace/combi/safe-70-mobile.png',full_page=True)
  data['tennis']['status']='quota';page.get_by_role('button',name='Actualiser les relevés',exact=False).click()
- page.wait_for_function("!document.querySelector('[data-slot=mixed]')")
- assert page.locator('[data-slot="football"]').count()==1
- assert 'quota' in page.locator('#safeCards').inner_text().lower()
- data['tennis']['status']='ok';page.get_by_role('button',name='Actualiser les relevés',exact=False).click();page.wait_for_selector('[data-slot="mixed"]')
- # A started match cannot be saved after selecting it.
- page.locator('[data-slot="tennis"] [data-select]').click();page.locator('#safeStake').fill('1');page.locator('#safeConfirmed').check()
- data['tennis']['matches'][0]['kickoff']=NOW
- page.get_by_role('button',name='Enregistrer dans mon suivi').click();page.wait_for_timeout(80)
- assert 'commencé' in page.locator('#safeNotice').inner_text()
- assert page.evaluate("JSON.parse(localStorage.getItem('cdj.bets')).length")==2
- # Dashboard sees Safe separately and retains manual loss settlement.
- page.goto('https://combi.test/tableau.html');page.wait_for_selector('[data-act="lost"]')
- assert 'SAFE DU JOUR' in page.locator('body').inner_text()
- page.locator('.acts').filter(has=page.locator('[data-act="lost"]')).first.locator('[data-act="lost"]').click()
- assert page.evaluate("JSON.parse(localStorage.getItem('cdj.bets')).find(b=>b.source==='safe').manual")=='lost'
- # Real bundled snapshots render honestly too; no fixture or generated price enters files.
- page.set_viewport_size({'width':1280,'height':900});page.goto('https://combi.test/safe.html');page.wait_for_selector('[data-slot="basket"]');page.screenshot(path='/workspace/combi/safe-desktop.png',full_page=True)
+ page.wait_for_function("document.querySelectorAll('#safeShortlist li').length===2")
+ assert page.locator('[data-select]').count()==0
+ page.goto('https://combi.test/tableau.html')
+ page.wait_for_selector('.badge.lost')
+ assert page.evaluate("JSON.parse(localStorage.getItem('cdj.bets'))[0].manual")=='lost'
+ page.set_viewport_size({'width':1280,'height':900});page.goto('https://combi.test/safe.html');page.wait_for_selector('#safeShortlist .safe-card')
+ assert page.locator('[data-select]').count()==0
  assert not errors,errors
- print('PASS: four tickets; mobile layout; 1.30 refused; snapshot reload before saving; existing losses retained; daily duplicate refused; missing sport blocks mixed; started match refused; dashboard category and loss settlement; no JS errors')
+ print('PASS: no 61 percent safe; >70 percent shortlist separated from full ticket; incompatible 1.5–2 target explained; no forced ticket; original losses retained; missing sport; mobile layout; no JS errors')
  b.close()

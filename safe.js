@@ -14,13 +14,13 @@ function remember(result){
  }catch(e){} // Une panne de stockage ne doit pas masquer les cotes.
 }
 function emptyReason(k){
- if(k==='mixed'){var missing=SafeDay.SPORTS.filter(function(s){return !slate.candidateCounts[s];});return missing.length?'Il manque des sélections Winamax admissibles en '+missing.map(function(s){return titles[s];}).join(', ')+'. Aucun combiné des trois sports ne peut être calculé.':'Aucun trio avec exactement un match de chaque sport ne respecte à la fois la cote 1,50–2,00 et le seuil indicatif de 55 %.';}
+ if(k==='mixed'){var missing=SafeDay.SPORTS.filter(function(s){return !slate.candidateCounts[s];});return missing.length?'Il manque des sélections Winamax admissibles en '+missing.map(function(s){return titles[s];}).join(', ')+'. Aucun combiné des trois sports ne peut être calculé.':'Aucun trio avec exactement un match de chaque sport ne respecte à la fois la cote 1,50–2,00 et le seuil strict de plus de 70 % pour le ticket entier.';}
  var doc=docs.find(function(d){return d&&d.sport===k;});
  if(!doc)return 'Le relevé de ce sport est inaccessible. Réessaie après l’actualisation.';
  if(doc.status==='unconfigured')return 'La connexion aux cotes Winamax n’est pas configurée.';
  if(doc.status==='quota')return 'Le quota de consultation est atteint. Aucun prix de remplacement n’est utilisé.';
  if(doc.status!=='ok')return 'La source Winamax est momentanément indisponible.';
- return slate.candidateCounts[k]?'Les prix disponibles ne donnent aucun ticket à 1,50–2,00 avec une probabilité indicative d’au moins 55 %.':'Aucun marché Winamax complet et admissible pour les matchs non commencés de ce jour. Les marchés absents ou périmés sont exclus.';
+ return slate.candidateCounts[k]?'Des sélections dépassent 70 %, mais leur combinaison ne respecte pas les deux critères : plus de 70 % pour le ticket entier et cote 1,50–2,00. Les probabilités se multiplient ; elles ne s’additionnent pas.':'Aucune sélection Winamax admissible ne dépasse 70 % pour les matchs non commencés de ce jour. Les marchés absents ou périmés sont exclus.';
 }
 function render(){
  slate=SafeDay.build(pool(),{day:day.value,now:Date.now()});remember(slate);
@@ -30,6 +30,8 @@ function render(){
  var oldest=Math.min.apply(null,t.legs.map(function(l){return Date.parse(l.asOf);})),age=Date.now()-oldest;
  return '<article class="safe-card" data-slot="'+k+'"><span class="eyebrow">'+esc(titles[k])+' · '+t.legs.length+' sélection(s)</span><h2>'+(k==='mixed'?'Un match par sport':'Le ticket le plus probable disponible')+'</h2><div class="safe-figures"><div><small>Cote Winamax relevée</small><strong>'+price(t.odds)+'</strong></div><div><small>Probabilité indicative</small><strong>'+pct(t.p)+'</strong></div></div>'+(t.legs.length>1?'<p class="status">Probabilités multipliées · matchs supposés indépendants.</p>':'')+(k==='mixed'?'<p class="status">Calculé séparément : ce ticket n’additionne pas les trois tickets ci-dessus.</p>':'')+legsHtml(t)+(age>3600000?'<p class="safe-warning">Relevé de plus d’une heure : la cote actuelle doit être vérifiée chez Winamax.</p>':'')+'<button class="btn" type="button" data-select="'+k+'">Choisir et vérifier ce ticket</button></article>';
  }).join('');
+ var list=slate.shortlist||[];
+ document.getElementById('safeShortlist').innerHTML='<h2>Petites cotes · sélections à plus de 70 %</h2><p class="status">Ces sélections isolées ne sont pas un ticket validé à 1,50–2,00. Le pourcentage du combiné diminue à chaque sélection ajoutée.</p>'+SafeDay.SPORTS.map(function(s){var used=new Set(),items=list.filter(function(l){if(l.sport!==s||used.has(l.matchId))return false;used.add(l.matchId);return true;}).slice(0,3);return '<div class="safe-card"><h3>'+esc(titles[s])+'</h3>'+(items.length?legsHtml({legs:items}):'<p>Aucune sélection disponible à plus de 70 %.</p>')+'</div>';}).join('');
 }
 async function load(){var n=++version;status.textContent='Lecture des derniers relevés…';var next=await Promise.all(SafeDay.SPORTS.map(async function(s){try{var r=await fetch('data/sports/'+s+'.json',{cache:'no-store'});if(!r.ok)return null;var d=await r.json();return d.sport===s&&d.bookKey==='winamax_fr'?d:null;}catch(e){return null;}}));if(n!==version)return;docs=next;
  var today=SafeDay.paris(Date.now()),prior=day.value,dates=Array.from(new Set([today].concat(pool().filter(function(m){return Date.parse(m.kickoff)>Date.now();}).map(function(m){return SafeDay.paris(m.kickoff);})))) .sort();

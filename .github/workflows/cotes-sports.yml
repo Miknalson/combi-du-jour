@@ -26,6 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -35,7 +37,17 @@ jobs:
           node tests/sports-combos.test.cjs
           node tests/safe.test.cjs
           python -m unittest discover -s tests -p 'test_safe_sports.py'
+      - name: Détecter une modification du collecteur
+        id: quote_changes
+        if: github.event_name == 'push'
+        run: |
+          if git diff --quiet HEAD^ HEAD -- scripts/update_sports.py scripts/update_odds.py; then
+            echo "refresh=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "refresh=true" >> "$GITHUB_OUTPUT"
+          fi
       - name: Relever les cotes Winamax France
+        if: github.event_name != 'push' || steps.quote_changes.outputs.refresh == 'true'
         continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}

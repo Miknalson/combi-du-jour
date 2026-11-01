@@ -1,6 +1,6 @@
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.SafeDay=factory();})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
-var SPORTS=['football','basket','tennis'],MAX_AGE=86400000;
+var SPORTS=['football','basket','tennis'],MAX_AGE=86400000,MIN_PROBABILITY=.70;
 function paris(stamp){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(stamp));}
 function fresh(stamp,now){var age=now-Date.parse(stamp);return Number.isFinite(age)&&age>=0&&age<=MAX_AGE;}
 function probabilities(prices){
@@ -26,7 +26,7 @@ function candidates(matches,options){
   (m.markets||[]).filter(function(g){return marketValid(g,m,now);}).forEach(function(g){
    var p=probabilities(g.outcomes.map(function(o){return o.odds;}));if(!p)return;
    g.outcomes.forEach(function(o,i){
-    if(!o||typeof o.label!=='string'||!o.label||p[i]<.5||o.odds>2||g.family==='sets'&&o.side!=='over')return;
+    if(!o||typeof o.label!=='string'||!o.label||p[i]<=MIN_PROBABILITY||o.odds>2||g.family==='sets'&&o.side!=='over')return;
     var id=m.sport+'|'+m.id+'|'+m.kickoff+'|'+g.id+'|'+o.code;if(seen.has(id))return;seen.add(id);
     out.push({id:id,matchId:m.id,sport:m.sport,league:m.league,home:m.home,away:m.away,kickoff:m.kickoff,date:paris(m.kickoff),code:o.code,label:o.label,o:o.odds,p:p[i],bookKey:'winamax_fr',asOf:g.asOf,marketId:g.id,marketFamily:g.family,est:false,quoteSource:'api',probabilityMethod:'winamax-power-devig'});
    });
@@ -40,15 +40,15 @@ function choose(pool,mixed){
  var best=null,groups=[];
  if(mixed){groups=SPORTS.map(function(s){return pool.filter(function(l){return l.sport===s;});});if(groups.some(function(g){return !g.length;}))return null;}
  function visit(legs,start,odds,p){
-  if(odds>2+1e-9||best&&p<best.p-1e-12)return;
-  if(legs.length&&odds>=1.5-1e-9&&p>=.55&&(!mixed||legs.length===3)){var t=ticket(legs);if(better(t,best))best=t;}
+  if(odds>2+1e-9||p<=MIN_PROBABILITY||best&&p<best.p-1e-12)return;
+  if(legs.length&&odds>=1.5-1e-9&&p>MIN_PROBABILITY&&(!mixed||legs.length===3)){var t=ticket(legs);if(better(t,best))best=t;}
   if(legs.length===3||!mixed&&odds>=1.5-1e-9)return;
   var list=mixed?groups[legs.length]:pool;
   for(var i=mixed?0:start;i<list.length;i++){var l=list[i];if(!distinct(legs,l))continue;visit(legs.concat([l]),i+1,odds*l.o,p*l.p);}
  }
  visit([],0,1,1);return best;
 }
-function build(matches,options){var pool=candidates(matches,options),slots={};SPORTS.forEach(function(s){slots[s]=choose(pool.filter(function(l){return l.sport===s;}),false);});slots.mixed=choose(pool,true);return {day:options.day,generatedAt:new Date(options.now===undefined?Date.now():options.now).toISOString(),slots:slots,candidateCounts:Object.fromEntries(SPORTS.map(function(s){return [s,pool.filter(function(l){return l.sport===s;}).length];}))};}
+function build(matches,options){var pool=candidates(matches,options),slots={};SPORTS.forEach(function(s){slots[s]=choose(pool.filter(function(l){return l.sport===s;}),false);});slots.mixed=choose(pool,true);return {day:options.day,generatedAt:new Date(options.now===undefined?Date.now():options.now).toISOString(),slots:slots,shortlist:pool,candidateCounts:Object.fromEntries(SPORTS.map(function(s){return [s,pool.filter(function(l){return l.sport===s;}).length];}))};}
 function documents(docs){return (docs||[]).filter(function(d){return d&&d.status==='ok'&&d.bookKey==='winamax_fr'&&SPORTS.includes(d.sport)&&Array.isArray(d.matches);}).flatMap(function(d){return d.matches.filter(function(m){return m.sport===d.sport;});});}
-return {SPORTS:SPORTS,paris:paris,fresh:fresh,probabilities:probabilities,candidates:candidates,build:build,documents:documents,valid:valid};
+return {MIN_PROBABILITY:MIN_PROBABILITY,SPORTS:SPORTS,paris:paris,fresh:fresh,probabilities:probabilities,candidates:candidates,build:build,documents:documents,valid:valid};
 });
