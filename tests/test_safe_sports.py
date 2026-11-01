@@ -2,6 +2,9 @@ import copy
 import datetime as dt
 import sys
 import unittest
+import json
+import tempfile
+from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import update_sports as s
@@ -25,4 +28,14 @@ class SafeSportsTests(unittest.TestCase):
    self.assertIsNone(s.extract(e,'football','L1',self.now),kind)
  def test_tennis_and_basket_keep_rejecting_three_way_markets(self):
   for sport in ['basket','tennis']:self.assertIsNone(s.extract(self.e,sport,'League',self.now))
+ def test_archived_football_keeps_actual_quote_time_and_skips_old_or_queried_leagues(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);(root/'days').mkdir()
+   m={'id':'old-api-id','league':'L1','home':'Home','away':'Away','kickoff':(self.now+dt.timedelta(hours=3)).isoformat(),
+      'mine':{'bookKey':'winamax_fr','asOf':(self.now-dt.timedelta(hours=3)).isoformat(),'o1':1.6,'oX':4,'o2':5}}
+   file=root/'days'/'2026-11-01.json';file.write_text(json.dumps({'matches':[m]}))
+   with patch.object(s,'ROOT',root/'sports'):
+    got=s.archived_football(self.now,7);self.assertEqual(len(got),1);self.assertEqual(got[0]['asOf'],m['mine']['asOf'])
+    self.assertEqual(s.archived_football(self.now,7,{'soccer_france_ligue_one'}),[])
+    m['mine']['asOf']=(self.now-dt.timedelta(hours=25)).isoformat();file.write_text(json.dumps({'matches':[m]}));self.assertEqual(s.archived_football(self.now,7),[])
 if __name__=='__main__':unittest.main()

@@ -145,3 +145,9 @@ Validation : `node tests/safe.test.cjs`,
 `python -m unittest discover -s tests -p 'test_safe_sports.py'`.
 Le test navigateur `tests/test_safe_browser.py` utilise des prix fictifs isolés
 pour vérifier le parcours ; ces données ne sont jamais publiées comme cotes.
+
+En cas de couverture partielle du football, les anciennes réponses API présentes
+dans `data/days` peuvent compléter les compétitions non interrogées : uniquement
+`mine.bookKey == winamax_fr`, trois cotes 1/N/2 valides, match à venir et âge
+maximum 24 h. Le timestamp d’origine reste inchangé. Aucun prix moyen, total
+sans horodatage propre, ni prix d’une compétition déjà réinterrogée n’est repris.

@@ -116,6 +116,40 @@ def extract(event, sport, league, now):
     return None
 
 
+def archived_football(now, days, excluded_keys=()):
+    """Reuse only real FR quotes in unqueried leagues, never alter their timestamps."""
+    records = []
+    codes = {code: key for key, code, *_ in api.LEAGUES}
+    directory = ROOT.parent / 'days'
+    for path in sorted(directory.glob('????-??-??.json')):
+        try:
+            doc = json.loads(path.read_text())
+            for m in doc.get('matches', []):
+                b = m.get('mine', {})
+                if b.get('bookKey') != BOOK or codes.get(m.get('league')) in excluded_keys:
+                    continue
+                kickoff = dt.datetime.fromisoformat(m['kickoff'].replace('Z', '+00:00'))
+                stamp = dt.datetime.fromisoformat(b['asOf'].replace('Z', '+00:00'))
+                if not now < kickoff <= now + dt.timedelta(days=days) or not 0 <= (now-stamp).total_seconds() <= 86400:
+                    continue
+                prices = [float(b['o'+k]) for k in ('1','X','2')]
+                if not all(math.isfinite(p) and p > 1 for p in prices):
+                    continue
+                outcomes = [{'code': k, 'side': k, 'odds': price,
+                             'label': 'Match nul' if k == 'X' else 'Victoire '+m['home' if k == '1' else 'away']}
+                            for k, price in zip(('1','X','2'), prices)]
+                records.append({'id': m['id'], 'sport':'football', 'league':m['league'],
+                                'kickoff':m['kickoff'], 'home':m['home'], 'away':m['away'],
+                                'bookKey':BOOK, 'book':'Winamax France', 'asOf':b['asOf'],
+                                'market':'h2h', 'o1':prices[0], 'oX':prices[1], 'o2':prices[2],
+                                'markets':[{'id':'h2h|archive', 'family':'h2h', 'unit':'match',
+                                            'bookKey':BOOK, 'asOf':b['asOf'], 'quoteSource':'api-archive',
+                                            'outcomes':outcomes}]})
+        except (OSError, ValueError, TypeError, KeyError, AttributeError, OverflowError):
+            continue
+    return records
+
+
 def write(sport, status, matches, now, **meta):
     ROOT.mkdir(parents=True, exist_ok=True)
     doc = {'sport': sport, 'bookKey': BOOK, 'updatedAt': now.isoformat(),
@@ -153,6 +187,7 @@ def main():
         matches = {sport: [] for sport in SPORTS}
         queried = {sport: 0 for sport in SPORTS}
         offered = {k: len(v) for k, v in queues.items()}
+        queried_keys = set()
         enrichment_budget = min(2, max(0, budget - 2))
         budget -= enrichment_budget
         while budget > 0 and any(queues.values()):
@@ -172,6 +207,7 @@ def main():
                     events = api.get(f'/sports/{key}/odds', **params)
                 budget -= len(core_markets.split(','))
                 queried[sport] += 1
+                queried_keys.add(key)
                 for event in events:
                     m = extract(event, sport, title, now)
                     if m:
@@ -197,6 +233,12 @@ def main():
             except Exception:
                 # Optional market lookup must never erase the standard prices.
                 m['marketLookupUnavailable'] = True
+        if queried['football'] and queues['football']:
+            previous = archived_football(now, args.days, queried_keys)
+            # Match identity uses the real kickoff instant, not its string formatting.
+            identity = lambda m: (m['home'].casefold(), m['away'].casefold(), dt.datetime.fromisoformat(m['kickoff'].replace('Z','+00:00')))
+            current = {identity(m) for m in matches['football']}
+            matches['football'].extend(m for m in previous if identity(m) not in current)
         for sport in SPORTS:
             unique = {m['id']: m for m in matches[sport]}
             write(sport, 'ok' if queried[sport] or not offered[sport] else 'quota', list(unique.values()), now,
