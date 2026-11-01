@@ -1,0 +1,2266 @@
+{
+  "sport": "football",
+  "bookKey": "winamax_fr",
+  "updatedAt": "2026-11-01T07:53:13Z",
+  "status": "ok",
+  "partial": true,
+  "source": "Relevés Winamax France déjà présents dans les archives ; heures de relevé conservées.",
+  "matches": [
+    {
+      "id": "tur-amed-sk-eyupspor",
+      "sport": "football",
+      "league": "TUR",
+      "kickoff": "2026-11-01T10:30Z",
+      "home": "Amed SK",
+      "away": "Eyüpspor",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:48:04Z",
+      "market": "h2h",
+      "o1": 1.21,
+      "oX": 5.1,
+      "o2": 7.5,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:48:04Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Amed SK",
+              "odds": 1.21
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.1
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Eyüpspor",
+              "odds": 7.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ere-fc-zwolle-ado-den-haag",
+      "sport": "football",
+      "league": "ERE",
+      "kickoff": "2026-11-01T11:15Z",
+      "home": "FC Zwolle",
+      "away": "ADO Den Haag",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:55Z",
+      "market": "h2h",
+      "o1": 2.1,
+      "oX": 3.45,
+      "o2": 2.6,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:55Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire FC Zwolle",
+              "odds": 2.1
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.45
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire ADO Den Haag",
+              "odds": 2.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sa-como-venezia",
+      "sport": "football",
+      "league": "SA",
+      "kickoff": "2026-11-01T11:30Z",
+      "home": "Como",
+      "away": "Venezia",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 1.27,
+      "oX": 5.7,
+      "o2": 7.0,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Como",
+              "odds": 1.27
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.7
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Venezia",
+              "odds": 7.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bel-cercle-brugge-ksv-royal-antwerp",
+      "sport": "football",
+      "league": "BEL",
+      "kickoff": "2026-11-01T12:30Z",
+      "home": "Cercle Brugge KSV",
+      "away": "Royal Antwerp",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:40Z",
+      "market": "h2h",
+      "o1": 1.84,
+      "oX": 3.5,
+      "o2": 3.15,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Cercle Brugge KSV",
+              "odds": 1.84
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.5
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Royal Antwerp",
+              "odds": 3.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bl2-fc-st-pauli-1-fc-nurnberg",
+      "sport": "football",
+      "league": "BL2",
+      "kickoff": "2026-11-01T12:30Z",
+      "home": "FC St. Pauli",
+      "away": "1. FC Nürnberg",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:38Z",
+      "market": "h2h",
+      "o1": 2.0,
+      "oX": 3.4,
+      "o2": 2.8,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:38Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire FC St. Pauli",
+              "odds": 2.0
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire 1. FC Nürnberg",
+              "odds": 2.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bl2-greuther-furth-holstein-kiel",
+      "sport": "football",
+      "league": "BL2",
+      "kickoff": "2026-11-01T12:30Z",
+      "home": "Greuther Fürth",
+      "away": "Holstein Kiel",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:38Z",
+      "market": "h2h",
+      "o1": 2.3,
+      "oX": 3.45,
+      "o2": 2.3,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:38Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Greuther Fürth",
+              "odds": 2.3
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.45
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Holstein Kiel",
+              "odds": 2.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bl2-hannover-96-dynamo-dresden",
+      "sport": "football",
+      "league": "BL2",
+      "kickoff": "2026-11-01T12:30Z",
+      "home": "Hannover 96",
+      "away": "Dynamo Dresden",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:38Z",
+      "market": "h2h",
+      "o1": 1.94,
+      "oX": 3.45,
+      "o2": 2.9,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:38Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Hannover 96",
+              "odds": 1.94
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.45
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Dynamo Dresden",
+              "odds": 2.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "den-ob-odense-bk-silkeborg-if",
+      "sport": "football",
+      "league": "DEN",
+      "kickoff": "2026-11-01T13:00Z",
+      "home": "OB Odense BK",
+      "away": "Silkeborg IF",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:48:26Z",
+      "market": "h2h",
+      "o1": 1.74,
+      "oX": 3.6,
+      "o2": 3.4,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:48:26Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire OB Odense BK",
+              "odds": 1.74
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.6
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Silkeborg IF",
+              "odds": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "den-viborg-ff-ac-horsens",
+      "sport": "football",
+      "league": "DEN",
+      "kickoff": "2026-11-01T13:00Z",
+      "home": "Viborg FF",
+      "away": "AC Horsens",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:48:26Z",
+      "market": "h2h",
+      "o1": 1.46,
+      "oX": 4.0,
+      "o2": 4.7,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:48:26Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Viborg FF",
+              "odds": 1.46
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.0
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire AC Horsens",
+              "odds": 4.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liga-getafe-sevilla",
+      "sport": "football",
+      "league": "LIGA",
+      "kickoff": "2026-11-01T13:00Z",
+      "home": "Getafe",
+      "away": "Sevilla",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 3.05,
+      "oX": 2.9,
+      "o2": 2.3,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Getafe",
+              "odds": 3.05
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 2.9
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Sevilla",
+              "odds": 2.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liga2-cd-eldense-granada-cf",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-01T13:00Z",
+      "home": "CD Eldense",
+      "away": "Granada CF",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:16Z",
+      "market": "h2h",
+      "o1": 2.15,
+      "oX": 3.15,
+      "o2": 2.75,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:16Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire CD Eldense",
+              "odds": 2.15
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.15
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Granada CF",
+              "odds": 2.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swe-djurgardens-if-degerfors-if",
+      "sport": "football",
+      "league": "SWE",
+      "kickoff": "2026-11-01T13:00Z",
+      "home": "Djurgardens IF",
+      "away": "Degerfors IF",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:39Z",
+      "market": "h2h",
+      "o1": 1.23,
+      "oX": 5.2,
+      "o2": 7.0,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:39Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Djurgardens IF",
+              "odds": 1.23
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.2
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Degerfors IF",
+              "odds": 7.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swe-malmo-ff-hammarby-if",
+      "sport": "football",
+      "league": "SWE",
+      "kickoff": "2026-11-01T13:00Z",
+      "home": "Malmo FF",
+      "away": "Hammarby IF",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:39Z",
+      "market": "h2h",
+      "o1": 3.85,
+      "oX": 3.8,
+      "o2": 1.6,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:39Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Malmo FF",
+              "odds": 3.85
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.8
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Hammarby IF",
+              "odds": 1.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tur-basaksehir-samsunspor",
+      "sport": "football",
+      "league": "TUR",
+      "kickoff": "2026-11-01T13:00Z",
+      "home": "Basaksehir",
+      "away": "Samsunspor",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:48:04Z",
+      "market": "h2h",
+      "o1": 1.7,
+      "oX": 3.5,
+      "o2": 3.55,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:48:04Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Basaksehir",
+              "odds": 1.7
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.5
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Samsunspor",
+              "odds": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tur-trabzonspor-gazisehir-gaziantep",
+      "sport": "football",
+      "league": "TUR",
+      "kickoff": "2026-11-01T13:00Z",
+      "home": "Trabzonspor",
+      "away": "Gazişehir Gaziantep",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:48:04Z",
+      "market": "h2h",
+      "o1": 1.28,
+      "oX": 4.9,
+      "o2": 5.8,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:48:04Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Trabzonspor",
+              "odds": 1.28
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.9
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Gazişehir Gaziantep",
+              "odds": 5.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ere-excelsior-fc-twente-enschede",
+      "sport": "football",
+      "league": "ERE",
+      "kickoff": "2026-11-01T13:30Z",
+      "home": "Excelsior",
+      "away": "FC Twente Enschede",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:55Z",
+      "market": "h2h",
+      "o1": 4.8,
+      "oX": 4.3,
+      "o2": 1.41,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:55Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Excelsior",
+              "odds": 4.8
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.3
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire FC Twente Enschede",
+              "odds": 1.41
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ere-sc-telstar-fc-utrecht",
+      "sport": "football",
+      "league": "ERE",
+      "kickoff": "2026-11-01T13:30Z",
+      "home": "SC Telstar",
+      "away": "FC Utrecht",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:55Z",
+      "market": "h2h",
+      "o1": 2.7,
+      "oX": 3.5,
+      "o2": 2.0,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:55Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire SC Telstar",
+              "odds": 2.7
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.5
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire FC Utrecht",
+              "odds": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l1-strasbourg-auxerre",
+      "sport": "football",
+      "league": "L1",
+      "kickoff": "2026-11-01T14:00Z",
+      "home": "Strasbourg",
+      "away": "Auxerre",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:35Z",
+      "market": "h2h",
+      "o1": 1.74,
+      "oX": 3.95,
+      "o2": 3.65,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:35Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Strasbourg",
+              "odds": 1.74
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.95
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Auxerre",
+              "odds": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sa-frosinone-torino",
+      "sport": "football",
+      "league": "SA",
+      "kickoff": "2026-11-01T14:00Z",
+      "home": "Frosinone",
+      "away": "Torino",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 1.98,
+      "oX": 3.8,
+      "o2": 2.95,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Frosinone",
+              "odds": 1.98
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.8
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Torino",
+              "odds": 2.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sa-lazio-cagliari",
+      "sport": "football",
+      "league": "SA",
+      "kickoff": "2026-11-01T14:00Z",
+      "home": "Lazio",
+      "away": "Cagliari",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 1.45,
+      "oX": 4.2,
+      "o2": 5.7,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Lazio",
+              "odds": 1.45
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.2
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Cagliari",
+              "odds": 5.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bl-union-berlin-1-fc-koln",
+      "sport": "football",
+      "league": "BL",
+      "kickoff": "2026-11-01T14:30Z",
+      "home": "Union Berlin",
+      "away": "1. FC Köln",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:32Z",
+      "market": "h2h",
+      "o1": 2.45,
+      "oX": 3.45,
+      "o2": 2.4,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:32Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Union Berlin",
+              "odds": 2.45
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.45
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire 1. FC Köln",
+              "odds": 2.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bel-sint-truiden-leuven",
+      "sport": "football",
+      "league": "BEL",
+      "kickoff": "2026-11-01T15:00Z",
+      "home": "Sint Truiden",
+      "away": "Leuven",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:40Z",
+      "market": "h2h",
+      "o1": 1.54,
+      "oX": 3.95,
+      "o2": 4.1,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Sint Truiden",
+              "odds": 1.54
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.95
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Leuven",
+              "odds": 4.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "den-fc-nordsjaelland-fc-midtjylland",
+      "sport": "football",
+      "league": "DEN",
+      "kickoff": "2026-11-01T15:00Z",
+      "home": "FC Nordsjaelland",
+      "away": "FC Midtjylland",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:48:26Z",
+      "market": "h2h",
+      "o1": 2.05,
+      "oX": 3.65,
+      "o2": 2.6,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:48:26Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire FC Nordsjaelland",
+              "odds": 2.05
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.65
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire FC Midtjylland",
+              "odds": 2.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liga-real-racing-club-de-santander-real-madrid",
+      "sport": "football",
+      "league": "LIGA",
+      "kickoff": "2026-11-01T15:15Z",
+      "home": "Real Racing Club de Santander",
+      "away": "Real Madrid",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 9.5,
+      "oX": 7.75,
+      "o2": 1.15,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Real Racing Club de Santander",
+              "odds": 9.5
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 7.75
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Real Madrid",
+              "odds": 1.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liga2-ad-ceuta-fc-sporting-gijon",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-01T15:15Z",
+      "home": "AD Ceuta FC",
+      "away": "Sporting Gijón",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:16Z",
+      "market": "h2h",
+      "o1": 2.25,
+      "oX": 3.3,
+      "o2": 2.45,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:16Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire AD Ceuta FC",
+              "odds": 2.25
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.3
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Sporting Gijón",
+              "odds": 2.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "por-arouca-nacional",
+      "sport": "football",
+      "league": "POR",
+      "kickoff": "2026-11-01T15:30Z",
+      "home": "Arouca",
+      "away": "Nacional",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:10Z",
+      "market": "h2h",
+      "o1": 1.64,
+      "oX": 3.55,
+      "o2": 3.95,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:10Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Arouca",
+              "odds": 1.64
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.55
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Nacional",
+              "odds": 3.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swe-bk-hacken-ifk-goteborg",
+      "sport": "football",
+      "league": "SWE",
+      "kickoff": "2026-11-01T15:30Z",
+      "home": "BK Hacken",
+      "away": "IFK Goteborg",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:39Z",
+      "market": "h2h",
+      "o1": 1.62,
+      "oX": 3.9,
+      "o2": 3.65,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:39Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire BK Hacken",
+              "odds": 1.62
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.9
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire IFK Goteborg",
+              "odds": 3.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swe-if-elfsborg-orgryte-is",
+      "sport": "football",
+      "league": "SWE",
+      "kickoff": "2026-11-01T15:30Z",
+      "home": "IF Elfsborg",
+      "away": "Örgryte IS",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:39Z",
+      "market": "h2h",
+      "o1": 1.31,
+      "oX": 4.7,
+      "o2": 5.8,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:39Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire IF Elfsborg",
+              "odds": 1.31
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.7
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Örgryte IS",
+              "odds": 5.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swe-vasteras-sk-if-brommapojkarna",
+      "sport": "football",
+      "league": "SWE",
+      "kickoff": "2026-11-01T15:30Z",
+      "home": "Västerås SK",
+      "away": "IF Brommapojkarna",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:39Z",
+      "market": "h2h",
+      "o1": 1.9,
+      "oX": 3.45,
+      "o2": 3.05,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:39Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Västerås SK",
+              "odds": 1.9
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.45
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire IF Brommapojkarna",
+              "odds": 3.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ere-groningen-sparta-rotterdam",
+      "sport": "football",
+      "league": "ERE",
+      "kickoff": "2026-11-01T15:45Z",
+      "home": "Groningen",
+      "away": "Sparta Rotterdam",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:55Z",
+      "market": "h2h",
+      "o1": 1.66,
+      "oX": 3.85,
+      "o2": 3.45,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:55Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Groningen",
+              "odds": 1.66
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.85
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Sparta Rotterdam",
+              "odds": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tur-kasimpasa-sk-besiktas-jk",
+      "sport": "football",
+      "league": "TUR",
+      "kickoff": "2026-11-01T16:00Z",
+      "home": "Kasimpasa SK",
+      "away": "Besiktas JK",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:48:04Z",
+      "market": "h2h",
+      "o1": 4.4,
+      "oX": 3.9,
+      "o2": 1.48,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:48:04Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Kasimpasa SK",
+              "odds": 4.4
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.9
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Besiktas JK",
+              "odds": 1.48
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l1-lyon-angers",
+      "sport": "football",
+      "league": "L1",
+      "kickoff": "2026-11-01T16:15Z",
+      "home": "Lyon",
+      "away": "Angers",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:35Z",
+      "market": "h2h",
+      "o1": 1.38,
+      "oX": 4.6,
+      "o2": 6.5,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:35Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Lyon",
+              "odds": 1.38
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.6
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Angers",
+              "odds": 6.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l1-paris-fc-as-monaco",
+      "sport": "football",
+      "league": "L1",
+      "kickoff": "2026-11-01T16:15Z",
+      "home": "Paris FC",
+      "away": "AS Monaco",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:35Z",
+      "market": "h2h",
+      "o1": 2.35,
+      "oX": 3.4,
+      "o2": 2.6,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:35Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Paris FC",
+              "odds": 2.35
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire AS Monaco",
+              "odds": 2.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bl-eintracht-frankfurt-hamburger-sv",
+      "sport": "football",
+      "league": "BL",
+      "kickoff": "2026-11-01T16:30Z",
+      "home": "Eintracht Frankfurt",
+      "away": "Hamburger SV",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:32Z",
+      "market": "h2h",
+      "o1": 1.49,
+      "oX": 4.5,
+      "o2": 4.7,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:32Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Eintracht Frankfurt",
+              "odds": 1.49
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.5
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Hamburger SV",
+              "odds": 4.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-liverpool-arsenal",
+      "sport": "football",
+      "league": "PL",
+      "kickoff": "2026-11-01T16:30Z",
+      "home": "Liverpool",
+      "away": "Arsenal",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:53Z",
+      "market": "h2h",
+      "o1": 2.65,
+      "oX": 3.2,
+      "o2": 2.4,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:53Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Liverpool",
+              "odds": 2.65
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.2
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Arsenal",
+              "odds": 2.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "den-brondby-if-agf-aarhus",
+      "sport": "football",
+      "league": "DEN",
+      "kickoff": "2026-11-01T17:00Z",
+      "home": "Brondby IF",
+      "away": "AGF Aarhus",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:48:26Z",
+      "market": "h2h",
+      "o1": 2.0,
+      "oX": 3.45,
+      "o2": 2.7,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:48:26Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Brondby IF",
+              "odds": 2.0
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.45
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire AGF Aarhus",
+              "odds": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sa-lecce-genoa",
+      "sport": "football",
+      "league": "SA",
+      "kickoff": "2026-11-01T17:00Z",
+      "home": "Lecce",
+      "away": "Genoa",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 2.85,
+      "oX": 2.9,
+      "o2": 2.4,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Lecce",
+              "odds": 2.85
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 2.9
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Genoa",
+              "odds": 2.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bel-lommel-sk-gent",
+      "sport": "football",
+      "league": "BEL",
+      "kickoff": "2026-11-01T17:30Z",
+      "home": "Lommel SK",
+      "away": "Gent",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:40Z",
+      "market": "h2h",
+      "o1": 3.8,
+      "oX": 3.45,
+      "o2": 1.68,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Lommel SK",
+              "odds": 3.8
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.45
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Gent",
+              "odds": 1.68
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liga-elche-cf-valencia",
+      "sport": "football",
+      "league": "LIGA",
+      "kickoff": "2026-11-01T17:30Z",
+      "home": "Elche CF",
+      "away": "Valencia",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 2.2,
+      "oX": 3.25,
+      "o2": 2.85,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Elche CF",
+              "odds": 2.2
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.25
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Valencia",
+              "odds": 2.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liga2-burgos-cf-cd-castellon",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-01T17:30Z",
+      "home": "Burgos CF",
+      "away": "CD Castellón",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:16Z",
+      "market": "h2h",
+      "o1": 2.85,
+      "oX": 3.25,
+      "o2": 2.0,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:16Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Burgos CF",
+              "odds": 2.85
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.25
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire CD Castellón",
+              "odds": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "por-academico-de-viseu-rio-ave-fc",
+      "sport": "football",
+      "league": "POR",
+      "kickoff": "2026-11-01T18:00Z",
+      "home": "Académico de Viseu",
+      "away": "Rio Ave FC",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:10Z",
+      "market": "h2h",
+      "o1": 1.76,
+      "oX": 3.4,
+      "o2": 3.55,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:10Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Académico de Viseu",
+              "odds": 1.76
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Rio Ave FC",
+              "odds": 3.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "por-cs-maritimo-santa-clara",
+      "sport": "football",
+      "league": "POR",
+      "kickoff": "2026-11-01T18:00Z",
+      "home": "CS Maritimo",
+      "away": "Santa Clara",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:10Z",
+      "market": "h2h",
+      "o1": 3.05,
+      "oX": 2.95,
+      "o2": 2.05,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:10Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire CS Maritimo",
+              "odds": 3.05
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 2.95
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Santa Clara",
+              "odds": 2.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bel-charleroi-raal-la-louviere",
+      "sport": "football",
+      "league": "BEL",
+      "kickoff": "2026-11-01T18:15Z",
+      "home": "Charleroi",
+      "away": "RAAL La Louvière",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-10-31T07:47:40Z",
+      "market": "h2h",
+      "o1": 1.41,
+      "oX": 4.1,
+      "o2": 5.1,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-10-31T07:47:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Charleroi",
+              "odds": 1.41
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.1
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire RAAL La Louvière",
+              "odds": 5.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l1-marseille-toulouse",
+      "sport": "football",
+      "league": "L1",
+      "kickoff": "2026-11-01T19:45Z",
+      "home": "Marseille",
+      "away": "Toulouse",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:35Z",
+      "market": "h2h",
+      "o1": 1.84,
+      "oX": 4.0,
+      "o2": 3.25,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:35Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Marseille",
+              "odds": 1.84
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.0
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Toulouse",
+              "odds": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sa-juventus-napoli",
+      "sport": "football",
+      "league": "SA",
+      "kickoff": "2026-11-01T19:45Z",
+      "home": "Juventus",
+      "away": "Napoli",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 2.1,
+      "oX": 3.15,
+      "o2": 3.1,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Juventus",
+              "odds": 2.1
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.15
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Napoli",
+              "odds": 3.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liga-athletic-bilbao-real-sociedad",
+      "sport": "football",
+      "league": "LIGA",
+      "kickoff": "2026-11-01T20:00Z",
+      "home": "Athletic Bilbao",
+      "away": "Real Sociedad",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:58Z",
+      "market": "h2h",
+      "o1": 1.96,
+      "oX": 3.5,
+      "o2": 3.2,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:58Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Athletic Bilbao",
+              "odds": 1.96
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.5
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Real Sociedad",
+              "odds": 3.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liga2-tenerife-andorra-cf",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-01T20:00Z",
+      "home": "Tenerife",
+      "away": "Andorra CF",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:16Z",
+      "market": "h2h",
+      "o1": 1.94,
+      "oX": 3.1,
+      "o2": 3.25,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:16Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Tenerife",
+              "odds": 1.94
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.1
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Andorra CF",
+              "odds": 3.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "por-braga-famalicao",
+      "sport": "football",
+      "league": "POR",
+      "kickoff": "2026-11-01T20:30Z",
+      "home": "Braga",
+      "away": "Famalicão",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-01T07:48:10Z",
+      "market": "h2h",
+      "o1": 1.6,
+      "oX": 3.4,
+      "o2": 4.3,
+      "markets": [
+        {
+          "id": "h2h|archived",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-01T07:48:10Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Braga",
+              "odds": 1.6
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Famalicão",
+              "odds": 4.3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

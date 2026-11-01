@@ -105,3 +105,43 @@ node tests/sports-browser.cjs
 node tests/sports-combos-browser.cjs
 node tests/sports-markets-browser.cjs
 ```
+
+
+## Safe du jour
+
+`safe.html` affiche au plus un ticket football, basket, tennis et un combiné avec
+exactement un match de chaque sport. Cote totale entre 1,50 et 2,00 ; probabilité
+indicative minimale de 55 %. Les simples, doubles et triples d’un sport sont
+comparés, sans rencontre ni participant répété. Les quatre tickets sont calculés
+séparément. Un emplacement reste vide si les conditions ne sont pas remplies.
+
+Le moteur `safe-engine.js` utilise uniquement les marchés complets et les prix
+Winamax France horodatés depuis moins de 24 h. Les relevés de plus d’une heure
+sont signalés. Les prix moyens, estimés, allemands et saisis personnellement sont
+exclus. Le football accepte les trois issues 1/N/2 et les marchés binaires de buts
+ou handicaps en demi-but. Les cotes et probabilités ne sont jamais corrigées par
+un facteur forfaitaire « 1,50 devient 1,20 ». La cote réellement confirmée doit
+encore être dans l’intervalle cible pour enregistrer un ticket.
+
+Les probabilités de marché ne sont ni des fréquences validées ni une preuve
+de rentabilité. Les combinés supposent les rencontres indépendantes. Le moteur
+ne dispose pas de données blessures/compositions. Aucun pari n’est forcé chaque
+jour, aucun bénéfice n’est garanti et aucune mise n’est automatisée.
+
+Les tickets choisis vont dans `cdj.bets` avec `source: safe` et apparaissent dans
+une catégorie dédiée du tableau de bord. Un ticket par sport/catégorie et par
+jour peut être enregistré. Les prix sont rechargés avant la sauvegarde ; les
+matchs commencés ou les prix modifiés imposent un nouveau choix. Les premiers
+tickets affichés sont aussi archivés avant match dans `cdj.safeDaily` (90 jours),
+séparément des mises et sans leur attribuer des victoires fictives.
+
+Le collecteur `update_sports.py` couvre désormais aussi le football avec le même
+quota partagé, sans augmenter le plafond de 18 crédits par passe. Le workflow
+`Cotes Winamax et Safe du jour` relève les prix et publie les nouveaux fichiers
+via GitHub Pages. Les données initiales football reprennent uniquement les prix
+Winamax France déjà archivés, avec leurs horodatages d’origine.
+
+Validation : `node tests/safe.test.cjs`,
+`python -m unittest discover -s tests -p 'test_safe_sports.py'`.
+Le test navigateur `tests/test_safe_browser.py` utilise des prix fictifs isolés
+pour vérifier le parcours ; ces données ne sont jamais publiées comme cotes.

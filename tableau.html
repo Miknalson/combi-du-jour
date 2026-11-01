@@ -47,7 +47,7 @@
     </div>
     <nav class="nav" aria-label="Pages"><a href="./"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M8 8h8M8 12h5M8 16h8"/></svg> Analyse</a><a href="tableau.html" aria-current="page"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 19V5M4 19h16M8 15v-4M13 15V7M18 15v-6"/></svg> Tableau de bord</a></nav>
   </header>
-<nav class="sport-tabs" aria-label="Choisir un sport"><a href="./">Football</a><a href="sports.html?sport=basket">Basket</a><a href="sports.html?sport=tennis">Tennis</a></nav>
+<nav class="sport-tabs" aria-label="Choisir un sport"><a href="./">Football</a><a href="sports.html?sport=basket">Basket</a><a href="sports.html?sport=tennis">Tennis</a><a href="safe.html">Safe du jour</a></nav>
 
   <form class="bank" id="bankForm">
     <div class="field"><label for="bankStart">Bankroll de départ (€)</label><input type="number" id="bankStart" step="any" min="0" inputmode="decimal" placeholder="ex. 100"></div>
@@ -215,7 +215,8 @@ function renderCompare(rows){
       exp:s.reduce(function(a,r){ return a+(r.b.estProb||0); },0), staked:staked, net:n, roi: staked ? n/staked : null};
   }
   var groups = [['Combinés de l\'algo', rows.filter(function(r){ return r.b.source==='algo'; })],
-                ['Mes tickets', rows.filter(function(r){ return r.b.source!=='algo'; })],
+                ['Safe du jour', rows.filter(function(r){ return r.b.source==='safe'; })],
+                ['Mes autres tickets', rows.filter(function(r){ return r.b.source!=='algo'&&r.b.source!=='safe'; })],
                 ['Total', rows]];
   var res = {};
   document.getElementById('cmpRows').innerHTML = groups.map(function(g){
@@ -237,7 +238,7 @@ function renderBets(rows){
       return '<div class="legline">'+esc(l.home)+' – '+esc(l.away)+' : <strong>'+esc(l.label)+'</strong>'+(st?' <span class="'+(st.ok?'ok':'ko')+'">'+esc(st.score)+(st.ok?' ✓':' ✗')+'</span>':'')+'</div>';
     }).join('');
     var badge = r.st==='won' ? '<span class="badge won">Gagné '+signed(r.net)+'</span>' : r.st==='lost' ? '<span class="badge lost">Perdu '+signed(r.net)+'</span>' : '<span class="badge wait">En attente</span>';
-    return '<tr><td style="white-space:nowrap">'+esc(day(b.legs[0] ? b.legs[0].kickoff : b.createdAt))+'<br><span class="chip '+(b.source==='algo'?'algo':'perso')+'">'+(b.source==='algo'?'ALGO':'PERSO')+'</span></td>' +
+    return '<tr><td style="white-space:nowrap">'+esc(day(b.legs[0] ? b.legs[0].kickoff : b.createdAt))+'<br><span class="chip '+(b.source==='algo'?'algo':'perso')+'">'+(b.source==='algo'?'ALGO':b.source==='safe'?'SAFE DU JOUR':'PERSO')+'</span></td>' +
       '<td>'+legs+'</td><td class="num">'+odds(b.odds)+'<br><span class="status">'+(typeof b.estProb==='number'&&isFinite(b.estProb)?pct(b.estProb):'Non estimée')+'</span></td><td class="num">'+eur(b.stake)+'</td>' +
       '<td>'+badge+(b.manual?'<br><span class="status">fixé à la main</span>':'')+'</td>' +
       '<td><div class="acts" data-id="'+b.id+'">' +
@@ -309,3 +310,4 @@ render();
 </script>
 </body>
 </html>
+

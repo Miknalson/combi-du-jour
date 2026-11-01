@@ -1,10 +1,16 @@
-name: Cotes Winamax Basket et Tennis
+name: Cotes Winamax et Safe du jour
 on:
   push:
     branches: [main]
     paths:
       - 'scripts/update_sports.py'
       - '.github/workflows/cotes-sports.yml'
+      - 'safe*'
+      - 'index.html'
+      - 'sports.html'
+      - 'tableau.html'
+      - 'tests/safe.test.cjs'
+      - 'tests/test_safe_sports.py'
   schedule:
     - cron: '5 6 * * *'
   workflow_dispatch:
@@ -27,6 +33,8 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_sports.py'
           node tests/sports-combos.test.cjs
+          node tests/safe.test.cjs
+          python -m unittest discover -s tests -p 'test_safe_sports.py'
       - name: Relever les cotes Winamax France
         continue-on-error: true
         env:
@@ -39,13 +47,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/sports/
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Cotes Winamax basket et tennis"
+          git commit -m "Cotes Winamax football basket et tennis"
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp index.html tableau.html sports.html style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp index.html tableau.html sports.html safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
@@ -60,3 +68,4 @@ jobs:
     steps:
       - id: deploiement
         uses: actions/deploy-pages@v4
+
