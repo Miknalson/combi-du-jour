@@ -2689,50 +2689,6 @@
    "score": "2-1"
   },
   {
-   "id": "liga2-tenerife-andorra-cf",
-   "league": "LIGA2",
-   "kickoff": "2026-11-01T20:00Z",
-   "home": "Tenerife",
-   "away": "Andorra CF",
-   "o1": 2.063,
-   "oX": 3.196,
-   "o2": 3.452,
-   "best": {
-    "2": {
-     "odds": 3.81,
-     "book": "Pinnacle"
-    },
-    "1": {
-     "odds": 2.25,
-     "book": "Unibet (NL)"
-    },
-    "X": {
-     "odds": 3.4,
-     "book": "Coolbet"
-    }
-   },
-   "books": 17,
-   "referenceAt": "2026-11-01T07:47:10Z",
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-11-01T07:48:58Z",
-    "o1": 2.13,
-    "oX": 3.29,
-    "o2": 3.81,
-    "ou": {}
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-11-01T07:48:16Z",
-    "o1": 1.94,
-    "oX": 3.1,
-    "o2": 3.25,
-    "ou": {}
-   }
-  },
-  {
    "id": "por-braga-famalicao",
    "league": "POR",
    "kickoff": "2026-11-01T20:30Z",
