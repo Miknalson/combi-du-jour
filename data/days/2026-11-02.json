@@ -11,7 +11,8 @@
    "away": "Epitsentr",
    "o1": 2.0,
    "oX": 3.5,
-   "o2": 3.4
+   "o2": 3.4,
+   "score": "1-0"
   },
   {
    "id": "liga2-tenerife-andorra-cf",
@@ -90,7 +91,8 @@
     "oX": 4.4,
     "o2": 1.54,
     "ou": {}
-   }
+   },
+   "score": "0-3"
   },
   {
    "id": "liga2-oviedo-las-palmas",
@@ -134,7 +136,8 @@
     "oX": 3.5,
     "o2": 4.0,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   },
   {
    "id": "rou-fc-voluntari-farul-constanta",
@@ -144,7 +147,8 @@
    "away": "Farul Constanta",
    "o1": 3.1,
    "oX": 3.65,
-   "o2": 2.2
+   "o2": 2.2,
+   "score": "1-2"
   },
   {
    "id": "ukr-karpaty-lviv-kudrivka",
@@ -154,7 +158,8 @@
    "away": "Kudrivka",
    "o1": 1.41,
    "oX": 4.75,
-   "o2": 7.0
+   "o2": 7.0,
+   "score": "5-0"
   },
   {
    "id": "pol-radomiak-radom-slask-wrocaw",
@@ -198,7 +203,8 @@
     "oX": 3.45,
     "o2": 2.75,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "pol-zagebie-lubin-korona-kielce",
@@ -242,7 +248,8 @@
     "oX": 3.15,
     "o2": 2.5,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "srb-mladost-radnik",
@@ -252,7 +259,8 @@
    "away": "Radnik",
    "o1": 2.7,
    "oX": 3.2,
-   "o2": 2.63
+   "o2": 2.63,
+   "score": "0-1"
   },
   {
    "id": "srb-radnicki-nis-zeleznicar-pancevo",
@@ -306,7 +314,8 @@
     "oX": 3.05,
     "o2": 2.35,
     "ou": {}
-   }
+   },
+   "score": "5-0"
   },
   {
    "id": "liga2-real-valladolid-cf-leganes",
@@ -350,7 +359,8 @@
     "oX": 3.35,
     "o2": 3.7,
     "ou": {}
-   }
+   },
+   "score": "4-3"
   },
   {
    "id": "sa-sassuolo-fiorentina",
@@ -413,7 +423,8 @@
     "oX": 3.65,
     "o2": 2.25,
     "ou": {}
-   }
+   },
+   "score": "2-4"
   },
   {
    "id": "den-sonderjyske-fc-copenhagen",
@@ -457,7 +468,8 @@
     "oX": 4.5,
     "o2": 1.37,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "por2-penafiel-feirense",
@@ -467,7 +479,8 @@
    "away": "Feirense",
    "o1": 1.9,
    "oX": 3.55,
-   "o2": 4.0
+   "o2": 4.0,
+   "score": "1-0"
   },
   {
    "id": "swe-gais-aik",
@@ -511,7 +524,8 @@
     "oX": 3.6,
     "o2": 3.55,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "swe-mjallby-aif-kalmar-ff",
@@ -555,7 +569,8 @@
     "oX": 3.2,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "rou-u-cluj-fcsb",
@@ -565,7 +580,8 @@
    "away": "FCSB",
    "o1": 2.55,
    "oX": 3.55,
-   "o2": 2.6
+   "o2": 2.6,
+   "score": "1-0"
   },
   {
    "id": "pol-rakow-czestochowa-pogon-szczecin",
@@ -609,7 +625,8 @@
     "oX": 3.5,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "l1-lorient-brest",
@@ -664,7 +681,8 @@
     "oX": 3.15,
     "o2": 2.8,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "l2-red-star-nancy",
@@ -708,7 +726,8 @@
     "oX": 3.15,
     "o2": 2.8,
     "ou": {}
-   }
+   },
+   "score": "1-4"
   },
   {
    "id": "l2-stade-de-reims-sochaux",
@@ -752,7 +771,8 @@
     "oX": 3.5,
     "o2": 4.1,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "sa-atalanta-bc-parma",
@@ -811,7 +831,8 @@
     "oX": 4.4,
     "o2": 5.1,
     "ou": {}
-   }
+   },
+   "score": "0-3"
   },
   {
    "id": "liga-deportivo-la-coruna-ca-osasuna",
@@ -866,7 +887,8 @@
     "oX": 3.15,
     "o2": 3.3,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "liga2-mallorca-cadiz-cf",
@@ -910,7 +932,8 @@
     "oX": 3.85,
     "o2": 5.2,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "pl-newcastle-united-everton",
@@ -969,7 +992,8 @@
     "oX": 3.45,
     "o2": 2.95,
     "ou": {}
-   }
+   },
+   "score": "0-1"
   },
   {
    "id": "por-benfica-alverca",
@@ -1028,7 +1052,8 @@
     "oX": 7.75,
     "o2": 12.0,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "por-gil-vicente-vitoria-sc",
@@ -1087,7 +1112,8 @@
     "oX": 3.05,
     "o2": 2.35,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   }
  ]
 }
