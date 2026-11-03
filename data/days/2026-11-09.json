@@ -1,0 +1,37 @@
+{
+ "date": "2026-11-09",
+ "updatedAt": "2026-11-03T07:54:15Z",
+ "source": "oddsportal",
+ "matches": [
+  {
+   "id": "rou-fc-botosani-otelul",
+   "league": "ROU",
+   "kickoff": "2026-11-09T18:00Z",
+   "home": "FC Botosani",
+   "away": "Otelul",
+   "o1": 2.05,
+   "oX": 3.45,
+   "o2": 3.3
+  },
+  {
+   "id": "liga2-sabadell-fc-real-sociedad-b",
+   "league": "LIGA2",
+   "kickoff": "2026-11-09T19:30Z",
+   "home": "Sabadell FC",
+   "away": "Real Sociedad B",
+   "o1": 1.66,
+   "oX": 4.0,
+   "o2": 5.5
+  },
+  {
+   "id": "por2-torreense-leiria",
+   "league": "POR2",
+   "kickoff": "2026-11-09T20:15Z",
+   "home": "Torreense",
+   "away": "Leiria",
+   "o1": 2.1,
+   "oX": 3.4,
+   "o2": 3.1
+  }
+ ]
+}

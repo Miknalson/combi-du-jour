@@ -2,490 +2,6 @@
  "date": "2026-11-05",
  "matches": [
   {
-   "id": "uel-ac-milan-ferencvaros-tc",
-   "league": "UEL",
-   "kickoff": "2026-11-05T17:45Z",
-   "home": "AC Milan",
-   "away": "Ferencváros TC",
-   "o1": 1.311,
-   "oX": 5.204,
-   "o2": 8.664,
-   "best": {
-    "1": {
-     "odds": 1.36,
-     "book": "1xBet"
-    },
-    "2": {
-     "odds": 10.0,
-     "book": "Unibet (NL)"
-    },
-    "X": {
-     "odds": 5.7,
-     "book": "Winamax (DE)"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "3.5": {
-     "o": 2.263,
-     "u": 1.593
-    },
-    "3.0": {
-     "o": 1.797,
-     "u": 1.95
-    },
-    "2.5": {
-     "o": 1.523,
-     "u": 2.457
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.28,
-    "oX": 4.89,
-    "o2": 7.32,
-    "ou": {
-     "3.0": {
-      "o": 1.76,
-      "u": 1.93
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.28,
-    "oX": 5.4,
-    "o2": 7.0,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-anderlecht-salzburg",
-   "league": "UEL",
-   "kickoff": "2026-11-05T17:45Z",
-   "home": "Anderlecht",
-   "away": "Salzburg",
-   "o1": 1.887,
-   "oX": 3.816,
-   "o2": 3.631,
-   "best": {
-    "1": {
-     "odds": 1.96,
-     "book": "Codere (IT)"
-    },
-    "2": {
-     "odds": 3.81,
-     "book": "1xBet"
-    },
-    "X": {
-     "odds": 4.0,
-     "book": "Winamax (DE)"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "2.5": {
-     "o": 1.574,
-     "u": 2.315
-    },
-    "3.0": {
-     "o": 1.953,
-     "u": 1.837
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.9,
-    "oX": 3.88,
-    "o2": 3.73,
-    "ou": {
-     "3.0": {
-      "o": 1.97,
-      "u": 1.86
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.8,
-    "oX": 3.85,
-    "o2": 3.4,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-sparta-prague-bournemouth",
-   "league": "UEL",
-   "kickoff": "2026-11-05T17:45Z",
-   "home": "Sparta Prague",
-   "away": "Bournemouth",
-   "o1": 5.147,
-   "oX": 4.232,
-   "o2": 1.57,
-   "best": {
-    "2": {
-     "odds": 1.62,
-     "book": "1xBet"
-    },
-    "1": {
-     "odds": 5.6,
-     "book": "Unibet (NL)"
-    },
-    "X": {
-     "odds": 4.5,
-     "book": "Winamax (DE)"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "2.5": {
-     "o": 1.568,
-     "u": 2.342
-    },
-    "3.0": {
-     "o": 1.937,
-     "u": 1.857
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 5.24,
-    "oX": 4.35,
-    "o2": 1.57,
-    "ou": {
-     "3.0": {
-      "o": 1.96,
-      "u": 1.87
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 4.6,
-    "oX": 4.3,
-    "o2": 1.52,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-crystal-palace-tsg-hoffenheim",
-   "league": "UEL",
-   "kickoff": "2026-11-05T17:45Z",
-   "home": "Crystal Palace",
-   "away": "TSG Hoffenheim",
-   "o1": 1.897,
-   "oX": 3.817,
-   "o2": 3.606,
-   "best": {
-    "1": {
-     "odds": 1.95,
-     "book": "1xBet"
-    },
-    "2": {
-     "odds": 3.9,
-     "book": "Unibet (NL)"
-    },
-    "X": {
-     "odds": 4.0,
-     "book": "1xBet"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "3.5": {
-     "o": 2.317,
-     "u": 1.603
-    },
-    "3.0": {
-     "o": 1.847,
-     "u": 1.95
-    },
-    "2.5": {
-     "o": 1.546,
-     "u": 2.364
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.93,
-    "oX": 3.95,
-    "o2": 3.55,
-    "ou": {
-     "3.0": {
-      "o": 1.86,
-      "u": 1.98
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.86,
-    "oX": 3.7,
-    "o2": 3.4,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-pfc-levski-sofia-jagiellonia-biaystok",
-   "league": "UEL",
-   "kickoff": "2026-11-05T17:45Z",
-   "home": "PFC Levski Sofia",
-   "away": "Jagiellonia Białystok",
-   "o1": 1.967,
-   "oX": 3.538,
-   "o2": 3.614,
-   "best": {
-    "2": {
-     "odds": 3.8,
-     "book": "Nordic Bet"
-    },
-    "1": {
-     "odds": 2.06,
-     "book": "Codere (IT)"
-    },
-    "X": {
-     "odds": 3.75,
-     "book": "1xBet"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "2.5": {
-     "o": 1.8,
-     "u": 1.975
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.99,
-    "oX": 3.58,
-    "o2": 3.71,
-    "ou": {
-     "2.5": {
-      "o": 1.83,
-      "u": 2.02
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.94,
-    "oX": 3.45,
-    "o2": 3.35,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-lillestrom-viktoria-plzen",
-   "league": "UEL",
-   "kickoff": "2026-11-05T17:45Z",
-   "home": "Lillestrom",
-   "away": "Viktoria Plzeň",
-   "o1": 2.718,
-   "oX": 3.644,
-   "o2": 2.355,
-   "best": {
-    "1": {
-     "odds": 2.88,
-     "book": "Unibet (NL)"
-    },
-    "2": {
-     "odds": 2.45,
-     "book": "Nordic Bet"
-    },
-    "X": {
-     "odds": 3.85,
-     "book": "1xBet"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "3.0": {
-     "o": 1.9,
-     "u": 1.89
-    },
-    "2.5": {
-     "o": 1.567,
-     "u": 2.324
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 2.7,
-    "oX": 3.77,
-    "o2": 2.41,
-    "ou": {
-     "3.0": {
-      "o": 1.92,
-      "u": 1.92
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 2.55,
-    "oX": 3.6,
-    "o2": 2.25,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-real-sociedad-lyon",
-   "league": "UEL",
-   "kickoff": "2026-11-05T17:45Z",
-   "home": "Real Sociedad",
-   "away": "Lyon",
-   "o1": 1.908,
-   "oX": 3.799,
-   "o2": 3.569,
-   "best": {
-    "2": {
-     "odds": 3.8,
-     "book": "Unibet (NL)"
-    },
-    "1": {
-     "odds": 1.98,
-     "book": "1xBet"
-    },
-    "X": {
-     "odds": 4.0,
-     "book": "Unibet (NL)"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "3.5": {
-     "o": 2.351,
-     "u": 1.557
-    },
-    "3.0": {
-     "o": 1.9,
-     "u": 1.89
-    },
-    "2.5": {
-     "o": 1.583,
-     "u": 2.357
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.93,
-    "oX": 3.86,
-    "o2": 3.66,
-    "ou": {
-     "3.0": {
-      "o": 1.92,
-      "u": 1.92
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.86,
-    "oX": 3.75,
-    "o2": 3.35,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-nec-nijmegen-omonoia-fc",
-   "league": "UEL",
-   "kickoff": "2026-11-05T17:45Z",
-   "home": "NEC Nijmegen",
-   "away": "Omonoia FC",
-   "o1": 1.775,
-   "oX": 3.927,
-   "o2": 4.042,
-   "best": {
-    "1": {
-     "odds": 1.85,
-     "book": "Unibet (NL)"
-    },
-    "2": {
-     "odds": 4.35,
-     "book": "Nordic Bet"
-    },
-    "X": {
-     "odds": 4.15,
-     "book": "1xBet"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "2.5": {
-     "o": 1.57,
-     "u": 2.378
-    },
-    "3.0": {
-     "o": 1.927,
-     "u": 1.867
-    },
-    "3.5": {
-     "o": 2.304,
-     "u": 1.554
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.81,
-    "oX": 3.95,
-    "o2": 4.06,
-    "ou": {
-     "3.0": {
-      "o": 1.94,
-      "u": 1.89
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.72,
-    "oX": 3.85,
-    "o2": 3.75,
-    "ou": {}
-   }
-  },
-  {
    "id": "uecl-agf-aarhus-sc-braga",
    "league": "UECL",
    "kickoff": "2026-11-05T17:45Z",
@@ -801,227 +317,113 @@
    }
   },
   {
-   "id": "uel-az-alkmaar-juventus",
+   "id": "uel-ac-milan-ferencvaros-tc",
    "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "AZ Alkmaar",
-   "away": "Juventus",
-   "o1": 3.522,
-   "oX": 3.607,
-   "o2": 1.976,
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "AC Milan",
+   "away": "Ferencváros TC",
+   "o1": 1.289,
+   "oX": 5.441,
+   "o2": 9.282,
    "best": {
     "1": {
-     "odds": 3.71,
-     "book": "Pinnacle"
-    },
-    "2": {
-     "odds": 2.08,
-     "book": "Unibet (NL)"
-    },
-    "X": {
-     "odds": 3.8,
-     "book": "BetOnline.ag"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "2.5": {
-     "o": 1.772,
-     "u": 1.995
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 3.71,
-    "oX": 3.78,
-    "o2": 1.93,
-    "ou": {
-     "2.75": {
-      "o": 2.01,
-      "u": 1.83
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 3.4,
-    "oX": 3.6,
-    "o2": 1.88,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-bayer-leverkusen-marseille",
-   "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "Bayer Leverkusen",
-   "away": "Marseille",
-   "o1": 1.419,
-   "oX": 4.801,
-   "o2": 6.481,
-   "best": {
-    "1": {
-     "odds": 1.49,
+     "odds": 1.33,
      "book": "Unibet (NL)"
     },
     "2": {
-     "odds": 7.7,
-     "book": "Nordic Bet"
+     "odds": 11.1,
+     "book": "1xBet"
     },
     "X": {
-     "odds": 5.2,
+     "odds": 5.9,
      "book": "Winamax (DE)"
     }
    },
    "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
+   "referenceAt": "2026-11-03T07:46:46Z",
    "ou": {
     "3.5": {
-     "o": 2.209,
-     "u": 1.626
+     "o": 2.249,
+     "u": 1.614
     },
     "2.5": {
-     "o": 1.457,
-     "u": 2.69
+     "o": 1.517,
+     "u": 2.493
     },
     "3.0": {
-     "o": 1.7,
-     "u": 2.1
+     "o": 1.8,
+     "u": 1.975
     }
    },
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.41,
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 1.26,
     "oX": 5.14,
-    "o2": 6.61,
+    "o2": 7.86,
     "ou": {
      "3.25": {
-      "o": 1.96,
-      "u": 1.88
+      "o": 1.95,
+      "u": 1.74
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.36,
-    "oX": 5.0,
-    "o2": 5.8,
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.27,
+    "oX": 5.5,
+    "o2": 7.25,
     "ou": {}
    }
   },
   {
-   "id": "uel-benfica-lech-poznan",
+   "id": "uel-anderlecht-salzburg",
    "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "Benfica",
-   "away": "Lech Poznań",
-   "o1": 1.165,
-   "oX": 7.394,
-   "o2": 14.139,
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Anderlecht",
+   "away": "Salzburg",
+   "o1": 1.907,
+   "oX": 3.775,
+   "o2": 3.619,
    "best": {
     "1": {
-     "odds": 1.24,
+     "odds": 1.98,
+     "book": "Betsson"
+    },
+    "2": {
+     "odds": 3.81,
      "book": "1xBet"
     },
-    "2": {
-     "odds": 19.5,
-     "book": "Nordic Bet"
-    },
     "X": {
-     "odds": 9.2,
-     "book": "Nordic Bet"
+     "odds": 4.0,
+     "book": "Winamax (DE)"
     }
    },
    "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "3.5": {
-     "o": 1.829,
-     "u": 1.927
-    },
-    "2.5": {
-     "o": 1.31,
-     "u": 3.35
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.15,
-    "oX": 6.37,
-    "o2": 11.08,
-    "ou": {
-     "3.75": {
-      "o": 1.93,
-      "u": 1.76
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.13,
-    "oX": 7.5,
-    "o2": 11.0,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-celtic-besiktas-jk",
-   "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "Celtic",
-   "away": "Besiktas JK",
-   "o1": 2.869,
-   "oX": 3.612,
-   "o2": 2.266,
-   "best": {
-    "2": {
-     "odds": 2.43,
-     "book": "Unibet (NL)"
-    },
-    "1": {
-     "odds": 3.0,
-     "book": "Codere (IT)"
-    },
-    "X": {
-     "odds": 3.82,
-     "book": "Pinnacle"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
+   "referenceAt": "2026-11-03T07:46:46Z",
    "ou": {
     "2.5": {
-     "o": 1.62,
-     "u": 2.231
+     "o": 1.58,
+     "u": 2.324
     },
     "3.0": {
-     "o": 1.963,
-     "u": 1.83
+     "o": 1.957,
+     "u": 1.837
     }
    },
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 2.94,
-    "oX": 3.82,
-    "o2": 2.23,
+    "asOf": "2026-11-03T07:48:40Z",
+    "o1": 1.93,
+    "oX": 3.83,
+    "o2": 3.69,
     "ou": {
      "3.0": {
-      "o": 1.97,
+      "o": 1.98,
       "u": 1.86
      }
     }
@@ -1029,117 +431,180 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 2.7,
-    "oX": 3.6,
-    "o2": 2.15,
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.8,
+    "oX": 3.85,
+    "o2": 3.4,
     "ou": {}
    }
   },
   {
-   "id": "uel-celta-vigo-union-saint-gilloise",
+   "id": "uel-sparta-prague-bournemouth",
    "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "Celta Vigo",
-   "away": "Union Saint-Gilloise",
-   "o1": 2.022,
-   "oX": 3.635,
-   "o2": 3.373,
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Sparta Prague",
+   "away": "Bournemouth",
+   "o1": 5.758,
+   "oX": 4.388,
+   "o2": 1.507,
    "best": {
-    "1": {
-     "odds": 2.11,
+    "2": {
+     "odds": 1.56,
      "book": "1xBet"
     },
-    "2": {
-     "odds": 3.65,
-     "book": "Nordic Bet"
+    "1": {
+     "odds": 6.75,
+     "book": "BetOnline.ag"
     },
     "X": {
-     "odds": 3.82,
-     "book": "BetOnline.ag"
+     "odds": 4.62,
+     "book": "1xBet"
     }
    },
    "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
+   "referenceAt": "2026-11-03T07:46:46Z",
    "ou": {
     "2.5": {
-     "o": 1.657,
-     "u": 2.164
+     "o": 1.583,
+     "u": 2.35
     },
     "3.0": {
-     "o": 2.085,
-     "u": 1.71
+     "o": 1.92,
+     "u": 1.873
+    },
+    "3.5": {
+     "o": 2.353,
+     "u": 1.545
     }
    },
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 2.01,
-    "oX": 3.79,
-    "o2": 3.44,
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 5.79,
+    "oX": 4.53,
+    "o2": 1.52,
     "ou": {
-     "2.75": {
-      "o": 1.85,
-      "u": 1.98
+     "3.0": {
+      "o": 1.93,
+      "u": 1.9
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.94,
-    "oX": 3.65,
-    "o2": 3.15,
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 5.3,
+    "oX": 4.4,
+    "o2": 1.44,
     "ou": {}
    }
   },
   {
-   "id": "uel-sunderland-dinamo-zagreb",
+   "id": "uel-crystal-palace-tsg-hoffenheim",
    "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "Sunderland",
-   "away": "Dinamo Zagreb",
-   "o1": 1.448,
-   "oX": 4.519,
-   "o2": 6.447,
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Crystal Palace",
+   "away": "TSG Hoffenheim",
+   "o1": 1.929,
+   "oX": 3.822,
+   "o2": 3.491,
    "best": {
-    "2": {
-     "odds": 7.1,
-     "book": "Nordic Bet"
-    },
     "1": {
-     "odds": 1.51,
+     "odds": 2.02,
      "book": "Unibet (NL)"
     },
-    "X": {
-     "odds": 4.82,
+    "2": {
+     "odds": 3.73,
      "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.06,
+     "book": "Pinnacle"
     }
    },
    "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
+   "referenceAt": "2026-11-03T07:46:46Z",
    "ou": {
-    "2.5": {
-     "o": 1.638,
-     "u": 2.201
+    "3.5": {
+     "o": 2.324,
+     "u": 1.584
     },
     "3.0": {
-     "o": 1.995,
-     "u": 1.78
+     "o": 1.833,
+     "u": 1.983
+    },
+    "2.5": {
+     "o": 1.527,
+     "u": 2.493
     }
    },
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.45,
-    "oX": 4.69,
-    "o2": 6.53,
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 1.96,
+    "oX": 4.06,
+    "o2": 3.62,
     "ou": {
-     "2.75": {
-      "o": 1.82,
+     "3.0": {
+      "o": 1.87,
+      "u": 2.03
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.88,
+    "oX": 3.7,
+    "o2": 3.3,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-pfc-levski-sofia-jagiellonia-biaystok",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "PFC Levski Sofia",
+   "away": "Jagiellonia Białystok",
+   "o1": 1.969,
+   "oX": 3.55,
+   "o2": 3.639,
+   "best": {
+    "2": {
+     "odds": 3.8,
+     "book": "Nordic Bet"
+    },
+    "1": {
+     "odds": 2.06,
+     "book": "Codere (IT)"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "2.5": {
+     "o": 1.795,
+     "u": 1.994
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 2.0,
+    "oX": 3.59,
+    "o2": 3.72,
+    "ou": {
+     "2.5": {
+      "o": 1.83,
       "u": 2.02
      }
     }
@@ -1147,183 +612,195 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.41,
-    "oX": 4.5,
-    "o2": 5.7,
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.94,
+    "oX": 3.45,
+    "o2": 3.35,
     "ou": {}
    }
   },
   {
-   "id": "uel-torreense-fc-ararat-armenia",
+   "id": "uel-lillestrom-viktoria-plzen",
    "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "Torreense",
-   "away": "FC Ararat-Armenia",
-   "o1": 1.748,
-   "oX": 3.724,
-   "o2": 4.438,
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Lillestrom",
+   "away": "Viktoria Plzeň",
+   "o1": 2.855,
+   "oX": 3.671,
+   "o2": 2.264,
    "best": {
-    "2": {
-     "odds": 4.75,
-     "book": "Nordic Bet"
-    },
     "1": {
-     "odds": 1.83,
+     "odds": 3.0,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 2.33,
      "book": "Unibet (NL)"
     },
     "X": {
-     "odds": 4.0,
+     "odds": 3.88,
      "book": "1xBet"
     }
    },
    "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
+   "referenceAt": "2026-11-03T07:46:46Z",
    "ou": {
     "2.5": {
-     "o": 1.954,
-     "u": 1.818
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.78,
-    "oX": 3.9,
-    "o2": 4.24,
-    "ou": {
-     "2.5": {
-      "o": 2.03,
-      "u": 1.82
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.68,
-    "oX": 3.75,
-    "o2": 4.1,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-hapoel-be-er-sheva-ofi-crete",
-   "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "Hapoel Be'er Sheva",
-   "away": "OFI Crete",
-   "o1": 2.087,
-   "oX": 3.541,
-   "o2": 3.272,
-   "best": {
-    "1": {
-     "odds": 2.18,
-     "book": "1xBet"
+     "o": 1.568,
+     "u": 2.358
     },
-    "2": {
-     "odds": 3.5,
-     "book": "Nordic Bet"
-    },
-    "X": {
-     "odds": 3.75,
-     "book": "Coolbet"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
-    "2.5": {
-     "o": 1.659,
-     "u": 2.155
-    },
-    "3.0": {
-     "o": 2.06,
-     "u": 1.725
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 2.15,
-    "oX": 3.61,
-    "o2": 3.24,
-    "ou": {
-     "2.75": {
-      "o": 1.85,
-      "u": 1.99
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 2.0,
-    "oX": 3.5,
-    "o2": 3.1,
-    "ou": {}
-   }
-  },
-  {
-   "id": "uel-sk-sturm-graz-nk-celje",
-   "league": "UEL",
-   "kickoff": "2026-11-05T20:00Z",
-   "home": "SK Sturm Graz",
-   "away": "NK Celje",
-   "o1": 1.581,
-   "oX": 4.209,
-   "o2": 5.104,
-   "best": {
-    "2": {
-     "odds": 5.5,
-     "book": "Nordic Bet"
-    },
-    "1": {
-     "odds": 1.66,
-     "book": "Unibet (NL)"
-    },
-    "X": {
-     "odds": 4.46,
-     "book": "1xBet"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-10-31T07:47:39Z",
-   "ou": {
     "3.0": {
      "o": 1.897,
-     "u": 1.897
-    },
-    "2.5": {
-     "o": 1.595,
-     "u": 2.284
+     "u": 1.91
     }
    },
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-10-31T07:48:22Z",
-    "o1": 1.57,
-    "oX": 4.39,
-    "o2": 5.2,
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 2.87,
+    "oX": 3.83,
+    "o2": 2.29,
+    "ou": {
+     "3.0": {
+      "o": 1.91,
+      "u": 1.93
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 2.7,
+    "oX": 3.6,
+    "o2": 2.15,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-real-sociedad-lyon",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "Real Sociedad",
+   "away": "Lyon",
+   "o1": 1.828,
+   "oX": 3.88,
+   "o2": 3.869,
+   "best": {
+    "2": {
+     "odds": 4.21,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 1.91,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 4.11,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "3.5": {
+     "o": 2.375,
+     "u": 1.615
+    },
+    "3.0": {
+     "o": 1.9,
+     "u": 1.907
+    },
+    "2.5": {
+     "o": 1.534,
+     "u": 2.391
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 1.85,
+    "oX": 4.09,
+    "o2": 4.03,
     "ou": {
      "3.0": {
       "o": 1.92,
-      "u": 1.92
+      "u": 1.97
      }
     }
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-10-31T07:47:41Z",
-    "o1": 1.54,
-    "oX": 4.2,
-    "o2": 4.6,
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.76,
+    "oX": 3.8,
+    "o2": 3.7,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-nec-nijmegen-omonoia-fc",
+   "league": "UEL",
+   "kickoff": "2026-11-05T17:45Z",
+   "home": "NEC Nijmegen",
+   "away": "Omonoia FC",
+   "o1": 1.771,
+   "oX": 3.938,
+   "o2": 4.014,
+   "best": {
+    "1": {
+     "odds": 1.82,
+     "book": "Betsson"
+    },
+    "2": {
+     "odds": 4.3,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.2,
+     "book": "Unibet (NL)"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "2.5": {
+     "o": 1.57,
+     "u": 2.378
+    },
+    "3.0": {
+     "o": 1.927,
+     "u": 1.867
+    },
+    "3.5": {
+     "o": 2.274,
+     "u": 1.598
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:40Z",
+    "o1": 1.81,
+    "oX": 3.97,
+    "o2": 4.07,
+    "ou": {
+     "3.0": {
+      "o": 1.94,
+      "u": 1.89
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.72,
+    "oX": 3.85,
+    "o2": 3.75,
     "ou": {}
    }
   },
@@ -1641,8 +1118,535 @@
     "o2": 4.55,
     "ou": {}
    }
+  },
+  {
+   "id": "uel-az-alkmaar-juventus",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "AZ Alkmaar",
+   "away": "Juventus",
+   "o1": 3.678,
+   "oX": 3.624,
+   "o2": 1.933,
+   "best": {
+    "1": {
+     "odds": 3.9,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 2.0,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.83,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "2.5": {
+     "o": 1.752,
+     "u": 2.033
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 3.67,
+    "oX": 3.8,
+    "o2": 1.95,
+    "ou": {
+     "2.75": {
+      "o": 2.01,
+      "u": 1.83
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 3.45,
+    "oX": 3.55,
+    "o2": 1.88,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-bayer-leverkusen-marseille",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Bayer Leverkusen",
+   "away": "Marseille",
+   "o1": 1.399,
+   "oX": 4.953,
+   "o2": 6.724,
+   "best": {
+    "1": {
+     "odds": 1.45,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 7.7,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 5.43,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "3.5": {
+     "o": 2.12,
+     "u": 1.695
+    },
+    "2.5": {
+     "o": 1.437,
+     "u": 2.75
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:40Z",
+    "o1": 1.41,
+    "oX": 5.43,
+    "o2": 6.95,
+    "ou": {
+     "3.25": {
+      "o": 1.93,
+      "u": 1.95
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.35,
+    "oX": 5.0,
+    "o2": 6.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-benfica-lech-poznan",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Benfica",
+   "away": "Lech Poznań",
+   "o1": 1.148,
+   "oX": 7.904,
+   "o2": 14.943,
+   "best": {
+    "1": {
+     "odds": 1.21,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 19.5,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 9.0,
+     "book": "Unibet (NL)"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "3.5": {
+     "o": 1.753,
+     "u": 2.038
+    },
+    "2.5": {
+     "o": 1.293,
+     "u": 3.473
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 1.14,
+    "oX": 6.72,
+    "o2": 12.23,
+    "ou": {
+     "3.75": {
+      "o": 1.89,
+      "u": 1.79
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.13,
+    "oX": 7.75,
+    "o2": 11.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-celtic-besiktas-jk",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Celtic",
+   "away": "Besiktas JK",
+   "o1": 3.087,
+   "oX": 3.682,
+   "o2": 2.119,
+   "best": {
+    "2": {
+     "odds": 2.23,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 3.25,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 3.89,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "2.5": {
+     "o": 1.6,
+     "u": 2.312
+    },
+    "3.0": {
+     "o": 1.943,
+     "u": 1.86
+    },
+    "3.5": {
+     "o": 2.353,
+     "u": 1.545
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 3.07,
+    "oX": 3.89,
+    "o2": 2.15,
+    "ou": {
+     "3.0": {
+      "o": 1.93,
+      "u": 1.9
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 2.9,
+    "oX": 3.65,
+    "o2": 2.05,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-celta-vigo-union-saint-gilloise",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Celta Vigo",
+   "away": "Union Saint-Gilloise",
+   "o1": 2.15,
+   "oX": 3.607,
+   "o2": 3.086,
+   "best": {
+    "1": {
+     "odds": 2.24,
+     "book": "Codere (IT)"
+    },
+    "2": {
+     "odds": 3.3,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.85,
+     "book": "Coolbet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "2.5": {
+     "o": 1.657,
+     "u": 2.181
+    },
+    "3.0": {
+     "o": 2.1,
+     "u": 1.7
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 2.21,
+    "oX": 3.67,
+    "o2": 3.1,
+    "ou": {
+     "2.75": {
+      "o": 1.88,
+      "u": 1.96
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 2.05,
+    "oX": 3.6,
+    "o2": 2.9,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-sunderland-dinamo-zagreb",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Sunderland",
+   "away": "Dinamo Zagreb",
+   "o1": 1.445,
+   "oX": 4.544,
+   "o2": 6.424,
+   "best": {
+    "2": {
+     "odds": 7.0,
+     "book": "Unibet (NL)"
+    },
+    "1": {
+     "odds": 1.48,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 4.82,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "2.5": {
+     "o": 1.63,
+     "u": 2.231
+    },
+    "3.0": {
+     "o": 2.045,
+     "u": 1.735
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:41Z",
+    "o1": 1.47,
+    "oX": 4.59,
+    "o2": 6.37,
+    "ou": {
+     "2.75": {
+      "o": 1.85,
+      "u": 1.99
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.42,
+    "oX": 4.5,
+    "o2": 5.6,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-torreense-fc-ararat-armenia",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Torreense",
+   "away": "FC Ararat-Armenia",
+   "o1": 1.735,
+   "oX": 3.746,
+   "o2": 4.487,
+   "best": {
+    "2": {
+     "odds": 4.9,
+     "book": "Unibet (NL)"
+    },
+    "1": {
+     "odds": 1.81,
+     "book": "Codere (IT)"
+    },
+    "X": {
+     "odds": 4.0,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "2.5": {
+     "o": 1.967,
+     "u": 1.815
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:40Z",
+    "o1": 1.79,
+    "oX": 3.92,
+    "o2": 4.25,
+    "ou": {
+     "2.5": {
+      "o": 2.02,
+      "u": 1.82
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.7,
+    "oX": 3.65,
+    "o2": 4.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-hapoel-be-er-sheva-ofi-crete",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "Hapoel Be'er Sheva",
+   "away": "OFI Crete",
+   "o1": 2.086,
+   "oX": 3.581,
+   "o2": 3.251,
+   "best": {
+    "1": {
+     "odds": 2.16,
+     "book": "Codere (IT)"
+    },
+    "2": {
+     "odds": 3.51,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.85,
+     "book": "Coolbet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "2.5": {
+     "o": 1.649,
+     "u": 2.2
+    },
+    "3.0": {
+     "o": 2.075,
+     "u": 1.715
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:40Z",
+    "o1": 2.12,
+    "oX": 3.65,
+    "o2": 3.3,
+    "ou": {
+     "2.75": {
+      "o": 1.84,
+      "u": 2.0
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 2.0,
+    "oX": 3.5,
+    "o2": 3.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "uel-sk-sturm-graz-nk-celje",
+   "league": "UEL",
+   "kickoff": "2026-11-05T20:00Z",
+   "home": "SK Sturm Graz",
+   "away": "NK Celje",
+   "o1": 1.539,
+   "oX": 4.289,
+   "o2": 5.416,
+   "best": {
+    "2": {
+     "odds": 6.0,
+     "book": "Nordic Bet"
+    },
+    "1": {
+     "odds": 1.6,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 4.62,
+     "book": "BetOnline.ag"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-03T07:46:46Z",
+   "ou": {
+    "3.0": {
+     "o": 1.877,
+     "u": 1.913
+    },
+    "2.5": {
+     "o": 1.578,
+     "u": 2.336
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-03T07:48:40Z",
+    "o1": 1.53,
+    "oX": 4.55,
+    "o2": 5.53,
+    "ou": {
+     "3.0": {
+      "o": 1.9,
+      "u": 1.93
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-03T07:49:03Z",
+    "o1": 1.48,
+    "oX": 4.3,
+    "o2": 4.9,
+    "ou": {}
+   }
   }
  ],
- "updatedAt": "2026-10-31T07:48:32Z",
+ "updatedAt": "2026-11-03T07:49:05Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }
