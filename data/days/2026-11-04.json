@@ -56,7 +56,8 @@
     "oX": 3.4,
     "o2": 2.8,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "ucl-aek-athens-real-madrid",
@@ -119,7 +120,8 @@
     "oX": 6.75,
     "o2": 1.18,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   },
   {
    "id": "ucl-fenerbahce-liverpool",
@@ -178,7 +180,8 @@
     "oX": 5.1,
     "o2": 1.37,
     "ou": {}
-   }
+   },
+   "score": "3-2"
   },
   {
    "id": "bel-kv-kortrijk-kv-mechelen",
@@ -222,7 +225,8 @@
     "oX": 3.15,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "1-3"
   },
   {
    "id": "cha-cardiff-city-west-ham-united",
@@ -266,7 +270,8 @@
     "oX": 3.9,
     "o2": 1.88,
     "ou": {}
-   }
+   },
+   "score": "3-3"
   },
   {
    "id": "cha-wrexham-afc-middlesbrough",
@@ -310,7 +315,8 @@
     "oX": 3.9,
     "o2": 1.66,
     "ou": {}
-   }
+   },
+   "score": "2-0"
   },
   {
    "id": "ucl-slavia-praha-arsenal",
@@ -369,7 +375,8 @@
     "oX": 6.0,
     "o2": 1.18,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   },
   {
    "id": "ucl-borussia-dortmund-real-betis",
@@ -432,7 +439,8 @@
     "oX": 4.1,
     "o2": 3.85,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "ucl-psv-eindhoven-club-brugge",
@@ -491,7 +499,8 @@
     "oX": 4.1,
     "o2": 2.9,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   },
   {
    "id": "ucl-rc-lens-como",
@@ -554,7 +563,8 @@
     "oX": 3.7,
     "o2": 1.86,
     "ou": {}
-   }
+   },
+   "score": "1-9"
   },
   {
    "id": "ucl-rb-leipzig-manchester-city",
@@ -613,7 +623,8 @@
     "oX": 4.7,
     "o2": 1.45,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   },
   {
    "id": "ucl-porto-napoli",
@@ -672,7 +683,8 @@
     "oX": 3.6,
     "o2": 3.5,
     "ou": {}
-   }
+   },
+   "score": "4-1"
   },
   {
    "id": "ucl-viking-fk-sabah-fk",
@@ -731,7 +743,8 @@
     "oX": 5.2,
     "o2": 5.7,
     "ou": {}
-   }
+   },
+   "score": "4-1"
   },
   {
    "id": "cha-bristol-city-wolverhampton-wanderers",
@@ -775,7 +788,8 @@
     "oX": 3.25,
     "o2": 2.0,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   }
  ]
 }
