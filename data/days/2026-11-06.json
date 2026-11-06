@@ -9,7 +9,8 @@
    "away": "Veres-Rivne",
    "o1": 1.2,
    "oX": 6.75,
-   "o2": 14.0
+   "o2": 14.0,
+   "score": "2-0"
   },
   {
    "id": "ukr-obolon-livyi-bereg",
@@ -19,7 +20,8 @@
    "away": "Livyi Bereg",
    "o1": 3.3,
    "oX": 3.1,
-   "o2": 2.3
+   "o2": 2.3,
+   "score": "1-1"
   },
   {
    "id": "rou-uta-arad-petrolul",
@@ -29,7 +31,8 @@
    "away": "Petrolul",
    "o1": 1.75,
    "oX": 3.8,
-   "o2": 4.3
+   "o2": 4.3,
+   "score": "0-1"
   },
   {
    "id": "pol-motor-lublin-wisa-pock",
@@ -64,7 +67,8 @@
     "oX": 3.35,
     "o2": 2.75,
     "ou": {}
-   }
+   },
+   "score": "3-2"
   },
   {
    "id": "tur-gazisehir-gaziantep-kasimpasa-sk",
@@ -99,7 +103,8 @@
     "oX": 3.2,
     "o2": 2.15,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "bl2-dynamo-dresden-greuther-furth",
@@ -134,7 +139,8 @@
     "oX": 3.5,
     "o2": 3.2,
     "ou": {}
-   }
+   },
+   "score": "3-0"
   },
   {
    "id": "bl2-eintracht-braunschweig-fc-energie-cottbus",
@@ -178,7 +184,8 @@
     "oX": 3.65,
     "o2": 3.15,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "den-silkeborg-if-lyngby",
@@ -213,7 +220,8 @@
     "oX": 3.35,
     "o2": 2.25,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "swe-hammarby-if-if-elfsborg",
@@ -257,7 +265,8 @@
     "oX": 4.4,
     "o2": 5.5,
     "ou": {}
-   }
+   },
+   "score": "4-1"
   },
   {
    "id": "rou-fc-arges-dinamo-bucuresti",
@@ -267,7 +276,8 @@
    "away": "Dinamo Bucuresti",
    "o1": 4.3,
    "oX": 3.4,
-   "o2": 1.86
+   "o2": 1.86,
+   "score": "2-1"
   },
   {
    "id": "por2-afs-vizela",
@@ -277,7 +287,8 @@
    "away": "Vizela",
    "o1": 3.2,
    "oX": 3.3,
-   "o2": 2.2
+   "o2": 2.2,
+   "score": "2-2"
   },
   {
    "id": "ere-willem-ii-fc-zwolle",
@@ -331,7 +342,8 @@
     "oX": 3.45,
     "o2": 1.94,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "l2-boulogne-annecy-fc",
@@ -341,7 +353,8 @@
    "away": "Annecy FC",
    "o1": 2.45,
    "oX": 3.0,
-   "o2": 3.0
+   "o2": 3.0,
+   "score": "3-0"
   },
   {
    "id": "l2-dijon-red-star",
@@ -351,7 +364,8 @@
    "away": "Red Star",
    "o1": 2.6,
    "oX": 3.45,
-   "o2": 2.55
+   "o2": 2.55,
+   "score": "1-0"
   },
   {
    "id": "l2-grenoble-stade-de-reims",
@@ -361,7 +375,8 @@
    "away": "Stade de Reims",
    "o1": 4.33,
    "oX": 3.55,
-   "o2": 1.9
+   "o2": 1.9,
+   "score": "3-2"
   },
   {
    "id": "l2-montpellier-metz",
@@ -371,7 +386,8 @@
    "away": "Metz",
    "o1": 2.05,
    "oX": 3.4,
-   "o2": 3.85
+   "o2": 3.85,
+   "score": "2-3"
   },
   {
    "id": "l2-nancy-sochaux",
@@ -381,7 +397,8 @@
    "away": "Sochaux",
    "o1": 1.76,
    "oX": 3.6,
-   "o2": 5.0
+   "o2": 5.0,
+   "score": "1-0"
   },
   {
    "id": "l2-usl-dunkerque-guingamp",
@@ -391,7 +408,8 @@
    "away": "Guingamp",
    "o1": 2.7,
    "oX": 3.45,
-   "o2": 2.38
+   "o2": 2.38,
+   "score": "3-0"
   },
   {
    "id": "liga2-cd-castellon-sd-eibar",
@@ -461,7 +479,8 @@
     "oX": 3.45,
     "o2": 3.3,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "bl-hamburger-sv-borussia-monchengladbach",
@@ -520,7 +539,8 @@
     "oX": 3.45,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "bel-standard-liege-sk-beveren",
@@ -564,7 +584,8 @@
     "oX": 3.5,
     "o2": 3.45,
     "ou": {}
-   }
+   },
+   "score": "3-0"
   },
   {
    "id": "sa-venezia-udinese",
@@ -619,7 +640,8 @@
     "oX": 3.3,
     "o2": 2.85,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "l1-toulouse-strasbourg",
@@ -678,7 +700,8 @@
     "oX": 3.55,
     "o2": 2.9,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "pl-everton-coventry-city",
@@ -733,7 +756,8 @@
     "oX": 3.9,
     "o2": 4.3,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "liga-sevilla-alaves",
@@ -788,7 +812,8 @@
     "oX": 3.35,
     "o2": 3.95,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "cha-derby-county-bolton-wanderers",
@@ -832,7 +857,8 @@
     "oX": 3.45,
     "o2": 2.5,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "por-famalicao-arouca",
@@ -887,7 +913,8 @@
     "oX": 3.2,
     "o2": 3.35,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   }
  ],
  "updatedAt": "2026-11-06T07:49:08Z",
