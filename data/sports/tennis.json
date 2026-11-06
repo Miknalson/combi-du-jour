@@ -1,22 +1,22 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-05T14:30:34.197247+00:00",
+  "updatedAt": "2026-11-06T14:09:16.207665+00:00",
   "status": "ok",
   "matches": [
     {
-      "id": "tennis-8962e5108426884c7237a80948c77cfb",
+      "id": "tennis-f1676b13a42184d83dee9e84e1b17aa5",
       "sport": "tennis",
       "league": "ATP Paris Masters",
-      "kickoff": "2026-11-05T14:35:00Z",
-      "home": "Lorenzo Musetti",
-      "away": "Luca Van Assche",
+      "kickoff": "2026-11-06T14:20:00Z",
+      "home": "Luca Van Assche",
+      "away": "Rinky Hijikata",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T14:30:31Z",
+      "asOf": "2026-11-06T14:08:35Z",
       "market": "h2h",
-      "o1": 1.24,
-      "o2": 3.4,
+      "o1": 1.5,
+      "o2": 2.4,
       "markets": [
         {
           "id": "h2h||None",
@@ -26,45 +26,45 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:30:31Z",
+          "asOf": "2026-11-06T14:08:35Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Lorenzo Musetti",
-              "odds": 1.24,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
               "label": "Victoire Luca Van Assche",
-              "odds": 3.4,
+              "odds": 1.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Rinky Hijikata",
+              "odds": 2.4,
               "participant": ""
             }
           ]
         }
       ],
       "sportKey": "tennis_atp_paris_masters",
-      "eventId": "8962e5108426884c7237a80948c77cfb",
+      "eventId": "f1676b13a42184d83dee9e84e1b17aa5",
       "availableMarkets": [
         "h2h"
       ],
       "uncollectedMarkets": []
     },
     {
-      "id": "tennis-235263f6f3bbd21f2327b39e61407934",
+      "id": "tennis-e4e0781ebc80c47d216dd73609a3c8e0",
       "sport": "tennis",
       "league": "ATP Paris Masters",
-      "kickoff": "2026-11-05T14:40:00Z",
-      "home": "Nuno Borges",
-      "away": "Ignacio Buse",
+      "kickoff": "2026-11-06T18:00:00Z",
+      "home": "Taylor Fritz",
+      "away": "Carlos Alcaraz",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T14:30:31Z",
+      "asOf": "2026-11-06T14:08:35Z",
       "market": "h2h",
-      "o1": 1.52,
-      "o2": 2.3,
+      "o1": 3.25,
+      "o2": 1.27,
       "markets": [
         {
           "id": "h2h||None",
@@ -74,93 +74,45 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:30:31Z",
+          "asOf": "2026-11-06T14:08:35Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Nuno Borges",
-              "odds": 1.52,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Ignacio Buse",
-              "odds": 2.3,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_paris_masters",
-      "eventId": "235263f6f3bbd21f2327b39e61407934",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "tennis-6a03e950601f142942705acfb764d107",
-      "sport": "tennis",
-      "league": "ATP Paris Masters",
-      "kickoff": "2026-11-05T18:00:00Z",
-      "home": "Arthur Fils",
-      "away": "Taylor Fritz",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:30:31Z",
-      "market": "h2h",
-      "o1": 1.68,
-      "o2": 2.0,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:30:31Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Arthur Fils",
-              "odds": 1.68,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
               "label": "Victoire Taylor Fritz",
-              "odds": 2.0,
+              "odds": 3.25,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Carlos Alcaraz",
+              "odds": 1.27,
               "participant": ""
             }
           ]
         }
       ],
       "sportKey": "tennis_atp_paris_masters",
-      "eventId": "6a03e950601f142942705acfb764d107",
+      "eventId": "e4e0781ebc80c47d216dd73609a3c8e0",
       "availableMarkets": [
         "h2h"
       ],
       "uncollectedMarkets": []
     },
     {
-      "id": "tennis-47d9edba7490e876194504362c877fe3",
+      "id": "tennis-0adc47c275819823d018232033a6de7f",
       "sport": "tennis",
       "league": "ATP Paris Masters",
-      "kickoff": "2026-11-05T19:30:00Z",
-      "home": "Jan-Lennard Struff",
-      "away": "Casper Ruud",
+      "kickoff": "2026-11-06T19:30:00Z",
+      "home": "Casper Ruud",
+      "away": "Nuno Borges",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T14:30:31Z",
+      "asOf": "2026-11-06T14:08:35Z",
       "market": "h2h",
-      "o1": 2.55,
-      "o2": 1.42,
+      "o1": 1.38,
+      "o2": 2.75,
       "markets": [
         {
           "id": "h2h||None",
@@ -170,27 +122,31 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:30:31Z",
+          "asOf": "2026-11-06T14:08:35Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Jan-Lennard Struff",
-              "odds": 2.55,
+              "label": "Victoire Casper Ruud",
+              "odds": 1.38,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Casper Ruud",
-              "odds": 1.42,
+              "label": "Victoire Nuno Borges",
+              "odds": 2.75,
               "participant": ""
             }
           ]
         }
       ],
       "sportKey": "tennis_atp_paris_masters",
-      "eventId": "47d9edba7490e876194504362c877fe3"
+      "eventId": "0adc47c275819823d018232033a6de7f",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
     }
   ],
   "leaguesQueried": 1,

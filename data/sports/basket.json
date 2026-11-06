@@ -1,241 +1,9 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-05T14:30:34.197247+00:00",
+  "updatedAt": "2026-11-06T14:09:16.207665+00:00",
   "status": "ok",
   "matches": [
-    {
-      "id": "basket-2cdeb59a268454066cba7ffa8f0f9036",
-      "sport": "basket",
-      "league": "Basketball Euroleague",
-      "kickoff": "2026-11-05T17:15:00Z",
-      "home": "Anadolu Efes",
-      "away": "Paris Basketball",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:34Z",
-      "market": "h2h",
-      "o1": 1.31,
-      "o2": 2.95,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:34Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Anadolu Efes",
-              "odds": 1.31,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Paris Basketball",
-              "odds": 2.95,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "basketball_euroleague",
-      "eventId": "2cdeb59a268454066cba7ffa8f0f9036",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "basket-fcf84b02de7185314f566568bf8acec0",
-      "sport": "basket",
-      "league": "Basketball Euroleague",
-      "kickoff": "2026-11-05T18:00:00Z",
-      "home": "Fenerbahce SK",
-      "away": "Saski Baskonia",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:34Z",
-      "market": "h2h",
-      "o1": 1.06,
-      "o2": 6.0,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:34Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Fenerbahce SK",
-              "odds": 1.06,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Saski Baskonia",
-              "odds": 6.0,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "basketball_euroleague",
-      "eventId": "fcf84b02de7185314f566568bf8acec0",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "basket-af2a51d45aa45e6759c2079f9fe38e3a",
-      "sport": "basket",
-      "league": "Basketball Euroleague",
-      "kickoff": "2026-11-05T18:45:00Z",
-      "home": "Hapoel Tel Aviv",
-      "away": "FC Barcelona Bàsquet",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:34Z",
-      "market": "h2h",
-      "o1": 1.33,
-      "o2": 2.8,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:34Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Hapoel Tel Aviv",
-              "odds": 1.33,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire FC Barcelona Bàsquet",
-              "odds": 2.8,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "basketball_euroleague",
-      "eventId": "af2a51d45aa45e6759c2079f9fe38e3a",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "basket-a66fbc5ca134d846dd1d381cf679af11",
-      "sport": "basket",
-      "league": "Basketball Euroleague",
-      "kickoff": "2026-11-05T19:00:00Z",
-      "home": "ASVEL Lyon Villeurbanne",
-      "away": "FC Bayern München",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:34Z",
-      "market": "h2h",
-      "o1": 1.62,
-      "o2": 2.0,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:34Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire ASVEL Lyon Villeurbanne",
-              "odds": 1.62,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire FC Bayern München",
-              "odds": 2.0,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "basketball_euroleague",
-      "eventId": "a66fbc5ca134d846dd1d381cf679af11"
-    },
-    {
-      "id": "basket-44ff4a1ef01d6efb35527146d7546d0f",
-      "sport": "basket",
-      "league": "Basketball Euroleague",
-      "kickoff": "2026-11-05T19:30:00Z",
-      "home": "Pallacanestro Olimpia Milano",
-      "away": "Valencia Basket",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:34Z",
-      "market": "h2h",
-      "o1": 1.98,
-      "o2": 1.66,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:34Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Pallacanestro Olimpia Milano",
-              "odds": 1.98,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Valencia Basket",
-              "odds": 1.66,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "basketball_euroleague",
-      "eventId": "44ff4a1ef01d6efb35527146d7546d0f"
-    },
     {
       "id": "basket-5e8b44f529547b9df687dd99d6957088",
       "sport": "basket",
@@ -245,10 +13,10 @@
       "away": "Žalgiris",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:35Z",
+      "asOf": "2026-11-06T14:08:21Z",
       "market": "h2h",
-      "o1": 1.76,
-      "o2": 1.66,
+      "o1": 1.86,
+      "o2": 1.7,
       "markets": [
         {
           "id": "h2h||None",
@@ -258,27 +26,31 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:35Z",
+          "asOf": "2026-11-06T14:08:21Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Beşiktaş J.K.",
-              "odds": 1.76,
+              "odds": 1.86,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Žalgiris",
-              "odds": 1.66,
+              "odds": 1.7,
               "participant": ""
             }
           ]
         }
       ],
       "sportKey": "basketball_euroleague",
-      "eventId": "5e8b44f529547b9df687dd99d6957088"
+      "eventId": "5e8b44f529547b9df687dd99d6957088",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
     },
     {
       "id": "basket-812ab9b651435da028d4c543df4dd4d3",
@@ -289,10 +61,10 @@
       "away": "KK Crvena zvezda",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:35Z",
+      "asOf": "2026-11-06T14:08:21Z",
       "market": "h2h",
-      "o1": 1.27,
-      "o2": 2.65,
+      "o1": 1.38,
+      "o2": 2.55,
       "markets": [
         {
           "id": "h2h||None",
@@ -302,27 +74,31 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:35Z",
+          "asOf": "2026-11-06T14:08:21Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Olympiacos",
-              "odds": 1.27,
+              "odds": 1.38,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire KK Crvena zvezda",
-              "odds": 2.65,
+              "odds": 2.55,
               "participant": ""
             }
           ]
         }
       ],
       "sportKey": "basketball_euroleague",
-      "eventId": "812ab9b651435da028d4c543df4dd4d3"
+      "eventId": "812ab9b651435da028d4c543df4dd4d3",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
     },
     {
       "id": "basket-855aff1a6ed84f3f095ca7ba9913caee",
@@ -333,10 +109,10 @@
       "away": "Dubai Basketball",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:35Z",
+      "asOf": "2026-11-06T14:08:21Z",
       "market": "h2h",
-      "o1": 1.92,
-      "o2": 1.54,
+      "o1": 2.35,
+      "o2": 1.45,
       "markets": [
         {
           "id": "h2h||None",
@@ -346,27 +122,31 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:35Z",
+          "asOf": "2026-11-06T14:08:21Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Virtus Segafredo Bologna",
-              "odds": 1.92,
+              "odds": 2.35,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Dubai Basketball",
-              "odds": 1.54,
+              "odds": 1.45,
               "participant": ""
             }
           ]
         }
       ],
       "sportKey": "basketball_euroleague",
-      "eventId": "855aff1a6ed84f3f095ca7ba9913caee"
+      "eventId": "855aff1a6ed84f3f095ca7ba9913caee",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
     },
     {
       "id": "basket-62b12649632fd5af4e9c78d6cfeff421",
@@ -377,10 +157,10 @@
       "away": "Maccabi Tel Aviv",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:35Z",
+      "asOf": "2026-11-06T14:08:21Z",
       "market": "h2h",
-      "o1": 1.35,
-      "o2": 2.35,
+      "o1": 1.36,
+      "o2": 2.65,
       "markets": [
         {
           "id": "h2h||None",
@@ -390,27 +170,31 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:35Z",
+          "asOf": "2026-11-06T14:08:21Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire KK Partizan NIS",
-              "odds": 1.35,
+              "odds": 1.36,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Maccabi Tel Aviv",
-              "odds": 2.35,
+              "odds": 2.65,
               "participant": ""
             }
           ]
         }
       ],
       "sportKey": "basketball_euroleague",
-      "eventId": "62b12649632fd5af4e9c78d6cfeff421"
+      "eventId": "62b12649632fd5af4e9c78d6cfeff421",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
     }
   ],
   "leaguesQueried": 1,

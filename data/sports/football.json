@@ -1,903 +1,9 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-05T14:30:34.197247+00:00",
+  "updatedAt": "2026-11-06T14:09:16.207665+00:00",
   "status": "ok",
   "matches": [
-    {
-      "id": "football-cb7170b1b0e68a09be62b7a0fcb8d268",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T17:45:00Z",
-      "home": "AC Milan",
-      "away": "Ferencváros TC",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.2,
-      "o2": 7.5,
-      "oX": 6.0,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire AC Milan",
-              "odds": 1.2,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Ferencváros TC",
-              "odds": 7.5,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 6.0,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "cb7170b1b0e68a09be62b7a0fcb8d268",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "football-9604c5b1c465435911e038db95ab2a7b",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T17:45:00Z",
-      "home": "Anderlecht",
-      "away": "Salzburg",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.9,
-      "o2": 3.05,
-      "oX": 3.65,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Anderlecht",
-              "odds": 1.9,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Salzburg",
-              "odds": 3.05,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.65,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "9604c5b1c465435911e038db95ab2a7b",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "football-d437cbfcee6b57ec58d464e6b459c56e",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T17:45:00Z",
-      "home": "Sparta Prague",
-      "away": "Bournemouth",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 6.5,
-      "o2": 1.3,
-      "oX": 5.0,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Sparta Prague",
-              "odds": 6.5,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Bournemouth",
-              "odds": 1.3,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 5.0,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "d437cbfcee6b57ec58d464e6b459c56e"
-    },
-    {
-      "id": "football-2347e0e7725940f6a14d5a80601390a5",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T17:45:00Z",
-      "home": "Crystal Palace",
-      "away": "TSG Hoffenheim",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.7,
-      "o2": 3.55,
-      "oX": 3.9,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Crystal Palace",
-              "odds": 1.7,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire TSG Hoffenheim",
-              "odds": 3.55,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.9,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "2347e0e7725940f6a14d5a80601390a5"
-    },
-    {
-      "id": "football-3493023efb0aadbdffe37e74e528177c",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T17:45:00Z",
-      "home": "PFC Levski Sofia",
-      "away": "Jagiellonia Białystok",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.86,
-      "o2": 3.55,
-      "oX": 3.25,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire PFC Levski Sofia",
-              "odds": 1.86,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Jagiellonia Białystok",
-              "odds": 3.55,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.25,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "3493023efb0aadbdffe37e74e528177c"
-    },
-    {
-      "id": "football-c50815d0a3cbc7dfe6b9f3a737ce4836",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T17:45:00Z",
-      "home": "Lillestrom",
-      "away": "Viktoria Plzeň",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 2.7,
-      "o2": 2.05,
-      "oX": 3.65,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Lillestrom",
-              "odds": 2.7,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Viktoria Plzeň",
-              "odds": 2.05,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.65,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "c50815d0a3cbc7dfe6b9f3a737ce4836"
-    },
-    {
-      "id": "football-d6ef4964addd663baed90f8f19fda1d3",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T17:45:00Z",
-      "home": "Real Sociedad",
-      "away": "Lyon",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.48,
-      "o2": 4.25,
-      "oX": 4.5,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Real Sociedad",
-              "odds": 1.48,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Lyon",
-              "odds": 4.25,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.5,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "d6ef4964addd663baed90f8f19fda1d3"
-    },
-    {
-      "id": "football-02228f9f6863e25c9538d6062932e155",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T17:45:00Z",
-      "home": "NEC Nijmegen",
-      "away": "Omonoia FC",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.64,
-      "o2": 3.85,
-      "oX": 3.85,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire NEC Nijmegen",
-              "odds": 1.64,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Omonoia FC",
-              "odds": 3.85,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.85,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "02228f9f6863e25c9538d6062932e155"
-    },
-    {
-      "id": "football-c91f4c9744f6ca502b7986a564e858df",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "AZ Alkmaar",
-      "away": "Juventus",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 3.65,
-      "o2": 1.76,
-      "oX": 3.55,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire AZ Alkmaar",
-              "odds": 3.65,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Juventus",
-              "odds": 1.76,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.55,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "c91f4c9744f6ca502b7986a564e858df"
-    },
-    {
-      "id": "football-e1c3625feeebcd65317e17a4e9a38c4f",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "Bayer Leverkusen",
-      "away": "Marseille",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.2,
-      "o2": 7.0,
-      "oX": 6.25,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Bayer Leverkusen",
-              "odds": 1.2,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Marseille",
-              "odds": 7.0,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 6.25,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "e1c3625feeebcd65317e17a4e9a38c4f"
-    },
-    {
-      "id": "football-bc4a4cc34a2219d9564b7b0c17ba2934",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "Benfica",
-      "away": "Lech Poznań",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.06,
-      "o2": 14.0,
-      "oX": 9.0,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Benfica",
-              "odds": 1.06,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Lech Poznań",
-              "odds": 14.0,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 9.0,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "bc4a4cc34a2219d9564b7b0c17ba2934"
-    },
-    {
-      "id": "football-5ecf6578ba030a1e99abaa3200319e37",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "Celtic",
-      "away": "Besiktas JK",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 2.7,
-      "o2": 2.05,
-      "oX": 3.65,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Celtic",
-              "odds": 2.7,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Besiktas JK",
-              "odds": 2.05,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.65,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "5ecf6578ba030a1e99abaa3200319e37"
-    },
-    {
-      "id": "football-b828d43ba5fa1c8cdd2e34aabea9d0ce",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "Celta Vigo",
-      "away": "Union Saint-Gilloise",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 2.2,
-      "o2": 2.75,
-      "oX": 3.2,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Celta Vigo",
-              "odds": 2.2,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Union Saint-Gilloise",
-              "odds": 2.75,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.2,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "b828d43ba5fa1c8cdd2e34aabea9d0ce"
-    },
-    {
-      "id": "football-6dad8d4dd99ba6f5dae0b3abdf8f669b",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "Sunderland",
-      "away": "Dinamo Zagreb",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.34,
-      "o2": 6.0,
-      "oX": 4.7,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Sunderland",
-              "odds": 1.34,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Dinamo Zagreb",
-              "odds": 6.0,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.7,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "6dad8d4dd99ba6f5dae0b3abdf8f669b"
-    },
-    {
-      "id": "football-402e102fa845ed84ab7e59b3b17f8c29",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "Torreense",
-      "away": "FC Ararat-Armenia",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.62,
-      "o2": 4.3,
-      "oX": 3.6,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Torreense",
-              "odds": 1.62,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire FC Ararat-Armenia",
-              "odds": 4.3,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.6,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "402e102fa845ed84ab7e59b3b17f8c29"
-    },
-    {
-      "id": "football-2af127e906ae56f3543d283b85f7b54e",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "Hapoel Be'er Sheva",
-      "away": "OFI Crete",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.98,
-      "o2": 3.05,
-      "oX": 3.4,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Hapoel Be'er Sheva",
-              "odds": 1.98,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire OFI Crete",
-              "odds": 3.05,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.4,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "2af127e906ae56f3543d283b85f7b54e"
-    },
-    {
-      "id": "football-84b68e09ecbe93fdbce759cd822322a2",
-      "sport": "football",
-      "league": "UEFA Europa League",
-      "kickoff": "2026-11-05T20:00:00Z",
-      "home": "SK Sturm Graz",
-      "away": "NK Celje",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-05T14:29:57Z",
-      "market": "h2h",
-      "o1": 1.41,
-      "o2": 5.2,
-      "oX": 4.4,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T14:29:57Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire SK Sturm Graz",
-              "odds": 1.41,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire NK Celje",
-              "odds": 5.2,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.4,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "soccer_uefa_europa_league",
-      "eventId": "84b68e09ecbe93fdbce759cd822322a2"
-    },
     {
       "id": "bl-hamburger-sv-borussia-monchengladbach",
       "sport": "football",
@@ -907,36 +13,36 @@
       "away": "Borussia Monchengladbach",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 2.3,
-      "oX": 3.5,
-      "o2": 2.55,
+      "o1": 2.2,
+      "oX": 3.45,
+      "o2": 2.6,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 2.3,
+              "odds": 2.2,
               "label": "Victoire Hamburger SV"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.5,
+              "odds": 3.45,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.55,
+              "odds": 2.6,
               "label": "Victoire Borussia Monchengladbach"
             }
           ]
@@ -952,18 +58,18 @@
       "away": "Udinese",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
       "o1": 2.1,
-      "oX": 3.4,
-      "o2": 2.95,
+      "oX": 3.3,
+      "o2": 2.85,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -975,13 +81,13 @@
             {
               "code": "X",
               "side": "X",
-              "odds": 3.4,
+              "odds": 3.3,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.95,
+              "odds": 2.85,
               "label": "Victoire Udinese"
             }
           ]
@@ -997,36 +103,36 @@
       "away": "Strasbourg",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
-      "o1": 1.98,
-      "oX": 3.65,
-      "o2": 3.05,
+      "o1": 2.0,
+      "oX": 3.55,
+      "o2": 2.9,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.98,
+              "odds": 2.0,
               "label": "Victoire Toulouse"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.65,
+              "odds": 3.55,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 3.05,
+              "odds": 2.9,
               "label": "Victoire Strasbourg"
             }
           ]
@@ -1042,10 +148,10 @@
       "away": "Coventry City",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
-      "o1": 1.64,
-      "oX": 3.8,
+      "o1": 1.56,
+      "oX": 3.9,
       "o2": 4.3,
       "markets": [
         {
@@ -1053,19 +159,19 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.64,
+              "odds": 1.56,
               "label": "Victoire Everton"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.8,
+              "odds": 3.9,
               "label": "Match nul"
             },
             {
@@ -1087,37 +193,82 @@
       "away": "Alavés",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
-      "o1": 1.82,
-      "oX": 3.25,
-      "o2": 3.85,
+      "o1": 1.74,
+      "oX": 3.35,
+      "o2": 3.95,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.82,
+              "odds": 1.74,
               "label": "Victoire Sevilla"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.25,
+              "odds": 3.35,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 3.85,
+              "odds": 3.95,
               "label": "Victoire Alavés"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-derby-county-bolton-wanderers",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-06T20:00Z",
+      "home": "Derby County",
+      "away": "Bolton Wanderers",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 2.35,
+      "oX": 3.45,
+      "o2": 2.5,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 2.35,
+              "label": "Victoire Derby County"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.45,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.5,
+              "label": "Victoire Bolton Wanderers"
             }
           ]
         }
@@ -1132,37 +283,172 @@
       "away": "Tottenham Hotspur",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
-      "o1": 2.4,
-      "oX": 3.15,
-      "o2": 2.45,
+      "o1": 2.5,
+      "oX": 3.2,
+      "o2": 2.35,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 2.4,
+              "odds": 2.5,
               "label": "Victoire Leeds United"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.15,
+              "odds": 3.2,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.45,
+              "odds": 2.35,
               "label": "Victoire Tottenham Hotspur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-bristol-city-norwich-city",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T12:30Z",
+      "home": "Bristol City",
+      "away": "Norwich City",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 2.45,
+      "oX": 3.2,
+      "o2": 2.3,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 2.45,
+              "label": "Victoire Bristol City"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.2,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.3,
+              "label": "Victoire Norwich City"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-portsmouth-stoke-city",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T12:30Z",
+      "home": "Portsmouth",
+      "away": "Stoke City",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 2.1,
+      "oX": 3.05,
+      "o2": 2.85,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 2.1,
+              "label": "Victoire Portsmouth"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.05,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.85,
+              "label": "Victoire Stoke City"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-wrexham-afc-wolverhampton-wanderers",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T12:30Z",
+      "home": "Wrexham AFC",
+      "away": "Wolverhampton Wanderers",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 2.9,
+      "oX": 3.2,
+      "o2": 2.05,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 2.9,
+              "label": "Victoire Wrexham AFC"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.2,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.05,
+              "label": "Victoire Wolverhampton Wanderers"
             }
           ]
         }
@@ -1177,10 +463,10 @@
       "away": "Real Racing Club de Santander",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
-      "o1": 2.25,
-      "oX": 3.5,
+      "o1": 2.2,
+      "oX": 3.4,
       "o2": 2.6,
       "markets": [
         {
@@ -1188,19 +474,19 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 2.25,
+              "odds": 2.2,
               "label": "Victoire Málaga"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.5,
+              "odds": 3.4,
               "label": "Match nul"
             },
             {
@@ -1222,36 +508,36 @@
       "away": "Frosinone",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
-      "o1": 2.55,
-      "oX": 3.5,
-      "o2": 2.3,
+      "o1": 2.5,
+      "oX": 3.45,
+      "o2": 2.25,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 2.55,
+              "odds": 2.5,
               "label": "Victoire Cagliari"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.5,
+              "odds": 3.45,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.3,
+              "odds": 2.25,
               "label": "Victoire Frosinone"
             }
           ]
@@ -1267,36 +553,36 @@
       "away": "Lecce",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
-      "o1": 1.72,
-      "oX": 3.5,
-      "o2": 4.1,
+      "o1": 1.7,
+      "oX": 3.45,
+      "o2": 4.0,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.72,
+              "odds": 1.7,
               "label": "Victoire Torino"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.5,
+              "odds": 3.45,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 4.1,
+              "odds": 4.0,
               "label": "Victoire Lecce"
             }
           ]
@@ -1312,36 +598,36 @@
       "away": "Augsburg",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 1.39,
-      "oX": 5.3,
-      "o2": 5.1,
+      "o1": 1.37,
+      "oX": 5.1,
+      "o2": 4.9,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.39,
+              "odds": 1.37,
               "label": "Victoire RB Leipzig"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 5.3,
+              "odds": 5.1,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 5.1,
+              "odds": 4.9,
               "label": "Victoire Augsburg"
             }
           ]
@@ -1357,36 +643,36 @@
       "away": "Bayern Munich",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 5.8,
-      "oX": 6.0,
-      "o2": 1.28,
+      "o1": 6.0,
+      "oX": 6.75,
+      "o2": 1.23,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 5.8,
+              "odds": 6.0,
               "label": "Victoire FSV Mainz 05"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 6.0,
+              "odds": 6.75,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.28,
+              "odds": 1.23,
               "label": "Victoire Bayern Munich"
             }
           ]
@@ -1402,10 +688,10 @@
       "away": "Elversberg",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 1.24,
-      "oX": 5.9,
+      "o1": 1.23,
+      "oX": 5.7,
       "o2": 7.0,
       "markets": [
         {
@@ -1413,19 +699,19 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.24,
+              "odds": 1.23,
               "label": "Victoire Borussia Dortmund"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 5.9,
+              "odds": 5.7,
               "label": "Match nul"
             },
             {
@@ -1447,36 +733,36 @@
       "away": "Eintracht Frankfurt",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 2.9,
-      "oX": 3.65,
-      "o2": 2.05,
+      "o1": 2.85,
+      "oX": 3.55,
+      "o2": 2.0,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 2.9,
+              "odds": 2.85,
               "label": "Victoire SC Paderborn"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.65,
+              "odds": 3.55,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.05,
+              "odds": 2.0,
               "label": "Victoire Eintracht Frankfurt"
             }
           ]
@@ -1492,36 +778,36 @@
       "away": "Hull City",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
-      "o1": 1.11,
-      "oX": 7.25,
-      "o2": 13.5,
+      "o1": 1.08,
+      "oX": 8.0,
+      "o2": 14.0,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.11,
+              "odds": 1.08,
               "label": "Victoire Arsenal"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 7.25,
+              "odds": 8.0,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 13.5,
+              "odds": 14.0,
               "label": "Victoire Hull City"
             }
           ]
@@ -1537,37 +823,397 @@
       "away": "Newcastle United",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
-      "o1": 1.96,
-      "oX": 3.6,
-      "o2": 3.15,
+      "o1": 1.94,
+      "oX": 3.5,
+      "o2": 3.05,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.96,
+              "odds": 1.94,
               "label": "Victoire Fulham"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.6,
+              "odds": 3.5,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 3.15,
+              "odds": 3.05,
               "label": "Victoire Newcastle United"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-birmingham-city-swansea-city",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T15:00Z",
+      "home": "Birmingham City",
+      "away": "Swansea City",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 1.72,
+      "oX": 3.4,
+      "o2": 3.65,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 1.72,
+              "label": "Victoire Birmingham City"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.4,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.65,
+              "label": "Victoire Swansea City"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-blackburn-rovers-west-ham-united",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T15:00Z",
+      "home": "Blackburn Rovers",
+      "away": "West Ham United",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 4.2,
+      "oX": 3.8,
+      "o2": 1.56,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 4.2,
+              "label": "Victoire Blackburn Rovers"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.8,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.56,
+              "label": "Victoire West Ham United"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-cardiff-city-burnley",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T15:00Z",
+      "home": "Cardiff City",
+      "away": "Burnley",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 1.98,
+      "oX": 3.5,
+      "o2": 2.75,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 1.98,
+              "label": "Victoire Cardiff City"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.5,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.75,
+              "label": "Victoire Burnley"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-charlton-athletic-sheffield-united",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T15:00Z",
+      "home": "Charlton Athletic",
+      "away": "Sheffield United",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 3.2,
+      "oX": 3.25,
+      "o2": 1.9,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 3.2,
+              "label": "Victoire Charlton Athletic"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.25,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.9,
+              "label": "Victoire Sheffield United"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-queens-park-rangers-lincoln-city",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T15:00Z",
+      "home": "Queens Park Rangers",
+      "away": "Lincoln City",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 1.56,
+      "oX": 3.7,
+      "o2": 4.2,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 1.56,
+              "label": "Victoire Queens Park Rangers"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.7,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 4.2,
+              "label": "Victoire Lincoln City"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-watford-middlesbrough",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T15:00Z",
+      "home": "Watford",
+      "away": "Middlesbrough",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 4.6,
+      "oX": 4.2,
+      "o2": 1.45,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 4.6,
+              "label": "Victoire Watford"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 4.2,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.45,
+              "label": "Victoire Middlesbrough"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-west-bromwich-albion-millwall",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T15:00Z",
+      "home": "West Bromwich Albion",
+      "away": "Millwall",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 1.88,
+      "oX": 3.3,
+      "o2": 3.25,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 1.88,
+              "label": "Victoire West Bromwich Albion"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.3,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.25,
+              "label": "Victoire Millwall"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cha-preston-north-end-southampton",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-07T15:00Z",
+      "home": "Preston North End",
+      "away": "Southampton",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-06T07:48:52Z",
+      "market": "h2h",
+      "o1": 4.1,
+      "oX": 3.85,
+      "o2": 1.56,
+      "markets": [
+        {
+          "id": "h2h|archive",
+          "family": "h2h",
+          "unit": "match",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-06T07:48:52Z",
+          "quoteSource": "api-archive",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "odds": 4.1,
+              "label": "Victoire Preston North End"
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "odds": 3.85,
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.56,
+              "label": "Victoire Southampton"
             }
           ]
         }
@@ -1582,18 +1228,18 @@
       "away": "Deportivo La Coruña",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
       "o1": 2.15,
-      "oX": 3.3,
-      "o2": 2.9,
+      "oX": 3.1,
+      "o2": 2.95,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -1605,13 +1251,13 @@
             {
               "code": "X",
               "side": "X",
-              "odds": 3.3,
+              "odds": 3.1,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.9,
+              "odds": 2.95,
               "label": "Victoire Deportivo La Coruña"
             }
           ]
@@ -1627,36 +1273,36 @@
       "away": "Bologna",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
-      "o1": 4.0,
-      "oX": 3.45,
-      "o2": 1.76,
+      "o1": 3.95,
+      "oX": 3.35,
+      "o2": 1.74,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 4.0,
+              "odds": 3.95,
               "label": "Victoire Parma"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.45,
+              "odds": 3.35,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.76,
+              "odds": 1.74,
               "label": "Victoire Bologna"
             }
           ]
@@ -1672,36 +1318,36 @@
       "away": "Manchester City",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
-      "o1": 4.1,
-      "oX": 3.9,
-      "o2": 1.62,
+      "o1": 4.25,
+      "oX": 4.2,
+      "o2": 1.58,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 4.1,
+              "odds": 4.25,
               "label": "Victoire Nottingham Forest"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.9,
+              "odds": 4.2,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.62,
+              "odds": 1.58,
               "label": "Victoire Manchester City"
             }
           ]
@@ -1717,18 +1363,18 @@
       "away": "Athletic Bilbao",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
       "o1": 3.25,
-      "oX": 3.3,
-      "o2": 2.0,
+      "oX": 3.25,
+      "o2": 1.96,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -1740,13 +1386,13 @@
             {
               "code": "X",
               "side": "X",
-              "odds": 3.3,
+              "odds": 3.25,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.0,
+              "odds": 1.96,
               "label": "Victoire Athletic Bilbao"
             }
           ]
@@ -1762,36 +1408,36 @@
       "away": "Werder Bremen",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 1.54,
-      "oX": 4.7,
-      "o2": 4.0,
+      "o1": 1.56,
+      "oX": 4.3,
+      "o2": 3.85,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.54,
+              "odds": 1.56,
               "label": "Victoire VfB Stuttgart"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.7,
+              "odds": 4.3,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 4.0,
+              "odds": 3.85,
               "label": "Victoire Werder Bremen"
             }
           ]
@@ -1807,9 +1453,9 @@
       "away": "Paris FC",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
-      "o1": 3.9,
+      "o1": 3.85,
       "oX": 3.85,
       "o2": 1.68,
       "markets": [
@@ -1818,13 +1464,13 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.9,
+              "odds": 3.85,
               "label": "Victoire Auxerre"
             },
             {
@@ -1852,36 +1498,36 @@
       "away": "Sassuolo",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
-      "o1": 1.24,
-      "oX": 5.9,
-      "o2": 7.25,
+      "o1": 1.22,
+      "oX": 5.8,
+      "o2": 7.5,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.24,
+              "odds": 1.22,
               "label": "Victoire AS Roma"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 5.9,
+              "odds": 5.8,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 7.25,
+              "odds": 7.5,
               "label": "Victoire Sassuolo"
             }
           ]
@@ -1897,36 +1543,36 @@
       "away": "Real Madrid",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
-      "o1": 7.0,
-      "oX": 5.9,
-      "o2": 1.24,
+      "o1": 7.5,
+      "oX": 6.25,
+      "o2": 1.2,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 7.0,
+              "odds": 7.5,
               "label": "Victoire Valencia"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 5.9,
+              "odds": 6.25,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.24,
+              "odds": 1.2,
               "label": "Victoire Real Madrid"
             }
           ]
@@ -1942,36 +1588,36 @@
       "away": "Troyes",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
-      "o1": 1.08,
-      "oX": 9.0,
-      "o2": 13.5,
+      "o1": 1.06,
+      "oX": 10.0,
+      "o2": 15.0,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.08,
+              "odds": 1.06,
               "label": "Victoire Paris Saint Germain"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 9.0,
+              "odds": 10.0,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 13.5,
+              "odds": 15.0,
               "label": "Victoire Troyes"
             }
           ]
@@ -1987,18 +1633,18 @@
       "away": "Lazio",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
       "o1": 2.1,
-      "oX": 3.45,
-      "o2": 2.85,
+      "oX": 3.4,
+      "o2": 2.75,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -2010,13 +1656,13 @@
             {
               "code": "X",
               "side": "X",
-              "odds": 3.45,
+              "odds": 3.4,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.85,
+              "odds": 2.75,
               "label": "Victoire Lazio"
             }
           ]
@@ -2032,36 +1678,36 @@
       "away": "Real Betis",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
-      "o1": 3.05,
-      "oX": 3.65,
-      "o2": 2.0,
+      "o1": 2.95,
+      "oX": 3.55,
+      "o2": 1.96,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.05,
+              "odds": 2.95,
               "label": "Victoire Elche CF"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.65,
+              "odds": 3.55,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 2.0,
+              "odds": 1.96,
               "label": "Victoire Real Betis"
             }
           ]
@@ -2077,36 +1723,36 @@
       "away": "Bournemouth",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
-      "o1": 3.5,
-      "oX": 3.6,
-      "o2": 1.86,
+      "o1": 3.4,
+      "oX": 3.5,
+      "o2": 1.82,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.5,
+              "odds": 3.4,
               "label": "Victoire Ipswich Town"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.6,
+              "odds": 3.5,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.86,
+              "odds": 1.82,
               "label": "Victoire Bournemouth"
             }
           ]
@@ -2122,18 +1768,18 @@
       "away": "Brentford",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
       "o1": 1.82,
-      "oX": 3.75,
-      "o2": 3.45,
+      "oX": 3.65,
+      "o2": 3.3,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -2145,13 +1791,13 @@
             {
               "code": "X",
               "side": "X",
-              "odds": 3.75,
+              "odds": 3.65,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 3.45,
+              "odds": 3.3,
               "label": "Victoire Brentford"
             }
           ]
@@ -2167,18 +1813,18 @@
       "away": "Chelsea",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
       "o1": 3.25,
       "oX": 3.55,
-      "o2": 1.9,
+      "o2": 1.86,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -2196,7 +1842,7 @@
             {
               "code": "2",
               "side": "2",
-              "odds": 1.9,
+              "odds": 1.86,
               "label": "Victoire Chelsea"
             }
           ]
@@ -2212,36 +1858,36 @@
       "away": "Liverpool",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
-      "o1": 4.7,
-      "oX": 4.1,
-      "o2": 1.5,
+      "o1": 4.8,
+      "oX": 4.0,
+      "o2": 1.49,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 4.7,
+              "odds": 4.8,
               "label": "Victoire Crystal Palace"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.1,
+              "odds": 4.0,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.5,
+              "odds": 1.49,
               "label": "Victoire Liverpool"
             }
           ]
@@ -2257,10 +1903,10 @@
       "away": "AC Milan",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
-      "o1": 4.2,
-      "oX": 3.45,
+      "o1": 4.1,
+      "oX": 3.35,
       "o2": 1.72,
       "markets": [
         {
@@ -2268,19 +1914,19 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 4.2,
+              "odds": 4.1,
               "label": "Victoire Genoa"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.45,
+              "odds": 3.35,
               "label": "Match nul"
             },
             {
@@ -2302,36 +1948,36 @@
       "away": "Atalanta BC",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
-      "o1": 3.1,
-      "oX": 3.65,
-      "o2": 1.96,
+      "o1": 3.0,
+      "oX": 3.6,
+      "o2": 1.92,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.1,
+              "odds": 3.0,
               "label": "Victoire Monza"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.65,
+              "odds": 3.6,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.96,
+              "odds": 1.92,
               "label": "Victoire Atalanta BC"
             }
           ]
@@ -2347,9 +1993,9 @@
       "away": "Lille",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
-      "o1": 2.05,
+      "o1": 2.0,
       "oX": 3.55,
       "o2": 2.95,
       "markets": [
@@ -2358,13 +2004,13 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 2.05,
+              "odds": 2.0,
               "label": "Victoire Rennes"
             },
             {
@@ -2392,36 +2038,36 @@
       "away": "Bayer Leverkusen",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 3.65,
-      "oX": 4.0,
-      "o2": 1.7,
+      "o1": 3.5,
+      "oX": 3.9,
+      "o2": 1.72,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.65,
+              "odds": 3.5,
               "label": "Victoire 1. FC Köln"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.0,
+              "odds": 3.9,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.7,
+              "odds": 1.72,
               "label": "Victoire Bayer Leverkusen"
             }
           ]
@@ -2437,36 +2083,36 @@
       "away": "Rayo Vallecano",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
-      "o1": 1.6,
-      "oX": 4.1,
-      "o2": 4.2,
+      "o1": 1.58,
+      "oX": 4.0,
+      "o2": 4.1,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.6,
+              "odds": 1.58,
               "label": "Victoire Real Sociedad"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.1,
+              "odds": 4.0,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 4.2,
+              "odds": 4.1,
               "label": "Victoire Rayo Vallecano"
             }
           ]
@@ -2482,36 +2128,36 @@
       "away": "AS Monaco",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
-      "o1": 3.8,
-      "oX": 4.0,
-      "o2": 1.68,
+      "o1": 3.75,
+      "oX": 3.95,
+      "o2": 1.66,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.8,
+              "odds": 3.75,
               "label": "Victoire Le Mans FC"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.0,
+              "odds": 3.95,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.68,
+              "odds": 1.66,
               "label": "Victoire AS Monaco"
             }
           ]
@@ -2527,36 +2173,36 @@
       "away": "Nice",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
-      "o1": 3.3,
-      "oX": 3.5,
-      "o2": 1.94,
+      "o1": 3.25,
+      "oX": 3.45,
+      "o2": 1.92,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.3,
+              "odds": 3.25,
               "label": "Victoire Angers"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.5,
+              "odds": 3.45,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.94,
+              "odds": 1.92,
               "label": "Victoire Nice"
             }
           ]
@@ -2572,10 +2218,10 @@
       "away": "Lyon",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
       "o1": 2.6,
-      "oX": 3.4,
+      "oX": 3.35,
       "o2": 2.3,
       "markets": [
         {
@@ -2583,7 +2229,7 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -2595,7 +2241,7 @@
             {
               "code": "X",
               "side": "X",
-              "odds": 3.4,
+              "odds": 3.35,
               "label": "Match nul"
             },
             {
@@ -2617,18 +2263,18 @@
       "away": "Lorient",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
       "o1": 2.6,
       "oX": 3.2,
-      "o2": 2.4,
+      "o2": 2.35,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -2646,7 +2292,7 @@
             {
               "code": "2",
               "side": "2",
-              "odds": 2.4,
+              "odds": 2.35,
               "label": "Victoire Lorient"
             }
           ]
@@ -2662,18 +2308,18 @@
       "away": "Aston Villa",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:50Z",
       "market": "h2h",
       "o1": 2.05,
       "oX": 3.55,
-      "o2": 2.9,
+      "o2": 2.8,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:50Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
@@ -2691,7 +2337,7 @@
             {
               "code": "2",
               "side": "2",
-              "odds": 2.9,
+              "odds": 2.8,
               "label": "Victoire Aston Villa"
             }
           ]
@@ -2707,36 +2353,36 @@
       "away": "Union Berlin",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 1.44,
-      "oX": 4.4,
-      "o2": 5.4,
+      "o1": 1.42,
+      "oX": 4.3,
+      "o2": 5.2,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.44,
+              "odds": 1.42,
               "label": "Victoire SC Freiburg"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.4,
+              "odds": 4.3,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 5.4,
+              "odds": 5.2,
               "label": "Victoire Union Berlin"
             }
           ]
@@ -2752,24 +2398,24 @@
       "away": "Como",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
-      "o1": 1.8,
+      "o1": 1.74,
       "oX": 3.95,
-      "o2": 3.4,
+      "o2": 3.35,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.8,
+              "odds": 1.74,
               "label": "Victoire Inter Milan"
             },
             {
@@ -2781,7 +2427,7 @@
             {
               "code": "2",
               "side": "2",
-              "odds": 3.4,
+              "odds": 3.35,
               "label": "Victoire Como"
             }
           ]
@@ -2797,36 +2443,36 @@
       "away": "Levante",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
-      "o1": 1.72,
-      "oX": 3.7,
-      "o2": 3.9,
+      "o1": 1.76,
+      "oX": 3.55,
+      "o2": 3.65,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.72,
+              "odds": 1.76,
               "label": "Victoire Celta Vigo"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.7,
+              "odds": 3.55,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 3.9,
+              "odds": 3.65,
               "label": "Victoire Levante"
             }
           ]
@@ -2842,36 +2488,36 @@
       "away": "Getafe",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
-      "o1": 1.38,
-      "oX": 4.5,
-      "o2": 6.25,
+      "o1": 1.36,
+      "oX": 4.3,
+      "o2": 6.0,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.38,
+              "odds": 1.36,
               "label": "Victoire Villarreal"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.5,
+              "odds": 4.3,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 6.25,
+              "odds": 6.0,
               "label": "Victoire Getafe"
             }
           ]
@@ -2887,10 +2533,10 @@
       "away": "FC Schalke 04",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:34Z",
+      "asOf": "2026-11-06T07:48:30Z",
       "market": "h2h",
-      "o1": 1.54,
-      "oX": 4.3,
+      "o1": 1.52,
+      "oX": 4.2,
       "o2": 4.4,
       "markets": [
         {
@@ -2898,19 +2544,19 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:34Z",
+          "asOf": "2026-11-06T07:48:30Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 1.54,
+              "odds": 1.52,
               "label": "Victoire TSG Hoffenheim"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.3,
+              "odds": 4.2,
               "label": "Match nul"
             },
             {
@@ -2932,10 +2578,10 @@
       "away": "Juventus",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:57Z",
+      "asOf": "2026-11-06T07:48:10Z",
       "market": "h2h",
-      "o1": 3.2,
-      "oX": 3.5,
+      "o1": 3.1,
+      "oX": 3.4,
       "o2": 1.96,
       "markets": [
         {
@@ -2943,19 +2589,19 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:57Z",
+          "asOf": "2026-11-06T07:48:10Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.2,
+              "odds": 3.1,
               "label": "Victoire Fiorentina"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 3.5,
+              "odds": 3.4,
               "label": "Match nul"
             },
             {
@@ -2977,10 +2623,10 @@
       "away": "Marseille",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:48:17Z",
+      "asOf": "2026-11-06T07:48:31Z",
       "market": "h2h",
-      "o1": 2.05,
-      "oX": 4.0,
+      "o1": 2.1,
+      "oX": 3.7,
       "o2": 2.7,
       "markets": [
         {
@@ -2988,19 +2634,19 @@
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:48:17Z",
+          "asOf": "2026-11-06T07:48:31Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 2.05,
+              "odds": 2.1,
               "label": "Victoire RC Lens"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.0,
+              "odds": 3.7,
               "label": "Match nul"
             },
             {
@@ -3022,36 +2668,36 @@
       "away": "Barcelona",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-05T07:47:36Z",
+      "asOf": "2026-11-06T07:48:55Z",
       "market": "h2h",
-      "o1": 3.3,
-      "oX": 4.2,
-      "o2": 1.72,
+      "o1": 3.35,
+      "oX": 4.1,
+      "o2": 1.7,
       "markets": [
         {
           "id": "h2h|archive",
           "family": "h2h",
           "unit": "match",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-05T07:47:36Z",
+          "asOf": "2026-11-06T07:48:55Z",
           "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "odds": 3.3,
+              "odds": 3.35,
               "label": "Victoire Atlético Madrid"
             },
             {
               "code": "X",
               "side": "X",
-              "odds": 4.2,
+              "odds": 4.1,
               "label": "Match nul"
             },
             {
               "code": "2",
               "side": "2",
-              "odds": 1.72,
+              "odds": 1.7,
               "label": "Victoire Barcelona"
             }
           ]
@@ -3059,7 +2705,7 @@
       ]
     }
   ],
-  "leaguesQueried": 2,
-  "leaguesAvailable": 20,
+  "leaguesQueried": 1,
+  "leaguesAvailable": 18,
   "partial": true
 }
