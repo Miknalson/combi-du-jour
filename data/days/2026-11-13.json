@@ -1,0 +1,17 @@
+{
+ "date": "2026-11-13",
+ "updatedAt": "2026-11-08T08:00:00Z",
+ "source": "oddsportal",
+ "matches": [
+  {
+   "id": "liga2-leganes-burgos-cf",
+   "league": "LIGA2",
+   "kickoff": "2026-11-13T19:30Z",
+   "home": "Leganés",
+   "away": "Burgos CF",
+   "o1": 2.1,
+   "oX": 3.3,
+   "o2": 3.5
+  }
+ ]
+}

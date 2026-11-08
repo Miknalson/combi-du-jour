@@ -1,0 +1,17 @@
+{
+ "date": "2026-11-14",
+ "updatedAt": "2026-11-08T08:00:00Z",
+ "source": "oddsportal",
+ "matches": [
+  {
+   "id": "liga2-mallorca-cordoba",
+   "league": "LIGA2",
+   "kickoff": "2026-11-14T17:30Z",
+   "home": "Mallorca",
+   "away": "Córdoba",
+   "o1": 1.62,
+   "oX": 4.3,
+   "o2": 4.75
+  }
+ ]
+}

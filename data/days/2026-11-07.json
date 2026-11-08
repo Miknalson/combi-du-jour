@@ -1604,61 +1604,6 @@
    "score": "2-2"
   },
   {
-   "id": "por-nacional-academico-de-viseu",
-   "league": "POR",
-   "kickoff": "2026-11-07T15:30Z",
-   "home": "Nacional",
-   "away": "Académico de Viseu",
-   "o1": 2.859,
-   "oX": 3.231,
-   "o2": 2.304,
-   "best": {
-    "2": {
-     "odds": 2.41,
-     "book": "GTbets"
-    },
-    "1": {
-     "odds": 3.1,
-     "book": "Tipico"
-    },
-    "X": {
-     "odds": 3.5,
-     "book": "Coolbet"
-    }
-   },
-   "books": 16,
-   "referenceAt": "2026-11-02T07:48:09Z",
-   "ou": {
-    "2.5": {
-     "o": 1.885,
-     "u": 1.83
-    }
-   },
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-11-02T07:50:22Z",
-    "o1": 3.03,
-    "oX": 3.37,
-    "o2": 2.38,
-    "ou": {
-     "2.5": {
-      "o": 1.95,
-      "u": 1.88
-     }
-    }
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-11-02T07:49:59Z",
-    "o1": 2.65,
-    "oX": 3.1,
-    "o2": 2.2,
-    "ou": {}
-   }
-  },
-  {
    "id": "por2-academica-amarante",
    "league": "POR2",
    "kickoff": "2026-11-07T15:30Z",
@@ -2850,6 +2795,6 @@
    "score": "1-0"
   }
  ],
- "updatedAt": "2026-11-07T07:48:06Z",
+ "updatedAt": "2026-11-08T08:00:00Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }
