@@ -1,17 +1,218 @@
 {
  "date": "2026-11-14",
- "updatedAt": "2026-11-08T08:00:00Z",
- "source": "oddsportal",
+ "updatedAt": "2026-11-09T07:49:22Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
+  {
+   "id": "liga2-real-valladolid-cf-cd-castellon",
+   "league": "LIGA2",
+   "kickoff": "2026-11-14T13:00Z",
+   "home": "Real Valladolid CF",
+   "away": "CD Castellón",
+   "o1": 2.794,
+   "oX": 3.394,
+   "o2": 2.249,
+   "best": {
+    "2": {
+     "odds": 2.41,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.95,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.63,
+     "book": "1xBet"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-09T07:47:09Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-09T07:49:21Z",
+    "o1": 2.87,
+    "oX": 3.61,
+    "o2": 2.37,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 2.6,
+    "oX": 3.3,
+    "o2": 2.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga2-real-sociedad-b-sporting-gijon",
+   "league": "LIGA2",
+   "kickoff": "2026-11-14T15:15Z",
+   "home": "Real Sociedad B",
+   "away": "Sporting Gijón",
+   "o1": 2.325,
+   "oX": 3.229,
+   "o2": 2.634,
+   "best": {
+    "1": {
+     "odds": 2.5,
+     "book": "Unibet (SE)"
+    },
+    "2": {
+     "odds": 2.86,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.48,
+     "book": "1xBet"
+    }
+   },
+   "books": 8,
+   "referenceAt": "2026-11-09T07:47:10Z",
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 2.2,
+    "oX": 3.2,
+    "o2": 2.55,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga2-almeria-andorra-cf",
+   "league": "LIGA2",
+   "kickoff": "2026-11-14T17:30Z",
+   "home": "Almería",
+   "away": "Andorra CF",
+   "o1": 1.635,
+   "oX": 3.881,
+   "o2": 4.383,
+   "best": {
+    "1": {
+     "odds": 1.74,
+     "book": "Pinnacle"
+    },
+    "2": {
+     "odds": 4.75,
+     "book": "Coolbet"
+    },
+    "X": {
+     "odds": 4.23,
+     "book": "1xBet"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-09T07:47:10Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-09T07:49:21Z",
+    "o1": 1.74,
+    "oX": 4.0,
+    "o2": 4.46,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 1.58,
+    "oX": 3.65,
+    "o2": 3.8,
+    "ou": {}
+   }
+  },
   {
    "id": "liga2-mallorca-cordoba",
    "league": "LIGA2",
    "kickoff": "2026-11-14T17:30Z",
    "home": "Mallorca",
    "away": "Córdoba",
-   "o1": 1.62,
-   "oX": 4.3,
-   "o2": 4.75
+   "o1": 1.642,
+   "oX": 3.933,
+   "o2": 4.289,
+   "best": {
+    "2": {
+     "odds": 4.75,
+     "book": "Coolbet"
+    },
+    "1": {
+     "odds": 1.71,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 4.28,
+     "book": "1xBet"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-09T07:47:10Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-09T07:49:21Z",
+    "o1": 1.7,
+    "oX": 4.17,
+    "o2": 4.45,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 1.58,
+    "oX": 3.8,
+    "o2": 3.85,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga2-oviedo-girona-fc",
+   "league": "LIGA2",
+   "kickoff": "2026-11-14T20:00Z",
+   "home": "Oviedo",
+   "away": "Girona FC",
+   "o1": 2.331,
+   "oX": 3.182,
+   "o2": 2.829,
+   "best": {
+    "2": {
+     "odds": 2.98,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 2.46,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.42,
+     "book": "1xBet"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-09T07:47:10Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-09T07:49:21Z",
+    "o1": 2.45,
+    "oX": 3.31,
+    "o2": 2.98,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 2.15,
+    "oX": 3.05,
+    "o2": 2.6,
+    "ou": {}
+   }
   }
  ]
 }

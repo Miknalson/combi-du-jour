@@ -1,0 +1,185 @@
+{
+ "date": "2026-11-15",
+ "matches": [
+  {
+   "id": "por2-amarante-felgueiras",
+   "league": "POR2",
+   "kickoff": "2026-11-15T11:00Z",
+   "home": "Amarante",
+   "away": "Felgueiras",
+   "o1": 2.55,
+   "oX": 2.95,
+   "o2": 2.9
+  },
+  {
+   "id": "liga2-tenerife-ad-ceuta-fc",
+   "league": "LIGA2",
+   "kickoff": "2026-11-15T13:00Z",
+   "home": "Tenerife",
+   "away": "AD Ceuta FC",
+   "o1": 1.824,
+   "oX": 3.316,
+   "o2": 3.843,
+   "best": {
+    "2": {
+     "odds": 4.13,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 1.92,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.56,
+     "book": "1xBet"
+    }
+   },
+   "books": 10,
+   "referenceAt": "2026-11-09T07:47:10Z",
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 1.74,
+    "oX": 3.25,
+    "o2": 3.55,
+    "ou": {}
+   }
+  },
+  {
+   "id": "por2-portimonense-academica",
+   "league": "POR2",
+   "kickoff": "2026-11-15T14:00Z",
+   "home": "Portimonense",
+   "away": "Academica",
+   "o1": 2.3,
+   "oX": 3.2,
+   "o2": 3.1
+  },
+  {
+   "id": "liga2-granada-cf-las-palmas",
+   "league": "LIGA2",
+   "kickoff": "2026-11-15T15:15Z",
+   "home": "Granada CF",
+   "away": "Las Palmas",
+   "o1": 1.67,
+   "oX": 3.58,
+   "o2": 4.478,
+   "best": {
+    "1": {
+     "odds": 1.77,
+     "book": "Unibet (SE)"
+    },
+    "2": {
+     "odds": 5.09,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.92,
+     "book": "1xBet"
+    }
+   },
+   "books": 12,
+   "referenceAt": "2026-11-09T07:47:10Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-09T07:49:21Z",
+    "o1": 1.69,
+    "oX": 3.77,
+    "o2": 5.09,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 1.58,
+    "oX": 3.4,
+    "o2": 4.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga2-cd-eldense-sabadell-fc",
+   "league": "LIGA2",
+   "kickoff": "2026-11-15T17:30Z",
+   "home": "CD Eldense",
+   "away": "Sabadell FC",
+   "o1": 2.279,
+   "oX": 3.024,
+   "o2": 2.923,
+   "best": {
+    "1": {
+     "odds": 2.47,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 3.15,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 3.27,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "referenceAt": "2026-11-09T07:47:10Z",
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 2.2,
+    "oX": 3.0,
+    "o2": 2.65,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga2-sd-eibar-cadiz-cf",
+   "league": "LIGA2",
+   "kickoff": "2026-11-15T17:30Z",
+   "home": "SD Eibar",
+   "away": "Cádiz CF",
+   "o1": 1.594,
+   "oX": 3.782,
+   "o2": 4.761,
+   "best": {
+    "2": {
+     "odds": 5.28,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 1.71,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 4.23,
+     "book": "1xBet"
+    }
+   },
+   "books": 13,
+   "referenceAt": "2026-11-09T07:47:10Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-09T07:49:21Z",
+    "o1": 1.62,
+    "oX": 4.06,
+    "o2": 5.28,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-09T07:48:34Z",
+    "o1": 1.52,
+    "oX": 3.65,
+    "o2": 4.3,
+    "ou": {}
+   }
+  }
+ ],
+ "updatedAt": "2026-11-09T07:49:22Z",
+ "source": "The Odds API + oddsportal (secours)"
+}
