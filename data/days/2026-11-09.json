@@ -11,7 +11,8 @@
    "away": "Otelul",
    "o1": 2.05,
    "oX": 3.45,
-   "o2": 3.3
+   "o2": 3.3,
+   "score": "1-1"
   },
   {
    "id": "liga2-sabadell-fc-real-sociedad-b",
@@ -55,7 +56,8 @@
     "oX": 3.3,
     "o2": 4.2,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "liga2-las-palmas-cd-eldense",
@@ -65,7 +67,8 @@
    "away": "CD Eldense",
    "o1": 2.15,
    "oX": 3.4,
-   "o2": 3.3
+   "o2": 3.3,
+   "score": "2-0"
   },
   {
    "id": "por2-torreense-leiria",
@@ -75,7 +78,8 @@
    "away": "Leiria",
    "o1": 2.1,
    "oX": 3.4,
-   "o2": 3.1
+   "o2": 3.1,
+   "score": "2-3"
   }
  ]
 }
