@@ -1,0 +1,51 @@
+{
+ "date": "2026-11-16",
+ "matches": [
+  {
+   "id": "liga2-albacete-celta-fortuna",
+   "league": "LIGA2",
+   "kickoff": "2026-11-16T19:30Z",
+   "home": "Albacete",
+   "away": "Celta Fortuna",
+   "o1": 1.604,
+   "oX": 3.809,
+   "o2": 4.544,
+   "best": {
+    "1": {
+     "odds": 1.7,
+     "book": "Unibet (SE)"
+    },
+    "2": {
+     "odds": 4.8,
+     "book": "Betsson"
+    },
+    "X": {
+     "odds": 4.23,
+     "book": "1xBet"
+    }
+   },
+   "books": 13,
+   "referenceAt": "2026-11-10T07:47:23Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-10T07:48:12Z",
+    "o1": 1.67,
+    "oX": 4.16,
+    "o2": 4.72,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-10T07:48:14Z",
+    "o1": 1.52,
+    "oX": 3.6,
+    "o2": 4.2,
+    "ou": {}
+   }
+  }
+ ],
+ "updatedAt": "2026-11-10T07:48:55Z",
+ "source": "The Odds API (moyenne des bookmakers européens)"
+}

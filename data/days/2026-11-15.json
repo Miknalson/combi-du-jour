@@ -12,14 +12,24 @@
    "o2": 2.9
   },
   {
+   "id": "por2-tondela-sc-farense",
+   "league": "POR2",
+   "kickoff": "2026-11-15T11:00Z",
+   "home": "Tondela",
+   "away": "SC Farense",
+   "o1": 2.1,
+   "oX": 3.3,
+   "o2": 3.4
+  },
+  {
    "id": "liga2-tenerife-ad-ceuta-fc",
    "league": "LIGA2",
    "kickoff": "2026-11-15T13:00Z",
    "home": "Tenerife",
    "away": "AD Ceuta FC",
-   "o1": 1.824,
-   "oX": 3.316,
-   "o2": 3.843,
+   "o1": 1.814,
+   "oX": 3.326,
+   "o2": 3.863,
    "best": {
     "2": {
      "odds": 4.13,
@@ -27,7 +37,7 @@
     },
     "1": {
      "odds": 1.92,
-     "book": "Unibet (NL)"
+     "book": "1xBet"
     },
     "X": {
      "odds": 3.56,
@@ -35,14 +45,14 @@
     }
    },
    "books": 10,
-   "referenceAt": "2026-11-09T07:47:10Z",
+   "referenceAt": "2026-11-10T07:47:23Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-09T07:48:34Z",
+    "asOf": "2026-11-10T07:48:14Z",
     "o1": 1.74,
     "oX": 3.25,
-    "o2": 3.55,
+    "o2": 3.6,
     "ou": {}
    }
   },
@@ -62,43 +72,53 @@
    "kickoff": "2026-11-15T15:15Z",
    "home": "Granada CF",
    "away": "Las Palmas",
-   "o1": 1.67,
-   "oX": 3.58,
-   "o2": 4.478,
+   "o1": 1.695,
+   "oX": 3.561,
+   "o2": 4.442,
    "best": {
     "1": {
-     "odds": 1.77,
+     "odds": 1.78,
      "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 5.09,
-     "book": "Pinnacle"
+     "odds": 5.0,
+     "book": "Coolbet"
     },
     "X": {
      "odds": 3.92,
      "book": "1xBet"
     }
    },
-   "books": 12,
-   "referenceAt": "2026-11-09T07:47:10Z",
+   "books": 16,
+   "referenceAt": "2026-11-10T07:47:23Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-09T07:49:21Z",
-    "o1": 1.69,
-    "oX": 3.77,
-    "o2": 5.09,
+    "asOf": "2026-11-10T07:48:12Z",
+    "o1": 1.74,
+    "oX": 3.69,
+    "o2": 4.88,
     "ou": {}
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-09T07:48:34Z",
-    "o1": 1.58,
+    "asOf": "2026-11-10T07:48:14Z",
+    "o1": 1.64,
     "oX": 3.4,
-    "o2": 4.1,
+    "o2": 4.0,
     "ou": {}
    }
+  },
+  {
+   "id": "por2-penafiel-lusitania-fc",
+   "league": "POR2",
+   "kickoff": "2026-11-15T15:30Z",
+   "home": "Penafiel",
+   "away": "Lusitania FC",
+   "o1": 2.35,
+   "oX": 2.9,
+   "o2": 3.35
   },
   {
    "id": "liga2-cd-eldense-sabadell-fc",
@@ -106,32 +126,41 @@
    "kickoff": "2026-11-15T17:30Z",
    "home": "CD Eldense",
    "away": "Sabadell FC",
-   "o1": 2.279,
-   "oX": 3.024,
-   "o2": 2.923,
+   "o1": 2.404,
+   "oX": 3.067,
+   "o2": 2.828,
    "best": {
     "1": {
-     "odds": 2.47,
-     "book": "1xBet"
+     "odds": 2.6,
+     "book": "BetOnline.ag"
     },
     "2": {
      "odds": 3.15,
      "book": "Unibet (NL)"
     },
     "X": {
-     "odds": 3.27,
+     "odds": 3.3,
      "book": "1xBet"
     }
    },
-   "books": 9,
-   "referenceAt": "2026-11-09T07:47:10Z",
+   "books": 15,
+   "referenceAt": "2026-11-10T07:47:23Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-10T07:48:12Z",
+    "o1": 2.6,
+    "oX": 3.21,
+    "o2": 2.86,
+    "ou": {}
+   },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-09T07:48:34Z",
-    "o1": 2.2,
+    "asOf": "2026-11-10T07:48:14Z",
+    "o1": 2.3,
     "oX": 3.0,
-    "o2": 2.65,
+    "o2": 2.55,
     "ou": {}
    }
   },
@@ -141,9 +170,9 @@
    "kickoff": "2026-11-15T17:30Z",
    "home": "SD Eibar",
    "away": "Cádiz CF",
-   "o1": 1.594,
-   "oX": 3.782,
-   "o2": 4.761,
+   "o1": 1.607,
+   "oX": 3.776,
+   "o2": 4.763,
    "best": {
     "2": {
      "odds": 5.28,
@@ -158,12 +187,12 @@
      "book": "1xBet"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-09T07:47:10Z",
+   "books": 15,
+   "referenceAt": "2026-11-10T07:47:23Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-09T07:49:21Z",
+    "asOf": "2026-11-10T07:48:12Z",
     "o1": 1.62,
     "oX": 4.06,
     "o2": 5.28,
@@ -172,14 +201,24 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-09T07:48:34Z",
-    "o1": 1.52,
-    "oX": 3.65,
-    "o2": 4.3,
+    "asOf": "2026-11-10T07:48:14Z",
+    "o1": 1.54,
+    "oX": 3.6,
+    "o2": 4.2,
     "ou": {}
    }
+  },
+  {
+   "id": "por2-leixoes-chaves",
+   "league": "POR2",
+   "kickoff": "2026-11-15T18:00Z",
+   "home": "Leixoes",
+   "away": "Chaves",
+   "o1": 2.0,
+   "oX": 3.35,
+   "o2": 3.6
   }
  ],
- "updatedAt": "2026-11-09T07:49:22Z",
- "source": "The Odds API + oddsportal (secours)"
+ "updatedAt": "2026-11-10T07:48:55Z",
+ "source": "The Odds API (moyenne des bookmakers européens)"
 }
