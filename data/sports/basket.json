@@ -1,10 +1,10 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-09T16:02:00.200991+00:00",
+  "updatedAt": "2026-11-10T14:45:38.958470+00:00",
   "status": "ok",
   "matches": [],
-  "leaguesQueried": 3,
+  "leaguesQueried": 2,
   "leaguesAvailable": 5,
   "partial": true
 }
