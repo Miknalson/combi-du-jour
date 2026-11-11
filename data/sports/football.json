@@ -1,9 +1,602 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-10T14:45:38.958470+00:00",
+  "updatedAt": "2026-11-11T14:04:19.895374+00:00",
   "status": "ok",
-  "matches": [],
+  "matches": [
+    {
+      "id": "football-fed29050dc7e99c7dd6b3b4580f142b7",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-13T19:30:00Z",
+      "home": "Leganés",
+      "away": "Burgos CF",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 2.05,
+      "o2": 3.05,
+      "oX": 3.0,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Leganés",
+              "odds": 2.05,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Burgos CF",
+              "odds": 3.05,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "fed29050dc7e99c7dd6b3b4580f142b7",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-908247d5d5cd714de37956edf865668b",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-14T13:00:00Z",
+      "home": "Real Valladolid CF",
+      "away": "CD Castellón",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 2.55,
+      "o2": 2.15,
+      "oX": 3.3,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Real Valladolid CF",
+              "odds": 2.55,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire CD Castellón",
+              "odds": 2.15,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.3,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "908247d5d5cd714de37956edf865668b",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-d5b0e0c0934f6a58410410bd573a5065",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-14T15:15:00Z",
+      "home": "Real Sociedad B",
+      "away": "Sporting Gijón",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 2.2,
+      "o2": 2.65,
+      "oX": 3.05,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Real Sociedad B",
+              "odds": 2.2,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Sporting Gijón",
+              "odds": 2.65,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.05,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "d5b0e0c0934f6a58410410bd573a5065",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-570ec7734e1f7d9e813ab0013291f5f5",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-14T17:30:00Z",
+      "home": "Almería",
+      "away": "Andorra CF",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 1.54,
+      "o2": 4.0,
+      "oX": 3.8,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Almería",
+              "odds": 1.54,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Andorra CF",
+              "odds": 4.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.8,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "570ec7734e1f7d9e813ab0013291f5f5",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-6bc4aff371a2a5eaf38c73700a5c14d4",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-14T17:30:00Z",
+      "home": "Mallorca",
+      "away": "Córdoba",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 1.58,
+      "o2": 3.75,
+      "oX": 3.85,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Mallorca",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Córdoba",
+              "odds": 3.75,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.85,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "6bc4aff371a2a5eaf38c73700a5c14d4"
+    },
+    {
+      "id": "football-beaf0bb6252d3b1d42a720aa385e9414",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-14T20:00:00Z",
+      "home": "Oviedo",
+      "away": "Girona FC",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 2.1,
+      "o2": 2.75,
+      "oX": 3.05,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Oviedo",
+              "odds": 2.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Girona FC",
+              "odds": 2.75,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.05,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "beaf0bb6252d3b1d42a720aa385e9414"
+    },
+    {
+      "id": "football-f241b0cec31506c2eb749ff9be97667c",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-15T13:00:00Z",
+      "home": "Tenerife",
+      "away": "AD Ceuta FC",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 1.74,
+      "o2": 3.6,
+      "oX": 3.25,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Tenerife",
+              "odds": 1.74,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire AD Ceuta FC",
+              "odds": 3.6,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "f241b0cec31506c2eb749ff9be97667c"
+    },
+    {
+      "id": "football-b8308c8150f5ad55e242d7671adaffbd",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-15T15:15:00Z",
+      "home": "Granada CF",
+      "away": "Las Palmas",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 1.64,
+      "o2": 4.0,
+      "oX": 3.4,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Granada CF",
+              "odds": 1.64,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Las Palmas",
+              "odds": 4.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "b8308c8150f5ad55e242d7671adaffbd"
+    },
+    {
+      "id": "football-976d20d0bdfd5ebae5800d5ec4f8dedf",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-15T17:30:00Z",
+      "home": "CD Eldense",
+      "away": "Sabadell FC",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 2.2,
+      "o2": 2.65,
+      "oX": 3.0,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire CD Eldense",
+              "odds": 2.2,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Sabadell FC",
+              "odds": 2.65,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "976d20d0bdfd5ebae5800d5ec4f8dedf"
+    },
+    {
+      "id": "football-12b34c0f22c4208647c5a5472269b735",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-15T17:30:00Z",
+      "home": "SD Eibar",
+      "away": "Cádiz CF",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 1.52,
+      "o2": 4.4,
+      "oX": 3.7,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire SD Eibar",
+              "odds": 1.52,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Cádiz CF",
+              "odds": 4.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.7,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "12b34c0f22c4208647c5a5472269b735"
+    },
+    {
+      "id": "football-c52bb6ace02b521be96df8fba8806037",
+      "sport": "football",
+      "league": "La Liga 2 - Spain",
+      "kickoff": "2026-11-16T19:30:00Z",
+      "home": "Albacete",
+      "away": "Celta Fortuna",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:40Z",
+      "market": "h2h",
+      "o1": 1.48,
+      "o2": 4.4,
+      "oX": 3.95,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Albacete",
+              "odds": 1.48,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Celta Fortuna",
+              "odds": 4.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.95,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "soccer_spain_segunda_division",
+      "eventId": "c52bb6ace02b521be96df8fba8806037"
+    }
+  ],
   "leaguesQueried": 1,
   "leaguesAvailable": 1,
   "partial": false

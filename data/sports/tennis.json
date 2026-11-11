@@ -1,9 +1,202 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-10T14:45:38.958470+00:00",
+  "updatedAt": "2026-11-11T14:04:19.895374+00:00",
   "status": "ok",
-  "matches": [],
+  "matches": [
+    {
+      "id": "tennis-d87ade1e56f0c96e3b28b59dea344837",
+      "sport": "tennis",
+      "league": "WTA Finals",
+      "kickoff": "2026-11-11T20:00:00Z",
+      "home": "Elina Svitolina",
+      "away": "Karolina Muchova",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:31Z",
+      "market": "h2h",
+      "o1": 2.15,
+      "o2": 1.6,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:31Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Elina Svitolina",
+              "odds": 2.15,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Karolina Muchova",
+              "odds": 1.6,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "tennis_wta_finals",
+      "eventId": "d87ade1e56f0c96e3b28b59dea344837",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "tennis-d1549c8585e649677db3579affc1da2e",
+      "sport": "tennis",
+      "league": "WTA Finals",
+      "kickoff": "2026-11-11T21:10:00Z",
+      "home": "Aryna Sabalenka",
+      "away": "Mirra Andreeva",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:31Z",
+      "market": "h2h",
+      "o1": 1.78,
+      "o2": 1.84,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:31Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Aryna Sabalenka",
+              "odds": 1.78,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Mirra Andreeva",
+              "odds": 1.84,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "tennis_wta_finals",
+      "eventId": "d1549c8585e649677db3579affc1da2e",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "tennis-b8a1b5d0077794775db0a2ca6b15baf7",
+      "sport": "tennis",
+      "league": "WTA Finals",
+      "kickoff": "2026-11-12T20:00:00Z",
+      "home": "Marta Kostyuk",
+      "away": "Coco Gauff",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:31Z",
+      "market": "h2h",
+      "o1": 3.25,
+      "o2": 1.25,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:31Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Marta Kostyuk",
+              "odds": 3.25,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Coco Gauff",
+              "odds": 1.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "tennis_wta_finals",
+      "eventId": "b8a1b5d0077794775db0a2ca6b15baf7",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "tennis-7d0fa680caf6f5718ca51b421754252d",
+      "sport": "tennis",
+      "league": "WTA Finals",
+      "kickoff": "2026-11-12T21:10:00Z",
+      "home": "Jessica Pegula",
+      "away": "Linda Noskova",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-11T14:03:31Z",
+      "market": "h2h",
+      "o1": 1.86,
+      "o2": 1.76,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-11T14:03:31Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Jessica Pegula",
+              "odds": 1.86,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Linda Noskova",
+              "odds": 1.76,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "sportKey": "tennis_wta_finals",
+      "eventId": "7d0fa680caf6f5718ca51b421754252d",
+      "availableMarkets": [
+        "h2h"
+      ],
+      "uncollectedMarkets": []
+    }
+  ],
   "leaguesQueried": 1,
   "leaguesAvailable": 1,
   "partial": false
