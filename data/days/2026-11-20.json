@@ -1,0 +1,558 @@
+{
+ "date": "2026-11-20",
+ "matches": [
+  {
+   "id": "pol-piast-gliwice-korona-kielce",
+   "league": "POL",
+   "kickoff": "2026-11-20T17:00Z",
+   "home": "Piast Gliwice",
+   "away": "Korona Kielce",
+   "o1": 2.4,
+   "oX": 3.4,
+   "o2": 2.6
+  },
+  {
+   "id": "bl2-sv-darmstadt-98-1-fc-heidenheim",
+   "league": "BL2",
+   "kickoff": "2026-11-20T17:30Z",
+   "home": "SV Darmstadt 98",
+   "away": "1. FC Heidenheim",
+   "o1": 3.384,
+   "oX": 3.684,
+   "o2": 1.887,
+   "best": {
+    "2": {
+     "odds": 2.0,
+     "book": "Tipico"
+    },
+    "1": {
+     "odds": 3.61,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.94,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 9,
+   "referenceAt": "2026-11-11T07:46:33Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:24Z",
+    "o1": 3.61,
+    "oX": 3.94,
+    "o2": 1.93,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:51Z",
+    "o1": 3.05,
+    "oX": 3.55,
+    "o2": 1.78,
+    "ou": {}
+   }
+  },
+  {
+   "id": "bl2-arminia-bielefeld-1-fc-magdeburg",
+   "league": "BL2",
+   "kickoff": "2026-11-20T17:30Z",
+   "home": "Arminia Bielefeld",
+   "away": "1. FC Magdeburg",
+   "o1": 2.137,
+   "oX": 3.483,
+   "o2": 2.919,
+   "best": {
+    "2": {
+     "odds": 3.0,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 2.3,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.7,
+     "book": "Tipico"
+    }
+   },
+   "books": 9,
+   "referenceAt": "2026-11-11T07:46:33Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:24Z",
+    "o1": 2.3,
+    "oX": 3.6,
+    "o2": 3.0,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:51Z",
+    "o1": 2.0,
+    "oX": 3.35,
+    "o2": 2.7,
+    "ou": {}
+   }
+  },
+  {
+   "id": "den-agf-aarhus-lyngby",
+   "league": "DEN",
+   "kickoff": "2026-11-20T18:00Z",
+   "home": "AGF Aarhus",
+   "away": "Lyngby",
+   "o1": 1.76,
+   "oX": 4.0,
+   "o2": 4.2
+  },
+  {
+   "id": "l2-annecy-fc-clermont",
+   "league": "L2",
+   "kickoff": "2026-11-20T19:00Z",
+   "home": "Annecy FC",
+   "away": "Clermont",
+   "o1": 2.09,
+   "oX": 3.169,
+   "o2": 3.294,
+   "best": {
+    "1": {
+     "odds": 2.18,
+     "book": "Pinnacle"
+    },
+    "2": {
+     "odds": 3.38,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.35,
+     "book": "1xBet"
+    }
+   },
+   "books": 10,
+   "referenceAt": "2026-11-11T07:46:58Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:41Z",
+    "o1": 2.18,
+    "oX": 3.34,
+    "o2": 3.38,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:50Z",
+    "o1": 2.0,
+    "oX": 3.15,
+    "o2": 3.15,
+    "ou": {}
+   }
+  },
+  {
+   "id": "l2-metz-boulogne",
+   "league": "L2",
+   "kickoff": "2026-11-20T19:00Z",
+   "home": "Metz",
+   "away": "Boulogne",
+   "o1": 2.06,
+   "oX": 3.25,
+   "o2": 3.377,
+   "best": {
+    "2": {
+     "odds": 3.45,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 2.13,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.42,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "referenceAt": "2026-11-11T07:46:58Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:41Z",
+    "o1": 2.13,
+    "oX": 3.41,
+    "o2": 3.45,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:50Z",
+    "o1": 1.98,
+    "oX": 3.15,
+    "o2": 3.2,
+    "ou": {}
+   }
+  },
+  {
+   "id": "l2-nancy-dijon",
+   "league": "L2",
+   "kickoff": "2026-11-20T19:00Z",
+   "home": "Nancy",
+   "away": "Dijon",
+   "o1": 1.764,
+   "oX": 3.639,
+   "o2": 3.865,
+   "best": {
+    "2": {
+     "odds": 4.0,
+     "book": "Winamax (DE)"
+    },
+    "1": {
+     "odds": 1.85,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.88,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 8,
+   "referenceAt": "2026-11-11T07:46:58Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:41Z",
+    "o1": 1.85,
+    "oX": 3.88,
+    "o2": 3.9,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:50Z",
+    "o1": 1.72,
+    "oX": 3.5,
+    "o2": 3.75,
+    "ou": {}
+   }
+  },
+  {
+   "id": "l2-guingamp-rodez-af",
+   "league": "L2",
+   "kickoff": "2026-11-20T19:00Z",
+   "home": "Guingamp",
+   "away": "Rodez AF",
+   "o1": 1.966,
+   "oX": 3.491,
+   "o2": 3.303,
+   "best": {
+    "1": {
+     "odds": 2.03,
+     "book": "Pinnacle"
+    },
+    "2": {
+     "odds": 3.41,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.74,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 10,
+   "referenceAt": "2026-11-11T07:46:58Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:41Z",
+    "o1": 2.03,
+    "oX": 3.74,
+    "o2": 3.41,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:50Z",
+    "o1": 1.94,
+    "oX": 3.3,
+    "o2": 3.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "l2-red-star-pau-fc",
+   "league": "L2",
+   "kickoff": "2026-11-20T19:00Z",
+   "home": "Red Star",
+   "away": "Pau FC",
+   "o1": 2.001,
+   "oX": 3.267,
+   "o2": 3.448,
+   "best": {
+    "2": {
+     "odds": 3.82,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 2.08,
+     "book": "Nordic Bet"
+    },
+    "X": {
+     "odds": 3.4,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 10,
+   "referenceAt": "2026-11-11T07:46:58Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:41Z",
+    "o1": 2.01,
+    "oX": 3.4,
+    "o2": 3.82,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:50Z",
+    "o1": 2.0,
+    "oX": 3.2,
+    "o2": 3.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "bl-bayern-munich-1-fc-koln",
+   "league": "BL",
+   "kickoff": "2026-11-20T19:30Z",
+   "home": "Bayern Munich",
+   "away": "1. FC Köln",
+   "o1": 1.081,
+   "oX": 10.928,
+   "o2": 20.195,
+   "best": {
+    "2": {
+     "odds": 27.0,
+     "book": "Nordic Bet"
+    },
+    "1": {
+     "odds": 1.11,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 13.63,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 17,
+   "referenceAt": "2026-11-11T07:47:42Z",
+   "ou": {
+    "4.5": {
+     "o": 2.078,
+     "u": 1.716
+    },
+    "2.5": {
+     "o": 1.173,
+     "u": 4.903
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:20Z",
+    "o1": 1.09,
+    "oX": 13.63,
+    "o2": 19.81,
+    "ou": {
+     "4.25": {
+      "o": 1.93,
+      "u": 1.91
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:48:02Z",
+    "o1": 1.05,
+    "oX": 11.0,
+    "o2": 15.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "pol-pogon-szczecin-slask-wroclaw",
+   "league": "POL",
+   "kickoff": "2026-11-20T19:30Z",
+   "home": "Pogoń Szczecin",
+   "away": "Śląsk Wrocław",
+   "o1": 1.76,
+   "oX": 3.8,
+   "o2": 4.1
+  },
+  {
+   "id": "l1-troyes-le-havre",
+   "league": "L1",
+   "kickoff": "2026-11-20T19:45Z",
+   "home": "Troyes",
+   "away": "Le Havre",
+   "o1": 2.027,
+   "oX": 3.567,
+   "o2": 3.459,
+   "best": {
+    "2": {
+     "odds": 3.66,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 2.16,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.84,
+     "book": "1xBet"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-11T07:46:37Z",
+   "ou": {
+    "2.5": {
+     "o": 1.78,
+     "u": 2.033
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:38Z",
+    "o1": 2.05,
+    "oX": 3.62,
+    "o2": 3.66,
+    "ou": {
+     "2.5": {
+      "o": 1.86,
+      "u": 2.01
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:46Z",
+    "o1": 1.92,
+    "oX": 3.45,
+    "o2": 3.25,
+    "ou": {}
+   }
+  },
+  {
+   "id": "bel-cercle-brugge-ksv-westerlo",
+   "league": "BEL",
+   "kickoff": "2026-11-20T19:45Z",
+   "home": "Cercle Brugge KSV",
+   "away": "Westerlo",
+   "o1": 1.939,
+   "oX": 3.851,
+   "o2": 3.149,
+   "best": {
+    "1": {
+     "odds": 2.02,
+     "book": "Pinnacle"
+    },
+    "2": {
+     "odds": 3.4,
+     "book": "Tipico"
+    },
+    "X": {
+     "odds": 4.07,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "referenceAt": "2026-11-11T07:46:46Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:23Z",
+    "o1": 2.02,
+    "oX": 4.05,
+    "o2": 3.27,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:48:05Z",
+    "o1": 1.9,
+    "oX": 3.5,
+    "o2": 2.8,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga-athletic-bilbao-espanyol",
+   "league": "LIGA",
+   "kickoff": "2026-11-20T20:00Z",
+   "home": "Athletic Bilbao",
+   "away": "Espanyol",
+   "o1": 1.474,
+   "oX": 4.321,
+   "o2": 6.569,
+   "best": {
+    "1": {
+     "odds": 1.54,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 7.0,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 4.6,
+     "book": "Tipico"
+    }
+   },
+   "books": 14,
+   "referenceAt": "2026-11-11T07:47:28Z",
+   "ou": {
+    "2.5": {
+     "o": 1.802,
+     "u": 2.004
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-11T07:48:21Z",
+    "o1": 1.49,
+    "oX": 4.52,
+    "o2": 6.77,
+    "ou": {
+     "2.5": {
+      "o": 1.81,
+      "u": 2.07
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-11T07:47:47Z",
+    "o1": 1.4,
+    "oX": 4.2,
+    "o2": 5.7,
+    "ou": {}
+   }
+  }
+ ],
+ "updatedAt": "2026-11-11T07:50:41Z",
+ "source": "The Odds API (moyenne des bookmakers européens)"
+}

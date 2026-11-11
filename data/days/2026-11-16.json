@@ -7,45 +7,45 @@
    "kickoff": "2026-11-16T19:30Z",
    "home": "Albacete",
    "away": "Celta Fortuna",
-   "o1": 1.604,
-   "oX": 3.809,
-   "o2": 4.544,
+   "o1": 1.571,
+   "oX": 3.994,
+   "o2": 4.7,
    "best": {
     "1": {
      "odds": 1.7,
      "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 4.8,
-     "book": "Betsson"
+     "odds": 5.05,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 4.23,
+     "odds": 4.44,
      "book": "1xBet"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-10T07:47:23Z",
+   "books": 15,
+   "referenceAt": "2026-11-11T07:47:27Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-10T07:48:12Z",
-    "o1": 1.67,
-    "oX": 4.16,
-    "o2": 4.72,
+    "asOf": "2026-11-11T07:48:24Z",
+    "o1": 1.61,
+    "oX": 4.29,
+    "o2": 5.05,
     "ou": {}
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-10T07:48:14Z",
-    "o1": 1.52,
-    "oX": 3.6,
-    "o2": 4.2,
+    "asOf": "2026-11-11T07:48:25Z",
+    "o1": 1.5,
+    "oX": 3.9,
+    "o2": 4.3,
     "ou": {}
    }
   }
  ],
- "updatedAt": "2026-11-10T07:48:55Z",
+ "updatedAt": "2026-11-11T07:48:49Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }

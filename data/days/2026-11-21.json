@@ -1,0 +1,107 @@
+{
+ "date": "2026-11-21",
+ "updatedAt": "2026-11-11T07:50:41Z",
+ "source": "oddsportal (secours)",
+ "matches": [
+  {
+   "id": "pol-cracovia-krakow-jagiellonia-bialystok",
+   "league": "POL",
+   "kickoff": "2026-11-21T13:45Z",
+   "home": "Cracovia Kraków",
+   "away": "Jagiellonia Białystok",
+   "o1": 2.35,
+   "oX": 3.8,
+   "o2": 2.5
+  },
+  {
+   "id": "pol-zaglebie-lubin-gornik-zabrze",
+   "league": "POL",
+   "kickoff": "2026-11-21T16:30Z",
+   "home": "Zagłębie Lubin",
+   "away": "Górnik Zabrze",
+   "o1": 3.8,
+   "oX": 3.3,
+   "o2": 1.89
+  },
+  {
+   "id": "srb-crvena-zvezda-radnik",
+   "league": "SRB",
+   "kickoff": "2026-11-21T17:00Z",
+   "home": "Crvena zvezda",
+   "away": "Radnik",
+   "o1": 1.14,
+   "oX": 8.0,
+   "o2": 13.0
+  },
+  {
+   "id": "srb-radnicki-1923-cukaricki",
+   "league": "SRB",
+   "kickoff": "2026-11-21T17:00Z",
+   "home": "Radnicki 1923",
+   "away": "Cukaricki",
+   "o1": 2.05,
+   "oX": 3.5,
+   "o2": 3.3
+  },
+  {
+   "id": "srb-imt-novi-beograd-partizan",
+   "league": "SRB",
+   "kickoff": "2026-11-21T17:00Z",
+   "home": "IMT Novi Beograd",
+   "away": "Partizan",
+   "o1": 3.4,
+   "oX": 3.5,
+   "o2": 2.0
+  },
+  {
+   "id": "srb-macva-vojvodina",
+   "league": "SRB",
+   "kickoff": "2026-11-21T17:00Z",
+   "home": "Macva",
+   "away": "Vojvodina",
+   "o1": 7.0,
+   "oX": 4.5,
+   "o2": 1.4
+  },
+  {
+   "id": "srb-mladost-zeleznicar-pancevo",
+   "league": "SRB",
+   "kickoff": "2026-11-21T17:00Z",
+   "home": "Mladost",
+   "away": "Zeleznicar Pancevo",
+   "o1": 3.8,
+   "oX": 3.5,
+   "o2": 1.91
+  },
+  {
+   "id": "srb-ofk-beograd-novi-pazar",
+   "league": "SRB",
+   "kickoff": "2026-11-21T17:00Z",
+   "home": "OFK Beograd",
+   "away": "Novi Pazar",
+   "o1": 2.35,
+   "oX": 3.4,
+   "o2": 2.8
+  },
+  {
+   "id": "srb-radnicki-nis-zemun",
+   "league": "SRB",
+   "kickoff": "2026-11-21T17:00Z",
+   "home": "Radnicki Nis",
+   "away": "Zemun",
+   "o1": 1.57,
+   "oX": 4.0,
+   "o2": 5.25
+  },
+  {
+   "id": "pol-radomiak-radom-wisla-krakow",
+   "league": "POL",
+   "kickoff": "2026-11-21T19:15Z",
+   "home": "Radomiak Radom",
+   "away": "Wisła Kraków",
+   "o1": 3.3,
+   "oX": 3.6,
+   "o2": 1.95
+  }
+ ]
+}

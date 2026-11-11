@@ -1,6 +1,6 @@
 {
  "date": "2026-11-13",
- "updatedAt": "2026-11-10T07:48:55Z",
+ "updatedAt": "2026-11-11T07:48:49Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -9,13 +9,13 @@
    "kickoff": "2026-11-13T19:30Z",
    "home": "Leganés",
    "away": "Burgos CF",
-   "o1": 2.109,
-   "oX": 3.119,
-   "o2": 3.312,
+   "o1": 2.122,
+   "oX": 3.097,
+   "o2": 3.297,
    "best": {
     "2": {
-     "odds": 3.5,
-     "book": "Coolbet"
+     "odds": 3.47,
+     "book": "Pinnacle"
     },
     "1": {
      "odds": 2.24,
@@ -27,22 +27,22 @@
     }
    },
    "books": 16,
-   "referenceAt": "2026-11-10T07:47:23Z",
+   "referenceAt": "2026-11-11T07:47:26Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-10T07:48:12Z",
+    "asOf": "2026-11-11T07:48:23Z",
     "o1": 2.24,
-    "oX": 3.19,
-    "o2": 3.48,
+    "oX": 3.2,
+    "o2": 3.47,
     "ou": {}
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-10T07:48:14Z",
-    "o1": 2.0,
-    "oX": 3.0,
+    "asOf": "2026-11-11T07:48:25Z",
+    "o1": 2.05,
+    "oX": 2.95,
     "o2": 3.05,
     "ou": {}
    }
