@@ -1,7 +1,7 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-11T14:04:19.895374+00:00",
+  "updatedAt": "2026-11-12T15:02:24.423093+00:00",
   "status": "ok",
   "matches": [
     {
@@ -13,10 +13,10 @@
       "away": "Burgos CF",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:17Z",
       "market": "h2h",
-      "o1": 2.05,
-      "o2": 3.05,
+      "o1": 2.1,
+      "o2": 2.9,
       "oX": 3.0,
       "markets": [
         {
@@ -27,20 +27,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:17Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Leganés",
-              "odds": 2.05,
+              "odds": 2.1,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Burgos CF",
-              "odds": 3.05,
+              "odds": 2.9,
               "participant": ""
             },
             {
@@ -70,9 +70,9 @@
       "away": "CD Castellón",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:18Z",
       "market": "h2h",
-      "o1": 2.55,
+      "o1": 2.6,
       "o2": 2.15,
       "oX": 3.3,
       "markets": [
@@ -84,13 +84,13 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:18Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Real Valladolid CF",
-              "odds": 2.55,
+              "odds": 2.6,
               "participant": ""
             },
             {
@@ -127,9 +127,9 @@
       "away": "Sporting Gijón",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:18Z",
       "market": "h2h",
-      "o1": 2.2,
+      "o1": 2.25,
       "o2": 2.65,
       "oX": 3.05,
       "markets": [
@@ -141,13 +141,13 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:18Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Real Sociedad B",
-              "odds": 2.2,
+              "odds": 2.25,
               "participant": ""
             },
             {
@@ -184,11 +184,11 @@
       "away": "Andorra CF",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:17Z",
       "market": "h2h",
       "o1": 1.54,
-      "o2": 4.0,
-      "oX": 3.8,
+      "o2": 4.1,
+      "oX": 3.9,
       "markets": [
         {
           "id": "h2h||None",
@@ -198,7 +198,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:17Z",
           "outcomes": [
             {
               "code": "1",
@@ -211,14 +211,14 @@
               "code": "2",
               "side": "2",
               "label": "Victoire Andorra CF",
-              "odds": 4.0,
+              "odds": 4.1,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.8,
+              "odds": 3.9,
               "participant": ""
             }
           ]
@@ -241,11 +241,11 @@
       "away": "Córdoba",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:17Z",
       "market": "h2h",
-      "o1": 1.58,
-      "o2": 3.75,
-      "oX": 3.85,
+      "o1": 1.76,
+      "o2": 3.25,
+      "oX": 3.7,
       "markets": [
         {
           "id": "h2h||None",
@@ -255,27 +255,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:17Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Mallorca",
-              "odds": 1.58,
+              "odds": 1.76,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Córdoba",
-              "odds": 3.75,
+              "odds": 3.25,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.85,
+              "odds": 3.7,
               "participant": ""
             }
           ]
@@ -293,11 +293,11 @@
       "away": "Girona FC",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:17Z",
       "market": "h2h",
-      "o1": 2.1,
-      "o2": 2.75,
-      "oX": 3.05,
+      "o1": 2.15,
+      "o2": 2.7,
+      "oX": 3.1,
       "markets": [
         {
           "id": "h2h||None",
@@ -307,27 +307,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:17Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Oviedo",
-              "odds": 2.1,
+              "odds": 2.15,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Girona FC",
-              "odds": 2.75,
+              "odds": 2.7,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.05,
+              "odds": 3.1,
               "participant": ""
             }
           ]
@@ -345,7 +345,7 @@
       "away": "AD Ceuta FC",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:18Z",
       "market": "h2h",
       "o1": 1.74,
       "o2": 3.6,
@@ -359,7 +359,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:18Z",
           "outcomes": [
             {
               "code": "1",
@@ -397,11 +397,11 @@
       "away": "Las Palmas",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:17Z",
       "market": "h2h",
-      "o1": 1.64,
-      "o2": 4.0,
-      "oX": 3.4,
+      "o1": 1.68,
+      "o2": 3.75,
+      "oX": 3.35,
       "markets": [
         {
           "id": "h2h||None",
@@ -411,27 +411,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:17Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Granada CF",
-              "odds": 1.64,
+              "odds": 1.68,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Las Palmas",
-              "odds": 4.0,
+              "odds": 3.75,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.4,
+              "odds": 3.35,
               "participant": ""
             }
           ]
@@ -449,7 +449,7 @@
       "away": "Sabadell FC",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:17Z",
       "market": "h2h",
       "o1": 2.2,
       "o2": 2.65,
@@ -463,7 +463,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:17Z",
           "outcomes": [
             {
               "code": "1",
@@ -501,7 +501,7 @@
       "away": "Cádiz CF",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:17Z",
       "market": "h2h",
       "o1": 1.52,
       "o2": 4.4,
@@ -515,7 +515,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:17Z",
           "outcomes": [
             {
               "code": "1",
@@ -553,11 +553,11 @@
       "away": "Celta Fortuna",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-11T14:03:40Z",
+      "asOf": "2026-11-12T15:01:17Z",
       "market": "h2h",
-      "o1": 1.48,
-      "o2": 4.4,
-      "oX": 3.95,
+      "o1": 1.5,
+      "o2": 4.3,
+      "oX": 3.9,
       "markets": [
         {
           "id": "h2h||None",
@@ -567,27 +567,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-11T14:03:40Z",
+          "asOf": "2026-11-12T15:01:17Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Albacete",
-              "odds": 1.48,
+              "odds": 1.5,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Celta Fortuna",
-              "odds": 4.4,
+              "odds": 4.3,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.95,
+              "odds": 3.9,
               "participant": ""
             }
           ]
