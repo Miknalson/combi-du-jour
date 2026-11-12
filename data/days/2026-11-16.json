@@ -7,12 +7,12 @@
    "kickoff": "2026-11-16T19:30Z",
    "home": "Albacete",
    "away": "Celta Fortuna",
-   "o1": 1.571,
-   "oX": 3.994,
-   "o2": 4.7,
+   "o1": 1.573,
+   "oX": 3.995,
+   "o2": 4.673,
    "best": {
     "1": {
-     "odds": 1.7,
+     "odds": 1.68,
      "book": "Unibet (SE)"
     },
     "2": {
@@ -25,20 +25,20 @@
     }
    },
    "books": 15,
-   "referenceAt": "2026-11-11T07:47:27Z",
+   "referenceAt": "2026-11-12T07:48:22Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-11T07:48:24Z",
-    "o1": 1.61,
-    "oX": 4.29,
+    "asOf": "2026-11-12T07:48:58Z",
+    "o1": 1.63,
+    "oX": 4.16,
     "o2": 5.05,
     "ou": {}
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-11T07:48:25Z",
+    "asOf": "2026-11-12T07:49:16Z",
     "o1": 1.5,
     "oX": 3.9,
     "o2": 4.3,
@@ -46,6 +46,6 @@
    }
   }
  ],
- "updatedAt": "2026-11-11T07:48:49Z",
+ "updatedAt": "2026-11-12T07:49:19Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }

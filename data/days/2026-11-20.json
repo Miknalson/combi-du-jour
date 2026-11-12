@@ -330,14 +330,24 @@
    }
   },
   {
+   "id": "pol-pogon-szczecin-slask-wroclaw",
+   "league": "POL",
+   "kickoff": "2026-11-20T19:30Z",
+   "home": "Pogoń Szczecin",
+   "away": "Śląsk Wrocław",
+   "o1": 1.76,
+   "oX": 3.8,
+   "o2": 4.1
+  },
+  {
    "id": "bl-bayern-munich-1-fc-koln",
    "league": "BL",
    "kickoff": "2026-11-20T19:30Z",
    "home": "Bayern Munich",
    "away": "1. FC Köln",
    "o1": 1.081,
-   "oX": 10.928,
-   "o2": 20.195,
+   "oX": 10.925,
+   "o2": 20.13,
    "best": {
     "2": {
      "odds": 27.0,
@@ -348,16 +358,16 @@
      "book": "1xBet"
     },
     "X": {
-     "odds": 13.63,
+     "odds": 13.65,
      "book": "Pinnacle"
     }
    },
-   "books": 17,
-   "referenceAt": "2026-11-11T07:47:42Z",
+   "books": 16,
+   "referenceAt": "2026-11-12T07:45:38Z",
    "ou": {
     "4.5": {
-     "o": 2.078,
-     "u": 1.716
+     "o": 2.09,
+     "u": 1.706
     },
     "2.5": {
      "o": 1.173,
@@ -367,10 +377,10 @@
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-11T07:48:20Z",
+    "asOf": "2026-11-12T07:49:10Z",
     "o1": 1.09,
-    "oX": 13.63,
-    "o2": 19.81,
+    "oX": 13.65,
+    "o2": 19.83,
     "ou": {
      "4.25": {
       "o": 1.93,
@@ -381,22 +391,12 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-11T07:48:02Z",
+    "asOf": "2026-11-12T07:48:36Z",
     "o1": 1.05,
     "oX": 11.0,
     "o2": 15.0,
     "ou": {}
    }
-  },
-  {
-   "id": "pol-pogon-szczecin-slask-wroclaw",
-   "league": "POL",
-   "kickoff": "2026-11-20T19:30Z",
-   "home": "Pogoń Szczecin",
-   "away": "Śląsk Wrocław",
-   "o1": 1.76,
-   "oX": 3.8,
-   "o2": 4.1
   },
   {
    "id": "l1-troyes-le-havre",
@@ -504,7 +504,7 @@
    "home": "Athletic Bilbao",
    "away": "Espanyol",
    "o1": 1.474,
-   "oX": 4.321,
+   "oX": 4.314,
    "o2": 6.569,
    "best": {
     "1": {
@@ -521,7 +521,7 @@
     }
    },
    "books": 14,
-   "referenceAt": "2026-11-11T07:47:28Z",
+   "referenceAt": "2026-11-12T07:48:03Z",
    "ou": {
     "2.5": {
      "o": 1.802,
@@ -531,10 +531,10 @@
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-11T07:48:21Z",
+    "asOf": "2026-11-12T07:48:57Z",
     "o1": 1.49,
-    "oX": 4.52,
-    "o2": 6.77,
+    "oX": 4.53,
+    "o2": 6.78,
     "ou": {
      "2.5": {
       "o": 1.81,
@@ -545,7 +545,7 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-11T07:47:47Z",
+    "asOf": "2026-11-12T07:48:40Z",
     "o1": 1.4,
     "oX": 4.2,
     "o2": 5.7,
@@ -553,6 +553,6 @@
    }
   }
  ],
- "updatedAt": "2026-11-11T07:50:41Z",
+ "updatedAt": "2026-11-12T07:49:19Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }
