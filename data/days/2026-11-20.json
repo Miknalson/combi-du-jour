@@ -503,17 +503,17 @@
    "kickoff": "2026-11-20T20:00Z",
    "home": "Athletic Bilbao",
    "away": "Espanyol",
-   "o1": 1.474,
-   "oX": 4.314,
-   "o2": 6.569,
+   "o1": 1.478,
+   "oX": 4.321,
+   "o2": 6.509,
    "best": {
     "1": {
      "odds": 1.54,
      "book": "1xBet"
     },
     "2": {
-     "odds": 7.0,
-     "book": "Unibet (NL)"
+     "odds": 6.99,
+     "book": "1xBet"
     },
     "X": {
      "odds": 4.6,
@@ -521,17 +521,17 @@
     }
    },
    "books": 14,
-   "referenceAt": "2026-11-12T07:48:03Z",
+   "referenceAt": "2026-11-13T07:49:58Z",
    "ou": {
     "2.5": {
-     "o": 1.802,
-     "u": 2.004
+     "o": 1.799,
+     "u": 2.012
     }
    },
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-12T07:48:57Z",
+    "asOf": "2026-11-13T07:50:36Z",
     "o1": 1.49,
     "oX": 4.53,
     "o2": 6.78,
@@ -545,14 +545,14 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-12T07:48:40Z",
-    "o1": 1.4,
+    "asOf": "2026-11-13T07:49:57Z",
+    "o1": 1.41,
     "oX": 4.2,
-    "o2": 5.7,
+    "o2": 5.5,
     "ou": {}
    }
   }
  ],
- "updatedAt": "2026-11-12T07:49:19Z",
+ "updatedAt": "2026-11-13T07:51:01Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }

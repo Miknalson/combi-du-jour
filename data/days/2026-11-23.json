@@ -1,0 +1,67 @@
+{
+ "date": "2026-11-23",
+ "updatedAt": "2026-11-13T08:00:00Z",
+ "source": "oddsportal (secours)",
+ "matches": [
+  {
+   "id": "tur-basaksehir-corum-fk",
+   "league": "TUR",
+   "kickoff": "2026-11-23T17:00Z",
+   "home": "Basaksehir",
+   "away": "Corum FK",
+   "o1": 1.9,
+   "oX": 3.8,
+   "o2": 3.6
+  },
+  {
+   "id": "pol-wieczysta-krakow-motor-lublin",
+   "league": "POL",
+   "kickoff": "2026-11-23T18:00Z",
+   "home": "Wieczysta Kraków",
+   "away": "Motor Lublin",
+   "o1": 2.3,
+   "oX": 3.8,
+   "o2": 2.5
+  },
+  {
+   "id": "den-brondby-if-fc-midtjylland",
+   "league": "DEN",
+   "kickoff": "2026-11-23T18:00Z",
+   "home": "Brondby IF",
+   "away": "FC Midtjylland",
+   "o1": 2.45,
+   "oX": 3.8,
+   "o2": 2.7
+  },
+  {
+   "id": "swe-hammarby-if-ifk-goteborg",
+   "league": "SWE",
+   "kickoff": "2026-11-23T18:00Z",
+   "home": "Hammarby IF",
+   "away": "IFK Goteborg",
+   "o1": 1.24,
+   "oX": 6.25,
+   "o2": 11.0
+  },
+  {
+   "id": "swe-orgryte-is-kalmar-ff",
+   "league": "SWE",
+   "kickoff": "2026-11-23T18:00Z",
+   "home": "Örgryte IS",
+   "away": "Kalmar FF",
+   "o1": 3.2,
+   "oX": 3.6,
+   "o2": 2.1
+  },
+  {
+   "id": "l2-sochaux-usl-dunkerque",
+   "league": "L2",
+   "kickoff": "2026-11-23T19:45Z",
+   "home": "Sochaux",
+   "away": "USL Dunkerque",
+   "o1": 2.3,
+   "oX": 3.3,
+   "o2": 3.0
+  }
+ ]
+}

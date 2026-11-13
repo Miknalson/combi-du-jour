@@ -1,7 +1,7 @@
 {
  "date": "2026-11-22",
- "updatedAt": "2026-11-12T07:54:34Z",
- "source": "oddsportal (moyenne des bookmakers)",
+ "updatedAt": "2026-11-13T07:51:01Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
    "id": "tur-erzurumspor-goztepe",
@@ -34,14 +34,117 @@
    "o2": 3.3
   },
   {
+   "id": "sa-juventus-venezia",
+   "league": "SA",
+   "kickoff": "2026-11-22T11:30Z",
+   "home": "Juventus",
+   "away": "Venezia",
+   "o1": 1.336,
+   "oX": 5.056,
+   "o2": 8.212,
+   "best": {
+    "1": {
+     "odds": 1.4,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 9.0,
+     "book": "Unibet (NL)"
+    },
+    "X": {
+     "odds": 5.5,
+     "book": "Tipico"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-13T07:47:33Z",
+   "ou": {
+    "3.0": {
+     "o": 2.03,
+     "u": 1.855
+    },
+    "2.5": {
+     "o": 1.604,
+     "u": 2.264
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:34Z",
+    "o1": 1.36,
+    "oX": 5.45,
+    "o2": 8.29,
+    "ou": {
+     "3.0": {
+      "o": 2.06,
+      "u": 1.82
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:50:18Z",
+    "o1": 1.25,
+    "oX": 5.25,
+    "o2": 7.5,
+    "ou": {}
+   }
+  },
+  {
    "id": "cha-burnley-blackburn-rovers",
    "league": "CHA",
    "kickoff": "2026-11-22T12:00Z",
    "home": "Burnley",
    "away": "Blackburn Rovers",
-   "o1": 1.85,
-   "oX": 3.8,
-   "o2": 4.1
+   "o1": 1.812,
+   "oX": 3.575,
+   "o2": 3.896,
+   "best": {
+    "2": {
+     "odds": 4.12,
+     "book": "Nordic Bet"
+    },
+    "1": {
+     "odds": 1.92,
+     "book": "LeoVegas (SE)"
+    },
+    "X": {
+     "odds": 3.8,
+     "book": "LeoVegas (SE)"
+    }
+   },
+   "books": 13,
+   "referenceAt": "2026-11-13T07:50:13Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:32Z",
+    "o1": 1.86,
+    "oX": 3.79,
+    "o2": 4.03,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:50:15Z",
+    "o1": 1.7,
+    "oX": 3.3,
+    "o2": 3.45,
+    "ou": {}
+   }
+  },
+  {
+   "id": "srb-radnicki-1923-cukaricki",
+   "league": "SRB",
+   "kickoff": "2026-11-22T12:00Z",
+   "home": "Radnicki 1923",
+   "away": "Cukaricki",
+   "o1": 2.05,
+   "oX": 3.5,
+   "o2": 3.3
   },
   {
    "id": "bl2-1-fc-kaiserslautern-dynamo-dresden",
@@ -144,6 +247,69 @@
    "o2": 3.6
   },
   {
+   "id": "liga-barcelona-villarreal",
+   "league": "LIGA",
+   "kickoff": "2026-11-22T13:00Z",
+   "home": "Barcelona",
+   "away": "Villarreal",
+   "o1": 1.217,
+   "oX": 6.699,
+   "o2": 10.275,
+   "best": {
+    "1": {
+     "odds": 1.27,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 11.5,
+     "book": "Betsson"
+    },
+    "X": {
+     "odds": 7.5,
+     "book": "Tipico"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-13T07:49:58Z",
+   "ou": {
+    "4.0": {
+     "o": 1.81,
+     "u": 2.03
+    },
+    "2.5": {
+     "o": 1.21,
+     "u": 4.36
+    },
+    "4.5": {
+     "o": 2.232,
+     "u": 1.616
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:36Z",
+    "o1": 1.23,
+    "oX": 6.11,
+    "o2": 10.07,
+    "ou": {
+     "4.0": {
+      "o": 1.78,
+      "u": 2.0
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:49:57Z",
+    "o1": 1.15,
+    "oX": 6.25,
+    "o2": 9.0,
+    "ou": {}
+   }
+  },
+  {
    "id": "ere-ajax-ado-den-haag",
    "league": "ERE",
    "kickoff": "2026-11-22T13:30Z",
@@ -164,6 +330,16 @@
    "o2": 1.73
   },
   {
+   "id": "pol-gks-katowice-lech-poznan",
+   "league": "POL",
+   "kickoff": "2026-11-22T13:45Z",
+   "home": "GKS Katowice",
+   "away": "Lech Poznań",
+   "o1": 3.1,
+   "oX": 3.8,
+   "o2": 2.0
+  },
+  {
    "id": "l1-paris-fc-angers",
    "league": "L1",
    "kickoff": "2026-11-22T14:00Z",
@@ -172,6 +348,195 @@
    "o1": 1.37,
    "oX": 5.25,
    "o2": 8.0
+  },
+  {
+   "id": "pl-hull-city-brighton-and-hove-albion",
+   "league": "PL",
+   "kickoff": "2026-11-22T14:00Z",
+   "home": "Hull City",
+   "away": "Brighton and Hove Albion",
+   "o1": 5.975,
+   "oX": 4.343,
+   "o2": 1.491,
+   "best": {
+    "2": {
+     "odds": 1.57,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 6.5,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 4.62,
+     "book": "1xBet"
+    }
+   },
+   "books": 17,
+   "referenceAt": "2026-11-13T07:49:10Z",
+   "ou": {
+    "2.5": {
+     "o": 1.629,
+     "u": 2.227
+    },
+    "3.0": {
+     "o": 2.085,
+     "u": 1.775
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:30Z",
+    "o1": 6.17,
+    "oX": 4.55,
+    "o2": 1.52,
+    "ou": {
+     "2.75": {
+      "o": 1.83,
+      "u": 2.05
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:50:50Z",
+    "o1": 5.1,
+    "oX": 4.2,
+    "o2": 1.45,
+    "ou": {}
+   }
+  },
+  {
+   "id": "sa-bologna-udinese",
+   "league": "SA",
+   "kickoff": "2026-11-22T14:00Z",
+   "home": "Bologna",
+   "away": "Udinese",
+   "o1": 1.721,
+   "oX": 3.678,
+   "o2": 4.636,
+   "best": {
+    "1": {
+     "odds": 1.8,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 4.93,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.98,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-13T07:47:33Z",
+   "ou": {
+    "2.5": {
+     "o": 1.898,
+     "u": 1.878
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:34Z",
+    "o1": 1.74,
+    "oX": 3.81,
+    "o2": 4.93,
+    "ou": {
+     "2.5": {
+      "o": 1.93,
+      "u": 1.93
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:50:18Z",
+    "o1": 1.62,
+    "oX": 3.6,
+    "o2": 4.3,
+    "ou": {}
+   }
+  },
+  {
+   "id": "sa-sassuolo-genoa",
+   "league": "SA",
+   "kickoff": "2026-11-22T14:00Z",
+   "home": "Sassuolo",
+   "away": "Genoa",
+   "o1": 2.502,
+   "oX": 3.309,
+   "o2": 2.737,
+   "best": {
+    "2": {
+     "odds": 2.86,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.61,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.58,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-13T07:47:33Z",
+   "ou": {
+    "2.5": {
+     "o": 1.928,
+     "u": 1.848
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:34Z",
+    "o1": 2.61,
+    "oX": 3.43,
+    "o2": 2.77,
+    "ou": {
+     "2.5": {
+      "o": 1.98,
+      "u": 1.89
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:50:18Z",
+    "o1": 2.4,
+    "oX": 3.15,
+    "o2": 2.55,
+    "ou": {}
+   }
+  },
+  {
+   "id": "srb-imt-novi-beograd-partizan",
+   "league": "SRB",
+   "kickoff": "2026-11-22T14:00Z",
+   "home": "IMT Novi Beograd",
+   "away": "Partizan",
+   "o1": 3.4,
+   "oX": 3.5,
+   "o2": 2.0
+  },
+  {
+   "id": "bl-augsburg-fsv-mainz-05",
+   "league": "BL",
+   "kickoff": "2026-11-22T14:30Z",
+   "home": "Augsburg",
+   "away": "FSV Mainz 05",
+   "o1": 2.65,
+   "oX": 3.9,
+   "o2": 2.35
   },
   {
    "id": "bel-kv-kortrijk-union-saint-gilloise",
@@ -192,6 +557,65 @@
    "o1": 2.75,
    "oX": 3.7,
    "o2": 2.3
+  },
+  {
+   "id": "liga-real-racing-club-de-santander-real-sociedad",
+   "league": "LIGA",
+   "kickoff": "2026-11-22T15:15Z",
+   "home": "Real Racing Club de Santander",
+   "away": "Real Sociedad",
+   "o1": 3.113,
+   "oX": 3.858,
+   "o2": 2.057,
+   "best": {
+    "1": {
+     "odds": 3.27,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 2.16,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.06,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-13T07:49:58Z",
+   "ou": {
+    "2.5": {
+     "o": 1.423,
+     "u": 2.787
+    },
+    "3.5": {
+     "o": 2.048,
+     "u": 1.741
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:36Z",
+    "o1": 3.21,
+    "oX": 4.06,
+    "o2": 2.08,
+    "ou": {
+     "3.25": {
+      "o": 1.87,
+      "u": 2.0
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:49:57Z",
+    "o1": 2.85,
+    "oX": 3.75,
+    "o2": 1.96,
+    "ou": {}
+   }
   },
   {
    "id": "swe-if-brommapojkarna-halmstads-bk",
@@ -224,6 +648,16 @@
    "o2": 15.0
   },
   {
+   "id": "srb-macva-vojvodina",
+   "league": "SRB",
+   "kickoff": "2026-11-22T16:00Z",
+   "home": "Macva",
+   "away": "Vojvodina",
+   "o1": 7.0,
+   "oX": 4.5,
+   "o2": 1.4
+  },
+  {
    "id": "l1-lorient-rennes",
    "league": "L1",
    "kickoff": "2026-11-22T16:15Z",
@@ -244,6 +678,79 @@
    "o2": 2.2
   },
   {
+   "id": "pl-liverpool-manchester-united",
+   "league": "PL",
+   "kickoff": "2026-11-22T16:30Z",
+   "home": "Liverpool",
+   "away": "Manchester United",
+   "o1": 1.716,
+   "oX": 4.084,
+   "o2": 4.198,
+   "best": {
+    "1": {
+     "odds": 1.8,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 4.5,
+     "book": "Coolbet"
+    },
+    "X": {
+     "odds": 4.3,
+     "book": "Marathon Bet"
+    }
+   },
+   "books": 19,
+   "referenceAt": "2026-11-13T07:49:10Z",
+   "ou": {
+    "3.5": {
+     "o": 2.195,
+     "u": 1.645
+    },
+    "2.5": {
+     "o": 1.509,
+     "u": 2.495
+    },
+    "3.0": {
+     "o": 1.823,
+     "u": 2.033
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:30Z",
+    "o1": 1.77,
+    "oX": 4.13,
+    "o2": 4.31,
+    "ou": {
+     "3.0": {
+      "o": 1.82,
+      "u": 2.06
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:50:50Z",
+    "o1": 1.6,
+    "oX": 4.0,
+    "o2": 3.95,
+    "ou": {}
+   }
+  },
+  {
+   "id": "bl-werder-bremen-hamburger-sv",
+   "league": "BL",
+   "kickoff": "2026-11-22T16:30Z",
+   "home": "Werder Bremen",
+   "away": "Hamburger SV",
+   "o1": 1.71,
+   "oX": 4.2,
+   "o2": 4.5
+  },
+  {
    "id": "den-fc-nordsjaelland-fc-copenhagen",
    "league": "DEN",
    "kickoff": "2026-11-22T17:00Z",
@@ -254,6 +761,65 @@
    "o2": 2.55
   },
   {
+   "id": "sa-ac-milan-frosinone",
+   "league": "SA",
+   "kickoff": "2026-11-22T17:00Z",
+   "home": "AC Milan",
+   "away": "Frosinone",
+   "o1": 1.523,
+   "oX": 4.535,
+   "o2": 5.213,
+   "best": {
+    "1": {
+     "odds": 1.61,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 5.6,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 4.99,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-13T07:47:33Z",
+   "ou": {
+    "3.5": {
+     "o": 1.949,
+     "u": 1.835
+    },
+    "2.5": {
+     "o": 1.363,
+     "u": 3.09
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:34Z",
+    "o1": 1.58,
+    "oX": 4.58,
+    "o2": 5.27,
+    "ou": {
+     "3.5": {
+      "o": 1.94,
+      "u": 1.93
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:50:18Z",
+    "o1": 1.47,
+    "oX": 4.3,
+    "o2": 4.6,
+    "ou": {}
+   }
+  },
+  {
    "id": "bel-anderlecht-leuven",
    "league": "BEL",
    "kickoff": "2026-11-22T17:30Z",
@@ -262,6 +828,61 @@
    "o1": 1.44,
    "oX": 5.0,
    "o2": 6.5
+  },
+  {
+   "id": "liga-ca-osasuna-malaga",
+   "league": "LIGA",
+   "kickoff": "2026-11-22T17:30Z",
+   "home": "CA Osasuna",
+   "away": "Málaga",
+   "o1": 1.746,
+   "oX": 3.637,
+   "o2": 4.599,
+   "best": {
+    "1": {
+     "odds": 1.83,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 4.88,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.8,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-13T07:49:58Z",
+   "ou": {
+    "2.5": {
+     "o": 1.908,
+     "u": 1.868
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:36Z",
+    "o1": 1.77,
+    "oX": 3.8,
+    "o2": 4.76,
+    "ou": {
+     "2.5": {
+      "o": 1.97,
+      "u": 1.9
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:49:57Z",
+    "o1": 1.66,
+    "oX": 3.55,
+    "o2": 4.1,
+    "ou": {}
+   }
   },
   {
    "id": "bel-lommel-sk-standard-liege",
@@ -282,6 +903,120 @@
    "o1": 1.44,
    "oX": 5.0,
    "o2": 7.0
+  },
+  {
+   "id": "sa-atalanta-bc-inter-milan",
+   "league": "SA",
+   "kickoff": "2026-11-22T19:45Z",
+   "home": "Atalanta BC",
+   "away": "Inter Milan",
+   "o1": 4.699,
+   "oX": 4.347,
+   "o2": 1.603,
+   "best": {
+    "1": {
+     "odds": 5.0,
+     "book": "Tipico"
+    },
+    "2": {
+     "odds": 1.7,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.68,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-13T07:47:33Z",
+   "ou": {
+    "3.5": {
+     "o": 2.013,
+     "u": 1.767
+    },
+    "2.5": {
+     "o": 1.403,
+     "u": 2.923
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:34Z",
+    "o1": 4.85,
+    "oX": 4.57,
+    "o2": 1.62,
+    "ou": {
+     "3.25": {
+      "o": 1.84,
+      "u": 2.04
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:50:18Z",
+    "o1": 4.2,
+    "oX": 4.2,
+    "o2": 1.52,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga-getafe-atletico-madrid",
+   "league": "LIGA",
+   "kickoff": "2026-11-22T20:00Z",
+   "home": "Getafe",
+   "away": "Atlético Madrid",
+   "o1": 5.612,
+   "oX": 3.802,
+   "o2": 1.614,
+   "best": {
+    "2": {
+     "odds": 1.7,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 6.0,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 4.02,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 14,
+   "referenceAt": "2026-11-13T07:49:58Z",
+   "ou": {
+    "2.5": {
+     "o": 2.033,
+     "u": 1.767
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-13T07:50:36Z",
+    "o1": 5.77,
+    "oX": 4.02,
+    "o2": 1.62,
+    "ou": {
+     "2.5": {
+      "o": 2.01,
+      "u": 1.86
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-13T07:49:57Z",
+    "o1": 4.9,
+    "oX": 3.75,
+    "o2": 1.52,
+    "ou": {}
+   }
   }
  ]
 }
