@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/update_sports.py'
+      - 'scripts/update_odds.py'
+      - 'uefa.js'
       - '.github/workflows/cotes-sports.yml'
       - 'safe*'
       - 'index.html'
@@ -37,6 +39,8 @@ jobs:
           node tests/sports-combos.test.cjs
           node tests/safe.test.cjs
           python -m unittest discover -s tests -p 'test_safe_sports.py'
+          python -m unittest discover -s tests -p 'test_uefa.py'
+          node tests/uefa.test.cjs
       - name: Détecter une modification du collecteur
         id: quote_changes
         if: github.event_name == 'push'
@@ -57,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/sports/
+          git add data/sports/ data/days/ data/index.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Cotes Winamax football basket et tennis"
           git pull --rebase origin main
@@ -65,7 +69,7 @@ jobs:
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp index.html tableau.html sports.html safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp index.html tableau.html sports.html uefa.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

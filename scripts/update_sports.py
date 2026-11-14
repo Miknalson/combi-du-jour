@@ -15,6 +15,50 @@ SPORTS = ('football', 'basket', 'tennis')
 FOOTBALL_KEYS = {x[0] for x in api.LEAGUES}
 
 
+def is_uefa(key, title=''):
+    return key.startswith('soccer_') and ('_uefa_' in key or 'uefa' in title.casefold() or key.endswith('_qualifiers_europe'))
+
+
+def football_code(key):
+    return next((code for sport,code,*_ in api.LEAGUES if sport==key), 'UEFA_'+key.removeprefix('soccer_').removeprefix('uefa_').upper())
+
+
+def publish_football_days(matches, now):
+    """Feed the football page with the same real FR prices as Safe; preserve scores and IDs."""
+    directory=ROOT.parent/'days'
+    directory.mkdir(parents=True,exist_ok=True)
+    changed=False
+    for m in matches:
+        if m.get('bookKey')!=BOOK:continue
+        kickoff=dt.datetime.fromisoformat(m['kickoff'].replace('Z','+00:00'))
+        stamp=dt.datetime.fromisoformat(m['asOf'].replace('Z','+00:00'))
+        if kickoff<=now or not 0<=(now-stamp).total_seconds()<=86400:continue
+        date=kickoff.astimezone(api.PARIS).strftime('%Y-%m-%d')
+        path=directory/(date+'.json')
+        doc=json.loads(path.read_text()) if path.exists() else {'date':date,'matches':[]}
+        identity=lambda v:(api.slug(v['home']),api.slug(v['away']),dt.datetime.fromisoformat(v['kickoff'].replace('Z','+00:00')))
+        target=next((old for old in doc['matches'] if identity(old)==identity(m)),None)
+        if target is None:
+            target={'id':m['id'],'league':m.get('leagueCode') or (football_code(m['sportKey']) if m.get('sportKey') else m['league']),
+                    'home':m['home'],'away':m['away'],'kickoff':m['kickoff'],'quoteBasis':'winamax-only',
+                    'o1':m['o1'],'oX':m['oX'],'o2':m['o2'],'books':1}
+            doc['matches'].append(target)
+        target['leagueTitle']=m['league']
+        target['mine']={'book':'Winamax France','bookKey':BOOK,'asOf':m['asOf'],
+                        'o1':m['o1'],'oX':m['oX'],'o2':m['o2'],'ou':{}}
+        for group in m.get('markets',[]):
+            if group['family']=='totals':
+                prices={o['side']:o['odds'] for o in group['outcomes']}
+                if 'over' in prices and 'under' in prices:
+                    target['mine']['ou'][str(group['line'])]={'o':prices['over'],'u':prices['under']}
+        doc['matches'].sort(key=lambda v:v['kickoff'])
+        doc.update(updatedAt=now.isoformat(),source='Winamax France et archives des marchés')
+        path.write_text(json.dumps(doc,ensure_ascii=False,indent=1)+'\n');changed=True
+    if changed:
+        dates=sorted(p.stem for p in directory.glob('????-??-??.json'))
+        (ROOT.parent/'index.json').write_text(json.dumps({'updatedAt':now.isoformat(),'dates':dates},indent=1)+'\n')
+
+
 def market_groups(event, sport, now):
     """Only paired, timestamped Winamax quotes; no prices inferred from another market."""
     home, away = event['home_team'], event['away_team']
@@ -197,6 +241,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--max-credits', type=int, default=18)
     p.add_argument('--days', type=int, default=7)
+    p.add_argument('--football-days', type=int, default=14)
     args = p.parse_args()
     now = dt.datetime.now(dt.timezone.utc)
     if not os.environ.get('ODDS_API_KEY'):
@@ -208,18 +253,30 @@ def main():
         available = api.get('/sports')
         budget = min(max(0, args.max_credits), api.credits_budget(now)[0])
         queues = {sport: [] for sport in SPORTS}
+        fixtures=[]
+        discovery_errors=[]
         for item in available:
             key = item['key']
-            sport = 'basket' if key.startswith('basketball_') else 'tennis' if key.startswith('tennis_') else 'football' if key in FOOTBALL_KEYS else None
+            sport = 'basket' if key.startswith('basketball_') else 'tennis' if key.startswith('tennis_') else 'football' if key in FOOTBALL_KEYS or is_uefa(key,item.get('title','')) else None
             if not sport or item.get('has_outrights') or item.get('active') is False:
                 continue
-            events = api.get(f'/sports/{key}/events')
+            try:
+                events = api.get(f'/sports/{key}/events')
+            except Exception:
+                discovery_errors.append(key)
+                continue
+            horizon_days=args.football_days if sport=='football' else args.days
             future = [dt.datetime.fromisoformat(e['commence_time'].replace('Z', '+00:00')) for e in events]
-            future = [d for d in future if now < d <= now + dt.timedelta(days=args.days)]
+            future = [d for d in future if now < d <= now + dt.timedelta(days=horizon_days)]
+            if sport=='football' and is_uefa(key,item.get('title','')):
+                fixtures.extend({'id':'football-'+e['id'],'sportKey':key,'leagueCode':football_code(key),
+                                 'league':item.get('title',key),'home':e['home_team'],'away':e['away_team'],
+                                 'kickoff':e['commence_time']} for e in events
+                                if dt.datetime.fromisoformat(e['commence_time'].replace('Z','+00:00')) in future)
             if future:
                 queues[sport].append((min(future), key, item.get('title', key)))
-        for queue in queues.values():
-            queue.sort()
+        for sport,queue in queues.items():
+            queue.sort(key=lambda row:(0 if sport=='football' and is_uefa(row[1],row[2]) else 1,row[0],row[1]))
         matches = {sport: [] for sport in SPORTS}
         queried = {sport: 0 for sport in SPORTS}
         offered = {k: len(v) for k, v in queues.items()}
@@ -231,9 +288,9 @@ def main():
                 if not queues[sport] or budget <= 0:
                     continue
                 _, key, title = queues[sport].pop(0)
-                core_markets = 'h2h,spreads,totals' if budget >= 3 else 'h2h'
+                core_markets = 'h2h' if sport=='football' and is_uefa(key,title) else 'h2h,spreads,totals' if budget >= 3 else 'h2h'
                 params = dict(bookmakers=BOOK, markets=core_markets, oddsFormat='decimal',
-                              commenceTimeTo=(now + dt.timedelta(days=args.days)).strftime('%Y-%m-%dT%H:%M:%SZ'))
+                              commenceTimeTo=(now + dt.timedelta(days=args.football_days if sport=='football' else args.days)).strftime('%Y-%m-%dT%H:%M:%SZ'))
                 try:
                     events = api.get(f'/sports/{key}/odds', **params)
                 except HTTPError as exc:
@@ -247,21 +304,24 @@ def main():
                 for event in events:
                     m = extract(event, sport, title, now)
                     if m:
+                        if sport=='football':m['leagueCode']=football_code(key)
                         m['sportKey'] = key
                         m['eventId'] = event['id']
                         matches[sport].append(m)
         # Discover the actual market names, alternating sports rather than exhausting tennis first.
         enrich_markets(matches, budget + enrichment_budget, now)
         if queried['football'] and queues['football']:
-            previous = archived_football(now, args.days, queried_keys)
+            previous = archived_football(now, args.football_days, queried_keys)
             # Match identity uses the real kickoff instant, not its string formatting.
             identity = lambda m: (m['home'].casefold(), m['away'].casefold(), dt.datetime.fromisoformat(m['kickoff'].replace('Z','+00:00')))
             current = {identity(m) for m in matches['football']}
             matches['football'].extend(m for m in previous if identity(m) not in current)
+        publish_football_days(matches['football'],now)
         for sport in SPORTS:
             unique = {m['id']: m for m in matches[sport]}
+            calendar={'fixtures':sorted(fixtures,key=lambda f:f['kickoff']),'calendarStatus':'partial' if discovery_errors else 'ok','horizonDays':args.football_days} if sport=='football' else {}
             write(sport, 'ok' if queried[sport] or not offered[sport] else 'quota', list(unique.values()), now,
-                  leaguesQueried=queried[sport], leaguesAvailable=offered[sport], partial=bool(queues[sport]))
+                  leaguesQueried=queried[sport], leaguesAvailable=offered[sport], partial=bool(queues[sport]),**calendar)
             print(f'{sport}: {len(unique)} rencontres Winamax, {queried[sport]} compétitions interrogées')
     except Exception:
         # Never log request URLs: they carry the API key. Never keep old prices as fresh.

@@ -162,3 +162,29 @@ Les victoires simples (h2h) sont à nouveau admissibles, au même titre que les
 sets, totaux et handicaps. Les seuils restent 60 % minimum par sélection et
 pour le ticket entier, avec une cote totale de 1,50–2,00. Les marchés incomplets
 ou absents du flux ne sont pas inventés.
+
+## Matchs UEFA — clubs et sélections
+
+La collecte football inclut les compétitions UEFA actives annoncées par la source :
+Ligue des nations, Ligue des champions, Europa League, Conference League, Euro et
+qualifications, compétitions féminines/jeunes et qualifications européennes de la
+Coupe du monde. La détection ne dépend plus uniquement de la liste de championnats.
+Les compétitions UEFA sont prioritaires dans le budget football ; le budget global
+et l’alternance avec basket/tennis restent conservés.
+
+Le calendrier football couvre 14 jours (basket/tennis : 7). Les événements UEFA sont
+affichés dans Football et Safe même si aucune cote n’a encore été relevée. Une rencontre
+sans prix n’est jamais injectée dans un ticket. Les dates futures du calendrier sont
+également accessibles dans Safe, sans modifier les seuils 60 % / cote 1,50–2,00.
+Les jours sans rencontre annoncée, les prix manquants et un calendrier incomplet
+sont distingués. Le fournisseur peut ne pas encore proposer certaines compétitions.
+
+Les relevés Winamax du flux Safe alimentent aussi l’onglet Football, côté collecte
+et côté client. Les identifiants des anciens matchs/tickets, leurs scores et leurs
+cotes de consensus sont conservés. Un nouveau match dispose d’un seul bookmaker
+annoncé (`books:1`, `quoteBasis:winamax-only`) : aucun consensus de cinq sources n’est
+inventé. Ses simulations et tickets personnels peuvent utiliser ses vrais prix FR
+horodatés ; le filtre de rentabilité du modèle prudent reste inchangé.
+
+Tests : `python -m unittest discover -s tests -p 'test_uefa.py'`,
+`node tests/uefa.test.cjs`, `node tests/uefa-browser.cjs`.

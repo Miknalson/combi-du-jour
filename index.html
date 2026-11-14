@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=sports-v1">
+<link rel="stylesheet" href="style.css?v=uefa-v1">
 </head>
 <body>
 <div class="wrap">
@@ -28,6 +28,7 @@
   </header>
 <nav class="sport-tabs" aria-label="Choisir un sport"><a href="./" aria-current="page">Football</a><a href="sports.html?sport=basket">Basket</a><a href="sports.html?sport=tennis">Tennis</a><a href="safe.html">Safe du jour</a></nav>
 
+  <section class="uefa-calendar" id="uefaFixtures" aria-label="Calendrier UEFA"></section>
   <nav class="days" id="days" aria-label="Choisir le jour"></nav>
 
   <div class="mode-switch" role="group" aria-label="Mode d’analyse"><button type="button" data-strategy="value" aria-pressed="true">Modèle prudent</button><button type="button" data-strategy="combo" aria-pressed="false">Simuler un combiné</button></div>
@@ -119,6 +120,7 @@
   </footer>
 </div>
 
+<script src="uefa.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
 <script>
@@ -127,7 +129,7 @@
 
 var LEAGUES = {
   PL:'Premier League', LIGA:'LaLiga', SA:'Serie A', BL:'Bundesliga', L1:'Ligue 1',
-  ERE:'Eredivisie', POR:'Liga Portugal', UCL:'Ligue des champions', UEL:'Ligue Europa', UECL:'Conference League',
+  ERE:'Eredivisie', POR:'Liga Portugal', UCL:'Ligue des champions', UEL:'Ligue Europa', UECL:'Conference League', UNL:'Ligue des nations UEFA',EUROQ:'Qualifications Euro UEFA',EURO:'Euro UEFA',WCQE:'Qualifications européennes Coupe du monde',UWCL:'Ligue des champions féminine UEFA',
   CHA:'Championship', BL2:'2. Bundesliga', LIGA2:'LaLiga2', L2:'Ligue 2', POR2:'Liga Portugal 2',
   BEL:'Pro League (Belgique)', DEN:'Superliga (Danemark)', IRL:'Premier Division (Irlande)', POL:'Ekstraklasa (Pologne)',
   ROU:'Superliga (Roumanie)', RUS:'Premier League (Russie)', SRB:'Super Liga (Serbie)', SWE:'Allsvenskan (Suède)',
@@ -354,7 +356,7 @@ function bestCombos(matches, n, liveFilter){
     if(onlyMine && !m.mine) return;
     if(liveFilter && settings.skipStarted && new Date(m.kickoff).getTime() <= now) return;
     // Markets quoted by only a handful of bookmakers are thin and their odds less reliable.
-    if(m.books !== undefined && m.books < MIN_BOOKS) return;
+    if(m.books !== undefined && m.books < MIN_BOOKS && !(m.quoteBasis==='winamax-only'&&UefaCalendar.realQuote(m,now))) return;
     // Grid-only markets have no bookmaker price in the data and our estimates proved too generous
     // (a ≈1,55 ticket was about 1,20 at the bookmaker), so the algo leaves them out unless asked.
     var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p >= Math.max(0.2, settings.minProb) && (settings.algoEst || !c.grid) && (!onlyMine || c.mine || c.grid); });
@@ -591,7 +593,7 @@ function renderHistory(){
 
 function renderLeagues(){
   var present = {};
-  Object.keys(state.days).forEach(function(d){ state.days[d].matches.forEach(function(m){ present[m.league]=true; }); });
+  Object.keys(state.days).forEach(function(d){ state.days[d].matches.forEach(function(m){ present[m.league]=true;if(!LEAGUES[m.league])LEAGUES[m.league]=m.leagueTitle||m.league; }); });
   document.getElementById('leagueChecks').innerHTML = Object.keys(LEAGUES).filter(function(k){ return present[k]; }).map(function(k){
     return '<label><input type="checkbox" data-league="'+k+'"'+(settings.offLeagues.indexOf(k)<0?' checked':'')+'> '+esc(LEAGUES[k])+'</label>';
   }).join('');
@@ -745,8 +747,8 @@ bindSettings();
 (async function(){
   var statusEl=document.getElementById('status');
   try{
-    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('index');return r.json();}),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
-    var idx=pair[0];state.model=pair[1];
+    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():{dates:[]}).catch(()=>({dates:[]})),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/sports/football.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
+    var idx=pair[0];state.model=pair[1];UefaCalendar.render('uefaFixtures',pair[2]);
     var cutoff = parisDate(new Date(Date.now()-30*86400000));
     var dates = (idx.dates||[]).filter(function(d){ return d>=cutoff; });
     var docs = await Promise.all(dates.map(function(d){
@@ -754,7 +756,7 @@ bindSettings();
     }));
     var days={};
     docs.forEach(function(v){ if(v && Array.isArray(v.matches)) days[v.date]=v; });
-    state.days=days; state.loaded=true;
+    state.days=UefaCalendar.mergeDays(days,pair[2],Date.now()); state.loaded=true;
     statusEl.innerHTML = idx.updatedAt ? 'Cotes mises à jour<br><b>'+esc(new Date(idx.updatedAt).toLocaleString('fr-FR',{timeZone:TZ,weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}))+'</b>' : 'Aucune donnée';
     render();
   }catch(e){
