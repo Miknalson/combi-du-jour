@@ -1,54 +1,9 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-14T12:10:01.981408+00:00",
+  "updatedAt": "2026-11-14T13:24:31.613003+00:00",
   "status": "ok",
   "matches": [
-    {
-      "id": "liga2-real-valladolid-cf-cd-castellon",
-      "sport": "football",
-      "league": "LIGA2",
-      "kickoff": "2026-11-14T13:00Z",
-      "home": "Real Valladolid CF",
-      "away": "CD Castellón",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T07:48:18Z",
-      "market": "h2h",
-      "o1": 2.65,
-      "oX": 3.4,
-      "o2": 2.1,
-      "markets": [
-        {
-          "id": "h2h|archive",
-          "family": "h2h",
-          "unit": "match",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T07:48:18Z",
-          "quoteSource": "api-archive",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "odds": 2.65,
-              "label": "Victoire Real Valladolid CF"
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "odds": 3.4,
-              "label": "Match nul"
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "odds": 2.1,
-              "label": "Victoire CD Castellón"
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "football-244d7d2e6f3f8529af59270040b7ec7a",
       "sport": "football",
@@ -58,11 +13,11 @@
       "away": "Israel",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 1.7,
-      "o2": 3.95,
-      "oX": 3.5,
+      "o1": 1.68,
+      "o2": 4.0,
+      "oX": 3.55,
       "markets": [
         {
           "id": "h2h||None",
@@ -72,27 +27,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Kosovo",
-              "odds": 1.7,
+              "odds": 1.68,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Israel",
-              "odds": 3.95,
+              "odds": 4.0,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.5,
+              "odds": 3.55,
               "participant": ""
             }
           ]
@@ -161,10 +116,10 @@
       "away": "Hungary",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 2.85,
-      "o2": 2.3,
+      "o1": 3.0,
+      "o2": 2.2,
       "oX": 2.95,
       "markets": [
         {
@@ -175,20 +130,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Georgia",
-              "odds": 2.85,
+              "odds": 3.0,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Hungary",
-              "odds": 2.3,
+              "odds": 2.2,
               "participant": ""
             },
             {
@@ -204,11 +159,8 @@
       "leagueCode": "UNL",
       "sportKey": "soccer_uefa_nations_league",
       "eventId": "d548fa34308b91eb158670eb18e1deae",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
+      "availableMarkets": [],
+      "marketLookupUnavailable": true
     },
     {
       "id": "football-8d67c473dbea0c85b30eefee4bca53d9",
@@ -219,7 +171,7 @@
       "away": "Wales",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.14,
       "o2": 9.5,
@@ -233,7 +185,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -367,11 +319,11 @@
       "away": "Republic of Ireland",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 1.56,
-      "o2": 4.8,
-      "oX": 3.6,
+      "o1": 1.58,
+      "o2": 4.7,
+      "oX": 3.55,
       "markets": [
         {
           "id": "h2h||None",
@@ -381,27 +333,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Austria",
-              "odds": 1.56,
+              "odds": 1.58,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Republic of Ireland",
-              "odds": 4.8,
+              "odds": 4.7,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.6,
+              "odds": 3.55,
               "participant": ""
             }
           ]
@@ -425,7 +377,7 @@
       "away": "Bosnia & Herzegovina",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.35,
       "o2": 6.5,
@@ -439,7 +391,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -468,8 +420,11 @@
       "leagueCode": "UNL",
       "sportKey": "soccer_uefa_nations_league",
       "eventId": "2b646127cc6cb400abc663c5a458f1db",
-      "availableMarkets": [],
-      "marketLookupUnavailable": true
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
     },
     {
       "id": "football-159554f486f93d1d8d4213c570117a0e",
@@ -480,7 +435,7 @@
       "away": "Denmark",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.55,
       "o2": 4.75,
@@ -494,7 +449,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -538,7 +493,7 @@
       "away": "Ukraine",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.35,
       "o2": 2.85,
@@ -552,7 +507,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -580,7 +535,12 @@
       ],
       "leagueCode": "UNL",
       "sportKey": "soccer_uefa_nations_league",
-      "eventId": "432a7eb09df939bf1e15a3e183f8494f"
+      "eventId": "432a7eb09df939bf1e15a3e183f8494f",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
     },
     {
       "id": "football-3ce5eabe80d52d3ed6056b6c141bbea8",
@@ -591,11 +551,11 @@
       "away": "Poland",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 4.1,
-      "o2": 1.62,
-      "oX": 3.75,
+      "o1": 4.2,
+      "o2": 1.58,
+      "oX": 3.9,
       "markets": [
         {
           "id": "h2h||None",
@@ -605,27 +565,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Romania",
-              "odds": 4.1,
+              "odds": 4.2,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Poland",
-              "odds": 1.62,
+              "odds": 1.58,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.75,
+              "odds": 3.9,
               "participant": ""
             }
           ]
@@ -633,7 +593,12 @@
       ],
       "leagueCode": "UNL",
       "sportKey": "soccer_uefa_nations_league",
-      "eventId": "3ce5eabe80d52d3ed6056b6c141bbea8"
+      "eventId": "3ce5eabe80d52d3ed6056b6c141bbea8",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
     },
     {
       "id": "liga2-oviedo-girona-fc",
@@ -734,7 +699,7 @@
       "away": "Armenia",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.9,
       "o2": 2.2,
@@ -748,7 +713,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -787,7 +752,7 @@
       "away": "Montenegro",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.95,
       "o2": 2.1,
@@ -801,7 +766,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -885,7 +850,7 @@
       "away": "Albania",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 3.75,
       "o2": 1.8,
@@ -899,7 +864,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -938,7 +903,7 @@
       "away": "San Marino",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.01,
       "o2": 25.0,
@@ -952,7 +917,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1081,10 +1046,10 @@
       "away": "Italy",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 1.98,
-      "o2": 2.9,
+      "o1": 2.05,
+      "o2": 2.7,
       "oX": 3.65,
       "markets": [
         {
@@ -1095,20 +1060,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Belgium",
-              "odds": 1.98,
+              "odds": 2.05,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Italy",
-              "odds": 2.9,
+              "odds": 2.7,
               "participant": ""
             },
             {
@@ -1134,7 +1099,7 @@
       "away": "Czech Republic",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.48,
       "o2": 4.8,
@@ -1148,7 +1113,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1187,10 +1152,10 @@
       "away": "England",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 1.62,
-      "o2": 4.0,
+      "o1": 1.64,
+      "o2": 3.85,
       "oX": 3.85,
       "markets": [
         {
@@ -1201,20 +1166,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Spain",
-              "odds": 1.62,
+              "odds": 1.64,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire England",
-              "odds": 4.0,
+              "odds": 3.85,
               "participant": ""
             },
             {
@@ -1240,7 +1205,7 @@
       "away": "Turkey",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.17,
       "o2": 9.0,
@@ -1254,7 +1219,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1293,7 +1258,7 @@
       "away": "Moldova",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.7,
       "o2": 3.9,
@@ -1307,7 +1272,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1346,11 +1311,11 @@
       "away": "Slovakia",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 4.7,
-      "o2": 1.5,
-      "oX": 3.75,
+      "o1": 4.1,
+      "o2": 1.62,
+      "oX": 3.55,
       "markets": [
         {
           "id": "h2h||None",
@@ -1360,27 +1325,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Kazakhstan",
-              "odds": 4.7,
+              "odds": 4.1,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Slovakia",
-              "odds": 1.5,
+              "odds": 1.62,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.75,
+              "odds": 3.55,
               "participant": ""
             }
           ]
@@ -1399,10 +1364,10 @@
       "away": "Bulgaria",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 2.05,
-      "o2": 3.05,
+      "o1": 1.96,
+      "o2": 3.35,
       "oX": 2.95,
       "markets": [
         {
@@ -1413,20 +1378,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Estonia",
-              "odds": 2.05,
+              "odds": 1.96,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Bulgaria",
-              "odds": 3.05,
+              "odds": 3.35,
               "participant": ""
             },
             {
@@ -1452,10 +1417,10 @@
       "away": "Luxembourg",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 1.27,
-      "o2": 6.75,
+      "o1": 1.26,
+      "o2": 7.0,
       "oX": 4.7,
       "markets": [
         {
@@ -1466,20 +1431,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Iceland",
-              "odds": 1.27,
+              "odds": 1.26,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Luxembourg",
-              "odds": 6.75,
+              "odds": 7.0,
               "participant": ""
             },
             {
@@ -1550,11 +1515,11 @@
       "away": "Netherlands",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.82,
-      "o2": 3.15,
-      "oX": 3.85,
+      "o2": 3.1,
+      "oX": 3.9,
       "markets": [
         {
           "id": "h2h||None",
@@ -1564,7 +1529,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1577,14 +1542,14 @@
               "code": "2",
               "side": "2",
               "label": "Victoire Netherlands",
-              "odds": 3.15,
+              "odds": 3.1,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.85,
+              "odds": 3.9,
               "participant": ""
             }
           ]
@@ -1603,7 +1568,7 @@
       "away": "Serbia",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.37,
       "o2": 5.7,
@@ -1617,7 +1582,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1656,11 +1621,11 @@
       "away": "Slovenia",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 5.2,
-      "o2": 1.52,
-      "oX": 3.55,
+      "o1": 5.3,
+      "o2": 1.5,
+      "oX": 3.65,
       "markets": [
         {
           "id": "h2h||None",
@@ -1670,27 +1635,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire North Macedonia",
-              "odds": 5.2,
+              "odds": 5.3,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Slovenia",
-              "odds": 1.52,
+              "odds": 1.5,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.55,
+              "odds": 3.65,
               "participant": ""
             }
           ]
@@ -1709,7 +1674,7 @@
       "away": "Scotland",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.64,
       "o2": 4.3,
@@ -1723,7 +1688,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1762,7 +1727,7 @@
       "away": "Austria",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 4.5,
       "o2": 1.52,
@@ -1776,7 +1741,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1815,7 +1780,7 @@
       "away": "Romania",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.66,
       "o2": 4.2,
@@ -1829,7 +1794,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1868,11 +1833,11 @@
       "away": "Norway",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
-      "o1": 2.45,
-      "o2": 2.35,
-      "oX": 3.45,
+      "o1": 2.35,
+      "o2": 2.45,
+      "oX": 3.6,
       "markets": [
         {
           "id": "h2h||None",
@@ -1882,27 +1847,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
               "label": "Victoire Denmark",
-              "odds": 2.45,
+              "odds": 2.35,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
               "label": "Victoire Norway",
-              "odds": 2.35,
+              "odds": 2.45,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.45,
+              "odds": 3.6,
               "participant": ""
             }
           ]
@@ -1921,7 +1886,7 @@
       "away": "Georgia",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.0,
       "o2": 3.1,
@@ -1935,7 +1900,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -1974,7 +1939,7 @@
       "away": "Northern Ireland",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.8,
       "o2": 3.6,
@@ -1988,7 +1953,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -2027,7 +1992,7 @@
       "away": "Kosovo",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.84,
       "o2": 3.75,
@@ -2041,7 +2006,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -2080,7 +2045,7 @@
       "away": "Sweden",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.2,
       "o2": 2.65,
@@ -2094,7 +2059,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -2133,7 +2098,7 @@
       "away": "Portugal",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-14T12:09:31Z",
+      "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 6.75,
       "o2": 1.28,
@@ -2147,7 +2112,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T12:09:31Z",
+          "asOf": "2026-11-14T13:23:58Z",
           "outcomes": [
             {
               "code": "1",
@@ -4379,6 +4344,6 @@
       "kickoff": "2026-11-26T20:00:00Z"
     }
   ],
-  "calendarStatus": "ok",
+  "calendarStatus": "partial",
   "horizonDays": 14
 }

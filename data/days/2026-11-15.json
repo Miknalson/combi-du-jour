@@ -1,6 +1,6 @@
 {
  "date": "2026-11-15",
- "updatedAt": "2026-11-14T12:10:01.981408+00:00",
+ "updatedAt": "2026-11-14T13:24:31.613003+00:00",
  "source": "Winamax France et archives des marchés",
  "matches": [
   {
@@ -83,7 +83,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 2.9,
     "oX": 3.1,
     "o2": 2.2,
@@ -105,7 +105,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 2.95,
     "oX": 3.3,
     "o2": 2.1,
@@ -192,7 +192,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 3.75,
     "oX": 3.25,
     "o2": 1.8,
@@ -214,7 +214,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.01,
     "oX": 11.5,
     "o2": 25.0,
@@ -336,10 +336,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
-    "o1": 1.98,
+    "asOf": "2026-11-14T13:23:58Z",
+    "o1": 2.05,
     "oX": 3.65,
-    "o2": 2.9,
+    "o2": 2.7,
     "ou": {}
    }
   },
@@ -358,7 +358,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.48,
     "oX": 4.1,
     "o2": 4.8,
@@ -380,10 +380,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
-    "o1": 1.62,
+    "asOf": "2026-11-14T13:23:58Z",
+    "o1": 1.64,
     "oX": 3.85,
-    "o2": 4.0,
+    "o2": 3.85,
     "ou": {}
    }
   },
@@ -402,7 +402,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.17,
     "oX": 7.0,
     "o2": 9.0,

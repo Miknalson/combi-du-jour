@@ -1,6 +1,6 @@
 {
  "date": "2026-11-14",
- "updatedAt": "2026-11-14T12:10:01.981408+00:00",
+ "updatedAt": "2026-11-14T13:24:31.613003+00:00",
  "source": "Winamax France et archives des marchés",
  "matches": [
   {
@@ -63,10 +63,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
-    "o1": 1.7,
-    "oX": 3.5,
-    "o2": 3.95,
+    "asOf": "2026-11-14T13:23:58Z",
+    "o1": 1.68,
+    "oX": 3.55,
+    "o2": 4.0,
     "ou": {}
    }
   },
@@ -130,10 +130,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
-    "o1": 2.85,
+    "asOf": "2026-11-14T13:23:58Z",
+    "o1": 3.0,
     "oX": 2.95,
-    "o2": 2.3,
+    "o2": 2.2,
     "ou": {}
    }
   },
@@ -152,7 +152,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.14,
     "oX": 7.0,
     "o2": 9.5,
@@ -264,10 +264,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
-    "o1": 1.56,
-    "oX": 3.6,
-    "o2": 4.8,
+    "asOf": "2026-11-14T13:23:58Z",
+    "o1": 1.58,
+    "oX": 3.55,
+    "o2": 4.7,
     "ou": {}
    }
   },
@@ -286,7 +286,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.35,
     "oX": 4.5,
     "o2": 6.5,
@@ -308,7 +308,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.55,
     "oX": 4.6,
     "o2": 4.75,
@@ -330,7 +330,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 2.35,
     "oX": 2.8,
     "o2": 2.85,
@@ -352,10 +352,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
-    "o1": 4.1,
-    "oX": 3.75,
-    "o2": 1.62,
+    "asOf": "2026-11-14T13:23:58Z",
+    "o1": 4.2,
+    "oX": 3.9,
+    "o2": 1.58,
     "ou": {}
    }
   },

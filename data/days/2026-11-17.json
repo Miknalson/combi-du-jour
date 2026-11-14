@@ -16,7 +16,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 4.5,
     "oX": 4.0,
     "o2": 1.52,
@@ -38,7 +38,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.66,
     "oX": 3.5,
     "o2": 4.2,
@@ -60,10 +60,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
-    "o1": 2.45,
-    "oX": 3.45,
-    "o2": 2.35,
+    "asOf": "2026-11-14T13:23:58Z",
+    "o1": 2.35,
+    "oX": 3.6,
+    "o2": 2.45,
     "ou": {}
    }
   },
@@ -82,7 +82,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 2.0,
     "oX": 3.3,
     "o2": 3.1,
@@ -104,7 +104,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.8,
     "oX": 3.4,
     "o2": 3.6,
@@ -126,7 +126,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 1.84,
     "oX": 3.1,
     "o2": 3.75,
@@ -148,7 +148,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 2.2,
     "oX": 3.4,
     "o2": 2.65,
@@ -170,7 +170,7 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T12:09:31Z",
+    "asOf": "2026-11-14T13:23:58Z",
     "o1": 6.75,
     "oX": 5.1,
     "o2": 1.28,
@@ -178,6 +178,6 @@
    }
   }
  ],
- "updatedAt": "2026-11-14T12:10:01.981408+00:00",
+ "updatedAt": "2026-11-14T13:24:31.613003+00:00",
  "source": "Winamax France et archives des marchés"
 }
