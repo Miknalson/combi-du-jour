@@ -46,7 +46,8 @@
     "o2": 2.1,
     "ou": {}
    },
-   "leagueTitle": "LIGA2"
+   "leagueTitle": "LIGA2",
+   "score": "0-1"
   },
   {
    "id": "football-244d7d2e6f3f8529af59270040b7ec7a",
@@ -68,7 +69,8 @@
     "oX": 3.55,
     "o2": 4.0,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "liga2-real-sociedad-b-sporting-gijon",
@@ -113,7 +115,8 @@
     "o2": 2.75,
     "ou": {}
    },
-   "leagueTitle": "LIGA2"
+   "leagueTitle": "LIGA2",
+   "score": "2-2"
   },
   {
    "id": "football-d548fa34308b91eb158670eb18e1deae",
@@ -135,7 +138,8 @@
     "oX": 2.95,
     "o2": 2.2,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "football-8d67c473dbea0c85b30eefee4bca53d9",
@@ -157,7 +161,8 @@
     "oX": 7.0,
     "o2": 9.5,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "liga2-almeria-andorra-cf",
@@ -202,7 +207,8 @@
     "o2": 3.7,
     "ou": {}
    },
-   "leagueTitle": "LIGA2"
+   "leagueTitle": "LIGA2",
+   "score": "2-1"
   },
   {
    "id": "liga2-mallorca-cordoba",
@@ -247,7 +253,8 @@
     "o2": 3.15,
     "ou": {}
    },
-   "leagueTitle": "LIGA2"
+   "leagueTitle": "LIGA2",
+   "score": "3-3"
   },
   {
    "id": "football-c745f84500717bc671c4cd864624cca8",
@@ -269,7 +276,8 @@
     "oX": 3.55,
     "o2": 4.7,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "football-2b646127cc6cb400abc663c5a458f1db",
@@ -291,7 +299,8 @@
     "oX": 4.5,
     "o2": 6.5,
     "ou": {}
-   }
+   },
+   "score": "3-2"
   },
   {
    "id": "football-159554f486f93d1d8d4213c570117a0e",
@@ -313,7 +322,8 @@
     "oX": 4.6,
     "o2": 4.75,
     "ou": {}
-   }
+   },
+   "score": "1-4"
   },
   {
    "id": "football-432a7eb09df939bf1e15a3e183f8494f",
@@ -335,7 +345,8 @@
     "oX": 2.8,
     "o2": 2.85,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "football-3ce5eabe80d52d3ed6056b6c141bbea8",
@@ -357,7 +368,8 @@
     "oX": 3.9,
     "o2": 1.58,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "liga2-oviedo-girona-fc",
@@ -402,7 +414,8 @@
     "o2": 2.8,
     "ou": {}
    },
-   "leagueTitle": "LIGA2"
+   "leagueTitle": "LIGA2",
+   "score": "1-2"
   }
  ]
 }
