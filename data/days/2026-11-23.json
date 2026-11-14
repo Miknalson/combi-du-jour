@@ -1,7 +1,7 @@
 {
  "date": "2026-11-23",
- "updatedAt": "2026-11-13T08:00:00Z",
- "source": "oddsportal (secours)",
+ "updatedAt": "2026-11-14T07:49:02Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
    "id": "tur-basaksehir-corum-fk",
@@ -62,6 +62,171 @@
    "o1": 2.3,
    "oX": 3.3,
    "o2": 3.0
+  },
+  {
+   "id": "sa-monza-fiorentina",
+   "league": "SA",
+   "kickoff": "2026-11-23T19:45Z",
+   "home": "Monza",
+   "away": "Fiorentina",
+   "o1": 3.499,
+   "oX": 3.679,
+   "o2": 1.961,
+   "best": {
+    "2": {
+     "odds": 2.06,
+     "book": "Codere (IT)"
+    },
+    "1": {
+     "odds": 3.7,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 4.0,
+     "book": "1xBet"
+    }
+   },
+   "books": 16,
+   "referenceAt": "2026-11-14T07:46:06Z",
+   "ou": {
+    "2.5": {
+     "o": 1.602,
+     "u": 2.281
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-14T07:48:59Z",
+    "o1": 3.61,
+    "oX": 3.82,
+    "o2": 2.0,
+    "ou": {
+     "2.75": {
+      "o": 1.78,
+      "u": 2.13
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T07:49:02Z",
+    "o1": 3.2,
+    "oX": 3.5,
+    "o2": 1.9,
+    "ou": {}
+   }
+  },
+  {
+   "id": "pl-brentford-everton",
+   "league": "PL",
+   "kickoff": "2026-11-23T20:00Z",
+   "home": "Brentford",
+   "away": "Everton",
+   "o1": 2.006,
+   "oX": 3.604,
+   "o2": 3.447,
+   "best": {
+    "1": {
+     "odds": 2.1,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 3.7,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.85,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 19,
+   "referenceAt": "2026-11-14T07:45:49Z",
+   "ou": {
+    "2.5": {
+     "o": 1.724,
+     "u": 2.09
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-14T07:48:42Z",
+    "o1": 2.09,
+    "oX": 3.71,
+    "o2": 3.46,
+    "ou": {
+     "2.75": {
+      "o": 1.98,
+      "u": 1.89
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T07:48:28Z",
+    "o1": 1.96,
+    "oX": 3.45,
+    "o2": 3.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga-levante-elche-cf",
+   "league": "LIGA",
+   "kickoff": "2026-11-23T20:00Z",
+   "home": "Levante",
+   "away": "Elche CF",
+   "o1": 2.117,
+   "oX": 3.653,
+   "o2": 3.119,
+   "best": {
+    "2": {
+     "odds": 3.21,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.26,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.9,
+     "book": "Coolbet"
+    }
+   },
+   "books": 15,
+   "referenceAt": "2026-11-14T07:46:50Z",
+   "ou": {
+    "2.5": {
+     "o": 1.648,
+     "u": 2.196
+    }
+   },
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-14T07:48:45Z",
+    "o1": 2.18,
+    "oX": 3.76,
+    "o2": 3.2,
+    "ou": {
+     "2.75": {
+      "o": 1.9,
+      "u": 1.97
+     }
+    }
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T07:48:03Z",
+    "o1": 2.0,
+    "oX": 3.5,
+    "o2": 2.85,
+    "ou": {}
+   }
   }
  ]
 }

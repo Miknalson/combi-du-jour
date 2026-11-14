@@ -2,6 +2,16 @@
  "date": "2026-11-20",
  "matches": [
   {
+   "id": "rou-fc-botosani-fc-voluntari",
+   "league": "ROU",
+   "kickoff": "2026-11-20T15:30Z",
+   "home": "FC Botosani",
+   "away": "FC Voluntari",
+   "o1": 1.71,
+   "oX": 3.8,
+   "o2": 4.3
+  },
+  {
    "id": "pol-piast-gliwice-korona-kielce",
    "league": "POL",
    "kickoff": "2026-11-20T17:00Z",
@@ -108,6 +118,16 @@
    "o1": 1.76,
    "oX": 4.0,
    "o2": 4.2
+  },
+  {
+   "id": "rou-farul-constanta-u-cluj",
+   "league": "ROU",
+   "kickoff": "2026-11-20T18:30Z",
+   "home": "Farul Constanta",
+   "away": "U. Cluj",
+   "o1": 2.75,
+   "oX": 3.4,
+   "o2": 2.35
   },
   {
    "id": "l2-annecy-fc-clermont",
@@ -399,6 +419,41 @@
    }
   },
   {
+   "id": "liga2-andorra-cf-leganes",
+   "league": "LIGA2",
+   "kickoff": "2026-11-20T19:30Z",
+   "home": "Andorra CF",
+   "away": "Leganés",
+   "o1": 1.87,
+   "oX": 3.374,
+   "o2": 3.579,
+   "best": {
+    "1": {
+     "odds": 1.99,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 3.79,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.64,
+     "book": "1xBet"
+    }
+   },
+   "books": 9,
+   "referenceAt": "2026-11-14T07:48:18Z",
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T07:48:18Z",
+    "o1": 1.78,
+    "oX": 3.3,
+    "o2": 3.3,
+    "ou": {}
+   }
+  },
+  {
    "id": "l1-troyes-le-havre",
    "league": "L1",
    "kickoff": "2026-11-20T19:45Z",
@@ -503,9 +558,9 @@
    "kickoff": "2026-11-20T20:00Z",
    "home": "Athletic Bilbao",
    "away": "Espanyol",
-   "o1": 1.478,
+   "o1": 1.483,
    "oX": 4.321,
-   "o2": 6.509,
+   "o2": 6.522,
    "best": {
     "1": {
      "odds": 1.54,
@@ -521,7 +576,7 @@
     }
    },
    "books": 14,
-   "referenceAt": "2026-11-13T07:49:58Z",
+   "referenceAt": "2026-11-14T07:46:50Z",
    "ou": {
     "2.5": {
      "o": 1.799,
@@ -531,10 +586,10 @@
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-13T07:50:36Z",
+    "asOf": "2026-11-14T07:48:45Z",
     "o1": 1.49,
-    "oX": 4.53,
-    "o2": 6.78,
+    "oX": 4.52,
+    "o2": 6.77,
     "ou": {
      "2.5": {
       "o": 1.81,
@@ -545,14 +600,14 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-13T07:49:57Z",
+    "asOf": "2026-11-14T07:48:03Z",
     "o1": 1.41,
     "oX": 4.2,
-    "o2": 5.5,
+    "o2": 5.6,
     "ou": {}
    }
   }
  ],
- "updatedAt": "2026-11-13T07:51:01Z",
+ "updatedAt": "2026-11-14T07:49:02Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }
