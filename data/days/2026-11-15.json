@@ -1,7 +1,7 @@
 {
  "date": "2026-11-15",
- "updatedAt": "2026-11-14T07:49:02Z",
- "source": "The Odds API (moyenne des bookmakers européens)",
+ "updatedAt": "2026-11-14T12:10:01.981408+00:00",
+ "source": "Winamax France et archives des marchés",
  "matches": [
   {
    "id": "por2-amarante-felgueiras",
@@ -58,12 +58,57 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-14T07:48:18Z",
     "o1": 1.72,
     "oX": 3.35,
     "o2": 3.8,
+    "ou": {}
+   },
+   "leagueTitle": "LIGA2"
+  },
+  {
+   "id": "football-beaee55c19760e22fdf6291286debb08",
+   "league": "UNL",
+   "home": "Latvia",
+   "away": "Armenia",
+   "kickoff": "2026-11-15T14:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 2.9,
+   "oX": 3.1,
+   "o2": 2.2,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 2.9,
+    "oX": 3.1,
+    "o2": 2.2,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-1f7ad9776d6a7ff7e4715bfcc3602e9f",
+   "league": "UNL",
+   "home": "Cyprus",
+   "away": "Montenegro",
+   "kickoff": "2026-11-15T14:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 2.95,
+   "oX": 3.3,
+   "o2": 2.1,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 2.95,
+    "oX": 3.3,
+    "o2": 2.1,
     "ou": {}
    }
   },
@@ -112,14 +157,15 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-14T07:48:18Z",
     "o1": 1.72,
     "oX": 3.35,
     "o2": 3.7,
     "ou": {}
-   }
+   },
+   "leagueTitle": "LIGA2"
   },
   {
    "id": "por2-penafiel-lusitania-fc",
@@ -130,6 +176,50 @@
    "o1": 2.3,
    "oX": 3.2,
    "o2": 3.3
+  },
+  {
+   "id": "football-083c61d3c0c86e7d75ee8ac8f6f66461",
+   "league": "UNL",
+   "home": "Belarus",
+   "away": "Albania",
+   "kickoff": "2026-11-15T17:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 3.75,
+   "oX": 3.25,
+   "o2": 1.8,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 3.75,
+    "oX": 3.25,
+    "o2": 1.8,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-b37cfed1f792e0804c4f1e6a1c951f65",
+   "league": "UNL",
+   "home": "Finland",
+   "away": "San Marino",
+   "kickoff": "2026-11-15T17:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.01,
+   "oX": 11.5,
+   "o2": 25.0,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 1.01,
+    "oX": 11.5,
+    "o2": 25.0,
+    "ou": {}
+   }
   },
   {
    "id": "liga2-cd-eldense-sabadell-fc",
@@ -166,14 +256,15 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-14T07:48:18Z",
     "o1": 2.25,
     "oX": 2.95,
     "o2": 2.7,
     "ou": {}
-   }
+   },
+   "leagueTitle": "LIGA2"
   },
   {
    "id": "liga2-sd-eibar-cadiz-cf",
@@ -210,14 +301,15 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-14T07:48:18Z",
     "o1": 1.54,
     "oX": 3.75,
     "o2": 4.3,
     "ou": {}
-   }
+   },
+   "leagueTitle": "LIGA2"
   },
   {
    "id": "por2-leixoes-chaves",
@@ -228,6 +320,94 @@
    "o1": 2.0,
    "oX": 3.4,
    "o2": 3.6
+  },
+  {
+   "id": "football-9cb05a2b01f14b556d7c79f7d060f2b9",
+   "league": "UNL",
+   "home": "Belgium",
+   "away": "Italy",
+   "kickoff": "2026-11-15T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.98,
+   "oX": 3.65,
+   "o2": 2.9,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 1.98,
+    "oX": 3.65,
+    "o2": 2.9,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-cc7a8f5fed10407a56df29e87f73d7e3",
+   "league": "UNL",
+   "home": "Croatia",
+   "away": "Czech Republic",
+   "kickoff": "2026-11-15T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.48,
+   "oX": 4.1,
+   "o2": 4.8,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 1.48,
+    "oX": 4.1,
+    "o2": 4.8,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-bef3dd0d3dad6760e4e531bc9565fb8c",
+   "league": "UNL",
+   "home": "Spain",
+   "away": "England",
+   "kickoff": "2026-11-15T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.62,
+   "oX": 3.85,
+   "o2": 4.0,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 1.62,
+    "oX": 3.85,
+    "o2": 4.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-c31db8a4f0558632e2b6422676a32efc",
+   "league": "UNL",
+   "home": "France",
+   "away": "Turkey",
+   "kickoff": "2026-11-15T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.17,
+   "oX": 7.0,
+   "o2": 9.0,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 1.17,
+    "oX": 7.0,
+    "o2": 9.0,
+    "ou": {}
+   }
   }
  ]
 }

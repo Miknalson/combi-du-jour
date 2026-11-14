@@ -1,0 +1,183 @@
+{
+ "date": "2026-11-17",
+ "matches": [
+  {
+   "id": "football-e71a4a4fea03d00873c285c5b55a9864",
+   "league": "UNL",
+   "home": "Israel",
+   "away": "Austria",
+   "kickoff": "2026-11-17T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 4.5,
+   "oX": 4.0,
+   "o2": 1.52,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 4.5,
+    "oX": 4.0,
+    "o2": 1.52,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-3eb1d15a190bb1be8c32a020365dc7c2",
+   "league": "UNL",
+   "home": "Bosnia & Herzegovina",
+   "away": "Romania",
+   "kickoff": "2026-11-17T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.66,
+   "oX": 3.5,
+   "o2": 4.2,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 1.66,
+    "oX": 3.5,
+    "o2": 4.2,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-770e80269ec2ffddc826bc50330c475b",
+   "league": "UNL",
+   "home": "Denmark",
+   "away": "Norway",
+   "kickoff": "2026-11-17T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 2.45,
+   "oX": 3.45,
+   "o2": 2.35,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 2.45,
+    "oX": 3.45,
+    "o2": 2.35,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-91b890f5fd20440cb272721b8a89a33d",
+   "league": "UNL",
+   "home": "Ukraine",
+   "away": "Georgia",
+   "kickoff": "2026-11-17T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 2.0,
+   "oX": 3.3,
+   "o2": 3.1,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 2.0,
+    "oX": 3.3,
+    "o2": 3.1,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-1a07e9080f042594bdb529ab932d680c",
+   "league": "UNL",
+   "home": "Hungary",
+   "away": "Northern Ireland",
+   "kickoff": "2026-11-17T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.8,
+   "oX": 3.4,
+   "o2": 3.6,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 1.8,
+    "oX": 3.4,
+    "o2": 3.6,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-a6c9b424fddccea76aab09880b69dd31",
+   "league": "UNL",
+   "home": "Republic of Ireland",
+   "away": "Kosovo",
+   "kickoff": "2026-11-17T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.84,
+   "oX": 3.1,
+   "o2": 3.75,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 1.84,
+    "oX": 3.1,
+    "o2": 3.75,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-aab74efad72e8096e774c7104189ff09",
+   "league": "UNL",
+   "home": "Poland",
+   "away": "Sweden",
+   "kickoff": "2026-11-17T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 2.2,
+   "oX": 3.4,
+   "o2": 2.65,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 2.2,
+    "oX": 3.4,
+    "o2": 2.65,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-955a201ba2266b8b6b0519e0265eb354",
+   "league": "UNL",
+   "home": "Wales",
+   "away": "Portugal",
+   "kickoff": "2026-11-17T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 6.75,
+   "oX": 5.1,
+   "o2": 1.28,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-14T12:09:31Z",
+    "o1": 6.75,
+    "oX": 5.1,
+    "o2": 1.28,
+    "ou": {}
+   }
+  }
+ ],
+ "updatedAt": "2026-11-14T12:10:01.981408+00:00",
+ "source": "Winamax France et archives des marchés"
+}
