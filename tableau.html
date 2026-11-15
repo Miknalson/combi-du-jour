@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=sports-markets-v2">
+<link rel="stylesheet" href="style.css?v=paper-v1">
 <style>
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -55,6 +55,7 @@
     <span class="status" id="bankNote"></span>
   </form>
 
+  <section id="paperProtocol" class="model-study" aria-label="Protocole de test fictif"></section>
   <div class="kpis" id="kpis"></div>
 
   <section>
@@ -63,7 +64,7 @@
   </section>
 
   <section>
-    <div class="head"><h2>L'algo marche-t-il ?</h2><div class="hint">Compare les combinés proposés par l'algo à tes propres tickets, et le nombre de tickets gagnés à celui que les probabilités annonçaient.</div></div>
+    <div class="head"><h2>Tickets enregistrés sur cet appareil</h2><div class="hint">Compare les combinés proposés par l'algo à tes propres tickets, et le nombre de tickets gagnés à celui que les probabilités annonçaient.</div></div>
     <div class="tbl-wrap"><table class="cmp">
       <thead><tr><th></th><th>Paris</th><th>Gagnés</th><th>Gagnés attendus</th><th>Misé</th><th>Gain net</th><th>ROI</th></tr></thead>
       <tbody id="cmpRows"></tbody>
@@ -98,6 +99,9 @@
   </footer>
 </div>
 
+<script src="safe-engine.js?v=paper-v1"></script>
+<script src="paper-engine.js?v=1"></script>
+<script src="paper-view.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
 <script>
@@ -279,7 +283,7 @@ document.getElementById('exportTestsBtn').addEventListener('click', function(){
     bankStart:store.get('bankStart',null),bets:store.get('bets',[]),
     proposals:store.get('proposals',{}),safeDaily:store.get('safeDaily',{}),settings:store.get('settings',{}),
     scoreSnapshot:Object.keys(matches).map(function(k){var m=matches[k];return {id:m.id,home:m.home,away:m.away,kickoff:m.kickoff,league:m.league,score:m.score};}),
-    scoresStatus:scoresStatus,notes:['Propositions et tickets conservés sur cet appareil uniquement.','Les propositions horodatées après le début d’une sélection ne constituent pas un test prospectif.','Les scores sont ceux enregistrés dans les données de l’application.']},null,1);
+    scoresStatus:scoresStatus,paperProtocol:window.PaperTestsView?PaperTestsView.snapshot():null,notes:['Propositions et tickets conservés sur cet appareil uniquement.','Les propositions horodatées après le début d’une sélection ne constituent pas un test prospectif.','Les scores sont ceux enregistrés dans les données de l’application.']},null,1);
   var a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([data],{type:'application/json'}));
   a.download = 'historique-algo-safe-'+new Date().toISOString().slice(0,10)+'.json';

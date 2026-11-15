@@ -211,3 +211,60 @@ tickets restent disponibles avec **Exporter mes paris** / **Importer un fichier*
 Le fichier reste téléchargé sur l’appareil ; aucune transmission automatique n’a lieu.
 
 Test : `node tests/history-export-browser.cjs`.
+
+## Nouveau protocole fictif strict v1
+
+La conclusion tirée des anciens tests (8 Algo prospectifs et 6 Safe) reste **poursuivre
+les tests, aucun passage en réel**. Le nouveau journal constitue une cohorte séparée :
+`data/paper-tests-v1.json`. Les anciens tickets et instantanés locaux sont conservés ;
+les nouvelles vues exploratoires portent `explorationOnly:true`.
+
+- **Algo strict v1** est une nouvelle version de test, différente de l’ancien Algo à
+  cotes souvent estimées : football, cote totale 3–5, 2–5 matchs, au moins 50 % de
+  probabilité indicative par sélection, cote de sélection au moins 1,10. Uniquement
+  des paires/triplets Winamax API complets, jamais une cote calculée ni saisie utilisateur.
+  Probabilités puissance hors marge comme Safe. Recherche déterministe, 20 premières
+  rencontres, 6 options au plus par match, 200 000 nœuds au maximum ; éventuelle limite
+  de recherche enregistrée. Priorité à la probabilité, puis au nombre de sélections et
+  à la signature. Aucun joueur ou équipe répété dans un ticket.
+- **Safe strict v1** reprend le moteur Safe actuel (cote 1,50–2,00, seuil 60 % par
+  sélection et pour le ticket, simple/double/triple, mixte avec un match par sport),
+  avec le filtre strict de fraîcheur du protocole. Football, basket, tennis et mixte
+  sont comptés séparément, sans les présenter comme des essais indépendants cumulés.
+- **1 unité fictive constante par ticket**, avec la cote calculée comme le produit des
+  prix réels de chaque sélection. Cela reste une observation de cotes API, **pas un
+  ticket exécuté ou accepté par Winamax** (`executionVerified:false`). Aucun ordre.
+- Une observation par date/méthode/catégorie est figée lors du premier calcul complet
+  depuis des sources fraîches ; un jour sans ticket reste enregistré. Si la source est
+  indisponible, périmée ou vide avec une couverture partielle, la catégorie attend au
+  lieu d’inventer un ticket. Propositions et horodatages ne sont jamais reconstruits
+  sur des matchs déjà commencés.
+- Les prix et sources doivent dater de moins de 60 minutes. Les règles, dates, prix,
+  sources et versions sont enregistrés avec les sélections avant leur premier coup
+  d’envoi. Les couvertures partielles des sources sont également conservées.
+
+`node scripts/paper_tests.cjs` tourne après la collecte quotidienne. Il n’utilise
+aucune clé et n’appelle aucun service de pari. Le journal est public, comme les
+cotes ; les mises et tickets personnels ne sont pas transmis. Des empreintes SHA256
+figent `paper-engine.js`, `safe-engine.js` et le runner, ainsi que les paramètres.
+Si l’un change, **le protocole est suspendu**, sans effacer ni remplacer les propositions.
+Pour changer de méthode, créer explicitement une version et un fichier de journal
+distincts ; ne pas supprimer le journal v1 pour masquer des pertes.
+
+Les résultats football peuvent être réglés après la journée des matchs depuis les
+scores enregistrés dans l’application. L’identité inclut le coup d’envoi ; une revanche
+ne remplace pas l’ancien match. Les corrections ultérieures d’un score sont tracées.
+Basket, tennis et tout résultat non résolu restent en attente ; ils peuvent être
+renseignés après vérification dans le tableau de bord. Ces saisies restent locales
+(`cdj.paperResults`) et sont signalées comme manuelles, puis incluses dans l’export.
+En cas de remboursement partiel, la cote réglée doit être inférieure ou égale à la
+cote figée ; un remboursement total est une annulation, jamais une victoire.
+
+Le tableau de bord présente les tickets terminés, attentes, gains/pertes en unités,
+ROI et pire recul en unités par groupe. Le ROI exclut attentes et annulations ; tous
+restent dans le journal. Les points de contrôle à **100 et 200 tickets réglés par
+groupe** préparent une analyse : ils ne créent **aucune autorisation de jeu réel**,
+même avec un ROI positif. Les probabilités de marché ne sont pas une rentabilité
+validée. L’export complet contient aussi le journal, ses versions et résultats locaux.
+
+Vérifications : `node tests/paper.test.cjs` et `node tests/paper-browser.cjs`.

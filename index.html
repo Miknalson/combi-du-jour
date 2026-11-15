@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=uefa-v1">
+<link rel="stylesheet" href="style.css?v=paper-v1">
 </head>
 <body>
 <div class="wrap">
@@ -27,6 +27,7 @@
     </div>
   </header>
 <nav class="sport-tabs" aria-label="Choisir un sport"><a href="./" aria-current="page">Football</a><a href="sports.html?sport=basket">Basket</a><a href="sports.html?sport=tennis">Tennis</a><a href="safe.html">Safe du jour</a></nav>
+<aside class="protocol-link"><strong>Protocole fictif v1</strong><p>Algo strict et Safe strict sont suivis séparément, à 1 unité fictive par ticket, sur des cotes API de moins d’une heure.</p><a href="tableau.html#paperProtocol">Voir les tickets de référence et leurs résultats figés</a></aside>
 
   <section class="uefa-calendar" id="uefaFixtures" aria-label="Calendrier UEFA"></section>
   <nav class="days" id="days" aria-label="Choisir le jour"></nav>
@@ -84,7 +85,7 @@
 
   <details class="module-disclosure"><summary>Consulter les anciennes simulations</summary>
   <section>
-    <div class="head"><h2>Historique des simulations</h2><div class="hint">Le combiné proposé chaque jour passé (enregistré sur cet appareil), ou recalculé avec tes réglages actuels si tu n'avais pas ouvert l'appli ce jour-là.</div></div>
+    <div class="head"><h2>Historique d’exploration · hors protocole v1</h2><div class="hint">Le combiné proposé chaque jour passé (enregistré sur cet appareil), ou recalculé avec tes réglages actuels si tu n'avais pas ouvert l'appli ce jour-là.</div></div>
     <div id="history"></div>
   </section>
   </details>
@@ -560,7 +561,7 @@ function saveProposal(date, c){
   var now = Date.now(), old = proposals[date];
   if(old && old.legs.some(function(l){ return new Date(l.kickoff).getTime() <= now; })) return;
   if(c.legs.some(function(l){ return new Date(l.match.kickoff).getTime() <= now; })) return;
-  proposals[date] = {createdAt:new Date(now).toISOString(), modelId:'legacy-market-combo', odds:c.odds, prob:c.prob, legs:c.legs.map(function(l){ return {matchId:l.match.id, kickoff:l.match.kickoff, code:l.code, label:l.label, o:l.o, p:l.p, est:!!l.est}; })};
+  proposals[date] = {createdAt:new Date(now).toISOString(), modelId:'legacy-market-combo-exploration-v1',explorationOnly:true,rules:Object.assign({},settings), odds:c.odds, prob:c.prob, legs:c.legs.map(function(l){ return {matchId:l.match.id, kickoff:l.match.kickoff, code:l.code, label:l.label, o:l.o, p:l.p, est:!!l.est}; })};
   var keys = Object.keys(proposals).sort();
   while(keys.length > 60) delete proposals[keys.shift()];
   store.set('proposals', proposals);

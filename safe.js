@@ -9,7 +9,7 @@ function pool(){return SafeDay.documents(docs);}
 function legsHtml(t){return '<ol>'+t.legs.map(function(l){return '<li><strong>'+esc(l.label)+'</strong> · '+price(l.o)+'<br>'+esc(l.home)+' – '+esc(l.away)+'<small>'+esc(titles[l.sport])+' · '+esc(l.league||'')+' · '+esc(stamp(l.kickoff))+'</small><small>Winamax France · relevé le '+esc(stamp(l.asOf))+' · '+pct(l.p)+' indicatifs</small></li>';}).join('')+'</ol>';}
 function remember(result){
  try{var history=JSON.parse(localStorage.getItem('cdj.safeDaily')||'{}');if(!history||typeof history!=='object'||Array.isArray(history))return;
-  var d=history[result.day]||{};Object.keys(result.slots).forEach(function(k){var t=result.slots[k];if(t&&!d[k])d[k]={createdAt:result.generatedAt,method:'winamax-power-devig',ticket:t};});history[result.day]=d;
+  var d=history[result.day]||{};Object.keys(result.slots).forEach(function(k){var t=result.slots[k];if(t&&!d[k])d[k]={createdAt:result.generatedAt,method:'safe-exploration-v1',explorationOnly:true,ticket:t};});history[result.day]=d;
   Object.keys(history).sort().slice(0,-90).forEach(function(k){delete history[k];});localStorage.setItem('cdj.safeDaily',JSON.stringify(history));
  }catch(e){} // Une panne de stockage ne doit pas masquer les cotes.
 }

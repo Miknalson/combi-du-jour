@@ -28,7 +28,7 @@ function candidates(matches,options){
    g.outcomes.forEach(function(o,i){
     if(!o||typeof o.label!=='string'||!o.label||p[i]+1e-12<MIN_PROBABILITY||o.odds>2||g.family==='sets'&&o.side!=='over')return;
     var id=m.sport+'|'+m.id+'|'+m.kickoff+'|'+g.id+'|'+o.code;if(seen.has(id))return;seen.add(id);
-    out.push({id:id,matchId:m.id,sport:m.sport,league:m.league,home:m.home,away:m.away,kickoff:m.kickoff,date:paris(m.kickoff),code:o.code,label:o.label,o:o.odds,p:p[i],bookKey:'winamax_fr',asOf:g.asOf,marketId:g.id,marketFamily:g.family,est:false,quoteSource:'api',probabilityMethod:'winamax-power-devig'});
+    out.push({id:id,matchId:m.id,sport:m.sport,league:m.league,home:m.home,away:m.away,kickoff:m.kickoff,date:paris(m.kickoff),code:o.code,label:o.label,o:o.odds,p:p[i],bookKey:'winamax_fr',asOf:g.asOf,marketId:g.id,marketFamily:g.family,marketLine:g.line,marketParticipant:g.participant,est:false,quoteSource:'api',probabilityMethod:'winamax-power-devig'});
    });
   });
  });return out.sort(function(a,b){return b.p-a.p||a.o-b.o||a.id.localeCompare(b.id);});
@@ -50,5 +50,5 @@ function choose(pool,mixed){
 }
 function build(matches,options){var pool=candidates(matches,options),slots={};SPORTS.forEach(function(s){slots[s]=choose(pool.filter(function(l){return l.sport===s;}),false);});slots.mixed=choose(pool,true);return {day:options.day,generatedAt:new Date(options.now===undefined?Date.now():options.now).toISOString(),slots:slots,shortlist:pool,candidateCounts:Object.fromEntries(SPORTS.map(function(s){return [s,pool.filter(function(l){return l.sport===s;}).length];}))};}
 function documents(docs){return (docs||[]).filter(function(d){return d&&d.status==='ok'&&d.bookKey==='winamax_fr'&&SPORTS.includes(d.sport)&&Array.isArray(d.matches);}).flatMap(function(d){return d.matches.filter(function(m){return m.sport===d.sport;});});}
-return {MIN_PROBABILITY:MIN_PROBABILITY,SPORTS:SPORTS,paris:paris,fresh:fresh,probabilities:probabilities,candidates:candidates,build:build,documents:documents,valid:valid};
+return {MIN_PROBABILITY:MIN_PROBABILITY,SPORTS:SPORTS,paris:paris,fresh:fresh,probabilities:probabilities,candidates:candidates,build:build,documents:documents,valid:valid,marketValid:marketValid};
 });
