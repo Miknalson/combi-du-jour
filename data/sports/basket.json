@@ -1,10 +1,80 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-15T07:39:41.276863+00:00",
-  "status": "ok",
+  "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+  "status": "quota",
   "matches": [],
-  "leaguesQueried": 1,
+  "leaguesQueried": 0,
   "leaguesAvailable": 3,
-  "partial": true
+  "partial": true,
+  "competitions": [
+    {
+      "key": "basketball_euroleague",
+      "title": "Basketball Euroleague",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_nba",
+      "title": "NBA",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_nba_all_stars",
+      "title": "NBA All Star",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_nba_championship_winner",
+      "title": "NBA Championship Winner",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_nba_preseason",
+      "title": "NBA Preseason",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_nba_summer_league",
+      "title": "NBA Summer League",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_nbl",
+      "title": "NBL",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_ncaab",
+      "title": "NCAAB",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_ncaab_championship_winner",
+      "title": "NCAAB Championship Winner",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "basketball_wnba",
+      "title": "WNBA",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "basketball_wncaab",
+      "title": "WNCAAB",
+      "active": false,
+      "gender": "women"
+    }
+  ],
+  "winamaxUnavailableLeagues": 1,
+  "femaleMatches": 0
 }

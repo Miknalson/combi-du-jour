@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 2,
+  "manifest": {
+    "rules": {
+      "version": "paper-multisport-v2",
+      "currency": "EUR",
+      "mode": "paper",
+      "realMoneyEnabled": false,
+      "stakes": {
+        "algo": 50,
+        "safe": 100
+      },
+      "quoteMaxAgeMinutes": 60,
+      "checkpoints": [
+        100,
+        200
+      ],
+      "safeSports": [
+        "football",
+        "basket",
+        "tennis",
+        "rugby_xv",
+        "rugby_xiii",
+        "football_us",
+        "hockey",
+        "volley"
+      ],
+      "mixedSports": [
+        "football",
+        "basket",
+        "tennis"
+      ],
+      "safe": {
+        "version": "safe-multi-v2",
+        "minOdds": 1.5,
+        "maxOdds": 2,
+        "minimumProbability": 0.6,
+        "maxLegs": 3
+      },
+      "algo": {
+        "version": "algo-real-v1",
+        "sport": "football",
+        "minOdds": 3,
+        "maxOdds": 5,
+        "minLegs": 2,
+        "maxLegs": 5,
+        "minProbability": 0.5,
+        "minLegOdds": 1.1,
+        "maxMatches": 20,
+        "maxOptionsPerMatch": 6,
+        "maxSearchNodes": 200000
+      },
+      "ticketOdds": "product-of-recorded-leg-quotes-not-executed"
+    },
+    "sourceHashes": {
+      "sport-catalog.js": "a1626e4ac3d1f148260193ca3839e44737811e890c9742b9f79d26f986f01ae5",
+      "safe-engine.js": "aff0d71511cdd05b01a067df2ca8af73b789691781591fdb09f519b46ea76dc9",
+      "paper-engine.js": "d08af7c7978f3a6ce3cdf1ce85a766bf6dc1c6c26234418255478d5dbb9807fd",
+      "safe-multi-engine.js": "dee0baf9a5a3c5cce2f76c7292934dc2b4aafcd8e9dcc0b1b4c4d31ee947269f",
+      "paper-multi-engine.js": "92893e0c30716639be2b3e8936cfae4cf821625a933b3abf141b99469e407461",
+      "scripts/paper_multi_tests.cjs": "d5b52c4757221377c24fb039a20f40545dd829c29999e560121a42264b2b5aa0",
+      "scripts/update_sports.py": "f44684c66fa1e71eb21d5df64132bcbe3200862036bd88dd7ede5ed3fb17966f"
+    },
+    "startedAt": "2026-11-15T08:06:12.107Z"
+  },
+  "records": [
+    {
+      "id": "paper-multisport-v2|2026-11-15|algo|football",
+      "day": "2026-11-15",
+      "method": "algo",
+      "sport": "football",
+      "version": "algo-real-v1",
+      "createdAt": "2026-11-15T08:06:12.107Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 50,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 3.0176,
+      "probability": 0.28165531037749814,
+      "legs": [
+        {
+          "matchId": "liga2-tenerife-ad-ceuta-fc",
+          "sport": "football",
+          "home": "Tenerife",
+          "away": "AD Ceuta FC",
+          "league": "LIGA2",
+          "kickoff": "2026-11-15T13:00Z",
+          "date": "2026-11-15",
+          "code": "1",
+          "label": "Victoire Tenerife",
+          "o": 1.64,
+          "p": 0.5629026459735444,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:48:38Z",
+          "marketId": "h2h|archive",
+          "marketFamily": "h2h",
+          "quoteSource": "api",
+          "est": false
+        },
+        {
+          "matchId": "football-083c61d3c0c86e7d75ee8ac8f6f66461",
+          "sport": "football",
+          "home": "Belarus",
+          "away": "Albania",
+          "league": "UEFA Nations League",
+          "kickoff": "2026-11-15T17:00:00Z",
+          "date": "2026-11-15",
+          "code": "2",
+          "label": "Victoire Albania",
+          "o": 1.84,
+          "p": 0.500362384849645,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T08:05:58Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        },
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": true,
+          "femaleMatches": 1
+        },
+        {
+          "sport": "rugby_xiii",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-15|safe|football",
+      "day": "2026-11-15",
+      "method": "safe",
+      "sport": "football",
+      "version": "safe-multi-v2",
+      "createdAt": "2026-11-15T08:06:12.107Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 100,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 1.5,
+      "probability": 0.6276217769492564,
+      "legs": [
+        {
+          "id": "football|football-cc7a8f5fed10407a56df29e87f73d7e3|2026-11-15T19:45:00Z|h2h||None|1",
+          "matchId": "football-cc7a8f5fed10407a56df29e87f73d7e3",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "UEFA Nations League",
+          "home": "Croatia",
+          "away": "Czech Republic",
+          "kickoff": "2026-11-15T19:45:00Z",
+          "date": "2026-11-15",
+          "code": "1",
+          "label": "Victoire Croatia",
+          "o": 1.5,
+          "p": 0.6276217769492564,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T08:05:58Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        },
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": true,
+          "femaleMatches": 1
+        },
+        {
+          "sport": "rugby_xiii",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-15|safe|tennis",
+      "day": "2026-11-15",
+      "method": "safe",
+      "sport": "tennis",
+      "version": "safe-multi-v2",
+      "createdAt": "2026-11-15T08:06:12.107Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        },
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": true,
+          "femaleMatches": 1
+        },
+        {
+          "sport": "rugby_xiii",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-15|safe|rugby_xiii",
+      "day": "2026-11-15",
+      "method": "safe",
+      "sport": "rugby_xiii",
+      "version": "safe-multi-v2",
+      "createdAt": "2026-11-15T08:06:12.107Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        },
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": true,
+          "femaleMatches": 1
+        },
+        {
+          "sport": "rugby_xiii",
+          "status": "ok",
+          "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    }
+  ]
+}

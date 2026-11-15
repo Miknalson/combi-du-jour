@@ -1,9 +1,5 @@
 {
-  "status": "waiting_for_fresh_quotes",
-  "updatedAt": "2026-11-15T07:39:44.955Z",
-  "availableSports": [
-    "football",
-    "tennis"
-  ],
-  "message": "Protocole fictif. Les résultats manquants restent en attente. Aucun passage automatique en réel."
+  "status": "archived",
+  "updatedAt": "2026-11-15T08:06:12.107Z",
+  "message": "Cohorte v1 conservée. Les nouvelles propositions et mises fictives sont enregistrées dans la version multisport v2."
 }

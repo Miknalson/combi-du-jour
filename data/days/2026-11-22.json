@@ -1,7 +1,7 @@
 {
  "date": "2026-11-22",
- "updatedAt": "2026-11-15T07:49:00Z",
- "source": "The Odds API (moyenne des bookmakers européens)",
+ "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+ "source": "Winamax France et archives des marchés",
  "matches": [
   {
    "id": "tur-erzurumspor-goztepe",
@@ -138,14 +138,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-15T07:48:50Z",
     "o1": 1.7,
     "oX": 3.3,
     "o2": 3.45,
     "ou": {}
-   }
+   },
+   "leagueTitle": "CHA",
+   "gender": "unspecified"
   },
   {
    "id": "bl2-1-fc-kaiserslautern-dynamo-dresden",
@@ -523,14 +525,16 @@
     }
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-15T07:48:04Z",
     "o1": 5.1,
     "oX": 4.2,
     "o2": 1.45,
     "ou": {}
-   }
+   },
+   "leagueTitle": "PL",
+   "gender": "unspecified"
   },
   {
    "id": "bl-augsburg-fsv-mainz-05",
@@ -746,14 +750,16 @@
     }
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-15T07:48:04Z",
     "o1": 1.62,
     "oX": 4.0,
     "o2": 3.85,
     "ou": {}
-   }
+   },
+   "leagueTitle": "PL",
+   "gender": "unspecified"
   },
   {
    "id": "den-fc-nordsjaelland-fc-copenhagen",

@@ -1,0 +1,32 @@
+{
+  "sport": "rugby_xiii",
+  "bookKey": "winamax_fr",
+  "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+  "status": "ok",
+  "matches": [],
+  "leaguesQueried": 0,
+  "leaguesAvailable": 0,
+  "partial": false,
+  "competitions": [
+    {
+      "key": "rugbyleague_nrl",
+      "title": "NRL",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "rugbyleague_nrl_state_of_origin",
+      "title": "State of Origin",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "rugbyleague_nrlw",
+      "title": "NRLW",
+      "active": false,
+      "gender": "unspecified"
+    }
+  ],
+  "winamaxUnavailableLeagues": 0,
+  "femaleMatches": 0
+}

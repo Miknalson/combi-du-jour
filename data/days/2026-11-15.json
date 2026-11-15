@@ -1,7 +1,7 @@
 {
  "date": "2026-11-15",
- "updatedAt": "2026-11-15T07:49:00Z",
- "source": "The Odds API (moyenne des bookmakers européens)",
+ "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+ "source": "Winamax France et archives des marchés",
  "matches": [
   {
    "id": "por2-amarante-felgueiras",
@@ -58,14 +58,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-15T07:48:38Z",
     "o1": 1.64,
     "oX": 3.45,
     "o2": 4.0,
     "ou": {}
-   }
+   },
+   "leagueTitle": "LIGA2",
+   "gender": "unspecified"
   },
   {
    "id": "por2-portimonense-academica",
@@ -112,14 +114,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:47:56Z",
+    "asOf": "2026-11-15T08:05:58Z",
     "o1": 3.0,
     "oX": 3.0,
     "o2": 2.2,
     "ou": {}
-   }
+   },
+   "leagueTitle": "UEFA Nations League",
+   "gender": "unspecified"
   },
   {
    "id": "unl-cyprus-montenegro",
@@ -156,14 +160,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:47:56Z",
+    "asOf": "2026-11-15T08:05:58Z",
     "o1": 2.8,
     "oX": 3.3,
     "o2": 2.2,
     "ou": {}
-   }
+   },
+   "leagueTitle": "UEFA Nations League",
+   "gender": "unspecified"
   },
   {
    "id": "liga2-granada-cf-las-palmas",
@@ -200,14 +206,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-15T07:48:38Z",
     "o1": 1.84,
     "oX": 3.2,
     "o2": 3.4,
     "ou": {}
-   }
+   },
+   "leagueTitle": "LIGA2",
+   "gender": "unspecified"
   },
   {
    "id": "por2-penafiel-lusitania-fc",
@@ -254,14 +262,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:47:56Z",
+    "asOf": "2026-11-15T08:05:58Z",
     "o1": 3.75,
     "oX": 3.1,
     "o2": 1.84,
     "ou": {}
-   }
+   },
+   "leagueTitle": "UEFA Nations League",
+   "gender": "unspecified"
   },
   {
    "id": "unl-finland-san-marino",
@@ -333,14 +343,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-15T07:48:38Z",
     "o1": 2.25,
     "oX": 2.85,
     "o2": 2.85,
     "ou": {}
-   }
+   },
+   "leagueTitle": "LIGA2",
+   "gender": "unspecified"
   },
   {
    "id": "liga2-sd-eibar-cadiz-cf",
@@ -377,14 +389,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
     "asOf": "2026-11-15T07:48:38Z",
     "o1": 1.47,
     "oX": 3.9,
     "o2": 4.8,
     "ou": {}
-   }
+   },
+   "leagueTitle": "LIGA2",
+   "gender": "unspecified"
   },
   {
    "id": "por2-leixoes-chaves",
@@ -431,14 +445,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:47:56Z",
+    "asOf": "2026-11-15T08:05:58Z",
     "o1": 2.0,
     "oX": 3.45,
     "o2": 2.95,
     "ou": {}
-   }
+   },
+   "leagueTitle": "UEFA Nations League",
+   "gender": "unspecified"
   },
   {
    "id": "unl-croatia-czech-republic",
@@ -475,14 +491,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:47:56Z",
+    "asOf": "2026-11-15T08:05:58Z",
     "o1": 1.5,
     "oX": 4.0,
     "o2": 4.7,
     "ou": {}
-   }
+   },
+   "leagueTitle": "UEFA Nations League",
+   "gender": "unspecified"
   },
   {
    "id": "unl-spain-england",
@@ -519,14 +537,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:47:56Z",
+    "asOf": "2026-11-15T08:05:58Z",
     "o1": 1.82,
     "oX": 3.65,
     "o2": 3.3,
     "ou": {}
-   }
+   },
+   "leagueTitle": "UEFA Nations League",
+   "gender": "unspecified"
   },
   {
    "id": "unl-france-turkey",
@@ -563,14 +583,16 @@
     "ou": {}
    },
    "mine": {
-    "book": "Winamax (FR)",
+    "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:47:56Z",
+    "asOf": "2026-11-15T08:05:58Z",
     "o1": 1.16,
     "oX": 7.5,
     "o2": 10.0,
     "ou": {}
-   }
+   },
+   "leagueTitle": "UEFA Nations League",
+   "gender": "unspecified"
   }
  ]
 }

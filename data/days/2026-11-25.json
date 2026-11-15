@@ -21,7 +21,8 @@
     "oX": 10.5,
     "o2": 1.04,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   },
   {
    "id": "football-a7c87fac9e9cbcfc02ad0e0b29ca89e2",
@@ -43,7 +44,8 @@
     "oX": 3.7,
     "o2": 2.0,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   },
   {
    "id": "football-14007bc0605bce3bd164b132254ba24c",
@@ -65,7 +67,8 @@
     "oX": 5.75,
     "o2": 7.25,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   },
   {
    "id": "football-b1af6789fe6db7aab18a2945ce56f035",
@@ -87,7 +90,8 @@
     "oX": 10.5,
     "o2": 16.0,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   },
   {
    "id": "football-0ee2cfddf20153779cd2cc3e1f1f879f",
@@ -109,7 +113,8 @@
     "oX": 6.0,
     "o2": 1.23,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   },
   {
    "id": "football-99459b90f3e732106e09585bf94b36b4",
@@ -131,7 +136,8 @@
     "oX": 4.3,
     "o2": 1.56,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   },
   {
    "id": "football-49c66d76bc4085e63a181179cc47ef4d",
@@ -153,7 +159,8 @@
     "oX": 3.25,
     "o2": 2.4,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   },
   {
    "id": "football-e7e64568f6af00d395a3fdfc27de8ae3",
@@ -175,7 +182,8 @@
     "oX": 5.0,
     "o2": 5.0,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   },
   {
    "id": "football-01a61442fe04f8751b62eb251f234079",
@@ -197,9 +205,10 @@
     "oX": 3.4,
     "o2": 2.4,
     "ou": {}
-   }
+   },
+   "gender": "unspecified"
   }
  ],
- "updatedAt": "2026-11-15T07:39:41.276863+00:00",
+ "updatedAt": "2026-11-15T08:06:06.120371+00:00",
  "source": "Winamax France et archives des marchés"
 }

@@ -1,22 +1,22 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-15T07:39:41.276863+00:00",
+  "updatedAt": "2026-11-15T08:06:06.120371+00:00",
   "status": "ok",
   "matches": [
     {
-      "id": "tennis-a09dfd51fadc5c32dd0adb4f799b8628",
+      "id": "tennis-db0cf55e0c26bfbf59d91c22de428d25",
       "sport": "tennis",
-      "league": "ATP Finals",
-      "kickoff": "2026-11-15T13:00:00Z",
-      "home": "Alexander Zverev",
-      "away": "Rafael Jodar",
+      "league": "WTA Finals",
+      "kickoff": "2026-11-15T20:00:00Z",
+      "home": "Elina Svitolina",
+      "away": "Mirra Andreeva",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-15T07:39:29Z",
+      "asOf": "2026-11-15T08:05:19Z",
       "market": "h2h",
-      "o1": 1.33,
-      "o2": 2.9,
+      "o1": 3.0,
+      "o2": 1.31,
       "markets": [
         {
           "id": "h2h||None",
@@ -26,171 +26,28 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-15T07:39:29Z",
+          "asOf": "2026-11-15T08:05:19Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Alexander Zverev",
-              "odds": 1.33,
+              "label": "Victoire Elina Svitolina",
+              "odds": 3.0,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Rafael Jodar",
-              "odds": 2.9,
+              "label": "Victoire Mirra Andreeva",
+              "odds": 1.31,
               "participant": ""
             }
           ]
         }
       ],
-      "sportKey": "tennis_atp_finals",
-      "eventId": "a09dfd51fadc5c32dd0adb4f799b8628",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "tennis-2e7a66dfb5caacad9c224d3eaf230dee",
-      "sport": "tennis",
-      "league": "ATP Finals",
-      "kickoff": "2026-11-15T19:30:00Z",
-      "home": "Ben Shelton",
-      "away": "Arthur Fils",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-15T07:39:29Z",
-      "market": "h2h",
-      "o1": 1.48,
-      "o2": 2.35,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-15T07:39:29Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Ben Shelton",
-              "odds": 1.48,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Arthur Fils",
-              "odds": 2.35,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_finals",
-      "eventId": "2e7a66dfb5caacad9c224d3eaf230dee",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "tennis-c81851847baf5e3a479993ec167a8e2a",
-      "sport": "tennis",
-      "league": "ATP Finals",
-      "kickoff": "2026-11-16T13:00:00Z",
-      "home": "Carlos Alcaraz",
-      "away": "Frances Tiafoe",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-15T07:39:29Z",
-      "market": "h2h",
-      "o1": 1.07,
-      "o2": 6.25,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-15T07:39:29Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Carlos Alcaraz",
-              "odds": 1.07,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Frances Tiafoe",
-              "odds": 6.25,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_finals",
-      "eventId": "c81851847baf5e3a479993ec167a8e2a",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "tennis-7ac3bf138012785e65835d1481524d5c",
-      "sport": "tennis",
-      "league": "ATP Finals",
-      "kickoff": "2026-11-16T19:30:00Z",
-      "home": "Daniil Medvedev",
-      "away": "Flavio Cobolli",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-15T07:39:29Z",
-      "market": "h2h",
-      "o1": 1.23,
-      "o2": 3.6,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-15T07:39:29Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Daniil Medvedev",
-              "odds": 1.23,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Flavio Cobolli",
-              "odds": 3.6,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_finals",
-      "eventId": "7ac3bf138012785e65835d1481524d5c",
+      "sportKey": "tennis_wta_finals",
+      "eventId": "db0cf55e0c26bfbf59d91c22de428d25",
+      "gender": "women",
       "availableMarkets": [
         "h2h"
       ],
@@ -198,6 +55,328 @@
     }
   ],
   "leaguesQueried": 1,
-  "leaguesAvailable": 1,
-  "partial": false
+  "leaguesAvailable": 2,
+  "partial": true,
+  "competitions": [
+    {
+      "key": "tennis_atp_aus_open_singles",
+      "title": "ATP Australian Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_barcelona_open",
+      "title": "ATP Barcelona Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_canadian_open",
+      "title": "ATP Canadian Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_china_open",
+      "title": "ATP China Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_cincinnati_open",
+      "title": "ATP Cincinnati Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_dubai",
+      "title": "ATP Dubai",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_finals",
+      "title": "ATP Finals",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_french_open",
+      "title": "ATP French Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_halle_open",
+      "title": "ATP Halle Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_hamburg_open",
+      "title": "ATP Hamburg Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_indian_wells",
+      "title": "ATP Indian Wells",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_italian_open",
+      "title": "ATP Italian Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_japan_open",
+      "title": "ATP Japan Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_madrid_open",
+      "title": "ATP Madrid Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_miami_open",
+      "title": "ATP Miami Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_monte_carlo_masters",
+      "title": "ATP Monte-Carlo Masters",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_munich",
+      "title": "ATP Munich",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_paris_masters",
+      "title": "ATP Paris Masters",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_qatar_open",
+      "title": "ATP Qatar Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_queens_club_champ",
+      "title": "ATP Queen's Club Championships",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_shanghai_masters",
+      "title": "ATP Shanghai Masters",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_swiss_indoors",
+      "title": "ATP Swiss Indoors Basel",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_us_open",
+      "title": "ATP US Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_vienna_open",
+      "title": "ATP Vienna Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_washington_open",
+      "title": "ATP Washington Open",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_atp_wimbledon",
+      "title": "ATP Wimbledon",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "tennis_wta_aus_open_singles",
+      "title": "WTA Australian Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_bad_homburg_open",
+      "title": "WTA Bad Homburg Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_canadian_open",
+      "title": "WTA Canadian Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_charleston_open",
+      "title": "WTA Charleston Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_china_open",
+      "title": "WTA China Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_cincinnati_open",
+      "title": "WTA Cincinnati Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_dubai",
+      "title": "WTA Dubai Championships",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_finals",
+      "title": "WTA Finals",
+      "active": true,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_french_open",
+      "title": "WTA French Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_german_open",
+      "title": "WTA German Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_guadalajara_open",
+      "title": "WTA Guadalajara Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_indian_wells",
+      "title": "WTA Indian Wells",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_italian_open",
+      "title": "WTA Italian Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_madrid_open",
+      "title": "WTA Madrid Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_miami_open",
+      "title": "WTA Miami Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_monterrey_open",
+      "title": "WTA Monterrey Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_ningbo_open",
+      "title": "WTA Ningbo Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_pan_pacific_open",
+      "title": "WTA Pan Pacific Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_qatar_open",
+      "title": "WTA Qatar Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_queens_club_champ",
+      "title": "WTA Queen's Club Championships",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_singapore_open",
+      "title": "WTA Singapore Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_strasbourg",
+      "title": "WTA Internationaux de Strasbourg",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_stuttgart_open",
+      "title": "WTA Stuttgart Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_us_open",
+      "title": "WTA US Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_washington_open",
+      "title": "WTA Washington Open",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_wimbledon",
+      "title": "WTA Wimbledon",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "tennis_wta_wuhan_open",
+      "title": "WTA Wuhan Open",
+      "active": false,
+      "gender": "women"
+    }
+  ],
+  "winamaxUnavailableLeagues": 0,
+  "femaleMatches": 1
 }
