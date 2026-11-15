@@ -288,7 +288,8 @@ def main():
                 if not queues[sport] or budget <= 0:
                     continue
                 _, key, title = queues[sport].pop(0)
-                core_markets = 'h2h' if sport=='football' and is_uefa(key,title) else 'h2h,spreads,totals' if budget >= 3 else 'h2h'
+                reserved_for_others = sum(bool(queues[other]) and queried[other] == 0 for other in SPORTS if other != sport)
+                core_markets = 'h2h' if sport=='football' and is_uefa(key,title) else 'h2h,spreads,totals' if budget >= 3 + reserved_for_others else 'h2h'
                 params = dict(bookmakers=BOOK, markets=core_markets, oddsFormat='decimal',
                               commenceTimeTo=(now + dt.timedelta(days=args.football_days if sport=='football' else args.days)).strftime('%Y-%m-%dT%H:%M:%SZ'))
                 try:

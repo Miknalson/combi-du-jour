@@ -55,4 +55,19 @@ class SafeSportsTests(unittest.TestCase):
   self.assertEqual(lookups[:2],['tennis','basket']);self.assertEqual(prices,[('tennis','player_sets_won'),('basket','spreads')]);self.assertEqual(remaining,0)
   self.assertGreater(lookups.count('basket'),0);self.assertEqual(len(lookups),8)
   self.assertTrue(all(m['markets'][0]['family']=='h2h' for ms in matches.values() for m in ms))
+ def test_small_budget_reaches_each_sport_before_optional_markets(self):
+  keys={'football':'soccer_uefa_champs_league','basket':'basketball_nba','tennis':'tennis_atp_example'}
+  priced=[]
+  def get(path,**params):
+   if path=='/sports':return [{'key':key,'title':key} for key in keys.values()]
+   if path.endswith('/markets'):return {'bookmakers':[]}
+   key=path.split('/')[2]
+   e=copy.deepcopy(self.e)
+   if not key.startswith('soccer_'):e['bookmakers'][0]['markets'][0]['outcomes']=[{'name':'Home','price':1.6},{'name':'Away','price':2.5}]
+   if path.endswith('/events'):return [e]
+   priced.append((key,params['markets']));return [e]
+  with tempfile.TemporaryDirectory() as tmp,patch.object(s,'ROOT',Path(tmp)/'sports'),patch.object(s.api,'get',side_effect=get),patch.object(s.api,'credits_budget',return_value=(6,100)),patch.dict('os.environ',{'ODDS_API_KEY':'test'}),patch.object(sys,'argv',['update_sports.py']):
+   s.main()
+  self.assertEqual([key for key,markets in priced[:3]],list(keys.values()))
+  self.assertTrue(all(markets=='h2h' for key,markets in priced[:3]))
 if __name__=='__main__':unittest.main()
