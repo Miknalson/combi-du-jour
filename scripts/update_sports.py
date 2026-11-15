@@ -11,8 +11,33 @@ import update_odds as api
 
 ROOT = Path(__file__).resolve().parents[1] / 'data' / 'sports'
 BOOK = 'winamax_fr'
-SPORTS = ('football', 'basket', 'tennis')
+SPORTS = ('football', 'basket', 'tennis', 'rugby_xv', 'rugby_xiii', 'football_us', 'hockey', 'volley')
+UNITS = {'football':'goals','basket':'points','tennis':'games','rugby_xv':'points','rugby_xiii':'points','football_us':'points','hockey':'goals','volley':'unknown'}
+DRAW_SPORTS = ('football','rugby_xv','rugby_xiii')
 FOOTBALL_KEYS = {x[0] for x in api.LEAGUES}
+
+
+def female_competition(key, title=''):
+    return bool(api.re.search(r'women|feminin|féminin|wnba|wncaab|ncaaw|wta|wsl|pwhl|nwsl|wleague|damallsvenskan|frauen',key+' '+title,api.re.I))
+
+
+def classify_sport(key):
+    for prefix,sport in [('soccer_','football'),('basketball_','basket'),('tennis_','tennis'),('rugbyunion_','rugby_xv'),('rugby_union_','rugby_xv'),('rugbyleague_','rugby_xiii'),('rugby_league_','rugby_xiii'),('americanfootball_','football_us'),('icehockey_','hockey'),('ice_hockey_','hockey'),('volleyball_','volley')]:
+        if key.startswith(prefix):return sport
+    return None
+
+
+def winamax_present(key, events):
+    """Free availability probe; unavailable endpoint means unknown, not absent."""
+    probed=False
+    for event in events[:2]:
+        try:
+            listing=api.get(f"/sports/{key}/events/{event['id']}/markets",bookmakers=BOOK)
+            probed=True
+            if any(b.get('key')==BOOK and b.get('markets') for b in listing.get('bookmakers',[])):return True
+        except Exception:
+            return None
+    return False if probed else None
 
 
 def is_uefa(key, title=''):
@@ -20,7 +45,7 @@ def is_uefa(key, title=''):
 
 
 def football_code(key):
-    return next((code for sport,code,*_ in api.LEAGUES if sport==key), 'UEFA_'+key.removeprefix('soccer_').removeprefix('uefa_').upper())
+    return next((code for sport,code,*_ in api.LEAGUES if sport==key), ('UEFA_' if is_uefa(key) else 'FOOT_')+key.removeprefix('soccer_').removeprefix('uefa_').upper())
 
 
 def publish_football_days(matches, now):
@@ -44,6 +69,7 @@ def publish_football_days(matches, now):
                     'o1':m['o1'],'oX':m['oX'],'o2':m['o2'],'books':1}
             doc['matches'].append(target)
         target['leagueTitle']=m['league']
+        target['gender']=m.get('gender','unspecified')
         target['mine']={'book':'Winamax France','bookKey':BOOK,'asOf':m['asOf'],
                         'o1':m['o1'],'oX':m['oX'],'o2':m['o2'],'ou':{}}
         for group in m.get('markets',[]):
@@ -89,7 +115,7 @@ def market_groups(event, sport, now):
                         continue
                     participant = out.get('description', '')
                     if family == 'h2h':
-                        if out['name'] not in ((home, away, 'Draw') if sport == 'football' else (home, away)):continue
+                        if out['name'] not in ((home, away, 'Draw') if sport in DRAW_SPORTS else (home, away)):continue
                         line, participant = None, ''
                         side = '1' if out['name'] == home else '2' if out['name'] == away else 'X'
                         label = 'Match nul' if side == 'X' else 'Victoire ' + out['name']
@@ -98,7 +124,7 @@ def market_groups(event, sport, now):
                         if out['name'] not in (home, away) or not math.isfinite(point) or abs(point % 1 - .5) > 1e-8:continue
                         side = '1' if out['name'] == home else '2'
                         line, participant = point if side == '1' else -point, ''
-                        label = f"{out['name']} {point:+g} {'jeux' if sport == 'tennis' else 'buts' if sport == 'football' else 'points'}"
+                        label = f"{out['name']} {point:+g} {'jeux' if sport == 'tennis' else 'buts' if sport in ('football','hockey') else 'unité à vérifier' if sport == 'volley' else 'points'}"
                     else:
                         line = float(out['point'])
                         if not math.isfinite(line) or abs(line % 1 - .5) > 1e-8 or out['name'] not in ('Over','Under'):continue
@@ -108,18 +134,18 @@ def market_groups(event, sport, now):
                         if family == 'sets':
                             label = participant + (' gagne au moins un set' if side == 'over' else ' ne gagne aucun set')
                         else:
-                            unit = 'jeux' if sport == 'tennis' else 'buts' if sport == 'football' else 'points'
+                            unit = 'jeux' if sport == 'tennis' else 'buts' if sport in ('football','hockey') else 'unité à vérifier' if sport == 'volley' else 'points'
                             label = (participant + ' · ' if participant else '') + f"{'Plus' if side == 'over' else 'Moins'} de {line:g} {unit}"
                     group_id = f'{kind}|{participant}|{line}'
                     pair = buckets.setdefault(group_id, {'id':group_id, 'family':family, 'key':kind,
-                            'unit':'sets' if family == 'sets' else 'match' if family == 'h2h' else 'games' if sport == 'tennis' else 'goals' if sport == 'football' else 'points',
+                            'unit':'sets' if family == 'sets' else 'match' if family == 'h2h' else UNITS[sport],
                             'line':line, 'participant':participant, 'bookKey':BOOK, 'asOf':stamp, 'outcomes':[]})
                     pair['outcomes'].append({'code':group_id+'|'+side if family!='h2h' else side,
                                             'side':side,'label':label,'odds':price,'participant':participant})
                 except (KeyError, ValueError, TypeError, OverflowError):
                     continue
-            expected = {'1','X','2'} if family == 'h2h' and sport == 'football' else {'1','2'} if family in ('h2h','spreads') else {'over','under'}
             for pair in buckets.values():
+                expected = {'1','X','2'} if family == 'h2h' and (sport == 'football' or sport in DRAW_SPORTS and any(o['side']=='X' for o in pair['outcomes'])) else {'1','2'} if family in ('h2h','spreads') else {'over','under'}
                 if len(pair['outcomes']) == len(expected) and {o['side'] for o in pair['outcomes']} == expected:
                     pair['outcomes'].sort(key=lambda o:o['side'])
                     groups.append(pair)
@@ -139,7 +165,7 @@ def extract(event, sport, league, now):
                 if market.get('key') != 'h2h':
                     continue
                 outcomes = market.get('outcomes', [])
-                expected = {home, away, 'Draw'} if sport == 'football' else {home, away}
+                expected = {home, away, 'Draw'} if sport == 'football' or sport in DRAW_SPORTS and any(o.get('name')=='Draw' for o in outcomes) else {home, away}
                 if len(outcomes) != len(expected) or {x['name'] for x in outcomes} != expected:
                     continue
                 prices = {x['name']: float(x['price']) for x in outcomes}
@@ -153,7 +179,7 @@ def extract(event, sport, league, now):
                         'kickoff': event['commence_time'], 'home': home, 'away': away,
                         'bookKey': BOOK, 'book': 'Winamax France', 'asOf': stamp,
                         'market': 'h2h', 'o1': prices[home], 'o2': prices[away],
-                        **({'oX': prices['Draw']} if sport == 'football' else {}),
+                        **({'oX': prices['Draw']} if 'Draw' in prices else {}),
                         'markets': market_groups(event,sport,now)}
     except (KeyError, ValueError, TypeError, OverflowError):
         return None
@@ -165,7 +191,7 @@ def enrich_markets(matches, remaining, now, max_events=8):
     queues = {sport: sorted(matches.get(sport, []), key=lambda m:m['kickoff']) for sport in SPORTS}
     checked = 0
     while checked < max_events and any(queues.values()):
-        for sport in ('tennis', 'basket', 'football'):
+        for sport in ('tennis', 'basket', 'football') + tuple(s for s in SPORTS if s not in ('tennis','basket','football')):
             if not queues[sport] or checked >= max_events:
                 continue
             m = queues[sport].pop(0)
@@ -221,6 +247,7 @@ def archived_football(now, days, excluded_keys=()):
                 records.append({'id': m['id'], 'sport':'football', 'league':m['league'],
                                 'kickoff':m['kickoff'], 'home':m['home'], 'away':m['away'],
                                 'bookKey':BOOK, 'book':'Winamax France', 'asOf':b['asOf'],
+                                'gender':m.get('gender','women' if female_competition(m.get('league',''),m.get('leagueTitle','')) else 'unspecified'),
                                 'market':'h2h', 'o1':prices[0], 'oX':prices[1], 'o2':prices[2],
                                 'markets':[{'id':'h2h|archive', 'family':'h2h', 'unit':'match',
                                             'bookKey':BOOK, 'asOf':b['asOf'], 'quoteSource':'api-archive',
@@ -250,14 +277,21 @@ def main():
         print('Connexion aux cotes non configurée : aucun prix inventé.')
         return
     try:
-        available = api.get('/sports')
+        available = api.get('/sports',all='true')
         budget = min(max(0, args.max_credits), api.credits_budget(now)[0])
         queues = {sport: [] for sport in SPORTS}
         fixtures=[]
         discovery_errors=[]
+        catalog={s:[] for s in SPORTS}
+        events_for_key={}
+        absent_books={s:0 for s in SPORTS}
+        for item in available:
+            category=classify_sport(item['key'])
+            if category:catalog[category].append({'key':item['key'],'title':item.get('title',item['key']),'active':item.get('active',True),'gender':'women' if female_competition(item['key'],item.get('title','')) else 'unspecified'})
         for item in available:
             key = item['key']
-            sport = 'basket' if key.startswith('basketball_') else 'tennis' if key.startswith('tennis_') else 'football' if key in FOOTBALL_KEYS or is_uefa(key,item.get('title','')) else None
+            sport = classify_sport(key)
+            if sport=='football' and key not in FOOTBALL_KEYS and not is_uefa(key,item.get('title','')) and not female_competition(key,item.get('title','')):continue
             if not sport or item.get('has_outrights') or item.get('active') is False:
                 continue
             try:
@@ -274,9 +308,10 @@ def main():
                                  'kickoff':e['commence_time']} for e in events
                                 if dt.datetime.fromisoformat(e['commence_time'].replace('Z','+00:00')) in future)
             if future:
+                events_for_key[key]=[e for e in events if dt.datetime.fromisoformat(e['commence_time'].replace('Z','+00:00')) in future]
                 queues[sport].append((min(future), key, item.get('title', key)))
         for sport,queue in queues.items():
-            queue.sort(key=lambda row:(0 if sport=='football' and is_uefa(row[1],row[2]) else 1,row[0],row[1]))
+            queue.sort(key=lambda row:(0 if sport=='football' and is_uefa(row[1],row[2]) else 1,0 if row[0]<now+dt.timedelta(hours=36) else 1,0 if female_competition(row[1],row[2]) else 1,row[0],row[1]))
         matches = {sport: [] for sport in SPORTS}
         queried = {sport: 0 for sport in SPORTS}
         offered = {k: len(v) for k, v in queues.items()}
@@ -284,10 +319,16 @@ def main():
         enrichment_budget = min(2, max(0, budget - 2))
         budget -= enrichment_budget
         while budget > 0 and any(queues.values()):
-            for sport in SPORTS:
+            order=list(SPORTS)
+            offset=now.date().toordinal()%len(order) if budget<len([s for s in SPORTS if queues[s]]) else 0
+            order=order[offset:]+order[:offset]
+            for sport in order:
                 if not queues[sport] or budget <= 0:
                     continue
                 _, key, title = queues[sport].pop(0)
+                if winamax_present(key,events_for_key.get(key,[])) is False:
+                    absent_books[sport]+=1
+                    continue
                 reserved_for_others = sum(bool(queues[other]) and queried[other] == 0 for other in SPORTS if other != sport)
                 core_markets = 'h2h' if sport=='football' and is_uefa(key,title) else 'h2h,spreads,totals' if budget >= 3 + reserved_for_others else 'h2h'
                 params = dict(bookmakers=BOOK, markets=core_markets, oddsFormat='decimal',
@@ -308,6 +349,7 @@ def main():
                         if sport=='football':m['leagueCode']=football_code(key)
                         m['sportKey'] = key
                         m['eventId'] = event['id']
+                        m['gender'] = 'women' if female_competition(key,title) else 'unspecified'
                         matches[sport].append(m)
         # Discover the actual market names, alternating sports rather than exhausting tennis first.
         enrich_markets(matches, budget + enrichment_budget, now)
@@ -321,8 +363,9 @@ def main():
         for sport in SPORTS:
             unique = {m['id']: m for m in matches[sport]}
             calendar={'fixtures':sorted(fixtures,key=lambda f:f['kickoff']),'calendarStatus':'partial' if discovery_errors else 'ok','horizonDays':args.football_days} if sport=='football' else {}
-            write(sport, 'ok' if queried[sport] or not offered[sport] else 'quota', list(unique.values()), now,
-                  leaguesQueried=queried[sport], leaguesAvailable=offered[sport], partial=bool(queues[sport]),**calendar)
+            state='unsupported' if not catalog[sport] else 'inactive' if not any(l['active'] for l in catalog[sport]) else 'ok' if queried[sport] or not offered[sport] else 'no_winamax' if not queues[sport] and absent_books[sport] else 'quota'
+            write(sport,state,list(unique.values()),now,leaguesQueried=queried[sport],leaguesAvailable=offered[sport],partial=bool(queues[sport]),
+                  competitions=catalog[sport],winamaxUnavailableLeagues=absent_books[sport],femaleMatches=sum(m.get('gender')=='women' for m in unique.values()),**calendar)
             print(f'{sport}: {len(unique)} rencontres Winamax, {queried[sport]} compétitions interrogées')
     except Exception:
         # Never log request URLs: they carry the API key. Never keep old prices as fresh.

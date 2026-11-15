@@ -60,7 +60,7 @@ class SafeSportsTests(unittest.TestCase):
   priced=[]
   def get(path,**params):
    if path=='/sports':return [{'key':key,'title':key} for key in keys.values()]
-   if path.endswith('/markets'):return {'bookmakers':[]}
+   if path.endswith('/markets'):return {'bookmakers':[{'key':'winamax_fr','markets':[{'key':'h2h'}]}]}
    key=path.split('/')[2]
    e=copy.deepcopy(self.e)
    if not key.startswith('soccer_'):e['bookmakers'][0]['markets'][0]['outcomes']=[{'name':'Home','price':1.6},{'name':'Away','price':2.5}]

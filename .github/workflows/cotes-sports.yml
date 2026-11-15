@@ -10,6 +10,8 @@ on:
       - 'safe*'
       - 'paper*'
       - 'scripts/paper_tests.cjs'
+      - 'scripts/paper_multi_tests.cjs'
+      - 'sport-catalog.js'
       - 'index.html'
       - 'sports.html'
       - 'tableau.html'
@@ -44,11 +46,12 @@ jobs:
           python -m unittest discover -s tests -p 'test_uefa.py'
           node tests/uefa.test.cjs
           node tests/paper.test.cjs
+          node tests/multisport.test.cjs
       - name: Détecter une modification du collecteur
         id: quote_changes
         if: github.event_name == 'push'
         run: |
-          if [ ! -f data/paper-tests-v1.json ]; then
+          if [ ! -f data/paper-tests-v2.json ]; then
             echo "refresh=true" >> "$GITHUB_OUTPUT"
           elif git diff --quiet HEAD^ HEAD -- scripts/update_sports.py scripts/update_odds.py; then
             echo "refresh=false" >> "$GITHUB_OUTPUT"
@@ -63,22 +66,22 @@ jobs:
         run: python scripts/update_sports.py --max-credits 18
       - name: Consigner les tests fictifs sans passer d’ordre
         continue-on-error: true
-        run: node scripts/paper_tests.cjs
+        run: node scripts/paper_multi_tests.cjs
       - name: Publier les relevés
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/sports/ data/days/ data/index.json
-          git add data/paper-tests-v1.json data/paper-status-v1.json 2>/dev/null || true
+          git add data/paper-tests-v1.json data/paper-status-v1.json data/paper-tests-v2.json data/paper-status-v2.json 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Cotes Winamax football basket et tennis"
+          git commit -m "Cotes Winamax multisports et mises fictives"
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp index.html tableau.html sports.html uefa.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

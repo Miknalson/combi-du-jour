@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=paper-v1">
+<link rel="stylesheet" href="style.css?v=multisport-v2">
 <style>
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -55,7 +55,8 @@
     <span class="status" id="bankNote"></span>
   </form>
 
-  <section id="paperProtocol" class="model-study" aria-label="Protocole de test fictif"></section>
+  <section id="paperProtocolV2" class="model-study" aria-label="Mises automatiques fictives"></section>
+<details class="module-disclosure"><summary>Archive du protocole v1 · 1 unité fictive</summary><section id="paperProtocol" class="model-study" aria-label="Protocole de test fictif"></section></details>
   <div class="kpis" id="kpis"></div>
 
   <section>
@@ -99,9 +100,10 @@
   </footer>
 </div>
 
+<script src="sport-catalog.js?v=2"></script>
 <script src="safe-engine.js?v=paper-v1"></script>
 <script src="paper-engine.js?v=1"></script>
-<script src="paper-view.js?v=1"></script>
+<script src="paper-view.js?v=multisport-v2"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
 <script>

@@ -25,7 +25,7 @@ class UefaTests(unittest.TestCase):
    if path=='/sports':return [{'key':key,'title':key,'active':True} for key in keys]
    key=path.split('/')[2]
    if path.endswith('/events'):return [event(key)]
-   if path.endswith('/markets'):return {'bookmakers':[]}
+   if path.endswith('/markets'):return {'bookmakers':[{'key':'winamax_fr','markets':[{'key':'h2h'}]}]}
    priced.append(key);self.assertEqual(params['bookmakers'],'winamax_fr');self.assertEqual(params['markets'],'h2h');return [event(key)]
   with tempfile.TemporaryDirectory() as root,patch.object(s,'ROOT',Path(root)/'sports'),patch.dict(os.environ,{'ODDS_API_KEY':'test'}),patch.object(sys,'argv',['update_sports.py']),patch.object(s.api,'get',side_effect=get),patch.object(s.api,'credits_budget',return_value=(2,100)):
    s.main();d=json.loads((Path(root)/'sports'/'football.json').read_text())

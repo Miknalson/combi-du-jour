@@ -1,0 +1,17 @@
+// Automatic simulated exposure only: never sends orders, credentials or personal bets.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),P=require('../paper-multi-engine'),Safe=require('../safe-multi-engine'),Base=require('../paper-engine');
+const root=path.resolve(__dirname,'..'),file=path.join(root,'data/paper-tests-v2.json'),statusFile=path.join(root,'data/paper-status-v2.json'),now=Date.now();
+const names=['sport-catalog.js','safe-engine.js','paper-engine.js','safe-multi-engine.js','paper-multi-engine.js','scripts/paper_multi_tests.cjs','scripts/update_sports.py'];
+function hash(name){return crypto.createHash('sha256').update(fs.readFileSync(path.join(root,name))).digest('hex');}function save(name,data){fs.writeFileSync(name,JSON.stringify(data,null,2)+'\n');}
+const hashes=Object.fromEntries(names.map(n=>[n,hash(n)]));
+const old=fs.existsSync(file)?JSON.parse(fs.readFileSync(file,'utf8')):{schemaVersion:2,manifest:{rules:P.rules,sourceHashes:hashes,startedAt:new Date(now).toISOString()},records:[]};
+if(JSON.stringify(old.manifest.rules)!==JSON.stringify(P.rules)||JSON.stringify(old.manifest.sourceHashes)!==JSON.stringify(hashes)){save(statusFile,{status:'suspended',updatedAt:new Date(now).toISOString(),message:'Version ou collecte modifiée. Journal v2 conservé ; aucune nouvelle mise fictive enregistrée.'});process.exit(1);}
+const docs=Safe.SPORTS.map(s=>{try{return JSON.parse(fs.readFileSync(path.join(root,'data/sports',s+'.json'),'utf8'));}catch(e){return null;}});
+const available=docs.filter(d=>d&&d.status==='ok'&&Safe.SPORTS.includes(d.sport)&&now-Date.parse(d.updatedAt)>=0&&now-Date.parse(d.updatedAt)<=3600000&&(!d.partial||(d.matches||[]).some(m=>Safe.paris(m.kickoff)===Safe.paris(now)&&now-Date.parse(m.asOf)>=0&&now-Date.parse(m.asOf)<=3600000))).map(d=>d.sport);
+let journal=P.append(old,P.build(docs.map(d=>d&&available.includes(d.sport)?d:null),now),now,available),scores=[];
+for(const day of new Set(journal.records.map(r=>r.day))){try{scores.push(...JSON.parse(fs.readFileSync(path.join(root,'data/days',day+'.json'),'utf8')).matches);}catch(e){}}
+journal.records=journal.records.map(r=>P.settle(r,scores,Safe.paris(now)));save(file,journal);
+save(statusFile,{status:available.length?'running':'waiting_for_fresh_quotes',updatedAt:new Date(now).toISOString(),availableSports:available,sourceStatus:docs.filter(Boolean).map(d=>({sport:d.sport,status:d.status,partial:!!d.partial,matches:(d.matches||[]).length,femaleMatches:d.femaleMatches||0})),message:'100 € fictifs par Safe, 50 € fictifs par Algo. Un seul premier ticket par catégorie et par jour. Aucun ordre réel ni reprise des mises anciennes.'});
+// Close old V1 outcomes only. Never append a ticket to the frozen old cohort.
+const v1=path.join(root,'data/paper-tests-v1.json');if(fs.existsSync(v1)){const j=JSON.parse(fs.readFileSync(v1));let archiveScores=[];for(const day of new Set(j.records.map(r=>r.day))){try{archiveScores.push(...JSON.parse(fs.readFileSync(path.join(root,'data/days',day+'.json'),'utf8')).matches);}catch(e){}}j.records=j.records.map(r=>Base.settle(r,archiveScores,Safe.paris(now)));save(v1,j);save(path.join(root,'data/paper-status-v1.json'),{status:'archived',updatedAt:new Date(now).toISOString(),message:'Cohorte v1 conservée. Les nouvelles propositions et mises fictives sont enregistrées dans la version multisport v2.'});}
+console.log('Protocole fictif v2 :',journal.records.length,'observations. Exposition Safe 100 €, Algo 50 €. Sources disponibles :',available.join(', ')||'aucune');
