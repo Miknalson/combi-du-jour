@@ -45,5 +45,187 @@
     },
     "startedAt": "2026-11-15T07:35:22.483Z"
   },
-  "records": []
+  "records": [
+    {
+      "id": "paper-real-v1|2026-11-15|algo|football",
+      "day": "2026-11-15",
+      "method": "algo",
+      "sport": "football",
+      "version": "algo-real-v1",
+      "createdAt": "2026-11-15T07:39:44.955Z",
+      "unitStake": 1,
+      "status": "pending",
+      "odds": 3.1667999999999994,
+      "probability": 0.26804557413682095,
+      "legs": [
+        {
+          "matchId": "football-bef3dd0d3dad6760e4e531bc9565fb8c",
+          "sport": "football",
+          "home": "Spain",
+          "away": "England",
+          "league": "UEFA Nations League",
+          "kickoff": "2026-11-15T19:45:00Z",
+          "date": "2026-11-15",
+          "code": "1",
+          "label": "Victoire Spain",
+          "o": 1.82,
+          "p": 0.5085337438863468,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:39:24Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        },
+        {
+          "matchId": "football-c31db8a4f0558632e2b6422676a32efc",
+          "sport": "football",
+          "home": "France",
+          "away": "Turkey",
+          "league": "UEFA Nations League",
+          "kickoff": "2026-11-15T19:45:00Z",
+          "date": "2026-11-15",
+          "code": "1",
+          "label": "Victoire France",
+          "o": 1.16,
+          "p": 0.839828987492934,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:39:24Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        },
+        {
+          "matchId": "football-cc7a8f5fed10407a56df29e87f73d7e3",
+          "sport": "football",
+          "home": "Croatia",
+          "away": "Czech Republic",
+          "league": "UEFA Nations League",
+          "kickoff": "2026-11-15T19:45:00Z",
+          "date": "2026-11-15",
+          "code": "1",
+          "label": "Victoire Croatia",
+          "o": 1.5,
+          "p": 0.6276217769492564,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:39:24Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        }
+      ],
+      "searchLimited": false,
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-15T07:39:41.276863+00:00",
+          "partial": true,
+          "matches": 79
+        },
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-15T07:39:41.276863+00:00",
+          "partial": false,
+          "matches": 4
+        }
+      ]
+    },
+    {
+      "id": "paper-real-v1|2026-11-15|safe|football",
+      "day": "2026-11-15",
+      "method": "safe",
+      "sport": "football",
+      "version": "safe-real-v1",
+      "createdAt": "2026-11-15T07:39:44.955Z",
+      "unitStake": 1,
+      "status": "pending",
+      "odds": 1.5,
+      "probability": 0.6276217769492564,
+      "legs": [
+        {
+          "id": "football|football-cc7a8f5fed10407a56df29e87f73d7e3|2026-11-15T19:45:00Z|h2h||None|1",
+          "matchId": "football-cc7a8f5fed10407a56df29e87f73d7e3",
+          "sport": "football",
+          "league": "UEFA Nations League",
+          "home": "Croatia",
+          "away": "Czech Republic",
+          "kickoff": "2026-11-15T19:45:00Z",
+          "date": "2026-11-15",
+          "code": "1",
+          "label": "Victoire Croatia",
+          "o": 1.5,
+          "p": 0.6276217769492564,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:39:24Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "searchLimited": false,
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-15T07:39:41.276863+00:00",
+          "partial": true,
+          "matches": 79
+        },
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-15T07:39:41.276863+00:00",
+          "partial": false,
+          "matches": 4
+        }
+      ]
+    },
+    {
+      "id": "paper-real-v1|2026-11-15|safe|tennis",
+      "day": "2026-11-15",
+      "method": "safe",
+      "sport": "tennis",
+      "version": "safe-real-v1",
+      "createdAt": "2026-11-15T07:39:44.955Z",
+      "unitStake": 0,
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "searchLimited": false,
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-15T07:39:41.276863+00:00",
+          "partial": true,
+          "matches": 79
+        },
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-15T07:39:41.276863+00:00",
+          "partial": false,
+          "matches": 4
+        }
+      ]
+    }
+  ]
 }

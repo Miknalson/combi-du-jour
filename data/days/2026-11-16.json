@@ -12,14 +12,14 @@
    "oX": 3.25,
    "o2": 3.9,
    "books": 1,
-   "leagueTitle": "UNL",
+   "leagueTitle": "UEFA Nations League",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T13:23:58Z",
-    "o1": 1.7,
+    "asOf": "2026-11-15T07:39:24Z",
+    "o1": 1.68,
     "oX": 3.25,
-    "o2": 3.9,
+    "o2": 4.1,
     "ou": {}
    }
   },
@@ -34,14 +34,14 @@
    "oX": 3.75,
    "o2": 1.5,
    "books": 1,
-   "leagueTitle": "UNL",
+   "leagueTitle": "UEFA Nations League",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T13:23:58Z",
-    "o1": 4.1,
-    "oX": 3.55,
-    "o2": 1.62,
+    "asOf": "2026-11-15T07:39:24Z",
+    "o1": 3.85,
+    "oX": 3.45,
+    "o2": 1.66,
     "ou": {}
    }
   },
@@ -56,14 +56,14 @@
    "oX": 2.95,
    "o2": 3.05,
    "books": 1,
-   "leagueTitle": "UNL",
+   "leagueTitle": "UEFA Nations League",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T13:23:58Z",
+    "asOf": "2026-11-15T07:39:24Z",
     "o1": 1.96,
-    "oX": 2.95,
-    "o2": 3.35,
+    "oX": 3.0,
+    "o2": 3.3,
     "ou": {}
    }
   },
@@ -78,14 +78,36 @@
    "oX": 4.7,
    "o2": 6.75,
    "books": 1,
-   "leagueTitle": "UNL",
+   "leagueTitle": "UEFA Nations League",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T13:23:58Z",
-    "o1": 1.26,
-    "oX": 4.7,
-    "o2": 7.0,
+    "asOf": "2026-11-15T07:39:24Z",
+    "o1": 1.23,
+    "oX": 4.9,
+    "o2": 7.75,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-13eb6e805b513e9d1fbad120c68cd1a0",
+   "league": "UNL",
+   "home": "Lithuania",
+   "away": "Liechtenstein",
+   "kickoff": "2026-11-16T17:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.07,
+   "oX": 6.75,
+   "o2": 15.0,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:39:24Z",
+    "o1": 1.07,
+    "oX": 6.75,
+    "o2": 15.0,
     "ou": {}
    }
   },
@@ -145,14 +167,14 @@
    "oX": 3.85,
    "o2": 3.15,
    "books": 1,
-   "leagueTitle": "UNL",
+   "leagueTitle": "UEFA Nations League",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T13:23:58Z",
-    "o1": 1.82,
-    "oX": 3.9,
-    "o2": 3.1,
+    "asOf": "2026-11-15T07:39:24Z",
+    "o1": 1.76,
+    "oX": 3.95,
+    "o2": 3.25,
     "ou": {}
    }
   },
@@ -167,11 +189,11 @@
    "oX": 4.5,
    "o2": 5.7,
    "books": 1,
-   "leagueTitle": "UNL",
+   "leagueTitle": "UEFA Nations League",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T13:23:58Z",
+    "asOf": "2026-11-15T07:39:24Z",
     "o1": 1.37,
     "oX": 4.5,
     "o2": 5.7,
@@ -189,11 +211,11 @@
    "oX": 3.55,
    "o2": 1.52,
    "books": 1,
-   "leagueTitle": "UNL",
+   "leagueTitle": "UEFA Nations League",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T13:23:58Z",
+    "asOf": "2026-11-15T07:39:24Z",
     "o1": 5.3,
     "oX": 3.65,
     "o2": 1.5,
@@ -211,18 +233,40 @@
    "oX": 3.45,
    "o2": 4.3,
    "books": 1,
-   "leagueTitle": "UNL",
+   "leagueTitle": "UEFA Nations League",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T13:23:58Z",
-    "o1": 1.64,
-    "oX": 3.45,
-    "o2": 4.3,
+    "asOf": "2026-11-15T07:39:24Z",
+    "o1": 1.62,
+    "oX": 3.5,
+    "o2": 4.4,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-f0a93cd3f73adad3a27da716b533a3e3",
+   "league": "UNL",
+   "home": "Gibraltar",
+   "away": "Malta",
+   "kickoff": "2026-11-16T19:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 6.0,
+   "oX": 3.85,
+   "o2": 1.38,
+   "books": 1,
+   "leagueTitle": "UEFA Nations League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:39:24Z",
+    "o1": 6.0,
+    "oX": 3.85,
+    "o2": 1.38,
     "ou": {}
    }
   }
  ],
- "updatedAt": "2026-11-15T07:35:20.067771+00:00",
+ "updatedAt": "2026-11-15T07:39:41.276863+00:00",
  "source": "Winamax France et archives des marchés"
 }

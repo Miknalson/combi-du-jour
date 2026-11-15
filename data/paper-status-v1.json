@@ -1,6 +1,9 @@
 {
   "status": "waiting_for_fresh_quotes",
-  "updatedAt": "2026-11-15T07:35:22.483Z",
-  "availableSports": [],
+  "updatedAt": "2026-11-15T07:39:44.955Z",
+  "availableSports": [
+    "football",
+    "tennis"
+  ],
   "message": "Protocole fictif. Les résultats manquants restent en attente. Aucun passage automatique en réel."
 }
