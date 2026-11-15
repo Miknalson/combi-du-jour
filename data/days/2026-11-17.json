@@ -12,7 +12,7 @@
    "oX": 4.0,
    "o2": 1.52,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -34,7 +34,7 @@
    "oX": 3.5,
    "o2": 4.2,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -56,7 +56,7 @@
    "oX": 3.45,
    "o2": 2.35,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -78,7 +78,7 @@
    "oX": 3.3,
    "o2": 3.1,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -100,7 +100,7 @@
    "oX": 3.4,
    "o2": 3.6,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -122,7 +122,7 @@
    "oX": 3.1,
    "o2": 3.75,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -144,7 +144,7 @@
    "oX": 3.4,
    "o2": 2.65,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -166,7 +166,7 @@
    "oX": 5.1,
    "o2": 1.28,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -178,6 +178,6 @@
    }
   }
  ],
- "updatedAt": "2026-11-14T13:24:31.613003+00:00",
+ "updatedAt": "2026-11-15T07:35:20.067771+00:00",
  "source": "Winamax France et archives des marchés"
 }

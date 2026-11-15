@@ -1,0 +1,205 @@
+{
+ "date": "2026-11-25",
+ "matches": [
+  {
+   "id": "football-e6fa007f93e0cef004be920f96ee95ba",
+   "league": "UCL",
+   "home": "Sabah FK",
+   "away": "Barcelona",
+   "kickoff": "2026-11-25T17:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 13.0,
+   "oX": 10.5,
+   "o2": 1.04,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 13.0,
+    "oX": 10.5,
+    "o2": 1.04,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-a7c87fac9e9cbcfc02ad0e0b29ca89e2",
+   "league": "UCL",
+   "home": "Slavia Praha",
+   "away": "Villarreal",
+   "kickoff": "2026-11-25T17:45:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 2.8,
+   "oX": 3.7,
+   "o2": 2.0,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 2.8,
+    "oX": 3.7,
+    "o2": 2.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-14007bc0605bce3bd164b132254ba24c",
+   "league": "UCL",
+   "home": "Paris Saint Germain",
+   "away": "AS Roma",
+   "kickoff": "2026-11-25T20:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.24,
+   "oX": 5.75,
+   "o2": 7.25,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 1.24,
+    "oX": 5.75,
+    "o2": 7.25,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-b1af6789fe6db7aab18a2945ce56f035",
+   "league": "UCL",
+   "home": "Atlético Madrid",
+   "away": "Viking FK",
+   "kickoff": "2026-11-25T20:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.05,
+   "oX": 10.5,
+   "o2": 16.0,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 1.05,
+    "oX": 10.5,
+    "o2": 16.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-0ee2cfddf20153779cd2cc3e1f1f879f",
+   "league": "UCL",
+   "home": "Lille",
+   "away": "Bayern Munich",
+   "kickoff": "2026-11-25T20:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 7.0,
+   "oX": 6.0,
+   "o2": 1.23,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 7.0,
+    "oX": 6.0,
+    "o2": 1.23,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-99459b90f3e732106e09585bf94b36b4",
+   "league": "UCL",
+   "home": "Club Brugge",
+   "away": "Liverpool",
+   "kickoff": "2026-11-25T20:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 3.75,
+   "oX": 4.3,
+   "o2": 1.56,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 3.75,
+    "oX": 4.3,
+    "o2": 1.56,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-49c66d76bc4085e63a181179cc47ef4d",
+   "league": "UCL",
+   "home": "Shakhtar Donetsk",
+   "away": "Fenerbahce",
+   "kickoff": "2026-11-25T20:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 2.4,
+   "oX": 3.25,
+   "o2": 2.4,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 2.4,
+    "oX": 3.25,
+    "o2": 2.4,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-e7e64568f6af00d395a3fdfc27de8ae3",
+   "league": "UCL",
+   "home": "Inter Milan",
+   "away": "VfB Stuttgart",
+   "kickoff": "2026-11-25T20:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 1.36,
+   "oX": 5.0,
+   "o2": 5.0,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 1.36,
+    "oX": 5.0,
+    "o2": 5.0,
+    "ou": {}
+   }
+  },
+  {
+   "id": "football-01a61442fe04f8751b62eb251f234079",
+   "league": "UCL",
+   "home": "Sporting Lisbon",
+   "away": "Manchester United",
+   "kickoff": "2026-11-25T20:00:00Z",
+   "quoteBasis": "winamax-only",
+   "o1": 2.3,
+   "oX": 3.4,
+   "o2": 2.4,
+   "books": 1,
+   "leagueTitle": "UEFA Champions League",
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:34:41Z",
+    "o1": 2.3,
+    "oX": 3.4,
+    "o2": 2.4,
+    "ou": {}
+   }
+  }
+ ],
+ "updatedAt": "2026-11-15T07:35:20.067771+00:00",
+ "source": "Winamax France et archives des marchés"
+}

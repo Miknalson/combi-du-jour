@@ -1,650 +1,9 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-14T13:24:31.613003+00:00",
+  "updatedAt": "2026-11-15T07:35:20.067771+00:00",
   "status": "ok",
   "matches": [
-    {
-      "id": "football-244d7d2e6f3f8529af59270040b7ec7a",
-      "sport": "football",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-14T14:00:00Z",
-      "home": "Kosovo",
-      "away": "Israel",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T13:23:58Z",
-      "market": "h2h",
-      "o1": 1.68,
-      "o2": 4.0,
-      "oX": 3.55,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T13:23:58Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Kosovo",
-              "odds": 1.68,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Israel",
-              "odds": 4.0,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.55,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "244d7d2e6f3f8529af59270040b7ec7a",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "liga2-real-sociedad-b-sporting-gijon",
-      "sport": "football",
-      "league": "LIGA2",
-      "kickoff": "2026-11-14T15:15Z",
-      "home": "Real Sociedad B",
-      "away": "Sporting Gijón",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T07:48:18Z",
-      "market": "h2h",
-      "o1": 2.15,
-      "oX": 3.05,
-      "o2": 2.75,
-      "markets": [
-        {
-          "id": "h2h|archive",
-          "family": "h2h",
-          "unit": "match",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T07:48:18Z",
-          "quoteSource": "api-archive",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "odds": 2.15,
-              "label": "Victoire Real Sociedad B"
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "odds": 3.05,
-              "label": "Match nul"
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "odds": 2.75,
-              "label": "Victoire Sporting Gijón"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "football-d548fa34308b91eb158670eb18e1deae",
-      "sport": "football",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-14T17:00:00Z",
-      "home": "Georgia",
-      "away": "Hungary",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T13:23:58Z",
-      "market": "h2h",
-      "o1": 3.0,
-      "o2": 2.2,
-      "oX": 2.95,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T13:23:58Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Georgia",
-              "odds": 3.0,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Hungary",
-              "odds": 2.2,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 2.95,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "d548fa34308b91eb158670eb18e1deae",
-      "availableMarkets": [],
-      "marketLookupUnavailable": true
-    },
-    {
-      "id": "football-8d67c473dbea0c85b30eefee4bca53d9",
-      "sport": "football",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-14T17:00:00Z",
-      "home": "Norway",
-      "away": "Wales",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T13:23:58Z",
-      "market": "h2h",
-      "o1": 1.14,
-      "o2": 9.5,
-      "oX": 7.0,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T13:23:58Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Norway",
-              "odds": 1.14,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Wales",
-              "odds": 9.5,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 7.0,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "8d67c473dbea0c85b30eefee4bca53d9",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "liga2-almeria-andorra-cf",
-      "sport": "football",
-      "league": "LIGA2",
-      "kickoff": "2026-11-14T17:30Z",
-      "home": "Almería",
-      "away": "Andorra CF",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T07:48:18Z",
-      "market": "h2h",
-      "o1": 1.66,
-      "oX": 3.65,
-      "o2": 3.7,
-      "markets": [
-        {
-          "id": "h2h|archive",
-          "family": "h2h",
-          "unit": "match",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T07:48:18Z",
-          "quoteSource": "api-archive",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "odds": 1.66,
-              "label": "Victoire Almería"
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "odds": 3.65,
-              "label": "Match nul"
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "odds": 3.7,
-              "label": "Victoire Andorra CF"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "liga2-mallorca-cordoba",
-      "sport": "football",
-      "league": "LIGA2",
-      "kickoff": "2026-11-14T17:30Z",
-      "home": "Mallorca",
-      "away": "Córdoba",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T07:48:18Z",
-      "market": "h2h",
-      "o1": 1.8,
-      "oX": 3.65,
-      "o2": 3.15,
-      "markets": [
-        {
-          "id": "h2h|archive",
-          "family": "h2h",
-          "unit": "match",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T07:48:18Z",
-          "quoteSource": "api-archive",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "odds": 1.8,
-              "label": "Victoire Mallorca"
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "odds": 3.65,
-              "label": "Match nul"
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "odds": 3.15,
-              "label": "Victoire Córdoba"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "football-c745f84500717bc671c4cd864624cca8",
-      "sport": "football",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-14T19:45:00Z",
-      "home": "Austria",
-      "away": "Republic of Ireland",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T13:23:58Z",
-      "market": "h2h",
-      "o1": 1.58,
-      "o2": 4.7,
-      "oX": 3.55,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T13:23:58Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Austria",
-              "odds": 1.58,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Republic of Ireland",
-              "odds": 4.7,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.55,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "c745f84500717bc671c4cd864624cca8",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "football-2b646127cc6cb400abc663c5a458f1db",
-      "sport": "football",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-14T19:45:00Z",
-      "home": "Sweden",
-      "away": "Bosnia & Herzegovina",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T13:23:58Z",
-      "market": "h2h",
-      "o1": 1.35,
-      "o2": 6.5,
-      "oX": 4.5,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T13:23:58Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Sweden",
-              "odds": 1.35,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Bosnia & Herzegovina",
-              "odds": 6.5,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.5,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "2b646127cc6cb400abc663c5a458f1db",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "football-159554f486f93d1d8d4213c570117a0e",
-      "sport": "football",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-14T19:45:00Z",
-      "home": "Portugal",
-      "away": "Denmark",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T13:23:58Z",
-      "market": "h2h",
-      "o1": 1.55,
-      "o2": 4.75,
-      "oX": 4.6,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T13:23:58Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Portugal",
-              "odds": 1.55,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Denmark",
-              "odds": 4.75,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.6,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "159554f486f93d1d8d4213c570117a0e",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "football-432a7eb09df939bf1e15a3e183f8494f",
-      "sport": "football",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-14T19:45:00Z",
-      "home": "Northern Ireland",
-      "away": "Ukraine",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T13:23:58Z",
-      "market": "h2h",
-      "o1": 2.35,
-      "o2": 2.85,
-      "oX": 2.8,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T13:23:58Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Northern Ireland",
-              "odds": 2.35,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Ukraine",
-              "odds": 2.85,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 2.8,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "432a7eb09df939bf1e15a3e183f8494f",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "football-3ce5eabe80d52d3ed6056b6c141bbea8",
-      "sport": "football",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-14T19:45:00Z",
-      "home": "Romania",
-      "away": "Poland",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T13:23:58Z",
-      "market": "h2h",
-      "o1": 4.2,
-      "o2": 1.58,
-      "oX": 3.9,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T13:23:58Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Romania",
-              "odds": 4.2,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Poland",
-              "odds": 1.58,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.9,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "3ce5eabe80d52d3ed6056b6c141bbea8",
-      "availableMarkets": [
-        "h2h",
-        "h2h_3_way"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "liga2-oviedo-girona-fc",
-      "sport": "football",
-      "league": "LIGA2",
-      "kickoff": "2026-11-14T20:00Z",
-      "home": "Oviedo",
-      "away": "Girona FC",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-14T07:48:18Z",
-      "market": "h2h",
-      "o1": 2.05,
-      "oX": 3.25,
-      "o2": 2.8,
-      "markets": [
-        {
-          "id": "h2h|archive",
-          "family": "h2h",
-          "unit": "match",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-14T07:48:18Z",
-          "quoteSource": "api-archive",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "odds": 2.05,
-              "label": "Victoire Oviedo"
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "odds": 3.25,
-              "label": "Match nul"
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "odds": 2.8,
-              "label": "Victoire Girona FC"
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "liga2-tenerife-ad-ceuta-fc",
       "sport": "football",
@@ -693,7 +52,7 @@
     {
       "id": "football-beaee55c19760e22fdf6291286debb08",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-15T14:00:00Z",
       "home": "Latvia",
       "away": "Armenia",
@@ -702,51 +61,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.9,
-      "o2": 2.2,
       "oX": 3.1,
+      "o2": 2.2,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Latvia",
               "odds": 2.9,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Armenia",
-              "odds": 2.2,
-              "participant": ""
+              "label": "Victoire Latvia"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.1,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.2,
+              "label": "Victoire Armenia"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "beaee55c19760e22fdf6291286debb08"
+      ]
     },
     {
       "id": "football-1f7ad9776d6a7ff7e4715bfcc3602e9f",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-15T14:00:00Z",
       "home": "Cyprus",
       "away": "Montenegro",
@@ -755,46 +106,38 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.95,
-      "o2": 2.1,
       "oX": 3.3,
+      "o2": 2.1,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Cyprus",
               "odds": 2.95,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Montenegro",
-              "odds": 2.1,
-              "participant": ""
+              "label": "Victoire Cyprus"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.3,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.1,
+              "label": "Victoire Montenegro"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "1f7ad9776d6a7ff7e4715bfcc3602e9f"
+      ]
     },
     {
       "id": "liga2-granada-cf-las-palmas",
@@ -844,7 +187,7 @@
     {
       "id": "football-083c61d3c0c86e7d75ee8ac8f6f66461",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-15T17:00:00Z",
       "home": "Belarus",
       "away": "Albania",
@@ -853,51 +196,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 3.75,
-      "o2": 1.8,
       "oX": 3.25,
+      "o2": 1.8,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Belarus",
               "odds": 3.75,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Albania",
-              "odds": 1.8,
-              "participant": ""
+              "label": "Victoire Belarus"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.25,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.8,
+              "label": "Victoire Albania"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "083c61d3c0c86e7d75ee8ac8f6f66461"
+      ]
     },
     {
       "id": "football-b37cfed1f792e0804c4f1e6a1c951f65",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-15T17:00:00Z",
       "home": "Finland",
       "away": "San Marino",
@@ -906,46 +241,38 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.01,
-      "o2": 25.0,
       "oX": 11.5,
+      "o2": 25.0,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Finland",
               "odds": 1.01,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire San Marino",
-              "odds": 25.0,
-              "participant": ""
+              "label": "Victoire Finland"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 11.5,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 25.0,
+              "label": "Victoire San Marino"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "b37cfed1f792e0804c4f1e6a1c951f65"
+      ]
     },
     {
       "id": "liga2-cd-eldense-sabadell-fc",
@@ -1040,7 +367,7 @@
     {
       "id": "football-9cb05a2b01f14b556d7c79f7d060f2b9",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-15T19:45:00Z",
       "home": "Belgium",
       "away": "Italy",
@@ -1049,51 +376,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.05,
-      "o2": 2.7,
       "oX": 3.65,
+      "o2": 2.7,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Belgium",
               "odds": 2.05,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Italy",
-              "odds": 2.7,
-              "participant": ""
+              "label": "Victoire Belgium"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.65,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.7,
+              "label": "Victoire Italy"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "9cb05a2b01f14b556d7c79f7d060f2b9"
+      ]
     },
     {
       "id": "football-cc7a8f5fed10407a56df29e87f73d7e3",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-15T19:45:00Z",
       "home": "Croatia",
       "away": "Czech Republic",
@@ -1102,51 +421,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.48,
-      "o2": 4.8,
       "oX": 4.1,
+      "o2": 4.8,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Croatia",
               "odds": 1.48,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Czech Republic",
-              "odds": 4.8,
-              "participant": ""
+              "label": "Victoire Croatia"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 4.1,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 4.8,
+              "label": "Victoire Czech Republic"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "cc7a8f5fed10407a56df29e87f73d7e3"
+      ]
     },
     {
       "id": "football-bef3dd0d3dad6760e4e531bc9565fb8c",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-15T19:45:00Z",
       "home": "Spain",
       "away": "England",
@@ -1155,51 +466,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.64,
-      "o2": 3.85,
       "oX": 3.85,
+      "o2": 3.85,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Spain",
               "odds": 1.64,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire England",
-              "odds": 3.85,
-              "participant": ""
+              "label": "Victoire Spain"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.85,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.85,
+              "label": "Victoire England"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "bef3dd0d3dad6760e4e531bc9565fb8c"
+      ]
     },
     {
       "id": "football-c31db8a4f0558632e2b6422676a32efc",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-15T19:45:00Z",
       "home": "France",
       "away": "Turkey",
@@ -1208,51 +511,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.17,
-      "o2": 9.0,
       "oX": 7.0,
+      "o2": 9.0,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire France",
               "odds": 1.17,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Turkey",
-              "odds": 9.0,
-              "participant": ""
+              "label": "Victoire France"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 7.0,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 9.0,
+              "label": "Victoire Turkey"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "c31db8a4f0558632e2b6422676a32efc"
+      ]
     },
     {
       "id": "football-5ae7a0b002778fc547ce96abf6bf8547",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-16T15:00:00Z",
       "home": "Faroe Islands",
       "away": "Moldova",
@@ -1261,51 +556,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.7,
-      "o2": 3.9,
       "oX": 3.25,
+      "o2": 3.9,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Faroe Islands",
               "odds": 1.7,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Moldova",
-              "odds": 3.9,
-              "participant": ""
+              "label": "Victoire Faroe Islands"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.25,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.9,
+              "label": "Victoire Moldova"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "5ae7a0b002778fc547ce96abf6bf8547"
+      ]
     },
     {
       "id": "football-624805725e5cd075b0c5d77eb755bded",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-16T15:00:00Z",
       "home": "Kazakhstan",
       "away": "Slovakia",
@@ -1314,51 +601,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 4.1,
-      "o2": 1.62,
       "oX": 3.55,
+      "o2": 1.62,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Kazakhstan",
               "odds": 4.1,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Slovakia",
-              "odds": 1.62,
-              "participant": ""
+              "label": "Victoire Kazakhstan"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.55,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.62,
+              "label": "Victoire Slovakia"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "624805725e5cd075b0c5d77eb755bded"
+      ]
     },
     {
       "id": "football-916289ed44f8362ac93035147b7c7fce",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-16T17:00:00Z",
       "home": "Estonia",
       "away": "Bulgaria",
@@ -1367,51 +646,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.96,
-      "o2": 3.35,
       "oX": 2.95,
+      "o2": 3.35,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Estonia",
               "odds": 1.96,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Bulgaria",
-              "odds": 3.35,
-              "participant": ""
+              "label": "Victoire Estonia"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 2.95,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.35,
+              "label": "Victoire Bulgaria"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "916289ed44f8362ac93035147b7c7fce"
+      ]
     },
     {
       "id": "football-ac7d106a75439c4ad8a33b2668bd68df",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-16T17:00:00Z",
       "home": "Iceland",
       "away": "Luxembourg",
@@ -1420,46 +691,38 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.26,
-      "o2": 7.0,
       "oX": 4.7,
+      "o2": 7.0,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Iceland",
               "odds": 1.26,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Luxembourg",
-              "odds": 7.0,
-              "participant": ""
+              "label": "Victoire Iceland"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 4.7,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 7.0,
+              "label": "Victoire Luxembourg"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "ac7d106a75439c4ad8a33b2668bd68df"
+      ]
     },
     {
       "id": "liga2-albacete-celta-fortuna",
@@ -1509,7 +772,7 @@
     {
       "id": "football-55a62e5cc433daeb03502b34db05647e",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-16T19:45:00Z",
       "home": "Germany",
       "away": "Netherlands",
@@ -1518,51 +781,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.82,
-      "o2": 3.1,
       "oX": 3.9,
+      "o2": 3.1,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Germany",
               "odds": 1.82,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Netherlands",
-              "odds": 3.1,
-              "participant": ""
+              "label": "Victoire Germany"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.9,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.1,
+              "label": "Victoire Netherlands"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "55a62e5cc433daeb03502b34db05647e"
+      ]
     },
     {
       "id": "football-f0a77086c85d161afcfc2f275e9e29fa",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-16T19:45:00Z",
       "home": "Greece",
       "away": "Serbia",
@@ -1571,51 +826,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.37,
-      "o2": 5.7,
       "oX": 4.5,
+      "o2": 5.7,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Greece",
               "odds": 1.37,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Serbia",
-              "odds": 5.7,
-              "participant": ""
+              "label": "Victoire Greece"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 4.5,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 5.7,
+              "label": "Victoire Serbia"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "f0a77086c85d161afcfc2f275e9e29fa"
+      ]
     },
     {
       "id": "football-629f5b2cbc2b6986661cb280d37b0ecb",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-16T19:45:00Z",
       "home": "North Macedonia",
       "away": "Slovenia",
@@ -1624,51 +871,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 5.3,
-      "o2": 1.5,
       "oX": 3.65,
+      "o2": 1.5,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire North Macedonia",
               "odds": 5.3,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Slovenia",
-              "odds": 1.5,
-              "participant": ""
+              "label": "Victoire North Macedonia"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.65,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.5,
+              "label": "Victoire Slovenia"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "629f5b2cbc2b6986661cb280d37b0ecb"
+      ]
     },
     {
       "id": "football-2b656115b7829be9f778b0c011f7d722",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-16T19:45:00Z",
       "home": "Switzerland",
       "away": "Scotland",
@@ -1677,51 +916,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.64,
-      "o2": 4.3,
       "oX": 3.45,
+      "o2": 4.3,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Switzerland",
               "odds": 1.64,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Scotland",
-              "odds": 4.3,
-              "participant": ""
+              "label": "Victoire Switzerland"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.45,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 4.3,
+              "label": "Victoire Scotland"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "2b656115b7829be9f778b0c011f7d722"
+      ]
     },
     {
       "id": "football-e71a4a4fea03d00873c285c5b55a9864",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-17T19:45:00Z",
       "home": "Israel",
       "away": "Austria",
@@ -1730,51 +961,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 4.5,
-      "o2": 1.52,
       "oX": 4.0,
+      "o2": 1.52,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Israel",
               "odds": 4.5,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Austria",
-              "odds": 1.52,
-              "participant": ""
+              "label": "Victoire Israel"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 4.0,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.52,
+              "label": "Victoire Austria"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "e71a4a4fea03d00873c285c5b55a9864"
+      ]
     },
     {
       "id": "football-3eb1d15a190bb1be8c32a020365dc7c2",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-17T19:45:00Z",
       "home": "Bosnia & Herzegovina",
       "away": "Romania",
@@ -1783,51 +1006,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.66,
-      "o2": 4.2,
       "oX": 3.5,
+      "o2": 4.2,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Bosnia & Herzegovina",
               "odds": 1.66,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Romania",
-              "odds": 4.2,
-              "participant": ""
+              "label": "Victoire Bosnia & Herzegovina"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.5,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 4.2,
+              "label": "Victoire Romania"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "3eb1d15a190bb1be8c32a020365dc7c2"
+      ]
     },
     {
       "id": "football-770e80269ec2ffddc826bc50330c475b",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-17T19:45:00Z",
       "home": "Denmark",
       "away": "Norway",
@@ -1836,51 +1051,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.35,
-      "o2": 2.45,
       "oX": 3.6,
+      "o2": 2.45,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Denmark",
               "odds": 2.35,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Norway",
-              "odds": 2.45,
-              "participant": ""
+              "label": "Victoire Denmark"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.6,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.45,
+              "label": "Victoire Norway"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "770e80269ec2ffddc826bc50330c475b"
+      ]
     },
     {
       "id": "football-91b890f5fd20440cb272721b8a89a33d",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-17T19:45:00Z",
       "home": "Ukraine",
       "away": "Georgia",
@@ -1889,51 +1096,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.0,
-      "o2": 3.1,
       "oX": 3.3,
+      "o2": 3.1,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Ukraine",
               "odds": 2.0,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Georgia",
-              "odds": 3.1,
-              "participant": ""
+              "label": "Victoire Ukraine"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.3,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.1,
+              "label": "Victoire Georgia"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "91b890f5fd20440cb272721b8a89a33d"
+      ]
     },
     {
       "id": "football-1a07e9080f042594bdb529ab932d680c",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-17T19:45:00Z",
       "home": "Hungary",
       "away": "Northern Ireland",
@@ -1942,51 +1141,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.8,
-      "o2": 3.6,
       "oX": 3.4,
+      "o2": 3.6,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Hungary",
               "odds": 1.8,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Northern Ireland",
-              "odds": 3.6,
-              "participant": ""
+              "label": "Victoire Hungary"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.4,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.6,
+              "label": "Victoire Northern Ireland"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "1a07e9080f042594bdb529ab932d680c"
+      ]
     },
     {
       "id": "football-a6c9b424fddccea76aab09880b69dd31",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-17T19:45:00Z",
       "home": "Republic of Ireland",
       "away": "Kosovo",
@@ -1995,51 +1186,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 1.84,
-      "o2": 3.75,
       "oX": 3.1,
+      "o2": 3.75,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Republic of Ireland",
               "odds": 1.84,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Kosovo",
-              "odds": 3.75,
-              "participant": ""
+              "label": "Victoire Republic of Ireland"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.1,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 3.75,
+              "label": "Victoire Kosovo"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "a6c9b424fddccea76aab09880b69dd31"
+      ]
     },
     {
       "id": "football-aab74efad72e8096e774c7104189ff09",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-17T19:45:00Z",
       "home": "Poland",
       "away": "Sweden",
@@ -2048,51 +1231,43 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 2.2,
-      "o2": 2.65,
       "oX": 3.4,
+      "o2": 2.65,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Poland",
               "odds": 2.2,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Sweden",
-              "odds": 2.65,
-              "participant": ""
+              "label": "Victoire Poland"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 3.4,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 2.65,
+              "label": "Victoire Sweden"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "aab74efad72e8096e774c7104189ff09"
+      ]
     },
     {
       "id": "football-955a201ba2266b8b6b0519e0265eb354",
       "sport": "football",
-      "league": "UEFA Nations League",
+      "league": "UNL",
       "kickoff": "2026-11-17T19:45:00Z",
       "home": "Wales",
       "away": "Portugal",
@@ -2101,46 +1276,38 @@
       "asOf": "2026-11-14T13:23:58Z",
       "market": "h2h",
       "o1": 6.75,
-      "o2": 1.28,
       "oX": 5.1,
+      "o2": 1.28,
       "markets": [
         {
-          "id": "h2h||None",
+          "id": "h2h|archive",
           "family": "h2h",
-          "key": "h2h",
           "unit": "match",
-          "line": null,
-          "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-14T13:23:58Z",
+          "quoteSource": "api-archive",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Wales",
               "odds": 6.75,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Portugal",
-              "odds": 1.28,
-              "participant": ""
+              "label": "Victoire Wales"
             },
             {
               "code": "X",
               "side": "X",
-              "label": "Match nul",
               "odds": 5.1,
-              "participant": ""
+              "label": "Match nul"
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "odds": 1.28,
+              "label": "Victoire Portugal"
             }
           ]
         }
-      ],
-      "leagueCode": "UNL",
-      "sportKey": "soccer_uefa_nations_league",
-      "eventId": "955a201ba2266b8b6b0519e0265eb354"
+      ]
     },
     {
       "id": "liga2-andorra-cf-leganes",
@@ -3536,327 +2703,1006 @@
           ]
         }
       ]
+    },
+    {
+      "id": "football-e422af92d1fc06c0a330838c1c2f2e08",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T17:45:00Z",
+      "home": "Galatasaray",
+      "away": "Aston Villa",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 2.35,
+      "o2": 2.25,
+      "oX": 3.65,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Galatasaray",
+              "odds": 2.35,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Aston Villa",
+              "odds": 2.25,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.65,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "e422af92d1fc06c0a330838c1c2f2e08",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-50b80f3ebd38bf63663b11ae0afc575b",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T17:45:00Z",
+      "home": "Bodø/Glimt",
+      "away": "LASK",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.4,
+      "o2": 4.6,
+      "oX": 5.0,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Bodø/Glimt",
+              "odds": 1.4,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire LASK",
+              "odds": 4.6,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "50b80f3ebd38bf63663b11ae0afc575b",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-ba719e378ac366262013bdb51a06aa6f",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "home": "Como",
+      "away": "AEK Athens",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.2,
+      "o2": 7.25,
+      "oX": 6.0,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Como",
+              "odds": 1.2,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire AEK Athens",
+              "odds": 7.25,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 6.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "ba719e378ac366262013bdb51a06aa6f",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-aee4e3c225603397ab52de3d066b566b",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "home": "Arsenal",
+      "away": "Borussia Dortmund",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.3,
+      "o2": 7.0,
+      "oX": 5.0,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Arsenal",
+              "odds": 1.3,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Borussia Dortmund",
+              "odds": 7.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "aee4e3c225603397ab52de3d066b566b",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-9a2ebad454db4ab3d53b89e96c79847a",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "home": "Feyenoord",
+      "away": "Porto",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 2.6,
+      "o2": 2.15,
+      "oX": 3.55,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Feyenoord",
+              "odds": 2.6,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Porto",
+              "odds": 2.15,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.55,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "9a2ebad454db4ab3d53b89e96c79847a",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-b9f00a4d399ec661e733857c9d5fb2dc",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "home": "Manchester City",
+      "away": "Napoli",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.17,
+      "o2": 8.5,
+      "oX": 6.5,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Manchester City",
+              "odds": 1.17,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Napoli",
+              "odds": 8.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 6.5,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "b9f00a4d399ec661e733857c9d5fb2dc",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-3fb5e4a792cf34a0459efcb79a11a785",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "home": "Real Madrid",
+      "away": "PSV Eindhoven",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.12,
+      "o2": 10.0,
+      "oX": 8.25,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Real Madrid",
+              "odds": 1.12,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire PSV Eindhoven",
+              "odds": 10.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 8.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "3fb5e4a792cf34a0459efcb79a11a785",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-aea973c122c91837c15e066c757c747f",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "home": "RB Leipzig",
+      "away": "RC Lens",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.35,
+      "o2": 5.1,
+      "oX": 5.1,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire RB Leipzig",
+              "odds": 1.35,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire RC Lens",
+              "odds": 5.1,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "aea973c122c91837c15e066c757c747f",
+      "availableMarkets": [
+        "h2h",
+        "h2h_3_way"
+      ],
+      "uncollectedMarkets": []
+    },
+    {
+      "id": "football-8e93849b4c1ccbf1c207836d5c470150",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "home": "ŠK Slovan Bratislava",
+      "away": "Real Betis",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 8.5,
+      "o2": 1.18,
+      "oX": 6.25,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire ŠK Slovan Bratislava",
+              "odds": 8.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Real Betis",
+              "odds": 1.18,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 6.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "8e93849b4c1ccbf1c207836d5c470150"
+    },
+    {
+      "id": "football-e6fa007f93e0cef004be920f96ee95ba",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T17:45:00Z",
+      "home": "Sabah FK",
+      "away": "Barcelona",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 13.0,
+      "o2": 1.04,
+      "oX": 10.5,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Sabah FK",
+              "odds": 13.0,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Barcelona",
+              "odds": 1.04,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 10.5,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "e6fa007f93e0cef004be920f96ee95ba"
+    },
+    {
+      "id": "football-a7c87fac9e9cbcfc02ad0e0b29ca89e2",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T17:45:00Z",
+      "home": "Slavia Praha",
+      "away": "Villarreal",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 2.8,
+      "o2": 2.0,
+      "oX": 3.7,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Slavia Praha",
+              "odds": 2.8,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Villarreal",
+              "odds": 2.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.7,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "a7c87fac9e9cbcfc02ad0e0b29ca89e2"
+    },
+    {
+      "id": "football-14007bc0605bce3bd164b132254ba24c",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T20:00:00Z",
+      "home": "Paris Saint Germain",
+      "away": "AS Roma",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.24,
+      "o2": 7.25,
+      "oX": 5.75,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Paris Saint Germain",
+              "odds": 1.24,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire AS Roma",
+              "odds": 7.25,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.75,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "14007bc0605bce3bd164b132254ba24c"
+    },
+    {
+      "id": "football-b1af6789fe6db7aab18a2945ce56f035",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T20:00:00Z",
+      "home": "Atlético Madrid",
+      "away": "Viking FK",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.05,
+      "o2": 16.0,
+      "oX": 10.5,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Atlético Madrid",
+              "odds": 1.05,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Viking FK",
+              "odds": 16.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 10.5,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "b1af6789fe6db7aab18a2945ce56f035"
+    },
+    {
+      "id": "football-0ee2cfddf20153779cd2cc3e1f1f879f",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T20:00:00Z",
+      "home": "Lille",
+      "away": "Bayern Munich",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 7.0,
+      "o2": 1.23,
+      "oX": 6.0,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Lille",
+              "odds": 7.0,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Bayern Munich",
+              "odds": 1.23,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 6.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "0ee2cfddf20153779cd2cc3e1f1f879f"
+    },
+    {
+      "id": "football-99459b90f3e732106e09585bf94b36b4",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T20:00:00Z",
+      "home": "Club Brugge",
+      "away": "Liverpool",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 3.75,
+      "o2": 1.56,
+      "oX": 4.3,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Club Brugge",
+              "odds": 3.75,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Liverpool",
+              "odds": 1.56,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.3,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "99459b90f3e732106e09585bf94b36b4"
+    },
+    {
+      "id": "football-49c66d76bc4085e63a181179cc47ef4d",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T20:00:00Z",
+      "home": "Shakhtar Donetsk",
+      "away": "Fenerbahce",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 2.4,
+      "o2": 2.4,
+      "oX": 3.25,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Shakhtar Donetsk",
+              "odds": 2.4,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Fenerbahce",
+              "odds": 2.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "49c66d76bc4085e63a181179cc47ef4d"
+    },
+    {
+      "id": "football-e7e64568f6af00d395a3fdfc27de8ae3",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T20:00:00Z",
+      "home": "Inter Milan",
+      "away": "VfB Stuttgart",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 1.36,
+      "o2": 5.0,
+      "oX": 5.0,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Inter Milan",
+              "odds": 1.36,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire VfB Stuttgart",
+              "odds": 5.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "e7e64568f6af00d395a3fdfc27de8ae3"
+    },
+    {
+      "id": "football-01a61442fe04f8751b62eb251f234079",
+      "sport": "football",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-25T20:00:00Z",
+      "home": "Sporting Lisbon",
+      "away": "Manchester United",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-15T07:34:41Z",
+      "market": "h2h",
+      "o1": 2.3,
+      "o2": 2.4,
+      "oX": 3.4,
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-15T07:34:41Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Sporting Lisbon",
+              "odds": 2.3,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Manchester United",
+              "odds": 2.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "leagueCode": "UCL",
+      "sportKey": "soccer_uefa_champs_league",
+      "eventId": "01a61442fe04f8751b62eb251f234079"
     }
   ],
   "leaguesQueried": 1,
-  "leaguesAvailable": 21,
+  "leaguesAvailable": 16,
   "partial": true,
   "fixtures": [
-    {
-      "id": "football-244d7d2e6f3f8529af59270040b7ec7a",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Kosovo",
-      "away": "Israel",
-      "kickoff": "2026-11-14T14:00:00Z"
-    },
-    {
-      "id": "football-d548fa34308b91eb158670eb18e1deae",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Georgia",
-      "away": "Hungary",
-      "kickoff": "2026-11-14T17:00:00Z"
-    },
-    {
-      "id": "football-8d67c473dbea0c85b30eefee4bca53d9",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Norway",
-      "away": "Wales",
-      "kickoff": "2026-11-14T17:00:00Z"
-    },
-    {
-      "id": "football-30b32c194d8c2ae2bc5a209be5df44a9",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Austria",
-      "away": "Iceland",
-      "kickoff": "2026-11-14T19:45:00Z"
-    },
-    {
-      "id": "football-c745f84500717bc671c4cd864624cca8",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Austria",
-      "away": "Republic of Ireland",
-      "kickoff": "2026-11-14T19:45:00Z"
-    },
-    {
-      "id": "football-2b646127cc6cb400abc663c5a458f1db",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Sweden",
-      "away": "Bosnia & Herzegovina",
-      "kickoff": "2026-11-14T19:45:00Z"
-    },
-    {
-      "id": "football-159554f486f93d1d8d4213c570117a0e",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Portugal",
-      "away": "Denmark",
-      "kickoff": "2026-11-14T19:45:00Z"
-    },
-    {
-      "id": "football-432a7eb09df939bf1e15a3e183f8494f",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Northern Ireland",
-      "away": "Ukraine",
-      "kickoff": "2026-11-14T19:45:00Z"
-    },
-    {
-      "id": "football-3ce5eabe80d52d3ed6056b6c141bbea8",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Romania",
-      "away": "Poland",
-      "kickoff": "2026-11-14T19:45:00Z"
-    },
-    {
-      "id": "football-beaee55c19760e22fdf6291286debb08",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Latvia",
-      "away": "Armenia",
-      "kickoff": "2026-11-15T14:00:00Z"
-    },
-    {
-      "id": "football-1f7ad9776d6a7ff7e4715bfcc3602e9f",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Cyprus",
-      "away": "Montenegro",
-      "kickoff": "2026-11-15T14:00:00Z"
-    },
-    {
-      "id": "football-083c61d3c0c86e7d75ee8ac8f6f66461",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Belarus",
-      "away": "Albania",
-      "kickoff": "2026-11-15T17:00:00Z"
-    },
-    {
-      "id": "football-b37cfed1f792e0804c4f1e6a1c951f65",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Finland",
-      "away": "San Marino",
-      "kickoff": "2026-11-15T17:00:00Z"
-    },
-    {
-      "id": "football-9cb05a2b01f14b556d7c79f7d060f2b9",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Belgium",
-      "away": "Italy",
-      "kickoff": "2026-11-15T19:45:00Z"
-    },
-    {
-      "id": "football-cc7a8f5fed10407a56df29e87f73d7e3",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Croatia",
-      "away": "Czech Republic",
-      "kickoff": "2026-11-15T19:45:00Z"
-    },
-    {
-      "id": "football-bef3dd0d3dad6760e4e531bc9565fb8c",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Spain",
-      "away": "England",
-      "kickoff": "2026-11-15T19:45:00Z"
-    },
-    {
-      "id": "football-c31db8a4f0558632e2b6422676a32efc",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "France",
-      "away": "Turkey",
-      "kickoff": "2026-11-15T19:45:00Z"
-    },
-    {
-      "id": "football-5ae7a0b002778fc547ce96abf6bf8547",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Faroe Islands",
-      "away": "Moldova",
-      "kickoff": "2026-11-16T15:00:00Z"
-    },
-    {
-      "id": "football-624805725e5cd075b0c5d77eb755bded",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Kazakhstan",
-      "away": "Slovakia",
-      "kickoff": "2026-11-16T15:00:00Z"
-    },
-    {
-      "id": "football-916289ed44f8362ac93035147b7c7fce",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Estonia",
-      "away": "Bulgaria",
-      "kickoff": "2026-11-16T17:00:00Z"
-    },
-    {
-      "id": "football-ac7d106a75439c4ad8a33b2668bd68df",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Iceland",
-      "away": "Luxembourg",
-      "kickoff": "2026-11-16T17:00:00Z"
-    },
-    {
-      "id": "football-13eb6e805b513e9d1fbad120c68cd1a0",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Lithuania",
-      "away": "Liechtenstein",
-      "kickoff": "2026-11-16T17:00:00Z"
-    },
-    {
-      "id": "football-55a62e5cc433daeb03502b34db05647e",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Germany",
-      "away": "Netherlands",
-      "kickoff": "2026-11-16T19:45:00Z"
-    },
-    {
-      "id": "football-f0a93cd3f73adad3a27da716b533a3e3",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Gibraltar",
-      "away": "Malta",
-      "kickoff": "2026-11-16T19:45:00Z"
-    },
-    {
-      "id": "football-f0a77086c85d161afcfc2f275e9e29fa",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Greece",
-      "away": "Serbia",
-      "kickoff": "2026-11-16T19:45:00Z"
-    },
-    {
-      "id": "football-629f5b2cbc2b6986661cb280d37b0ecb",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "North Macedonia",
-      "away": "Slovenia",
-      "kickoff": "2026-11-16T19:45:00Z"
-    },
-    {
-      "id": "football-2b656115b7829be9f778b0c011f7d722",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Switzerland",
-      "away": "Scotland",
-      "kickoff": "2026-11-16T19:45:00Z"
-    },
-    {
-      "id": "football-e71a4a4fea03d00873c285c5b55a9864",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Israel",
-      "away": "Austria",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-3eb1d15a190bb1be8c32a020365dc7c2",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Bosnia & Herzegovina",
-      "away": "Romania",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-770e80269ec2ffddc826bc50330c475b",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Denmark",
-      "away": "Norway",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-91b890f5fd20440cb272721b8a89a33d",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Ukraine",
-      "away": "Georgia",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-1a07e9080f042594bdb529ab932d680c",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Hungary",
-      "away": "Northern Ireland",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-a6c9b424fddccea76aab09880b69dd31",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Republic of Ireland",
-      "away": "Kosovo",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-aab74efad72e8096e774c7104189ff09",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Poland",
-      "away": "Sweden",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-955a201ba2266b8b6b0519e0265eb354",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Wales",
-      "away": "Portugal",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
     {
       "id": "football-e422af92d1fc06c0a330838c1c2f2e08",
       "sportKey": "soccer_uefa_champs_league",
@@ -4018,330 +3864,6 @@
       "home": "Sporting Lisbon",
       "away": "Manchester United",
       "kickoff": "2026-11-25T20:00:00Z"
-    },
-    {
-      "id": "football-b11e430b1d8052d0c718bcee69145f7a",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "FC Kairat",
-      "away": "Mjällby AIF",
-      "kickoff": "2026-11-26T15:30:00Z"
-    },
-    {
-      "id": "football-e1bfce2837ee873eec90dbefe31844ac",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "SK Brann",
-      "away": "AGF Aarhus",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-c587e5656d1f38f068cba1b168462ba4",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "Hearts",
-      "away": "AS Monaco",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-8a0dc963ce319d55751d4d07c5152600",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "Ajax",
-      "away": "FC Thun",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-bbab118a8c6ca33b6b0e7b5ed36fecd8",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "Brighton and Hove Albion",
-      "away": "Universitatea Craiova",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-cbe7d454dbea3c32de84901cced19bd4",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "FC Iberia 1999",
-      "away": "Getafe",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-4f5b1a808bafc37b7c0041e947c2e536",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "FK Jablonec",
-      "away": "FC Lugano",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-48a49061ae356d2a8b3b3976ec21508d",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "Pafos FC",
-      "away": "FC Midtjylland",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-679c499344805de09a59a2a2535cd0c8",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "FK Kauno Žalgiris",
-      "away": "Riga FC",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-cb6689f811b7ce08379eef028e2254a4",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "KF Egnatia",
-      "away": "Lincoln Red Imps FC",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-31ebd41354699af625fa3372932206f0",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Olympiakos Piraeus",
-      "away": "AC Milan",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-cdf4b848361b0374c2027326bd54d8eb",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Dinamo Zagreb",
-      "away": "Bayer Leverkusen",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-38332e4cbb2b3991904b00a75dc3769d",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Viktoria Plzeň",
-      "away": "Benfica",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-a18687d4f17a96a7732fb0c8673ea037",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Besiktas JK",
-      "away": "Hapoel Be'er Sheva",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-7da3be4f6fe50a39ecdf3a8dc12966c8",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Celta Vigo",
-      "away": "Bournemouth",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-5902b4703e9ddc1f573091e14107834c",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Salzburg",
-      "away": "FC Ararat-Armenia",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-3ee2bf8a6fa6add543f64ac3e9813976",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Union Saint-Gilloise",
-      "away": "Lech Poznań",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-707c513bfa43b45b7813126e09ad08d8",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Marseille",
-      "away": "PFC Levski Sofia",
-      "kickoff": "2026-11-26T17:45:00Z"
-    },
-    {
-      "id": "football-1f0d932ff8b08ed2c3b775e60d92bb4e",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "FK Borac Banja Luka",
-      "away": "Atalanta BC",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-4f10f55b47b83f7f4f2a8cd745a9e67f",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "Inter Club d'Escaldes",
-      "away": "FC Copenhagen",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-92db66d09fdcf10ff8561cb7ec09732e",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "FC Nordsjaelland",
-      "away": "Panathinaikos FC",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-dd5f6def5ea1aa9e0a0f45e3605ac64e",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "SC Freiburg",
-      "away": "FC Twente Enschede",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-3c6175802b9110c0abdb30f491965093",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "Gent",
-      "away": "Red Star Belgrade",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-9f2cd85ad777bea9550b987dc409b280",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "Hajduk Split",
-      "away": "Sint Truiden",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-1abbe02767589722b5de92e94e96429d",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "SC Braga",
-      "away": "KuPS Kuopio",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-491426b0dae5aecf2b92525815131cb2",
-      "sportKey": "soccer_uefa_europa_conference_league",
-      "leagueCode": "UECL",
-      "league": "UEFA Europa Conference League",
-      "home": "PFC CSKA Sofia",
-      "away": "Trabzonspor",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-189401357a4b5e5920ca9ec1207a6566",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Sparta Prague",
-      "away": "AZ Alkmaar",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-de10dd2e5917108a9478c07275ba8cdb",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "OFI Crete",
-      "away": "Anderlecht",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-e2036567ee9394a55f022358781dce15",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Torreense",
-      "away": "Celtic",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-3fe17778f32b5fd0f218f9be6b0681cc",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Crystal Palace",
-      "away": "Real Sociedad",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-0e5553b52ece07115fbdf8145df0c377",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Ferencváros TC",
-      "away": "NK Celje",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-413409b43875d1bdb627a9e7fb6bc3fd",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Sunderland",
-      "away": "Jagiellonia Białystok",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-d6377d30379e5d3053c1076646d83f78",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Juventus",
-      "away": "Omonoia FC",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-a24c89b65c5a30fb9473735049589e64",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "Lyon",
-      "away": "Lillestrom",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-e836bc70afa19b0db28fb320a97662e4",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "NEC Nijmegen",
-      "away": "Rennes",
-      "kickoff": "2026-11-26T20:00:00Z"
-    },
-    {
-      "id": "football-df4947bbe49057782feacca38c03e790",
-      "sportKey": "soccer_uefa_europa_league",
-      "leagueCode": "UEL",
-      "league": "UEFA Europa League",
-      "home": "TSG Hoffenheim",
-      "away": "SK Sturm Graz",
-      "kickoff": "2026-11-26T20:00:00Z"
     }
   ],
   "calendarStatus": "partial",

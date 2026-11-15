@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "rules": {
+      "version": "paper-real-v1",
+      "unitStake": 1,
+      "quoteMaxAgeMinutes": 60,
+      "checkpoints": [
+        100,
+        200
+      ],
+      "realMoneyEnabled": false,
+      "ticketOdds": "product-of-recorded-leg-quotes-not-executed",
+      "algo": {
+        "version": "algo-real-v1",
+        "sport": "football",
+        "minOdds": 3,
+        "maxOdds": 5,
+        "minLegs": 2,
+        "maxLegs": 5,
+        "minProbability": 0.5,
+        "minLegOdds": 1.1,
+        "maxMatches": 20,
+        "maxOptionsPerMatch": 6,
+        "maxSearchNodes": 200000
+      },
+      "safe": {
+        "version": "safe-real-v1",
+        "minOdds": 1.5,
+        "maxOdds": 2,
+        "minProbability": 0.6,
+        "maxLegs": 3,
+        "slots": [
+          "football",
+          "basket",
+          "tennis",
+          "mixed"
+        ]
+      }
+    },
+    "sourceHashes": {
+      "paper-engine.js": "d08af7c7978f3a6ce3cdf1ce85a766bf6dc1c6c26234418255478d5dbb9807fd",
+      "safe-engine.js": "aff0d71511cdd05b01a067df2ca8af73b789691781591fdb09f519b46ea76dc9",
+      "scripts/paper_tests.cjs": "6386c064843851ccf0c5e5d87b1378e58f425ecb9d69da9f6871b357a0d72ed4"
+    },
+    "startedAt": "2026-11-15T07:35:22.483Z"
+  },
+  "records": []
+}

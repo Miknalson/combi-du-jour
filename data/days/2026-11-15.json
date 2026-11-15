@@ -1,6 +1,6 @@
 {
  "date": "2026-11-15",
- "updatedAt": "2026-11-14T13:24:31.613003+00:00",
+ "updatedAt": "2026-11-15T07:35:20.067771+00:00",
  "source": "Winamax France et archives des marchés",
  "matches": [
   {
@@ -79,7 +79,7 @@
    "oX": 3.1,
    "o2": 2.2,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -101,7 +101,7 @@
    "oX": 3.3,
    "o2": 2.1,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -188,7 +188,7 @@
    "oX": 3.25,
    "o2": 1.8,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -210,7 +210,7 @@
    "oX": 11.5,
    "o2": 25.0,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -332,7 +332,7 @@
    "oX": 3.65,
    "o2": 2.9,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -354,7 +354,7 @@
    "oX": 4.1,
    "o2": 4.8,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -376,7 +376,7 @@
    "oX": 3.85,
    "o2": 4.0,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
@@ -398,7 +398,7 @@
    "oX": 7.0,
    "o2": 9.0,
    "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "leagueTitle": "UNL",
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
