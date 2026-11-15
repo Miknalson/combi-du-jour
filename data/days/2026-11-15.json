@@ -11,7 +11,8 @@
    "away": "Felgueiras",
    "o1": 2.3,
    "oX": 3.05,
-   "o2": 3.45
+   "o2": 3.45,
+   "score": "1-1"
   },
   {
    "id": "por2-tondela-sc-farense",
@@ -21,7 +22,8 @@
    "away": "SC Farense",
    "o1": 2.1,
    "oX": 3.3,
-   "o2": 3.5
+   "o2": 3.5,
+   "score": "2-0"
   },
   {
    "id": "liga2-tenerife-ad-ceuta-fc",
@@ -67,7 +69,8 @@
     "ou": {}
    },
    "leagueTitle": "LIGA2",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-0"
   },
   {
    "id": "por2-portimonense-academica",
@@ -77,7 +80,8 @@
    "away": "Academica",
    "o1": 2.25,
    "oX": 3.4,
-   "o2": 3.2
+   "o2": 3.2,
+   "score": "0-0"
   },
   {
    "id": "unl-latvia-armenia",
@@ -123,7 +127,8 @@
     "ou": {}
    },
    "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "0-0"
   },
   {
    "id": "unl-cyprus-montenegro",
@@ -169,7 +174,8 @@
     "ou": {}
    },
    "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-4"
   },
   {
    "id": "liga2-granada-cf-las-palmas",
@@ -215,7 +221,8 @@
     "ou": {}
    },
    "leagueTitle": "LIGA2",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-0"
   },
   {
    "id": "por2-penafiel-lusitania-fc",
@@ -225,7 +232,8 @@
    "away": "Lusitania FC",
    "o1": 2.35,
    "oX": 3.2,
-   "o2": 3.3
+   "o2": 3.3,
+   "score": "1-2"
   },
   {
    "id": "unl-belarus-albania",
@@ -271,7 +279,8 @@
     "ou": {}
    },
    "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "0-2"
   },
   {
    "id": "unl-finland-san-marino",
@@ -306,7 +315,8 @@
     "oX": 17.5,
     "o2": 51.0,
     "ou": {}
-   }
+   },
+   "score": "7-2"
   },
   {
    "id": "liga2-cd-eldense-sabadell-fc",
@@ -352,7 +362,8 @@
     "ou": {}
    },
    "leagueTitle": "LIGA2",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-0"
   },
   {
    "id": "liga2-sd-eibar-cadiz-cf",
@@ -398,7 +409,8 @@
     "ou": {}
    },
    "leagueTitle": "LIGA2",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-1"
   },
   {
    "id": "por2-leixoes-chaves",
@@ -408,7 +420,8 @@
    "away": "Chaves",
    "o1": 1.9,
    "oX": 3.6,
-   "o2": 3.9
+   "o2": 3.9,
+   "score": "1-0"
   },
   {
    "id": "unl-belgium-italy",
@@ -454,7 +467,8 @@
     "ou": {}
    },
    "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "4-1"
   },
   {
    "id": "unl-croatia-czech-republic",
@@ -500,7 +514,8 @@
     "ou": {}
    },
    "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-1"
   },
   {
    "id": "unl-spain-england",
@@ -546,7 +561,8 @@
     "ou": {}
    },
    "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-3"
   },
   {
    "id": "unl-france-turkey",
@@ -592,7 +608,8 @@
     "ou": {}
    },
    "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-1"
   }
  ]
 }
