@@ -188,3 +188,26 @@ horodatés ; le filtre de rentabilité du modèle prudent reste inchangé.
 
 Tests : `python -m unittest discover -s tests -p 'test_uefa.py'`,
 `node tests/uefa.test.cjs`, `node tests/uefa-browser.cjs`.
+
+## Contrôler la période de test Algo / Safe
+
+Le journal de test est local au navigateur : `cdj.proposals` contient les propositions
+Algo et `cdj.safeDaily` les premiers instantanés Safe par jour/catégorie. Ils ne sont
+pas stockés dans le dépôt. `cdj.bets` contient seulement les tickets explicitement
+enregistrés, avec leur mise. Un bilan de ces seuls tickets ne représente donc pas
+automatiquement tous les tests Algo et Safe.
+
+Le bouton **Exporter mes tests Algo + Safe** dans le tableau de bord produit un
+fichier d’analyse (schemaVersion 2) : tickets, propositions Algo, instantanés Safe,
+réglages actuels et scores disponibles, avec leurs coups d’envoi pour éviter les
+confusions entre deux rencontres. Les scores des propositions sont chargés même
+si aucun ticket n’a été enregistré. `scoresStatus` distingue un chargement en cours,
+complet, partiel ou indisponible ; il ne signifie pas que tous les matchs sont terminés.
+L’export n’invente ni proposition absente ni horodatage d’avant-match. Les réglages
+actuels ne prouvent pas ceux utilisés lors d’une proposition historique.
+
+Cet export dédié sert à analyser les tests. La sauvegarde et l’import habituels des
+tickets restent disponibles avec **Exporter mes paris** / **Importer un fichier**.
+Le fichier reste téléchargé sur l’appareil ; aucune transmission automatique n’a lieu.
+
+Test : `node tests/history-export-browser.cjs`.

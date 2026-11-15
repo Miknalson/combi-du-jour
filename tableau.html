@@ -80,9 +80,10 @@
   </section>
 
   <section>
-    <div class="head"><h2>Sauvegarde</h2><div class="hint">Tes paris sont enregistrés sur cet appareil seulement. Exporte-les de temps en temps pour ne rien perdre.</div></div>
+    <div class="head"><h2>Sauvegarde</h2><div class="hint">Les données restent sur cet appareil. « Exporter mes paris » sert à sauvegarder tes tickets. « Exporter mes tests Algo + Safe » inclut aussi les propositions et les scores disponibles pour analyser la période de test.</div></div>
     <div class="tools">
       <button type="button" class="btn ghost small" id="exportBtn">Exporter mes paris</button>
+      <button type="button" class="btn ghost small" id="exportTestsBtn">Exporter mes tests Algo + Safe</button>
       <label class="btn ghost small" for="importFile" style="display:inline-block">Importer un fichier</label>
       <input type="file" id="importFile" accept="application/json,.json" hidden>
       <span class="status" id="toolNote"></span>
@@ -108,6 +109,7 @@ var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
+var scoresStatus='loading';
 var matches = {}; // matchId + coup d’envoi : ne pas confondre deux rencontres des mêmes équipes
 function matchKey(id,kickoff){return id+'|'+Date.parse(kickoff);}
 
@@ -269,12 +271,20 @@ document.getElementById('bankForm').addEventListener('submit', function(e){
   document.getElementById('bankStart').blur(); render();
 });
 document.getElementById('exportBtn').addEventListener('click', function(){
-  var data = JSON.stringify({app:'combine-du-jour', exportedAt:new Date().toISOString(), bankStart:store.get('bankStart',null), bets:store.get('bets',[])}, null, 1);
+  var data=JSON.stringify({app:'combine-du-jour',exportedAt:new Date().toISOString(),bankStart:store.get('bankStart',null),bets:store.get('bets',[])},null,1);
+  var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:'application/json'}));a.download='mes-paris-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();document.getElementById('toolNote').textContent='Tickets exportés.';
+});
+document.getElementById('exportTestsBtn').addEventListener('click', function(){
+  var data = JSON.stringify({app:'combine-du-jour',schemaVersion:2,exportedAt:new Date().toISOString(),
+    bankStart:store.get('bankStart',null),bets:store.get('bets',[]),
+    proposals:store.get('proposals',{}),safeDaily:store.get('safeDaily',{}),settings:store.get('settings',{}),
+    scoreSnapshot:Object.keys(matches).map(function(k){var m=matches[k];return {id:m.id,home:m.home,away:m.away,kickoff:m.kickoff,league:m.league,score:m.score};}),
+    scoresStatus:scoresStatus,notes:['Propositions et tickets conservés sur cet appareil uniquement.','Les propositions horodatées après le début d’une sélection ne constituent pas un test prospectif.','Les scores sont ceux enregistrés dans les données de l’application.']},null,1);
   var a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([data],{type:'application/json'}));
-  a.download = 'mes-paris-'+new Date().toISOString().slice(0,10)+'.json';
+  a.download = 'historique-algo-safe-'+new Date().toISOString().slice(0,10)+'.json';
   document.body.appendChild(a); a.click(); a.remove();
-  document.getElementById('toolNote').textContent = 'Fichier exporté.';
+  document.getElementById('toolNote').textContent = 'Historique exporté : Algo, Safe, tickets et scores disponibles.';
 });
 document.getElementById('importFile').addEventListener('change', function(){
   var f = this.files && this.files[0]; if(!f) return;
@@ -300,11 +310,15 @@ render();
     var idx = await (await fetch('data/index.json',{cache:'no-store'})).json();
     var need = {};
     store.get('bets',[]).forEach(function(b){ b.legs.forEach(function(l){ need[l.date]=true; }); });
+    function needLeg(l){if(l.date)need[l.date]=true;else if(Number.isFinite(Date.parse(l.kickoff)))need[new Date(l.kickoff).toLocaleDateString('en-CA',{timeZone:TZ})]=true;}
+    var proposals=store.get('proposals',{});Object.keys(proposals).forEach(function(d){need[d]=true;(proposals[d].legs||[]).forEach(needLeg);});
+    var safe=store.get('safeDaily',{});Object.keys(safe).forEach(function(d){need[d]=true;Object.values(safe[d]||{}).forEach(function(item){((item.ticket||{}).legs||[]).forEach(needLeg);});});
     var dates = (idx.dates||[]).filter(function(d){ return need[d]; });
     var docs = await Promise.all(dates.map(function(d){ return fetch('data/days/'+d+'.json',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }); }));
     docs.forEach(function(doc){ if(doc) doc.matches.forEach(function(m){ matches[matchKey(m.id,m.kickoff)]=m; }); });
+    scoresStatus=docs.every(Boolean)&&Object.keys(need).every(function(d){return dates.includes(d);})?'loaded':'partial';
     render();
-  }catch(e){ /* scores unavailable: bets stay pending, manual results still work */ }
+  }catch(e){ scoresStatus='unavailable'; /* Bets stay pending; manual results still work. */ }
 })();
 })();
 </script>
