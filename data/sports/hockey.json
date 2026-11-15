@@ -1,11 +1,11 @@
 {
   "sport": "hockey",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-15T08:06:06.120371+00:00",
+  "updatedAt": "2026-11-15T09:30:36.217724+00:00",
   "status": "quota",
   "matches": [],
   "leaguesQueried": 0,
-  "leaguesAvailable": 5,
+  "leaguesAvailable": 6,
   "partial": true,
   "competitions": [
     {
@@ -53,7 +53,7 @@
     {
       "key": "icehockey_sweden_hockey_league",
       "title": "SHL",
-      "active": false,
+      "active": true,
       "gender": "unspecified"
     }
   ],
