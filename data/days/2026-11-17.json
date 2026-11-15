@@ -2,21 +2,43 @@
  "date": "2026-11-17",
  "matches": [
   {
-   "id": "football-e71a4a4fea03d00873c285c5b55a9864",
+   "id": "unl-israel-austria",
    "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
    "home": "Israel",
    "away": "Austria",
-   "kickoff": "2026-11-17T19:45:00Z",
-   "quoteBasis": "winamax-only",
-   "o1": 4.5,
-   "oX": 4.0,
-   "o2": 1.52,
-   "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "o1": 5.432,
+   "oX": 4.206,
+   "o2": 1.531,
+   "best": {
+    "2": {
+     "odds": 1.61,
+     "book": "Unibet (SE)"
+    },
+    "1": {
+     "odds": 5.92,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 4.5,
+     "book": "Winamax (DE)"
+    }
+   },
+   "books": 11,
+   "referenceAt": "2026-11-15T07:47:54Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 5.6,
+    "oX": 4.42,
+    "o2": 1.54,
+    "ou": {}
+   },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:39:24Z",
+    "asOf": "2026-11-15T07:47:56Z",
     "o1": 4.9,
     "oX": 4.2,
     "o2": 1.46,
@@ -24,21 +46,43 @@
    }
   },
   {
-   "id": "football-3eb1d15a190bb1be8c32a020365dc7c2",
+   "id": "unl-bosnia-herzegovina-romania",
    "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
    "home": "Bosnia & Herzegovina",
    "away": "Romania",
-   "kickoff": "2026-11-17T19:45:00Z",
-   "quoteBasis": "winamax-only",
-   "o1": 1.66,
-   "oX": 3.5,
-   "o2": 4.2,
-   "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "o1": 1.832,
+   "oX": 3.542,
+   "o2": 4.054,
+   "best": {
+    "1": {
+     "odds": 1.9,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 4.6,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.75,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 11,
+   "referenceAt": "2026-11-15T07:47:54Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 1.89,
+    "oX": 3.71,
+    "o2": 3.96,
+    "ou": {}
+   },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:39:24Z",
+    "asOf": "2026-11-15T07:47:56Z",
     "o1": 1.8,
     "oX": 3.45,
     "o2": 3.5,
@@ -46,21 +90,43 @@
    }
   },
   {
-   "id": "football-770e80269ec2ffddc826bc50330c475b",
+   "id": "unl-denmark-norway",
    "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
    "home": "Denmark",
    "away": "Norway",
-   "kickoff": "2026-11-17T19:45:00Z",
-   "quoteBasis": "winamax-only",
-   "o1": 2.45,
-   "oX": 3.45,
-   "o2": 2.35,
-   "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "o1": 2.448,
+   "oX": 3.605,
+   "o2": 2.577,
+   "best": {
+    "1": {
+     "odds": 2.55,
+     "book": "Unibet (SE)"
+    },
+    "2": {
+     "odds": 2.68,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.88,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 13,
+   "referenceAt": "2026-11-15T07:47:54Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 2.4,
+    "oX": 3.88,
+    "o2": 2.68,
+    "ou": {}
+   },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:39:24Z",
+    "asOf": "2026-11-15T07:47:56Z",
     "o1": 2.35,
     "oX": 3.6,
     "o2": 2.45,
@@ -68,21 +134,43 @@
    }
   },
   {
-   "id": "football-91b890f5fd20440cb272721b8a89a33d",
+   "id": "unl-ukraine-georgia",
    "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
    "home": "Ukraine",
    "away": "Georgia",
-   "kickoff": "2026-11-17T19:45:00Z",
-   "quoteBasis": "winamax-only",
-   "o1": 2.0,
-   "oX": 3.3,
-   "o2": 3.1,
-   "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "o1": 2.185,
+   "oX": 3.291,
+   "o2": 3.195,
+   "best": {
+    "2": {
+     "odds": 3.36,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 2.27,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.5,
+     "book": "Unibet (SE)"
+    }
+   },
+   "books": 11,
+   "referenceAt": "2026-11-15T07:47:54Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 2.25,
+    "oX": 3.4,
+    "o2": 3.23,
+    "ou": {}
+   },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:39:24Z",
+    "asOf": "2026-11-15T07:47:56Z",
     "o1": 2.1,
     "oX": 3.2,
     "o2": 2.95,
@@ -90,21 +178,43 @@
    }
   },
   {
-   "id": "football-1a07e9080f042594bdb529ab932d680c",
+   "id": "unl-hungary-northern-ireland",
    "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
    "home": "Hungary",
    "away": "Northern Ireland",
-   "kickoff": "2026-11-17T19:45:00Z",
-   "quoteBasis": "winamax-only",
-   "o1": 1.8,
-   "oX": 3.4,
-   "o2": 3.6,
-   "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "o1": 1.905,
+   "oX": 3.254,
+   "o2": 4.159,
+   "best": {
+    "1": {
+     "odds": 1.95,
+     "book": "Unibet (SE)"
+    },
+    "2": {
+     "odds": 4.5,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.48,
+     "book": "1xBet"
+    }
+   },
+   "books": 11,
+   "referenceAt": "2026-11-15T07:47:54Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 1.92,
+    "oX": 3.41,
+    "o2": 4.28,
+    "ou": {}
+   },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:39:24Z",
+    "asOf": "2026-11-15T07:47:56Z",
     "o1": 1.86,
     "oX": 3.15,
     "o2": 3.75,
@@ -112,21 +222,78 @@
    }
   },
   {
-   "id": "football-a6c9b424fddccea76aab09880b69dd31",
+   "id": "unl-iceland-kosovo",
    "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
+   "home": "Iceland",
+   "away": "Kosovo",
+   "o1": 2.1,
+   "oX": 3.103,
+   "o2": 3.79,
+   "best": {
+    "1": {
+     "odds": 2.14,
+     "book": "Pinnacle"
+    },
+    "2": {
+     "odds": 3.95,
+     "book": "BetOnline.ag"
+    },
+    "X": {
+     "odds": 3.13,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 3,
+   "referenceAt": "2026-11-15T07:48:29Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 2.14,
+    "oX": 3.13,
+    "o2": 3.82,
+    "ou": {}
+   }
+  },
+  {
+   "id": "unl-republic-of-ireland-kosovo",
+   "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
    "home": "Republic of Ireland",
    "away": "Kosovo",
-   "kickoff": "2026-11-17T19:45:00Z",
-   "quoteBasis": "winamax-only",
-   "o1": 1.84,
-   "oX": 3.1,
-   "o2": 3.75,
-   "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "o1": 1.994,
+   "oX": 3.138,
+   "o2": 3.873,
+   "best": {
+    "2": {
+     "odds": 4.25,
+     "book": "LeoVegas (SE)"
+    },
+    "1": {
+     "odds": 2.1,
+     "book": "888sport"
+    },
+    "X": {
+     "odds": 3.32,
+     "book": "1xBet"
+    }
+   },
+   "books": 8,
+   "referenceAt": "2026-11-15T07:47:54Z",
+   "sharp": {
+    "book": "Betfair",
+    "bookKey": "betfair_ex_eu",
+    "asOf": "2026-11-15T07:48:39Z",
+    "o1": 2.14,
+    "oX": 3.3,
+    "o2": 4.1,
+    "ou": {}
+   },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:39:24Z",
+    "asOf": "2026-11-15T07:47:56Z",
     "o1": 1.98,
     "oX": 3.05,
     "o2": 3.4,
@@ -134,21 +301,43 @@
    }
   },
   {
-   "id": "football-aab74efad72e8096e774c7104189ff09",
+   "id": "unl-poland-sweden",
    "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
    "home": "Poland",
    "away": "Sweden",
-   "kickoff": "2026-11-17T19:45:00Z",
-   "quoteBasis": "winamax-only",
-   "o1": 2.2,
-   "oX": 3.4,
-   "o2": 2.65,
-   "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "o1": 2.19,
+   "oX": 3.505,
+   "o2": 2.991,
+   "best": {
+    "1": {
+     "odds": 2.28,
+     "book": "1xBet"
+    },
+    "2": {
+     "odds": 3.12,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.69,
+     "book": "1xBet"
+    }
+   },
+   "books": 11,
+   "referenceAt": "2026-11-15T07:47:54Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 2.26,
+    "oX": 3.66,
+    "o2": 3.01,
+    "ou": {}
+   },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:39:24Z",
+    "asOf": "2026-11-15T07:47:56Z",
     "o1": 2.1,
     "oX": 3.4,
     "o2": 2.8,
@@ -156,21 +345,43 @@
    }
   },
   {
-   "id": "football-955a201ba2266b8b6b0519e0265eb354",
+   "id": "unl-wales-portugal",
    "league": "UNL",
+   "kickoff": "2026-11-17T19:45Z",
    "home": "Wales",
    "away": "Portugal",
-   "kickoff": "2026-11-17T19:45:00Z",
-   "quoteBasis": "winamax-only",
-   "o1": 6.75,
-   "oX": 5.1,
-   "o2": 1.28,
-   "books": 1,
-   "leagueTitle": "UEFA Nations League",
+   "o1": 6.942,
+   "oX": 4.722,
+   "o2": 1.397,
+   "best": {
+    "2": {
+     "odds": 1.44,
+     "book": "1xBet"
+    },
+    "1": {
+     "odds": 8.0,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 5.0,
+     "book": "1xBet"
+    }
+   },
+   "books": 13,
+   "referenceAt": "2026-11-15T07:47:54Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 6.71,
+    "oX": 4.89,
+    "o2": 1.43,
+    "ou": {}
+   },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:39:24Z",
+    "asOf": "2026-11-15T07:47:56Z",
     "o1": 5.5,
     "oX": 4.6,
     "o2": 1.38,
@@ -178,6 +389,6 @@
    }
   }
  ],
- "updatedAt": "2026-11-15T07:39:41.276863+00:00",
- "source": "Winamax France et archives des marchés"
+ "updatedAt": "2026-11-15T07:49:00Z",
+ "source": "The Odds API (moyenne des bookmakers européens)"
 }

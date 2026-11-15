@@ -7,7 +7,7 @@
    "kickoff": "2026-11-20T15:30Z",
    "home": "FC Botosani",
    "away": "FC Voluntari",
-   "o1": 1.71,
+   "o1": 1.74,
    "oX": 3.8,
    "o2": 4.3
   },
@@ -126,7 +126,7 @@
    "home": "Farul Constanta",
    "away": "U. Cluj",
    "o1": 2.75,
-   "oX": 3.4,
+   "oX": 3.55,
    "o2": 2.35
   },
   {
@@ -424,35 +424,43 @@
    "kickoff": "2026-11-20T19:30Z",
    "home": "Andorra CF",
    "away": "Leganés",
-   "o1": 1.87,
-   "oX": 3.374,
-   "o2": 3.579,
+   "o1": 1.877,
+   "oX": 3.447,
+   "o2": 3.655,
    "best": {
     "1": {
-     "odds": 1.99,
+     "odds": 1.96,
      "book": "1xBet"
     },
     "2": {
-     "odds": 3.79,
-     "book": "1xBet"
+     "odds": 3.94,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 3.64,
-     "book": "1xBet"
+     "odds": 3.75,
+     "book": "Coolbet"
     }
    },
-   "books": 9,
-   "referenceAt": "2026-11-14T07:48:18Z",
-   "mine": {
-    "book": "Winamax France",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T07:48:18Z",
-    "o1": 1.78,
-    "oX": 3.3,
-    "o2": 3.3,
+   "books": 15,
+   "referenceAt": "2026-11-15T07:47:02Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-15T07:48:36Z",
+    "o1": 1.94,
+    "oX": 3.57,
+    "o2": 3.94,
     "ou": {}
    },
-   "leagueTitle": "LIGA2"
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-15T07:48:38Z",
+    "o1": 1.78,
+    "oX": 3.3,
+    "o2": 3.45,
+    "ou": {}
+   }
   },
   {
    "id": "l1-troyes-le-havre",
@@ -610,6 +618,6 @@
    "leagueTitle": "LIGA"
   }
  ],
- "updatedAt": "2026-11-15T07:39:41.276863+00:00",
- "source": "Winamax France et archives des marchés"
+ "updatedAt": "2026-11-15T07:49:00Z",
+ "source": "The Odds API (moyenne des bookmakers européens)"
 }
