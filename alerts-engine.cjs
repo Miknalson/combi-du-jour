@@ -1,0 +1,5 @@
+'use strict';
+const WINAMAX='https://www.winamax.fr/paris-sportifs',SITE='https://miknalson.github.io/combi-du-jour/';
+function eligible(r,now){return r&&r.mode==='paper'&&r.status==='pending'&&['safe','algo'].includes(r.method)&&Array.isArray(r.legs)&&r.legs.length>0&&r.legs.every(l=>l.bookKey==='winamax_fr'&&!l.est&&l.quoteSource==='api'&&Date.parse(l.kickoff)>now&&now-Date.parse(l.asOf)>=0&&now-Date.parse(l.asOf)<=3600000);}
+function payload(r,topic){const url=SITE+'notifications.html?ticket='+encodeURIComponent(r.id);return {topic,title:r.method.toUpperCase()+' · '+r.sport+' · à vérifier',message:r.legs.map(l=>l.home+' – '+l.away+' : '+l.label+' ('+l.o+')').join('\n')+'\nCote relevée : '+r.odds.toFixed(2)+'. Mise du test : '+r.simulatedStake+' € fictifs. Aucun pari placé. Vérifie les marchés et la cote sur Winamax.',click:url,actions:[{action:'view',label:'Winamax',url:WINAMAX},{action:'view',label:'Détail du ticket',url}]};}
+module.exports={eligible,payload,WINAMAX,SITE};
