@@ -1,62 +1,7 @@
 {
   "sport": "football_us",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-15T09:30:36.217724+00:00",
-  "status": "quota",
-  "matches": [],
-  "leaguesQueried": 0,
-  "leaguesAvailable": 3,
-  "partial": true,
-  "competitions": [
-    {
-      "key": "americanfootball_cfl",
-      "title": "CFL",
-      "active": true,
-      "gender": "unspecified"
-    },
-    {
-      "key": "americanfootball_ncaaf",
-      "title": "NCAAF",
-      "active": true,
-      "gender": "unspecified"
-    },
-    {
-      "key": "americanfootball_ncaaf_championship_winner",
-      "title": "NCAAF Championship Winner",
-      "active": true,
-      "gender": "unspecified"
-    },
-    {
-      "key": "americanfootball_ncaaf_fcs",
-      "title": "NCAAF FCS",
-      "active": false,
-      "gender": "unspecified"
-    },
-    {
-      "key": "americanfootball_nfl",
-      "title": "NFL",
-      "active": true,
-      "gender": "unspecified"
-    },
-    {
-      "key": "americanfootball_nfl_preseason",
-      "title": "NFL Preseason",
-      "active": false,
-      "gender": "unspecified"
-    },
-    {
-      "key": "americanfootball_nfl_super_bowl_winner",
-      "title": "NFL Super Bowl Winner",
-      "active": true,
-      "gender": "unspecified"
-    },
-    {
-      "key": "americanfootball_ufl",
-      "title": "UFL",
-      "active": false,
-      "gender": "unspecified"
-    }
-  ],
-  "winamaxUnavailableLeagues": 0,
-  "femaleMatches": 0
+  "updatedAt": "2026-11-15T13:51:06.709510+00:00",
+  "status": "unavailable",
+  "matches": []
 }
