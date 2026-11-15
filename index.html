@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=multisport-v2">
+<link rel="stylesheet" href="style.css?v=reference1">
 </head>
 <body><nav aria-label="Alertes" style="max-width:1120px;margin:auto;padding:12px 20px"><a href="notifications.html">🔔 Mes alertes Algo / Safe</a></nav>
 <div class="wrap">
@@ -32,7 +32,7 @@
   <section class="uefa-calendar" id="uefaFixtures" aria-label="Calendrier UEFA"></section>
   <nav class="days" id="days" aria-label="Choisir le jour"></nav>
 
-  <div class="mode-switch" role="group" aria-label="Mode d’analyse"><button type="button" data-strategy="value" aria-pressed="true">Modèle prudent</button><button type="button" data-strategy="combo" aria-pressed="false">Simuler un combiné</button></div>
+  <div class="mode-switch" role="group" aria-label="Mode d’analyse"><button type="button" data-strategy="reference" aria-pressed="true">Algo du jour · alerte</button><button type="button" data-strategy="value" aria-pressed="false">Modèle prudent</button><button type="button" data-strategy="combo" aria-pressed="false">Simulation personnelle</button></div>
   <div id="ticketArea"><div class="empty">Chargement des matchs et des cotes…</div></div>
 
   <section class="model-study" id="modelStudy" aria-label="Résultats de l’étude"></section>
@@ -43,7 +43,7 @@
   </section>
 
   <section id="simulationSettings" hidden>
-    <div class="head"><h2>Réglages de simulation</h2><div class="hint">Enregistrés sur cet appareil.</div></div>
+    <p class="status">Simulation personnelle : ces réglages recalculent un scénario d’exploration. Ils ne changent ni le ticket Algo de référence, ni ses alertes, ni la mise fictive enregistrée.</p><div class="head"><h2>Réglages de simulation</h2><div class="hint">Enregistrés sur cet appareil.</div></div>
     <div class="settings">
       <div class="field"><label for="oMin">Cote mini</label><input type="number" id="oMin" step="0.1" min="1.5" max="20" value="3"></div>
       <div class="field"><label for="oMax">Cote maxi</label><input type="number" id="oMax" step="0.1" min="1.5" max="50" value="5"></div>
@@ -67,7 +67,7 @@
         <div class="checks"><label><input type="checkbox" id="skipStarted" checked> Ignorer les matchs déjà commencés</label>
           <label><input type="checkbox" id="myBook" checked> Utiliser les cotes Winamax (seulement les matchs que Winamax propose)</label>
           <label><input type="checkbox" id="realGoals" checked> Buts : seulement avec de vraies cotes</label>
-          <label><input type="checkbox" id="algoEst"> L'algo peut choisir des cotes estimées (handicaps, score exact, combinés sur un match)</label></div>
+          <label><input type="checkbox" id="algoEst"> Autoriser des cotes estimées dans ma simulation (handicaps, score exact, combinés sur un match)</label></div>
       </div>
     </div>
   </section>
@@ -76,7 +76,7 @@
   <section>
     <div class="head"><h2>Tous les matchs du jour</h2><div class="hint">Exploration des marchés, pas des conseils de mise. Les cotes estimées portent le signe ≈. Ton ticket personnel reste enregistré sur cet appareil.</div></div>
     <div class="tbl-wrap"><table>
-      <thead><tr><th>Heure</th><th>Match</th><th>1 · N · 2</th><th>Cotes</th><th>Le plus probable, pas un conseil</th><th>Mon ticket</th><th>Algo</th></tr></thead>
+      <thead><tr><th>Heure</th><th>Match</th><th>1 · N · 2</th><th>Cotes</th><th>Le plus probable, pas un conseil</th><th>Mon ticket</th><th>Simulation</th></tr></thead>
       <tbody id="matchRows"></tbody>
     </table></div>
     <div class="legend"><span><i style="background:var(--home)"></i>Domicile</span><span><i style="background:var(--draw)"></i>Nul</span><span><i style="background:var(--away)"></i>Extérieur</span></div>
@@ -123,6 +123,7 @@
 
 <script src="sport-catalog.js?v=2"></script>
 <script src="uefa.js?v=1"></script>
+<script src="ticket-reference.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
 <script>
@@ -139,17 +140,18 @@ var LEAGUES = {
 };
 var TZ = 'Europe/Paris';
 var MIN_BOOKS = 5;
-var state = { days:{}, selected:null, loaded:false, model:null };
+var state = { days:{}, selected:null, loaded:false, model:null, journal:null, referenceId:new URLSearchParams(location.search).get('ticket') };
 
 // ---------- per-device settings ----------
 var store = {
   get:function(k,d){ try{ var v = localStorage.getItem('cdj.'+k); return v===null ? d : JSON.parse(v); }catch(e){ return d; } },
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
-var settings = Object.assign({strategy:'value',oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,mAh:true,mCs:true,mSame:true,algoEst:false,myBook:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
+var settings = Object.assign({strategy:'reference',oMin:3,oMax:5,maxLegs:5,minLegs:2,minLeg:1.10,minProb:0.5,realGoals:true,mWin:true,mDc:true,mDraw:false,mGoals:true,mAh:true,mCs:true,mSame:true,algoEst:false,myBook:true,skipStarted:true,offLeagues:[]}, store.get('settings',{}));
 // 24/10/2026: the default moved from 80 % per bet to the most likely ticket overall; reset devices saved under the old default once.
 if(settings.probV !== 2){ settings.minProb = 0.5; settings.probV = 2; store.set('settings', settings); }
-if(settings.strategyV!==1){settings.strategy='value';settings.strategyV=1;store.set('settings',settings);}
+if(settings.strategyV!==2){settings.strategy='reference';settings.strategyV=2;store.set('settings',settings);}
+if(state.referenceId || !['reference','value','combo'].includes(settings.strategy))settings.strategy='reference';
 var excluded = store.get('excluded',{});
 
 function bindSettings(){
@@ -444,13 +446,21 @@ function legBadge(l){
 // ---------- rendering ----------
 function sortedDates(){ return Object.keys(state.days).sort(); }
 function today(){ return parisDate(new Date()); }
+function selectableDates(){
+  var dates=sortedDates().filter(function(d){return d>=today();});
+  dates.push(today());
+  var record=TicketReference.find(state.journal,state.referenceId);
+  if(record)dates.push(record.day);
+  return Array.from(new Set(dates)).sort();
+}
 
 function renderDays(){
   var t = today(), html='';
-  sortedDates().filter(function(d){ return d>=t; }).forEach(function(d){
-    var L = dayLabel(d), n = state.days[d].matches.length;
+  selectableDates().forEach(function(d){
+    var L = dayLabel(d), n = ((state.days[d]||{}).matches||[]).length;
+    var ref=TicketReference.forDay(state.journal,d,'algo','football');
     html += '<button type="button" class="day" data-date="'+d+'" aria-pressed="'+(d===state.selected)+'">' +
-      '<span class="d1">'+(d===t?'Aujourd\'hui':esc(L.d1)+' '+esc(L.d2))+'</span><span class="d2">'+n+' match'+(n>1?'s':'')+'</span></button>';
+      '<span class="d1">'+(d===t?'Aujourd\'hui':esc(L.d1)+' '+esc(L.d2))+'</span><span class="d2">'+(ref?'Algo enregistré':n+' match'+(n>1?'s':''))+'</span></button>';
   });
   document.getElementById('days').innerHTML = html || '<span class="status">Aucun match à venir dans les données.</span>';
 }
@@ -473,6 +483,14 @@ function renderTicket(dayMatches){
   document.getElementById('simulationSettings').hidden=settings.strategy!=='combo';
   if(settings.strategy==='combo')document.getElementById('matchModule').open=true;
   document.querySelectorAll('[data-strategy]').forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.strategy===settings.strategy));});
+  if(settings.strategy==='reference'){
+    state.combo=null;
+    document.getElementById('altsSection').hidden=true;
+    var record=state.referenceId?TicketReference.find(state.journal,state.referenceId):TicketReference.forDay(state.journal,state.selected,'algo','football');
+    if(record&&record.method!=='algo')record=null;
+    document.getElementById('ticketArea').innerHTML=TicketReference.render(record,{unavailable:!state.journal,requestedId:state.referenceId});
+    return;
+  }
   if(settings.strategy==='combo')return renderLegacyTicket(dayMatches);
   state.combo=null;
   document.getElementById('altsSection').hidden=true;
@@ -498,9 +516,9 @@ function renderLegacyTicket(dayMatches){
   saveProposal(state.selected, c);
   var res = comboResult(c);
   var html = '<article class="ticket"><div class="ticket-head"><div>' +
-    '<div class="kicker">'+(isToday?'Simulation du jour':'Simulation prévue')+' · '+esc(longDay(state.selected))+'</div>' +
+    '<div class="kicker">'+(isToday?'Simulation personnelle du jour':'Simulation personnelle prévue')+' · '+esc(longDay(state.selected))+'</div>' +
     '<h2>'+c.legs.length+' sélection'+(c.legs.length>1?'s':'')+'</h2>' +
-    '<div class="sub">La combinaison la plus probable dont la cote totale tombe entre '+odds(settings.oMin)+' et '+odds(settings.oMax)+'.'+
+    '<div class="sub">Scénario d’exploration, distinct du ticket Algo de référence et des alertes. La combinaison la plus probable dont la cote totale tombe entre '+odds(settings.oMin)+' et '+odds(settings.oMax)+'.'+
       (res!=='wait' ? ' <span class="badge '+res+'">'+(res==='won'?'Gagné':'Perdu')+'</span>' : '')+'</div>' +
     '</div><div class="figures">' +
       '<div class="fig"><div class="lab">Cote totale</div><div class="val mono">'+(c.legs.some(function(l){return l.est;})?'≈':'')+odds(c.odds)+'</div></div>' +
@@ -603,8 +621,8 @@ function renderLeagues(){
 
 function render(){
   if(!state.loaded) return;
-  var t=today(), dates=sortedDates().filter(function(d){ return d>=t; });
-  if(!state.selected || dates.indexOf(state.selected)<0) state.selected = dates[0] || null;
+  var dates=selectableDates(), linked=TicketReference.find(state.journal,state.referenceId);
+  if(!state.selected || dates.indexOf(state.selected)<0) state.selected = linked?linked.day:today();
   renderDays();renderLeagues();renderHistory();renderModelStudy('modelStudy',state.model);
   if(!state.selected){
     document.getElementById('ticketArea').innerHTML='<div class="empty">Pas encore de matchs à venir. Les cotes sont mises à jour chaque matin.</div>';
@@ -612,11 +630,11 @@ function render(){
     document.getElementById('matchRows').innerHTML='';
     return;
   }
-  var dm = state.days[state.selected].matches;
+  var dm = ((state.days[state.selected]||{}).matches||[]);
   var combo = renderTicket(dm);
   renderMatches(dm, combo);
   renderSlip();
-  var doc = state.days[state.selected];
+  var doc = state.days[state.selected]||{};
   document.getElementById('sourceLine').textContent = 'Source des cotes : '+(doc.source||'—')+(doc.updatedAt?' · mises à jour le '+new Date(doc.updatedAt).toLocaleString('fr-FR',{timeZone:TZ,day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'}):'');
 }
 
@@ -661,7 +679,7 @@ function renderSlip(){
   if(!slip.legs.length) return;
   var o = slip.legs.reduce(function(a,l){ return a*l.o; },1), p = slip.legs.reduce(function(a,l){ return a*l.p; },1);
   var est = slip.legs.some(function(l){ return l.est; });
-  document.getElementById('slipKind').textContent = slip.source==='algo' ? 'Combiné de l\'algo' : 'Mon ticket';
+  document.getElementById('slipKind').textContent = slip.source==='algo' ? 'Simulation personnelle' : 'Mon ticket';
   document.getElementById('slipSum').innerHTML = slip.legs.length+' sélection'+(slip.legs.length>1?'s':'')+' · cote <b>'+(est?'≈':'')+odds(o)+'</b> · '+pct(p);
   document.getElementById('slipLegs').innerHTML = slip.legs.map(function(l){
     return '<li><span><span class="lg">'+esc(l.league)+'</span>'+esc(l.home)+' – '+esc(l.away)+' : <strong>'+esc(l.label)+'</strong></span><span class="mono">'+(l.est?'≈':'')+odds(l.o)+' <button type="button" class="x" data-id="'+esc(l.matchId)+'" aria-label="Retirer">×</button></span></li>';
@@ -728,7 +746,7 @@ document.getElementById('slipForm').addEventListener('submit', function(e){
 
 // ---------- events ----------
 document.getElementById('days').addEventListener('click', function(e){
-  var b=e.target.closest('.day'); if(!b) return; state.selected=b.dataset.date; render();
+  var b=e.target.closest('.day'); if(!b) return; state.referenceId=null;var url=new URL(location.href);url.searchParams.delete('ticket');history.replaceState(null,'',url);state.selected=b.dataset.date; render();
 });
 document.getElementById('matchRows').addEventListener('click', function(e){
   var b=e.target.closest('.toggle'); if(!b) return;
@@ -745,12 +763,14 @@ document.getElementById('leagueChecks').addEventListener('change', function(e){
 document.querySelectorAll('[data-strategy]').forEach(function(button){button.addEventListener('click',function(){settings.strategy=this.dataset.strategy;saveRender();});});
 bindSettings();
 
+TicketReference.bindCopy(document.getElementById('ticketArea'),function(id){return TicketReference.find(state.journal,id);});
+
 // ---------- data ----------
 (async function(){
   var statusEl=document.getElementById('status');
   try{
-    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():{dates:[]}).catch(()=>({dates:[]})),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/sports/football.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
-    var idx=pair[0];state.model=pair[1];UefaCalendar.render('uefaFixtures',pair[2]);
+    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():{dates:[]}).catch(()=>({dates:[]})),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/sports/football.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/paper-tests-v2.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
+    var idx=pair[0];state.model=pair[1];state.journal=pair[3];UefaCalendar.render('uefaFixtures',pair[2]);
     var cutoff = parisDate(new Date(Date.now()-30*86400000));
     var dates = (idx.dates||[]).filter(function(d){ return d>=cutoff; });
     var docs = await Promise.all(dates.map(function(d){

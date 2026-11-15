@@ -15,6 +15,8 @@ on:
       - 'notifications*'
       - 'alerts-engine.cjs'
       - 'scripts/notify.cjs'
+      - 'ticket-reference.js'
+      - 'tests/ticket-reference*'
       - 'index.html'
       - 'sports.html'
       - 'tableau.html'
@@ -51,6 +53,7 @@ jobs:
           node tests/paper.test.cjs
           node tests/multisport.test.cjs
           node tests/alerts.test.cjs
+          node tests/ticket-reference.test.cjs
       - name: Détecter une modification du collecteur
         id: quote_changes
         if: github.event_name == 'push'
@@ -91,7 +94,7 @@ jobs:
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
