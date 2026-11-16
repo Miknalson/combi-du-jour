@@ -1,7 +1,7 @@
 {
  "date": "2026-11-22",
- "updatedAt": "2026-11-15T09:30:36.217724+00:00",
- "source": "Winamax France et archives des marchés",
+ "updatedAt": "2026-11-16T07:49:27Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
    "id": "tur-erzurumspor-goztepe",
@@ -109,9 +109,9 @@
    "kickoff": "2026-11-22T12:00Z",
    "home": "Burnley",
    "away": "Blackburn Rovers",
-   "o1": 1.814,
-   "oX": 3.578,
-   "o2": 3.906,
+   "o1": 1.82,
+   "oX": 3.597,
+   "o2": 3.909,
    "best": {
     "2": {
      "odds": 4.12,
@@ -126,28 +126,26 @@
      "book": "Pinnacle"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-15T07:47:05Z",
+   "books": 15,
+   "referenceAt": "2026-11-16T07:47:44Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:48Z",
+    "asOf": "2026-11-16T07:49:22Z",
     "o1": 1.86,
     "oX": 3.79,
     "o2": 4.03,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:48:50Z",
+    "asOf": "2026-11-16T07:48:56Z",
     "o1": 1.7,
     "oX": 3.3,
     "o2": 3.45,
     "ou": {}
-   },
-   "leagueTitle": "CHA",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "bl2-1-fc-kaiserslautern-dynamo-dresden",
@@ -312,6 +310,50 @@
     "ou": {}
    },
    "leagueTitle": "LIGA"
+  },
+  {
+   "id": "liga2-cordoba-oviedo",
+   "league": "LIGA2",
+   "kickoff": "2026-11-22T13:00Z",
+   "home": "Córdoba",
+   "away": "Oviedo",
+   "o1": 1.849,
+   "oX": 3.575,
+   "o2": 3.551,
+   "best": {
+    "1": {
+     "odds": 1.96,
+     "book": "Unibet (SE)"
+    },
+    "2": {
+     "odds": 3.73,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 3.88,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 13,
+   "referenceAt": "2026-11-16T07:47:32Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-16T07:49:19Z",
+    "o1": 1.91,
+    "oX": 3.88,
+    "o2": 3.73,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-16T07:49:26Z",
+    "o1": 1.74,
+    "oX": 3.45,
+    "o2": 3.3,
+    "ou": {}
+   }
   },
   {
    "id": "ere-ajax-ado-den-haag",
@@ -627,6 +669,50 @@
    "leagueTitle": "LIGA"
   },
   {
+   "id": "liga2-sporting-gijon-las-palmas",
+   "league": "LIGA2",
+   "kickoff": "2026-11-22T15:15Z",
+   "home": "Sporting Gijón",
+   "away": "Las Palmas",
+   "o1": 1.878,
+   "oX": 3.398,
+   "o2": 3.616,
+   "best": {
+    "2": {
+     "odds": 3.91,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 2.04,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.73,
+     "book": "1xBet"
+    }
+   },
+   "books": 13,
+   "referenceAt": "2026-11-16T07:47:32Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-16T07:49:19Z",
+    "o1": 1.93,
+    "oX": 3.65,
+    "o2": 3.91,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-16T07:49:26Z",
+    "o1": 1.78,
+    "oX": 3.25,
+    "o2": 3.35,
+    "ou": {}
+   }
+  },
+  {
    "id": "swe-if-brommapojkarna-halmstads-bk",
    "league": "SWE",
    "kickoff": "2026-11-22T15:30Z",
@@ -898,6 +984,85 @@
    "leagueTitle": "LIGA"
   },
   {
+   "id": "liga2-celta-fortuna-real-valladolid-cf",
+   "league": "LIGA2",
+   "kickoff": "2026-11-22T17:30Z",
+   "home": "Celta Fortuna",
+   "away": "Real Valladolid CF",
+   "o1": 3.058,
+   "oX": 3.328,
+   "o2": 2.084,
+   "best": {
+    "1": {
+     "odds": 3.3,
+     "book": "Nordic Bet"
+    },
+    "2": {
+     "odds": 2.35,
+     "book": "Unibet (SE)"
+    },
+    "X": {
+     "odds": 3.63,
+     "book": "1xBet"
+    }
+   },
+   "books": 12,
+   "referenceAt": "2026-11-16T07:47:32Z",
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-16T07:49:26Z",
+    "o1": 3.0,
+    "oX": 3.25,
+    "o2": 1.9,
+    "ou": {}
+   }
+  },
+  {
+   "id": "liga2-girona-fc-sd-eibar",
+   "league": "LIGA2",
+   "kickoff": "2026-11-22T17:30Z",
+   "home": "Girona FC",
+   "away": "SD Eibar",
+   "o1": 1.722,
+   "oX": 3.568,
+   "o2": 4.13,
+   "best": {
+    "1": {
+     "odds": 1.81,
+     "book": "Unibet (NL)"
+    },
+    "2": {
+     "odds": 4.33,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.9,
+     "book": "1xBet"
+    }
+   },
+   "books": 13,
+   "referenceAt": "2026-11-16T07:47:32Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-16T07:49:20Z",
+    "o1": 1.79,
+    "oX": 3.86,
+    "o2": 4.31,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-16T07:49:26Z",
+    "o1": 1.64,
+    "oX": 3.4,
+    "o2": 3.85,
+    "ou": {}
+   }
+  },
+  {
    "id": "bel-lommel-sk-standard-liege",
    "league": "BEL",
    "kickoff": "2026-11-22T18:15Z",
@@ -1032,6 +1197,71 @@
     "ou": {}
    },
    "leagueTitle": "LIGA"
+  },
+  {
+   "id": "liga2-burgos-cf-albacete",
+   "league": "LIGA2",
+   "kickoff": "2026-11-22T20:00Z",
+   "home": "Burgos CF",
+   "away": "Albacete",
+   "o1": 1.961,
+   "oX": 3.238,
+   "o2": 3.488,
+   "best": {
+    "2": {
+     "odds": 3.65,
+     "book": "Unibet (SE)"
+    },
+    "1": {
+     "odds": 2.06,
+     "book": "1xBet"
+    },
+    "X": {
+     "odds": 3.59,
+     "book": "1xBet"
+    }
+   },
+   "books": 12,
+   "referenceAt": "2026-11-16T07:47:32Z",
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-16T07:49:26Z",
+    "o1": 1.88,
+    "oX": 3.1,
+    "o2": 3.2,
+    "ou": {}
+   }
+  },
+  {
+   "id": "rou-uta-arad-univ-craiova",
+   "league": "ROU",
+   "kickoff": "2026-11-22T15:30Z",
+   "home": "UTA Arad",
+   "away": "Univ. Craiova",
+   "o1": 4.75,
+   "oX": 3.65,
+   "o2": 1.71
+  },
+  {
+   "id": "rou-fc-arges-fcsb",
+   "league": "ROU",
+   "kickoff": "2026-11-22T18:30Z",
+   "home": "FC Arges",
+   "away": "FCSB",
+   "o1": 3.55,
+   "oX": 3.3,
+   "o2": 2.05
+  },
+  {
+   "id": "por2-vizela-feirense",
+   "league": "POR2",
+   "kickoff": "2026-11-22T14:00Z",
+   "home": "Vizela",
+   "away": "Feirense",
+   "o1": 2.0,
+   "oX": 3.1,
+   "o2": 3.6
   }
  ]
 }

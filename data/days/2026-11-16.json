@@ -7,45 +7,43 @@
    "kickoff": "2026-11-16T15:00Z",
    "home": "Faroe Islands",
    "away": "Moldova",
-   "o1": 1.748,
-   "oX": 3.424,
-   "o2": 4.759,
+   "o1": 1.763,
+   "oX": 3.401,
+   "o2": 4.779,
    "best": {
     "1": {
-     "odds": 1.81,
-     "book": "BetOnline.ag"
+     "odds": 1.85,
+     "book": "1xBet"
     },
     "2": {
-     "odds": 5.05,
-     "book": "1xBet"
+     "odds": 5.02,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 3.68,
-     "book": "1xBet"
+     "odds": 3.56,
+     "book": "Pinnacle"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "books": 14,
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 1.74,
-    "oX": 3.53,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 1.79,
+    "oX": 3.56,
     "o2": 5.02,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
+    "asOf": "2026-11-16T07:48:47Z",
     "o1": 1.68,
     "oX": 3.25,
     "o2": 4.1,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-kazakhstan-slovakia",
@@ -53,45 +51,43 @@
    "kickoff": "2026-11-16T15:00Z",
    "home": "Kazakhstan",
    "away": "Slovakia",
-   "o1": 4.29,
-   "oX": 3.546,
-   "o2": 1.779,
+   "o1": 4.119,
+   "oX": 3.441,
+   "o2": 1.856,
    "best": {
     "1": {
-     "odds": 4.5,
-     "book": "Unibet (SE)"
+     "odds": 4.43,
+     "book": "Pinnacle"
     },
     "2": {
-     "odds": 1.83,
-     "book": "Unibet (SE)"
+     "odds": 1.94,
+     "book": "1xBet"
     },
     "X": {
-     "odds": 3.86,
+     "odds": 3.62,
      "book": "1xBet"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "books": 14,
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 4.47,
-    "oX": 3.72,
-    "o2": 1.77,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 4.43,
+    "oX": 3.62,
+    "o2": 1.86,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
-    "o1": 3.85,
-    "oX": 3.45,
-    "o2": 1.66,
+    "asOf": "2026-11-16T07:48:47Z",
+    "o1": 3.7,
+    "oX": 3.4,
+    "o2": 1.72,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-estonia-bulgaria",
@@ -99,45 +95,43 @@
    "kickoff": "2026-11-16T17:00Z",
    "home": "Estonia",
    "away": "Bulgaria",
-   "o1": 2.036,
-   "oX": 3.105,
-   "o2": 3.728,
+   "o1": 2.008,
+   "oX": 3.198,
+   "o2": 3.827,
    "best": {
     "2": {
-     "odds": 3.94,
-     "book": "1xBet"
+     "odds": 4.15,
+     "book": "Pinnacle"
     },
     "1": {
-     "odds": 2.12,
+     "odds": 2.09,
      "book": "1xBet"
     },
     "X": {
-     "odds": 3.28,
+     "odds": 3.38,
      "book": "1xBet"
     }
    },
-   "books": 11,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "books": 12,
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 2.05,
-    "oX": 3.22,
-    "o2": 3.91,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 2.03,
+    "oX": 3.3,
+    "o2": 4.15,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
-    "o1": 1.96,
-    "oX": 3.0,
+    "asOf": "2026-11-16T07:48:47Z",
+    "o1": 1.94,
+    "oX": 3.05,
     "o2": 3.3,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-iceland-luxembourg",
@@ -145,45 +139,43 @@
    "kickoff": "2026-11-16T17:00Z",
    "home": "Iceland",
    "away": "Luxembourg",
-   "o1": 1.295,
-   "oX": 5.094,
-   "o2": 9.547,
+   "o1": 1.219,
+   "oX": 5.927,
+   "o2": 12.374,
    "best": {
     "1": {
-     "odds": 1.35,
+     "odds": 1.25,
      "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 10.6,
-     "book": "1xBet"
+     "odds": 14.09,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 5.54,
+     "odds": 6.37,
      "book": "Pinnacle"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "books": 14,
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 1.28,
-    "oX": 5.54,
-    "o2": 9.86,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 1.23,
+    "oX": 6.37,
+    "o2": 14.09,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
-    "o1": 1.23,
-    "oX": 4.9,
-    "o2": 7.75,
+    "asOf": "2026-11-16T07:48:47Z",
+    "o1": 1.16,
+    "oX": 5.5,
+    "o2": 9.5,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-lithuania-liechtenstein",
@@ -191,45 +183,43 @@
    "kickoff": "2026-11-16T17:00Z",
    "home": "Lithuania",
    "away": "Liechtenstein",
-   "o1": 1.092,
-   "oX": 8.589,
-   "o2": 25.745,
+   "o1": 1.104,
+   "oX": 8.135,
+   "o2": 25.787,
    "best": {
     "2": {
-     "odds": 31.0,
-     "book": "Unibet (SE)"
+     "odds": 29.0,
+     "book": "Marathon Bet"
     },
     "1": {
      "odds": 1.13,
      "book": "1xBet"
     },
     "X": {
-     "odds": 10.0,
+     "odds": 9.7,
      "book": "BetOnline.ag"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "books": 14,
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 1.09,
-    "oX": 9.46,
-    "o2": 22.68,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 1.12,
+    "oX": 8.59,
+    "o2": 25.02,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
-    "o1": 1.08,
-    "oX": 6.5,
-    "o2": 14.5,
+    "asOf": "2026-11-16T07:48:47Z",
+    "o1": 1.06,
+    "oX": 6.75,
+    "o2": 17.0,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "liga2-albacete-celta-fortuna",
@@ -237,45 +227,43 @@
    "kickoff": "2026-11-16T19:30Z",
    "home": "Albacete",
    "away": "Celta Fortuna",
-   "o1": 1.578,
-   "oX": 3.999,
-   "o2": 4.646,
+   "o1": 1.577,
+   "oX": 4.027,
+   "o2": 4.769,
    "best": {
     "1": {
      "odds": 1.68,
      "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 5.0,
-     "book": "1xBet"
+     "odds": 5.45,
+     "book": "Pinnacle"
     },
     "X": {
-     "odds": 4.44,
-     "book": "1xBet"
+     "odds": 4.52,
+     "book": "Pinnacle"
     }
    },
    "books": 16,
-   "referenceAt": "2026-11-15T07:47:02Z",
+   "referenceAt": "2026-11-16T07:47:32Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:36Z",
-    "o1": 1.64,
-    "oX": 4.16,
-    "o2": 4.94,
+    "asOf": "2026-11-16T07:49:19Z",
+    "o1": 1.59,
+    "oX": 4.52,
+    "o2": 5.45,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 1.5,
+    "asOf": "2026-11-16T07:49:26Z",
+    "o1": 1.52,
     "oX": 3.9,
     "o2": 4.3,
     "ou": {}
-   },
-   "leagueTitle": "LIGA2",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-germany-netherlands",
@@ -283,45 +271,43 @@
    "kickoff": "2026-11-16T19:45Z",
    "home": "Germany",
    "away": "Netherlands",
-   "o1": 1.868,
-   "oX": 4.011,
-   "o2": 3.533,
+   "o1": 1.859,
+   "oX": 4.168,
+   "o2": 3.519,
    "best": {
     "1": {
-     "odds": 1.92,
-     "book": "Unibet (SE)"
+     "odds": 1.91,
+     "book": "1xBet"
     },
     "2": {
-     "odds": 3.74,
+     "odds": 3.78,
      "book": "1xBet"
     },
     "X": {
-     "odds": 4.27,
+     "odds": 4.45,
      "book": "Pinnacle"
     }
    },
    "books": 14,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 1.91,
-    "oX": 4.27,
-    "o2": 3.66,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 1.9,
+    "oX": 4.45,
+    "o2": 3.55,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
+    "asOf": "2026-11-16T07:48:47Z",
     "o1": 1.76,
-    "oX": 3.95,
-    "o2": 3.25,
+    "oX": 4.1,
+    "o2": 3.15,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-gibraltar-malta",
@@ -329,45 +315,43 @@
    "kickoff": "2026-11-16T19:45Z",
    "home": "Gibraltar",
    "away": "Malta",
-   "o1": 7.507,
-   "oX": 3.895,
-   "o2": 1.447,
+   "o1": 7.236,
+   "oX": 3.677,
+   "o2": 1.504,
    "best": {
     "1": {
-     "odds": 8.25,
-     "book": "1xBet"
+     "odds": 8.0,
+     "book": "Unibet (SE)"
     },
     "2": {
-     "odds": 1.49,
+     "odds": 1.55,
      "book": "1xBet"
     },
     "X": {
-     "odds": 4.2,
+     "odds": 3.85,
      "book": "1xBet"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "books": 14,
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 7.29,
-    "oX": 3.91,
-    "o2": 1.47,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 7.41,
+    "oX": 3.73,
+    "o2": 1.52,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
-    "o1": 6.0,
-    "oX": 3.85,
-    "o2": 1.38,
+    "asOf": "2026-11-16T07:48:47Z",
+    "o1": 5.8,
+    "oX": 3.45,
+    "o2": 1.46,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-greece-serbia",
@@ -375,45 +359,43 @@
    "kickoff": "2026-11-16T19:45Z",
    "home": "Greece",
    "away": "Serbia",
-   "o1": 1.43,
-   "oX": 4.537,
-   "o2": 6.686,
+   "o1": 1.429,
+   "oX": 4.639,
+   "o2": 6.757,
    "best": {
     "1": {
-     "odds": 1.49,
+     "odds": 1.48,
      "book": "1xBet"
     },
     "2": {
-     "odds": 7.3,
-     "book": "Nordic Bet"
+     "odds": 7.5,
+     "book": "Unibet (SE)"
     },
     "X": {
-     "odds": 4.8,
-     "book": "Winamax (DE)"
+     "odds": 4.9,
+     "book": "Unibet (SE)"
     }
    },
    "books": 14,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 1.47,
-    "oX": 4.78,
-    "o2": 6.97,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 1.45,
+    "oX": 4.88,
+    "o2": 7.1,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
+    "asOf": "2026-11-16T07:48:47Z",
     "o1": 1.37,
     "oX": 4.5,
-    "o2": 5.7,
+    "o2": 5.8,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-north-macedonia-slovenia",
@@ -421,45 +403,43 @@
    "kickoff": "2026-11-16T19:45Z",
    "home": "North Macedonia",
    "away": "Slovenia",
-   "o1": 6.09,
-   "oX": 3.735,
-   "o2": 1.564,
+   "o1": 6.663,
+   "oX": 3.847,
+   "o2": 1.521,
    "best": {
     "1": {
-     "odds": 6.52,
-     "book": "1xBet"
+     "odds": 7.3,
+     "book": "Nordic Bet"
     },
     "2": {
-     "odds": 1.61,
+     "odds": 1.56,
      "book": "LeoVegas (SE)"
     },
     "X": {
-     "odds": 3.95,
-     "book": "Pinnacle"
+     "odds": 4.1,
+     "book": "1xBet"
     }
    },
-   "books": 13,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "books": 14,
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 6.35,
-    "oX": 3.95,
-    "o2": 1.56,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 7.19,
+    "oX": 4.06,
+    "o2": 1.53,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
-    "o1": 5.3,
-    "oX": 3.65,
-    "o2": 1.5,
+    "asOf": "2026-11-16T07:48:47Z",
+    "o1": 5.6,
+    "oX": 3.75,
+    "o2": 1.47,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   },
   {
    "id": "unl-switzerland-scotland",
@@ -467,47 +447,45 @@
    "kickoff": "2026-11-16T19:45Z",
    "home": "Switzerland",
    "away": "Scotland",
-   "o1": 1.666,
-   "oX": 3.639,
-   "o2": 5.186,
+   "o1": 1.737,
+   "oX": 3.561,
+   "o2": 4.794,
    "best": {
     "2": {
-     "odds": 5.8,
-     "book": "Unibet (SE)"
+     "odds": 5.25,
+     "book": "1xBet"
     },
     "1": {
-     "odds": 1.72,
-     "book": "1xBet"
+     "odds": 1.83,
+     "book": "Unibet (SE)"
     },
     "X": {
-     "odds": 3.83,
-     "book": "1xBet"
+     "odds": 3.85,
+     "book": "Winamax (DE)"
     }
    },
    "books": 14,
-   "referenceAt": "2026-11-15T07:47:54Z",
+   "referenceAt": "2026-11-16T07:47:48Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-15T07:48:38Z",
-    "o1": 1.68,
-    "oX": 3.76,
-    "o2": 5.29,
+    "asOf": "2026-11-16T07:49:27Z",
+    "o1": 1.71,
+    "oX": 3.81,
+    "o2": 5.16,
     "ou": {}
    },
    "mine": {
-    "book": "Winamax France",
+    "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T09:29:57Z",
+    "asOf": "2026-11-16T07:48:47Z",
     "o1": 1.62,
-    "oX": 3.5,
-    "o2": 4.4,
+    "oX": 3.6,
+    "o2": 4.3,
     "ou": {}
-   },
-   "leagueTitle": "UEFA Nations League",
-   "gender": "unspecified"
+   }
   }
  ],
- "updatedAt": "2026-11-15T09:30:36.217724+00:00",
- "source": "Winamax France et archives des marchés"
+ "updatedAt": "2026-11-16T07:49:27Z",
+ "source": "The Odds API (moyenne des bookmakers européens)"
 }

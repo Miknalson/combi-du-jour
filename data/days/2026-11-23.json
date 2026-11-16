@@ -1,7 +1,7 @@
 {
  "date": "2026-11-23",
- "updatedAt": "2026-11-15T09:30:36.217724+00:00",
- "source": "Winamax France et archives des marchés",
+ "updatedAt": "2026-11-16T07:49:27Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
    "id": "tur-basaksehir-corum-fk",
@@ -52,6 +52,50 @@
    "o1": 3.2,
    "oX": 3.6,
    "o2": 2.1
+  },
+  {
+   "id": "liga2-ad-ceuta-fc-almeria",
+   "league": "LIGA2",
+   "kickoff": "2026-11-23T19:30Z",
+   "home": "AD Ceuta FC",
+   "away": "Almería",
+   "o1": 3.368,
+   "oX": 3.686,
+   "o2": 1.839,
+   "best": {
+    "1": {
+     "odds": 3.6,
+     "book": "Nordic Bet"
+    },
+    "2": {
+     "odds": 1.92,
+     "book": "Pinnacle"
+    },
+    "X": {
+     "odds": 4.11,
+     "book": "Pinnacle"
+    }
+   },
+   "books": 8,
+   "referenceAt": "2026-11-16T07:47:32Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-16T07:49:20Z",
+    "o1": 3.51,
+    "oX": 4.11,
+    "o2": 1.92,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-16T07:49:26Z",
+    "o1": 3.25,
+    "oX": 3.55,
+    "o2": 1.74,
+    "ou": {}
+   }
   },
   {
    "id": "l2-sochaux-usl-dunkerque",
