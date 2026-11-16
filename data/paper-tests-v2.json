@@ -75,7 +75,7 @@
       "unitStake": 1,
       "simulatedStake": 50,
       "currency": "EUR",
-      "status": "pending",
+      "status": "won",
       "odds": 3.0176,
       "probability": 0.28165531037749814,
       "legs": [
@@ -144,7 +144,9 @@
           "femaleMatches": 0
         }
       ],
-      "searchLimited": false
+      "searchLimited": false,
+      "resultSource": "application-football-score",
+      "resultHistory": []
     },
     {
       "id": "paper-multisport-v2|2026-11-15|safe|football",
@@ -157,7 +159,7 @@
       "unitStake": 1,
       "simulatedStake": 100,
       "currency": "EUR",
-      "status": "pending",
+      "status": "won",
       "odds": 1.5,
       "probability": 0.6276217769492564,
       "legs": [
@@ -210,7 +212,9 @@
           "femaleMatches": 0
         }
       ],
-      "searchLimited": false
+      "searchLimited": false,
+      "resultSource": "application-football-score",
+      "resultHistory": []
     },
     {
       "id": "paper-multisport-v2|2026-11-15|safe|tennis",

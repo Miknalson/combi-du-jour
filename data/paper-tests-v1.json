@@ -54,7 +54,7 @@
       "version": "algo-real-v1",
       "createdAt": "2026-11-15T07:39:44.955Z",
       "unitStake": 1,
-      "status": "pending",
+      "status": "lost",
       "odds": 3.1667999999999994,
       "probability": 0.26804557413682095,
       "legs": [
@@ -139,7 +139,9 @@
           "partial": false,
           "matches": 4
         }
-      ]
+      ],
+      "resultSource": "application-football-score",
+      "resultHistory": []
     },
     {
       "id": "paper-real-v1|2026-11-15|safe|football",
@@ -149,7 +151,7 @@
       "version": "safe-real-v1",
       "createdAt": "2026-11-15T07:39:44.955Z",
       "unitStake": 1,
-      "status": "pending",
+      "status": "won",
       "odds": 1.5,
       "probability": 0.6276217769492564,
       "legs": [
@@ -194,7 +196,9 @@
           "partial": false,
           "matches": 4
         }
-      ]
+      ],
+      "resultSource": "application-football-score",
+      "resultHistory": []
     },
     {
       "id": "paper-real-v1|2026-11-15|safe|tennis",
