@@ -43,7 +43,8 @@
     "oX": 3.25,
     "o2": 4.1,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "unl-kazakhstan-slovakia",
@@ -87,7 +88,8 @@
     "oX": 3.4,
     "o2": 1.72,
     "ou": {}
-   }
+   },
+   "score": "2-2"
   },
   {
    "id": "unl-estonia-bulgaria",
@@ -131,7 +133,8 @@
     "oX": 3.05,
     "o2": 3.3,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "unl-iceland-luxembourg",
@@ -175,7 +178,8 @@
     "oX": 5.5,
     "o2": 9.5,
     "ou": {}
-   }
+   },
+   "score": "3-0"
   },
   {
    "id": "unl-lithuania-liechtenstein",
@@ -219,7 +223,8 @@
     "oX": 6.75,
     "o2": 17.0,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "liga2-albacete-celta-fortuna",
@@ -263,7 +268,8 @@
     "oX": 3.9,
     "o2": 4.3,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "unl-germany-netherlands",
@@ -307,7 +313,8 @@
     "oX": 4.1,
     "o2": 3.15,
     "ou": {}
-   }
+   },
+   "score": "5-0"
   },
   {
    "id": "unl-gibraltar-malta",
@@ -351,7 +358,8 @@
     "oX": 3.45,
     "o2": 1.46,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "unl-greece-serbia",
@@ -395,7 +403,8 @@
     "oX": 4.5,
     "o2": 5.8,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "unl-north-macedonia-slovenia",
@@ -439,7 +448,8 @@
     "oX": 3.75,
     "o2": 1.47,
     "ou": {}
-   }
+   },
+   "score": "0-3"
   },
   {
    "id": "unl-switzerland-scotland",
@@ -483,7 +493,8 @@
     "oX": 3.6,
     "o2": 4.3,
     "ou": {}
-   }
+   },
+   "score": "4-0"
   }
  ],
  "updatedAt": "2026-11-16T07:49:27Z",
