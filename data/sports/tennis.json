@@ -1,209 +1,12 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-17T03:56:07.590167+00:00",
-  "status": "ok",
-  "matches": [
-    {
-      "id": "tennis-b347b8bd2e85f10eca7dc7160026443b",
-      "sport": "tennis",
-      "league": "ATP Finals",
-      "kickoff": "2026-11-17T13:00:00Z",
-      "home": "Arthur Fils",
-      "away": "Rafael Jodar",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-17T03:55:22Z",
-      "market": "h2h",
-      "o1": 1.78,
-      "o2": 1.88,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:55:22Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Arthur Fils",
-              "odds": 1.78,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Rafael Jodar",
-              "odds": 1.88,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_finals",
-      "eventId": "b347b8bd2e85f10eca7dc7160026443b",
-      "gender": "unspecified",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "tennis-f0a6612a0e894025a58459b04ecd02c9",
-      "sport": "tennis",
-      "league": "ATP Finals",
-      "kickoff": "2026-11-17T19:30:00Z",
-      "home": "Alexander Zverev",
-      "away": "Ben Shelton",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-17T03:55:22Z",
-      "market": "h2h",
-      "o1": 1.4,
-      "o2": 2.55,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:55:22Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Alexander Zverev",
-              "odds": 1.4,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Ben Shelton",
-              "odds": 2.55,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_finals",
-      "eventId": "f0a6612a0e894025a58459b04ecd02c9",
-      "gender": "unspecified",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "tennis-a3e64105988f48f4c6447c9ca6de0030",
-      "sport": "tennis",
-      "league": "ATP Finals",
-      "kickoff": "2026-11-18T13:00:00Z",
-      "home": "Carlos Alcaraz",
-      "away": "Daniil Medvedev",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-17T03:55:22Z",
-      "market": "h2h",
-      "o1": 1.22,
-      "o2": 3.35,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:55:22Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Carlos Alcaraz",
-              "odds": 1.22,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Daniil Medvedev",
-              "odds": 3.35,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_finals",
-      "eventId": "a3e64105988f48f4c6447c9ca6de0030",
-      "gender": "unspecified",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "tennis-5f11f792535a031c557f8a33a8093f18",
-      "sport": "tennis",
-      "league": "ATP Finals",
-      "kickoff": "2026-11-18T19:30:00Z",
-      "home": "Flavio Cobolli",
-      "away": "Frances Tiafoe",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-17T03:55:22Z",
-      "market": "h2h",
-      "o1": 1.88,
-      "o2": 1.7,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:55:22Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Flavio Cobolli",
-              "odds": 1.88,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Frances Tiafoe",
-              "odds": 1.7,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "tennis_atp_finals",
-      "eventId": "5f11f792535a031c557f8a33a8093f18",
-      "gender": "unspecified",
-      "availableMarkets": [
-        "h2h"
-      ],
-      "uncollectedMarkets": []
-    }
-  ],
-  "leaguesQueried": 1,
+  "updatedAt": "2026-11-17T15:53:42.123054+00:00",
+  "status": "quota",
+  "matches": [],
+  "leaguesQueried": 0,
   "leaguesAvailable": 1,
-  "partial": false,
+  "partial": true,
   "competitions": [
     {
       "key": "tennis_atp_aus_open_singles",
@@ -525,5 +328,35 @@
     }
   ],
   "winamaxUnavailableLeagues": 0,
-  "femaleMatches": 0
+  "femaleMatches": 0,
+  "fixtures": [
+    {
+      "id": "tennis-f0a6612a0e894025a58459b04ecd02c9",
+      "sportKey": "tennis_atp_finals",
+      "league": "ATP Finals",
+      "home": "Alexander Zverev",
+      "away": "Ben Shelton",
+      "kickoff": "2026-11-17T19:30:00Z",
+      "gender": "unspecified"
+    },
+    {
+      "id": "tennis-a3e64105988f48f4c6447c9ca6de0030",
+      "sportKey": "tennis_atp_finals",
+      "league": "ATP Finals",
+      "home": "Carlos Alcaraz",
+      "away": "Daniil Medvedev",
+      "kickoff": "2026-11-18T13:00:00Z",
+      "gender": "unspecified"
+    },
+    {
+      "id": "tennis-5f11f792535a031c557f8a33a8093f18",
+      "sportKey": "tennis_atp_finals",
+      "league": "ATP Finals",
+      "home": "Flavio Cobolli",
+      "away": "Frances Tiafoe",
+      "kickoff": "2026-11-18T19:30:00Z",
+      "gender": "unspecified"
+    }
+  ],
+  "calendarStatus": "cached"
 }

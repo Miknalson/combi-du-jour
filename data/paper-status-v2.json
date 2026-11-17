@@ -1,9 +1,7 @@
 {
   "status": "running",
-  "updatedAt": "2026-11-17T04:02:10.318Z",
+  "updatedAt": "2026-11-17T15:53:46.932Z",
   "availableSports": [
-    "basket",
-    "tennis",
     "rugby_xiii"
   ],
   "sourceStatus": [
@@ -18,14 +16,14 @@
       "sport": "basket",
       "status": "ok",
       "partial": true,
-      "matches": 19,
+      "matches": 0,
       "femaleMatches": 0
     },
     {
       "sport": "tennis",
-      "status": "ok",
-      "partial": false,
-      "matches": 4,
+      "status": "quota",
+      "partial": true,
+      "matches": 0,
       "femaleMatches": 0
     },
     {
