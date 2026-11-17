@@ -1,7 +1,13 @@
 {
   "sport": "volley",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-16T15:33:52.812111+00:00",
-  "status": "unavailable",
-  "matches": []
+  "updatedAt": "2026-11-17T03:43:46.345443+00:00",
+  "status": "unsupported",
+  "matches": [],
+  "leaguesQueried": 0,
+  "leaguesAvailable": 0,
+  "partial": false,
+  "competitions": [],
+  "winamaxUnavailableLeagues": 0,
+  "femaleMatches": 0
 }

@@ -1,7 +1,1065 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-16T15:33:52.812111+00:00",
-  "status": "unavailable",
-  "matches": []
+  "updatedAt": "2026-11-17T03:43:46.345443+00:00",
+  "status": "quota",
+  "matches": [],
+  "leaguesQueried": 0,
+  "leaguesAvailable": 22,
+  "partial": true,
+  "competitions": [
+    {
+      "key": "soccer_africa_cup_of_nations",
+      "title": "Africa Cup of Nations",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_argentina_primera_division",
+      "title": "Primera División - Argentina",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_australia_aleague",
+      "title": "A-League",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_austria_bundesliga",
+      "title": "Austrian Football Bundesliga",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_belgium_first_div",
+      "title": "Belgium First Div",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_brazil_campeonato",
+      "title": "Brazil Série A",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_brazil_serie_b",
+      "title": "Brazil Série B",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_chile_campeonato",
+      "title": "Primera División - Chile",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_china_superleague",
+      "title": "Super League - China",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_concacaf_gold_cup",
+      "title": "CONCACAF Gold Cup",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_concacaf_leagues_cup",
+      "title": "Leagues Cup",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_conmebol_copa_america",
+      "title": "Copa América",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_conmebol_copa_libertadores",
+      "title": "Copa Libertadores",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_conmebol_copa_sudamericana",
+      "title": "Copa Sudamericana",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_denmark_superliga",
+      "title": "Denmark Superliga",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_efl_champ",
+      "title": "Championship",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_england_efl_cup",
+      "title": "EFL Cup",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_england_efl_trophy",
+      "title": "EFL Trophy",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_england_league1",
+      "title": "League 1",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_england_league2",
+      "title": "League 2",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_epl",
+      "title": "EPL",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_fa_cup",
+      "title": "FA Cup",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_fifa_club_world_cup",
+      "title": "FIFA Club World Cup",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_fifa_world_cup",
+      "title": "FIFA World Cup",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_fifa_world_cup_qualifiers_europe",
+      "title": "FIFA World Cup Qualifiers - Europe",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_fifa_world_cup_qualifiers_south_america",
+      "title": "FIFA World Cup Qualifiers - South America",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_fifa_world_cup_winner",
+      "title": "FIFA World Cup Winner",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_fifa_world_cup_womens",
+      "title": "FIFA Women's World Cup",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "soccer_finland_veikkausliiga",
+      "title": "Veikkausliiga - Finland",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_france_coupe_de_france",
+      "title": "Coupe de France",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_france_ligue_one",
+      "title": "Ligue 1 - France",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_france_ligue_two",
+      "title": "Ligue 2 - France",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_germany_bundesliga",
+      "title": "Bundesliga - Germany",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_germany_bundesliga2",
+      "title": "Bundesliga 2 - Germany",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_germany_bundesliga_women",
+      "title": "Frauen-Bundesliga",
+      "active": false,
+      "gender": "women"
+    },
+    {
+      "key": "soccer_germany_dfb_pokal",
+      "title": "DFB-Pokal",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_germany_liga3",
+      "title": "3. Liga - Germany",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_greece_super_league",
+      "title": "Super League - Greece",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_italy_coppa_italia",
+      "title": "Coppa Italia",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_italy_serie_a",
+      "title": "Serie A - Italy",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_italy_serie_b",
+      "title": "Serie B - Italy",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_japan_j_league",
+      "title": "J League",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_korea_kleague1",
+      "title": "K League 1",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_league_of_ireland",
+      "title": "League of Ireland",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_mexico_ligamx",
+      "title": "Liga MX",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_netherlands_eredivisie",
+      "title": "Dutch Eredivisie",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_norway_eliteserien",
+      "title": "Eliteserien - Norway",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_poland_ekstraklasa",
+      "title": "Ekstraklasa - Poland",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_portugal_primeira_liga",
+      "title": "Primeira Liga - Portugal",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_russia_premier_league",
+      "title": "Premier League - Russia",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_saudi_arabia_pro_league",
+      "title": "Saudi Pro League",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_spain_copa_del_rey",
+      "title": "Copa del Rey",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_spain_la_liga",
+      "title": "La Liga - Spain",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_spain_segunda_division",
+      "title": "La Liga 2 - Spain",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_spl",
+      "title": "Premiership - Scotland",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_sweden_allsvenskan",
+      "title": "Allsvenskan - Sweden",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_sweden_superettan",
+      "title": "Superettan - Sweden",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_switzerland_superleague",
+      "title": "Swiss Superleague",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_turkey_super_league",
+      "title": "Turkey Super League",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_uefa_champs_league",
+      "title": "UEFA Champions League",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_uefa_champs_league_qualification",
+      "title": "UEFA Champions League Qualification",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_uefa_champs_league_women",
+      "title": "UEFA Champions League Women",
+      "active": true,
+      "gender": "women"
+    },
+    {
+      "key": "soccer_uefa_euro_qualification",
+      "title": "UEFA Euro Qualification",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_uefa_europa_conference_league",
+      "title": "UEFA Europa Conference League",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_uefa_europa_league",
+      "title": "UEFA Europa League",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_uefa_european_championship",
+      "title": "UEFA Euro",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_uefa_nations_league",
+      "title": "UEFA Nations League",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "soccer_usa_mls",
+      "title": "MLS",
+      "active": true,
+      "gender": "unspecified"
+    }
+  ],
+  "winamaxUnavailableLeagues": 0,
+  "femaleMatches": 0,
+  "fixtures": [
+    {
+      "id": "football-e71a4a4fea03d00873c285c5b55a9864",
+      "sportKey": "soccer_uefa_nations_league",
+      "leagueCode": "UNL",
+      "league": "UEFA Nations League",
+      "home": "Israel",
+      "away": "Austria",
+      "kickoff": "2026-11-17T19:45:00Z"
+    },
+    {
+      "id": "football-3eb1d15a190bb1be8c32a020365dc7c2",
+      "sportKey": "soccer_uefa_nations_league",
+      "leagueCode": "UNL",
+      "league": "UEFA Nations League",
+      "home": "Bosnia & Herzegovina",
+      "away": "Romania",
+      "kickoff": "2026-11-17T19:45:00Z"
+    },
+    {
+      "id": "football-770e80269ec2ffddc826bc50330c475b",
+      "sportKey": "soccer_uefa_nations_league",
+      "leagueCode": "UNL",
+      "league": "UEFA Nations League",
+      "home": "Denmark",
+      "away": "Norway",
+      "kickoff": "2026-11-17T19:45:00Z"
+    },
+    {
+      "id": "football-91b890f5fd20440cb272721b8a89a33d",
+      "sportKey": "soccer_uefa_nations_league",
+      "leagueCode": "UNL",
+      "league": "UEFA Nations League",
+      "home": "Ukraine",
+      "away": "Georgia",
+      "kickoff": "2026-11-17T19:45:00Z"
+    },
+    {
+      "id": "football-1a07e9080f042594bdb529ab932d680c",
+      "sportKey": "soccer_uefa_nations_league",
+      "leagueCode": "UNL",
+      "league": "UEFA Nations League",
+      "home": "Hungary",
+      "away": "Northern Ireland",
+      "kickoff": "2026-11-17T19:45:00Z"
+    },
+    {
+      "id": "football-a6c9b424fddccea76aab09880b69dd31",
+      "sportKey": "soccer_uefa_nations_league",
+      "leagueCode": "UNL",
+      "league": "UEFA Nations League",
+      "home": "Republic of Ireland",
+      "away": "Kosovo",
+      "kickoff": "2026-11-17T19:45:00Z"
+    },
+    {
+      "id": "football-aab74efad72e8096e774c7104189ff09",
+      "sportKey": "soccer_uefa_nations_league",
+      "leagueCode": "UNL",
+      "league": "UEFA Nations League",
+      "home": "Poland",
+      "away": "Sweden",
+      "kickoff": "2026-11-17T19:45:00Z"
+    },
+    {
+      "id": "football-955a201ba2266b8b6b0519e0265eb354",
+      "sportKey": "soccer_uefa_nations_league",
+      "leagueCode": "UNL",
+      "league": "UEFA Nations League",
+      "home": "Wales",
+      "away": "Portugal",
+      "kickoff": "2026-11-17T19:45:00Z"
+    },
+    {
+      "id": "football-8d017c6bef33aa894ea91e1c1f3a5299",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "BK Hacken",
+      "away": "Manchester City",
+      "kickoff": "2026-11-18T17:45:00Z"
+    },
+    {
+      "id": "football-2ff809e70c96071b20b2ad3f6123fe8f",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "Real Madrid",
+      "away": "Inter Milan",
+      "kickoff": "2026-11-18T17:45:00Z"
+    },
+    {
+      "id": "football-122669be0e839fcda949d054af3ddc7f",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "Chelsea",
+      "away": "Paris Saint Germain",
+      "kickoff": "2026-11-18T20:00:00Z"
+    },
+    {
+      "id": "football-e8aea25fa4a2c167c4f565a0a3703676",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "Juventus",
+      "away": "Leuven",
+      "kickoff": "2026-11-18T20:00:00Z"
+    },
+    {
+      "id": "football-46c323a078772696b526e9e4a4f2e7ff",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "Austria Wien",
+      "away": "Bayern Munich",
+      "kickoff": "2026-11-19T17:45:00Z"
+    },
+    {
+      "id": "football-f717126e06b5b6e5166255be6f486dde",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "Paris FC",
+      "away": "HB Køge",
+      "kickoff": "2026-11-19T17:45:00Z"
+    },
+    {
+      "id": "football-0059f14500bb56dd00fc99fb8a4bd987",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "Benfica",
+      "away": "AS Roma",
+      "kickoff": "2026-11-19T20:00:00Z"
+    },
+    {
+      "id": "football-a94ea221001eb7a9816e94f5a821c169",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "Arsenal",
+      "away": "Lyon",
+      "kickoff": "2026-11-19T20:00:00Z"
+    },
+    {
+      "id": "football-fa391596e09654602dc180a0c8d43e9f",
+      "sportKey": "soccer_uefa_champs_league_women",
+      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
+      "league": "UEFA Champions League Women",
+      "home": "Barcelona",
+      "away": "Servette FC",
+      "kickoff": "2026-11-19T20:00:00Z"
+    },
+    {
+      "id": "football-e422af92d1fc06c0a330838c1c2f2e08",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Galatasaray",
+      "away": "Aston Villa",
+      "kickoff": "2026-11-24T17:45:00Z"
+    },
+    {
+      "id": "football-50b80f3ebd38bf63663b11ae0afc575b",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Bodø/Glimt",
+      "away": "LASK",
+      "kickoff": "2026-11-24T17:45:00Z"
+    },
+    {
+      "id": "football-ba719e378ac366262013bdb51a06aa6f",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Como",
+      "away": "AEK Athens",
+      "kickoff": "2026-11-24T20:00:00Z"
+    },
+    {
+      "id": "football-aee4e3c225603397ab52de3d066b566b",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Arsenal",
+      "away": "Borussia Dortmund",
+      "kickoff": "2026-11-24T20:00:00Z"
+    },
+    {
+      "id": "football-9a2ebad454db4ab3d53b89e96c79847a",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Feyenoord",
+      "away": "Porto",
+      "kickoff": "2026-11-24T20:00:00Z"
+    },
+    {
+      "id": "football-b9f00a4d399ec661e733857c9d5fb2dc",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Manchester City",
+      "away": "Napoli",
+      "kickoff": "2026-11-24T20:00:00Z"
+    },
+    {
+      "id": "football-3fb5e4a792cf34a0459efcb79a11a785",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Real Madrid",
+      "away": "PSV Eindhoven",
+      "kickoff": "2026-11-24T20:00:00Z"
+    },
+    {
+      "id": "football-aea973c122c91837c15e066c757c747f",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "RB Leipzig",
+      "away": "RC Lens",
+      "kickoff": "2026-11-24T20:00:00Z"
+    },
+    {
+      "id": "football-8e93849b4c1ccbf1c207836d5c470150",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "ŠK Slovan Bratislava",
+      "away": "Real Betis",
+      "kickoff": "2026-11-24T20:00:00Z"
+    },
+    {
+      "id": "football-e6fa007f93e0cef004be920f96ee95ba",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Sabah FK",
+      "away": "Barcelona",
+      "kickoff": "2026-11-25T17:45:00Z"
+    },
+    {
+      "id": "football-a7c87fac9e9cbcfc02ad0e0b29ca89e2",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Slavia Praha",
+      "away": "Villarreal",
+      "kickoff": "2026-11-25T17:45:00Z"
+    },
+    {
+      "id": "football-14007bc0605bce3bd164b132254ba24c",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Paris Saint Germain",
+      "away": "AS Roma",
+      "kickoff": "2026-11-25T20:00:00Z"
+    },
+    {
+      "id": "football-b1af6789fe6db7aab18a2945ce56f035",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Atlético Madrid",
+      "away": "Viking FK",
+      "kickoff": "2026-11-25T20:00:00Z"
+    },
+    {
+      "id": "football-0ee2cfddf20153779cd2cc3e1f1f879f",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Lille",
+      "away": "Bayern Munich",
+      "kickoff": "2026-11-25T20:00:00Z"
+    },
+    {
+      "id": "football-99459b90f3e732106e09585bf94b36b4",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Club Brugge",
+      "away": "Liverpool",
+      "kickoff": "2026-11-25T20:00:00Z"
+    },
+    {
+      "id": "football-49c66d76bc4085e63a181179cc47ef4d",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Shakhtar Donetsk",
+      "away": "Fenerbahce",
+      "kickoff": "2026-11-25T20:00:00Z"
+    },
+    {
+      "id": "football-e7e64568f6af00d395a3fdfc27de8ae3",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Inter Milan",
+      "away": "VfB Stuttgart",
+      "kickoff": "2026-11-25T20:00:00Z"
+    },
+    {
+      "id": "football-01a61442fe04f8751b62eb251f234079",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UEFA Champions League",
+      "home": "Sporting Lisbon",
+      "away": "Manchester United",
+      "kickoff": "2026-11-25T20:00:00Z"
+    },
+    {
+      "id": "football-b11e430b1d8052d0c718bcee69145f7a",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "FC Kairat",
+      "away": "Mjällby AIF",
+      "kickoff": "2026-11-26T15:30:00Z"
+    },
+    {
+      "id": "football-e1bfce2837ee873eec90dbefe31844ac",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "SK Brann",
+      "away": "AGF Aarhus",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-c587e5656d1f38f068cba1b168462ba4",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "Hearts",
+      "away": "AS Monaco",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-8a0dc963ce319d55751d4d07c5152600",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "Ajax",
+      "away": "FC Thun",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-bbab118a8c6ca33b6b0e7b5ed36fecd8",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "Brighton and Hove Albion",
+      "away": "Universitatea Craiova",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-cbe7d454dbea3c32de84901cced19bd4",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "FC Iberia 1999",
+      "away": "Getafe",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-4f5b1a808bafc37b7c0041e947c2e536",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "FK Jablonec",
+      "away": "FC Lugano",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-48a49061ae356d2a8b3b3976ec21508d",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "Pafos FC",
+      "away": "FC Midtjylland",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-679c499344805de09a59a2a2535cd0c8",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "FK Kauno Žalgiris",
+      "away": "Riga FC",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-cb6689f811b7ce08379eef028e2254a4",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "KF Egnatia",
+      "away": "Lincoln Red Imps FC",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-31ebd41354699af625fa3372932206f0",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Olympiakos Piraeus",
+      "away": "AC Milan",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-cdf4b848361b0374c2027326bd54d8eb",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Dinamo Zagreb",
+      "away": "Bayer Leverkusen",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-38332e4cbb2b3991904b00a75dc3769d",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Viktoria Plzeň",
+      "away": "Benfica",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-a18687d4f17a96a7732fb0c8673ea037",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Besiktas JK",
+      "away": "Hapoel Be'er Sheva",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-7da3be4f6fe50a39ecdf3a8dc12966c8",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Celta Vigo",
+      "away": "Bournemouth",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-5902b4703e9ddc1f573091e14107834c",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Salzburg",
+      "away": "FC Ararat-Armenia",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-3ee2bf8a6fa6add543f64ac3e9813976",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Union Saint-Gilloise",
+      "away": "Lech Poznań",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-707c513bfa43b45b7813126e09ad08d8",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Marseille",
+      "away": "PFC Levski Sofia",
+      "kickoff": "2026-11-26T17:45:00Z"
+    },
+    {
+      "id": "football-1f0d932ff8b08ed2c3b775e60d92bb4e",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "FK Borac Banja Luka",
+      "away": "Atalanta BC",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-4f10f55b47b83f7f4f2a8cd745a9e67f",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "Inter Club d'Escaldes",
+      "away": "FC Copenhagen",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-92db66d09fdcf10ff8561cb7ec09732e",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "FC Nordsjaelland",
+      "away": "Panathinaikos FC",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-dd5f6def5ea1aa9e0a0f45e3605ac64e",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "SC Freiburg",
+      "away": "FC Twente Enschede",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-3c6175802b9110c0abdb30f491965093",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "Gent",
+      "away": "Red Star Belgrade",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-9f2cd85ad777bea9550b987dc409b280",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "Hajduk Split",
+      "away": "Sint Truiden",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-1abbe02767589722b5de92e94e96429d",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "SC Braga",
+      "away": "KuPS Kuopio",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-491426b0dae5aecf2b92525815131cb2",
+      "sportKey": "soccer_uefa_europa_conference_league",
+      "leagueCode": "UECL",
+      "league": "UEFA Europa Conference League",
+      "home": "PFC CSKA Sofia",
+      "away": "Trabzonspor",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-189401357a4b5e5920ca9ec1207a6566",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Sparta Prague",
+      "away": "AZ Alkmaar",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-de10dd2e5917108a9478c07275ba8cdb",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "OFI Crete",
+      "away": "Anderlecht",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-e2036567ee9394a55f022358781dce15",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Torreense",
+      "away": "Celtic",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-3fe17778f32b5fd0f218f9be6b0681cc",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Crystal Palace",
+      "away": "Real Sociedad",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-0e5553b52ece07115fbdf8145df0c377",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Ferencváros TC",
+      "away": "NK Celje",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-413409b43875d1bdb627a9e7fb6bc3fd",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Sunderland",
+      "away": "Jagiellonia Białystok",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-d6377d30379e5d3053c1076646d83f78",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Juventus",
+      "away": "Omonoia FC",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-a24c89b65c5a30fb9473735049589e64",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "Lyon",
+      "away": "Lillestrom",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-e836bc70afa19b0db28fb320a97662e4",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "NEC Nijmegen",
+      "away": "Rennes",
+      "kickoff": "2026-11-26T20:00:00Z"
+    },
+    {
+      "id": "football-df4947bbe49057782feacca38c03e790",
+      "sportKey": "soccer_uefa_europa_league",
+      "leagueCode": "UEL",
+      "league": "UEFA Europa League",
+      "home": "TSG Hoffenheim",
+      "away": "SK Sturm Graz",
+      "kickoff": "2026-11-26T20:00:00Z"
+    }
+  ],
+  "calendarStatus": "ok",
+  "horizonDays": 14
 }

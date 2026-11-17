@@ -1,60 +1,64 @@
 {
-  "status": "waiting_for_fresh_quotes",
-  "updatedAt": "2026-11-16T15:33:54.311Z",
-  "availableSports": [],
+  "status": "running",
+  "updatedAt": "2026-11-17T03:43:55.671Z",
+  "availableSports": [
+    "basket",
+    "tennis",
+    "rugby_xiii"
+  ],
   "sourceStatus": [
     {
       "sport": "football",
-      "status": "unavailable",
-      "partial": false,
+      "status": "quota",
+      "partial": true,
       "matches": 0,
       "femaleMatches": 0
     },
     {
       "sport": "basket",
-      "status": "unavailable",
-      "partial": false,
-      "matches": 0,
+      "status": "ok",
+      "partial": true,
+      "matches": 19,
       "femaleMatches": 0
     },
     {
       "sport": "tennis",
-      "status": "unavailable",
+      "status": "ok",
       "partial": false,
-      "matches": 0,
+      "matches": 4,
       "femaleMatches": 0
     },
     {
       "sport": "rugby_xv",
-      "status": "unavailable",
+      "status": "inactive",
       "partial": false,
       "matches": 0,
       "femaleMatches": 0
     },
     {
       "sport": "rugby_xiii",
-      "status": "unavailable",
+      "status": "ok",
       "partial": false,
       "matches": 0,
       "femaleMatches": 0
     },
     {
       "sport": "football_us",
-      "status": "unavailable",
-      "partial": false,
+      "status": "quota",
+      "partial": true,
       "matches": 0,
       "femaleMatches": 0
     },
     {
       "sport": "hockey",
-      "status": "unavailable",
-      "partial": false,
+      "status": "quota",
+      "partial": true,
       "matches": 0,
       "femaleMatches": 0
     },
     {
       "sport": "volley",
-      "status": "unavailable",
+      "status": "unsupported",
       "partial": false,
       "matches": 0,
       "femaleMatches": 0

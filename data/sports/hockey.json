@@ -1,7 +1,62 @@
 {
   "sport": "hockey",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-16T15:33:52.812111+00:00",
-  "status": "unavailable",
-  "matches": []
+  "updatedAt": "2026-11-17T03:43:46.345443+00:00",
+  "status": "quota",
+  "matches": [],
+  "leaguesQueried": 0,
+  "leaguesAvailable": 6,
+  "partial": true,
+  "competitions": [
+    {
+      "key": "icehockey_ahl",
+      "title": "AHL",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "icehockey_liiga",
+      "title": "Liiga",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "icehockey_mestis",
+      "title": "Mestis",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "icehockey_nhl",
+      "title": "NHL",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "icehockey_nhl_championship_winner",
+      "title": "NHL Championship Winner",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "icehockey_nhl_preseason",
+      "title": "NHL Preseason",
+      "active": false,
+      "gender": "unspecified"
+    },
+    {
+      "key": "icehockey_sweden_allsvenskan",
+      "title": "HockeyAllsvenskan",
+      "active": true,
+      "gender": "unspecified"
+    },
+    {
+      "key": "icehockey_sweden_hockey_league",
+      "title": "SHL",
+      "active": true,
+      "gender": "unspecified"
+    }
+  ],
+  "winamaxUnavailableLeagues": 0,
+  "femaleMatches": 0
 }
