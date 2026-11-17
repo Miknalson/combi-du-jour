@@ -1,7 +1,7 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-17T03:43:46.345443+00:00",
+  "updatedAt": "2026-11-17T03:56:07.590167+00:00",
   "status": "ok",
   "matches": [
     {
@@ -13,7 +13,7 @@
       "away": "Rafael Jodar",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:42:28Z",
+      "asOf": "2026-11-17T03:55:22Z",
       "market": "h2h",
       "o1": 1.78,
       "o2": 1.88,
@@ -26,7 +26,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:42:28Z",
+          "asOf": "2026-11-17T03:55:22Z",
           "outcomes": [
             {
               "code": "1",
@@ -62,7 +62,7 @@
       "away": "Ben Shelton",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:42:28Z",
+      "asOf": "2026-11-17T03:55:22Z",
       "market": "h2h",
       "o1": 1.4,
       "o2": 2.55,
@@ -75,7 +75,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:42:28Z",
+          "asOf": "2026-11-17T03:55:22Z",
           "outcomes": [
             {
               "code": "1",
@@ -111,7 +111,7 @@
       "away": "Daniil Medvedev",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:42:28Z",
+      "asOf": "2026-11-17T03:55:22Z",
       "market": "h2h",
       "o1": 1.22,
       "o2": 3.35,
@@ -124,7 +124,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:42:28Z",
+          "asOf": "2026-11-17T03:55:22Z",
           "outcomes": [
             {
               "code": "1",
@@ -160,7 +160,7 @@
       "away": "Frances Tiafoe",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:42:28Z",
+      "asOf": "2026-11-17T03:55:22Z",
       "market": "h2h",
       "o1": 1.88,
       "o2": 1.7,
@@ -173,7 +173,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:42:28Z",
+          "asOf": "2026-11-17T03:55:22Z",
           "outcomes": [
             {
               "code": "1",

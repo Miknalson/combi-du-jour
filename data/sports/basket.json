@@ -1,7 +1,7 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-17T03:43:46.345443+00:00",
+  "updatedAt": "2026-11-17T03:56:07.590167+00:00",
   "status": "ok",
   "matches": [
     {
@@ -13,7 +13,7 @@
       "away": "Anadolu Efes",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 1.2,
       "o2": 3.2,
@@ -26,7 +26,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -62,7 +62,7 @@
       "away": "Olympiacos",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 2.75,
       "o2": 1.27,
@@ -75,7 +75,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -111,7 +111,7 @@
       "away": "ASVEL Lyon Villeurbanne",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 1.09,
       "o2": 4.4,
@@ -124,7 +124,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -160,7 +160,7 @@
       "away": "FC Bayern München",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 1.16,
       "o2": 3.55,
@@ -173,7 +173,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -209,7 +209,7 @@
       "away": "Paris Basketball",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 1.29,
       "o2": 2.7,
@@ -222,7 +222,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -254,7 +254,7 @@
       "away": "Hapoel Tel Aviv",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 3.0,
       "o2": 1.23,
@@ -267,7 +267,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -299,7 +299,7 @@
       "away": "KK Crvena zvezda",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 1.84,
       "o2": 1.66,
@@ -312,7 +312,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -344,7 +344,7 @@
       "away": "Valencia Basket",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 1.8,
       "o2": 1.68,
@@ -357,7 +357,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -389,7 +389,7 @@
       "away": "Panathinaikos",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 3.35,
       "o2": 1.18,
@@ -402,7 +402,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -434,7 +434,7 @@
       "away": "Real Madrid",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 2.55,
       "o2": 1.33,
@@ -447,7 +447,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -479,7 +479,7 @@
       "away": "Dubai Basketball",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 2.3,
       "o2": 1.41,
@@ -492,7 +492,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -524,7 +524,7 @@
       "away": "Panathinaikos",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 1.84,
       "o2": 1.66,
@@ -537,7 +537,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -569,7 +569,7 @@
       "away": "Saski Baskonia",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 1.28,
       "o2": 2.75,
@@ -582,7 +582,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -614,7 +614,7 @@
       "away": "Fenerbahce SK",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 2.4,
       "o2": 1.36,
@@ -627,7 +627,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -659,7 +659,7 @@
       "away": "Hapoel Tel Aviv",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:06Z",
       "market": "h2h",
       "o1": 2.3,
       "o2": 1.41,
@@ -672,7 +672,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:06Z",
           "outcomes": [
             {
               "code": "1",
@@ -704,7 +704,7 @@
       "away": "Virtus Segafredo Bologna",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:07Z",
       "market": "h2h",
       "o1": 1.19,
       "o2": 3.25,
@@ -717,7 +717,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:07Z",
           "outcomes": [
             {
               "code": "1",
@@ -749,7 +749,7 @@
       "away": "ASVEL Lyon Villeurbanne",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:07Z",
       "market": "h2h",
       "o1": 1.34,
       "o2": 2.5,
@@ -762,7 +762,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:07Z",
           "outcomes": [
             {
               "code": "1",
@@ -794,7 +794,7 @@
       "away": "Real Madrid",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:07Z",
       "market": "h2h",
       "o1": 1.6,
       "o2": 1.92,
@@ -807,7 +807,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:07Z",
           "outcomes": [
             {
               "code": "1",
@@ -839,7 +839,7 @@
       "away": "Beşiktaş J.K.",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-17T03:43:13Z",
+      "asOf": "2026-11-17T03:56:07Z",
       "market": "h2h",
       "o1": 1.36,
       "o2": 2.4,
@@ -852,7 +852,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-17T03:43:13Z",
+          "asOf": "2026-11-17T03:56:07Z",
           "outcomes": [
             {
               "code": "1",
@@ -943,7 +943,7 @@
     {
       "key": "basketball_wncaab",
       "title": "WNCAAB",
-      "active": true,
+      "active": false,
       "gender": "women"
     }
   ],

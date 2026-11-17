@@ -1,8 +1,65 @@
 {
-  "updatedAt": "2026-11-17T03:43:45.964665+00:00",
-  "stage": "provider",
-  "status": "ok",
-  "competitions": 187,
-  "creditsRemaining": 53,
-  "message": "Connexion au fournisseur de cotes disponible."
+  "updatedAt": "2026-11-17T03:56:12.025119+00:00",
+  "stage": "collection",
+  "sports": [
+    {
+      "sport": "football",
+      "status": "quota",
+      "matches": 0,
+      "updatedAt": "2026-11-17T03:56:07.590167+00:00",
+      "partial": true
+    },
+    {
+      "sport": "basket",
+      "status": "ok",
+      "matches": 19,
+      "updatedAt": "2026-11-17T03:56:07.590167+00:00",
+      "partial": true
+    },
+    {
+      "sport": "tennis",
+      "status": "ok",
+      "matches": 4,
+      "updatedAt": "2026-11-17T03:56:07.590167+00:00",
+      "partial": false
+    },
+    {
+      "sport": "rugby_xv",
+      "status": "inactive",
+      "matches": 0,
+      "updatedAt": "2026-11-17T03:56:07.590167+00:00",
+      "partial": false
+    },
+    {
+      "sport": "rugby_xiii",
+      "status": "ok",
+      "matches": 0,
+      "updatedAt": "2026-11-17T03:56:07.590167+00:00",
+      "partial": false
+    },
+    {
+      "sport": "football_us",
+      "status": "quota",
+      "matches": 0,
+      "updatedAt": "2026-11-17T03:56:07.590167+00:00",
+      "partial": true
+    },
+    {
+      "sport": "hockey",
+      "status": "quota",
+      "matches": 0,
+      "updatedAt": "2026-11-17T03:56:07.590167+00:00",
+      "partial": true
+    },
+    {
+      "sport": "volley",
+      "status": "unsupported",
+      "matches": 0,
+      "updatedAt": "2026-11-17T03:56:07.590167+00:00",
+      "partial": false
+    }
+  ],
+  "creditsRemaining": 29,
+  "status": "partial",
+  "message": "Collecte partielle : certains sports ou compétitions n’ont pas de cotes disponibles dans le budget de requêtes."
 }
