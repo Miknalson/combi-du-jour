@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/update_sports.py'
       - 'scripts/update_odds.py'
+      - 'scripts/check_quotes.py'
       - 'uefa.js'
       - '.github/workflows/cotes-sports.yml'
       - 'safe*'
@@ -60,13 +61,19 @@ jobs:
         run: |
           if [ ! -f data/paper-tests-v2.json ]; then
             echo "refresh=true" >> "$GITHUB_OUTPUT"
-          elif git diff --quiet HEAD^ HEAD -- scripts/update_sports.py scripts/update_odds.py; then
+          elif git diff --quiet HEAD^ HEAD -- scripts/update_sports.py scripts/update_odds.py scripts/check_quotes.py; then
             echo "refresh=false" >> "$GITHUB_OUTPUT"
           else
             echo "refresh=true" >> "$GITHUB_OUTPUT"
           fi
-      - name: Relever les cotes Winamax France
+      - name: Vérifier l’accès au fournisseur sans exposer la clé
+        id: provider
         if: github.event_name != 'push' || steps.quote_changes.outputs.refresh == 'true'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
+        run: python scripts/check_quotes.py
+      - name: Relever les cotes Winamax France
+        if: steps.provider.outputs.ready == 'true'
         continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
@@ -85,6 +92,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/sports/ data/days/ data/index.json
+          if [ -f data/collection-health.json ]; then git add data/collection-health.json; fi
           if [ -f data/notification-state.json ]; then git add data/notification-state.json; fi
           git add data/paper-tests-v1.json data/paper-status-v1.json data/paper-tests-v2.json data/paper-status-v2.json 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
