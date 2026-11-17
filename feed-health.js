@@ -1,0 +1,21 @@
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.FeedHealth=factory();})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+var labels={football:'Football',basket:'Basket',tennis:'Tennis',rugby_xv:'Rugby XV',rugby_xiii:'Rugby XIII',football_us:'Football américain',hockey:'Hockey',volley:'Volley'};
+var sources={ok:'Relevé disponible',quota:'Budget de requêtes atteint',unavailable:'Collecte indisponible',unconfigured:'Clé de cotes absente',unsupported:'Sport absent du fournisseur',inactive:'Compétitions inactives',no_winamax:'Aucune cote Winamax trouvée'};
+function esc(x){return String(x==null?'':x).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function stamp(t){return Number.isFinite(Date.parse(t))?new Date(t).toLocaleString('fr-FR',{timeZone:'Europe/Paris',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'non renseigné';}
+function calendar(matches,now){var ms=(matches||[]).filter(function(m){return Date.parse(m.kickoff)>now;}).sort(function(a,b){return Date.parse(a.kickoff)-Date.parse(b.kickoff);});return '<section class="fixture-fallback"><h3>Calendrier enregistré · '+ms.length+' rencontre(s)</h3><p>Les rencontres restent visibles même sans ticket Algo. Les horaires proviennent du calendrier enregistré ; ils sont à vérifier si la collecte est interrompue.</p>'+(ms.length?'<ul>'+ms.map(function(m){return '<li><strong>'+esc(m.home)+' – '+esc(m.away)+'</strong><br><small>'+esc(m.leagueTitle||m.league||'')+' · '+esc(stamp(m.kickoff))+' (Paris)</small></li>';}).join('')+'</ul>':'<p>Aucune rencontre à venir dans ce calendrier pour le jour choisi.</p>')+'</section>';}
+function render(collection,notifications,now){
+ var html='<h2>Collecte et notifications</h2>';
+ if(collection){var old=now-Date.parse(collection.updatedAt)>86400000;html+='<p><strong>'+esc(old?'La dernière vérification date de plus de 24 h.':collection.message||'État de la collecte')+'</strong><br><small>Vérification : '+esc(stamp(collection.updatedAt))+' (Paris)</small></p>';if(Number.isFinite(collection.creditsRemaining))html+='<p>Crédits de cotes restants lors du contrôle : '+collection.creditsRemaining+'. Ils sont répartis sur les jours restants du mois ; certains sports peuvent manquer de prix sur une collecte.</p>';if(collection.sports)html+='<ul>'+collection.sports.map(function(s){return '<li>'+esc(labels[s.sport]||s.sport)+' : '+esc(sources[s.status]||s.status)+(s.status==='ok'?' · '+s.matches+' rencontre(s) cotée(s)':'')+(s.partial?' · couverture partielle':'')+'</li>';}).join('')+'</ul>';
+ }else html+='<p>Le diagnostic de collecte n’est pas encore disponible. Cela ne confirme pas l’absence de rencontres.</p>';
+ if(notifications){html+='<p><strong>Alertes : </strong>'+esc(notifications.message)+'<br><small>Vérification : '+esc(stamp(notifications.updatedAt))+' (Paris)</small></p>';if(notifications.status==='unconfigured')html+='<a href="notifications.html">Configurer les alertes et le secret NTFY_TOPIC</a>';}
+ else html+='<p>Le serveur n’a pas encore publié son état d’envoi. Un test reçu sur ton téléphone ne vérifie pas le secret GitHub.</p>';
+ return html;
+}
+return {calendar:calendar,render:render};
+});
+if(typeof document!=='undefined'&&typeof FeedHealth!=='undefined'){
+ var healthTargets=document.querySelectorAll('[data-feed-health]');
+ if(healthTargets.length)Promise.all(['data/collection-health.json','data/notification-status.json'].map(function(file){return fetch(file,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});})).then(function(values){healthTargets.forEach(function(el){el.innerHTML=FeedHealth.render(values[0],values[1],Date.now());var details=el.closest('details'),summary=details&&details.querySelector('summary');if(summary&&values[1]&&values[1].status==='unconfigured')summary.textContent='Alertes automatiques à configurer';else if(summary&&values[1]&&values[1].status==='failed')summary.textContent='Échec d’envoi des alertes · voir le diagnostic';else if(summary&&values[0]&&values[0].status!=='ok')summary.textContent='Collecte partielle ou indisponible · voir le diagnostic';});});
+}

@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=reference1">
+<link rel="stylesheet" href="style.css?v=health1">
 </head>
 <body><nav aria-label="Alertes" style="max-width:1120px;margin:auto;padding:12px 20px"><a href="notifications.html">🔔 Mes alertes Algo / Safe</a></nav>
 <div class="wrap">
@@ -28,6 +28,7 @@
   </header>
 <nav class="sport-tabs" aria-label="Choisir un sport"><a href="./" aria-current="page">Football</a><a href="sports.html?sport=basket">Basket</a><a href="sports.html?sport=tennis">Tennis</a><a href="safe.html">Safe du jour</a></nav>
 <aside class="protocol-link"><strong>Protocole fictif multisport v2</strong><p>Mises enregistrées automatiquement en fictif : 100 € par Safe et 50 € par Algo, sur des cotes API récentes.</p><a href="tableau.html#paperProtocolV2">Voir les tickets de référence et leurs résultats figés</a></aside>
+<details class="model-study" id="deliveryStatus"><summary>État de la collecte et des notifications</summary><div data-feed-health></div></details>
 
   <section class="uefa-calendar" id="uefaFixtures" aria-label="Calendrier UEFA"></section>
   <nav class="days" id="days" aria-label="Choisir le jour"></nav>
@@ -121,7 +122,7 @@
   </footer>
 </div>
 
-<script src="sport-catalog.js?v=2"></script>
+<script src="feed-health.js?v=1"></script><script src="sport-catalog.js?v=2"></script>
 <script src="uefa.js?v=1"></script>
 <script src="ticket-reference.js?v=1"></script>
 <script src="model.js"></script>
@@ -488,7 +489,7 @@ function renderTicket(dayMatches){
     document.getElementById('altsSection').hidden=true;
     var record=state.referenceId?TicketReference.find(state.journal,state.referenceId):TicketReference.forDay(state.journal,state.selected,'algo','football');
     if(record&&record.method!=='algo')record=null;
-    document.getElementById('ticketArea').innerHTML=TicketReference.render(record,{unavailable:!state.journal,requestedId:state.referenceId});
+    document.getElementById('ticketArea').innerHTML=TicketReference.render(record,{unavailable:!state.journal,requestedId:state.referenceId})+(!record&&!state.referenceId?FeedHealth.calendar(dayMatches,Date.now()):'');
     return;
   }
   if(settings.strategy==='combo')return renderLegacyTicket(dayMatches);

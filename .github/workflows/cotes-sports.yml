@@ -6,6 +6,10 @@ on:
       - 'scripts/update_sports.py'
       - 'scripts/update_odds.py'
       - 'scripts/check_quotes.py'
+      - 'scripts/collect_quotes.py'
+      - 'feed-health.js'
+      - 'tests/test_collection_health.py'
+      - 'tests/feed-health-browser.cjs'
       - 'uefa.js'
       - '.github/workflows/cotes-sports.yml'
       - 'safe*'
@@ -35,6 +39,10 @@ concurrency:
   cancel-in-progress: false
 jobs:
   actualiser:
+    outputs:
+      provider_ready: ${{ steps.provider.outputs.ready }}
+      collection: ${{ steps.collection.outcome }}
+      notifications: ${{ steps.notifications.outcome }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -55,13 +63,14 @@ jobs:
           node tests/multisport.test.cjs
           node tests/alerts.test.cjs
           node tests/ticket-reference.test.cjs
+          python -m unittest discover -s tests -p 'test_collection_health.py'
       - name: Détecter une modification du collecteur
         id: quote_changes
         if: github.event_name == 'push'
         run: |
           if [ ! -f data/paper-tests-v2.json ]; then
             echo "refresh=true" >> "$GITHUB_OUTPUT"
-          elif git diff --quiet HEAD^ HEAD -- scripts/update_sports.py scripts/update_odds.py scripts/check_quotes.py; then
+          elif git diff --quiet HEAD^ HEAD -- scripts/update_sports.py scripts/update_odds.py scripts/check_quotes.py scripts/collect_quotes.py; then
             echo "refresh=false" >> "$GITHUB_OUTPUT"
           else
             echo "refresh=true" >> "$GITHUB_OUTPUT"
@@ -73,15 +82,17 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/check_quotes.py
       - name: Relever les cotes Winamax France
+        id: collection
         if: steps.provider.outputs.ready == 'true'
         continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
-        run: python scripts/update_sports.py --max-credits 18
+        run: python scripts/collect_quotes.py --max-credits 18
       - name: Consigner les tests fictifs sans passer d’ordre
         continue-on-error: true
         run: node scripts/paper_multi_tests.cjs
       - name: Notifier les propositions sans passer de pari
+        id: notifications
         continue-on-error: true
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
@@ -93,6 +104,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/sports/ data/days/ data/index.json
           if [ -f data/collection-health.json ]; then git add data/collection-health.json; fi
+          if [ -f data/notification-status.json ]; then git add data/notification-status.json; fi
           if [ -f data/notification-state.json ]; then git add data/notification-state.json; fi
           git add data/paper-tests-v1.json data/paper-status-v1.json data/paper-tests-v2.json data/paper-status-v2.json 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
@@ -102,7 +114,7 @@ jobs:
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp feed-health.js ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
@@ -118,3 +130,12 @@ jobs:
       - id: deploiement
         uses: actions/deploy-pages@v4
 
+  signaler:
+    needs: [actualiser, publier]
+    if: always() && needs.publier.result == 'success' && (needs.actualiser.outputs.provider_ready == 'false' || needs.actualiser.outputs.collection == 'failure' || needs.actualiser.outputs.notifications == 'failure')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Signaler le blocage après publication du diagnostic
+        run: |
+          echo "::error::La collecte ou l’envoi des alertes est bloqué. Le site a été publié avec le diagnostic dans Collecte et notifications."
+          exit 1

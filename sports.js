@@ -56,7 +56,7 @@ function render(){
  renderCombos();
  if(!doc||!Array.isArray(doc.matches)){area.innerHTML='<p class="empty">Les cotes sont momentanément indisponibles.</p>';return;}
  var messages={unconfigured:'La connexion aux cotes Winamax n’est pas encore activée.',unavailable:'La source de cotes est momentanément indisponible.',unsupported:'Ce sport n’est pas transmis par le fournisseur actuel. Aucune cote Winamax ni aucun Safe ne sont inventés.',inactive:'Les compétitions transmises pour ce sport sont actuellement hors saison.',no_winamax:'Aucune cote Winamax n’a été trouvée sur les rencontres examinées.',quota:'La limite de consultation des cotes est atteinte.'};
- if(messages[doc.status]){status.textContent=doc.status==='unconfigured'?'Connexion à activer':'Relevé indisponible';area.innerHTML='<p class="empty">'+messages[doc.status]+'</p>';return;}
+ if(messages[doc.status]){status.textContent=doc.status==='unconfigured'?'Connexion à activer':'Relevé indisponible';area.innerHTML='<p class="empty">'+messages[doc.status]+'</p>'+((doc.fixtures||[]).length?FeedHealth.calendar(doc.fixtures,Date.now()):'');return;}
  var all=data(doc),matches=all.filter(function(m){return (!day.value||paris(m.kickoff)===day.value)&&(!league.value||m.league===league.value);});
  status.textContent=all.length+' rencontre(s) · Winamax France'+(doc.partial?' · couverture partielle':'')+' · '+(doc.femaleMatches||0)+' rencontre(s) féminine(s) collectée(s)';
  if(document.activeElement&&document.activeElement.closest('.manual-market-form'))return;
