@@ -1,0 +1,67 @@
+{
+ "date": "2026-11-27",
+ "updatedAt": "2026-11-17T07:55:34Z",
+ "source": "Oddsportal (secours)",
+ "matches": [
+  {
+   "id": "ere-groningen-willem-ii",
+   "league": "ERE",
+   "kickoff": "2026-11-27T19:00Z",
+   "home": "Groningen",
+   "away": "Willem II",
+   "o1": 1.22,
+   "oX": 6.25,
+   "o2": 10.0
+  },
+  {
+   "id": "bl-werder-bremen-borussia-monchengladbach",
+   "league": "BL",
+   "kickoff": "2026-11-27T19:30Z",
+   "home": "Werder Bremen",
+   "away": "Borussia Monchengladbach",
+   "o1": 1.76,
+   "oX": 4.2,
+   "o2": 4.1
+  },
+  {
+   "id": "l1-brest-paris-fc",
+   "league": "L1",
+   "kickoff": "2026-11-27T19:45Z",
+   "home": "Brest",
+   "away": "Paris FC",
+   "o1": 3.1,
+   "oX": 3.5,
+   "o2": 2.25
+  },
+  {
+   "id": "sa-venezia-bologna",
+   "league": "SA",
+   "kickoff": "2026-11-27T19:45Z",
+   "home": "Venezia",
+   "away": "Bologna",
+   "o1": 3.7,
+   "oX": 3.6,
+   "o2": 2.0
+  },
+  {
+   "id": "liga-levante-real-racing-club-de-santander",
+   "league": "LIGA",
+   "kickoff": "2026-11-27T20:00Z",
+   "home": "Levante",
+   "away": "Real Racing Club de Santander",
+   "o1": 2.1,
+   "oX": 3.9,
+   "o2": 3.2
+  },
+  {
+   "id": "pl-nottingham-forest-chelsea",
+   "league": "PL",
+   "kickoff": "2026-11-27T20:00Z",
+   "home": "Nottingham Forest",
+   "away": "Chelsea",
+   "o1": 2.8,
+   "oX": 3.5,
+   "o2": 2.4
+  }
+ ]
+}

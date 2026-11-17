@@ -1,5 +1,7 @@
 {
  "date": "2026-11-20",
+ "updatedAt": "2026-11-17T07:55:34Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
    "id": "rou-fc-botosani-fc-voluntari",
@@ -7,7 +9,7 @@
    "kickoff": "2026-11-20T15:30Z",
    "home": "FC Botosani",
    "away": "FC Voluntari",
-   "o1": 1.71,
+   "o1": 1.73,
    "oX": 3.8,
    "o2": 4.33
   },
@@ -617,7 +619,5 @@
    },
    "leagueTitle": "LIGA"
   }
- ],
- "updatedAt": "2026-11-16T07:49:27Z",
- "source": "The Odds API (moyenne des bookmakers européens)"
+ ]
 }

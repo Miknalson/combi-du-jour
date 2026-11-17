@@ -1,0 +1,367 @@
+{
+ "date": "2026-11-26",
+ "updatedAt": "2026-11-17T07:55:34Z",
+ "source": "Oddsportal (secours)",
+ "matches": [
+  {
+   "id": "uecl-fc-kairat-mjallby-aif",
+   "league": "UECL",
+   "kickoff": "2026-11-26T15:30Z",
+   "home": "FC Kairat",
+   "away": "Mjällby AIF",
+   "o1": 2.3,
+   "oX": 3.4,
+   "o2": 3.0
+  },
+  {
+   "id": "uecl-sk-brann-agf-aarhus",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "SK Brann",
+   "away": "AGF Aarhus",
+   "o1": 1.76,
+   "oX": 3.8,
+   "o2": 4.5
+  },
+  {
+   "id": "uecl-ajax-fc-thun",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Ajax",
+   "away": "FC Thun",
+   "o1": 1.17,
+   "oX": 7.5,
+   "o2": 15.0
+  },
+  {
+   "id": "uecl-brighton-and-hove-albion-universitatea-craiova",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Brighton and Hove Albion",
+   "away": "Universitatea Craiova",
+   "o1": 1.15,
+   "oX": 9.0,
+   "o2": 17.0
+  },
+  {
+   "id": "uecl-fk-kauno-zalgiris-riga-fc",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "FK Kauno Žalgiris",
+   "away": "Riga FC",
+   "o1": 2.85,
+   "oX": 3.5,
+   "o2": 2.4
+  },
+  {
+   "id": "uecl-fc-iberia-1999-getafe",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "FC Iberia 1999",
+   "away": "Getafe",
+   "o1": 7.5,
+   "oX": 4.75,
+   "o2": 1.42
+  },
+  {
+   "id": "uecl-hearts-as-monaco",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Hearts",
+   "away": "AS Monaco",
+   "o1": 5.0,
+   "oX": 4.75,
+   "o2": 1.57
+  },
+  {
+   "id": "uecl-fk-jablonec-fc-lugano",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "FK Jablonec",
+   "away": "FC Lugano",
+   "o1": 3.0,
+   "oX": 3.4,
+   "o2": 2.3
+  },
+  {
+   "id": "uecl-kf-egnatia-lincoln-red-imps-fc",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "KF Egnatia",
+   "away": "Lincoln Red Imps FC",
+   "o1": 1.66,
+   "oX": 4.0,
+   "o2": 5.0
+  },
+  {
+   "id": "uecl-pafos-fc-fc-midtjylland",
+   "league": "UECL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Pafos FC",
+   "away": "FC Midtjylland",
+   "o1": 2.6,
+   "oX": 3.6,
+   "o2": 2.45
+  },
+  {
+   "id": "uel-olympiakos-piraeus-ac-milan",
+   "league": "UEL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Olympiakos Piraeus",
+   "away": "AC Milan",
+   "o1": 2.45,
+   "oX": 3.5,
+   "o2": 2.85
+  },
+  {
+   "id": "uel-salzburg-fc-ararat-armenia",
+   "league": "UEL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Salzburg",
+   "away": "FC Ararat-Armenia",
+   "o1": 1.2,
+   "oX": 7.75,
+   "o2": 13.0
+  },
+  {
+   "id": "uel-dinamo-zagreb-bayer-leverkusen",
+   "league": "UEL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Dinamo Zagreb",
+   "away": "Bayer Leverkusen",
+   "o1": 4.33,
+   "oX": 4.33,
+   "o2": 1.68
+  },
+  {
+   "id": "uel-viktoria-plzen-benfica",
+   "league": "UEL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Viktoria Plzeň",
+   "away": "Benfica",
+   "o1": 5.5,
+   "oX": 4.8,
+   "o2": 1.5
+  },
+  {
+   "id": "uel-besiktas-jk-hapoel-be-er-sheva",
+   "league": "UEL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Besiktas JK",
+   "away": "Hapoel Be'er Sheva",
+   "o1": 1.23,
+   "oX": 7.0,
+   "o2": 11.0
+  },
+  {
+   "id": "uel-celta-vigo-bournemouth",
+   "league": "UEL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Celta Vigo",
+   "away": "Bournemouth",
+   "o1": 3.8,
+   "oX": 3.6,
+   "o2": 1.98
+  },
+  {
+   "id": "uel-union-saint-gilloise-lech-poznan",
+   "league": "UEL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Union Saint-Gilloise",
+   "away": "Lech Poznań",
+   "o1": 1.38,
+   "oX": 5.25,
+   "o2": 7.0
+  },
+  {
+   "id": "uel-marseille-pfc-levski-sofia",
+   "league": "UEL",
+   "kickoff": "2026-11-26T17:45Z",
+   "home": "Marseille",
+   "away": "PFC Levski Sofia",
+   "o1": 1.44,
+   "oX": 4.75,
+   "o2": 7.0
+  },
+  {
+   "id": "uecl-fk-borac-banja-luka-atalanta-bc",
+   "league": "UECL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "FK Borac Banja Luka",
+   "away": "Atalanta BC",
+   "o1": 8.0,
+   "oX": 5.0,
+   "o2": 1.38
+  },
+  {
+   "id": "uecl-sc-braga-kups-kuopio",
+   "league": "UECL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "SC Braga",
+   "away": "KuPS Kuopio",
+   "o1": 1.2,
+   "oX": 6.5,
+   "o2": 13.0
+  },
+  {
+   "id": "uecl-gent-red-star-belgrade",
+   "league": "UECL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Gent",
+   "away": "Red Star Belgrade",
+   "o1": 2.0,
+   "oX": 3.5,
+   "o2": 3.5
+  },
+  {
+   "id": "uecl-pfc-cska-sofia-trabzonspor",
+   "league": "UECL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "PFC CSKA Sofia",
+   "away": "Trabzonspor",
+   "o1": 5.0,
+   "oX": 3.8,
+   "o2": 1.68
+  },
+  {
+   "id": "uecl-inter-club-d-escaldes-fc-copenhagen",
+   "league": "UECL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Inter Club d'Escaldes",
+   "away": "FC Copenhagen",
+   "o1": 11.5,
+   "oX": 6.0,
+   "o2": 1.23
+  },
+  {
+   "id": "uecl-sc-freiburg-fc-twente-enschede",
+   "league": "UECL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "SC Freiburg",
+   "away": "FC Twente Enschede",
+   "o1": 1.9,
+   "oX": 3.8,
+   "o2": 3.5
+  },
+  {
+   "id": "uecl-hajduk-split-sint-truiden",
+   "league": "UECL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Hajduk Split",
+   "away": "Sint Truiden",
+   "o1": 2.3,
+   "oX": 3.4,
+   "o2": 2.9
+  },
+  {
+   "id": "uecl-fc-nordsjaelland-panathinaikos-fc",
+   "league": "UECL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "FC Nordsjaelland",
+   "away": "Panathinaikos FC",
+   "o1": 2.9,
+   "oX": 3.5,
+   "o2": 2.35
+  },
+  {
+   "id": "uel-ofi-crete-anderlecht",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "OFI Crete",
+   "away": "Anderlecht",
+   "o1": 4.1,
+   "oX": 3.8,
+   "o2": 1.87
+  },
+  {
+   "id": "uel-sparta-prague-az-alkmaar",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Sparta Prague",
+   "away": "AZ Alkmaar",
+   "o1": 2.7,
+   "oX": 3.6,
+   "o2": 2.5
+  },
+  {
+   "id": "uel-ferencvaros-tc-nk-celje",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Ferencváros TC",
+   "away": "NK Celje",
+   "o1": 1.37,
+   "oX": 5.25,
+   "o2": 7.5
+  },
+  {
+   "id": "uel-torreense-celtic",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Torreense",
+   "away": "Celtic",
+   "o1": 4.3,
+   "oX": 4.0,
+   "o2": 1.71
+  },
+  {
+   "id": "uel-crystal-palace-real-sociedad",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Crystal Palace",
+   "away": "Real Sociedad",
+   "o1": 2.05,
+   "oX": 3.9,
+   "o2": 3.25
+  },
+  {
+   "id": "uel-tsg-hoffenheim-sk-sturm-graz",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "TSG Hoffenheim",
+   "away": "SK Sturm Graz",
+   "o1": 1.35,
+   "oX": 5.5,
+   "o2": 7.5
+  },
+  {
+   "id": "uel-sunderland-jagiellonia-bialystok",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Sunderland",
+   "away": "Jagiellonia Białystok",
+   "o1": 1.28,
+   "oX": 5.75,
+   "o2": 10.5
+  },
+  {
+   "id": "uel-juventus-omonoia-fc",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Juventus",
+   "away": "Omonoia FC",
+   "o1": 1.22,
+   "oX": 7.0,
+   "o2": 12.0
+  },
+  {
+   "id": "uel-lyon-lillestrom",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "Lyon",
+   "away": "Lillestrom",
+   "o1": 1.22,
+   "oX": 7.5,
+   "o2": 13.0
+  },
+  {
+   "id": "uel-nec-nijmegen-rennes",
+   "league": "UEL",
+   "kickoff": "2026-11-26T20:00Z",
+   "home": "NEC Nijmegen",
+   "away": "Rennes",
+   "o1": 3.0,
+   "oX": 3.8,
+   "o2": 2.15
+  }
+ ]
+}

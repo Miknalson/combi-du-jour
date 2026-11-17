@@ -1,6 +1,6 @@
 {
  "date": "2026-11-21",
- "updatedAt": "2026-11-16T07:49:27Z",
+ "updatedAt": "2026-11-17T07:55:34Z",
  "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
@@ -251,16 +251,6 @@
    }
   },
   {
-   "id": "l2-nantes-grenoble",
-   "league": "L2",
-   "kickoff": "2026-11-21T13:00Z",
-   "home": "Nantes",
-   "away": "Grenoble",
-   "o1": 1.45,
-   "oX": 4.2,
-   "o2": 6.5
-  },
-  {
    "id": "l2-stade-lavallois-montpellier",
    "league": "L2",
    "kickoff": "2026-11-21T13:00Z",
@@ -399,6 +389,16 @@
     "o2": 3.25,
     "ou": {}
    }
+  },
+  {
+   "id": "l2-nantes-grenoble",
+   "league": "L2",
+   "kickoff": "2026-11-21T13:00Z",
+   "home": "Nantes",
+   "away": "Grenoble",
+   "o1": 1.45,
+   "oX": 4.2,
+   "o2": 6.5
   },
   {
    "id": "pol-cracovia-krakow-jagiellonia-bialystok",
@@ -1651,6 +1651,16 @@
    "o2": 1.91
   },
   {
+   "id": "ukr-karpaty-lviv-fk-zorya-luhansk",
+   "league": "UKR",
+   "kickoff": "2026-11-21T16:00Z",
+   "home": "Karpaty Lviv",
+   "away": "FK Zorya Luhansk",
+   "o1": 1.86,
+   "oX": 3.6,
+   "o2": 3.8
+  },
+  {
    "id": "l1-nice-paris-saint-germain",
    "league": "L1",
    "kickoff": "2026-11-21T16:15Z",
@@ -1999,6 +2009,16 @@
    "o1": 1.18,
    "oX": 8.0,
    "o2": 12.0
+  },
+  {
+   "id": "rou-dinamo-bucuresti-petrolul",
+   "league": "ROU",
+   "kickoff": "2026-11-21T18:30Z",
+   "home": "Dinamo Bucuresti",
+   "away": "Petrolul",
+   "o1": 1.36,
+   "oX": 4.8,
+   "o2": 7.0
   },
   {
    "id": "l2-stade-de-reims-saint-etienne",

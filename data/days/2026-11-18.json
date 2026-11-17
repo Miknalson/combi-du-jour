@@ -1,0 +1,47 @@
+{
+ "date": "2026-11-18",
+ "updatedAt": "2026-11-17T07:55:34Z",
+ "source": "Oddsportal (secours)",
+ "matches": [
+  {
+   "id": "uwcl-hacken-w-manchester-city-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-18T17:45Z",
+   "home": "Hacken W",
+   "away": "Manchester City W",
+   "o1": 8.5,
+   "oX": 5.75,
+   "o2": 1.3
+  },
+  {
+   "id": "uwcl-real-madrid-w-inter-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-18T17:45Z",
+   "home": "Real Madrid W",
+   "away": "Inter W",
+   "o1": 1.25,
+   "oX": 6.0,
+   "o2": 9.5
+  },
+  {
+   "id": "uwcl-chelsea-w-psg-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-18T20:00Z",
+   "home": "Chelsea W",
+   "away": "PSG W",
+   "o1": 1.31,
+   "oX": 5.25,
+   "o2": 9.0
+  },
+  {
+   "id": "uwcl-juventus-w-leuven-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-18T20:00Z",
+   "home": "Juventus W",
+   "away": "Leuven W",
+   "o1": 1.25,
+   "oX": 5.75,
+   "o2": 11.0
+  }
+ ]
+}

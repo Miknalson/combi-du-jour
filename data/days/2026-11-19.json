@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-19",
+ "updatedAt": "2026-11-17T07:55:34Z",
+ "source": "Oddsportal (secours)",
+ "matches": [
+  {
+   "id": "uwcl-austria-vienna-w-bayern-munich-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-19T17:45Z",
+   "home": "Austria Vienna W",
+   "away": "Bayern Munich W",
+   "o1": 21.0,
+   "oX": 11.0,
+   "o2": 1.1
+  },
+  {
+   "id": "uwcl-paris-fc-w-koge-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-19T17:45Z",
+   "home": "Paris FC W",
+   "away": "Koge W",
+   "o1": 1.65,
+   "oX": 4.2,
+   "o2": 4.5
+  },
+  {
+   "id": "uwcl-arsenal-w-ol-lyonnes-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-19T20:00Z",
+   "home": "Arsenal W",
+   "away": "OL Lyonnes W",
+   "o1": 3.3,
+   "oX": 4.1,
+   "o2": 1.95
+  },
+  {
+   "id": "uwcl-sl-benfica-w-as-roma-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-19T20:00Z",
+   "home": "SL Benfica W",
+   "away": "AS Roma W",
+   "o1": 2.15,
+   "oX": 3.8,
+   "o2": 2.85
+  },
+  {
+   "id": "uwcl-barcelona-w-servette-geneve-fc-w",
+   "league": "UWCL",
+   "kickoff": "2026-11-19T20:00Z",
+   "home": "Barcelona W",
+   "away": "Servette Geneve FC W",
+   "o1": 1.01,
+   "oX": 29.0,
+   "o2": 71.0
+  }
+ ]
+}
