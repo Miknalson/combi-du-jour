@@ -57,5 +57,17 @@ def main():
         print('Code fournisseur :', result['providerCode'])
     return result
 
+def recent_collection(now=None):
+    now = now or dt.datetime.now(dt.timezone.utc)
+    try:
+        value = json.loads((ROOT / 'collection-health.json').read_text())
+        age = (now-dt.datetime.fromisoformat(value['updatedAt'].replace('Z','+00:00'))).total_seconds()
+        return value.get('stage') == 'collection' and value.get('status') in ('ok','partial') and 0 <= age < 3600
+    except (OSError, ValueError, KeyError, TypeError):
+        return False
+
 if __name__ == '__main__':
+    import sys
+    if '--is-fresh' in sys.argv:
+        raise SystemExit(0 if recent_collection() else 1)
     main()

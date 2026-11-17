@@ -38,7 +38,33 @@ def run():
         except (OSError, ValueError):
             pass
     previous = collector.api.get
-    collector.api.get = lambda path, **params: retry_get(previous, path, **params)
+    request_costs = {}
+    metadata_cache = {}
+    daily_budget = [None]
+    deferred = [0]
+    def fetch(path, **params):
+        # Market inventory reads must not consume the tiny allowance reserved for prices.
+        # The frozen collector already treats unavailable inventory as unknown and checks
+        # the actual bookmaker prices instead. Never invent a bookmaker/market response.
+        key = (path, tuple(sorted(params.items())))
+        if path.endswith('/markets'):
+            if key in metadata_cache:
+                return metadata_cache[key]
+            if daily_budget[0] is not None and daily_budget[0] <= 3:
+                deferred[0] += 1
+                raise HTTPError('inventory-deferred', 429, 'Inventory deferred within quote budget', {'Retry-After':'11'}, None)
+        before = collector.api.credits_left
+        result = retry_get(previous, path, **params)
+        after = collector.api.credits_left
+        kind = 'market_inventory' if path.endswith('/markets') else 'prices' if path.endswith('/odds') else 'calendar' if path.endswith('/events') else 'catalog'
+        cost = max(0, int(float(before))-int(float(after))) if before is not None and after is not None else 0
+        request_costs[kind] = request_costs.get(kind, 0) + cost
+        if path == '/sports':
+            daily_budget[0] = collector.api.credits_budget(dt.datetime.now(dt.timezone.utc))[0]
+        if path.endswith('/markets'):
+            metadata_cache[key] = result
+        return result
+    collector.api.get = fetch
     error = None
     exit_code = 0
     try:
@@ -59,7 +85,7 @@ def run():
             doc = json.loads(path.read_text())
         except (OSError, ValueError):
             continue
-        if doc.get('status') == 'unavailable':
+        if not doc.get('matches'):
             old = originals.get(sport, {})
             # Retain only event metadata, never relabel an old quote as fresh.
             fixtures = []
@@ -71,11 +97,11 @@ def run():
                 except (KeyError, ValueError, TypeError):
                     continue
             if fixtures:
-                doc['fixtures'] = list({(m['home'],m['away'],m['kickoff']):m for m in fixtures}.values())
-                doc['calendarStatus'] = 'cached'
+                doc['fixtures'] = list({(m['home'],m['away'],m['kickoff']):m for m in fixtures + doc.get('fixtures',[])}.values())
+                if not doc.get('calendarStatus'):doc['calendarStatus'] = 'cached'
                 path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
         rows.append({'sport':sport,'status':doc['status'],'matches':len(doc.get('matches',[])),'updatedAt':doc.get('updatedAt'),'partial':bool(doc.get('partial'))})
-    result = {'updatedAt':now.isoformat(),'stage':'collection','sports':rows,'creditsRemaining':int(float(collector.api.credits_left)) if collector.api.credits_left is not None else None}
+    result = {'updatedAt':now.isoformat(),'stage':'collection','sports':rows,'requestCredits':request_costs,'deferredMarketInventories':deferred[0],'creditsRemaining':int(float(collector.api.credits_left)) if collector.api.credits_left is not None else None}
     if error:
         result.update(health.error_info(error))
         result['errorType'] = type(error).__name__

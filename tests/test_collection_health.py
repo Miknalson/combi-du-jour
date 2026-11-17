@@ -14,6 +14,13 @@ import check_quotes as health
 import collect_quotes as runner
 
 class HealthTests(unittest.TestCase):
+ def test_recent_collection_avoids_repeated_automatic_fetches_without_hiding_failure(self):
+  now=dt.datetime.now(dt.timezone.utc)
+  with tempfile.TemporaryDirectory() as root,patch.object(health,'ROOT',Path(root)):
+   file=Path(root)/'collection-health.json'
+   for status,age,expected in [('partial',60,True),('ok',60,True),('unavailable',60,False),('ok',3600,False),('ok',-60,False)]:
+    file.write_text(json.dumps({'stage':'collection','status':status,'updatedAt':(now-dt.timedelta(seconds=age)).isoformat()}))
+    self.assertEqual(health.recent_collection(now),expected)
  def test_provider_quota_is_distinguished_from_invalid_key_without_leaking_url(self):
   for code,status in [('OUT_OF_USAGE_CREDITS','quota'),('INVALID_API_KEY','unauthorized')]:
    error=HTTPError('https://api.example/odds?apiKey=private-token',401,'secret text',{},io.BytesIO(json.dumps({'error_code':code,'message':'private-token'}).encode()))
@@ -33,6 +40,21 @@ class HealthTests(unittest.TestCase):
   get=Mock(side_effect=HTTPError('https://example',401,'refused',{},None))
   with patch.object(runner.time,'sleep') as sleep,self.assertRaises(HTTPError):runner.retry_get(get,'/sports')
   self.assertEqual(get.call_count,1);sleep.assert_not_called()
+ def test_low_budget_defers_market_inventory_but_keeps_actual_prices(self):
+  from unittest.mock import Mock
+  now=dt.datetime.now(dt.timezone.utc)
+  with tempfile.TemporaryDirectory() as root:
+   folder=Path(root)/'sports';folder.mkdir()
+   provider=Mock(return_value=[])
+   def collect():
+    runner.collector.api.get('/sports')
+    with self.assertRaises(HTTPError):runner.collector.api.get('/sports/basketball_nba/events/e/markets',bookmakers='winamax_fr')
+    runner.collector.api.get('/sports/basketball_nba/odds',bookmakers='winamax_fr',markets='h2h')
+    (folder/'basket.json').write_text(json.dumps({'sport':'basket','status':'ok','matches':[],'updatedAt':now.isoformat()}))
+   with patch.object(runner.collector,'ROOT',folder),patch.object(runner.collector,'main',side_effect=collect),patch.object(runner.collector.api,'get',provider),patch.object(runner.collector.api,'credits_left','29'),patch.object(runner.collector.api,'credits_budget',return_value=(1,29)):
+    self.assertEqual(runner.run(),0)
+   self.assertEqual([c.args[0] for c in provider.call_args_list],['/sports','/sports/basketball_nba/odds'])
+   self.assertEqual(json.loads((Path(root)/'collection-health.json').read_text())['deferredMarketInventories'],1)
  def test_failed_collection_keeps_calendar_without_restamping_or_reusing_old_prices(self):
   now=dt.datetime.now(dt.timezone.utc)
   with tempfile.TemporaryDirectory() as root:

@@ -70,6 +70,8 @@ jobs:
         run: |
           if [ ! -f data/paper-tests-v2.json ]; then
             echo "refresh=true" >> "$GITHUB_OUTPUT"
+          elif python scripts/check_quotes.py --is-fresh; then
+            echo "refresh=false" >> "$GITHUB_OUTPUT"
           elif git diff --quiet HEAD^ HEAD -- scripts/update_sports.py scripts/update_odds.py scripts/check_quotes.py scripts/collect_quotes.py; then
             echo "refresh=false" >> "$GITHUB_OUTPUT"
           else
