@@ -43,7 +43,8 @@
     "oX": 3.7,
     "o2": 1.74,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "unl-bosnia-herzegovina-romania",
@@ -87,7 +88,8 @@
     "oX": 3.5,
     "o2": 3.05,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "unl-denmark-norway",
@@ -131,7 +133,8 @@
     "oX": 3.85,
     "o2": 2.45,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   },
   {
    "id": "unl-ukraine-georgia",
@@ -175,7 +178,8 @@
     "oX": 3.15,
     "o2": 3.25,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "unl-hungary-northern-ireland",
@@ -219,7 +223,8 @@
     "oX": 3.15,
     "o2": 3.8,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "unl-republic-of-ireland-kosovo",
@@ -263,7 +268,8 @@
     "oX": 3.0,
     "o2": 3.4,
     "ou": {}
-   }
+   },
+   "score": "3-0"
   },
   {
    "id": "unl-poland-sweden",
@@ -307,7 +313,8 @@
     "oX": 3.6,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "unl-wales-portugal",
@@ -351,7 +358,8 @@
     "oX": 5.0,
     "o2": 1.34,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   }
  ],
  "updatedAt": "2026-11-17T07:48:56Z",
