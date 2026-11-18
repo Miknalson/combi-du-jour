@@ -1,6 +1,6 @@
 {
  "date": "2026-11-27",
- "updatedAt": "2026-11-17T07:55:34Z",
+ "updatedAt": "2026-11-18T07:54:11Z",
  "source": "Oddsportal (secours)",
  "matches": [
   {
@@ -59,9 +59,19 @@
    "kickoff": "2026-11-27T20:00Z",
    "home": "Nottingham Forest",
    "away": "Chelsea",
-   "o1": 2.8,
+   "o1": 2.75,
    "oX": 3.5,
-   "o2": 2.4
+   "o2": 2.45
+  },
+  {
+   "id": "por-maritimo-nacional",
+   "league": "POR",
+   "kickoff": "2026-11-27T20:15Z",
+   "home": "Marítimo",
+   "away": "Nacional",
+   "o1": 2.15,
+   "oX": 3.3,
+   "o2": 3.3
   }
  ]
 }

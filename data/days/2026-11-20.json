@@ -1,7 +1,7 @@
 {
  "date": "2026-11-20",
- "updatedAt": "2026-11-17T07:55:34Z",
- "source": "The Odds API (moyenne des bookmakers européens)",
+ "updatedAt": "2026-11-18T07:54:11Z",
+ "source": "The Odds API (moyenne des bookmakers européens) + oddsportal",
  "matches": [
   {
    "id": "rou-fc-botosani-fc-voluntari",
@@ -9,7 +9,7 @@
    "kickoff": "2026-11-20T15:30Z",
    "home": "FC Botosani",
    "away": "FC Voluntari",
-   "o1": 1.73,
+   "o1": 1.74,
    "oX": 3.8,
    "o2": 4.33
   },
@@ -19,9 +19,9 @@
    "kickoff": "2026-11-20T17:00Z",
    "home": "Piast Gliwice",
    "away": "Korona Kielce",
-   "o1": 2.4,
-   "oX": 3.4,
-   "o2": 2.6
+   "o1": 2.45,
+   "oX": 3.6,
+   "o2": 2.63
   },
   {
    "id": "bl2-sv-darmstadt-98-1-fc-heidenheim",
@@ -119,7 +119,7 @@
    "away": "Lyngby",
    "o1": 1.76,
    "oX": 4.0,
-   "o2": 4.2
+   "o2": 4.33
   },
   {
    "id": "rou-farul-constanta-u-cluj",
@@ -127,9 +127,9 @@
    "kickoff": "2026-11-20T18:30Z",
    "home": "Farul Constanta",
    "away": "U. Cluj",
-   "o1": 2.8,
+   "o1": 2.65,
    "oX": 3.55,
-   "o2": 2.35
+   "o2": 2.45
   },
   {
    "id": "l2-annecy-fc-clermont",
@@ -357,8 +357,8 @@
    "kickoff": "2026-11-20T19:30Z",
    "home": "Pogoń Szczecin",
    "away": "Śląsk Wrocław",
-   "o1": 1.76,
-   "oX": 3.8,
+   "o1": 1.8,
+   "oX": 3.85,
    "o2": 4.1
   },
   {

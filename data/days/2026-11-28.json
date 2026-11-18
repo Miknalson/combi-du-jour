@@ -1,0 +1,277 @@
+{
+ "date": "2026-11-28",
+ "updatedAt": "2026-11-18T07:54:11Z",
+ "source": "Oddsportal (secours)",
+ "matches": [
+  {
+   "id": "liga-real-betis-rayo-vallecano",
+   "league": "LIGA",
+   "kickoff": "2026-11-28T13:00Z",
+   "home": "Real Betis",
+   "away": "Rayo Vallecano",
+   "o1": 1.52,
+   "oX": 4.5,
+   "o2": 6.25
+  },
+  {
+   "id": "sa-frosinone-parma",
+   "league": "SA",
+   "kickoff": "2026-11-28T14:00Z",
+   "home": "Frosinone",
+   "away": "Parma",
+   "o1": 1.5,
+   "oX": 4.8,
+   "o2": 6.25
+  },
+  {
+   "id": "bl-1-fc-koln-elversberg",
+   "league": "BL",
+   "kickoff": "2026-11-28T14:30Z",
+   "home": "1. FC Köln",
+   "away": "Elversberg",
+   "o1": 1.98,
+   "oX": 4.0,
+   "o2": 3.6
+  },
+  {
+   "id": "bl-hamburger-sv-bayern-munich",
+   "league": "BL",
+   "kickoff": "2026-11-28T14:30Z",
+   "home": "Hamburger SV",
+   "away": "Bayern Munich",
+   "o1": 15.0,
+   "oX": 9.5,
+   "o2": 1.16
+  },
+  {
+   "id": "bl-fsv-mainz-05-union-berlin",
+   "league": "BL",
+   "kickoff": "2026-11-28T14:30Z",
+   "home": "FSV Mainz 05",
+   "away": "Union Berlin",
+   "o1": 1.5,
+   "oX": 4.75,
+   "o2": 6.0
+  },
+  {
+   "id": "bl-sc-paderborn-fc-schalke-04",
+   "league": "BL",
+   "kickoff": "2026-11-28T14:30Z",
+   "home": "SC Paderborn",
+   "away": "FC Schalke 04",
+   "o1": 2.35,
+   "oX": 3.5,
+   "o2": 2.9
+  },
+  {
+   "id": "pl-manchester-united-brentford",
+   "league": "PL",
+   "kickoff": "2026-11-28T15:00Z",
+   "home": "Manchester United",
+   "away": "Brentford",
+   "o1": 2.0,
+   "oX": 3.8,
+   "o2": 3.4
+  },
+  {
+   "id": "pl-leeds-united-coventry-city",
+   "league": "PL",
+   "kickoff": "2026-11-28T15:00Z",
+   "home": "Leeds United",
+   "away": "Coventry City",
+   "o1": 1.55,
+   "oX": 4.3,
+   "o2": 5.5
+  },
+  {
+   "id": "liga-malaga-athletic-bilbao",
+   "league": "LIGA",
+   "kickoff": "2026-11-28T15:15Z",
+   "home": "Málaga",
+   "away": "Athletic Bilbao",
+   "o1": 4.5,
+   "oX": 3.8,
+   "o2": 1.76
+  },
+  {
+   "id": "por-arouca-rio-ave-fc",
+   "league": "POR",
+   "kickoff": "2026-11-28T15:30Z",
+   "home": "Arouca",
+   "away": "Rio Ave FC",
+   "o1": 1.66,
+   "oX": 3.8,
+   "o2": 5.25
+  },
+  {
+   "id": "por-moreirense-fc-santa-clara",
+   "league": "POR",
+   "kickoff": "2026-11-28T15:30Z",
+   "home": "Moreirense FC",
+   "away": "Santa Clara",
+   "o1": 3.6,
+   "oX": 3.2,
+   "o2": 2.15
+  },
+  {
+   "id": "ere-excelsior-telstar",
+   "league": "ERE",
+   "kickoff": "2026-11-28T15:30Z",
+   "home": "Excelsior",
+   "away": "Telstar",
+   "o1": 1.95,
+   "oX": 3.5,
+   "o2": 3.6
+  },
+  {
+   "id": "l1-angers-rc-lens",
+   "league": "L1",
+   "kickoff": "2026-11-28T16:15Z",
+   "home": "Angers",
+   "away": "RC Lens",
+   "o1": 4.33,
+   "oX": 4.1,
+   "o2": 1.71
+  },
+  {
+   "id": "sa-torino-lazio",
+   "league": "SA",
+   "kickoff": "2026-11-28T17:00Z",
+   "home": "Torino",
+   "away": "Lazio",
+   "o1": 3.5,
+   "oX": 3.5,
+   "o2": 2.05
+  },
+  {
+   "id": "pl-ipswich-town-aston-villa",
+   "league": "PL",
+   "kickoff": "2026-11-28T17:30Z",
+   "home": "Ipswich Town",
+   "away": "Aston Villa",
+   "o1": 3.3,
+   "oX": 3.8,
+   "o2": 2.05
+  },
+  {
+   "id": "liga-elche-cf-atletico-madrid",
+   "league": "LIGA",
+   "kickoff": "2026-11-28T17:30Z",
+   "home": "Elche CF",
+   "away": "Atlético Madrid",
+   "o1": 5.25,
+   "oX": 4.3,
+   "o2": 1.57
+  },
+  {
+   "id": "bl-vfb-stuttgart-eintracht-frankfurt",
+   "league": "BL",
+   "kickoff": "2026-11-28T17:30Z",
+   "home": "VfB Stuttgart",
+   "away": "Eintracht Frankfurt",
+   "o1": 1.68,
+   "oX": 4.6,
+   "o2": 4.3
+  },
+  {
+   "id": "ere-psv-eindhoven-go-ahead-eagles",
+   "league": "ERE",
+   "kickoff": "2026-11-28T17:45Z",
+   "home": "PSV Eindhoven",
+   "away": "Go Ahead Eagles",
+   "o1": 1.27,
+   "oX": 6.0,
+   "o2": 8.5
+  },
+  {
+   "id": "por-academico-de-viseu-alverca",
+   "league": "POR",
+   "kickoff": "2026-11-28T18:00Z",
+   "home": "Académico de Viseu",
+   "away": "Alverca",
+   "o1": 2.5,
+   "oX": 3.2,
+   "o2": 2.9
+  },
+  {
+   "id": "sa-inter-milan-genoa",
+   "league": "SA",
+   "kickoff": "2026-11-28T19:45Z",
+   "home": "Inter Milan",
+   "away": "Genoa",
+   "o1": 1.26,
+   "oX": 6.0,
+   "o2": 11.0
+  },
+  {
+   "id": "l1-le-havre-strasbourg",
+   "league": "L1",
+   "kickoff": "2026-11-28T19:45Z",
+   "home": "Le Havre",
+   "away": "Strasbourg",
+   "o1": 2.9,
+   "oX": 3.8,
+   "o2": 2.25
+  },
+  {
+   "id": "l1-le-mans-fc-lille",
+   "league": "L1",
+   "kickoff": "2026-11-28T19:45Z",
+   "home": "Le Mans FC",
+   "away": "Lille",
+   "o1": 4.0,
+   "oX": 3.6,
+   "o2": 1.9
+  },
+  {
+   "id": "l1-paris-saint-germain-lorient",
+   "league": "L1",
+   "kickoff": "2026-11-28T19:45Z",
+   "home": "Paris Saint Germain",
+   "away": "Lorient",
+   "o1": 1.22,
+   "oX": 7.0,
+   "o2": 12.0
+  },
+  {
+   "id": "l1-nice-troyes",
+   "league": "L1",
+   "kickoff": "2026-11-28T19:45Z",
+   "home": "Nice",
+   "away": "Troyes",
+   "o1": 1.66,
+   "oX": 4.1,
+   "o2": 5.0
+  },
+  {
+   "id": "liga-real-madrid-alaves",
+   "league": "LIGA",
+   "kickoff": "2026-11-28T20:00Z",
+   "home": "Real Madrid",
+   "away": "Alavés",
+   "o1": 1.14,
+   "oX": 8.0,
+   "o2": 19.0
+  },
+  {
+   "id": "ere-sc-cambuur-sparta-rotterdam",
+   "league": "ERE",
+   "kickoff": "2026-11-28T20:00Z",
+   "home": "SC Cambuur",
+   "away": "Sparta Rotterdam",
+   "o1": 2.45,
+   "oX": 3.7,
+   "o2": 2.5
+  },
+  {
+   "id": "por-vitoria-guimaraes-cf-estrela",
+   "league": "POR",
+   "kickoff": "2026-11-28T20:30Z",
+   "home": "Vitória Guimarães",
+   "away": "CF Estrela",
+   "o1": 1.68,
+   "oX": 4.0,
+   "o2": 5.0
+  }
+ ]
+}
