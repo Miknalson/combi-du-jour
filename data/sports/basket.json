@@ -1,10 +1,10 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-17T15:53:42.123054+00:00",
-  "status": "ok",
+  "updatedAt": "2026-11-18T15:32:01.119884+00:00",
+  "status": "quota",
   "matches": [],
-  "leaguesQueried": 1,
+  "leaguesQueried": 0,
   "leaguesAvailable": 5,
   "partial": true,
   "competitions": [
@@ -78,87 +78,6 @@
   "winamaxUnavailableLeagues": 0,
   "femaleMatches": 0,
   "fixtures": [
-    {
-      "id": "basket-59c6c196fb73301d1d5fe3c1b5f4c6d4",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Dubai Basketball",
-      "away": "Anadolu Efes",
-      "kickoff": "2026-11-17T16:00:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-62c18fe4552eab4bfa76b932d8eb19d1",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Maccabi Tel Aviv",
-      "away": "Olympiacos",
-      "kickoff": "2026-11-17T17:00:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-c09af9e2180fcadb93c24305447585a4",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Fenerbahce SK",
-      "away": "ASVEL Lyon Villeurbanne",
-      "kickoff": "2026-11-17T18:00:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-d98d9ad5c0769750e7483d129766b628",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Žalgiris",
-      "away": "FC Bayern München",
-      "kickoff": "2026-11-17T18:00:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-d54e5d8c14d4b0a97e2d393d9602bae3",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "FC Barcelona Bàsquet",
-      "away": "Paris Basketball",
-      "kickoff": "2026-11-17T19:30:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-da8bb84954673ddf92c15998b2757057",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Saski Baskonia",
-      "away": "Hapoel Tel Aviv",
-      "kickoff": "2026-11-17T19:30:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-3e14f0eac97f2bdd7dc7f03af6033da7",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Pallacanestro Olimpia Milano",
-      "away": "KK Crvena zvezda",
-      "kickoff": "2026-11-17T19:30:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-d2e68cf1e57b5753197640008e091adb",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "KK Partizan NIS",
-      "away": "Valencia Basket",
-      "kickoff": "2026-11-17T19:45:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-294eb049f21c815e118d8e7591d59e2b",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Virtus Segafredo Bologna",
-      "away": "Panathinaikos",
-      "kickoff": "2026-11-17T20:00:00Z",
-      "gender": "unspecified"
-    },
     {
       "id": "basket-15e35a72dec4007e37710032d620bea6",
       "sportKey": "basketball_euroleague",

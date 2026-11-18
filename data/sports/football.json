@@ -1,7 +1,7 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-17T15:53:42.123054+00:00",
+  "updatedAt": "2026-11-18T15:32:01.119884+00:00",
   "status": "quota",
   "matches": [],
   "leaguesQueried": 0,
@@ -113,7 +113,7 @@
     {
       "key": "soccer_england_efl_trophy",
       "title": "EFL Trophy",
-      "active": true,
+      "active": false,
       "gender": "unspecified"
     },
     {
@@ -215,7 +215,7 @@
     {
       "key": "soccer_germany_bundesliga_women",
       "title": "Frauen-Bundesliga",
-      "active": false,
+      "active": true,
       "gender": "women"
     },
     {
@@ -407,7 +407,7 @@
     {
       "key": "soccer_uefa_nations_league",
       "title": "UEFA Nations League",
-      "active": true,
+      "active": false,
       "gender": "unspecified"
     },
     {
@@ -420,78 +420,6 @@
   "winamaxUnavailableLeagues": 0,
   "femaleMatches": 0,
   "fixtures": [
-    {
-      "id": "football-e71a4a4fea03d00873c285c5b55a9864",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Israel",
-      "away": "Austria",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-3eb1d15a190bb1be8c32a020365dc7c2",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Bosnia & Herzegovina",
-      "away": "Romania",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-770e80269ec2ffddc826bc50330c475b",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Denmark",
-      "away": "Norway",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-91b890f5fd20440cb272721b8a89a33d",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Ukraine",
-      "away": "Georgia",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-1a07e9080f042594bdb529ab932d680c",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Hungary",
-      "away": "Northern Ireland",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-a6c9b424fddccea76aab09880b69dd31",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Republic of Ireland",
-      "away": "Kosovo",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-aab74efad72e8096e774c7104189ff09",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Poland",
-      "away": "Sweden",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
-    {
-      "id": "football-955a201ba2266b8b6b0519e0265eb354",
-      "sportKey": "soccer_uefa_nations_league",
-      "leagueCode": "UNL",
-      "league": "UEFA Nations League",
-      "home": "Wales",
-      "away": "Portugal",
-      "kickoff": "2026-11-17T19:45:00Z"
-    },
     {
       "id": "football-8d017c6bef33aa894ea91e1c1f3a5299",
       "sportKey": "soccer_uefa_champs_league_women",

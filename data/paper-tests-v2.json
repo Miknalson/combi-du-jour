@@ -420,6 +420,74 @@
         }
       ],
       "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-18|safe|tennis",
+      "day": "2026-11-18",
+      "method": "safe",
+      "sport": "tennis",
+      "version": "safe-multi-v2",
+      "createdAt": "2026-11-18T15:32:07.413Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-18T15:32:01.119884+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        },
+        {
+          "sport": "rugby_xiii",
+          "status": "ok",
+          "updatedAt": "2026-11-18T15:32:01.119884+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-18|safe|rugby_xiii",
+      "day": "2026-11-18",
+      "method": "safe",
+      "sport": "rugby_xiii",
+      "version": "safe-multi-v2",
+      "createdAt": "2026-11-18T15:32:07.413Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "tennis",
+          "status": "ok",
+          "updatedAt": "2026-11-18T15:32:01.119884+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        },
+        {
+          "sport": "rugby_xiii",
+          "status": "ok",
+          "updatedAt": "2026-11-18T15:32:01.119884+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
     }
   ]
 }

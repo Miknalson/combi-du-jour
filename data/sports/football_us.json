@@ -1,11 +1,11 @@
 {
   "sport": "football_us",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-17T15:53:42.123054+00:00",
+  "updatedAt": "2026-11-18T15:32:01.119884+00:00",
   "status": "quota",
   "matches": [],
   "leaguesQueried": 0,
-  "leaguesAvailable": 2,
+  "leaguesAvailable": 3,
   "partial": true,
   "competitions": [
     {
@@ -29,7 +29,7 @@
     {
       "key": "americanfootball_ncaaf_fcs",
       "title": "NCAAF FCS",
-      "active": false,
+      "active": true,
       "gender": "unspecified"
     },
     {
