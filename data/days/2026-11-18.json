@@ -11,7 +11,8 @@
    "away": "Manchester City W",
    "o1": 8.5,
    "oX": 5.75,
-   "o2": 1.3
+   "o2": 1.3,
+   "score": "0-2"
   },
   {
    "id": "uwcl-real-madrid-w-inter-w",
@@ -21,7 +22,8 @@
    "away": "Inter W",
    "o1": 1.25,
    "oX": 6.0,
-   "o2": 9.5
+   "o2": 9.5,
+   "score": "3-1"
   },
   {
    "id": "uwcl-chelsea-w-psg-w",
@@ -31,7 +33,8 @@
    "away": "PSG W",
    "o1": 1.31,
    "oX": 5.25,
-   "o2": 9.0
+   "o2": 9.0,
+   "score": "1-0"
   },
   {
    "id": "uwcl-juventus-w-leuven-w",
@@ -41,7 +44,8 @@
    "away": "Leuven W",
    "o1": 1.25,
    "oX": 5.75,
-   "o2": 11.0
+   "o2": 11.0,
+   "score": "2-0"
   }
  ]
 }
