@@ -1,6 +1,6 @@
 {
  "date": "2026-11-28",
- "updatedAt": "2026-11-18T07:54:11Z",
+ "updatedAt": "2026-11-19T07:52:21Z",
  "source": "Oddsportal (secours)",
  "matches": [
   {
@@ -99,7 +99,7 @@
    "kickoff": "2026-11-28T15:30Z",
    "home": "Arouca",
    "away": "Rio Ave FC",
-   "o1": 1.66,
+   "o1": 1.68,
    "oX": 3.8,
    "o2": 5.25
   },
@@ -161,7 +161,7 @@
    "away": "Atlético Madrid",
    "o1": 5.25,
    "oX": 4.3,
-   "o2": 1.57
+   "o2": 1.62
   },
   {
    "id": "bl-vfb-stuttgart-eintracht-frankfurt",
@@ -209,7 +209,7 @@
    "kickoff": "2026-11-28T19:45Z",
    "home": "Le Havre",
    "away": "Strasbourg",
-   "o1": 2.9,
+   "o1": 2.85,
    "oX": 3.8,
    "o2": 2.25
   },

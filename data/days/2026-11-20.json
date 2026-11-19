@@ -1,7 +1,7 @@
 {
  "date": "2026-11-20",
- "updatedAt": "2026-11-18T07:54:11Z",
- "source": "The Odds API (moyenne des bookmakers européens) + oddsportal",
+ "updatedAt": "2026-11-19T07:48:54Z",
+ "source": "The Odds API (moyenne des bookmakers européens)",
  "matches": [
   {
    "id": "rou-fc-botosani-fc-voluntari",
@@ -29,41 +29,41 @@
    "kickoff": "2026-11-20T17:30Z",
    "home": "SV Darmstadt 98",
    "away": "1. FC Heidenheim",
-   "o1": 3.384,
-   "oX": 3.684,
-   "o2": 1.887,
+   "o1": 3.217,
+   "oX": 3.647,
+   "o2": 1.996,
    "best": {
     "2": {
-     "odds": 2.0,
-     "book": "Tipico"
+     "odds": 2.08,
+     "book": "Codere (IT)"
     },
     "1": {
-     "odds": 3.61,
-     "book": "Pinnacle"
+     "odds": 3.45,
+     "book": "BetOnline.ag"
     },
     "X": {
-     "odds": 3.94,
-     "book": "Pinnacle"
+     "odds": 3.86,
+     "book": "BetOnline.ag"
     }
    },
-   "books": 9,
-   "referenceAt": "2026-11-11T07:46:33Z",
+   "books": 16,
+   "referenceAt": "2026-11-19T07:45:35Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-11T07:48:24Z",
-    "o1": 3.61,
-    "oX": 3.94,
-    "o2": 1.93,
+    "asOf": "2026-11-19T07:48:41Z",
+    "o1": 3.33,
+    "oX": 3.82,
+    "o2": 2.06,
     "ou": {}
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-11T07:47:51Z",
-    "o1": 3.05,
-    "oX": 3.55,
-    "o2": 1.78,
+    "asOf": "2026-11-19T07:48:10Z",
+    "o1": 2.9,
+    "oX": 3.5,
+    "o2": 1.92,
     "ou": {}
    }
   },
@@ -73,39 +73,39 @@
    "kickoff": "2026-11-20T17:30Z",
    "home": "Arminia Bielefeld",
    "away": "1. FC Magdeburg",
-   "o1": 2.137,
-   "oX": 3.483,
-   "o2": 2.919,
+   "o1": 2.203,
+   "oX": 3.457,
+   "o2": 2.914,
    "best": {
     "2": {
-     "odds": 3.0,
+     "odds": 3.1,
      "book": "Pinnacle"
     },
     "1": {
-     "odds": 2.3,
-     "book": "Pinnacle"
+     "odds": 2.32,
+     "book": "BetOnline.ag"
     },
     "X": {
      "odds": 3.7,
      "book": "Tipico"
     }
    },
-   "books": 9,
-   "referenceAt": "2026-11-11T07:46:33Z",
+   "books": 16,
+   "referenceAt": "2026-11-19T07:45:35Z",
    "sharp": {
     "book": "Pinnacle",
     "bookKey": "pinnacle",
-    "asOf": "2026-11-11T07:48:24Z",
-    "o1": 2.3,
-    "oX": 3.6,
-    "o2": 3.0,
+    "asOf": "2026-11-19T07:48:41Z",
+    "o1": 2.24,
+    "oX": 3.62,
+    "o2": 3.1,
     "ou": {}
    },
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-11T07:47:51Z",
-    "o1": 2.0,
+    "asOf": "2026-11-19T07:48:10Z",
+    "o1": 2.1,
     "oX": 3.35,
     "o2": 2.7,
     "ou": {}

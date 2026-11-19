@@ -1,7 +1,7 @@
 {
  "date": "2026-11-23",
- "updatedAt": "2026-11-18T07:54:11Z",
- "source": "The Odds API (moyenne des bookmakers européens) + oddsportal",
+ "updatedAt": "2026-11-19T07:52:21Z",
+ "source": "The Odds API (moyenne des bookmakers européens) + oddsportal + Oddsportal (secours)",
  "matches": [
   {
    "id": "tur-basaksehir-corum-fk",
@@ -114,7 +114,7 @@
    "home": "Sochaux",
    "away": "USL Dunkerque",
    "o1": 2.3,
-   "oX": 3.3,
+   "oX": 3.4,
    "o2": 3.0
   },
   {
@@ -179,8 +179,8 @@
    "kickoff": "2026-11-23T19:45Z",
    "home": "Nantes",
    "away": "Grenoble",
-   "o1": 1.47,
-   "oX": 4.1,
+   "o1": 1.49,
+   "oX": 4.2,
    "o2": 6.5
   },
   {
