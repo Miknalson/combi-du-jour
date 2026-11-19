@@ -1,7 +1,7 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-18T15:32:01.119884+00:00",
+  "updatedAt": "2026-11-19T15:38:53.361794+00:00",
   "status": "quota",
   "matches": [],
   "leaguesQueried": 0,
@@ -317,7 +317,7 @@
     {
       "key": "soccer_spain_copa_del_rey",
       "title": "Copa del Rey",
-      "active": true,
+      "active": false,
       "gender": "unspecified"
     },
     {
@@ -420,42 +420,6 @@
   "winamaxUnavailableLeagues": 0,
   "femaleMatches": 0,
   "fixtures": [
-    {
-      "id": "football-8d017c6bef33aa894ea91e1c1f3a5299",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "BK Hacken",
-      "away": "Manchester City",
-      "kickoff": "2026-11-18T17:45:00Z"
-    },
-    {
-      "id": "football-2ff809e70c96071b20b2ad3f6123fe8f",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "Real Madrid",
-      "away": "Inter Milan",
-      "kickoff": "2026-11-18T17:45:00Z"
-    },
-    {
-      "id": "football-122669be0e839fcda949d054af3ddc7f",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "Chelsea",
-      "away": "Paris Saint Germain",
-      "kickoff": "2026-11-18T20:00:00Z"
-    },
-    {
-      "id": "football-e8aea25fa4a2c167c4f565a0a3703676",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "Juventus",
-      "away": "Leuven",
-      "kickoff": "2026-11-18T20:00:00Z"
-    },
     {
       "id": "football-46c323a078772696b526e9e4a4f2e7ff",
       "sportKey": "soccer_uefa_champs_league_women",

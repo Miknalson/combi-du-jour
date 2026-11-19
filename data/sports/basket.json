@@ -1,7 +1,7 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-18T15:32:01.119884+00:00",
+  "updatedAt": "2026-11-19T15:38:53.361794+00:00",
   "status": "quota",
   "matches": [],
   "leaguesQueried": 0,
@@ -78,15 +78,6 @@
   "winamaxUnavailableLeagues": 0,
   "femaleMatches": 0,
   "fixtures": [
-    {
-      "id": "basket-15e35a72dec4007e37710032d620bea6",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Beşiktaş J.K.",
-      "away": "Real Madrid",
-      "kickoff": "2026-11-18T17:00:00Z",
-      "gender": "unspecified"
-    },
     {
       "id": "basket-4b4d96b108c8fc648a218e196ff50814",
       "sportKey": "basketball_euroleague",
