@@ -134,7 +134,8 @@
    "away": "U. Cluj",
    "o1": 2.65,
    "oX": 3.55,
-   "o2": 2.45
+   "o2": 2.45,
+   "score": "2-3"
   },
   {
    "id": "l2-annecy-fc-clermont",
@@ -178,7 +179,8 @@
     "oX": 3.15,
     "o2": 3.15,
     "ou": {}
-   }
+   },
+   "score": "4-2"
   },
   {
    "id": "l2-metz-boulogne",
@@ -222,7 +224,8 @@
     "oX": 3.15,
     "o2": 3.2,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "l2-nancy-dijon",
@@ -266,7 +269,8 @@
     "oX": 3.5,
     "o2": 3.75,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "l2-guingamp-rodez-af",
@@ -310,7 +314,8 @@
     "oX": 3.3,
     "o2": 3.1,
     "ou": {}
-   }
+   },
+   "score": "1-3"
   },
   {
    "id": "l2-red-star-pau-fc",
@@ -354,7 +359,8 @@
     "oX": 3.2,
     "o2": 3.1,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "pol-pogon-szczecin-slask-wroclaw",
@@ -364,7 +370,8 @@
    "away": "Śląsk Wrocław",
    "o1": 1.8,
    "oX": 3.85,
-   "o2": 4.1
+   "o2": 4.1,
+   "score": "1-2"
   },
   {
    "id": "bl-bayern-munich-1-fc-koln",
@@ -423,7 +430,8 @@
     "oX": 11.0,
     "o2": 15.0,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "liga2-andorra-cf-leganes",
@@ -467,7 +475,8 @@
     "oX": 3.35,
     "o2": 3.5,
     "ou": {}
-   }
+   },
+   "score": "1-3"
   },
   {
    "id": "l1-troyes-le-havre",
@@ -522,7 +531,8 @@
     "oX": 3.45,
     "o2": 3.25,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "bel-cercle-brugge-ksv-westerlo",
@@ -566,7 +576,8 @@
     "oX": 3.5,
     "o2": 2.8,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "liga-athletic-bilbao-espanyol",
@@ -622,7 +633,8 @@
     "o2": 5.6,
     "ou": {}
    },
-   "leagueTitle": "LIGA"
+   "leagueTitle": "LIGA",
+   "score": "0-1"
   }
  ]
 }
