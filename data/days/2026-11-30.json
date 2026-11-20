@@ -1,0 +1,27 @@
+{
+ "date": "2026-11-30",
+ "updatedAt": "2026-11-20T20:06:37Z",
+ "source": "Oddsportal (secours)",
+ "matches": [
+  {
+   "id": "sa-lecce-atalanta",
+   "league": "SA",
+   "kickoff": "2026-11-30T17:30Z",
+   "home": "Lecce",
+   "away": "Atalanta",
+   "o1": 3.7,
+   "oX": 3.8,
+   "o2": 1.95
+  },
+  {
+   "id": "sa-cagliari-ac-milan",
+   "league": "SA",
+   "kickoff": "2026-11-30T19:45Z",
+   "home": "Cagliari",
+   "away": "AC Milan",
+   "o1": 4.75,
+   "oX": 3.8,
+   "o2": 1.71
+  }
+ ]
+}

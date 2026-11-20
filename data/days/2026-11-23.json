@@ -1,8 +1,28 @@
 {
  "date": "2026-11-23",
- "updatedAt": "2026-11-19T07:52:21Z",
+ "updatedAt": "2026-11-20T20:06:37Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal + Oddsportal (secours)",
  "matches": [
+  {
+   "id": "ukr-chornomorets-odesa-epitsentr",
+   "league": "UKR",
+   "kickoff": "2026-11-23T11:00Z",
+   "home": "Chornomorets Odesa",
+   "away": "Epitsentr",
+   "o1": 2.9,
+   "oX": 3.0,
+   "o2": 2.4
+  },
+  {
+   "id": "ukr-lnz-cherkasy-polissya-zhytomyr",
+   "league": "UKR",
+   "kickoff": "2026-11-23T11:00Z",
+   "home": "LNZ Cherkasy",
+   "away": "Polissya Zhytomyr",
+   "o1": 3.4,
+   "oX": 3.0,
+   "o2": 2.15
+  },
   {
    "id": "tur-basaksehir-corum-fk",
    "league": "TUR",
