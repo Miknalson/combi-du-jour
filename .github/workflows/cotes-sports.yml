@@ -5,6 +5,10 @@ on:
     paths:
       - 'scripts/update_sports.py'
       - 'scripts/update_odds.py'
+      - 'scripts/update_scores.py'
+      - 'bet-results.js'
+      - 'tests/bet-results*'
+      - 'tests/test_scores.py'
       - 'scripts/check_quotes.py'
       - 'scripts/collect_quotes.py'
       - 'feed-health.js'
@@ -29,6 +33,7 @@ on:
       - 'tests/test_safe_sports.py'
   schedule:
     - cron: '5 6 * * *'
+    - cron: '25 23 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -43,6 +48,7 @@ jobs:
       provider_ready: ${{ steps.provider.outputs.ready }}
       collection: ${{ steps.collection.outcome }}
       notifications: ${{ steps.notifications.outcome }}
+      scores: ${{ steps.scores.outcome }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -63,6 +69,8 @@ jobs:
           node tests/multisport.test.cjs
           node tests/alerts.test.cjs
           node tests/ticket-reference.test.cjs
+          node tests/bet-results.test.cjs
+          python -m unittest discover -s tests -p 'test_scores.py'
           python -m unittest discover -s tests -p 'test_collection_health.py'
       - name: Détecter une modification du collecteur
         id: quote_changes
@@ -79,7 +87,7 @@ jobs:
           fi
       - name: Vérifier l’accès au fournisseur sans exposer la clé
         id: provider
-        if: github.event_name != 'push' || steps.quote_changes.outputs.refresh == 'true'
+        if: github.event.schedule != '25 23 * * *' && (github.event_name != 'push' || steps.quote_changes.outputs.refresh == 'true')
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/check_quotes.py
@@ -90,10 +98,15 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/collect_quotes.py --max-credits 18
+      - name: Actualiser les scores de football terminés
+        id: scores
+        continue-on-error: true
+        run: python scripts/update_scores.py --max-requests 8
       - name: Consigner les tests fictifs sans passer d’ordre
         continue-on-error: true
         run: node scripts/paper_multi_tests.cjs
       - name: Notifier les propositions sans passer de pari
+        if: github.event.schedule != '25 23 * * *'
         id: notifications
         continue-on-error: true
         env:
@@ -105,6 +118,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/sports/ data/days/ data/index.json
+          if [ -f data/scores-health.json ]; then git add data/scores-health.json; fi
           if [ -f data/collection-health.json ]; then git add data/collection-health.json; fi
           if [ -f data/notification-status.json ]; then git add data/notification-status.json; fi
           if [ -f data/notification-state.json ]; then git add data/notification-state.json; fi
@@ -116,7 +130,7 @@ jobs:
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp feed-health.js ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp bet-results.js feed-health.js ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
@@ -134,7 +148,7 @@ jobs:
 
   signaler:
     needs: [actualiser, publier]
-    if: always() && needs.publier.result == 'success' && (needs.actualiser.outputs.provider_ready == 'false' || needs.actualiser.outputs.collection == 'failure' || needs.actualiser.outputs.notifications == 'failure')
+    if: always() && needs.publier.result == 'success' && (needs.actualiser.outputs.provider_ready == 'false' || needs.actualiser.outputs.collection == 'failure' || needs.actualiser.outputs.notifications == 'failure' || needs.actualiser.outputs.scores == 'failure')
     runs-on: ubuntu-latest
     steps:
       - name: Signaler le blocage après publication du diagnostic

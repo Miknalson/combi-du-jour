@@ -159,3 +159,5 @@ h1,h2,h3{text-transform:none;letter-spacing:-.035em;font-weight:700}h1{line-heig
 .reference-ticket{overflow-wrap:anywhere}.reference-legs{padding-left:22px;margin:18px 0}.reference-legs li{margin:14px 0;line-height:1.6}.reference-legs small{color:var(--ink-2)}.reference-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:18px}.mode-switch button{min-width:0;padding:8px;overflow-wrap:anywhere}
 
 .fixture-fallback{margin-top:22px;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}.fixture-fallback ul{padding-left:20px}.fixture-fallback li{margin:12px 0;line-height:1.6}.fixture-fallback p,[data-feed-health] p{font-size:14px;line-height:1.65}.fixture-fallback small,[data-feed-health] small{color:var(--ink-2)}[data-feed-health]{overflow-wrap:anywhere}[data-feed-health] ul{padding-left:20px;font-size:13px;line-height:1.8}
+
+#scoresStatus{flex-basis:100%;max-width:100%;overflow-wrap:anywhere;text-align:left;line-height:1.6;font-size:13px}

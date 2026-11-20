@@ -1,6 +1,6 @@
 (function(){
 'use strict';
-var snapshots={};window.PaperTestsView={snapshot:function(){var v1=snapshots.v1?snapshots.v1():null,v2=snapshots.v2?snapshots.v2():null;return {journal:v1&&v1.journal,status:v1&&v1.status,manualResults:v1?v1.manualResults:v2?v2.manualResults:{},protocols:{v1:v1,v2:v2}};}};
+var snapshots={},refreshers=[];window.PaperTestsView={refresh:function(){return Promise.all(refreshers.map(function(fn){return fn();}));},snapshot:function(){var v1=snapshots.v1?snapshots.v1():null,v2=snapshots.v2?snapshots.v2():null;return {journal:v1&&v1.journal,status:v1&&v1.status,manualResults:v1?v1.manualResults:v2?v2.manualResults:{},protocols:{v1:v1,v2:v2}};}};
 function mount(config){
 var journal=null,status=null,el=document.getElementById(config.id);if(!el)return;
 function esc(x){return String(x).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
@@ -17,7 +17,9 @@ function render(){
 }
 el.addEventListener('click',function(e){var button=e.target.closest('[data-paper-save]');if(!button)return;var row=button.closest('[data-paper-id]'),record=journal.records.find(function(r){return r.id===row.dataset.paperId;}),value=row.querySelector('.paper-result').value,odds=Number(row.querySelector('.paper-final-odds').value),note=row.querySelector('.paper-result-note');if(!record)return;if(value!=='auto'&&(!row.querySelector('.paper-confirm').checked||record.legs.some(function(l){return !Number.isFinite(Date.parse(l.kickoff))||Date.parse(l.kickoff)>=Date.now();}))){note.textContent='Attends la fin des rencontres et confirme leur règlement avant de renseigner un résultat.';return;}if(value==='won'&&(!Number.isFinite(odds)||odds<=1||odds>record.odds+1e-9)){note.textContent='Utilise la cote réglée, supérieure à 1 et au maximum égale à la cote figée. Un remboursement total est une annulation.';return;}try{var results=manual();if(value==='auto')delete results[record.id];else results[record.id]={status:value,confirmed:true,finalOdds:value==='won'?odds:null,updatedAt:new Date().toISOString()};localStorage.setItem('cdj.paperResults',JSON.stringify(results));render();}catch(error){note.textContent='Impossible de sauvegarder sur cet appareil.';}});
 snapshots[config.key]=function(){return {journal:journal,status:status,manualResults:manual()};};
-render();Promise.all([config.file,config.statusFile].map(function(file){return fetch(file,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});})).then(function(values){journal=values[0];status=values[1];render();});
+var loading=null;
+function reload(){if(loading)return loading;loading=Promise.all([config.file,config.statusFile].map(function(file){return fetch(file,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});})).then(function(values){var nextJournal=values[0]||journal,nextStatus=values[1]||status,changed=JSON.stringify(nextJournal)!==JSON.stringify(journal)||JSON.stringify(nextStatus)!==JSON.stringify(status);journal=nextJournal;status=nextStatus;if(changed&&!(el.contains(document.activeElement)&&document.activeElement.matches('input,select,textarea'))&&!el.querySelector('.paper-confirm:checked'))render();}).finally(function(){loading=null;});return loading;}
+refreshers.push(reload);render();reload();
 }
 mount({id:'paperProtocolV2',key:'v2',v2:true,file:'data/paper-tests-v2.json',statusFile:'data/paper-status-v2.json'});
 mount({id:'paperProtocol',key:'v1',v2:false,file:'data/paper-tests-v1.json',statusFile:'data/paper-status-v1.json'});

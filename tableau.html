@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=health1">
+<link rel="stylesheet" href="style.css?v=results1">
 <style>
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -74,7 +74,8 @@
   </section>
 
   <section>
-    <div class="head"><h2>Mes paris</h2><div class="hint">Le résultat se met à jour tout seul avec les scores. Tu peux aussi le fixer à la main.</div></div>
+    <div class="head"><h2>Mes paris</h2><div class="hint">Football : calcul avec les scores finaux publiés. Les autres sports et les marchés non pris en charge restent à vérifier chez Winamax.</div></div>
+    <div class="tools"><button type="button" class="btn ghost small" id="refreshScores">Actualiser les résultats</button><span class="status" id="scoresStatus" role="status" aria-live="polite">Chargement des résultats…</span></div>
     <div class="tbl-wrap"><table>
       <thead><tr><th>Date</th><th>Sélections</th><th>Cote</th><th>Mise</th><th>Résultat</th><th></th></tr></thead>
       <tbody id="betRows"></tbody>
@@ -103,7 +104,8 @@
 <section class="wrap" id="deliveryStatus" data-feed-health></section><script src="feed-health.js?v=1"></script><script src="sport-catalog.js?v=2"></script>
 <script src="safe-engine.js?v=paper-v1"></script>
 <script src="paper-engine.js?v=1"></script>
-<script src="paper-view.js?v=multisport-v2"></script>
+<script src="paper-view.js?v=results1"></script>
+<script src="bet-results.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
 <script>
@@ -116,7 +118,7 @@ var store = {
   set:function(k,v){ try{ localStorage.setItem('cdj.'+k, JSON.stringify(v)); }catch(e){} }
 };
 var scoresStatus='loading';
-var matches = {}; // matchId + coup d’envoi : ne pas confondre deux rencontres des mêmes équipes
+var matches = store.get('scoreCache',{});if(!matches||typeof matches!=='object'||Array.isArray(matches))matches={}; // matchId + coup d’envoi : ne pas confondre deux rencontres des mêmes équipes
 function matchKey(id,kickoff){return id+'|'+Date.parse(kickoff);}
 
 function esc(s){ return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
@@ -126,36 +128,9 @@ function pct(p){ return (p*100).toFixed(0)+' %'; }
 function odds(o){ return o.toFixed(2).replace('.',','); }
 function day(iso){ return new Date(iso).toLocaleDateString('fr-FR',{timeZone:TZ,weekday:'short',day:'numeric',month:'short'}); }
 
-// Same bet codes as the main page: 1, X, 2, 1X, X2, O2.5, U3.5…
-// Same rules as the main page: 1 X 2 1X X2, O2.5 / U2.5, handicaps H1-1.5 / H2+1.5, exact scores CS2-1, combos joined with "&".
-function settle(code, h, a){
-  if(code.indexOf('&')>-1) return code.split('&').every(function(c){ return settle(c,h,a); });
-  if(code==='1') return h>a;
-  if(code==='2') return h<a;
-  if(code==='X') return h===a;
-  if(code==='1X') return h>=a;
-  if(code==='X2') return h<=a;
-  if(code.slice(0,2)==='CS'){ var s=code.slice(2).split('-').map(Number); return h===s[0] && a===s[1]; }
-  if(code[0]==='H'){ var L=parseFloat(code.slice(2)); return code[1]==='1' ? h+L>a : a+L>h; }
-  if(code[0]==='O') return h+a>parseFloat(code.slice(1));
-  if(code[0]==='U') return h+a<parseFloat(code.slice(1));
-  return null;
-}
-function legState(l){
-  if(l.sport && l.sport!=='football') return null; // Règlement Winamax manuel pour basket/tennis.
-  var m = matches[matchKey(l.matchId,l.kickoff)];
-  if(!m || !m.score) return null;
-  var s = String(m.score).split('-').map(Number);
-  if(s.length!==2 || !isFinite(s[0]) || !isFinite(s[1])) return null;
-  var ok=settle(l.code,s[0],s[1]);
-  return ok===null?null:{ok:ok,score:m.score};
-}
-function betState(b){
-  if(b.manual) return b.manual;
-  var done = true, lost = false;
-  b.legs.forEach(function(l){ var st = legState(l); if(!st) done = false; else if(!st.ok) lost = true; });
-  return lost ? 'lost' : (done ? 'won' : 'wait');
-}
+function allMatches(){return Object.values(matches);}
+function legState(l){var r=BetResults.legResult(l,allMatches(),Date.now());return r.ok===null?null:r;}
+function betState(b){return BetResults.betState(b,allMatches(),Date.now());}
 function net(b, st){ return st==='won' ? b.stake*(b.odds-1) : st==='lost' ? -b.stake : 0; }
 function lastKick(b){ return b.legs.reduce(function(a,l){ return l.kickoff>a ? l.kickoff : a; }, ''); }
 
@@ -166,7 +141,7 @@ function render(){
   if(document.activeElement !== bs) bs.value = start===null ? '' : start;
 
   var rows = bets.map(function(b){ var st = betState(b); return {b:b, st:st, net:net(b,st)}; });
-  var settled = rows.filter(function(r){ return r.st!=='wait'; });
+  var settled = rows.filter(function(r){ return r.st==='won'||r.st==='lost'; });
   var profit = settled.reduce(function(a,r){ return a+r.net; },0);
   var staked = settled.reduce(function(a,r){ return a+r.b.stake; },0);
   var pending = rows.filter(function(r){ return r.st==='wait'; }).reduce(function(a,r){ return a+r.b.stake; },0);
@@ -178,7 +153,7 @@ function render(){
     kpi('Bankroll', start===null ? '—' : eur(bank), start===null ? 'mise de départ non renseignée' : 'départ '+eur(start)+(start>0?' · '+(bank>=start?'+':'')+((bank/start-1)*100).toFixed(1).replace('.',',')+' %':''), start===null?'':(bank>=start?'pos':'neg')) +
     kpi('Gain net', signed(profit), settled.length+' pari'+(settled.length>1?'s':'')+' terminé'+(settled.length>1?'s':''), profit>0?'pos':profit<0?'neg':'') +
     kpi('Réussite', settled.length ? pct(won/settled.length) : '—', won+' gagné'+(won>1?'s':'')+' sur '+settled.length) +
-    kpi('En jeu', eur(pending), rows.length-settled.length+' pari'+(rows.length-settled.length>1?'s':'')+' en attente');
+    kpi('En jeu', eur(pending), rows.filter(function(r){return r.st==='wait';}).length+' pari'+(rows.filter(function(r){return r.st==='wait';}).length>1?'s':'')+' en attente');
 
   renderChart(settled, start||0);
   renderCompare(rows);
@@ -216,7 +191,7 @@ function renderChart(settled, start){
 
 function renderCompare(rows){
   function agg(list){
-    var s = list.filter(function(r){ return r.st!=='wait'; });
+    var s = list.filter(function(r){ return r.st==='won'||r.st==='lost'; });
     var staked = s.reduce(function(a,r){ return a+r.b.stake; },0), n = s.reduce(function(a,r){ return a+r.net; },0);
     return {n:s.length, won:s.filter(function(r){ return r.st==='won'; }).length,
       expKnown:s.every(function(r){return typeof r.b.estProb==='number' && isFinite(r.b.estProb);}),
@@ -243,15 +218,15 @@ function renderBets(rows){
     var b = r.b;
     var legs = b.legs.map(function(l){
       var st = legState(l);
-      return '<div class="legline">'+esc(l.home)+' – '+esc(l.away)+' : <strong>'+esc(l.label)+'</strong>'+(st?' <span class="'+(st.ok?'ok':'ko')+'">'+esc(st.score)+(st.ok?' ✓':' ✗')+'</span>':'')+'</div>';
+      return '<div class="legline">'+esc(l.home)+' – '+esc(l.away)+' : <strong>'+esc(l.label)+'</strong>'+(st?' <span class="'+(st.ok?'ok':'ko')+'">'+esc(st.score)+(st.ok?' ✓':' ✗')+'</span>':'<br><small class="status">'+esc(BetResults.reasons[BetResults.legResult(l,allMatches(),Date.now()).reason]||'Résultat à vérifier')+'</small>')+'</div>';
     }).join('');
-    var badge = r.st==='won' ? '<span class="badge won">Gagné '+signed(r.net)+'</span>' : r.st==='lost' ? '<span class="badge lost">Perdu '+signed(r.net)+'</span>' : '<span class="badge wait">En attente</span>';
-    return '<tr><td style="white-space:nowrap">'+esc(day(b.legs[0] ? b.legs[0].kickoff : b.createdAt))+'<br><span class="chip '+(b.source==='algo'?'algo':'perso')+'">'+(b.source==='algo'?'ALGO':b.source==='safe'?'SAFE DU JOUR':'PERSO')+'</span></td>' +
+    var badge = r.st==='won' ? '<span class="badge won">Gagné '+signed(r.net)+'</span>' : r.st==='lost' ? '<span class="badge lost">Perdu '+signed(r.net)+'</span>' : r.st==='void'?'<span class="badge wait">Annulé / remboursé</span>' : '<span class="badge wait">En attente</span>';
+    return '<tr data-bet-id="'+esc(b.id)+'"><td style="white-space:nowrap">'+esc(day(b.legs[0] ? b.legs[0].kickoff : b.createdAt))+'<br><span class="chip '+(b.source==='algo'?'algo':'perso')+'">'+(b.source==='algo'?'ALGO':b.source==='safe'?'SAFE DU JOUR':'PERSO')+'</span></td>' +
       '<td>'+legs+'</td><td class="num">'+odds(b.odds)+'<br><span class="status">'+(typeof b.estProb==='number'&&isFinite(b.estProb)?pct(b.estProb):'Non estimée')+'</span></td><td class="num">'+eur(b.stake)+'</td>' +
       '<td>'+badge+(b.manual?'<br><span class="status">fixé à la main</span>':'')+'</td>' +
-      '<td><div class="acts" data-id="'+b.id+'">' +
+      '<td><div class="acts" data-id="'+esc(b.id)+'">' +
         (b.manual ? '<button type="button" class="btn ghost small" data-act="auto">Auto</button>' :
-          '<button type="button" class="btn ghost small" data-act="won">Gagné</button><button type="button" class="btn ghost small" data-act="lost">Perdu</button>') +
+          '<button type="button" class="btn ghost small" data-act="won">Gagné</button><button type="button" class="btn ghost small" data-act="lost">Perdu</button><button type="button" class="btn ghost small" data-act="void">Annulé</button>') +
         '<button type="button" class="btn ghost small" data-act="del">Suppr.</button></div></td></tr>';
   }).join('');
   document.getElementById('betRows').innerHTML = html || '<tr><td colspan="6"><div class="empty">Aucun pari pour l\'instant. Sur la page Combiné, choisis tes sélections dans « Mon ticket » ou touche « Jouer ce combiné », puis valide avec ta mise.</div></td></tr>';
@@ -304,28 +279,49 @@ document.getElementById('importFile').addEventListener('change', function(){
     store.set('bets', cur.concat(added));
     if(store.get('bankStart', null)===null && d.bankStart!==null && d.bankStart!==undefined) store.set('bankStart', d.bankStart);
     note.textContent = added.length+' pari'+(added.length>1?'s':'')+' importé'+(added.length>1?'s':'')+'.';
-    render();
+    render();refreshScores(true);
   }).catch(function(){ note.textContent = 'Ce fichier n\'est pas une sauvegarde de l\'appli.'; });
   this.value = '';
 });
 
-// Scores come from the same data files as the main page.
-render();
-(async function(){
-  try{
-    var idx = await (await fetch('data/index.json',{cache:'no-store'})).json();
-    var need = {};
-    store.get('bets',[]).forEach(function(b){ b.legs.forEach(function(l){ need[l.date]=true; }); });
-    function needLeg(l){if(l.date)need[l.date]=true;else if(Number.isFinite(Date.parse(l.kickoff)))need[new Date(l.kickoff).toLocaleDateString('en-CA',{timeZone:TZ})]=true;}
-    var proposals=store.get('proposals',{});Object.keys(proposals).forEach(function(d){need[d]=true;(proposals[d].legs||[]).forEach(needLeg);});
-    var safe=store.get('safeDaily',{});Object.keys(safe).forEach(function(d){need[d]=true;Object.values(safe[d]||{}).forEach(function(item){((item.ticket||{}).legs||[]).forEach(needLeg);});});
-    var dates = (idx.dates||[]).filter(function(d){ return need[d]; });
-    var docs = await Promise.all(dates.map(function(d){ return fetch('data/days/'+d+'.json',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }); }));
-    docs.forEach(function(doc){ if(doc) doc.matches.forEach(function(m){ matches[matchKey(m.id,m.kickoff)]=m; }); });
-    scoresStatus=docs.every(Boolean)&&Object.keys(need).every(function(d){return dates.includes(d);})?'loaded':'partial';
-    render();
-  }catch(e){ scoresStatus='unavailable'; /* Bets stay pending; manual results still work. */ }
-})();
+// Refresh static results at opening, on return to the app, and while it is visible.
+var refreshing=null,refreshAgain=false,lastAttempt=0;
+function requiredDates(){
+ var need=new Set();function addLegs(legs){BetResults.dates(legs).forEach(function(d){need.add(d);});}
+ store.get('bets',[]).forEach(function(b){addLegs(b.legs);});
+ var proposals=store.get('proposals',{});Object.keys(proposals).forEach(function(d){if(/^\d{4}-\d{2}-\d{2}$/.test(d))need.add(d);addLegs(proposals[d].legs||[]);});
+ var safe=store.get('safeDaily',{});Object.keys(safe).forEach(function(d){if(/^\d{4}-\d{2}-\d{2}$/.test(d))need.add(d);Object.values(safe[d]||{}).forEach(function(item){addLegs((item.ticket||{}).legs||[]);});});
+ return Array.from(need).sort();
+}
+async function readJson(file){var controller=new AbortController(),timer=setTimeout(function(){controller.abort();},12000);try{var r=await fetch(file,{cache:'no-store',signal:controller.signal});return r.ok?await r.json():null;}catch(e){return null;}finally{clearTimeout(timer);}}
+function refreshScores(force){
+ if(refreshing){if(force)refreshAgain=true;return refreshing;}
+ if(!force&&Date.now()-lastAttempt<15000)return Promise.resolve();
+ lastAttempt=Date.now();var button=document.getElementById('refreshScores'),note=document.getElementById('scoresStatus');button.disabled=true;note.textContent='Vérification des résultats…';scoresStatus='loading';
+ refreshing=(async function(){
+  var dates=requiredDates(),pair=await Promise.all([Promise.all(dates.map(function(d){return readJson('data/days/'+d+'.json');})),readJson('data/scores-health.json')]),docs=pair[0],source=pair[1];
+  var next=Object.assign({},matches),loaded=0;
+  docs.forEach(function(doc,i){if(!doc||!Array.isArray(doc.matches))return;loaded++;Object.keys(next).forEach(function(k){if(Number.isFinite(Date.parse(next[k].kickoff))&&new Date(next[k].kickoff).toLocaleDateString('en-CA',{timeZone:TZ})===dates[i])delete next[k];});doc.matches.forEach(function(m){if(m&&m.id&&Number.isFinite(Date.parse(m.kickoff)))next[matchKey(m.id,m.kickoff)]=m;});});
+  matches=next;scoresStatus=loaded===dates.length?'loaded':loaded?'partial':'unavailable';
+  // Cache public final scores only; never rewrite the user's tickets or manual results.
+  var cached={};Object.values(matches).filter(function(m){return BetResults.finalScore(m,Date.now());}).slice(-3000).forEach(function(m){cached[matchKey(m.id,m.kickoff)]=m;});store.set('scoreCache',cached);
+  render();
+  var pending=store.get('bets',[]).filter(function(b){return betState(b)==='wait';}),missing=0,manual=0;
+  pending.forEach(function(b){(b.legs||[]).forEach(function(l){var r=BetResults.legResult(l,allMatches(),Date.now());if(r.ok===null){if(['manual_sport','manual_market'].includes(r.reason))manual++;else missing++;}});});
+  note.textContent=(scoresStatus==='unavailable'?'Résultats inaccessibles : derniers scores connus conservés.':scoresStatus==='partial'?'Une partie des résultats est inaccessible : derniers scores connus conservés.':'Vérification terminée à '+new Date().toLocaleTimeString('fr-FR',{timeZone:TZ,hour:'2-digit',minute:'2-digit'})+'.')+(missing?' '+missing+' sélection(s) attendent un résultat final publié.':'')+(manual?' '+manual+' sélection(s) nécessitent une vérification du règlement.':'');
+  if(source&&source.status==='unavailable'&&missing)note.textContent+=' La source des nouveaux scores est indisponible ; le suivi reprend à sa prochaine mise à jour.';
+  if(window.PaperTestsView&&PaperTestsView.refresh)await PaperTestsView.refresh();
+ })().catch(function(){scoresStatus='unavailable';note.textContent='Impossible de rafraîchir les résultats. Tes tickets et les derniers scores connus sont conservés.';render();}).finally(function(){button.disabled=false;refreshing=null;if(refreshAgain){refreshAgain=false;refreshScores(true);}});
+ return refreshing;
+}
+document.getElementById('refreshScores').addEventListener('click',function(){refreshScores(true);});
+window.addEventListener('focus',function(){render();refreshScores(false);});
+window.addEventListener('pageshow',function(){refreshScores(false);});
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible'){render();refreshScores(false);}});
+window.addEventListener('storage',function(e){if(['cdj.bets','cdj.bankStart','cdj.paperResults'].includes(e.key)){render();refreshScores(true);}});
+setInterval(function(){if(document.visibilityState==='visible')refreshScores(false);},60000);
+render();refreshScores(true);
+
 })();
 </script>
 </body>
