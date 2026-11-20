@@ -18,6 +18,10 @@ def team(value, league):
     tokens = re.findall(r'[a-z0-9]+',value)
     if league == 'UWCL':
         tokens = [t for t in tokens if t not in {'women','w','fc','sl','as'}]
+        value = ''.join(tokens)
+        # Explicit women's club aliases across the two feeds; never fuzzy-match teams.
+        aliases = {'hbkoge':'koge','servette':'servettegeneve','servettefccf':'servettegeneve','servettechenois':'servettegeneve','servettechenoisfeminin':'servettegeneve'}
+        return aliases.get(value,value)
     return ''.join(tokens)
 
 def final_event(event):

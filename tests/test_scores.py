@@ -23,6 +23,14 @@ class ScoresTests(unittest.TestCase):
    if change=='wrong_opponent':e['competitions'][0]['competitors'][1]['team']['displayName']='Paris'
    if change=='invalid_score':e['competitions'][0]['competitors'][1]['score']='-1'
    self.assertIsNone(s.matching_final(self.match,[e,e] if change=='duplicate' else [e]),change)
+ def test_explicit_womens_club_aliases_keep_exact_opponent_and_kickoff(self):
+  import copy
+  for home,away,provider_home,provider_away in [('Paris FC W','Koge W','Paris FC','HB Køge'),('Barcelona W','Servette Geneve FC W','Barcelona','Servette FCCF')]:
+   match=dict(self.match,home=home,away=away)
+   event=copy.deepcopy(self.event);event['competitions'][0]['competitors'][0]['team']['displayName']=provider_home;event['competitions'][0]['competitors'][1]['team']['displayName']=provider_away
+   self.assertIsNotNone(s.matching_final(match,[event]))
+   event['date']='2026-11-18T20:00Z';self.assertIsNone(s.matching_final(match,[event]))
+  self.assertNotEqual(s.team('Servette','L1'),s.team('Servette Geneve FC W','L1'))
  def test_preserves_identity_prices_and_history_while_adding_verified_score(self):
   with tempfile.TemporaryDirectory() as root,patch.object(s,'ROOT',Path(root)),patch.object(s,'fetch',return_value={'events':[self.event]}) as get:
    folder=Path(root)/'days';folder.mkdir();file=folder/'2026-11-19.json';m=dict(self.match,o1=1.8,mine={'bookKey':'winamax_fr','asOf':'2026-11-19T10:00Z','o1':1.8});file.write_text(json.dumps({'date':'2026-11-19','matches':[m]}))
