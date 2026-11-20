@@ -11,7 +11,13 @@
    "away": "Bayern Munich W",
    "o1": 21.0,
    "oX": 11.0,
-   "o2": 1.1
+   "o2": 1.1,
+   "score": "0-4",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-20T14:47:43.497445+00:00"
   },
   {
    "id": "uwcl-paris-fc-w-koge-w",
@@ -31,7 +37,13 @@
    "away": "OL Lyonnes W",
    "o1": 3.3,
    "oX": 4.1,
-   "o2": 1.95
+   "o2": 1.95,
+   "score": "0-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-20T14:47:43.497445+00:00"
   },
   {
    "id": "uwcl-sl-benfica-w-as-roma-w",
@@ -41,7 +53,13 @@
    "away": "AS Roma W",
    "o1": 2.15,
    "oX": 3.8,
-   "o2": 2.85
+   "o2": 2.85,
+   "score": "2-3",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-20T14:47:43.497445+00:00"
   },
   {
    "id": "uwcl-barcelona-w-servette-geneve-fc-w",
@@ -53,5 +71,6 @@
    "oX": 29.0,
    "o2": 71.0
   }
- ]
+ ],
+ "scoresUpdatedAt": "2026-11-20T14:47:43.497445+00:00"
 }
