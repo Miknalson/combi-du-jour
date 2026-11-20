@@ -1,11 +1,11 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-19T15:38:53.361794+00:00",
+  "updatedAt": "2026-11-20T15:19:40.422687+00:00",
   "status": "quota",
   "matches": [],
   "leaguesQueried": 0,
-  "leaguesAvailable": 5,
+  "leaguesAvailable": 4,
   "partial": true,
   "competitions": [
     {
@@ -71,67 +71,13 @@
     {
       "key": "basketball_wncaab",
       "title": "WNCAAB",
-      "active": true,
+      "active": false,
       "gender": "women"
     }
   ],
   "winamaxUnavailableLeagues": 0,
   "femaleMatches": 0,
   "fixtures": [
-    {
-      "id": "basket-4b4d96b108c8fc648a218e196ff50814",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Maccabi Tel Aviv",
-      "away": "Dubai Basketball",
-      "kickoff": "2026-11-19T17:15:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-fd0b8dc548a91d28204f77e383c2b820",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Žalgiris",
-      "away": "Panathinaikos",
-      "kickoff": "2026-11-19T18:00:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-9254f51920f7e6698241302a3f949978",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "FC Bayern München",
-      "away": "Saski Baskonia",
-      "kickoff": "2026-11-19T19:00:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-0c64e1972e0525f5cf28265902eb43ab",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Pallacanestro Olimpia Milano",
-      "away": "Fenerbahce SK",
-      "kickoff": "2026-11-19T19:30:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-9d00df6643ed2590c76cbf57c8d8b714",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Paris Basketball",
-      "away": "Hapoel Tel Aviv",
-      "kickoff": "2026-11-19T19:45:00Z",
-      "gender": "unspecified"
-    },
-    {
-      "id": "basket-c65d74c382bec5dc7dacdb62b641728b",
-      "sportKey": "basketball_euroleague",
-      "league": "Basketball Euroleague",
-      "home": "Valencia Basket",
-      "away": "Virtus Segafredo Bologna",
-      "kickoff": "2026-11-19T20:00:00Z",
-      "gender": "unspecified"
-    },
     {
       "id": "basket-1a5b5e46f5c64363a212730f36e943e0",
       "sportKey": "basketball_euroleague",

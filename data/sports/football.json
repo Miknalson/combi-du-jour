@@ -1,11 +1,11 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-19T15:38:53.361794+00:00",
+  "updatedAt": "2026-11-20T15:19:40.422687+00:00",
   "status": "quota",
   "matches": [],
   "leaguesQueried": 0,
-  "leaguesAvailable": 22,
+  "leaguesAvailable": 21,
   "partial": true,
   "competitions": [
     {
@@ -377,7 +377,7 @@
     {
       "key": "soccer_uefa_champs_league_women",
       "title": "UEFA Champions League Women",
-      "active": true,
+      "active": false,
       "gender": "women"
     },
     {
@@ -420,51 +420,6 @@
   "winamaxUnavailableLeagues": 0,
   "femaleMatches": 0,
   "fixtures": [
-    {
-      "id": "football-46c323a078772696b526e9e4a4f2e7ff",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "Austria Wien",
-      "away": "Bayern Munich",
-      "kickoff": "2026-11-19T17:45:00Z"
-    },
-    {
-      "id": "football-f717126e06b5b6e5166255be6f486dde",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "Paris FC",
-      "away": "HB Køge",
-      "kickoff": "2026-11-19T17:45:00Z"
-    },
-    {
-      "id": "football-0059f14500bb56dd00fc99fb8a4bd987",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "Benfica",
-      "away": "AS Roma",
-      "kickoff": "2026-11-19T20:00:00Z"
-    },
-    {
-      "id": "football-a94ea221001eb7a9816e94f5a821c169",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "Arsenal",
-      "away": "Lyon",
-      "kickoff": "2026-11-19T20:00:00Z"
-    },
-    {
-      "id": "football-fa391596e09654602dc180a0c8d43e9f",
-      "sportKey": "soccer_uefa_champs_league_women",
-      "leagueCode": "UEFA_CHAMPS_LEAGUE_WOMEN",
-      "league": "UEFA Champions League Women",
-      "home": "Barcelona",
-      "away": "Servette FC",
-      "kickoff": "2026-11-19T20:00:00Z"
-    },
     {
       "id": "football-e422af92d1fc06c0a330838c1c2f2e08",
       "sportKey": "soccer_uefa_champs_league",

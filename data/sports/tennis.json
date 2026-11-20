@@ -1,7 +1,7 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-19T15:38:53.361794+00:00",
+  "updatedAt": "2026-11-20T15:19:40.422687+00:00",
   "status": "quota",
   "matches": [],
   "leaguesQueried": 0,
@@ -328,17 +328,5 @@
     }
   ],
   "winamaxUnavailableLeagues": 0,
-  "femaleMatches": 0,
-  "fixtures": [
-    {
-      "id": "tennis-66cc3b98e9e67560a34198715ee78d75",
-      "sportKey": "tennis_atp_finals",
-      "league": "ATP Finals",
-      "home": "Alexander Zverev",
-      "away": "Arthur Fils",
-      "kickoff": "2026-11-19T19:30:00Z",
-      "gender": "unspecified"
-    }
-  ],
-  "calendarStatus": "cached"
+  "femaleMatches": 0
 }
