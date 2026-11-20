@@ -2,7 +2,7 @@
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.BetResults=factory();})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
 function paris(t){return new Date(t).toLocaleDateString('en-CA',{timeZone:'Europe/Paris'});}
-function name(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'');}
+function name(s){return String(s||'').replace(/[øØ]/g,'o').replace(/[łŁ]/g,'l').replace(/ß/g,'ss').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'');}
 function dates(legs){return Array.from(new Set((legs||[]).map(function(l){return Number.isFinite(Date.parse(l.kickoff))?paris(l.kickoff):/^\d{4}-\d{2}-\d{2}$/.test(l.date||'')?l.date:null;}).filter(Boolean)));}
 function findMatch(leg,matches){
  var time=Date.parse(leg.kickoff);if(!Number.isFinite(time))return null;

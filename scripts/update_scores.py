@@ -14,7 +14,8 @@ ROOT = Path(__file__).resolve().parents[1] / 'data'
 LEAGUES = {'PL':'eng.1','CHA':'eng.2','LIGA':'esp.1','LIGA2':'esp.2','SA':'ita.1','BL':'ger.1','BL2':'ger.2','L1':'fra.1','L2':'fra.2','POR':'por.1','POR2':'por.2','ERE':'ned.1','BEL':'bel.1','UCL':'uefa.champions','UEL':'uefa.europa','UECL':'uefa.europa.conf','UNL':'uefa.nations','EURO':'uefa.euro','EUROQ':'uefa.euroq','UWCL':'uefa.wchampions','TUR':'tur.1','DEN':'den.1','SWE':'swe.1','POL':'pol.1','ROU':'rou.1','RUS':'rus.1','SRB':'srb.1','UKR':'ukr.1','IRL':'irl.1'}
 
 def team(value, league):
-    value = unicodedata.normalize('NFKD',str(value)).encode('ascii','ignore').decode().lower()
+    value = str(value).translate(str.maketrans({'ø':'o','Ø':'O','ł':'l','Ł':'L','ß':'ss','æ':'ae','Æ':'Ae','œ':'oe','Œ':'Oe'}))
+    value = unicodedata.normalize('NFKD',value).encode('ascii','ignore').decode().lower()
     tokens = re.findall(r'[a-z0-9]+',value)
     if league == 'UWCL':
         tokens = [t for t in tokens if t not in {'women','w','fc','sl','as'}]
