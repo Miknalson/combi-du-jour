@@ -11,7 +11,8 @@
    "away": "FC Voluntari",
    "o1": 1.74,
    "oX": 3.8,
-   "o2": 4.33
+   "o2": 4.33,
+   "score": "3-3"
   },
   {
    "id": "pol-piast-gliwice-korona-kielce",
@@ -21,7 +22,8 @@
    "away": "Korona Kielce",
    "o1": 2.45,
    "oX": 3.6,
-   "o2": 2.63
+   "o2": 2.63,
+   "score": "2-0"
   },
   {
    "id": "bl2-sv-darmstadt-98-1-fc-heidenheim",
@@ -65,7 +67,8 @@
     "oX": 3.5,
     "o2": 1.92,
     "ou": {}
-   }
+   },
+   "score": "3-1"
   },
   {
    "id": "bl2-arminia-bielefeld-1-fc-magdeburg",
@@ -109,7 +112,8 @@
     "oX": 3.35,
     "o2": 2.7,
     "ou": {}
-   }
+   },
+   "score": "1-2"
   },
   {
    "id": "den-agf-aarhus-lyngby",
@@ -119,7 +123,8 @@
    "away": "Lyngby",
    "o1": 1.76,
    "oX": 4.0,
-   "o2": 4.33
+   "o2": 4.33,
+   "score": "2-1"
   },
   {
    "id": "rou-farul-constanta-u-cluj",
