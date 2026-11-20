@@ -27,7 +27,13 @@
    "away": "Koge W",
    "o1": 1.65,
    "oX": 4.2,
-   "o2": 4.5
+   "o2": 4.5,
+   "score": "2-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-20T14:49:59.699418+00:00"
   },
   {
    "id": "uwcl-arsenal-w-ol-lyonnes-w",
@@ -69,8 +75,14 @@
    "away": "Servette Geneve FC W",
    "o1": 1.01,
    "oX": 29.0,
-   "o2": 71.0
+   "o2": 71.0,
+   "score": "6-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-20T14:49:59.699418+00:00"
   }
  ],
- "scoresUpdatedAt": "2026-11-20T14:47:43.497445+00:00"
+ "scoresUpdatedAt": "2026-11-20T14:49:59.699418+00:00"
 }
