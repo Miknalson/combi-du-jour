@@ -96,6 +96,7 @@ def publish(matches,now):
 
 def run(now=None):
     now=now or dt.datetime.now(dt.timezone.utc);day=now.astimezone(api.PARIS).strftime('%Y-%m-%d')
+    previous_report=read('football-market-coverage.json',{})
     report={'version':VERSION,'updatedAt':now.isoformat(),'day':day,'status':'waiting','message':'Aucun relevé complémentaire de totaux effectué.'}
     plan=candidates(now)
     if not os.environ.get('ODDS_API_KEY'):report.update(status='unconfigured',message='Clé de cotes absente.')
@@ -138,6 +139,11 @@ def run(now=None):
             save('quote-budget.json',ledger)
         except Exception as exc:
             report.update(error_info(exc));report['message']='La vérification des totaux de buts a échoué. Les anciens prix ne sont pas présentés comme nouveaux.'
+    if report.get('requestedMarkets'):
+        report['sourceResult']={k:report[k] for k in ['status','message','updatedAt','league','requestedMarkets','matches','totalLines'] if k in report}
+    elif previous_report.get('day')==day:
+        result=previous_report.get('sourceResult') or {k:previous_report[k] for k in ['status','message','updatedAt','league','requestedMarkets','matches','totalLines'] if k in previous_report}
+        if result.get('requestedMarkets'):report['sourceResult']=result
     save('football-market-coverage.json',report);print(report['message']);return report
 
 if __name__=='__main__':run()

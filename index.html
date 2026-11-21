@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=goals1">
+<link rel="stylesheet" href="style.css?v=goals2">
 </head>
 <body><nav aria-label="Alertes" style="max-width:1120px;margin:auto;padding:12px 20px"><a href="notifications.html">🔔 Mes alertes Algo / Safe</a></nav>
 <div class="wrap">
@@ -37,6 +37,7 @@
   <div id="ticketArea"><div class="empty">Chargement des matchs et des cotes…</div></div>
 
   <section class="model-study" id="goalMarkets" aria-label="Totaux de buts Winamax"></section>
+  <details class="model-study" id="manualGoalModule"><summary>Comparer un total de buts vu chez Winamax</summary><p>Recopie les deux côtés du même marché. Ces cotes sont enregistrées sur cet appareil et utilisées uniquement dans ta simulation personnelle. Elles ne changent ni les alertes, ni les tickets fictifs automatiques.</p><form id="manualGoalForm" class="manual-goal-form"><label>Rencontre<select id="manualGoalMatch" required></select></label><label>Total de buts<input id="manualGoalLine" type="number" min="0.5" max="9.5" step="1" value="2.5" required></label><label>Cote « plus de »<input id="manualGoalOver" inputmode="decimal" required></label><label>Cote « moins de »<input id="manualGoalUnder" inputmode="decimal" required></label><label><input id="manualGoalConfirmed" type="checkbox" required> J’ai relevé ces deux cotes chez Winamax sur ce match et cette même ligne.</label><button type="submit" class="btn">Comparer dans ma simulation personnelle</button></form><button type="button" class="btn ghost small" id="clearManualGoals">Retirer mes saisies de buts</button><p id="manualGoalStatus" role="status" aria-live="polite"></p></details>
 
   <section class="model-study" id="modelStudy" aria-label="Résultats de l’étude"></section>
 
@@ -127,7 +128,7 @@
 
 <script src="feed-health.js?v=1"></script><script src="sport-catalog.js?v=2"></script>
 <script src="uefa.js?v=1"></script>
-<script src="safe-engine.js?v=goals1"></script><script src="football-markets.js?v=1"></script>
+<script src="safe-engine.js?v=goals1"></script><script src="football-markets.js?v=2"></script>
 <script src="ticket-reference.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
@@ -157,6 +158,7 @@ var settings = Object.assign({strategy:'reference',oMin:3,oMax:5,maxLegs:5,minLe
 if(settings.probV !== 2){ settings.minProb = 0.5; settings.probV = 2; store.set('settings', settings); }
 if(settings.strategyV!==2){settings.strategy='reference';settings.strategyV=2;store.set('settings',settings);}
 if(state.referenceId || !['reference','value','combo'].includes(settings.strategy))settings.strategy='reference';
+if(settings.quoteV!==1){settings.algoEst=false;settings.realGoals=true;settings.myBook=true;settings.quoteV=1;store.set('settings',settings);}
 var excluded = store.get('excluded',{});
 
 function bindSettings(){
@@ -246,7 +248,7 @@ function line(L){ return String(L).replace('.',','); }
 // when the data has one: each bet keeps the lower of the two, so a pick needs both to agree it is likely.
 function candidates(m){
   var w=settings.myBook&&m.mine;
-  var quotedTotals=settings.myBook?Object.fromEntries(FootballMarkets.totals(m,Date.now()).map(function(q){return [String(q.line),{o:q.over,u:q.under,asOf:q.asOf}];})):(m.ou||{});
+  var quotedTotals=settings.myBook?Object.fromEntries(FootballMarkets.totals(m,Date.now(),{includeManual:true}).map(function(q){return [String(q.line),{o:q.over,u:q.under,asOf:q.asOf,quoteSource:q.source}];})):(m.ou||{});
   var out = rawCandidates(m, m.o1, m.oX, m.o2, quotedTotals);
   var s = m.sharp;
   if(s && s.o1>1 && s.oX>1 && s.o2>1){
@@ -267,7 +269,7 @@ function candidates(m){
       }
     });
   }
-  if(w&&w.bookKey==='winamax_fr')out.forEach(function(c){if(/^[OU][0-9.]+$/.test(c.code)){var q=quotedTotals[c.code.slice(1)];if(q&&q.o>1&&q.u>1){c.o=q[c.code[0]==='O'?'o':'u'];c.mine=true;c.est=false;c.quoteSource=q.quoteSource||'api';c.asOf=q.asOf||w.asOf;}}});
+  if(settings.myBook)out.forEach(function(c){if(/^[OU][0-9.]+$/.test(c.code)){var q=quotedTotals[c.code.slice(1)];if(q&&q.o>1&&q.u>1){c.o=q[c.code[0]==='O'?'o':'u'];c.mine=true;c.est=false;c.quoteSource=q.quoteSource||'api';c.asOf=q.asOf||(w&&w.asOf);}}});
   return out;
 }
 // One settlement rule for every bet code: 1 X 2 1X X2, O2.5 / U2.5, handicaps H1-1.5 / H2+1.5,
@@ -365,10 +367,10 @@ function bestCombos(matches, n, liveFilter){
   var onlyMine = settings.myBook;
   matches.forEach(function(m){
     if(!eligible(m)) return;
-    if(onlyMine && !m.mine && !FootballMarkets.totals(m,now).length) return;
+    if(onlyMine && !m.mine && !FootballMarkets.totals(m,now,{includeManual:true}).length) return;
     if(liveFilter && settings.skipStarted && new Date(m.kickoff).getTime() <= now) return;
     // Markets quoted by only a handful of bookmakers are thin and their odds less reliable.
-    if(m.books !== undefined && m.books < MIN_BOOKS && !(m.quoteBasis==='winamax-only'&&UefaCalendar.realQuote(m,now))&&!FootballMarkets.totals(m,now).length) return;
+    if(m.books !== undefined && m.books < MIN_BOOKS && !(m.quoteBasis==='winamax-only'&&UefaCalendar.realQuote(m,now))&&!FootballMarkets.totals(m,now,{includeManual:true}).length) return;
     // Grid-only markets have no bookmaker price in the data and our estimates proved too generous
     // (a ≈1,55 ticket was about 1,20 at the bookmaker), so the algo leaves them out unless asked.
     var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p >= Math.max(0.2, settings.minProb) && (settings.algoEst || !c.grid) && (!onlyMine || c.mine || c.grid); });
@@ -483,7 +485,7 @@ function legRow(l){
   var m=l.match, b=bestOf(l);
   return '<li class="leg"><div class="when"><b>'+hhmm(m.kickoff)+'</b>'+esc(m.league)+'</div>' +
     '<div class="match"><span class="lg">'+esc(LEAGUES[m.league]||m.league)+'</span><br>'+esc(m.home)+' – '+esc(m.away)+legBadge(l) +
-    '<div class="pick">Pari : <strong>'+esc(l.label)+'</strong>'+(l.mine?' · cote '+esc(m.mine.book):b?' · meilleure cote <strong>'+odds(b.odds)+'</strong> chez '+esc(b.book):'')+'</div></div>' +
+    '<div class="pick">Pari : <strong>'+esc(l.label)+'</strong>'+(l.mine?' · '+(l.quoteSource==='user'?'saisie personnelle Winamax':'cote '+esc(m.mine&&m.mine.book||'Winamax France')):b?' · meilleure cote <strong>'+odds(b.odds)+'</strong> chez '+esc(b.book):'')+'</div></div>' +
     '<div class="nums"><b>'+(l.est?'≈':'')+odds(l.o)+'</b><br>'+pct(l.p)+'</div></li>';
 }
 
@@ -588,7 +590,7 @@ function saveProposal(date, c){
   var now = Date.now(), old = proposals[date];
   if(old && old.legs.some(function(l){ return new Date(l.kickoff).getTime() <= now; })) return;
   if(c.legs.some(function(l){ return new Date(l.match.kickoff).getTime() <= now; })) return;
-  proposals[date] = {createdAt:new Date(now).toISOString(), modelId:'legacy-market-combo-exploration-v1',explorationOnly:true,rules:Object.assign({},settings), odds:c.odds, prob:c.prob, legs:c.legs.map(function(l){ return {matchId:l.match.id, kickoff:l.match.kickoff, code:l.code, label:l.label, o:l.o, p:l.p, est:!!l.est}; })};
+  proposals[date] = {createdAt:new Date(now).toISOString(), modelId:'legacy-market-combo-exploration-v1',explorationOnly:true,rules:Object.assign({},settings), odds:c.odds, prob:c.prob, legs:c.legs.map(function(l){ return {matchId:l.match.id, kickoff:l.match.kickoff, code:l.code, label:l.label, o:l.o, p:l.p, est:!!l.est,quoteSource:l.quoteSource,asOf:l.asOf}; })};
   var keys = Object.keys(proposals).sort();
   while(keys.length > 60) delete proposals[keys.shift()];
   store.set('proposals', proposals);
@@ -638,7 +640,9 @@ function render(){
     document.getElementById('matchRows').innerHTML='';
     return;
   }
-  var dm = ((state.days[state.selected]||{}).matches||[]);
+  var manual=store.get('footballGoalQuotes',{});
+  var dm = ((state.days[state.selected]||{}).matches||[]).map(function(m){return Object.assign({},m,{manualTotals:manual[FootballMarkets.key(m)]||[]});});
+  var selector=document.getElementById('manualGoalMatch'),selectedManual=selector.value;selector.innerHTML=dm.filter(function(m){return Date.parse(m.kickoff)>Date.now();}).map(function(m){return '<option value="'+esc(m.id)+'">'+esc(m.home+' – '+m.away)+'</option>';}).join('');if(Array.from(selector.options).some(function(o){return o.value===selectedManual;}))selector.value=selectedManual;
   document.getElementById('goalMarkets').innerHTML=FootballMarkets.render(FootballMarkets.merge(dm,state.football,state.selected),Date.now(),state.goalCoverage&&state.goalCoverage.day===state.selected?state.goalCoverage:null);
   var combo = renderTicket(dm);
   renderMatches(dm, combo);
@@ -659,7 +663,7 @@ function allCandidates(m){
 var slip = Object.assign({source:'perso', legs:[]}, store.get('slip', {}));
 function slipLeg(c){
   var m = c.match;
-  return {matchId:m.id, date:parisDate(new Date(m.kickoff)), league:m.league, home:m.home, away:m.away, kickoff:m.kickoff, code:c.code, label:c.label, o:+c.o.toFixed(3), p:+c.p.toFixed(4), est:!!c.est};
+  return {matchId:m.id, date:parisDate(new Date(m.kickoff)), league:m.league, home:m.home, away:m.away, kickoff:m.kickoff, code:c.code, label:c.label, o:+c.o.toFixed(3), p:+c.p.toFixed(4), est:!!c.est,quoteSource:c.quoteSource||(c.mine?'api':undefined),bookKey:c.mine?'winamax_fr':undefined,asOf:c.asOf||(m.mine&&m.mine.asOf),marketFamily:c.fam==='Buts'?'totals':c.fam==='Résultat'?'h2h':undefined};
 }
 function saveSlip(){ store.set('slip', slip); }
 function pickSelect(m){
@@ -770,6 +774,8 @@ document.getElementById('leagueChecks').addEventListener('change', function(e){
   saveRender();
 });
 document.querySelectorAll('[data-strategy]').forEach(function(button){button.addEventListener('click',function(){settings.strategy=this.dataset.strategy;saveRender();});});
+document.getElementById('manualGoalForm').addEventListener('submit',function(e){e.preventDefault();var selectedId=document.getElementById('manualGoalMatch').value,m=((state.days[state.selected]||{}).matches||[]).find(function(m){return m.id===selectedId;}),line=Number(document.getElementById('manualGoalLine').value),over=Number(document.getElementById('manualGoalOver').value.replace(',','.')),under=Number(document.getElementById('manualGoalUnder').value.replace(',','.')),note=document.getElementById('manualGoalStatus');if(!document.getElementById('manualGoalConfirmed').checked){note.textContent='Confirme que les deux cotes viennent de Winamax.';return;}var q=FootballMarkets.manualInput(m,line,over,under,Date.now());if(!q){note.textContent='Utilise une rencontre à venir, une ligne de type 1,5 / 2,5 / 3,5 et deux cotes complémentaires valides supérieures à 1.';return;}var quotes=store.get('footballGoalQuotes',{}),key=FootballMarkets.key(m);quotes[key]=(quotes[key]||[]).filter(function(g){return g.line!==line;}).concat([q]);store.set('footballGoalQuotes',quotes);settings.strategy='combo';saveRender();document.querySelector('[data-market-preset="goals"]').click();note.textContent='Saisie personnelle enregistrée. Elle ne fait pas partie des alertes ni du protocole automatique.';});
+document.getElementById('clearManualGoals').addEventListener('click',function(){store.set('footballGoalQuotes',{});render();document.getElementById('manualGoalStatus').textContent='Saisies personnelles retirées. Les cotes API et les tickets déjà enregistrés sont conservés.';});
 document.querySelectorAll('[data-market-preset]').forEach(function(button){button.addEventListener('click',function(){var kind=this.dataset.marketPreset;['mWin','mDc','mDraw','mGoals','mAh','mCs','mSame','algoEst'].forEach(function(k){settings[k]=false;});settings.mWin=kind!=='goals';settings.mGoals=kind!=='wins';settings.realGoals=true;settings.myBook=true;['mWin','mDc','mDraw','mGoals','mAh','mCs','mSame','algoEst','realGoals','myBook'].forEach(function(k){document.getElementById(k).checked=settings[k];});saveRender();});});
 bindSettings();
 
