@@ -71,11 +71,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:36Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 2.1,
     "oX": 3.0,
     "o2": 2.75,
@@ -106,11 +106,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:36Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 1.45,
     "oX": 4.0,
     "o2": 4.3,
@@ -141,11 +141,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:36Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 2.3,
     "oX": 2.95,
     "o2": 2.55,
@@ -176,11 +176,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:36Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 1.44,
     "oX": 3.9,
     "o2": 4.6,
@@ -211,11 +211,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:36Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 1.8,
     "oX": 3.45,
     "o2": 3.1,
@@ -246,11 +246,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:36Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 3.4,
     "oX": 3.4,
     "o2": 1.72,
@@ -281,11 +281,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:36Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 2.45,
     "oX": 3.3,
     "o2": 2.2,
@@ -477,11 +477,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:37Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 1.28,
     "oX": 4.4,
     "o2": 6.25,
@@ -489,6 +489,6 @@
    }
   }
  ],
- "updatedAt": "2026-11-20T20:03:30Z",
+ "updatedAt": "2026-11-21T07:48:12Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }

@@ -1,6 +1,6 @@
 {
  "date": "2026-11-30",
- "updatedAt": "2026-11-20T20:06:37Z",
+ "updatedAt": "2026-11-21T07:50:54Z",
  "source": "Oddsportal (secours)",
  "matches": [
   {
@@ -19,9 +19,39 @@
    "kickoff": "2026-11-30T19:45Z",
    "home": "Cagliari",
    "away": "AC Milan",
-   "o1": 4.75,
+   "o1": 4.6,
    "oX": 3.8,
-   "o2": 1.71
+   "o2": 1.7
+  },
+  {
+   "id": "liga-espanyol-getafe",
+   "league": "LIGA",
+   "kickoff": "2026-11-30T20:00Z",
+   "home": "Espanyol",
+   "away": "Getafe",
+   "o1": 2.1,
+   "oX": 3.2,
+   "o2": 3.7
+  },
+  {
+   "id": "por-benfica-famalicao",
+   "league": "POR",
+   "kickoff": "2026-11-30T20:15Z",
+   "home": "Benfica",
+   "away": "Famalicao",
+   "o1": 1.21,
+   "oX": 7.0,
+   "o2": 12.0
+  },
+  {
+   "id": "por-casa-pia-braga",
+   "league": "POR",
+   "kickoff": "2026-11-30T20:15Z",
+   "home": "Casa Pia",
+   "away": "Braga",
+   "o1": 7.0,
+   "oX": 4.5,
+   "o2": 1.46
   }
  ]
 }

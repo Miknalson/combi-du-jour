@@ -71,11 +71,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:37Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 2.3,
     "oX": 3.15,
     "o2": 2.35,
@@ -106,11 +106,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:37Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 2.2,
     "oX": 3.0,
     "o2": 2.5,
@@ -141,11 +141,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:37Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 2.75,
     "oX": 3.2,
     "o2": 1.98,
@@ -337,11 +337,11 @@
     }
    },
    "books": 8,
-   "referenceAt": "2026-11-20T20:02:37Z",
+   "referenceAt": "2026-11-21T07:44:56Z",
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-20T20:02:44Z",
+    "asOf": "2026-11-21T07:47:49Z",
     "o1": 2.2,
     "oX": 3.0,
     "o2": 2.55,
@@ -349,6 +349,6 @@
    }
   }
  ],
- "updatedAt": "2026-11-20T20:03:30Z",
+ "updatedAt": "2026-11-21T07:48:12Z",
  "source": "The Odds API (moyenne des bookmakers européens)"
 }
