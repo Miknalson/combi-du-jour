@@ -1,9 +1,658 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-  "status": "quota",
-  "matches": [],
+  "updatedAt": "2026-11-21T05:00:01.090145+00:00",
+  "status": "ok",
+  "matches": [
+    {
+      "id": "football-bed1f20084169c36d30d63f283640f79",
+      "eventId": "bed1f20084169c36d30d63f283640f79",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Norwich City",
+      "away": "Cardiff City",
+      "kickoff": "2026-11-21T12:30:00Z",
+      "asOf": "2026-11-21T04:59:53Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Norwich City",
+              "odds": 1.7,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Cardiff City",
+              "odds": 3.55,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.7,
+      "o2": 3.55,
+      "oX": 4.1
+    },
+    {
+      "id": "football-5d3dbb358ea091830f570b92cee04c38",
+      "eventId": "5d3dbb358ea091830f570b92cee04c38",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Southampton",
+      "away": "Derby County",
+      "kickoff": "2026-11-21T12:30:00Z",
+      "asOf": "2026-11-21T04:59:54Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:54Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Southampton",
+              "odds": 1.31,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Derby County",
+              "odds": 6.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.31,
+      "o2": 6.5,
+      "oX": 5.1
+    },
+    {
+      "id": "football-063b1a482ff7c013b5c0e8e8af9a42ea",
+      "eventId": "063b1a482ff7c013b5c0e8e8af9a42ea",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Millwall",
+      "away": "Queens Park Rangers",
+      "kickoff": "2026-11-21T12:30:00Z",
+      "asOf": "2026-11-21T04:59:53Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Millwall",
+              "odds": 2.45,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Queens Park Rangers",
+              "odds": 2.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 2.45,
+      "o2": 2.4,
+      "oX": 3.4
+    },
+    {
+      "id": "football-57de0f27db6ae789cdb8c425f36880c9",
+      "eventId": "57de0f27db6ae789cdb8c425f36880c9",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Stoke City",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "asOf": "2026-11-21T04:59:54Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:54Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Stoke City",
+              "odds": 2.8,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Birmingham City",
+              "odds": 2.25,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.15,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 2.8,
+      "o2": 2.25,
+      "oX": 3.15
+    },
+    {
+      "id": "football-8f3d690e88a2e180a6025a6b8ddfedf9",
+      "eventId": "8f3d690e88a2e180a6025a6b8ddfedf9",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Bolton Wanderers",
+      "away": "Portsmouth",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "asOf": "2026-11-21T04:59:53Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Bolton Wanderers",
+              "odds": 2.6,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Portsmouth",
+              "odds": 2.2,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.2,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 2.6,
+      "o2": 2.2,
+      "oX": 3.2
+    },
+    {
+      "id": "football-17b291f71f74a662eb4bcad1957db62c",
+      "eventId": "17b291f71f74a662eb4bcad1957db62c",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Middlesbrough",
+      "away": "Bristol City",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "asOf": "2026-11-21T04:59:53Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Middlesbrough",
+              "odds": 1.33,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Bristol City",
+              "odds": 6.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.33,
+      "o2": 6.0,
+      "oX": 5.0
+    },
+    {
+      "id": "football-88b33c34df3a5d9450602451e50dfcc9",
+      "eventId": "88b33c34df3a5d9450602451e50dfcc9",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Wolverhampton Wanderers",
+      "away": "Charlton Athletic",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "asOf": "2026-11-21T04:59:54Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:54Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Wolverhampton Wanderers",
+              "odds": 1.26,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Charlton Athletic",
+              "odds": 6.75,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.9,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.26,
+      "o2": 6.75,
+      "oX": 4.9
+    },
+    {
+      "id": "football-476da082e4c07bd9fa21d352af37ee61",
+      "eventId": "476da082e4c07bd9fa21d352af37ee61",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Lincoln City",
+      "away": "Wrexham AFC",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "asOf": "2026-11-21T04:59:53Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Lincoln City",
+              "odds": 2.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Wrexham AFC",
+              "odds": 2.55,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 2.5,
+      "o2": 2.55,
+      "oX": 3.1
+    },
+    {
+      "id": "football-7a8f99dc133efc267e941f67f5f59301",
+      "eventId": "7a8f99dc133efc267e941f67f5f59301",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "West Ham United",
+      "away": "Preston North End",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "asOf": "2026-11-21T04:59:54Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:54Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire West Ham United",
+              "odds": 1.19,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Preston North End",
+              "odds": 8.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 6.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.19,
+      "o2": 8.5,
+      "oX": 6.25
+    },
+    {
+      "id": "football-aab9ac008800f93bc7716756bd118cb2",
+      "eventId": "aab9ac008800f93bc7716756bd118cb2",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Sheffield United",
+      "away": "Watford",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "asOf": "2026-11-21T04:59:53Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Sheffield United",
+              "odds": 1.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Watford",
+              "odds": 4.9,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.5,
+      "o2": 4.9,
+      "oX": 4.0
+    },
+    {
+      "id": "football-e315e08a4b8535c45555a9292f4f2335",
+      "eventId": "e315e08a4b8535c45555a9292f4f2335",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Swansea City",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "asOf": "2026-11-21T04:59:54Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:54Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Swansea City",
+              "odds": 2.35,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire West Bromwich Albion",
+              "odds": 2.45,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 2.35,
+      "o2": 2.45,
+      "oX": 3.1
+    },
+    {
+      "id": "football-9176cbaec3565e688e603baec257e246",
+      "eventId": "9176cbaec3565e688e603baec257e246",
+      "sport": "football",
+      "sportKey": "soccer_efl_champ",
+      "leagueCode": "CHA",
+      "league": "CHA",
+      "home": "Burnley",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-22T12:00:00Z",
+      "asOf": "2026-11-21T04:59:53Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Burnley",
+              "odds": 1.74,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Blackburn Rovers",
+              "odds": 3.3,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.45,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.74,
+      "o2": 3.3,
+      "oX": 3.45
+    }
+  ],
   "leaguesQueried": 0,
   "leaguesAvailable": 21,
   "partial": true,
@@ -908,5 +1557,6 @@
     }
   ],
   "calendarStatus": "ok",
-  "horizonDays": 14
+  "horizonDays": 14,
+  "ingestionVersion": "football-paired-markets-v1"
 }

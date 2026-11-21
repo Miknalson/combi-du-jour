@@ -1,10 +1,13 @@
 {
-  "sent": [],
+  "sent": [
+    "paper-multisport-v2|2026-11-21|algo|football",
+    "paper-multisport-v2|2026-11-21|safe|football"
+  ],
   "dailyReports": [
     "2026-11-17",
     "2026-11-18",
     "2026-11-19",
     "2026-11-20"
   ],
-  "updatedAt": "2026-11-20T14:47:44.953Z"
+  "updatedAt": "2026-11-21T05:00:01.747Z"
 }

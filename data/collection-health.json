@@ -1,71 +1,20 @@
 {
-  "updatedAt": "2026-11-20T15:19:45.122345+00:00",
-  "stage": "collection",
+  "updatedAt": "2026-11-21T05:00:01.090145+00:00",
+  "stage": "provider",
+  "status": "partial",
+  "competitions": 187,
+  "creditsRemaining": 19,
+  "message": "Collecte football prioritaire : victoires et totaux demandés à Winamax ; les marchés réellement transmis sont affichés.",
+  "requestCredits": {
+    "football_markets": 2
+  },
   "sports": [
     {
       "sport": "football",
-      "status": "quota",
-      "matches": 0,
-      "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-      "partial": true
-    },
-    {
-      "sport": "basket",
-      "status": "quota",
-      "matches": 0,
-      "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-      "partial": true
-    },
-    {
-      "sport": "tennis",
-      "status": "quota",
-      "matches": 0,
-      "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-      "partial": true
-    },
-    {
-      "sport": "rugby_xv",
-      "status": "inactive",
-      "matches": 0,
-      "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-      "partial": false
-    },
-    {
-      "sport": "rugby_xiii",
       "status": "ok",
-      "matches": 0,
-      "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-      "partial": false
-    },
-    {
-      "sport": "football_us",
-      "status": "ok",
-      "matches": 0,
-      "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-      "partial": true
-    },
-    {
-      "sport": "hockey",
-      "status": "quota",
-      "matches": 0,
-      "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-      "partial": true
-    },
-    {
-      "sport": "volley",
-      "status": "unsupported",
-      "matches": 0,
-      "updatedAt": "2026-11-20T15:19:40.422687+00:00",
-      "partial": false
+      "matches": 12,
+      "partial": true,
+      "updatedAt": "2026-11-21T05:00:01.090145+00:00"
     }
-  ],
-  "requestCredits": {
-    "catalog": 0,
-    "calendar": 0,
-    "prices": 1
-  },
-  "deferredMarketInventories": 1,
-  "creditsRemaining": 22,
-  "status": "partial",
-  "message": "Collecte partielle : certains sports ou compétitions n’ont pas de cotes disponibles dans le budget de requêtes."
+  ]
 }

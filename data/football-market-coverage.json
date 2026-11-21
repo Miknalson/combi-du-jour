@@ -1,0 +1,15 @@
+{
+  "version": "football-paired-markets-v1",
+  "updatedAt": "2026-11-21T05:00:01.090145+00:00",
+  "day": "2026-11-21",
+  "status": "provider_missing_totals",
+  "message": "Winamax ne fournit aucune paire de cotes de total de buts dans la réponse du fournisseur pour cette compétition. Aucun total inventé.",
+  "creditsRemaining": 19,
+  "dailyAllowance": 2,
+  "alreadyUsedToday": 0,
+  "league": "soccer_efl_champ",
+  "requestedMarkets": "h2h,totals",
+  "matches": 12,
+  "totalLines": 0,
+  "creditsUsed": 2
+}

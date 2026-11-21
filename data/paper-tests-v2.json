@@ -542,6 +542,149 @@
         }
       ],
       "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-21|algo|football",
+      "day": "2026-11-21",
+      "method": "algo",
+      "sport": "football",
+      "version": "algo-real-v1",
+      "createdAt": "2026-11-21T05:00:01.511Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 50,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 3.0344999999999995,
+      "probability": 0.2823914656186111,
+      "legs": [
+        {
+          "matchId": "football-bed1f20084169c36d30d63f283640f79",
+          "sport": "football",
+          "home": "Norwich City",
+          "away": "Cardiff City",
+          "league": "CHA",
+          "kickoff": "2026-11-21T12:30:00Z",
+          "date": "2026-11-21",
+          "code": "1",
+          "label": "Victoire Norwich City",
+          "o": 1.7,
+          "p": 0.5520062288493129,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        },
+        {
+          "matchId": "football-7a8f99dc133efc267e941f67f5f59301",
+          "sport": "football",
+          "home": "West Ham United",
+          "away": "Preston North End",
+          "league": "CHA",
+          "kickoff": "2026-11-21T15:00:00Z",
+          "date": "2026-11-21",
+          "code": "1",
+          "label": "Victoire West Ham United",
+          "o": 1.19,
+          "p": 0.8118279670038198,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:54Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        },
+        {
+          "matchId": "football-aab9ac008800f93bc7716756bd118cb2",
+          "sport": "football",
+          "home": "Sheffield United",
+          "away": "Watford",
+          "league": "CHA",
+          "kickoff": "2026-11-21T15:00:00Z",
+          "date": "2026-11-21",
+          "code": "1",
+          "label": "Victoire Sheffield United",
+          "o": 1.5,
+          "p": 0.6301494777101585,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-21T05:00:01.090145+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-21|safe|football",
+      "day": "2026-11-21",
+      "method": "safe",
+      "sport": "football",
+      "version": "safe-multi-v2",
+      "createdAt": "2026-11-21T05:00:01.511Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 100,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 1.5,
+      "probability": 0.6301494777101585,
+      "legs": [
+        {
+          "id": "football|football-aab9ac008800f93bc7716756bd118cb2|2026-11-21T15:00:00Z|h2h||None|1",
+          "matchId": "football-aab9ac008800f93bc7716756bd118cb2",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "CHA",
+          "home": "Sheffield United",
+          "away": "Watford",
+          "kickoff": "2026-11-21T15:00:00Z",
+          "date": "2026-11-21",
+          "code": "1",
+          "label": "Victoire Sheffield United",
+          "o": 1.5,
+          "p": 0.6301494777101585,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-21T04:59:53Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-21T05:00:01.090145+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
     }
   ]
 }
