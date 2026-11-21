@@ -3,6 +3,11 @@ on:
   push:
     branches: [main]
     paths:
+      - 'scripts/collect_football_markets.py'
+      - 'football-markets.js'
+      - 'market-audit.js'
+      - 'tests/football-markets*'
+      - 'tests/test_football_markets.py'
       - 'scripts/update_sports.py'
       - 'scripts/update_odds.py'
       - 'scripts/update_scores.py'
@@ -70,6 +75,8 @@ jobs:
           node tests/alerts.test.cjs
           node tests/ticket-reference.test.cjs
           node tests/bet-results.test.cjs
+          node tests/football-markets.test.cjs
+          python -m unittest discover -s tests -p 'test_football_markets.py'
           python -m unittest discover -s tests -p 'test_scores.py'
           python -m unittest discover -s tests -p 'test_collection_health.py'
       - name: Détecter une modification du collecteur
@@ -91,6 +98,11 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/check_quotes.py
+      - name: Relever les victoires et totaux de buts Winamax
+        if: github.event.schedule != '25 23 * * *'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
+        run: python scripts/collect_football_markets.py
       - name: Relever les cotes Winamax France
         id: collection
         if: steps.provider.outputs.ready == 'true'
@@ -118,6 +130,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/sports/ data/days/ data/index.json
+          if [ -f data/football-market-coverage.json ]; then git add data/football-market-coverage.json; fi
+          if [ -f data/quote-budget.json ]; then git add data/quote-budget.json; fi
           if [ -f data/scores-health.json ]; then git add data/scores-health.json; fi
           if [ -f data/collection-health.json ]; then git add data/collection-health.json; fi
           if [ -f data/notification-status.json ]; then git add data/notification-status.json; fi
@@ -130,7 +144,7 @@ jobs:
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp bet-results.js feed-health.js ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp market-audit.js football-markets.js bet-results.js feed-health.js ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

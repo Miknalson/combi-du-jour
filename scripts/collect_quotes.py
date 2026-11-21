@@ -31,6 +31,14 @@ def retry_get(get, path, **params):
 
 def run():
     root = collector.ROOT
+    try:
+        ledger=json.loads((root.parent/'quote-budget.json').read_text())
+        today=dt.datetime.now(dt.timezone.utc).astimezone(collector.api.PARIS).strftime('%Y-%m-%d')
+        if ledger.get('day')==today and ledger.get('dailyAllowance',0)>0 and ledger.get('spent',0)>=ledger['dailyAllowance']:
+            print('Budget de cotes du jour déjà utilisé. Relevés et horodatages existants conservés.')
+            return 0
+    except (OSError,ValueError,KeyError,TypeError):
+        pass
     originals = {}
     for sport in collector.SPORTS:
         try:
@@ -38,6 +46,16 @@ def run():
         except (OSError, ValueError):
             pass
     previous = collector.api.get
+    previous_budget = collector.api.credits_budget
+    def remaining_budget(now, *args, **kwargs):
+        budget, left = previous_budget(now, *args, **kwargs)
+        try:
+            plan=json.loads((root.parent/'quote-budget.json').read_text())
+            if plan.get('day')==now.astimezone(collector.api.PARIS).strftime('%Y-%m-%d'):
+                budget=min(budget,max(0,plan.get('dailyAllowance',budget)-plan.get('spent',0)))
+        except (OSError,ValueError,TypeError):pass
+        return budget,left
+    collector.api.credits_budget=remaining_budget
     request_costs = {}
     metadata_cache = {}
     daily_budget = [None]
@@ -77,6 +95,7 @@ def run():
         exit_code, error = 1, exc
     finally:
         collector.api.get = previous
+        collector.api.credits_budget = previous_budget
     now = dt.datetime.now(dt.timezone.utc)
     rows = []
     for sport in collector.SPORTS:
@@ -85,6 +104,10 @@ def run():
             doc = json.loads(path.read_text())
         except (OSError, ValueError):
             continue
+        old = originals.get(sport, {})
+        if not doc.get('matches') and doc.get('status')=='quota' and old.get('status')=='ok' and any(0<=(now-dt.datetime.fromisoformat(m['asOf'].replace('Z','+00:00'))).total_seconds()<=86400 and dt.datetime.fromisoformat(m['kickoff'].replace('Z','+00:00'))>now for m in old.get('matches',[]) if m.get('asOf') and m.get('kickoff')):
+            doc={**old,'partial':True,'collectionDeferred':'quota','lastAttemptAt':now.isoformat()}
+            path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n')
         if not doc.get('matches'):
             old = originals.get(sport, {})
             # Retain only event metadata, never relabel an old quote as fresh.
@@ -109,6 +132,12 @@ def run():
     else:
         result['status'] = 'partial' if any(r['status'] in ['quota','unavailable'] or r['partial'] for r in rows) else 'ok'
         result['message'] = 'Collecte partielle : certains sports ou compétitions n’ont pas de cotes disponibles dans le budget de requêtes.' if result['status']=='partial' else 'Collecte des cotes terminée.'
+    try:
+        plan=json.loads((root.parent/'quote-budget.json').read_text())
+        if plan.get('day')==now.astimezone(collector.api.PARIS).strftime('%Y-%m-%d'):
+            plan['spent']=plan.get('spent',0)+sum(request_costs.values());plan['updatedAt']=now.isoformat()
+            (root.parent/'quote-budget.json').write_text(json.dumps(plan,indent=2)+'\n')
+    except (OSError,ValueError,TypeError):pass
     (root.parent/'collection-health.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
     print(result['message'])
     if result.get('providerCode'):

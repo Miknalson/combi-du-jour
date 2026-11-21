@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=health1">
+<link rel="stylesheet" href="style.css?v=goals1">
 </head>
 <body><nav aria-label="Alertes" style="max-width:1120px;margin:auto;padding:12px 20px"><a href="notifications.html">🔔 Mes alertes Algo / Safe</a></nav>
 <div class="wrap">
@@ -36,6 +36,8 @@
   <div class="mode-switch" role="group" aria-label="Mode d’analyse"><button type="button" data-strategy="reference" aria-pressed="true">Algo du jour · alerte</button><button type="button" data-strategy="value" aria-pressed="false">Modèle prudent</button><button type="button" data-strategy="combo" aria-pressed="false">Simulation personnelle</button></div>
   <div id="ticketArea"><div class="empty">Chargement des matchs et des cotes…</div></div>
 
+  <section class="model-study" id="goalMarkets" aria-label="Totaux de buts Winamax"></section>
+
   <section class="model-study" id="modelStudy" aria-label="Résultats de l’étude"></section>
 
   <section id="altsSection" hidden>
@@ -45,6 +47,7 @@
 
   <section id="simulationSettings" hidden>
     <p class="status">Simulation personnelle : ces réglages recalculent un scénario d’exploration. Ils ne changent ni le ticket Algo de référence, ni ses alertes, ni la mise fictive enregistrée.</p><div class="head"><h2>Réglages de simulation</h2><div class="hint">Enregistrés sur cet appareil.</div></div>
+    <div class="market-presets" role="group" aria-label="Marchés de simulation"><button class="btn ghost small" type="button" data-market-preset="goals">Totaux de buts seulement</button><button class="btn ghost small" type="button" data-market-preset="wins">Victoires seulement</button><button class="btn ghost small" type="button" data-market-preset="quoted">Victoires + buts cotés</button></div>
     <div class="settings">
       <div class="field"><label for="oMin">Cote mini</label><input type="number" id="oMin" step="0.1" min="1.5" max="20" value="3"></div>
       <div class="field"><label for="oMax">Cote maxi</label><input type="number" id="oMax" step="0.1" min="1.5" max="50" value="5"></div>
@@ -57,7 +60,7 @@
           <label><input type="checkbox" id="mWin" checked> Victoire (1 ou 2)</label>
           <label><input type="checkbox" id="mDc" checked> Double chance (1N, N2)</label>
           <label><input type="checkbox" id="mDraw"> Match nul</label>
-          <label><input type="checkbox" id="mGoals" checked> Buts (plus/moins 0,5 à 4,5)</label>
+          <label><input type="checkbox" id="mGoals" checked> Buts (totaux plus / moins disponibles)</label>
           <label><input type="checkbox" id="mAh" checked> Handicaps (±1,5 et ±2,5)</label>
           <label><input type="checkbox" id="mCs" checked> Score exact</label>
           <label><input type="checkbox" id="mSame" checked> Plusieurs paris sur un même match (ex. 1N + plus de 2,5)</label>
@@ -118,12 +121,13 @@
 
   <footer>
     <span id="sourceLine">Source des cotes : —</span>
-    <span>Méthode : probabilités 1N2 calculées par la méthode « puissance » (retire la marge du bookmaker en corrigeant le biais favori/outsider). Les buts sont estimés par une loi de Poisson ajustée sur les cotes 1N2 de chaque match. Les cotes de double chance et de buts sont estimées (marge de 5 % supposée) et signalées par ≈ : vérifie-les chez ton bookmaker. Les matchs sont supposés indépendants. Les cotes bougent jusqu'au coup d'envoi.</span>
+    <span>Méthode : probabilités 1N2 calculées par la méthode « puissance » (retire la marge du bookmaker en corrigeant le biais favori/outsider). Les buts sont estimés par une loi de Poisson ajustée sur les cotes 1N2 de chaque match. Les totaux de buts Winamax complets utilisent leurs deux cotes réellement relevées. Les variantes estimées, autorisées seulement en exploration, portent le signe ≈ et ne constituent pas des prix Winamax confirmés. Les matchs sont supposés indépendants. Les cotes bougent jusqu'au coup d'envoi.</span>
   </footer>
 </div>
 
 <script src="feed-health.js?v=1"></script><script src="sport-catalog.js?v=2"></script>
 <script src="uefa.js?v=1"></script>
+<script src="safe-engine.js?v=goals1"></script><script src="football-markets.js?v=1"></script>
 <script src="ticket-reference.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
@@ -141,7 +145,7 @@ var LEAGUES = {
 };
 var TZ = 'Europe/Paris';
 var MIN_BOOKS = 5;
-var state = { days:{}, selected:null, loaded:false, model:null, journal:null, referenceId:new URLSearchParams(location.search).get('ticket') };
+var state = { days:{}, selected:null, loaded:false, model:null, football:null, goalCoverage:null, journal:null, referenceId:new URLSearchParams(location.search).get('ticket') };
 
 // ---------- per-device settings ----------
 var store = {
@@ -241,17 +245,19 @@ function line(L){ return String(L).replace('.',','); }
 // Probabilities from the bookmaker average, checked against a sharp book (Pinnacle or an exchange)
 // when the data has one: each bet keeps the lower of the two, so a pick needs both to agree it is likely.
 function candidates(m){
-  var out = rawCandidates(m, m.o1, m.oX, m.o2, m.ou);
+  var w=settings.myBook&&m.mine;
+  var quotedTotals=settings.myBook?Object.fromEntries(FootballMarkets.totals(m,Date.now()).map(function(q){return [String(q.line),{o:q.over,u:q.under,asOf:q.asOf}];})):(m.ou||{});
+  var out = rawCandidates(m, m.o1, m.oX, m.o2, quotedTotals);
   var s = m.sharp;
   if(s && s.o1>1 && s.oX>1 && s.o2>1){
     var sp = {};
-    rawCandidates(m, s.o1, s.oX, s.o2, s.ou || {}, m.ou).forEach(function(c){ sp[c.code]=c.p; });
+    rawCandidates(m, s.o1, s.oX, s.o2, s.ou || {}, quotedTotals).forEach(function(c){ sp[c.code]=c.p; });
     out.forEach(function(c){ if(sp[c.code]!==undefined){ c.pAvg=c.p; c.pSharp=sp[c.code]; c.p=Math.min(c.p, sp[c.code]); } });
   }
   // Odds actually on offer at the user's own bookmaker (Winamax) replace the market average, so the ticket's
   // total is what can really be bet. Double chance is derived from its 1N2 prices (≈).
-  var w = settings.myBook && m.mine;
-  if(w && w.o1>1 && w.oX>1 && w.o2>1){
+  w = settings.myBook && m.mine;
+  if(w && w.o1>1 && w.oX>1 && w.o2>1 && UefaCalendar.realQuote(m,Date.now())){
     var mo = {'1':w.o1, 'X':w.oX, '2':w.o2, '1X':1/(1/w.o1+1/w.oX), 'X2':1/(1/w.oX+1/w.o2)};
     out.forEach(function(c){
       if(mo[c.code]){ c.o=mo[c.code]; c.mine=true; c.est=c.code.length===2; return; }
@@ -261,6 +267,7 @@ function candidates(m){
       }
     });
   }
+  if(w&&w.bookKey==='winamax_fr')out.forEach(function(c){if(/^[OU][0-9.]+$/.test(c.code)){var q=quotedTotals[c.code.slice(1)];if(q&&q.o>1&&q.u>1){c.o=q[c.code[0]==='O'?'o':'u'];c.mine=true;c.est=false;c.quoteSource=q.quoteSource||'api';c.asOf=q.asOf||w.asOf;}}});
   return out;
 }
 // One settlement rule for every bet code: 1 X 2 1X X2, O2.5 / U2.5, handicaps H1-1.5 / H2+1.5,
@@ -301,14 +308,14 @@ function rawCandidates(m, o1, oX, o2, realOu, fallbackOu){
   }
   results = out.slice();
   if(settings.mGoals){
-    [0.5,1.5,2.5,3.5,4.5].forEach(function(L){
+    Array.from(new Set([0.5,1.5,2.5,3.5,4.5].concat(Object.keys(real).map(Number)))).filter(function(L){return Number.isFinite(L)&&L>0&&L<=10&&Math.abs(L%1-.5)<1e-9;}).sort(function(a,b){return a-b;}).forEach(function(L){
       var r=real[String(L)] || (fallbackOu||{})[String(L)], po=gm.over[L];
       // The Poisson estimate is the shakiest number in the app: by default only lines with a real price are bet.
-      if(settings.realGoals && !(avgOu[String(L)] && avgOu[String(L)].o > 1 && avgOu[String(L)].u > 1)) return;
+      if(settings.realGoals && !(r && r.o > 1 && r.u > 1)) return;
       // A real two-way price beats the Poisson estimate: take its margin-free probability instead.
-      if(r && r.o > 1 && r.u > 1) po = (1/r.o)/((1/r.o)+(1/r.u));
+      if(r && r.o > 1 && r.u > 1){var paired=SafeDay.probabilities([r.o,r.u]);if(!paired)return;po=paired[0];}
       // Without a real price, assume a 5 % two-way bookmaker margin.
-      var ra = avgOu[String(L)];
+      var ra = real[String(L)] || avgOu[String(L)];
       var oo = ra && ra.o ? ra.o : estOdds(po,0.05), ou = ra && ra.u ? ra.u : estOdds(1-po,0.05);
       add('O'+L,'Plus de '+line(L)+' buts',po,oo,!(ra&&ra.o),'Buts');
       add('U'+L,'Moins de '+line(L)+' buts',1-po,ou,!(ra&&ra.u),'Buts');
@@ -355,13 +362,13 @@ function bestCombos(matches, n, liveFilter){
   var now = Date.now(), groups = [];
   if(!(settings.oMin>1&&settings.oMax>=settings.oMin&&settings.oMax<=100&&settings.minLegs>=1&&settings.maxLegs>=settings.minLegs))return [];
   // Once the data carries Winamax prices, only bets that can be placed there are considered.
-  var onlyMine = settings.myBook && matches.some(function(m){ return m.mine; });
+  var onlyMine = settings.myBook;
   matches.forEach(function(m){
     if(!eligible(m)) return;
-    if(onlyMine && !m.mine) return;
+    if(onlyMine && !m.mine && !FootballMarkets.totals(m,now).length) return;
     if(liveFilter && settings.skipStarted && new Date(m.kickoff).getTime() <= now) return;
     // Markets quoted by only a handful of bookmakers are thin and their odds less reliable.
-    if(m.books !== undefined && m.books < MIN_BOOKS && !(m.quoteBasis==='winamax-only'&&UefaCalendar.realQuote(m,now))) return;
+    if(m.books !== undefined && m.books < MIN_BOOKS && !(m.quoteBasis==='winamax-only'&&UefaCalendar.realQuote(m,now))&&!FootballMarkets.totals(m,now).length) return;
     // Grid-only markets have no bookmaker price in the data and our estimates proved too generous
     // (a ≈1,55 ticket was about 1,20 at the bookmaker), so the algo leaves them out unless asked.
     var cs = candidates(m).filter(function(c){ return c.o >= settings.minLeg && c.p >= Math.max(0.2, settings.minProb) && (settings.algoEst || !c.grid) && (!onlyMine || c.mine || c.grid); });
@@ -528,7 +535,7 @@ function renderLegacyTicket(dayMatches){
     '<div class="ticket-foot"><div class="meter" role="img" aria-label="Probabilité estimée '+pct(c.prob)+'"><i style="width:'+(c.prob*100).toFixed(1)+'%;background:var(--accent)"></i></div>' +
     (function(){ var bo=c.legs.reduce(function(a,l){ var b=bestOf(l); return a*(b?b.odds:l.o); },1); return bo>c.odds+0.005 ? '<span>En jouant chaque match chez le bookmaker le mieux placé, la cote monte à <strong class="mono">'+odds(bo)+'</strong>.</span>' : ''; })() +
     '<span>Espérance théorique aux cotes affichées : <strong>'+((c.odds*c.prob-1)*100).toFixed(1).replace('.',',')+' % par unité misée</strong>. Ce calcul ne prouve pas un rendement réel.</span>' +
-    '<span>La cote '+odds(c.odds)+' annonce '+pct(bookP)+' de chances marge comprise. Une fois la marge retirée, l\'estimation tombe à '+pct(c.prob)+'. Sur 10 jours joués avec ce type de combiné, compte environ '+Math.round(c.prob*10)+' tickets gagnants.</span>' +
+    '<span>La cote '+odds(c.odds)+' annonce '+pct(bookP)+' de chances marge comprise. Une fois la marge retirée, l\'estimation tombe à '+pct(c.prob)+'. Cette probabilité de marché n’est pas un taux de réussite mesuré ; les résultats peuvent varier fortement.</span>' +
     (res==='wait' ? '<div><button type="button" class="btn small" id="playAlgo">Ajouter ce scénario à mon ticket</button></div>' : '') +
     '</div></article>';
   area.innerHTML = html;
@@ -632,6 +639,7 @@ function render(){
     return;
   }
   var dm = ((state.days[state.selected]||{}).matches||[]);
+  document.getElementById('goalMarkets').innerHTML=FootballMarkets.render(FootballMarkets.merge(dm,state.football,state.selected),Date.now(),state.goalCoverage&&state.goalCoverage.day===state.selected?state.goalCoverage:null);
   var combo = renderTicket(dm);
   renderMatches(dm, combo);
   renderSlip();
@@ -762,6 +770,7 @@ document.getElementById('leagueChecks').addEventListener('change', function(e){
   saveRender();
 });
 document.querySelectorAll('[data-strategy]').forEach(function(button){button.addEventListener('click',function(){settings.strategy=this.dataset.strategy;saveRender();});});
+document.querySelectorAll('[data-market-preset]').forEach(function(button){button.addEventListener('click',function(){var kind=this.dataset.marketPreset;['mWin','mDc','mDraw','mGoals','mAh','mCs','mSame','algoEst'].forEach(function(k){settings[k]=false;});settings.mWin=kind!=='goals';settings.mGoals=kind!=='wins';settings.realGoals=true;settings.myBook=true;['mWin','mDc','mDraw','mGoals','mAh','mCs','mSame','algoEst','realGoals','myBook'].forEach(function(k){document.getElementById(k).checked=settings[k];});saveRender();});});
 bindSettings();
 
 TicketReference.bindCopy(document.getElementById('ticketArea'),function(id){return TicketReference.find(state.journal,id);});
@@ -770,8 +779,8 @@ TicketReference.bindCopy(document.getElementById('ticketArea'),function(id){retu
 (async function(){
   var statusEl=document.getElementById('status');
   try{
-    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():{dates:[]}).catch(()=>({dates:[]})),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/sports/football.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/paper-tests-v2.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
-    var idx=pair[0];state.model=pair[1];state.journal=pair[3];UefaCalendar.render('uefaFixtures',pair[2]);
+    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():{dates:[]}).catch(()=>({dates:[]})),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/sports/football.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/paper-tests-v2.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/football-market-coverage.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
+    var idx=pair[0];state.model=pair[1];state.football=pair[2];state.journal=pair[3];state.goalCoverage=pair[4];UefaCalendar.render('uefaFixtures',pair[2]);
     var cutoff = parisDate(new Date(Date.now()-30*86400000));
     var dates = (idx.dates||[]).filter(function(d){ return d>=cutoff; });
     var docs = await Promise.all(dates.map(function(d){
