@@ -119,7 +119,13 @@
     "oX": 3.8,
     "o2": 3.65,
     "ou": {}
-   }
+   },
+   "score": "2-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-21T14:33:20.321639+00:00"
   },
   {
    "id": "bl2-vfl-wolfsburg-holstein-kiel",
@@ -163,7 +169,13 @@
     "oX": 3.9,
     "o2": 3.65,
     "ou": {}
-   }
+   },
+   "score": "3-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-21T14:33:20.321639+00:00"
   },
   {
    "id": "srb-radnicki-nis-zemun",
@@ -227,7 +239,13 @@
     "oX": 3.4,
     "o2": 2.4,
     "ou": {}
-   }
+   },
+   "score": "0-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-21T14:33:20.321639+00:00"
   },
   {
    "id": "cha-norwich-city-cardiff-city",
@@ -271,7 +289,13 @@
     "oX": 4.1,
     "o2": 3.55,
     "ou": {}
-   }
+   },
+   "score": "2-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-21T14:33:20.321639+00:00"
   },
   {
    "id": "cha-southampton-derby-county",
@@ -315,7 +339,13 @@
     "oX": 5.1,
     "o2": 6.5,
     "ou": {}
-   }
+   },
+   "score": "2-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-21T14:33:20.321639+00:00"
   },
   {
    "id": "pl-manchester-city-fulham",
@@ -380,7 +410,13 @@
     "ou": {}
    },
    "leagueTitle": "PL",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-21T14:33:20.321639+00:00"
   },
   {
    "id": "l2-stade-lavallois-montpellier",
@@ -2447,5 +2483,6 @@
    }
   }
  ],
- "marketsUpdatedAt": "2026-11-21T05:00:01.090145+00:00"
+ "marketsUpdatedAt": "2026-11-21T05:00:01.090145+00:00",
+ "scoresUpdatedAt": "2026-11-21T14:33:20.321639+00:00"
 }

@@ -1,11 +1,24 @@
 {
-  "updatedAt": "2026-11-21T05:07:20.632879+00:00",
-  "status": "ok",
+  "updatedAt": "2026-11-21T14:33:20.321639+00:00",
+  "status": "partial",
   "source": "ESPN public football scoreboards",
-  "queried": 0,
-  "updatedMatches": 0,
-  "pendingMatches": 0,
-  "unmatchedFixtures": 0,
-  "failures": [],
-  "message": "0 score(s) final(aux) de football récupéré(s)."
+  "queried": 7,
+  "updatedMatches": 6,
+  "pendingMatches": 6,
+  "unmatchedFixtures": 3,
+  "failures": [
+    {
+      "day": "2026-11-21",
+      "league": "UKR",
+      "type": "http",
+      "httpStatus": 400
+    },
+    {
+      "day": "2026-11-21",
+      "league": "SRB",
+      "type": "http",
+      "httpStatus": 400
+    }
+  ],
+  "message": "6 score(s) final(aux) de football récupéré(s). Certains résultats restent à vérifier : score absent, identité différente ou fin du temps réglementaire non confirmée."
 }
