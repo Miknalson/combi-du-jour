@@ -1,10 +1,10 @@
 {
-  "status": "sent",
+  "status": "up_to_date",
   "topicConfigured": true,
-  "sentNow": 2,
+  "sentNow": 0,
   "dailyReportSent": false,
   "eligible": 2,
   "lastSentAt": "2026-11-21T05:00:01.747Z",
-  "message": "2 alerte(s) acceptée(s) par ntfy.",
-  "updatedAt": "2026-11-21T05:00:01.747Z"
+  "message": "Les tickets admissibles ont déjà été notifiés.",
+  "updatedAt": "2026-11-21T05:07:20.764Z"
 }
