@@ -1,25 +1,25 @@
-name: Sonde OddsPapi (temporaire)
+name: Essai OddsPapi (temporaire)
 on:
   push:
     branches: [claude/project-thread-uhyzom]
-    paths: ['scripts/oddspapi_probe.py', '.github/workflows/oddspapi-probe.yml']
+    paths: ['scripts/collect_oddspapi.py', '.github/workflows/oddspapi-probe.yml']
 permissions:
   contents: write
 jobs:
-  sonde:
+  essai:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - name: Interroger OddsPapi
+      - name: Relever basket et tennis
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
-        run: python scripts/oddspapi_probe.py
-      - name: Enregistrer les extraits
+        run: python scripts/collect_oddspapi.py
+      - name: Enregistrer
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/oddspapi-probe
-          git commit -m "Sonde OddsPapi : extraits de réponses" || echo "rien"
+          git add data/sports data/oddspapi-budget.json data/oddspapi
+          git commit -m "Essai OddsPapi : basket et tennis Winamax" || echo "rien"
           git push
