@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "rules": {
+      "version": "combi23-v1",
+      "sport": "football",
+      "mode": "paper",
+      "realMoneyEnabled": false,
+      "stake": 50,
+      "currency": "EUR",
+      "minOdds": 2,
+      "maxOdds": 3,
+      "minLegs": 2,
+      "maxLegs": 5,
+      "minLegProbability": 0.5,
+      "minLegOdds": 1.1,
+      "maxPool": 12,
+      "families": [
+        "h2h"
+      ],
+      "outcomes": [
+        "1",
+        "2"
+      ],
+      "quoteMaxAgeMinutes": 60,
+      "quotes": "cotes Winamax France relevées par API, victoires uniquement (pas de nul ni de double chance)"
+    },
+    "startedAt": "2026-11-22T06:51:55.352Z"
+  },
+  "records": []
+}
