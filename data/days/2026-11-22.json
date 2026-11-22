@@ -111,7 +111,13 @@
     "o2": 8.0,
     "ou": {}
    },
-   "leagueTitle": "SA"
+   "leagueTitle": "SA",
+   "score": "4-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-22T14:28:04.569466+00:00"
   },
   {
    "id": "srb-radnicki-1923-cukaricki",
@@ -165,7 +171,13 @@
     "oX": 3.6,
     "o2": 3.4,
     "ou": {}
-   }
+   },
+   "score": "2-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-22T14:28:04.569466+00:00"
   },
   {
    "id": "bel-sk-beveren-gent",
@@ -1386,5 +1398,6 @@
    }
   }
  ],
- "marketsUpdatedAt": "2026-11-22T05:45:26.586500+00:00"
+ "marketsUpdatedAt": "2026-11-22T05:45:26.586500+00:00",
+ "scoresUpdatedAt": "2026-11-22T14:28:04.569466+00:00"
 }
