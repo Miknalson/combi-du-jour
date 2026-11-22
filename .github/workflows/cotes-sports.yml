@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
     paths:
+      # Le commit quotidien « Cotes du … » (tâche de 08:47 Paris) déclenche la collecte Winamax du matin :
+      # le cron GitHub de 06:05 UTC part souvent avec 7 à 9 heures de retard, après les matchs du week-end.
+      - 'data/days/**'
       - 'scripts/collect_football_markets.py'
       - 'football-markets.js'
       - 'market-audit.js'
@@ -82,8 +85,12 @@ jobs:
       - name: Détecter une modification du collecteur
         id: quote_changes
         if: github.event_name == 'push'
+        env:
+          HEAD_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          if [ ! -f data/paper-tests-v2.json ]; then
+          if [[ "$HEAD_MESSAGE" == "Cotes du "* ]]; then
+            echo "refresh=true" >> "$GITHUB_OUTPUT"
+          elif [ ! -f data/paper-tests-v2.json ]; then
             echo "refresh=true" >> "$GITHUB_OUTPUT"
           elif python scripts/check_quotes.py --is-fresh; then
             echo "refresh=false" >> "$GITHUB_OUTPUT"
@@ -99,7 +106,7 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/check_quotes.py
       - name: Relever les victoires et totaux de buts Winamax
-        if: github.event.schedule != '25 23 * * *'
+        if: github.event.schedule != '25 23 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/collect_football_markets.py
@@ -118,7 +125,7 @@ jobs:
         continue-on-error: true
         run: node scripts/paper_multi_tests.cjs
       - name: Notifier les propositions sans passer de pari
-        if: github.event.schedule != '25 23 * * *'
+        if: github.event.schedule != '25 23 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         id: notifications
         continue-on-error: true
         env:
