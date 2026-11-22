@@ -34,7 +34,7 @@ function outcome(r,m){
 function load(file){return fetch(file,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
 
 // Scores réels : lus dans data/days/<jour>.json (mêmes fichiers que le réglage des tickets).
-var SCORES={};
+var SCORES={},NEWS=null;
 function findMatch(l){var list=SCORES[l.date||String(l.kickoff).slice(0,10)]||[];var all=Object.keys(SCORES).reduce(function(a,k){return a.concat(SCORES[k]);},[]);
  function key(s){return String(s||'').trim().toLowerCase();}
  return (list.length?list:all).concat(all).find(function(m){return Date.parse(m.kickoff)===Date.parse(l.kickoff)&&(m.id===l.matchId||key(m.home)===key(l.home)&&key(m.away)===key(l.away));})||null;}
@@ -65,6 +65,17 @@ function card(r,res,today){
     '</article>';
 }
 
+// Filtre actu (data/news-checks.json) : matchs vérifiés par l'IA avant de figer les tickets, et ceux écartés.
+function newsBlock(day){var d=NEWS&&NEWS.days&&NEWS.days[day];if(!d)return '';
+  var all=Object.keys(d.checks||{}).map(function(k){return d.checks[k];}),bad=all.filter(function(c){return c.verdict==='douteux';});
+  if(!all.length)return d.status==='error'?'<p class="tt-empty tt-news">Vérification de l’actu par l’IA indisponible ce jour-là : aucun match écarté.</p>':'';
+  function host(u){try{return new URL(u).hostname.replace(/^www\./,'');}catch(e){return '';}}
+  return '<section class="tt-news"><h3>Actu de dernière minute</h3><p class="tt-empty">L’IA a lu les nouvelles de '+all.length+' match'+(all.length>1?'s':'')+' avant de faire les tickets. '+
+    (bad.length?bad.length+' écarté'+(bad.length>1?'s':'')+' :':'Aucun match douteux.')+'</p>'+
+    (bad.length?'<ul>'+bad.map(function(c){return '<li><b>'+esc(c.home)+' – '+esc(c.away)+'</b> <small>'+esc(hour(c.kickoff))+'</small><br>'+esc(c.reason||'Actu défavorable')+
+      ((c.sources||[]).length?' <small>('+c.sources.map(function(u){var h=host(u);return h?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(h)+'</a>':'';}).filter(Boolean).join(', ')+')</small>':'')+'</li>';}).join('')+'</ul>':'')+
+    '<p class="tt-foot">Simple filtre : l’IA ne prédit pas le score, elle retire les matchs avec un blessé clé, une équipe B ou un report possible.</p></section>';}
+
 function renderToday(records,m){
   var today=parisDay(new Date());
   var real=records.filter(function(r){return r.status!=='no_pick'&&r.legs&&r.legs.length;});
@@ -75,6 +86,7 @@ function renderToday(records,m){
   var head='<div class="tt-title"><h2>Tickets du jour</h2><span class="tt-date">'+esc(day?longDay(day):'')+(day&&day!==today?' · pas encore de ticket aujourd’hui':'')+'</span></div>';
   if(!list.length){box.innerHTML=head+'<p class="tt-empty">Pas encore de ticket figé. Les tickets apparaissent après la collecte du matin.</p>';return;}
   box.innerHTML=head+'<div class="tt-grid">'+list.map(function(r){return card(r,outcome(r,m),day);}).join('')+'</div>'+
+    newsBlock(day)+
     (missing.length?'<p class="tt-empty">Pas de ticket '+missing.map(function(k){return '« '+KINDS[k].name+' »';}).join(' ni ')+' pour ce jour : aucun pari ne remplissait les conditions.</p>':'')+
     '<a class="btn tt-winamax" href="'+WINAMAX+'" target="_blank" rel="noopener">Ouvrir Winamax</a>';
 }
@@ -130,7 +142,8 @@ function renderHistory(records,m,money){
   el.onclick=function(e){var b=e.target.closest('[data-hist]');if(!b)return;el.dataset.filter=b.dataset.hist;renderHistory(records,m,money);};
 }
 
-Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json')]).then(function(v){
+Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json')]).then(function(v){
+  NEWS=v[3];
   var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
   var m=manual();
   if(!records.length){box.innerHTML='<div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Tickets indisponibles pour le moment. Réessaie après actualisation.</p>';if(bilan)bilan.hidden=true;return;}
