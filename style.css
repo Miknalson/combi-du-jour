@@ -236,3 +236,13 @@ h1,h2,h3{text-transform:none;letter-spacing:-.035em;font-weight:700}h1{line-heig
 .hist-top{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;font-size:13px}
 .hist-top .tt-status{margin-left:auto}
 .hist-legs{font-size:12px;color:var(--ink-2);margin-top:4px;overflow-wrap:anywhere}
+
+.tt-card.k-but,.bl-type.k-but,.hist-list li.k-but{border-left-color:var(--draw)}
+.tt-score{display:inline-block;font-family:var(--f-mono);font-size:12px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
+.tt-score.sc-ok{background:var(--good-soft);color:var(--good)}.tt-score.sc-ko{background:var(--bad-soft);color:var(--bad)}
+.hist-legs{list-style:none;padding:0;margin:4px 0 0}.hist-legs li{padding:2px 0}
+.hist-list li .hist-legs li{border:0;background:none;padding:2px 0;border-radius:0}
+.tt-score{display:inline-block;font-family:var(--f-mono);font-size:12px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
+.tt-score.sc-ok{background:var(--good-soft);color:var(--good)}.tt-score.sc-ko{background:var(--bad-soft);color:var(--bad)}
+.hist-list li .hist-legs{list-style:none;padding:0;margin:4px 0 0}
+.hist-list li .hist-legs li{border:0;background:none;padding:2px 0;border-radius:0}
