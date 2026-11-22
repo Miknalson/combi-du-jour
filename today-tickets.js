@@ -68,29 +68,53 @@ function renderToday(records,m){
 
 function renderBilan(records,m){
   if(!bilan)return;
-  var rows=ORDER.map(function(k){
-    var won=0,lost=0,wait=0,net=0;
-    records.filter(function(r){return r.method===k&&r.status!=='no_pick';}).forEach(function(r){
-      var o=outcome(r,m),stake=Number(r.simulatedStake)||0;
-      if(o.status==='won'){won++;net+=stake*((Number(o.odds)||r.odds)-1);}
-      else if(o.status==='lost'){lost++;net-=stake;}
-      else if(o.status==='pending')wait++;
-    });
-    return {k:k,won:won,lost:lost,wait:wait,net:net};
-  });
-  var tot=rows.reduce(function(a,r){a.won+=r.won;a.lost+=r.lost;a.wait+=r.wait;a.net+=r.net;return a;},{won:0,lost:0,wait:0,net:0});
+  function money(x,d){return (x>0?'+':x<0?'−':'')+num(Math.abs(x),d)+' €';}
   function rate(r){var n=r.won+r.lost;return n?Math.round(100*r.won/n)+' %':'—';}
-  function money(x,d){return (x>0?'+':x<0?'−':'')+num(Math.abs(x),d)+'\u00a0€';}
+  function roi(r){return r.staked?(r.net>=0?'+':'−')+num(Math.abs(100*r.net/r.staked),1)+' %':'—';}
+  function tone(x){return x>0?'bl-won':x<0?'bl-lost':'';}
+  var rows=ORDER.map(function(k){
+    var r={k:k,won:0,lost:0,wait:0,net:0,staked:0};
+    records.filter(function(x){return x.method===k&&x.status!=='no_pick';}).forEach(function(x){
+      var o=outcome(x,m),stake=Number(x.simulatedStake)||0;
+      if(o.status==='won'){r.won++;r.staked+=stake;r.net+=stake*((Number(o.odds)||x.odds)-1);}
+      else if(o.status==='lost'){r.lost++;r.staked+=stake;r.net-=stake;}
+      else if(o.status==='pending')r.wait++;
+    });
+    return r;
+  });
+  var tot=rows.reduce(function(a,r){['won','lost','wait','net','staked'].forEach(function(f){a[f]+=r[f];});return a;},{won:0,lost:0,wait:0,net:0,staked:0});
+  var full=!!document.getElementById('ticketsHistory');
   var settled=records.filter(function(r){return r.status!=='no_pick'&&r.legs&&r.legs.length;}).map(function(r){return {r:r,o:outcome(r,m)};})
     .filter(function(x){return x.o.status==='won'||x.o.status==='lost';})
     .sort(function(a,b){return b.r.day.localeCompare(a.r.day)||ORDER.indexOf(a.r.method)-ORDER.indexOf(b.r.method);}).slice(0,8);
-  bilan.innerHTML='<div class="tt-title"><h2>Bilan</h2><span class="tt-date">Tickets fictifs terminés</span></div>'+
-    '<div class="bl-kpis"><div><span class="mono bl-won">'+tot.won+'</span><small>gagnés</small></div><div><span class="mono bl-lost">'+tot.lost+'</span><small>perdus</small></div><div><span class="mono">'+rate(tot)+'</span><small>réussite</small></div><div><span class="mono '+(tot.net>=0?'bl-won':'bl-lost')+'">'+money(tot.net,0)+'</span><small>net fictif</small></div></div>'+
-    '<table class="bl-table"><thead><tr><th>Ticket</th><th>Gagnés / perdus</th><th>Réussite</th><th>Net fictif</th></tr></thead><tbody>'+
-    rows.map(function(r){return '<tr><td>'+esc(KINDS[r.k].name)+(r.wait?' <small>('+r.wait+' en attente)</small>':'')+'</td><td class="mono">'+r.won+' / '+r.lost+'</td><td class="mono">'+rate(r)+'</td><td class="mono '+(r.net>=0?'bl-won':'bl-lost')+'">'+money(r.net)+'</td></tr>';}).join('')+
-    '</tbody></table>'+
-    (settled.length?'<h3 class="bl-sub">Derniers résultats</h3><ul class="bl-last">'+settled.map(function(x){var st=STATUS[x.o.status];return '<li><span class="mono">'+esc(x.r.day.slice(8)+'/'+x.r.day.slice(5,7))+'</span><span>'+esc(KINDS[x.r.method].name)+' · cote '+num(x.r.odds)+'</span><span class="tt-status '+st[1]+'">'+st[0]+'</span></li>';}).join('')+'</ul>':'')+
-    '<a class="bl-more" href="tableau.html#paperProtocolV2">Tout le détail dans le Tableau de bord →</a>';
+  bilan.innerHTML='<div class="tt-title"><h2>Bilan</h2><span class="tt-date">Mises fictives placées automatiquement</span></div>'+
+    '<div class="bl-kpis"><div><span class="mono bl-won">'+tot.won+'</span><small>gagnés</small></div><div><span class="mono bl-lost">'+tot.lost+'</span><small>perdus</small></div><div><span class="mono">'+rate(tot)+'</span><small>réussite</small></div><div><span class="mono '+tone(tot.net)+'">'+money(tot.net,0)+'</span><small>net fictif</small></div></div>'+
+    '<div class="bl-types">'+rows.map(function(r){return '<article class="bl-type '+KINDS[r.k].tone+'"><strong>'+esc(KINDS[r.k].name)+'</strong>'+
+      '<dl><div><dt>Gagnés / perdus</dt><dd class="mono">'+r.won+' / '+r.lost+(r.wait?' <small>· '+r.wait+' en cours</small>':'')+'</dd></div>'+
+      '<div><dt>Réussite</dt><dd class="mono">'+rate(r)+'</dd></div>'+
+      '<div><dt>Total misé</dt><dd class="mono">'+num(r.staked,0)+' €</dd></div>'+
+      '<div><dt>Net fictif</dt><dd class="mono '+tone(r.net)+'">'+money(r.net)+'</dd></div>'+
+      '<div><dt>Rentabilité</dt><dd class="mono '+tone(r.net)+'">'+roi(r)+'</dd></div></dl></article>';}).join('')+'</div>'+
+    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, Algo 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
+    (!full&&settled.length?'<h3 class="bl-sub">Derniers résultats</h3><ul class="bl-last">'+settled.map(function(x){var st=STATUS[x.o.status];return '<li><span class="mono">'+esc(x.r.day.slice(8)+'/'+x.r.day.slice(5,7))+'</span><span>'+esc(KINDS[x.r.method].name)+' · cote '+num(x.r.odds)+'</span><span class="tt-status '+st[1]+'">'+st[0]+'</span></li>';}).join('')+'</ul>':'')+
+    (full?'':'<a class="bl-more" href="tickets.html">Tout l’historique sur la page Tickets →</a>');
+  if(full)renderHistory(records,m,money);
+}
+
+function renderHistory(records,m,money){
+  var el=document.getElementById('ticketsHistory');
+  var list=records.filter(function(r){return r.status!=='no_pick'&&r.legs&&r.legs.length;})
+    .sort(function(a,b){return b.day.localeCompare(a.day)||ORDER.indexOf(a.method)-ORDER.indexOf(b.method);});
+  var filter=el.dataset.filter||'all';
+  el.innerHTML='<div class="tt-title"><h2>Historique</h2><span class="tt-date">'+list.length+' tickets</span></div>'+
+    '<div class="hist-filter" role="group" aria-label="Filtrer">'+[['all','Tous']].concat(ORDER.map(function(k){return [k,KINDS[k].name];})).map(function(f){return '<button type="button" data-hist="'+f[0]+'" aria-pressed="'+(filter===f[0])+'">'+esc(f[1])+'</button>';}).join('')+'</div>'+
+    '<ul class="hist-list">'+list.filter(function(r){return filter==='all'||r.method===filter;}).map(function(r){
+      var o=outcome(r,m),st=STATUS[o.status]||STATUS.pending,stake=Number(r.simulatedStake)||0;
+      var gain=o.status==='won'?stake*((Number(o.odds)||r.odds)-1):o.status==='lost'?-stake:null;
+      return '<li class="'+KINDS[r.method].tone+'"><div class="hist-top"><span class="mono">'+esc(r.day.slice(8)+'/'+r.day.slice(5,7))+'</span><strong>'+esc(KINDS[r.method].name)+'</strong><span class="mono">cote '+num(r.odds)+' · '+stake+' €</span><span class="tt-status '+st[1]+'">'+st[0]+(gain!==null?' '+money(gain):'')+'</span></div>'+
+        '<div class="hist-legs">'+r.legs.map(function(l){return esc(hour(l.kickoff)+' '+l.home+' – '+l.away+' : '+l.label+' ('+num(l.o)+')');}).join('<br>')+'</div></li>';
+    }).join('')+'</ul>';
+  el.onclick=function(e){var b=e.target.closest('[data-hist]');if(!b)return;el.dataset.filter=b.dataset.hist;renderHistory(records,m,money);};
 }
 
 Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json')]).then(function(v){
