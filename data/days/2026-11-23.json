@@ -1,6 +1,6 @@
 {
  "date": "2026-11-23",
- "updatedAt": "2026-11-21T07:50:15Z",
+ "updatedAt": "2026-11-22T07:51:20Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal + Oddsportal (secours)",
  "matches": [
   {
@@ -9,9 +9,9 @@
    "kickoff": "2026-11-23T11:00Z",
    "home": "Chornomorets Odesa",
    "away": "Epitsentr",
-   "o1": 2.9,
-   "oX": 3.0,
-   "o2": 2.4
+   "o1": 2.85,
+   "oX": 3.2,
+   "o2": 2.5
   },
   {
    "id": "ukr-lnz-cherkasy-polissya-zhytomyr",
@@ -19,9 +19,9 @@
    "kickoff": "2026-11-23T11:00Z",
    "home": "LNZ Cherkasy",
    "away": "Polissya Zhytomyr",
-   "o1": 3.4,
-   "oX": 3.0,
-   "o2": 2.15
+   "o1": 3.7,
+   "oX": 3.1,
+   "o2": 2.1
   },
   {
    "id": "tur-basaksehir-corum-fk",
@@ -31,7 +31,7 @@
    "away": "Corum FK",
    "o1": 1.9,
    "oX": 3.8,
-   "o2": 3.6
+   "o2": 3.8
   },
   {
    "id": "den-brondby-if-fc-midtjylland",
@@ -41,7 +41,7 @@
    "away": "FC Midtjylland",
    "o1": 2.45,
    "oX": 4.0,
-   "o2": 2.55
+   "o2": 2.65
   },
   {
    "id": "pol-wieczysta-krakow-motor-lublin",
@@ -133,7 +133,7 @@
    "kickoff": "2026-11-23T19:45Z",
    "home": "Nantes",
    "away": "Grenoble",
-   "o1": 1.46,
+   "o1": 1.47,
    "oX": 4.2,
    "o2": 7.5
   },
