@@ -200,6 +200,11 @@ h1,h2,h3{text-transform:none;letter-spacing:-.035em;font-weight:700}h1{line-heig
 .tt-odd{font-size:16px;font-weight:600}
 .tt-foot{margin:0;padding:8px 16px 12px;font-size:11.5px;color:var(--ink-3);border-top:1px solid var(--line)}
 .tt-empty{margin:0;font-size:13px;color:var(--ink-2)}
+.tt-news{margin:4px 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px}
+.tt-news h3{margin:0 0 4px;font-size:14px}
+.tt-news ul{margin:6px 0 0;padding-left:18px;font-size:13px;color:var(--ink-2)}
+.tt-news li{margin:4px 0}
+.tt-news .tt-foot{padding:6px 0 0;border-top:0}
 .tt-winamax{align-self:flex-start}
 .bl-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .bl-kpis div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 8px;text-align:center}
