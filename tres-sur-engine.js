@@ -39,6 +39,6 @@ function render(journal,day,now){var r=forDay(journal,day),s=stats(journal),head
  var now0=now===undefined?Date.now():now,started=r.legs.some(function(l){return Date.parse(l.kickoff)<=now0;});
  return head+'<ul class="tres-sur-legs">'+r.legs.map(function(l){return '<li><b>'+esc(l.home)+' – '+esc(l.away)+'</b> · '+esc(hour(l.kickoff))+'<br>'+esc(l.label)+' · cote Winamax <b>'+price(l.o)+'</b> · '+Math.round(100*l.p)+' %</li>';}).join('')+'</ul>'+
   '<p><b>Cote totale Winamax : '+price(r.odds)+'</b> · chance estimée '+Math.round(100*r.probability)+' % · '+esc(st)+'</p>'+
-  '<p class="status">Cotes relevées directement chez Winamax le '+esc(new Date(r.createdAt).toLocaleString('fr-FR',{timeZone:'Europe/Paris',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}))+' (pas de moyenne ni d’estimation). Vérifie la cote avant de miser'+(started?'':' : si elle est passée sous 1,10, le ticket ne vaut plus le coup')+'.</p>'+bilan;}
+  '<p class="status">Cotes relevées directement chez Winamax le '+esc(new Date(r.legs[0].asOf||r.createdAt).toLocaleString('fr-FR',{timeZone:'Europe/Paris',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}))+' (pas de moyenne ni d’estimation). Vérifie la cote avant de miser'+(started?'':' : si elle est passée sous 1,10, le ticket ne vaut plus le coup')+'.</p>'+bilan;}
 return {rules:clone(RULES),candidates:candidates,choose:choose,build:build,append:append,settle:Paper.settle,forDay:forDay,stats:stats,render:render};
 });
