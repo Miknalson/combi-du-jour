@@ -105,10 +105,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T07:49:02Z",
+    "asOf": "2026-11-22T05:44:40Z",
     "o1": 1.25,
     "oX": 5.25,
-    "o2": 7.5,
+    "o2": 8.0,
     "ou": {}
    },
    "leagueTitle": "SA"
@@ -636,10 +636,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T07:49:02Z",
-    "o1": 1.62,
+    "asOf": "2026-11-22T05:44:40Z",
+    "o1": 1.64,
     "oX": 3.65,
-    "o2": 4.3,
+    "o2": 4.1,
     "ou": {}
    },
    "leagueTitle": "SA"
@@ -692,10 +692,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T07:49:02Z",
-    "o1": 2.4,
-    "oX": 3.15,
-    "o2": 2.5,
+    "asOf": "2026-11-22T05:44:40Z",
+    "o1": 2.5,
+    "oX": 3.2,
+    "o2": 2.4,
     "ou": {}
    },
    "leagueTitle": "SA"
@@ -1051,10 +1051,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T07:49:02Z",
-    "o1": 1.47,
-    "oX": 4.3,
-    "o2": 4.6,
+    "asOf": "2026-11-22T05:44:40Z",
+    "o1": 1.5,
+    "oX": 4.1,
+    "o2": 4.5,
     "ou": {}
    },
    "leagueTitle": "SA"
@@ -1286,10 +1286,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-14T07:49:02Z",
-    "o1": 4.2,
-    "oX": 4.2,
-    "o2": 1.52,
+    "asOf": "2026-11-22T05:44:40Z",
+    "o1": 4.5,
+    "oX": 4.4,
+    "o2": 1.48,
     "ou": {}
    },
    "leagueTitle": "SA"
@@ -1386,5 +1386,5 @@
    }
   }
  ],
- "marketsUpdatedAt": "2026-11-21T05:00:01.090145+00:00"
+ "marketsUpdatedAt": "2026-11-22T05:45:26.586500+00:00"
 }
