@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=goals2">
+<link rel="stylesheet" href="style.css?v=tidy2">
 </head>
 <body><nav aria-label="Alertes" style="max-width:1120px;margin:auto;padding:12px 20px"><a href="notifications.html">🔔 Mes alertes Algo / Safe</a></nav>
 <div class="wrap">
@@ -22,25 +22,22 @@
       <h1>Combiné du Jour</h1>
     </div>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
-      <nav class="nav" aria-label="Pages"><a href="./" aria-current="page"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M8 8h8M8 12h5M8 16h8"/></svg> Analyse</a><a href="tableau.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 19V5M4 19h16M8 15v-4M13 15V7M18 15v-6"/></svg> Tableau de bord</a></nav>
+      <nav class="nav" aria-label="Pages"><a href="./" aria-current="page"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M8 8h8M8 12h5M8 16h8"/></svg> Analyse</a><a href="tickets.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a3 3 0 0 0 0 6v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a3 3 0 0 0 0-6z"/><path d="M14 5v14" stroke-dasharray="2 2"/></svg> Tickets</a><a href="tableau.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 19V5M4 19h16M8 15v-4M13 15V7M18 15v-6"/></svg> Tableau de bord</a></nav>
       <div class="status" id="status">Chargement des matchs…</div>
     </div>
   </header>
 <nav class="sport-tabs" aria-label="Choisir un sport"><a href="./" aria-current="page">Football</a><a href="sports.html?sport=basket">Basket</a><a href="sports.html?sport=tennis">Tennis</a><a href="safe.html">Safe du jour</a></nav>
-<aside class="protocol-link"><strong>Protocole fictif multisport v2</strong><p>Mises enregistrées automatiquement en fictif : 100 € par Safe et 50 € par Algo, sur des cotes API récentes.</p><a href="tableau.html#paperProtocolV2">Voir les tickets de référence et leurs résultats figés</a></aside>
-<details class="model-study" id="deliveryStatus"><summary>État de la collecte et des notifications</summary><div data-feed-health></div></details>
 
-  <section class="uefa-calendar" id="uefaFixtures" aria-label="Calendrier UEFA"></section>
+  <section class="today-tickets" id="todayTickets" aria-label="Tickets du jour" aria-live="polite"><div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Chargement des tickets…</p></section>
+  <section class="today-bilan" id="todayBilan" aria-label="Bilan des tickets"></section>
+
+  <div class="more-label">Pour aller plus loin</div>
+  <details class="module-disclosure" id="detailModule"><summary>Algo en détail, autres jours et simulation personnelle</summary>
+  <div class="disc-body">
   <nav class="days" id="days" aria-label="Choisir le jour"></nav>
-
   <div class="mode-switch" role="group" aria-label="Mode d’analyse"><button type="button" data-strategy="reference" aria-pressed="true">Algo du jour · alerte</button><button type="button" data-strategy="value" aria-pressed="false">Modèle prudent</button><button type="button" data-strategy="combo" aria-pressed="false">Simulation personnelle</button></div>
   <div id="ticketArea"><div class="empty">Chargement des matchs et des cotes…</div></div>
   <section class="model-study tres-sur" id="tresSurArea" aria-label="Très sûr du jour"></section>
-
-  <section class="model-study" id="goalMarkets" aria-label="Totaux de buts Winamax"></section>
-  <details class="model-study" id="manualGoalModule"><summary>Comparer un total de buts vu chez Winamax</summary><p>Recopie les deux côtés du même marché. Ces cotes sont enregistrées sur cet appareil et utilisées uniquement dans ta simulation personnelle. Elles ne changent ni les alertes, ni les tickets fictifs automatiques.</p><form id="manualGoalForm" class="manual-goal-form"><label>Rencontre<select id="manualGoalMatch" required></select></label><label>Total de buts<input id="manualGoalLine" type="number" min="0.5" max="9.5" step="1" value="2.5" required></label><label>Cote « plus de »<input id="manualGoalOver" inputmode="decimal" required></label><label>Cote « moins de »<input id="manualGoalUnder" inputmode="decimal" required></label><label><input id="manualGoalConfirmed" type="checkbox" required> J’ai relevé ces deux cotes chez Winamax sur ce match et cette même ligne.</label><button type="submit" class="btn">Comparer dans ma simulation personnelle</button></form><button type="button" class="btn ghost small" id="clearManualGoals">Retirer mes saisies de buts</button><p id="manualGoalStatus" role="status" aria-live="polite"></p></details>
-
-  <section class="model-study" id="modelStudy" aria-label="Résultats de l’étude"></section>
 
   <section id="altsSection" hidden>
     <div class="head"><h2>Autres combinaisons</h2><div class="hint">Les meilleures options suivantes dans la même fourchette de cote.</div></div>
@@ -77,6 +74,15 @@
       </div>
     </div>
   </section>
+  </div>
+  </details>
+
+  <details class="module-disclosure" id="goalsModule"><summary>Totaux de buts Winamax</summary>
+  <div class="disc-body">
+  <section class="model-study" id="goalMarkets" aria-label="Totaux de buts Winamax"></section>
+  <details class="model-study" id="manualGoalModule"><summary>Comparer un total de buts vu chez Winamax</summary><p>Recopie les deux côtés du même marché. Ces cotes sont enregistrées sur cet appareil et utilisées uniquement dans ta simulation personnelle. Elles ne changent ni les alertes, ni les tickets fictifs automatiques.</p><form id="manualGoalForm" class="manual-goal-form"><label>Rencontre<select id="manualGoalMatch" required></select></label><label>Total de buts<input id="manualGoalLine" type="number" min="0.5" max="9.5" step="1" value="2.5" required></label><label>Cote « plus de »<input id="manualGoalOver" inputmode="decimal" required></label><label>Cote « moins de »<input id="manualGoalUnder" inputmode="decimal" required></label><label><input id="manualGoalConfirmed" type="checkbox" required> J’ai relevé ces deux cotes chez Winamax sur ce match et cette même ligne.</label><button type="submit" class="btn">Comparer dans ma simulation personnelle</button></form><button type="button" class="btn ghost small" id="clearManualGoals">Retirer mes saisies de buts</button><p id="manualGoalStatus" role="status" aria-live="polite"></p></details>
+  </div>
+  </details>
 
   <details class="module-disclosure" id="matchModule"><summary>Explorer les matchs et leurs cotes</summary>
   <section>
@@ -94,6 +100,25 @@
     <div class="head"><h2>Historique d’exploration · hors protocole v1</h2><div class="hint">Le combiné proposé chaque jour passé (enregistré sur cet appareil), ou recalculé avec tes réglages actuels si tu n'avais pas ouvert l'appli ce jour-là.</div></div>
     <div id="history"></div>
   </section>
+  </details>
+
+  <details class="module-disclosure" id="uefaModule"><summary>Calendrier des coupes d’Europe</summary>
+  <div class="disc-body">
+  <section class="uefa-calendar" id="uefaFixtures" aria-label="Calendrier UEFA"></section>
+  </div>
+  </details>
+
+  <details class="module-disclosure" id="studyModule"><summary>Étude du modèle</summary>
+  <div class="disc-body">
+  <section class="model-study" id="modelStudy" aria-label="Résultats de l’étude"></section>
+  </div>
+  </details>
+
+  <details class="module-disclosure" id="protocolModule"><summary>Protocole fictif et état de la collecte</summary>
+  <div class="disc-body">
+<aside class="protocol-link"><strong>Protocole fictif multisport v2</strong><p>Mises enregistrées automatiquement en fictif : 100 € par Safe et 50 € par Algo, sur des cotes API récentes.</p><a href="tableau.html#paperProtocolV2">Voir les tickets de référence et leurs résultats figés</a></aside>
+<details class="model-study" id="deliveryStatus"><summary>État de la collecte et des notifications</summary><div data-feed-health></div></details>
+  </div>
   </details>
 
   <div class="warn">
@@ -127,13 +152,14 @@
   </footer>
 </div>
 
-<script src="feed-health.js?v=1"></script><script src="sport-catalog.js?v=2"></script>
+<script src="feed-health.js?v=2"></script><script src="sport-catalog.js?v=3"></script>
 <script src="uefa.js?v=1"></script>
 <script src="safe-engine.js?v=goals1"></script><script src="football-markets.js?v=2"></script>
 <script src="ticket-reference.js?v=1"></script>
 <script src="paper-engine.js"></script><script src="safe-multi-engine.js"></script><script src="tres-sur-engine.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
+<script src="today-tickets.js?v=2"></script>
 <script>
 (function(){
 "use strict";
