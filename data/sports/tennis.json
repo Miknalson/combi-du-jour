@@ -1,7 +1,7 @@
 {
   "sport": "tennis",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-22T07:09:26.028434+00:00",
+  "updatedAt": "2026-11-22T07:10:01.545563+00:00",
   "status": "ok",
   "matches": [
     {
@@ -13,7 +13,7 @@
       "away": "Golubic, Viktorija",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-22T07:09:35Z",
+      "asOf": "2026-11-22T07:10:12Z",
       "market": "h2h",
       "o1": 1.64,
       "o2": 1.96,
@@ -26,7 +26,7 @@
           "line": 21.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||21.5|over",
@@ -52,7 +52,7 @@
           "line": 20.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||20.5|over",
@@ -78,7 +78,7 @@
           "line": 19.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||19.5|over",
@@ -104,7 +104,7 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||2.5|over",
@@ -130,7 +130,7 @@
           "line": 25.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||25.5|over",
@@ -156,7 +156,7 @@
           "line": 24.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||24.5|over",
@@ -182,7 +182,7 @@
           "line": 18.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||18.5|over",
@@ -208,7 +208,7 @@
           "line": 23.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||23.5|over",
@@ -234,7 +234,7 @@
           "line": 26.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||26.5|over",
@@ -260,7 +260,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "1",
@@ -286,7 +286,7 @@
           "line": 22.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||22.5|over",
@@ -323,7 +323,7 @@
       "away": "Teichmann, Jil",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-22T07:09:35Z",
+      "asOf": "2026-11-22T07:10:12Z",
       "market": "h2h",
       "o1": 1.72,
       "o2": 1.88,
@@ -336,7 +336,7 @@
           "line": 18.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||18.5|over",
@@ -362,7 +362,7 @@
           "line": 17.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||17.5|over",
@@ -388,7 +388,7 @@
           "line": 21.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||21.5|over",
@@ -414,7 +414,7 @@
           "line": 25.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||25.5|over",
@@ -440,7 +440,7 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||2.5|over",
@@ -466,7 +466,7 @@
           "line": 20.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||20.5|over",
@@ -492,7 +492,7 @@
           "line": 24.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||24.5|over",
@@ -518,7 +518,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "1",
@@ -544,7 +544,7 @@
           "line": 19.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||19.5|over",
@@ -570,7 +570,7 @@
           "line": 23.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||23.5|over",
@@ -596,7 +596,7 @@
           "line": 22.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||22.5|over",
@@ -633,7 +633,7 @@
       "away": "Hunter S / Joint M",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-22T07:09:35Z",
+      "asOf": "2026-11-22T07:10:12Z",
       "market": "h2h",
       "o1": 2.25,
       "o2": 1.49,
@@ -646,7 +646,7 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||2.5|over",
@@ -672,7 +672,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "1",
@@ -709,7 +709,7 @@
       "away": "Gibson, Talia",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-22T07:09:35Z",
+      "asOf": "2026-11-22T07:10:12Z",
       "market": "h2h",
       "o1": 1.56,
       "o2": 2.1,
@@ -722,7 +722,7 @@
           "line": 25.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||25.5|over",
@@ -748,7 +748,7 @@
           "line": 26.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||26.5|over",
@@ -774,7 +774,7 @@
           "line": 21.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||21.5|over",
@@ -800,7 +800,7 @@
           "line": 22.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||22.5|over",
@@ -826,7 +826,7 @@
           "line": 19.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||19.5|over",
@@ -852,7 +852,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "1",
@@ -878,7 +878,7 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||2.5|over",
@@ -904,7 +904,7 @@
           "line": 18.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||18.5|over",
@@ -930,7 +930,7 @@
           "line": 20.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||20.5|over",
@@ -956,7 +956,7 @@
           "line": 23.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||23.5|over",
@@ -982,7 +982,7 @@
           "line": 24.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||24.5|over",
@@ -1019,7 +1019,7 @@
       "away": "Bondar A / Stollar F",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-22T07:09:35Z",
+      "asOf": "2026-11-22T07:10:12Z",
       "market": "h2h",
       "o1": 1.22,
       "o2": 3.4,
@@ -1032,7 +1032,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "1",
@@ -1058,7 +1058,7 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||2.5|over",
@@ -1095,7 +1095,7 @@
       "away": "Bondar, Anna",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-22T07:09:35Z",
+      "asOf": "2026-11-22T07:10:12Z",
       "market": "h2h",
       "o1": 1.02,
       "o2": 7.5,
@@ -1108,7 +1108,7 @@
           "line": 20.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||20.5|over",
@@ -1134,7 +1134,7 @@
           "line": 15.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||15.5|over",
@@ -1160,7 +1160,7 @@
           "line": 16.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||16.5|over",
@@ -1186,7 +1186,7 @@
           "line": 18.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||18.5|over",
@@ -1212,7 +1212,7 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||2.5|over",
@@ -1238,7 +1238,7 @@
           "line": 19.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||19.5|over",
@@ -1264,7 +1264,7 @@
           "line": 17.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||17.5|over",
@@ -1290,7 +1290,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "1",
@@ -1316,7 +1316,7 @@
           "line": 21.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||21.5|over",
@@ -1353,7 +1353,7 @@
       "away": "Galfi, Dalma",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-22T07:09:35Z",
+      "asOf": "2026-11-22T07:10:12Z",
       "market": "h2h",
       "o1": 1.12,
       "o2": 4.5,
@@ -1366,7 +1366,7 @@
           "line": 18.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||18.5|over",
@@ -1392,7 +1392,7 @@
           "line": 23.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||23.5|over",
@@ -1418,7 +1418,7 @@
           "line": 19.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||19.5|over",
@@ -1444,7 +1444,7 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "1",
@@ -1470,7 +1470,7 @@
           "line": 20.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||20.5|over",
@@ -1496,7 +1496,7 @@
           "line": 22.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||22.5|over",
@@ -1522,7 +1522,7 @@
           "line": 24.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||24.5|over",
@@ -1548,7 +1548,7 @@
           "line": 17.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||17.5|over",
@@ -1574,7 +1574,7 @@
           "line": 21.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||21.5|over",
@@ -1600,7 +1600,7 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||2.5|over",
@@ -1626,7 +1626,7 @@
           "line": 16.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:09:35Z",
+          "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
               "code": "totals||16.5|over",
