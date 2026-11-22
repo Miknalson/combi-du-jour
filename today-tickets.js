@@ -16,9 +16,10 @@ var KINDS={
   tres_sur:{name:'Très sûr',range:'cote 1,10 à 1,25',tone:'k-sur'},
   safe:{name:'Safe',range:'cote 1,50 à 2,00',tone:'k-safe'},
   safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
+  combi23:{name:'Combiné 2 à 3',range:'victoires · cote 2 à 3',tone:'k-c23'},
   algo:{name:'Algo',range:'cote 3 à 5',tone:'k-algo'}
 };
-var ORDER=['tres_sur','safe','safe_but','algo'];
+var ORDER=['tres_sur','safe','safe_but','combi23','algo'];
 var STATUS={won:['Gagné','st-won'],lost:['Perdu','st-lost'],pending:['En attente','st-wait'],void:['Annulé','st-void']};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function num(x,d){return Number(x).toFixed(d==null?2:d).replace('.',',');}
@@ -138,7 +139,7 @@ function renderBilan(records,m){
       '<div><dt>Total misé</dt><dd class="mono">'+num(r.staked,0)+' €</dd></div>'+
       '<div><dt>Net fictif</dt><dd class="mono '+tone(r.net)+'">'+money(r.net)+'</dd></div>'+
       '<div><dt>Rentabilité</dt><dd class="mono '+tone(r.net)+'">'+roi(r)+'</dd></div></dl></article>';}).join('')+'</div>'+
-    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, Safe but 100 €, Algo 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
+    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, Safe but 100 €, Combiné 2 à 3 50 €, Algo 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
     (!full&&settled.length?'<h3 class="bl-sub">Derniers résultats</h3><ul class="bl-last">'+settled.map(function(x){var st=STATUS[x.o.status];return '<li><span class="mono">'+esc(x.r.day.slice(8)+'/'+x.r.day.slice(5,7))+'</span><span>'+esc(KINDS[x.r.method].name)+' · cote '+num(x.r.odds)+'</span><span class="tt-status '+st[1]+'">'+st[0]+'</span></li>';}).join('')+'</ul>':'')+
     (full?'':'<a class="bl-more" href="tickets.html">Tout l’historique sur la page Tickets →</a>');
   if(full)renderHistory(records,m,money);
@@ -160,9 +161,9 @@ function renderHistory(records,m,money){
   el.onclick=function(e){var b=e.target.closest('[data-hist]');if(!b)return;el.dataset.filter=b.dataset.hist;renderHistory(records,m,money);};
 }
 
-Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json')]).then(function(v){
+Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json')]).then(function(v){
   NEWS=v[3];
-  var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
+  var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[],v[4]&&v[4].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
   var m=manual();
   if(!records.length){box.innerHTML='<div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Tickets indisponibles pour le moment. Réessaie après actualisation.</p>';if(bilan)bilan.hidden=true;return;}
   var days={};records.forEach(function(r){if(r.status!=='no_pick')(r.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;days[r.day]=1;});});

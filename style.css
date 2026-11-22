@@ -257,3 +257,4 @@ h1,h2,h3{text-transform:none;letter-spacing:-.035em;font-weight:700}h1{line-heig
 .tt-play label{display:flex;flex-direction:column;font-size:11px;color:var(--ink-3);gap:3px}
 .tt-play input{width:110px;padding:8px;border-radius:10px;border:1px solid var(--line);background:var(--surface-2);font-size:15px}
 .tt-played{margin:0;padding:8px 16px 12px;font-size:13px;color:var(--good);border-top:1px solid var(--line)}
+.tt-card.k-c23,.bl-type.k-c23,.hist-list li.k-c23{border-left-color:var(--away)}
