@@ -567,7 +567,7 @@ function renderLegacyTicket(dayMatches){
     (function(){ var bo=c.legs.reduce(function(a,l){ var b=bestOf(l); return a*(b?b.odds:l.o); },1); return bo>c.odds+0.005 ? '<span>En jouant chaque match chez le bookmaker le mieux placé, la cote monte à <strong class="mono">'+odds(bo)+'</strong>.</span>' : ''; })() +
     '<span>Espérance théorique aux cotes affichées : <strong>'+((c.odds*c.prob-1)*100).toFixed(1).replace('.',',')+' % par unité misée</strong>. Ce calcul ne prouve pas un rendement réel.</span>' +
     '<span>La cote '+odds(c.odds)+' annonce '+pct(bookP)+' de chances marge comprise. Une fois la marge retirée, l\'estimation tombe à '+pct(c.prob)+'. Cette probabilité de marché n’est pas un taux de réussite mesuré ; les résultats peuvent varier fortement.</span>' +
-    (res==='wait' ? '<div><button type="button" class="btn small" id="playAlgo">Ajouter ce scénario à mon ticket</button></div>' : '') +
+    (res==='wait' ? '<div><button type="button" class="btn small" id="playAlgo">Ajouter cette simulation à mon ticket (ce n’est pas l’Algo)</button></div>' : '') +
     '</div></article>';
   area.innerHTML = html;
   state.combo = c;

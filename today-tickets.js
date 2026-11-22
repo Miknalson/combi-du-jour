@@ -45,6 +45,23 @@ function legScore(l){var m=findMatch(l);if(!m||!/^\d+\s*-\s*\d+$/.test(String(m.
  else if(l.marketFamily==='totals'&&Number.isFinite(Number(l.marketLine))){var side=code.split('|').pop();ok=side==='over'?h+a>l.marketLine:side==='under'?h+a<l.marketLine:null;}
  return {text:h+'-'+a,ok:ok,final:m.scoreStatus!=='live'};}
 function scoreBadge(l){var s=legScore(l);if(!s)return '';return '<span class="tt-score '+(s.ok===true?'sc-ok':s.ok===false?'sc-ko':'')+'">'+esc(s.text)+(s.ok===true?' ✓':s.ok===false?' ✗':'')+'</span>';}
+// « J'ai joué ce ticket » : enregistre CE ticket (et pas une simulation) dans le suivi de l'appareil (cdj.bets).
+var BY_ID={};
+function bets(){try{return JSON.parse(localStorage.getItem('cdj.bets')||'[]')||[];}catch(e){return [];}}
+function playForm(r){BY_ID[r.id]=r;
+ if(bets().some(function(b){return b.refId===r.id;}))return '<p class="tt-played">✓ Enregistré dans ton suivi (Tableau de bord).</p>';
+ return '<details class="tt-play"><summary>J’ai joué ce ticket chez Winamax</summary><form data-play="'+esc(r.id)+'">'+
+  '<label>Cote jouée<input name="o" inputmode="decimal" required value="'+num(r.odds)+'"></label>'+
+  '<label>Mise (€)<input name="s" inputmode="decimal" required></label>'+
+  '<button type="submit" class="btn small">Enregistrer dans mon suivi</button></form></details>';}
+document.addEventListener('submit',function(e){var f=e.target.closest&&e.target.closest('form[data-play]');if(!f)return;e.preventDefault();
+ var r=BY_ID[f.dataset.play],o=parseFloat(f.o.value.replace(',','.')),st=parseFloat(f.s.value.replace(',','.'));if(!r||!(o>1)||!(st>0))return;
+ var list=bets();if(list.some(function(b){return b.refId===r.id;}))return;
+ list.push({id:'b'+Date.now().toString(36),createdAt:new Date().toISOString(),source:'ticket-'+r.method,refId:r.id,
+  legs:r.legs.map(function(l){return {matchId:l.matchId,date:l.date,league:l.league,home:l.home,away:l.away,kickoff:l.kickoff,code:l.code,label:l.label,o:l.o,p:l.p,est:!!l.est,bookKey:l.bookKey,marketFamily:l.marketFamily,marketLine:l.marketLine};}),
+  odds:+o.toFixed(2),stake:+st.toFixed(2),estProb:+Number(r.probability).toFixed(4),manual:null});
+ try{localStorage.setItem('cdj.bets',JSON.stringify(list));f.closest('details').outerHTML='<p class="tt-played">✓ Enregistré dans ton suivi (Tableau de bord).</p>';}catch(err){}
+});
 function card(r,res,today){
   var k=KINDS[r.method]||{name:r.method,range:'',tone:''},st=STATUS[res.status]||STATUS.pending;
   var sport=r.method==='safe'&&r.sport!=='football'?' · '+(SPORTS[r.sport]||r.sport):'';
@@ -62,6 +79,7 @@ function card(r,res,today){
     '<div><span class="tt-lab">Mise fictive</span><span class="tt-mid mono">'+esc(r.simulatedStake)+' €</span></div></div>'+
     '<ul class="tt-legs">'+legs+'</ul>'+
     (r.method==='safe_but'?'<p class="tt-foot">Cote moyenne du marché moins 5 % : notre source ne donne pas les cotes de buts Winamax. Vérifie la cote dans l’appli Winamax.</p>':asOf?'<p class="tt-foot">Cotes Winamax relevées à '+esc(hour(new Date(asOf).toISOString()))+'. Vérifie-les dans l’appli avant de jouer.</p>':'')+
+    (res.status==='pending'?playForm(r):'')+
     '</article>';
 }
 
