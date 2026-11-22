@@ -1,7 +1,9 @@
 {
   "sent": [
     "paper-multisport-v2|2026-11-21|algo|football",
-    "paper-multisport-v2|2026-11-21|safe|football"
+    "paper-multisport-v2|2026-11-21|safe|football",
+    "paper-multisport-v2|2026-11-22|algo|football",
+    "paper-multisport-v2|2026-11-22|safe|football"
   ],
   "dailyReports": [
     "2026-11-17",
@@ -10,5 +12,5 @@
     "2026-11-20",
     "2026-11-21"
   ],
-  "updatedAt": "2026-11-21T14:33:23.745Z"
+  "updatedAt": "2026-11-22T05:45:27.235Z"
 }

@@ -1,10 +1,10 @@
 {
-  "status": "daily_report_sent",
+  "status": "sent",
   "topicConfigured": true,
-  "sentNow": 0,
-  "dailyReportSent": true,
-  "eligible": 0,
-  "lastSentAt": "2026-11-21T14:33:23.745Z",
-  "message": "Bilan de collecte accepté par ntfy. Aucun ticket admissible et récent à notifier.",
-  "updatedAt": "2026-11-21T14:33:23.745Z"
+  "sentNow": 2,
+  "dailyReportSent": false,
+  "eligible": 2,
+  "lastSentAt": "2026-11-22T05:45:27.235Z",
+  "message": "2 alerte(s) acceptée(s) par ntfy.",
+  "updatedAt": "2026-11-22T05:45:27.235Z"
 }

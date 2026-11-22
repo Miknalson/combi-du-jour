@@ -1,7 +1,7 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-21T05:00:01.090145+00:00",
+  "updatedAt": "2026-11-22T05:45:26.586500+00:00",
   "status": "ok",
   "matches": [
     {
@@ -651,6 +651,276 @@
       "o1": 1.74,
       "o2": 3.3,
       "oX": 3.45
+    },
+    {
+      "id": "football-be2fcabc408be29ca01ce92ab266f8b7",
+      "eventId": "be2fcabc408be29ca01ce92ab266f8b7",
+      "sport": "football",
+      "sportKey": "soccer_italy_serie_a",
+      "leagueCode": "SA",
+      "league": "SA",
+      "home": "Juventus",
+      "away": "Venezia",
+      "kickoff": "2026-11-22T11:30:00Z",
+      "asOf": "2026-11-22T05:44:40Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-22T05:44:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Juventus",
+              "odds": 1.25,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Venezia",
+              "odds": 8.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.25,
+      "o2": 8.0,
+      "oX": 5.25
+    },
+    {
+      "id": "football-5bc13c44b33981f3185400163388267e",
+      "eventId": "5bc13c44b33981f3185400163388267e",
+      "sport": "football",
+      "sportKey": "soccer_italy_serie_a",
+      "leagueCode": "SA",
+      "league": "SA",
+      "home": "Bologna",
+      "away": "Udinese",
+      "kickoff": "2026-11-22T14:00:00Z",
+      "asOf": "2026-11-22T05:44:40Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-22T05:44:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Bologna",
+              "odds": 1.64,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Udinese",
+              "odds": 4.1,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.65,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.64,
+      "o2": 4.1,
+      "oX": 3.65
+    },
+    {
+      "id": "football-76d4698a8417f32cb059f14a469939f3",
+      "eventId": "76d4698a8417f32cb059f14a469939f3",
+      "sport": "football",
+      "sportKey": "soccer_italy_serie_a",
+      "leagueCode": "SA",
+      "league": "SA",
+      "home": "Sassuolo",
+      "away": "Genoa",
+      "kickoff": "2026-11-22T14:00:00Z",
+      "asOf": "2026-11-22T05:44:40Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-22T05:44:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Sassuolo",
+              "odds": 2.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Genoa",
+              "odds": 2.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.2,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 2.5,
+      "o2": 2.4,
+      "oX": 3.2
+    },
+    {
+      "id": "football-5faf836ce6c0fd72af5d1fe258c63bc6",
+      "eventId": "5faf836ce6c0fd72af5d1fe258c63bc6",
+      "sport": "football",
+      "sportKey": "soccer_italy_serie_a",
+      "leagueCode": "SA",
+      "league": "SA",
+      "home": "AC Milan",
+      "away": "Frosinone",
+      "kickoff": "2026-11-22T17:00:00Z",
+      "asOf": "2026-11-22T05:44:40Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-22T05:44:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire AC Milan",
+              "odds": 1.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Frosinone",
+              "odds": 4.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.5,
+      "o2": 4.5,
+      "oX": 4.1
+    },
+    {
+      "id": "football-e22f82b10fe71d230248b88fef87e58f",
+      "eventId": "e22f82b10fe71d230248b88fef87e58f",
+      "sport": "football",
+      "sportKey": "soccer_italy_serie_a",
+      "leagueCode": "SA",
+      "league": "SA",
+      "home": "Atalanta BC",
+      "away": "Inter Milan",
+      "kickoff": "2026-11-22T19:45:00Z",
+      "asOf": "2026-11-22T05:44:40Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-22T05:44:40Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Atalanta BC",
+              "odds": 4.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Inter Milan",
+              "odds": 1.48,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.4,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 4.5,
+      "o2": 1.48,
+      "oX": 4.4
     }
   ],
   "leaguesQueried": 0,
