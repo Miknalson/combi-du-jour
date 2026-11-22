@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "rules": {
+      "version": "tres-sur-v1",
+      "sport": "football",
+      "mode": "paper",
+      "realMoneyEnabled": false,
+      "stake": 100,
+      "currency": "EUR",
+      "minOdds": 1.1,
+      "maxOdds": 1.25,
+      "minLegProbability": 0.75,
+      "minTicketProbability": 0.75,
+      "maxLegs": 2,
+      "families": [
+        "h2h",
+        "totals"
+      ],
+      "quoteMaxAgeMinutes": 60,
+      "quotes": "cotes Winamax France relevées par API, jamais une moyenne de bookmakers ni une cote estimée"
+    },
+    "startedAt": "2026-11-22T05:56:02.896Z"
+  },
+  "records": [
+    {
+      "id": "tres-sur-v1|2026-11-22|football",
+      "day": "2026-11-22",
+      "method": "tres_sur",
+      "sport": "football",
+      "version": "tres-sur-v1",
+      "createdAt": "2026-11-22T05:56:02.896Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 100,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 1.25,
+      "probability": 0.7697316057891918,
+      "legs": [
+        {
+          "id": "football|football-be2fcabc408be29ca01ce92ab266f8b7|2026-11-22T11:30:00Z|h2h||None|1",
+          "matchId": "football-be2fcabc408be29ca01ce92ab266f8b7",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "SA",
+          "home": "Juventus",
+          "away": "Venezia",
+          "kickoff": "2026-11-22T11:30:00Z",
+          "date": "2026-11-22",
+          "code": "1",
+          "label": "Victoire Juventus",
+          "o": 1.25,
+          "p": 0.7697316057891918,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-22T05:44:40Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-22T05:45:26.586500+00:00",
+          "partial": true,
+          "matches": 17
+        }
+      ]
+    }
+  ]
+}

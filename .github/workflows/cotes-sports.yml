@@ -33,6 +33,9 @@ on:
       - 'alerts-engine.cjs'
       - 'scripts/notify.cjs'
       - 'ticket-reference.js'
+      - 'tres-sur-engine.js'
+      - 'scripts/tres_sur.cjs'
+      - 'tests/tres-sur.test.cjs'
       - 'tests/ticket-reference*'
       - 'index.html'
       - 'sports.html'
@@ -79,6 +82,7 @@ jobs:
           node tests/ticket-reference.test.cjs
           node tests/bet-results.test.cjs
           node tests/football-markets.test.cjs
+          node tests/tres-sur.test.cjs
           python -m unittest discover -s tests -p 'test_football_markets.py'
           python -m unittest discover -s tests -p 'test_scores.py'
           python -m unittest discover -s tests -p 'test_collection_health.py'
@@ -124,6 +128,9 @@ jobs:
       - name: Consigner les tests fictifs sans passer d’ordre
         continue-on-error: true
         run: node scripts/paper_multi_tests.cjs
+      - name: Consigner le ticket Très sûr fictif
+        continue-on-error: true
+        run: node scripts/tres_sur.cjs
       - name: Notifier les propositions sans passer de pari
         if: github.event.schedule != '25 23 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         id: notifications
@@ -144,6 +151,7 @@ jobs:
           if [ -f data/notification-status.json ]; then git add data/notification-status.json; fi
           if [ -f data/notification-state.json ]; then git add data/notification-state.json; fi
           git add data/paper-tests-v1.json data/paper-status-v1.json data/paper-tests-v2.json data/paper-status-v2.json 2>/dev/null || true
+          if [ -f data/tres-sur-tests.json ]; then git add data/tres-sur-tests.json; fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Cotes Winamax multisports et mises fictives"
           git pull --rebase origin main
@@ -151,7 +159,7 @@ jobs:
       - name: Préparer le site statique
         run: |
           mkdir -p /tmp/combi-sports-site
-          cp market-audit.js football-markets.js bet-results.js feed-health.js ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
+          cp tres-sur-engine.js market-audit.js football-markets.js bet-results.js feed-health.js ticket-reference.js notifications.html notifications.js index.html tableau.html sports.html uefa.js sport-catalog.js safe-multi-engine.js paper-multi-engine.js paper-engine.js paper-view.js safe.html safe.css safe.js safe-engine.js style.css model.js model-view.js sports.js sports-combos.js manifest.webmanifest .nojekyll /tmp/combi-sports-site/
           cp -r data icons /tmp/combi-sports-site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
