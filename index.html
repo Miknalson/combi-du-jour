@@ -35,6 +35,7 @@
 
   <div class="mode-switch" role="group" aria-label="Mode d’analyse"><button type="button" data-strategy="reference" aria-pressed="true">Algo du jour · alerte</button><button type="button" data-strategy="value" aria-pressed="false">Modèle prudent</button><button type="button" data-strategy="combo" aria-pressed="false">Simulation personnelle</button></div>
   <div id="ticketArea"><div class="empty">Chargement des matchs et des cotes…</div></div>
+  <section class="model-study tres-sur" id="tresSurArea" aria-label="Très sûr du jour"></section>
 
   <section class="model-study" id="goalMarkets" aria-label="Totaux de buts Winamax"></section>
   <details class="model-study" id="manualGoalModule"><summary>Comparer un total de buts vu chez Winamax</summary><p>Recopie les deux côtés du même marché. Ces cotes sont enregistrées sur cet appareil et utilisées uniquement dans ta simulation personnelle. Elles ne changent ni les alertes, ni les tickets fictifs automatiques.</p><form id="manualGoalForm" class="manual-goal-form"><label>Rencontre<select id="manualGoalMatch" required></select></label><label>Total de buts<input id="manualGoalLine" type="number" min="0.5" max="9.5" step="1" value="2.5" required></label><label>Cote « plus de »<input id="manualGoalOver" inputmode="decimal" required></label><label>Cote « moins de »<input id="manualGoalUnder" inputmode="decimal" required></label><label><input id="manualGoalConfirmed" type="checkbox" required> J’ai relevé ces deux cotes chez Winamax sur ce match et cette même ligne.</label><button type="submit" class="btn">Comparer dans ma simulation personnelle</button></form><button type="button" class="btn ghost small" id="clearManualGoals">Retirer mes saisies de buts</button><p id="manualGoalStatus" role="status" aria-live="polite"></p></details>
@@ -130,6 +131,7 @@
 <script src="uefa.js?v=1"></script>
 <script src="safe-engine.js?v=goals1"></script><script src="football-markets.js?v=2"></script>
 <script src="ticket-reference.js?v=1"></script>
+<script src="paper-engine.js"></script><script src="safe-multi-engine.js"></script><script src="tres-sur-engine.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
 <script>
@@ -490,6 +492,7 @@ function legRow(l){
 }
 
 function renderTicket(dayMatches){
+  var tsArea=document.getElementById('tresSurArea');if(tsArea&&window.TresSur)tsArea.innerHTML=TresSur.render(state.tresSur,state.selected);
   document.getElementById('simulationSettings').hidden=settings.strategy!=='combo';
   if(settings.strategy==='combo')document.getElementById('matchModule').open=true;
   document.querySelectorAll('[data-strategy]').forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.strategy===settings.strategy));});
@@ -785,8 +788,8 @@ TicketReference.bindCopy(document.getElementById('ticketArea'),function(id){retu
 (async function(){
   var statusEl=document.getElementById('status');
   try{
-    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():{dates:[]}).catch(()=>({dates:[]})),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/sports/football.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/paper-tests-v2.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/football-market-coverage.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
-    var idx=pair[0];state.model=pair[1];state.football=pair[2];state.journal=pair[3];state.goalCoverage=pair[4];UefaCalendar.render('uefaFixtures',pair[2]);
+    var pair=await Promise.all([fetch('data/index.json',{cache:'no-store'}).then(r=>r.ok?r.json():{dates:[]}).catch(()=>({dates:[]})),fetch('data/model-report.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/sports/football.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/paper-tests-v2.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/football-market-coverage.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),fetch('data/tres-sur-tests.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)]);
+    var idx=pair[0];state.model=pair[1];state.football=pair[2];state.journal=pair[3];state.goalCoverage=pair[4];state.tresSur=pair[5];UefaCalendar.render('uefaFixtures',pair[2]);
     var cutoff = parisDate(new Date(Date.now()-30*86400000));
     var dates = (idx.dates||[]).filter(function(d){ return d>=cutoff; });
     var docs = await Promise.all(dates.map(function(d){

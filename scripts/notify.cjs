@@ -8,11 +8,11 @@ async function main(){
  const topic=process.env.NTFY_TOPIC;
  if(!topic){saveStatus({status:'unconfigured',topicConfigured:false,message:'Notifications automatiques non configurées : ajouter le secret GitHub NTFY_TOPIC.'});console.log('Notifications non configurées : ajouter le secret NTFY_TOPIC.');return;}
  if(!/^[a-zA-Z0-9_-]{32,64}$/.test(topic))throw Error('invalid_topic');
- const stateFile=path.join(root,'data/notification-state.json'),journal=read('paper-tests-v2.json',{records:[]}),state=read('notification-state.json',{sent:[],dailyReports:[]}),sent=new Set(state.sent||[]),reports=new Set(state.dailyReports||[]),now=Date.now(),day=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(now));
+ const stateFile=path.join(root,'data/notification-state.json'),journal=read('paper-tests-v2.json',{records:[]}),extra=read('tres-sur-tests.json',{records:[]}),state=read('notification-state.json',{sent:[],dailyReports:[]}),sent=new Set(state.sent||[]),reports=new Set(state.dailyReports||[]),now=Date.now(),day=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(now));
  let count=0;
  async function send(payload){const response=await fetch('https://ntfy.sh/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('send_failed');}
  function persist(){state.updatedAt=new Date().toISOString();fs.writeFileSync(stateFile,JSON.stringify({...state,sent:[...sent],dailyReports:[...reports]},null,2)+'\n');}
- const eligible=journal.records.filter(r=>A.eligible(r,now));
+ const eligible=journal.records.concat(extra.records||[]).filter(r=>A.eligible(r,now));
  for(const r of eligible){if(sent.has(r.id))continue;await send(A.payload(r,topic));sent.add(r.id);persist();count++;}
  let digest=false;
  if(!eligible.length&&!reports.has(day)){
