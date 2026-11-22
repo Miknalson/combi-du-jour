@@ -1,6 +1,6 @@
 (function(){
 'use strict';
-var requested=new URLSearchParams(location.search).get('sport');var sport=SportCatalog.keys.includes(requested)&&requested!=='football'?requested:'basket';
+var requested=new URLSearchParams(location.search).get('sport');var sport=SportCatalog.shown.includes(requested)&&requested!=='football'?requested:'basket';
 var title=SportCatalog.sports[sport].label;
 document.title=title+' · Combiné du Jour';document.getElementById('sportTitle').textContent=title;
 document.querySelector('[data-sport="'+sport+'"]').setAttribute('aria-current','page');

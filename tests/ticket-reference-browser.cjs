@@ -19,7 +19,7 @@ const {chromium}=require('playwright-core'),fs=require('node:fs'),path=require('
       if(file==='data/sports/football.json')return route.fulfill({json:{sport:'football',status:'ok',bookKey:'winamax_fr',matches:[],fixtures:[]}});
       const local=path.join(process.cwd(),file);return fs.existsSync(local)&&fs.statSync(local).isFile()?route.fulfill({path:local}):route.fulfill({status:404,body:''});
     });
-    await page.goto('https://combi.test/');
+    await page.goto('https://combi.test/');await page.evaluate(()=>document.querySelectorAll('details.module-disclosure').forEach(d=>d.open=true));
     const card=page.locator('#ticketArea [data-reference-id]');await card.waitFor({timeout:4000});
     assert.equal(await page.locator('[data-strategy="reference"]').getAttribute('aria-pressed'),'true');
     assert.equal(await card.getAttribute('data-reference-id'),id);
@@ -37,11 +37,11 @@ const {chromium}=require('playwright-core'),fs=require('node:fs'),path=require('
     const notified=page.locator('#alertTicket [data-reference-id]');await notified.waitFor();assert.equal(await notified.getAttribute('data-reference-id'),id);
     await notified.getByRole('button',{name:'Copier les sélections'}).click();assert.equal(await page.evaluate(()=>window.copiedTicket),original);
     await page.getByRole('link',{name:'Retrouver ce ticket dans Algo'}).click();await card.waitFor({timeout:4000});assert.equal(await card.getAttribute('data-reference-id'),id);
-    changed=true;await page.reload();await card.waitFor({timeout:4000});await card.getByRole('button',{name:'Copier les sélections'}).click();assert.equal(await page.evaluate(()=>window.copiedTicket),original,'Changing current quotes must not replace the reference');
+    changed=true;await page.reload();await page.evaluate(()=>document.querySelectorAll('details.module-disclosure').forEach(d=>d.open=true));await card.waitFor({timeout:4000});await card.getByRole('button',{name:'Copier les sélections'}).click();assert.equal(await page.evaluate(()=>window.copiedTicket),original,'Changing current quotes must not replace the reference');
     await page.locator('#days [data-date="2026-11-16"]').click();await page.getByRole('heading',{name:'Aucun Algo enregistré pour ce jour'}).waitFor();assert.equal(await page.locator('#ticketArea [data-reference-id]').count(),0);
     await page.goto('https://combi.test/?ticket=unknown');await page.getByText('Cette référence est introuvable',{exact:false}).waitFor();assert.equal(await page.locator('#ticketArea [data-reference-id]').count(),0);
-    noPick=true;await page.goto('https://combi.test/');await page.getByText('Aucun ticket admissible au moment de l’enregistrement.',{exact:false}).waitFor();assert.equal(await page.locator('#ticketArea [data-reference-copy]').count(),0);
-    missing=true;await page.reload();await page.getByRole('heading',{name:'Ticket de référence indisponible'}).waitFor();assert.equal(await page.locator('#ticketArea #playAlgo').count(),0);
+    noPick=true;await page.goto('https://combi.test/');await page.evaluate(()=>document.querySelectorAll('details.module-disclosure').forEach(d=>d.open=true));await page.getByText('Aucun ticket admissible au moment de l’enregistrement.',{exact:false}).waitFor();assert.equal(await page.locator('#ticketArea [data-reference-copy]').count(),0);
+    missing=true;await page.reload();await page.evaluate(()=>document.querySelectorAll('details.module-disclosure').forEach(d=>d.open=true));await page.getByRole('heading',{name:'Ticket de référence indisponible'}).waitFor();assert.equal(await page.locator('#ticketArea #playAlgo').count(),0);
     missing=false;noPick=false;await page.clock.setFixedTime(new Date('2026-11-15T20:00:00Z'));await page.goto('https://combi.test/?ticket='+encodeURIComponent(id));await card.waitFor({timeout:4000});assert.match(await card.textContent(),/ce n’est plus une proposition à jouer/);await card.getByRole('button',{name:'Copier les sélections'}).click();assert.equal(await page.evaluate(()=>window.copiedTicket),original);
     assert.deepEqual(errors,[]);console.log('OK : même Algo dans application, alerte et copie ; simulation séparée ; références figées, absence, panne, après début et quatre tailles vérifiés.');
   } catch(error) {console.error('Page errors:',errors,'Ticket:',await page.locator('#ticketArea').textContent().catch(()=>''));throw error;} finally {await browser.close();}
