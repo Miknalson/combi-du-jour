@@ -118,6 +118,12 @@ def build_match(sport, unit, fx, odds, defs, now, stamp):
                            'bookKey': BOOK, 'asOf': stamp, 'outcomes': [
                                {'code': gid + '|over', 'side': 'over', 'label': f'Plus de {str(line).replace(".", ",")} {unit}', 'odds': prices['Over'], 'participant': ''},
                                {'code': gid + '|under', 'side': 'under', 'label': f'Moins de {str(line).replace(".", ",")} {unit}', 'odds': prices['Under'], 'participant': ''}]})
+    # Une seule ligne de total par match (la ligne principale : cotes plus/moins les plus proches),
+    # comme chez The Odds API ; des dizaines de lignes alternatives feraient exploser la recherche des combinés.
+    totals = [g for g in groups if g['family'] == 'totals']
+    if totals:
+        main = min(totals, key=lambda g: abs(g['outcomes'][0]['odds'] - g['outcomes'][1]['odds']))
+        groups = [g for g in groups if g['family'] != 'totals'] + [main]
     h2h = next((g for g in groups if g['family'] == 'h2h'), None)
     if not h2h:
         return None

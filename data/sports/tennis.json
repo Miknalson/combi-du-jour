@@ -19,240 +19,6 @@
       "o2": 1.96,
       "markets": [
         {
-          "id": "totals||21.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 21.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||21.5|over",
-              "side": "over",
-              "label": "Plus de 21,5 jeux",
-              "odds": 1.62,
-              "participant": ""
-            },
-            {
-              "code": "totals||21.5|under",
-              "side": "under",
-              "label": "Moins de 21,5 jeux",
-              "odds": 1.84,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||20.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 20.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||20.5|over",
-              "side": "over",
-              "label": "Plus de 20,5 jeux",
-              "odds": 1.48,
-              "participant": ""
-            },
-            {
-              "code": "totals||20.5|under",
-              "side": "under",
-              "label": "Moins de 20,5 jeux",
-              "odds": 2.0,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||19.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 19.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||19.5|over",
-              "side": "over",
-              "label": "Plus de 19,5 jeux",
-              "odds": 1.33,
-              "participant": ""
-            },
-            {
-              "code": "totals||19.5|under",
-              "side": "under",
-              "label": "Moins de 19,5 jeux",
-              "odds": 2.45,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||2.5|over",
-              "side": "over",
-              "label": "Plus de 2,5 jeux",
-              "odds": 2.2,
-              "participant": ""
-            },
-            {
-              "code": "totals||2.5|under",
-              "side": "under",
-              "label": "Moins de 2,5 jeux",
-              "odds": 1.41,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||25.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 25.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||25.5|over",
-              "side": "over",
-              "label": "Plus de 25,5 jeux",
-              "odds": 2.25,
-              "participant": ""
-            },
-            {
-              "code": "totals||25.5|under",
-              "side": "under",
-              "label": "Moins de 25,5 jeux",
-              "odds": 1.39,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||24.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 24.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||24.5|over",
-              "side": "over",
-              "label": "Plus de 24,5 jeux",
-              "odds": 2.0,
-              "participant": ""
-            },
-            {
-              "code": "totals||24.5|under",
-              "side": "under",
-              "label": "Moins de 24,5 jeux",
-              "odds": 1.47,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||18.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 18.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||18.5|over",
-              "side": "over",
-              "label": "Plus de 18,5 jeux",
-              "odds": 1.2,
-              "participant": ""
-            },
-            {
-              "code": "totals||18.5|under",
-              "side": "under",
-              "label": "Moins de 18,5 jeux",
-              "odds": 3.1,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||23.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 23.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||23.5|over",
-              "side": "over",
-              "label": "Plus de 23,5 jeux",
-              "odds": 2.0,
-              "participant": ""
-            },
-            {
-              "code": "totals||23.5|under",
-              "side": "under",
-              "label": "Moins de 23,5 jeux",
-              "odds": 1.5,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||26.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 26.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||26.5|over",
-              "side": "over",
-              "label": "Plus de 26,5 jeux",
-              "odds": 2.5,
-              "participant": ""
-            },
-            {
-              "code": "totals||26.5|under",
-              "side": "under",
-              "label": "Moins de 26,5 jeux",
-              "odds": 1.31,
-              "participant": ""
-            }
-          ]
-        },
-        {
           "id": "h2h||None",
           "family": "h2h",
           "key": "h2h",
@@ -329,53 +95,27 @@
       "o2": 1.88,
       "markets": [
         {
-          "id": "totals||18.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 18.5,
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
-              "code": "totals||18.5|over",
-              "side": "over",
-              "label": "Plus de 18,5 jeux",
-              "odds": 1.31,
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Sawangkaew, Mananchaya",
+              "odds": 1.72,
               "participant": ""
             },
             {
-              "code": "totals||18.5|under",
-              "side": "under",
-              "label": "Moins de 18,5 jeux",
-              "odds": 2.5,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||17.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 17.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||17.5|over",
-              "side": "over",
-              "label": "Plus de 17,5 jeux",
-              "odds": 1.17,
-              "participant": ""
-            },
-            {
-              "code": "totals||17.5|under",
-              "side": "under",
-              "label": "Moins de 17,5 jeux",
-              "odds": 3.25,
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Teichmann, Jil",
+              "odds": 1.88,
               "participant": ""
             }
           ]
@@ -405,214 +145,6 @@
               "participant": ""
             }
           ]
-        },
-        {
-          "id": "totals||25.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 25.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||25.5|over",
-              "side": "over",
-              "label": "Plus de 25,5 jeux",
-              "odds": 2.5,
-              "participant": ""
-            },
-            {
-              "code": "totals||25.5|under",
-              "side": "under",
-              "label": "Moins de 25,5 jeux",
-              "odds": 1.31,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||2.5|over",
-              "side": "over",
-              "label": "Plus de 2,5 jeux",
-              "odds": 2.2,
-              "participant": ""
-            },
-            {
-              "code": "totals||2.5|under",
-              "side": "under",
-              "label": "Moins de 2,5 jeux",
-              "odds": 1.41,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||20.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 20.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||20.5|over",
-              "side": "over",
-              "label": "Plus de 20,5 jeux",
-              "odds": 1.62,
-              "participant": ""
-            },
-            {
-              "code": "totals||20.5|under",
-              "side": "under",
-              "label": "Moins de 20,5 jeux",
-              "odds": 1.82,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||24.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 24.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||24.5|over",
-              "side": "over",
-              "label": "Plus de 24,5 jeux",
-              "odds": 2.25,
-              "participant": ""
-            },
-            {
-              "code": "totals||24.5|under",
-              "side": "under",
-              "label": "Moins de 24,5 jeux",
-              "odds": 1.38,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Sawangkaew, Mananchaya",
-              "odds": 1.72,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Teichmann, Jil",
-              "odds": 1.88,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||19.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 19.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||19.5|over",
-              "side": "over",
-              "label": "Plus de 19,5 jeux",
-              "odds": 1.46,
-              "participant": ""
-            },
-            {
-              "code": "totals||19.5|under",
-              "side": "under",
-              "label": "Moins de 19,5 jeux",
-              "odds": 2.1,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||23.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 23.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||23.5|over",
-              "side": "over",
-              "label": "Plus de 23,5 jeux",
-              "odds": 2.1,
-              "participant": ""
-            },
-            {
-              "code": "totals||23.5|under",
-              "side": "under",
-              "label": "Moins de 23,5 jeux",
-              "odds": 1.43,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||22.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 22.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||22.5|over",
-              "side": "over",
-              "label": "Plus de 22,5 jeux",
-              "odds": 1.98,
-              "participant": ""
-            },
-            {
-              "code": "totals||22.5|under",
-              "side": "under",
-              "label": "Moins de 22,5 jeux",
-              "odds": 1.52,
-              "participant": ""
-            }
-          ]
         }
       ],
       "sportKey": "oddspapi_2102",
@@ -639,32 +171,6 @@
       "o2": 1.49,
       "markets": [
         {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||2.5|over",
-              "side": "over",
-              "label": "Plus de 2,5 jeux",
-              "odds": 2.1,
-              "participant": ""
-            },
-            {
-              "code": "totals||2.5|under",
-              "side": "under",
-              "label": "Moins de 2,5 jeux",
-              "odds": 1.42,
-              "participant": ""
-            }
-          ]
-        },
-        {
           "id": "h2h||None",
           "family": "h2h",
           "key": "h2h",
@@ -686,6 +192,32 @@
               "side": "2",
               "label": "Victoire Hunter S / Joint M",
               "odds": 1.49,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "jeux",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-22T07:10:12Z",
+          "outcomes": [
+            {
+              "code": "totals||2.5|over",
+              "side": "over",
+              "label": "Plus de 2,5 jeux",
+              "odds": 2.1,
+              "participant": ""
+            },
+            {
+              "code": "totals||2.5|under",
+              "side": "under",
+              "label": "Moins de 2,5 jeux",
+              "odds": 1.42,
               "participant": ""
             }
           ]
@@ -715,136 +247,6 @@
       "o2": 2.1,
       "markets": [
         {
-          "id": "totals||25.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 25.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||25.5|over",
-              "side": "over",
-              "label": "Plus de 25,5 jeux",
-              "odds": 2.1,
-              "participant": ""
-            },
-            {
-              "code": "totals||25.5|under",
-              "side": "under",
-              "label": "Moins de 25,5 jeux",
-              "odds": 1.42,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||26.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 26.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||26.5|over",
-              "side": "over",
-              "label": "Plus de 26,5 jeux",
-              "odds": 2.35,
-              "participant": ""
-            },
-            {
-              "code": "totals||26.5|under",
-              "side": "under",
-              "label": "Moins de 26,5 jeux",
-              "odds": 1.34,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||21.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 21.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||21.5|over",
-              "side": "over",
-              "label": "Plus de 21,5 jeux",
-              "odds": 1.54,
-              "participant": ""
-            },
-            {
-              "code": "totals||21.5|under",
-              "side": "under",
-              "label": "Moins de 21,5 jeux",
-              "odds": 1.94,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||22.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 22.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||22.5|over",
-              "side": "over",
-              "label": "Plus de 22,5 jeux",
-              "odds": 1.76,
-              "participant": ""
-            },
-            {
-              "code": "totals||22.5|under",
-              "side": "under",
-              "label": "Moins de 22,5 jeux",
-              "odds": 1.68,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||19.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 19.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||19.5|over",
-              "side": "over",
-              "label": "Plus de 19,5 jeux",
-              "odds": 1.28,
-              "participant": ""
-            },
-            {
-              "code": "totals||19.5|under",
-              "side": "under",
-              "label": "Moins de 19,5 jeux",
-              "odds": 2.6,
-              "participant": ""
-            }
-          ]
-        },
-        {
           "id": "h2h||None",
           "family": "h2h",
           "key": "h2h",
@@ -871,131 +273,27 @@
           ]
         },
         {
-          "id": "totals||2.5",
+          "id": "totals||22.5",
           "family": "totals",
           "key": "totals",
           "unit": "jeux",
-          "line": 2.5,
+          "line": 22.5,
           "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
-              "code": "totals||2.5|over",
+              "code": "totals||22.5|over",
               "side": "over",
-              "label": "Plus de 2,5 jeux",
-              "odds": 2.1,
+              "label": "Plus de 22,5 jeux",
+              "odds": 1.76,
               "participant": ""
             },
             {
-              "code": "totals||2.5|under",
+              "code": "totals||22.5|under",
               "side": "under",
-              "label": "Moins de 2,5 jeux",
-              "odds": 1.45,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||18.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 18.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||18.5|over",
-              "side": "over",
-              "label": "Plus de 18,5 jeux",
-              "odds": 1.15,
-              "participant": ""
-            },
-            {
-              "code": "totals||18.5|under",
-              "side": "under",
-              "label": "Moins de 18,5 jeux",
-              "odds": 3.5,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||20.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 20.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||20.5|over",
-              "side": "over",
-              "label": "Plus de 20,5 jeux",
-              "odds": 1.42,
-              "participant": ""
-            },
-            {
-              "code": "totals||20.5|under",
-              "side": "under",
-              "label": "Moins de 20,5 jeux",
-              "odds": 2.1,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||23.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 23.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||23.5|over",
-              "side": "over",
-              "label": "Plus de 23,5 jeux",
-              "odds": 1.96,
-              "participant": ""
-            },
-            {
-              "code": "totals||23.5|under",
-              "side": "under",
-              "label": "Moins de 23,5 jeux",
-              "odds": 1.52,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||24.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 24.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||24.5|over",
-              "side": "over",
-              "label": "Plus de 24,5 jeux",
-              "odds": 2.0,
-              "participant": ""
-            },
-            {
-              "code": "totals||24.5|under",
-              "side": "under",
-              "label": "Moins de 24,5 jeux",
-              "odds": 1.5,
+              "label": "Moins de 22,5 jeux",
+              "odds": 1.68,
               "participant": ""
             }
           ]
@@ -1101,157 +399,27 @@
       "o2": 7.5,
       "markets": [
         {
-          "id": "totals||20.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 20.5,
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
           "asOf": "2026-11-22T07:10:12Z",
           "outcomes": [
             {
-              "code": "totals||20.5|over",
-              "side": "over",
-              "label": "Plus de 20,5 jeux",
-              "odds": 2.85,
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Gauff, Coco",
+              "odds": 1.02,
               "participant": ""
             },
             {
-              "code": "totals||20.5|under",
-              "side": "under",
-              "label": "Moins de 20,5 jeux",
-              "odds": 1.24,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||15.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 15.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||15.5|over",
-              "side": "over",
-              "label": "Plus de 15,5 jeux",
-              "odds": 1.17,
-              "participant": ""
-            },
-            {
-              "code": "totals||15.5|under",
-              "side": "under",
-              "label": "Moins de 15,5 jeux",
-              "odds": 3.25,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||16.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 16.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||16.5|over",
-              "side": "over",
-              "label": "Plus de 16,5 jeux",
-              "odds": 1.39,
-              "participant": ""
-            },
-            {
-              "code": "totals||16.5|under",
-              "side": "under",
-              "label": "Moins de 16,5 jeux",
-              "odds": 2.25,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||18.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 18.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||18.5|over",
-              "side": "over",
-              "label": "Plus de 18,5 jeux",
-              "odds": 2.0,
-              "participant": ""
-            },
-            {
-              "code": "totals||18.5|under",
-              "side": "under",
-              "label": "Moins de 18,5 jeux",
-              "odds": 1.5,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||2.5|over",
-              "side": "over",
-              "label": "Plus de 2,5 jeux",
-              "odds": 4.5,
-              "participant": ""
-            },
-            {
-              "code": "totals||2.5|under",
-              "side": "under",
-              "label": "Moins de 2,5 jeux",
-              "odds": 1.1,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||19.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 19.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||19.5|over",
-              "side": "over",
-              "label": "Plus de 19,5 jeux",
-              "odds": 2.35,
-              "participant": ""
-            },
-            {
-              "code": "totals||19.5|under",
-              "side": "under",
-              "label": "Moins de 19,5 jeux",
-              "odds": 1.34,
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Bondar, Anna",
+              "odds": 7.5,
               "participant": ""
             }
           ]
@@ -1281,58 +449,6 @@
               "participant": ""
             }
           ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Gauff, Coco",
-              "odds": 1.02,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Bondar, Anna",
-              "odds": 7.5,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||21.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 21.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||21.5|over",
-              "side": "over",
-              "label": "Plus de 21,5 jeux",
-              "odds": 3.35,
-              "participant": ""
-            },
-            {
-              "code": "totals||21.5|under",
-              "side": "under",
-              "label": "Moins de 21,5 jeux",
-              "odds": 1.17,
-              "participant": ""
-            }
-          ]
         }
       ],
       "sportKey": "oddspapi_2102",
@@ -1358,84 +474,6 @@
       "o1": 1.12,
       "o2": 4.5,
       "markets": [
-        {
-          "id": "totals||18.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 18.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||18.5|over",
-              "side": "over",
-              "label": "Plus de 18,5 jeux",
-              "odds": 1.37,
-              "participant": ""
-            },
-            {
-              "code": "totals||18.5|under",
-              "side": "under",
-              "label": "Moins de 18,5 jeux",
-              "odds": 2.25,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||23.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 23.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||23.5|over",
-              "side": "over",
-              "label": "Plus de 23,5 jeux",
-              "odds": 2.5,
-              "participant": ""
-            },
-            {
-              "code": "totals||23.5|under",
-              "side": "under",
-              "label": "Moins de 23,5 jeux",
-              "odds": 1.3,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||19.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 19.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||19.5|over",
-              "side": "over",
-              "label": "Plus de 19,5 jeux",
-              "odds": 1.56,
-              "participant": ""
-            },
-            {
-              "code": "totals||19.5|under",
-              "side": "under",
-              "label": "Moins de 19,5 jeux",
-              "odds": 1.9,
-              "participant": ""
-            }
-          ]
-        },
         {
           "id": "h2h||None",
           "family": "h2h",
@@ -1484,162 +522,6 @@
               "side": "under",
               "label": "Moins de 20,5 jeux",
               "odds": 1.66,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||22.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 22.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||22.5|over",
-              "side": "over",
-              "label": "Plus de 22,5 jeux",
-              "odds": 2.25,
-              "participant": ""
-            },
-            {
-              "code": "totals||22.5|under",
-              "side": "under",
-              "label": "Moins de 22,5 jeux",
-              "odds": 1.37,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||24.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 24.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||24.5|over",
-              "side": "over",
-              "label": "Plus de 24,5 jeux",
-              "odds": 2.6,
-              "participant": ""
-            },
-            {
-              "code": "totals||24.5|under",
-              "side": "under",
-              "label": "Moins de 24,5 jeux",
-              "odds": 1.28,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||17.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 17.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||17.5|over",
-              "side": "over",
-              "label": "Plus de 17,5 jeux",
-              "odds": 1.21,
-              "participant": ""
-            },
-            {
-              "code": "totals||17.5|under",
-              "side": "under",
-              "label": "Moins de 17,5 jeux",
-              "odds": 3.0,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||21.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 21.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||21.5|over",
-              "side": "over",
-              "label": "Plus de 21,5 jeux",
-              "odds": 1.98,
-              "participant": ""
-            },
-            {
-              "code": "totals||21.5|under",
-              "side": "under",
-              "label": "Moins de 21,5 jeux",
-              "odds": 1.52,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||2.5|over",
-              "side": "over",
-              "label": "Plus de 2,5 jeux",
-              "odds": 2.75,
-              "participant": ""
-            },
-            {
-              "code": "totals||2.5|under",
-              "side": "under",
-              "label": "Moins de 2,5 jeux",
-              "odds": 1.26,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||16.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "jeux",
-          "line": 16.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-22T07:10:12Z",
-          "outcomes": [
-            {
-              "code": "totals||16.5|over",
-              "side": "over",
-              "label": "Plus de 16,5 jeux",
-              "odds": 1.09,
-              "participant": ""
-            },
-            {
-              "code": "totals||16.5|under",
-              "side": "under",
-              "label": "Moins de 16,5 jeux",
-              "odds": 4.7,
               "participant": ""
             }
           ]
