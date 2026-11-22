@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "rules": {
+    "version": "news-filter-v1",
+    "maxMatchesPerCall": 8,
+    "maxRounds": 3,
+    "maxSearchesPerCall": 5,
+    "keepDays": 30
+  },
+  "days": {
+    "2026-11-22": {
+      "checks": {},
+      "calls": [],
+      "status": "ok",
+      "updatedAt": "2026-11-22T06:39:53.428Z"
+    }
+  }
+}
