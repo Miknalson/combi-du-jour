@@ -17,7 +17,7 @@ LEDGER = DATA / 'oddspapi-budget.json'
 BASE = 'https://api.oddspapi.io/v4/'
 BOOK_SLUG, BOOK = 'winamax.fr', 'winamax_fr'
 SPORTS = {'basket': (11, 'points'), 'tennis': (12, 'jeux')}
-MONTHLY_CAP, CHUNK = 230, 10
+MONTHLY_CAP, CHUNK = 230, 5
 FEMALE = re.compile(r'women|woman|female|wta|wnba|billie jean|lfb|feminin|féminin|frauen|ladies|\(w\)', re.I)
 
 
@@ -46,7 +46,8 @@ class Api:
                 if e.code == 429 and attempt < 2:
                     time.sleep(3)
                     continue
-                raise RuntimeError(f'{path} : HTTP {e.code}') from None
+                detail = e.read().decode(errors='replace')[:200].replace(self.key, '***')
+                raise RuntimeError(f'{path} : HTTP {e.code} {detail}') from None
         raise RuntimeError(f'{path} : trop de refus')
 
 

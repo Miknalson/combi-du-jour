@@ -15,6 +15,7 @@ jobs:
       - name: Relever basket et tennis
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
+          ODDSPAPI_FORCE: '1'
         run: python scripts/collect_oddspapi.py
       - name: Enregistrer
         run: |
