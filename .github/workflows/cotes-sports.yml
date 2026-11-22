@@ -37,6 +37,9 @@ on:
       - 'scripts/tres_sur.cjs'
       - 'safe-but-engine.js'
       - 'scripts/safe_but.cjs'
+      - 'combi23-engine.js'
+      - 'scripts/combi23.cjs'
+      - 'tests/combi23.test.cjs'
       - 'tests/safe-but.test.cjs'
       - 'news-filter.js'
       - 'scripts/news_filter.cjs'
@@ -153,6 +156,9 @@ jobs:
       - name: Consigner le ticket Safe but fictif
         continue-on-error: true
         run: node scripts/safe_but.cjs
+      - name: Consigner le ticket Combiné 2 à 3 fictif
+        continue-on-error: true
+        run: node scripts/combi23.cjs
       - name: Notifier les propositions sans passer de pari
         if: github.event.schedule != '25 23 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         id: notifications
@@ -175,6 +181,7 @@ jobs:
           git add data/paper-tests-v1.json data/paper-status-v1.json data/paper-tests-v2.json data/paper-status-v2.json 2>/dev/null || true
           if [ -f data/tres-sur-tests.json ]; then git add data/tres-sur-tests.json; fi
           if [ -f data/safe-but-tests.json ]; then git add data/safe-but-tests.json; fi
+          if [ -f data/combi23-tests.json ]; then git add data/combi23-tests.json; fi
           if [ -f data/news-checks.json ]; then git add data/news-checks.json; fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Cotes Winamax multisports et mises fictives"

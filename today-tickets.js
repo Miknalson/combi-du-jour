@@ -16,9 +16,10 @@ var KINDS={
   tres_sur:{name:'Très sûr',range:'cote 1,10 à 1,25',tone:'k-sur'},
   safe:{name:'Safe',range:'cote 1,50 à 2,00',tone:'k-safe'},
   safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
+  combi23:{name:'Combiné 2 à 3',range:'victoires · cote 2 à 3',tone:'k-c23'},
   algo:{name:'Algo',range:'cote 3 à 5',tone:'k-algo'}
 };
-var ORDER=['tres_sur','safe','safe_but','algo'];
+var ORDER=['tres_sur','safe','safe_but','combi23','algo'];
 var STATUS={won:['Gagné','st-won'],lost:['Perdu','st-lost'],pending:['En attente','st-wait'],void:['Annulé','st-void']};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function num(x,d){return Number(x).toFixed(d==null?2:d).replace('.',',');}
@@ -45,6 +46,23 @@ function legScore(l){var m=findMatch(l);if(!m||!/^\d+\s*-\s*\d+$/.test(String(m.
  else if(l.marketFamily==='totals'&&Number.isFinite(Number(l.marketLine))){var side=code.split('|').pop();ok=side==='over'?h+a>l.marketLine:side==='under'?h+a<l.marketLine:null;}
  return {text:h+'-'+a,ok:ok,final:m.scoreStatus!=='live'};}
 function scoreBadge(l){var s=legScore(l);if(!s)return '';return '<span class="tt-score '+(s.ok===true?'sc-ok':s.ok===false?'sc-ko':'')+'">'+esc(s.text)+(s.ok===true?' ✓':s.ok===false?' ✗':'')+'</span>';}
+// « J'ai joué ce ticket » : enregistre CE ticket (et pas une simulation) dans le suivi de l'appareil (cdj.bets).
+var BY_ID={};
+function bets(){try{return JSON.parse(localStorage.getItem('cdj.bets')||'[]')||[];}catch(e){return [];}}
+function playForm(r){BY_ID[r.id]=r;
+ if(bets().some(function(b){return b.refId===r.id;}))return '<p class="tt-played">✓ Enregistré dans ton suivi (Tableau de bord).</p>';
+ return '<details class="tt-play"><summary>J’ai joué ce ticket chez Winamax</summary><form data-play="'+esc(r.id)+'">'+
+  '<label>Cote jouée<input name="o" inputmode="decimal" required value="'+num(r.odds)+'"></label>'+
+  '<label>Mise (€)<input name="s" inputmode="decimal" required></label>'+
+  '<button type="submit" class="btn small">Enregistrer dans mon suivi</button></form></details>';}
+document.addEventListener('submit',function(e){var f=e.target.closest&&e.target.closest('form[data-play]');if(!f)return;e.preventDefault();
+ var r=BY_ID[f.dataset.play],o=parseFloat(f.o.value.replace(',','.')),st=parseFloat(f.s.value.replace(',','.'));if(!r||!(o>1)||!(st>0))return;
+ var list=bets();if(list.some(function(b){return b.refId===r.id;}))return;
+ list.push({id:'b'+Date.now().toString(36),createdAt:new Date().toISOString(),source:'ticket-'+r.method,refId:r.id,
+  legs:r.legs.map(function(l){return {matchId:l.matchId,date:l.date,league:l.league,home:l.home,away:l.away,kickoff:l.kickoff,code:l.code,label:l.label,o:l.o,p:l.p,est:!!l.est,bookKey:l.bookKey,marketFamily:l.marketFamily,marketLine:l.marketLine};}),
+  odds:+o.toFixed(2),stake:+st.toFixed(2),estProb:+Number(r.probability).toFixed(4),manual:null});
+ try{localStorage.setItem('cdj.bets',JSON.stringify(list));f.closest('details').outerHTML='<p class="tt-played">✓ Enregistré dans ton suivi (Tableau de bord).</p>';}catch(err){}
+});
 function card(r,res,today){
   var k=KINDS[r.method]||{name:r.method,range:'',tone:''},st=STATUS[res.status]||STATUS.pending;
   var sport=r.method==='safe'&&r.sport!=='football'?' · '+(SPORTS[r.sport]||r.sport):'';
@@ -62,6 +80,7 @@ function card(r,res,today){
     '<div><span class="tt-lab">Mise fictive</span><span class="tt-mid mono">'+esc(r.simulatedStake)+' €</span></div></div>'+
     '<ul class="tt-legs">'+legs+'</ul>'+
     (r.method==='safe_but'?'<p class="tt-foot">Cote moyenne du marché moins 5 % : notre source ne donne pas les cotes de buts Winamax. Vérifie la cote dans l’appli Winamax.</p>':asOf?'<p class="tt-foot">Cotes Winamax relevées à '+esc(hour(new Date(asOf).toISOString()))+'. Vérifie-les dans l’appli avant de jouer.</p>':'')+
+    (res.status==='pending'?playForm(r):'')+
     '</article>';
 }
 
@@ -120,7 +139,7 @@ function renderBilan(records,m){
       '<div><dt>Total misé</dt><dd class="mono">'+num(r.staked,0)+' €</dd></div>'+
       '<div><dt>Net fictif</dt><dd class="mono '+tone(r.net)+'">'+money(r.net)+'</dd></div>'+
       '<div><dt>Rentabilité</dt><dd class="mono '+tone(r.net)+'">'+roi(r)+'</dd></div></dl></article>';}).join('')+'</div>'+
-    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, Safe but 100 €, Algo 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
+    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, Safe but 100 €, Combiné 2 à 3 50 €, Algo 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
     (!full&&settled.length?'<h3 class="bl-sub">Derniers résultats</h3><ul class="bl-last">'+settled.map(function(x){var st=STATUS[x.o.status];return '<li><span class="mono">'+esc(x.r.day.slice(8)+'/'+x.r.day.slice(5,7))+'</span><span>'+esc(KINDS[x.r.method].name)+' · cote '+num(x.r.odds)+'</span><span class="tt-status '+st[1]+'">'+st[0]+'</span></li>';}).join('')+'</ul>':'')+
     (full?'':'<a class="bl-more" href="tickets.html">Tout l’historique sur la page Tickets →</a>');
   if(full)renderHistory(records,m,money);
@@ -142,9 +161,9 @@ function renderHistory(records,m,money){
   el.onclick=function(e){var b=e.target.closest('[data-hist]');if(!b)return;el.dataset.filter=b.dataset.hist;renderHistory(records,m,money);};
 }
 
-Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json')]).then(function(v){
+Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json')]).then(function(v){
   NEWS=v[3];
-  var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
+  var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[],v[4]&&v[4].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
   var m=manual();
   if(!records.length){box.innerHTML='<div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Tickets indisponibles pour le moment. Réessaie après actualisation.</p>';if(bilan)bilan.hidden=true;return;}
   var days={};records.forEach(function(r){if(r.status!=='no_pick')(r.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;days[r.day]=1;});});
