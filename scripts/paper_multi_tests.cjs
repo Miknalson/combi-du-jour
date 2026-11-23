@@ -6,7 +6,7 @@ function hash(name){return crypto.createHash('sha256').update(fs.readFileSync(pa
 const hashes=Object.fromEntries(names.map(n=>[n,hash(n)]));
 const old=fs.existsSync(file)?JSON.parse(fs.readFileSync(file,'utf8')):{schemaVersion:2,manifest:{rules:P.rules,sourceHashes:hashes,startedAt:new Date(now).toISOString()},records:[]};
 // Modifications reconnues sans effet sur les tickets (affichage seulement) : le journal continue avec les nouvelles empreintes.
-const AMENDMENTS=[{id:'2026-11-23-affichage-sports',files:['sport-catalog.js','scripts/paper_multi_tests.cjs'],reason:'Rugby, football américain et hockey masqués dans l’interface ; règlement des tickets en attente même si le journal est suspendu. Règles et collecte inchangées.'}];
+const AMENDMENTS=[{id:'2026-11-23-affichage-sports',files:['sport-catalog.js','scripts/paper_multi_tests.cjs'],reason:'Rugby, football américain et hockey masqués dans l’interface ; règlement des tickets en attente même si le journal est suspendu. Règles et collecte inchangées.'},{id:'2026-11-23-reglement-direct',files:['paper-engine.js','scripts/paper_multi_tests.cjs'],reason:'Tickets réglés dès les scores finaux du jour (un pari perdu suffit pour perdre le ticket). Choix des tickets, cotes et mises inchangés.'}];
 function changed(){return names.filter(n=>(old.manifest.sourceHashes||{})[n]!==hashes[n]);}
 if(JSON.stringify(old.manifest.rules)===JSON.stringify(P.rules)&&changed().length){const done=old.manifest.amendments||[],a=AMENDMENTS.find(a=>!done.some(d=>d.id===a.id)&&changed().every(n=>a.files.includes(n)));
  if(a){old.manifest.amendments=done.concat([{id:a.id,appliedAt:new Date(now).toISOString(),files:changed(),reason:a.reason}]);old.manifest.sourceHashes=hashes;}}

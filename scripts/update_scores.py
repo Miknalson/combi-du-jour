@@ -11,7 +11,8 @@ import urllib.error
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1] / 'data'
-LEAGUES = {'PL':'eng.1','CHA':'eng.2','LIGA':'esp.1','LIGA2':'esp.2','SA':'ita.1','BL':'ger.1','BL2':'ger.2','L1':'fra.1','L2':'fra.2','POR':'por.1','POR2':'por.2','ERE':'ned.1','BEL':'bel.1','UCL':'uefa.champions','UEL':'uefa.europa','UECL':'uefa.europa.conf','UNL':'uefa.nations','EURO':'uefa.euro','EUROQ':'uefa.euroq','UWCL':'uefa.wchampions','TUR':'tur.1','DEN':'den.1','SWE':'swe.1','POL':'pol.1','ROU':'rou.1','RUS':'rus.1','SRB':'srb.1','UKR':'ukr.1','IRL':'irl.1'}
+LEAGUES = {'PL':'eng.1','CHA':'eng.2','LIGA':'esp.1','LIGA2':'esp.2','SA':'ita.1','BL':'ger.1','BL2':'ger.2','L1':'fra.1','L2':'fra.2','POR':'por.1','POR2':'por.2','ERE':'ned.1','BEL':'bel.1','UCL':'uefa.champions','UEL':'uefa.europa','UECL':'uefa.europa.conf','UNL':'uefa.nations','EURO':'uefa.euro','EUROQ':'uefa.euroq','UWCL':'uefa.wchampions','TUR':'tur.1','DEN':'den.1','SWE':'swe.1','ROU':'rou.1','RUS':'rus.1','IRL':'irl.1'}
+# Pologne, Serbie et Ukraine : ESPN répond toujours 400 (non couvertes). Ces scores restent relevés par la tâche de nuit.
 
 def team(value, league):
     value = str(value).translate(str.maketrans({'ø':'o','Ø':'O','ł':'l','Ł':'L','ß':'ss','æ':'ae','Æ':'Ae','œ':'oe','Œ':'Oe'}))
@@ -81,11 +82,13 @@ def update(now=None,max_requests=8):
             for match in doc.get('matches',[]):
                 league=match.get('league')
                 kickoff=dt.datetime.fromisoformat(match['kickoff'].replace('Z','+00:00'))
-                if match.get('score') or league not in LEAGUES or kickoff>now-dt.timedelta(hours=2):continue
+                # Un match dure ~1 h 55 : on interroge dès 1 h 45 ; seul un « temps réglementaire terminé » ESPN est enregistré.
+                if match.get('score') or league not in LEAGUES or kickoff>now-dt.timedelta(minutes=105):continue
                 plans.setdefault((file.stem,league),[]).append((file,match))
         except (OSError,ValueError,KeyError,TypeError):continue
     updated=0;queried=0;failures=[];changed=set();unmatched=0
-    for (day,league),matches in list(plans.items())[:max_requests]:
+    # Les matchs les plus récents d'abord : les relevés fréquents de l'après-midi et du soir ne s'épuisent pas sur de vieux matchs introuvables.
+    for (day,league),matches in sorted(plans.items(),key=lambda kv:kv[0][0],reverse=True)[:max_requests]:
         queried+=1
         try:
             payload=fetch(LEAGUES[league],day)
@@ -110,4 +113,4 @@ def update(now=None,max_requests=8):
     return report
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--max-requests',type=int,default=8);args=parser.parse_args();result=update(max_requests=max(0,min(args.max_requests,8)));raise SystemExit(1 if result['status']=='unavailable' else 0)
+    parser=argparse.ArgumentParser();parser.add_argument('--max-requests',type=int,default=8);args=parser.parse_args();result=update(max_requests=max(0,min(args.max_requests,12)));raise SystemExit(1 if result['status']=='unavailable' else 0)

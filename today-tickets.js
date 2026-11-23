@@ -30,8 +30,18 @@ function shortDay(iso){var t=Date.parse(iso);return Number.isFinite(t)?new Intl.
 function longDay(day){return new Intl.DateTimeFormat('fr-FR',{timeZone:'UTC',weekday:'long',day:'numeric',month:'long'}).format(new Date(day+'T12:00:00Z'));}
 function manual(){try{return JSON.parse(localStorage.getItem('cdj.paperResults')||'{}')||{};}catch(e){return {};}}
 function outcome(r,m){
-  if(window.PaperTests&&PaperTests.outcome){try{return PaperTests.outcome(r,m);}catch(e){}}
-  return {status:r.status,odds:r.odds};
+  var o={status:r.status,odds:r.odds};
+  if(window.PaperTests&&PaperTests.outcome){try{o=PaperTests.outcome(r,m);}catch(e){}}
+  return o.status==='pending'?quickOutcome(r)||o:o;
+}
+// Règlement immédiat à l'écran dès qu'un score final est connu (même jour) : un pari perdu suffit pour perdre le ticket,
+// toutes les sélections gagnées et terminées pour le gagner. Le journal publié est réglé de la même façon par les tâches automatiques.
+function quickOutcome(r){
+  if(!r.legs||!r.legs.length||r.legs.some(function(l){return l.sport&&l.sport!=='football';}))return null;
+  var past=r.day<parisDay(new Date()),lost=false,all=true;
+  r.legs.forEach(function(l){var m=findMatch(l),s=legScore(l);var done=s&&s.final&&m&&(past||m.completed===true||m.scoreStatus==='final');
+    if(done&&s.ok===false)lost=true;else if(!(done&&s.ok===true))all=false;});
+  return lost?{status:'lost',odds:r.odds,source:'live'}:all?{status:'won',odds:r.odds,source:'live'}:null;
 }
 function load(file){return fetch(file,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
 
@@ -47,7 +57,7 @@ function legScore(l){var m=findMatch(l);if(!m||!/^\d+\s*-\s*\d+$/.test(String(m.
  else if(/^[OU]\d+(\.\d+)?$/.test(code))ok=code[0]==='O'?h+a>Number(code.slice(1)):h+a<Number(code.slice(1));
  else if(l.marketFamily==='totals'&&Number.isFinite(Number(l.marketLine))){var side=code.split('|').pop();ok=side==='over'?h+a>l.marketLine:side==='under'?h+a<l.marketLine:null;}
  return {text:h+'-'+a,ok:ok,final:m.scoreStatus!=='live'};}
-function scoreBadge(l){var s=legScore(l);if(!s)return '';return '<span class="tt-score '+(s.ok===true?'sc-ok':s.ok===false?'sc-ko':'')+'">'+esc(s.text)+(s.ok===true?' ✓':s.ok===false?' ✗':'')+'</span>';}
+function scoreBadge(l){var s=legScore(l);if(!s){var m=findMatch(l);return m&&window.LiveScores?LiveScores.badge(m):'';}return '<span class="tt-score '+(s.ok===true?'sc-ok':s.ok===false?'sc-ko':'')+'">'+esc(s.text)+(s.ok===true?' ✓':s.ok===false?' ✗':'')+'</span>';}
 // « J'ai joué ce ticket » : enregistre CE ticket (et pas une simulation) dans le suivi de l'appareil (cdj.bets).
 var BY_ID={};
 function bets(){try{return JSON.parse(localStorage.getItem('cdj.bets')||'[]')||[];}catch(e){return [];}}
@@ -169,6 +179,8 @@ Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),l
   var m=manual();
   if(!records.length){box.innerHTML='<div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Tickets indisponibles pour le moment. Réessaie après actualisation.</p>';if(bilan)bilan.hidden=true;return;}
   var days={};records.forEach(function(r){if(r.status!=='no_pick')(r.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;days[r.day]=1;});});
-  Promise.all(Object.keys(days).map(function(d){return load('data/days/'+d+'.json').then(function(doc){SCORES[d]=doc&&doc.matches||[];});})).then(function(){renderToday(records,m);renderBilan(records,m);});
+  Promise.all(Object.keys(days).map(function(d){return load('data/days/'+d+'.json').then(function(doc){SCORES[d]=doc&&doc.matches||[];});})).then(function(){renderToday(records,m);renderBilan(records,m);
+    // Scores en direct : les cartes et le bilan se mettent à jour pendant les matchs, sans recharger.
+    if(window.LiveScores)LiveScores.watch(function(){return Object.keys(SCORES).reduce(function(a,k){return a.concat(SCORES[k]);},[]);},function(){renderToday(records,m);renderBilan(records,m);});});
 });
 })();
