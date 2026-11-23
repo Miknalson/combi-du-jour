@@ -53,15 +53,26 @@
       "ticketOdds": "product-of-recorded-leg-quotes-not-executed"
     },
     "sourceHashes": {
-      "sport-catalog.js": "a1626e4ac3d1f148260193ca3839e44737811e890c9742b9f79d26f986f01ae5",
+      "sport-catalog.js": "1acf167af03f1b0930c57049ba3cedf634cc5f39914a14f8e63af9ca33e72781",
       "safe-engine.js": "aff0d71511cdd05b01a067df2ca8af73b789691781591fdb09f519b46ea76dc9",
       "paper-engine.js": "d08af7c7978f3a6ce3cdf1ce85a766bf6dc1c6c26234418255478d5dbb9807fd",
       "safe-multi-engine.js": "dee0baf9a5a3c5cce2f76c7292934dc2b4aafcd8e9dcc0b1b4c4d31ee947269f",
       "paper-multi-engine.js": "92893e0c30716639be2b3e8936cfae4cf821625a933b3abf141b99469e407461",
-      "scripts/paper_multi_tests.cjs": "d5b52c4757221377c24fb039a20f40545dd829c29999e560121a42264b2b5aa0",
+      "scripts/paper_multi_tests.cjs": "d67bb41c9f311160416eb2593756395cf276042bd2123b233b252d77b6864221",
       "scripts/update_sports.py": "f44684c66fa1e71eb21d5df64132bcbe3200862036bd88dd7ede5ed3fb17966f"
     },
-    "startedAt": "2026-11-15T08:06:12.107Z"
+    "startedAt": "2026-11-15T08:06:12.107Z",
+    "amendments": [
+      {
+        "id": "2026-11-23-affichage-sports",
+        "appliedAt": "2026-11-23T06:19:19.605Z",
+        "files": [
+          "sport-catalog.js",
+          "scripts/paper_multi_tests.cjs"
+        ],
+        "reason": "Rugby, football américain et hockey masqués dans l’interface ; règlement des tickets en attente même si le journal est suspendu. Règles et collecte inchangées."
+      }
+    ]
   },
   "records": [
     {
@@ -701,7 +712,7 @@
       "unitStake": 1,
       "simulatedStake": 50,
       "currency": "EUR",
-      "status": "pending",
+      "status": "lost",
       "odds": 3.034,
       "probability": 0.2798776942119527,
       "legs": [
@@ -779,7 +790,9 @@
           "femaleMatches": 0
         }
       ],
-      "searchLimited": false
+      "searchLimited": false,
+      "resultSource": "application-football-score",
+      "resultHistory": []
     },
     {
       "id": "paper-multisport-v2|2026-11-22|safe|football",
@@ -792,7 +805,7 @@
       "unitStake": 1,
       "simulatedStake": 100,
       "currency": "EUR",
-      "status": "pending",
+      "status": "won",
       "odds": 1.5,
       "probability": 0.6266770858638488,
       "legs": [
@@ -829,6 +842,35 @@
           "updatedAt": "2026-11-22T05:45:26.586500+00:00",
           "partial": true,
           "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false,
+      "resultSource": "application-football-score",
+      "resultHistory": []
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-23|safe|basket",
+      "day": "2026-11-23",
+      "method": "safe",
+      "sport": "basket",
+      "version": "safe-multi-v2",
+      "createdAt": "2026-11-23T06:19:19.605Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "basket",
+          "status": "ok",
+          "updatedAt": "2026-11-23T06:19:10.459622+00:00",
+          "partial": false,
+          "femaleMatches": 1
         }
       ],
       "searchLimited": false

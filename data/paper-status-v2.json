@@ -1,5 +1,66 @@
 {
-  "status": "suspended",
-  "updatedAt": "2026-11-23T03:47:47.198Z",
-  "message": "Version ou collecte modifiée. Journal v2 conservé ; aucune nouvelle mise fictive enregistrée."
+  "status": "running",
+  "updatedAt": "2026-11-23T06:19:19.605Z",
+  "availableSports": [
+    "basket"
+  ],
+  "sourceStatus": [
+    {
+      "sport": "football",
+      "status": "ok",
+      "partial": true,
+      "matches": 19,
+      "femaleMatches": 0
+    },
+    {
+      "sport": "basket",
+      "status": "ok",
+      "partial": false,
+      "matches": 3,
+      "femaleMatches": 1
+    },
+    {
+      "sport": "tennis",
+      "status": "ok",
+      "partial": false,
+      "matches": 7,
+      "femaleMatches": 7
+    },
+    {
+      "sport": "rugby_xv",
+      "status": "inactive",
+      "partial": false,
+      "matches": 0,
+      "femaleMatches": 0
+    },
+    {
+      "sport": "rugby_xiii",
+      "status": "ok",
+      "partial": false,
+      "matches": 0,
+      "femaleMatches": 0
+    },
+    {
+      "sport": "football_us",
+      "status": "ok",
+      "partial": true,
+      "matches": 0,
+      "femaleMatches": 0
+    },
+    {
+      "sport": "hockey",
+      "status": "quota",
+      "partial": true,
+      "matches": 0,
+      "femaleMatches": 0
+    },
+    {
+      "sport": "volley",
+      "status": "unsupported",
+      "partial": false,
+      "matches": 0,
+      "femaleMatches": 0
+    }
+  ],
+  "message": "100 € fictifs par Safe, 50 € fictifs par Algo. Un seul premier ticket par catégorie et par jour. Aucun ordre réel ni reprise des mises anciennes."
 }
