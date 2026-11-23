@@ -11,7 +11,8 @@
    "away": "Epitsentr",
    "o1": 2.75,
    "oX": 3.2,
-   "o2": 2.5
+   "o2": 2.5,
+   "score": "0-1"
   },
   {
    "id": "ukr-lnz-cherkasy-polissya-zhytomyr",
@@ -21,7 +22,8 @@
    "away": "Polissya Zhytomyr",
    "o1": 3.8,
    "oX": 3.1,
-   "o2": 2.05
+   "o2": 2.05,
+   "score": "1-1"
   },
   {
    "id": "tur-basaksehir-corum-fk",
@@ -31,7 +33,8 @@
    "away": "Corum FK",
    "o1": 1.9,
    "oX": 3.8,
-   "o2": 3.6
+   "o2": 3.6,
+   "score": "4-2"
   },
   {
    "id": "den-brondby-if-fc-midtjylland",
@@ -57,7 +60,8 @@
    "away": "Motor Lublin",
    "o1": 2.5,
    "oX": 3.95,
-   "o2": 2.55
+   "o2": 2.55,
+   "score": "2-1"
   },
   {
    "id": "rou-sepsi-sf-gheorghe-fc-rapid-bucuresti",
@@ -67,7 +71,8 @@
    "away": "FC Rapid Bucuresti",
    "o1": 4.1,
    "oX": 3.65,
-   "o2": 1.86
+   "o2": 1.86,
+   "score": "1-3"
   },
   {
    "id": "swe-hammarby-if-ifk-goteborg",
@@ -143,7 +148,8 @@
     "oX": 3.55,
     "o2": 1.74,
     "ou": {}
-   }
+   },
+   "score": "2-3"
   },
   {
    "id": "l2-nantes-grenoble",
@@ -169,7 +175,8 @@
    "away": "USL Dunkerque",
    "o1": 2.4,
    "oX": 3.4,
-   "o2": 2.95
+   "o2": 2.95,
+   "score": "2-3"
   },
   {
    "id": "sa-monza-fiorentina",
@@ -287,7 +294,8 @@
     "o2": 2.85,
     "ou": {}
    },
-   "leagueTitle": "LIGA"
+   "leagueTitle": "LIGA",
+   "score": "1-1"
   },
   {
    "id": "pl-brentford-everton",
