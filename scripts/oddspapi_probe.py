@@ -24,32 +24,10 @@ def save(name, body, limit=80000):
 
 if not KEY:
     print('ODDSPAPI_KEY absent'); raise SystemExit(0)
-today = dt.date.today()
-fx = get('fixtures', sportId=10, hasOdds='true', bookmakers='winamax.fr', **{'from': today.isoformat(), 'to': (today + dt.timedelta(days=3)).isoformat()})
-if isinstance(fx, list):
-    t = collections.Counter((f.get('tournamentId'), f.get('categoryName'), f.get('tournamentName')) for f in fx)
-    save('soccer-tournaments', [{'id': k[0], 'category': k[1], 'name': k[2], 'fixtures': n} for k, n in t.most_common()])
-    save('soccer-fixture-sample', fx[:3])
-else:
-    save('soccer-tournaments', fx); fx = []
+ids = {'10208','10300','10320','10600','10604','10608','10612','10616','10620','10733','10730','10738','10596','10592','101905','101928','101930','101936','102206','102208','102210','102220','102222','102224','102462','102116','102053','102095','1010','1012','1014','106','108','10588'}
 mk = get('markets', sportId=10)
 if isinstance(mk, list):
-    save('soccer-markets', [{'marketId': m['marketId'], 'marketType': m.get('marketType'), 'name': m.get('marketName'), 'period': m.get('period'), 'handicap': m.get('handicap'),
-                             'outcomes': [o.get('outcomeName') for o in m.get('outcomes', [])]} for m in mk if not m.get('playerProp') and m.get('period') in ('result', 'fulltime', None)])
+    save('soccer-markets-2', [{'marketId': m['marketId'], 'marketType': m.get('marketType'), 'name': m.get('marketName'), 'period': m.get('period'), 'handicap': m.get('handicap'),
+          'playerProp': m.get('playerProp'), 'outcomes': [[o.get('outcomeId'), o.get('outcomeName')] for o in m.get('outcomes', [])]} for m in mk if str(m['marketId']) in ids or m.get('marketType') == 'totals'][:400])
 else:
-    save('soccer-markets', mk)
-big = {'Premier League': 'England', 'LaLiga': 'Spain', 'Serie A': 'Italy', 'Bundesliga': 'Germany', 'Ligue 1': 'France', 'UEFA Champions League': None}
-ids = []
-for f in fx:
-    n, c = f.get('tournamentName'), f.get('categoryName')
-    if n in big and (big[n] is None or big[n] == c) and f['tournamentId'] not in ids and f.get('statusId') == 0:
-        ids.append(f['tournamentId'])
-print('tournois retenus', ids)
-if ids:
-    od = get('odds-by-tournaments', bookmaker='winamax.fr', tournamentIds=','.join(str(i) for i in ids[:5]))
-    if isinstance(od, list):
-        save('soccer-odds-summary', {'count': len(od), 'first': od[:1]}, 120000)
-        mids = collections.Counter(mid for o in od for mid in ((o.get('bookmakerOdds') or {}).get('winamax.fr') or {}).get('markets', {}))
-        save('soccer-odds-marketids', mids.most_common())
-    else:
-        save('soccer-odds-summary', od)
+    save('soccer-markets-2', mk)
