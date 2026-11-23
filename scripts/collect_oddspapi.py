@@ -1,7 +1,11 @@
-"""Basket et tennis : cotes Winamax France via OddsPapi (2e fournisseur gratuit, clé ODDSPAPI_KEY).
+"""Basket, tennis et buts du football : cotes Winamax France via OddsPapi (2e fournisseur gratuit, clé ODDSPAPI_KEY).
 
-The Odds API garde ses crédits pour le football. Ce script :
-- tourne au plus une fois par jour (heure de Paris) et s'arrête à 230 requêtes par mois (offre gratuite ~250) ;
+The Odds API garde ses crédits pour les victoires du football. Ce script :
+- relève le basket et le tennis un jour sur deux, et les buts du football (plus/moins 2,5, les deux équipes marquent)
+  une fois par jour, pour l'Algo (choix de Nano le 23/11/2026). Il s'arrête à 230 requêtes par mois (offre gratuite ~250) ;
+- football : seulement les matchs du jour déjà présents dans data/sports/football.json (relevé The Odds API de moins
+  d'une heure), repris avec leur identifiant et leurs noms d'équipe pour que les scores de l'appli règlent les tickets.
+  Écrit data/sports/football-goals.json ;
 - ne garde que Winamax FR (`winamax.fr`), cotes actives, matchs pas encore commencés ;
 - marchés : vainqueur (h2h) et plus/moins en demi-points/jeux (totals). Les handicaps sont ignorés tant
   que leur sens (équipe 1 ou 2) n'est pas vérifié ;
@@ -18,6 +22,7 @@ BASE = 'https://api.oddspapi.io/v4/'
 BOOK_SLUG, BOOK = 'winamax.fr', 'winamax_fr'
 SPORTS = {'basket': (11, 'points'), 'tennis': (12, 'jeux')}
 MONTHLY_CAP, CHUNK = 230, 5
+FOOT_ID, FOOT_ODDS_CALLS = 10, 2  # 2 appels de cotes au plus (10 championnats) : ~3 requêtes par jour pour le football
 FEMALE = re.compile(r'women|woman|female|wta|wnba|billie jean|lfb|feminin|féminin|frauen|ladies|\(w\)', re.I)
 
 
@@ -51,7 +56,7 @@ class Api:
         raise RuntimeError(f'{path} : trop de refus')
 
 
-def markets(api, sport_id, now):
+def markets(api, sport_id, now, period='result', types=('moneyline', 'totals', 'totals-games')):
     """Définitions des marchés (cache hebdomadaire dans data/oddspapi/)."""
     cache = DATA / 'oddspapi' / f'markets-{sport_id}.json'
     try:
@@ -64,8 +69,8 @@ def markets(api, sport_id, now):
     keep = [{'marketId': m['marketId'], 'marketType': m.get('marketType'), 'period': m.get('period'),
              'handicap': m.get('handicap'), 'playerProp': m.get('playerProp'),
              'outcomes': [{'outcomeId': o['outcomeId'], 'outcomeName': o['outcomeName']} for o in m.get('outcomes', [])]}
-            for m in raw if not m.get('playerProp') and m.get('period') == 'result'
-            and m.get('marketType') in ('moneyline', 'totals', 'totals-games')]
+            for m in raw if not m.get('playerProp') and m.get('period') == period
+            and m.get('marketType') in types]
     cache.parent.mkdir(parents=True, exist_ok=True)
     cache.write_text(json.dumps({'updatedAt': now.isoformat(), 'markets': keep}, ensure_ascii=False) + '\n')
     return keep
@@ -159,6 +164,117 @@ def collect(api, sport, now):
     return out, len(fixtures)
 
 
+def norm(name):
+    s = re.sub(r'[^a-z0-9 ]', ' ', str(name).lower().replace('é', 'e').replace('è', 'e').replace('ü', 'u').replace('ö', 'o').replace('ã', 'a').replace('á', 'a').replace('í', 'i').replace('ó', 'o').replace('ñ', 'n').replace('ç', 'c'))
+    drop = {'fc', 'cf', 'ac', 'sc', 'afc', 'ssc', 'as', 'bc', 'club', 'calcio', 'de', 'the', 'cd', 'ud', 'rc', 'sv', 'fk', 'sk', '1', 'vfb', 'vfl', 'tsg', 'us', 'ss', 'ogc', 'stade', 'olympique'}
+    words = {w for w in s.split() if w not in drop and len(w) > 1}
+    # Mots trop courants (« United », « City »…) : ignorés s'il reste un vrai nom, pour ne pas confondre Man City et Man United.
+    common = {'united', 'city', 'town', 'athletic', 'atletico', 'sporting', 'real', 'county', 'wanderers', 'rovers', 'albion', 'manchester', 'fc'}
+    return words - common, words
+
+
+def same_team(a, b):
+    (x, fx), (y, fy) = norm(a), norm(b)
+    if not x or not y:  # nom fait seulement de mots courants (« Manchester City ») : il faut les mêmes mots
+        return bool(fx) and fx == fy
+    return bool(x & y) or any(u.startswith(v) or v.startswith(u) for u in x for v in y if min(len(u), len(v)) >= 4)
+
+
+def pair(ref, fixtures):
+    """Match du relevé The Odds API -> fixture OddsPapi (même heure à 10 min près, deux équipes reconnues)."""
+    t = dt.datetime.fromisoformat(ref['kickoff'].replace('Z', '+00:00'))
+    for f in fixtures:
+        try:
+            ft = dt.datetime.fromisoformat(str(f['startTime']).replace('Z', '+00:00'))
+        except (KeyError, ValueError):
+            continue
+        if abs((ft - t).total_seconds()) <= 600 and same_team(ref['home'], f.get('participant1Name')) and same_team(ref['away'], f.get('participant2Name')):
+            return f
+    return None
+
+
+def goals_match(ref, fx, odds, defs, now, stamp):
+    if fx.get('statusId') != 0 or dt.datetime.fromisoformat(ref['kickoff'].replace('Z', '+00:00')) <= now:
+        return None
+    book = (odds.get('bookmakerOdds') or {}).get(BOOK_SLUG) or {}
+    if not book.get('bookmakerIsActive', True) or book.get('suspended'):
+        return None
+    home, away = ref['home'], ref['away']
+    groups = []
+    # Chez OddsPapi, presque tous les marchés football Winamax sont « marketActive: false » alors que les cotes
+    # sont actives et récentes : on se fie à l'état de chaque cote (active, prix > 1).
+    for mid, mk in (book.get('markets') or {}).items():
+        d = defs.get(int(mid)) if str(mid).isdigit() else None
+        if not d:
+            continue
+        prices = {}
+        for oid, out in (mk.get('outcomes') or {}).items():
+            pl = ((out.get('players') or {}).get('0') or {})
+            name = d['names'].get(int(oid)) if str(oid).isdigit() else None
+            try:
+                price = float(pl.get('price'))
+            except (TypeError, ValueError):
+                continue
+            if name and pl.get('active') and price > 1:
+                prices[name] = price
+        if d['marketType'] == '1x2' and set(prices) == {'1', 'X', '2'}:
+            groups.append({'id': 'h2h||None', 'family': 'h2h', 'key': 'h2h', 'unit': 'match', 'line': None, 'participant': '', 'bookKey': BOOK, 'asOf': stamp, 'outcomes': [
+                {'code': '1', 'side': '1', 'label': 'Victoire ' + home, 'odds': prices['1'], 'participant': ''},
+                {'code': '2', 'side': '2', 'label': 'Victoire ' + away, 'odds': prices['2'], 'participant': ''},
+                {'code': 'X', 'side': 'X', 'label': 'Match nul', 'odds': prices['X'], 'participant': ''}]})
+        elif d['marketType'] == 'totals' and abs(float(d.get('handicap') or 0) - 2.5) < 1e-9 and set(prices) == {'Over', 'Under'}:
+            groups.append({'id': 'totals||2.5', 'family': 'totals', 'key': 'totals', 'unit': 'goals', 'line': 2.5, 'participant': '', 'bookKey': BOOK, 'asOf': stamp, 'outcomes': [
+                {'code': 'O2.5', 'side': 'over', 'label': 'Plus de 2,5 buts', 'odds': prices['Over'], 'participant': ''},
+                {'code': 'U2.5', 'side': 'under', 'label': 'Moins de 2,5 buts', 'odds': prices['Under'], 'participant': ''}]})
+        elif d['marketType'] == 'bothteamsscore' and set(prices) == {'Yes', 'No'}:
+            groups.append({'id': 'btts||None', 'family': 'btts', 'key': 'btts', 'unit': 'match', 'line': None, 'participant': '', 'bookKey': BOOK, 'asOf': stamp, 'outcomes': [
+                {'code': 'BTTS_Y', 'side': 'yes', 'label': 'Les deux équipes marquent', 'odds': prices['Yes'], 'participant': ''},
+                {'code': 'BTTS_N', 'side': 'no', 'label': 'Les deux équipes ne marquent pas toutes les deux', 'odds': prices['No'], 'participant': ''}]})
+    if not groups:
+        return None
+    return {**{k: ref[k] for k in ('id', 'sport', 'league', 'kickoff', 'home', 'away') if k in ref}, 'leagueCode': ref.get('leagueCode'),
+            'bookKey': BOOK, 'book': 'Winamax France', 'asOf': stamp, 'oddspapiFixtureId': fx['fixtureId'], 'gender': ref.get('gender', 'unspecified'),
+            'markets': groups, 'availableMarkets': sorted({g['family'] for g in groups})}
+
+
+def collect_football(api, now):
+    """Buts Winamax des matchs du jour du relevé football The Odds API. None si ce relevé n'est pas frais."""
+    try:
+        ref = json.loads((DATA / 'sports' / 'football.json').read_text())
+        fresh = ref.get('status') == 'ok' and 0 <= (now - dt.datetime.fromisoformat(ref['updatedAt'].replace('Z', '+00:00'))).total_seconds() <= 3600
+    except (OSError, ValueError, KeyError):
+        return None
+    today = paris_day(now)
+    todo = [m for m in ref.get('matches', []) if fresh and m.get('sport') == 'football' and m.get('kickoff')
+            and paris_day(dt.datetime.fromisoformat(m['kickoff'].replace('Z', '+00:00'))) == today
+            and dt.datetime.fromisoformat(m['kickoff'].replace('Z', '+00:00')) > now]
+    if not todo:
+        return None
+    defs = {m['marketId']: {**m, 'names': {o['outcomeId']: o['outcomeName'] for o in m['outcomes']}}
+            for m in markets(api, FOOT_ID, now, period='fulltime', types=('1x2', 'totals', 'bothteamsscore'))}
+    day = now.date()
+    fixtures = api.get('fixtures', sportId=FOOT_ID, hasOdds='true', bookmakers=BOOK_SLUG,
+                       **{'from': day.isoformat(), 'to': (day + dt.timedelta(days=1)).isoformat()})
+    fixtures = [f for f in fixtures if isinstance(f, dict) and f.get('statusId') == 0]
+    pairs = [(m, f) for m in todo for f in [pair(m, fixtures)] if f]
+    # Les championnats qui ont le plus de matchs du jour d'abord, dans la limite du budget.
+    count = {}
+    for _, f in pairs:
+        count[f['tournamentId']] = count.get(f['tournamentId'], 0) + 1
+    tournaments = sorted(count, key=lambda t: (-count[t], t))[:CHUNK * FOOT_ODDS_CALLS]
+    by_fixture = {f['fixtureId']: m for m, f in pairs}
+    fx_by_id = {f['fixtureId']: f for _, f in pairs}
+    out = []
+    for i in range(0, len(tournaments), CHUNK):
+        stamp = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+        for odds in api.get('odds-by-tournaments', bookmaker=BOOK_SLUG, tournamentIds=','.join(str(x) for x in tournaments[i:i + CHUNK])):
+            fid = odds.get('fixtureId')
+            m = fid in by_fixture and goals_match(by_fixture[fid], fx_by_id[fid], odds, defs, now, stamp)
+            if m:
+                out.append(m)
+    return out, len(todo), len(pairs)
+
+
 def main():
     key = os.environ.get('ODDSPAPI_KEY', '').strip()
     now = dt.datetime.now(dt.timezone.utc)
@@ -171,11 +287,31 @@ def main():
     month, today = now.strftime('%Y-%m'), paris_day(now)
     if ledger.get('month') != month:
         ledger = {'month': month, 'used': 0}
-    if ledger.get('lastDay') == today and not os.environ.get('ODDSPAPI_FORCE'):
-        print('OddsPapi : relevé du jour déjà fait (' + today + ').'); return
+    force = bool(os.environ.get('ODDSPAPI_FORCE'))
     api = Api(key, ledger)
     summary = {}
-    for sport in SPORTS:
+    # Football (buts) : une fois par jour, dès qu'un relevé The Odds API frais existe.
+    if ledger.get('lastFootballDay') != today or force:
+        try:
+            res = collect_football(api, now)
+        except Exception as e:  # noqa: BLE001
+            res = None
+            summary['football'] = 'échec : ' + str(e)[:120]
+        if res:
+            goals, todo, paired = res
+            summary['football'] = f'{len(goals)} matchs avec buts Winamax ({paired} retrouvés sur {todo} du jour)'
+            doc = {'sport': 'football', 'bookKey': BOOK, 'updatedAt': now.isoformat(), 'status': 'ok' if goals else 'empty',
+                   'matches': sorted(goals, key=lambda m: m['kickoff']), 'source': 'OddsPapi (Winamax FR)', 'day': today}
+            (DATA / 'sports' / 'football-goals.json').write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
+            ledger['lastFootballDay'] = today
+        elif 'football' not in summary:
+            summary['football'] = 'en attente du relevé football du jour'
+    # Basket et tennis : un jour sur deux.
+    last = ledger.get('lastDay')
+    due = force or not last or (dt.date.fromisoformat(today) - dt.date.fromisoformat(last)).days >= 2
+    if not due:
+        print('OddsPapi : basket et tennis relevés le ' + last + ', prochain relevé demain.')
+    for sport in (SPORTS if due else ()):
         try:
             matches, seen = collect(api, sport, now)
         except Exception as e:  # noqa: BLE001 - un sport en échec ne bloque pas l'autre
@@ -187,7 +323,9 @@ def main():
                    'matches': sorted(matches, key=lambda m: m['kickoff']), 'source': 'OddsPapi (Winamax FR)',
                    'partial': False, 'femaleMatches': sum(m['gender'] == 'women' for m in matches)}
             (DATA / 'sports' / f'{sport}.json').write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
-    ledger.update({'lastDay': today, 'updatedAt': now.isoformat(), 'summary': summary})
+    if due:
+        ledger['lastDay'] = today
+    ledger.update({'updatedAt': now.isoformat(), 'summary': summary})
     LEDGER.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + '\n')
     print('OddsPapi :', summary, '· requêtes ce mois-ci :', ledger['used'])
 

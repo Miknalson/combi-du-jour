@@ -3,7 +3,7 @@
 // L'algorithme ne change pas : les matchs écartés sont retirés des données d'entrée, puis le ticket est recalculé.
 // Sans clé ANTHROPIC_API_KEY ou en cas d'erreur, rien n'est écarté et les tickets sont faits comme avant.
 const fs=require('node:fs'),path=require('node:path');
-const N=require('../news-filter'),T=require('../tres-sur-engine'),P=require('../paper-multi-engine'),B=require('../safe-but-engine'),Safe=require('../safe-multi-engine');
+const N=require('../news-filter'),T=require('../tres-sur-engine'),P=require('../paper-multi-engine'),B=require('../safe-but-engine'),Safe=require('../safe-multi-engine'),AM=require('../algo-mix-engine');
 const root=process.env.NEWS_ROOT||path.resolve(__dirname,'..'),now=Number(process.env.NEWS_NOW)||Date.now(),today=N.paris(now);
 const MODEL=process.env.NEWS_MODEL||'claude-opus-5-5';
 const storeFile=path.join(root,'data/news-checks.json');
@@ -35,6 +35,7 @@ function pendingLegs(sports,dayDoc,list,journals){
   const built=P.build(Safe.SPORTS.map(f),now);
   built.slots.forEach(slot=>{const id=P.rules.version+'|'+built.day+'|'+slot.method+'|'+slot.sport;if(slot.ticket&&!journals.v2.records.some(r=>r.id===id))legs.push(...slot.ticket.legs);});
   if(!journals.but.records.some(r=>r.id===B.rules.version+'|'+today+'|football')){const t=B.build(N.apply(dayDoc,list,'football'),now).ticket;if(t)legs.push(...t.legs);}
+  if(journals.mix&&!journals.mix.records.some(r=>r.id===AM.rules.version+'|'+today+'|football')){const t=AM.build(N.apply(journals.goals,list,'football'),now).ticket;if(t)legs.push(...t.legs);}
   return legs;
 }
 
@@ -43,7 +44,7 @@ function pendingLegs(sports,dayDoc,list,journals){
   const day=store.days[today]=store.days[today]||{checks:{},calls:[]};
   const sports=Object.fromEntries(Safe.SPORTS.map(s=>[s,read(path.join(root,'data/sports',s+'.json'),null)]));
   const dayDoc=read(path.join(root,'data/days',today+'.json'),null);
-  const journals={tres:read(path.join(root,'data/tres-sur-tests.json'),{records:[]}),v2:read(path.join(root,'data/paper-tests-v2.json'),{records:[]}),but:read(path.join(root,'data/safe-but-tests.json'),{records:[]})};
+  const journals={tres:read(path.join(root,'data/tres-sur-tests.json'),{records:[]}),v2:read(path.join(root,'data/paper-tests-v2.json'),{records:[]}),but:read(path.join(root,'data/safe-but-tests.json'),{records:[]}),mix:read(path.join(root,'data/algo-mix-tests.json'),{records:[]}),goals:read(path.join(root,'data/sports/football-goals.json'),null)};
   const key=process.env.ANTHROPIC_API_KEY;
   for(let round=0;round<N.rules.maxRounds;round++){
     const list=N.toCheck(pendingLegs(sports,dayDoc,N.excluded(day),journals),day,now);
