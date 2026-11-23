@@ -1,0 +1,4882 @@
+[
+ {
+  "marketId": 101,
+  "marketType": "1x2",
+  "name": "Full Time Result",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "X",
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 104,
+  "marketType": "bothteamsscore",
+  "name": "Both Teams To Score",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "marketId": 106,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 108,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 1010,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 1012,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 1014,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 1016,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 1018,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 1020,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 1022,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 8.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 1024,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -6.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1026,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -5.75,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1028,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -5.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1030,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -5.25,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1032,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -5.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1034,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -4.75,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1036,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -4.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1038,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -4.25,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1040,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -4.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1042,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -3.75,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1044,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -3.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1046,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -3.25,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1048,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -3.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1050,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -2.75,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1052,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -2.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1054,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -2.25,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1056,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -2.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1058,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -1.75,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1060,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -1.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1062,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -1.25,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1064,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -1.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1066,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -0.75,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1068,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -0.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1070,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": -0.25,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1072,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1074,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 0.25,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1076,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1078,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 0.75,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1080,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1082,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 1.25,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1084,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1086,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 1.75,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1088,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1090,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 2.25,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1092,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1094,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 2.75,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 1096,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 1098,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 3.25,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10100,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10102,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 3.75,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10104,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10106,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 4.25,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10108,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10110,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 4.75,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10112,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10114,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 5.25,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10116,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10118,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 5.75,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10120,
+  "marketType": "spreads",
+  "name": "Asian Handicap",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10122,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "1",
+   "X",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10125,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "X",
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10128,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "2",
+   "1",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10131,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "2",
+   "1",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10134,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "2",
+   "1",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10137,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "1",
+   "2",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10140,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": -1.0,
+  "outcomes": [
+   "2",
+   "X",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10143,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": -2.0,
+  "outcomes": [
+   "2",
+   "1",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10146,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": -3.0,
+  "outcomes": [
+   "2",
+   "1",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10149,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": -4.0,
+  "outcomes": [
+   "2",
+   "1",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10152,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": -5.0,
+  "outcomes": [
+   "X",
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10155,
+  "marketType": "spreads-european",
+  "name": "European Handicap",
+  "period": "fulltime",
+  "handicap": -6.0,
+  "outcomes": [
+   "X",
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10158,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 0.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10160,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 0.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10162,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10164,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 1.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10166,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 1.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10168,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10170,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 2.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10172,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 2.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10174,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10176,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 3.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10178,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 3.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10180,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10182,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 4.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10184,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 4.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10186,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10188,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 5.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10190,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 5.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10192,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10194,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 6.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10196,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 6.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10198,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10200,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 7.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10202,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 7.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10204,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 8.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10206,
+  "marketType": "totals",
+  "name": "Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 8.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10214,
+  "marketType": "drawnobet",
+  "name": "Draw No Bet",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10216,
+  "marketType": "firstgoal",
+  "name": "First Goal Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2",
+   "1",
+   "No Goal"
+  ]
+ },
+ {
+  "marketId": 10219,
+  "marketType": "lastgoal",
+  "name": "Last Goal Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2",
+   "1",
+   "No Goal"
+  ]
+ },
+ {
+  "marketId": 10222,
+  "marketType": "oddeven",
+  "name": "Odd Even Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Odd",
+   "Even"
+  ]
+ },
+ {
+  "marketId": 10224,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10226,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10228,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10230,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10232,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10234,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10236,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10238,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10240,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10242,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10244,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10246,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10248,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10250,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10252,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10254,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10284,
+  "marketType": "toscore-team1",
+  "name": "Team 1 To Score",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "marketId": 10286,
+  "marketType": "toscore-team2",
+  "name": "Team 2 To Score",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "marketId": 10296,
+  "marketType": "toscoreinbh-team1",
+  "name": "Team 1 To Score in Both Halves",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "marketId": 10298,
+  "marketType": "toscoreinbh-team2",
+  "name": "Team 2 To Score in Both Halves",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "marketId": 10304,
+  "marketType": "wineitherh-team1",
+  "name": "Team 1 To Win Either Halves",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "marketId": 10306,
+  "marketType": "wineitherh-team2",
+  "name": "Team 2 To Win Either Halves",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "marketId": 10308,
+  "marketType": "winbothh-team1",
+  "name": "Team 1 To Win Both Halves",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "marketId": 10310,
+  "marketType": "winbothh-team2",
+  "name": "Team 2 To Win Both Halves",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "marketId": 10312,
+  "marketType": "cleansheet-team1",
+  "name": "Team 1 Clean Sheet",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "marketId": 10314,
+  "marketType": "cleansheet-team2",
+  "name": "Team 2 Clean Sheet",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "marketId": 10316,
+  "marketType": "wintonil-team1",
+  "name": "Team 1 Win To Nil",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "No",
+   "Yes"
+  ]
+ },
+ {
+  "marketId": 10318,
+  "marketType": "wintonil-team2",
+  "name": "Team 2 Win To Nil",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "marketId": 10324,
+  "marketType": "nobet-team1",
+  "name": "Team 1 No Bet",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10326,
+  "marketType": "nobet-team2",
+  "name": "Team 2 No Bet",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "1",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10332,
+  "marketType": "oddeven-team1",
+  "name": "Team 1 Odd Even",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Even",
+   "Odd"
+  ]
+ },
+ {
+  "marketId": 10334,
+  "marketType": "oddeven-team2",
+  "name": "Team 2 Odd Even",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Even",
+   "Odd"
+  ]
+ },
+ {
+  "marketId": 10336,
+  "marketType": "correctscore",
+  "name": "Correct Score Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "6:0",
+   "4:3",
+   "2:5",
+   "1:0",
+   "0:7",
+   "4:1",
+   "3:7",
+   "7:7",
+   "0:1",
+   "7:4",
+   "3:0",
+   "2:3",
+   "3:4",
+   "7:1",
+   "6:6",
+   "1:4",
+   "6:3",
+   "3:2",
+   "6:7",
+   "2:6",
+   "0:4",
+   "4:2",
+   "4:4",
+   "4:0",
+   "0:0",
+   "1:5",
+   "0:5",
+   "5:3",
+   "5:4",
+   "0:2",
+   "6:4",
+   "5:6",
+   "4:7",
+   "1:6",
+   "2:2",
+   "5:5",
+   "3:6",
+   "6:1",
+   "7:2",
+   "4:5",
+   "7:3",
+   "3:1",
+   "5:1",
+   "2:7",
+   "1:1",
+   "3:5",
+   "6:5",
+   "0:3",
+   "2:0",
+   "1:2",
+   "7:6",
+   "1:7",
+   "5:7",
+   "3:3",
+   "4:6",
+   "2:4",
+   "2:1",
+   "5:0",
+   "5:2",
+   "7:0",
+   "7:5",
+   "6:2",
+   "1:3",
+   "0:6"
+  ]
+ },
+ {
+  "marketId": 10400,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 0.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10402,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 0.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10404,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10406,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 1.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10408,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 1.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10410,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10412,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 2.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10414,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 2.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10416,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10418,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 3.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10420,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 3.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10422,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10424,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 4.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10426,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 4.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10428,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10430,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 5.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10432,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 5.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10434,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10436,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 6.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10438,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 6.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10440,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10442,
+  "marketType": "teamtotals-team1",
+  "name": "Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 7.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10444,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 0.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10446,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 0.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10448,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10450,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 1.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10452,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 1.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10454,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10456,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 2.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10458,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 2.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10460,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10462,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 3.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10464,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 3.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10466,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10468,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 4.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10470,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 4.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10472,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10474,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 5.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10476,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 5.75,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10478,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10480,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 6.25,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10482,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 6.75,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10484,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10486,
+  "marketType": "teamtotals-team2",
+  "name": "Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 7.25,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10728,
+  "marketType": "toqualify",
+  "name": "To Qualify",
+  "period": "result",
+  "handicap": 0.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10761,
+  "marketType": "2up",
+  "name": "2Up - Full Time Result",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "1",
+   "2",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10764,
+  "marketType": "1x2-corners",
+  "name": "Corners - 1X2",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2",
+   "1",
+   "X"
+  ]
+ },
+ {
+  "marketId": 10767,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10769,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10771,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10773,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10775,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10777,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10779,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10781,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10783,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10785,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10787,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10789,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10791,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10793,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10795,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10797,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 8.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10799,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 8.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10801,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 9.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10803,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 9.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10805,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 10.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10807,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 10.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10809,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 11.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10811,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 11.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10813,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 12.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10815,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 12.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10817,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 13.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10819,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 13.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10821,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 14.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10823,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 14.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10825,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 15.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10827,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 15.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10829,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 16.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10831,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 16.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10833,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 17.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10835,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 17.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10837,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 18.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10839,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 18.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10841,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 19.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10843,
+  "marketType": "totals-corners",
+  "name": "Corners - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 19.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10845,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -8.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10847,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -7.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10849,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -7.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10851,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -6.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10853,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -6.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10855,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -5.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10857,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -5.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10859,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -4.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10861,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -4.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10863,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -3.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10865,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -3.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10867,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -2.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10869,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -2.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10871,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -1.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10873,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -1.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10875,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": -0.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10877,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10879,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10881,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10883,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10885,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10887,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10889,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10891,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10893,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10895,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10897,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10899,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10901,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10903,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10905,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10907,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10909,
+  "marketType": "spreads-corners",
+  "name": "Corners - Handicap",
+  "period": "fulltime",
+  "handicap": 8.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10911,
+  "marketType": "1x2-bookings",
+  "name": "Bookings - 1X2",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "X",
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10914,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10916,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10918,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10920,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10922,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10924,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10926,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10928,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10930,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10932,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10934,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10936,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10938,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10940,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10942,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10944,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 8.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10946,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 8.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10948,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 9.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10950,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 9.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10952,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 10.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10954,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 10.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10956,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 11.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10958,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 11.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10960,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 12.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10962,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 12.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10964,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 13.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 10966,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 13.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10968,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 14.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10970,
+  "marketType": "totals-bookings",
+  "name": "Bookings - Over Under Full Time",
+  "period": "fulltime",
+  "handicap": 14.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 10972,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -6.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10974,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -5.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10976,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -5.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10978,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -4.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10980,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -4.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10982,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -3.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10984,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -3.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10986,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -2.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10988,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -2.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10990,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -1.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10992,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -1.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10994,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": -0.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 10996,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 10998,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 101000,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 101002,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 101004,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 101006,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 101008,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 101010,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 101012,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 101014,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 101016,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 101018,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "marketId": 101020,
+  "marketType": "spreads-bookings",
+  "name": "Bookings - Handicap",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "2",
+   "1"
+  ]
+ },
+ {
+  "marketId": 101022,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101024,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101026,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101028,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101030,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101032,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101034,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101036,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101038,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101040,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101042,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101044,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101046,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101048,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101050,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101052,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 8.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101054,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 8.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101056,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 9.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101058,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 9.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101060,
+  "marketType": "teamtotals-bookings-team1",
+  "name": "Bookings - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 10.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101062,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101064,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101066,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101068,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101070,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101072,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101074,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101076,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101078,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101080,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101082,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101084,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101086,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101088,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101090,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101092,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 8.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101094,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 8.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101096,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 9.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101098,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 9.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101100,
+  "marketType": "teamtotals-bookings-team2",
+  "name": "Bookings - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 10.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101102,
+  "marketType": "oddeven-bookings",
+  "name": "Bookings - Odd Even",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Even",
+   "Odd"
+  ]
+ },
+ {
+  "marketId": 101108,
+  "marketType": "oddeven-bookings-team1",
+  "name": "Bookings - Odd Even Team 1",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Odd",
+   "Even"
+  ]
+ },
+ {
+  "marketId": 101110,
+  "marketType": "oddeven-bookings-team2",
+  "name": "Bookings - Odd Even Team 2",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Even",
+   "Odd"
+  ]
+ },
+ {
+  "marketId": 101394,
+  "marketType": "oddeven-corners",
+  "name": "Corners - Odd Even",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Odd",
+   "Even"
+  ]
+ },
+ {
+  "marketId": 101400,
+  "marketType": "oddeven-corners-team1",
+  "name": "Corners - Odd Even Team 1",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Even",
+   "Odd"
+  ]
+ },
+ {
+  "marketId": 101402,
+  "marketType": "oddeven-corners-team2",
+  "name": "Corners - Odd Even Team 2",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "Even",
+   "Odd"
+  ]
+ },
+ {
+  "marketId": 101412,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101414,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101416,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101418,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101420,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101422,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101424,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101426,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101428,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101430,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101432,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101434,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101436,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101438,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101440,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101442,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 8.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101444,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 8.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101446,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 9.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101448,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 9.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101450,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 10.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101452,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 10.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101454,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 11.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101456,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 11.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101458,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 12.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101460,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 12.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101462,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 13.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101464,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 13.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101466,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 14.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101468,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 14.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101470,
+  "marketType": "teamtotals-corners-team1",
+  "name": "Corners - Over Under Team 1",
+  "period": "fulltime",
+  "handicap": 15.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101472,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 0.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101474,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 1.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101476,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 1.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101478,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 2.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101480,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 2.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101482,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 3.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101484,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 3.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101486,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 4.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101488,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 4.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101490,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 5.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101492,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 5.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101494,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 6.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101496,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 6.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101498,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 7.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101500,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 7.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101502,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 8.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101504,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 8.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101506,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 9.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101508,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 9.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101510,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 10.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101512,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 10.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101514,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 11.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101516,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 11.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101518,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 12.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101520,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 12.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101522,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 13.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101524,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 13.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101526,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 14.0,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 101528,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 14.5,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101530,
+  "marketType": "teamtotals-corners-team2",
+  "name": "Corners - Over Under Team 2",
+  "period": "fulltime",
+  "handicap": 15.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 101902,
+  "marketType": "doublechance",
+  "name": "Double Chance Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "12",
+   "1X",
+   "2X"
+  ]
+ },
+ {
+  "marketId": 101919,
+  "marketType": "halftime-fulltime",
+  "name": "Half Time / Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "1/2",
+   "2/X",
+   "2/1",
+   "X/2",
+   "2/2",
+   "X/X",
+   "X/1",
+   "1/X",
+   "1/1"
+  ]
+ },
+ {
+  "marketId": 101936,
+  "marketType": "winningmargin",
+  "name": "Winning Margin Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "1 By 8",
+   "2 By 1",
+   "Draw (incl 0:0)",
+   "2 By 6",
+   "2 By 2",
+   "2 By 6+",
+   "1 By 5+",
+   "1 By 1",
+   "1 By 8+",
+   "2 By 3+",
+   "2 By 1+",
+   "1 By 7",
+   "2 By 7",
+   "1 By 3",
+   "1 By 9",
+   "1 By 4",
+   "1 By 2",
+   "2 By 5+",
+   "2 By 5",
+   "2 By 7+",
+   "1 By 10",
+   "1 By 6+",
+   "2 By 4+",
+   "2 By 4",
+   "1 By 9+",
+   "1 By 7+",
+   "2 By 3",
+   "1 By 5",
+   "1 By 3+",
+   "Draw",
+   "1 By 1+",
+   "2 By 10",
+   "2 By 10+",
+   "2 By 9",
+   "1 By 6",
+   "1 By 2+",
+   "2 By 2+",
+   "1 By 4+",
+   "2 By 9+",
+   "No Goal",
+   "2 By 8+",
+   "1 By 10+",
+   "2 By 8"
+  ]
+ },
+ {
+  "marketId": 102041,
+  "marketType": "highestscoringh",
+  "name": "Highest Scoring Half",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2nd",
+   "1st",
+   "X"
+  ]
+ },
+ {
+  "marketId": 102044,
+  "marketType": "highestscoringh-team1",
+  "name": "Team 1 Highest Scoring Half",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "X",
+   "2nd",
+   "1st"
+  ]
+ },
+ {
+  "marketId": 102047,
+  "marketType": "highestscoringh-team2",
+  "name": "Team 2 Highest Scoring Half",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "2nd",
+   "1st",
+   "X"
+  ]
+ },
+ {
+  "marketId": 102050,
+  "marketType": "winfrombehind",
+  "name": "To Win From Behind Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "1",
+   "2",
+   "X"
+  ]
+ },
+ {
+  "marketId": 102053,
+  "marketType": "exactscore",
+  "name": "Exact Score Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "10",
+   "9",
+   "1",
+   "6",
+   "10+",
+   "9+",
+   "2",
+   "5",
+   "3",
+   "1+",
+   "4+",
+   "0",
+   "4",
+   "6+",
+   "5+",
+   "7+",
+   "2+",
+   "8",
+   "3+",
+   "7",
+   "8+"
+  ]
+ },
+ {
+  "marketId": 102074,
+  "marketType": "exactscore-team1",
+  "name": "Team 1 Exact Score Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "6",
+   "7+",
+   "4",
+   "3",
+   "8",
+   "10+",
+   "2+",
+   "5+",
+   "6+",
+   "2",
+   "8+",
+   "7",
+   "0",
+   "9+",
+   "3+",
+   "5",
+   "4+",
+   "1+",
+   "9",
+   "10",
+   "1"
+  ]
+ },
+ {
+  "marketId": 102095,
+  "marketType": "exactscore-team2",
+  "name": "Team 2 Exact Score Full Time",
+  "period": "fulltime",
+  "handicap": 0.0,
+  "outcomes": [
+   "7",
+   "4",
+   "4+",
+   "6+",
+   "9+",
+   "10+",
+   "2+",
+   "10",
+   "7+",
+   "8",
+   "6",
+   "1",
+   "5+",
+   "3+",
+   "3",
+   "8+",
+   "0",
+   "5",
+   "1+",
+   "2",
+   "9"
+  ]
+ },
+ {
+  "marketId": 102771,
+  "marketType": "totals-saves",
+  "name": "Goalkeeper Saves - Over Under (incl. overtime and penalties)",
+  "period": "result",
+  "handicap": 0.5,
+  "outcomes": [
+   "Under",
+   "Over"
+  ]
+ },
+ {
+  "marketId": 102773,
+  "marketType": "totals-saves",
+  "name": "Goalkeeper Saves - Over Under (incl. overtime and penalties)",
+  "period": "result",
+  "handicap": 1.0,
+  "outcomes": [
+   "Over",
+   "Under"
+  ]
+ },
+ {
+  "marketId": 102775,
+  "marketType": "totals-saves",
+  "name": "Goalkeeper Save
+…TRONQUÉ
