@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-23T22:17:36.449687+00:00",
-  "status": "partial",
+  "updatedAt": "2026-11-23T23:33:00.254113+00:00",
+  "status": "ok",
   "source": "ESPN public football scoreboards",
-  "queried": 9,
-  "updatedMatches": 6,
-  "pendingMatches": 5,
-  "unmatchedFixtures": 5,
+  "queried": 0,
+  "updatedMatches": 0,
+  "pendingMatches": 0,
+  "unmatchedFixtures": 0,
   "failures": [],
-  "message": "6 score(s) final(aux) de football récupéré(s). Certains résultats restent à vérifier : score absent, identité différente ou fin du temps réglementaire non confirmée."
+  "message": "0 score(s) final(aux) de football récupéré(s)."
 }
