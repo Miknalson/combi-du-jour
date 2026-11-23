@@ -1,7 +1,7 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-22T05:45:26.586500+00:00",
+  "updatedAt": "2026-11-23T06:19:09.828143+00:00",
   "status": "ok",
   "matches": [
     {
@@ -921,6 +921,114 @@
       "o1": 4.5,
       "o2": 1.48,
       "oX": 4.4
+    },
+    {
+      "id": "football-e422af92d1fc06c0a330838c1c2f2e08",
+      "eventId": "e422af92d1fc06c0a330838c1c2f2e08",
+      "sport": "football",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UCL",
+      "home": "Galatasaray",
+      "away": "Aston Villa",
+      "kickoff": "2026-11-24T17:45:00Z",
+      "asOf": "2026-11-23T06:17:56Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-23T06:17:56Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Galatasaray",
+              "odds": 2.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Aston Villa",
+              "odds": 2.15,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.8,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 2.5,
+      "o2": 2.15,
+      "oX": 3.8
+    },
+    {
+      "id": "football-50b80f3ebd38bf63663b11ae0afc575b",
+      "eventId": "50b80f3ebd38bf63663b11ae0afc575b",
+      "sport": "football",
+      "sportKey": "soccer_uefa_champs_league",
+      "leagueCode": "UCL",
+      "league": "UCL",
+      "home": "Bodø/Glimt",
+      "away": "LASK",
+      "kickoff": "2026-11-24T17:45:00Z",
+      "asOf": "2026-11-23T06:17:56Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-23T06:17:56Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Bodø/Glimt",
+              "odds": 1.47,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire LASK",
+              "odds": 4.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.7,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "gender": "unspecified",
+      "o1": 1.47,
+      "o2": 4.5,
+      "oX": 4.7
     }
   ],
   "leaguesQueried": 0,

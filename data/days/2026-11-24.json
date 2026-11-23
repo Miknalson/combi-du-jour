@@ -16,10 +16,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:34:41Z",
-    "o1": 2.35,
-    "oX": 3.65,
-    "o2": 2.25,
+    "asOf": "2026-11-23T06:17:56Z",
+    "o1": 2.5,
+    "oX": 3.8,
+    "o2": 2.15,
     "ou": {}
    },
    "gender": "unspecified"
@@ -39,10 +39,10 @@
    "mine": {
     "book": "Winamax France",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-15T07:34:41Z",
-    "o1": 1.4,
-    "oX": 5.0,
-    "o2": 4.6,
+    "asOf": "2026-11-23T06:17:56Z",
+    "o1": 1.47,
+    "oX": 4.7,
+    "o2": 4.5,
     "ou": {}
    },
    "gender": "unspecified"
@@ -562,5 +562,6 @@
   }
  ],
  "updatedAt": "2026-11-22T07:48:31Z",
- "source": "The Odds API (moyenne des bookmakers européens)"
+ "source": "The Odds API (moyenne des bookmakers européens)",
+ "marketsUpdatedAt": "2026-11-23T06:19:09.828143+00:00"
 }

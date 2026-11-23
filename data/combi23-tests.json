@@ -27,5 +27,31 @@
     },
     "startedAt": "2026-11-22T06:51:55.352Z"
   },
-  "records": []
+  "records": [
+    {
+      "id": "combi23-v1|2026-11-23|football",
+      "day": "2026-11-23",
+      "method": "combi23",
+      "sport": "football",
+      "version": "combi23-v1",
+      "createdAt": "2026-11-23T06:19:19.753Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-23T06:19:09.828143+00:00",
+          "partial": true,
+          "matches": 19
+        }
+      ]
+    }
+  ]
 }

@@ -1,19 +1,24 @@
 {
   "version": "football-paired-markets-v1",
-  "updatedAt": "2026-11-22T14:28:04.396087+00:00",
-  "day": "2026-11-22",
-  "status": "daily_budget",
-  "message": "Budget de cotes du jour déjà utilisé. Aucune requête supplémentaire facturée.",
-  "creditsRemaining": 15,
+  "updatedAt": "2026-11-23T06:19:09.828143+00:00",
+  "day": "2026-11-23",
+  "status": "provider_missing_totals",
+  "message": "Winamax ne fournit aucune paire de cotes de total de buts dans la réponse du fournisseur pour cette compétition. Aucun total inventé.",
+  "creditsRemaining": 13,
   "dailyAllowance": 2,
-  "alreadyUsedToday": 2,
+  "alreadyUsedToday": 0,
+  "league": "soccer_uefa_champs_league",
+  "requestedMarkets": "h2h,totals",
+  "matches": 2,
+  "totalLines": 0,
+  "creditsUsed": 2,
   "sourceResult": {
     "status": "provider_missing_totals",
     "message": "Winamax ne fournit aucune paire de cotes de total de buts dans la réponse du fournisseur pour cette compétition. Aucun total inventé.",
-    "updatedAt": "2026-11-22T05:45:26.586500+00:00",
-    "league": "soccer_italy_serie_a",
+    "updatedAt": "2026-11-23T06:19:09.828143+00:00",
+    "league": "soccer_uefa_champs_league",
     "requestedMarkets": "h2h,totals",
-    "matches": 5,
+    "matches": 2,
     "totalLines": 0
   }
 }
