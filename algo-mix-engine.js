@@ -36,10 +36,11 @@ function append(journal,built,now){var out=clone(journal||{records:[]});out.reco
  out.records.push({id:id,day:built.day,method:'algo_mix',sport:'football',version:RULES.version,createdAt:new Date(now).toISOString(),mode:'paper',unitStake:t?1:0,simulatedStake:t?RULES.stake:0,currency:'EUR',status:t?'pending':'no_pick',odds:t?t.odds:null,probability:t?t.p:null,legs:t?clone(t.legs):[],executionVerified:false,sourceSnapshots:built.source?[clone(built.source)]:[]});return out;}
 function legResult(l,h,a){if(l.code==='1')return h>a;if(l.code==='2')return a>h;if(l.code==='O2.5')return h+a>2.5;if(l.code==='U2.5')return h+a<2.5;if(l.code==='BTTS_Y')return h>0&&a>0;if(l.code==='BTTS_N')return h===0||a===0;return null;}
 // Règlement avec les scores de l'appli (data/days), mêmes règles d'appariement que les autres tickets.
-function settle(record,matches,today){if(record.status!=='pending'||record.day>=today)return record;var done=true,lost=false;
+// Comme Paper.settle : réglé dès les scores finaux (le jour même s'ils sont marqués terminés), perdu dès un pari perdu.
+function settle(record,matches,today){if(record.status!=='pending'||record.day>today)return record;var done=true,lost=false;
  function k(s){return String(s||'').trim().toLowerCase();}
  record.legs.forEach(function(l){var m=(matches||[]).find(function(m){return Date.parse(m.kickoff)===Date.parse(l.kickoff)&&(m.id===l.matchId||k(m.home)===k(l.home)&&k(m.away)===k(l.away));});
-  if(!m||!/^\d+\s*-\s*\d+$/.test(String(m.score||''))){done=false;return;}var s=m.score.split('-').map(Number),ok=legResult(l,s[0],s[1]);if(ok===null)done=false;else if(!ok)lost=true;});
- if(!done)return record;return Object.assign({},record,{status:lost?'lost':'won',resultSource:'application-football-score'});}
+  if(!m||!/^\d+\s*-\s*\d+$/.test(String(m.score||''))||m.scoreStatus==='live'||m.completed===false||record.day>=today&&m.completed!==true&&m.scoreStatus!=='final'){done=false;return;}var s=m.score.split('-').map(Number),ok=legResult(l,s[0],s[1]);if(ok===null)done=false;else if(!ok)lost=true;});
+ if(!done&&!lost)return record;return Object.assign({},record,{status:lost?'lost':'won',resultSource:'application-football-score'});}
 return {rules:clone(RULES),candidates:candidates,choose:choose,build:build,append:append,settle:settle,legResult:legResult};
 });

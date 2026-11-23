@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=goals1">
+<link rel="stylesheet" href="style.css?v=live1">
 <style>
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -109,6 +109,7 @@
 <script src="paper-view.js?v=results2"></script>
 <script src="market-audit.js?v=1"></script>
 <script src="bet-results.js?v=2"></script>
+<script src="live-scores.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
 <script>
@@ -132,6 +133,7 @@ function odds(o){ return o.toFixed(2).replace('.',','); }
 function day(iso){ return new Date(iso).toLocaleDateString('fr-FR',{timeZone:TZ,weekday:'short',day:'numeric',month:'short'}); }
 
 function allMatches(){return Object.values(matches);}
+function liveBadge(l){if(!window.LiveScores)return '';var m=BetResults.findMatch(l,allMatches());return m?LiveScores.badge(m):'';}
 function legState(l){var r=BetResults.legResult(l,allMatches(),Date.now());return r.ok===null?null:r;}
 function betState(b){return BetResults.betState(b,allMatches(),Date.now());}
 function net(b, st){ return st==='won' ? b.stake*(b.odds-1) : st==='lost' ? -b.stake : 0; }
@@ -222,7 +224,7 @@ function renderBets(rows){
     var b = r.b;
     var legs = b.legs.map(function(l){
       var st = legState(l);
-      return '<div class="legline">'+esc(l.home)+' – '+esc(l.away)+' : <strong>'+esc(l.label)+'</strong>'+(st?' <span class="'+(st.ok?'ok':'ko')+'">'+esc(st.score)+(st.ok?' ✓':' ✗')+'</span>':'<br><small class="status">'+esc(BetResults.reasons[BetResults.legResult(l,allMatches(),Date.now()).reason]||'Résultat à vérifier')+'</small>')+'</div>';
+      return '<div class="legline">'+esc(l.home)+' – '+esc(l.away)+' : <strong>'+esc(l.label)+'</strong>'+(st?' <span class="'+(st.ok?'ok':'ko')+'">'+esc(st.score)+(st.ok?' ✓':' ✗')+'</span>':liveBadge(l)?liveBadge(l):'<br><small class="status">'+esc(BetResults.reasons[BetResults.legResult(l,allMatches(),Date.now()).reason]||'Résultat à vérifier')+'</small>')+'</div>';
     }).join('');
     var badge = r.st==='won' ? '<span class="badge won">Gagné '+signed(r.net)+'</span>' : r.st==='lost' ? '<span class="badge lost">Perdu '+signed(r.net)+'</span>' : r.st==='void'?'<span class="badge wait">Annulé / remboursé</span>' : '<span class="badge wait">En attente</span>';
     return '<tr data-bet-id="'+esc(b.id)+'"><td style="white-space:nowrap">'+esc(day(b.legs[0] ? b.legs[0].kickoff : b.createdAt))+'<br><span class="chip '+(String(b.source).indexOf('ticket-')===0?'algo':'perso')+'">'+(({'ticket-algo_mix':'ALGO','ticket-algo':'ALGO (ANCIEN)','ticket-safe':'SAFE','ticket-safe_but':'SAFE BUT','ticket-combi23':'COMBINÉ 2-3','ticket-tres_sur':'TRÈS SÛR'})[b.source]||(b.source==='algo'?'SIMULATION':b.source==='safe'?'SAFE DU JOUR':'PERSO'))+'</span></td>' +
@@ -306,6 +308,8 @@ function refreshScores(force){
   var dates=requiredDates(),pair=await Promise.all([Promise.all(dates.map(function(d){return readJson('data/days/'+d+'.json');})),readJson('data/scores-health.json')]),docs=pair[0],source=pair[1];
   var next=Object.assign({},matches),loaded=0;
   docs.forEach(function(doc,i){if(!doc||!Array.isArray(doc.matches))return;loaded++;Object.keys(next).forEach(function(k){if(Number.isFinite(Date.parse(next[k].kickoff))&&new Date(next[k].kickoff).toLocaleDateString('en-CA',{timeZone:TZ})===dates[i])delete next[k];});doc.matches.forEach(function(m){if(m&&m.id&&Number.isFinite(Date.parse(m.kickoff)))next[matchKey(m.id,m.kickoff)]=m;});});
+  // Scores en direct (ESPN, gratuit) pour les matchs en cours ou juste terminés : un ticket se règle dès le coup de sifflet final.
+  if(window.LiveScores)await LiveScores.refresh(Object.values(next)).catch(function(){});
   matches=next;scoresStatus=loaded===dates.length?'loaded':loaded?'partial':'unavailable';
   // Cache public final scores only; never rewrite the user's tickets or manual results.
   var cached={};Object.values(matches).filter(function(m){return BetResults.finalScore(m,Date.now());}).slice(-3000).forEach(function(m){cached[matchKey(m.id,m.kickoff)]=m;});store.set('scoreCache',cached);
@@ -319,6 +323,8 @@ function refreshScores(force){
  return refreshing;
 }
 document.getElementById('refreshScores').addEventListener('click',function(){refreshScores(true);});
+// Pendant les matchs, revérifier toutes les 2 min tant que la page est ouverte.
+setInterval(function(){if(document.visibilityState==='visible'&&Object.values(matches).some(function(m){return window.LiveScores&&LiveScores.wanted(m,Date.now());}))refreshScores(false);},120000);
 window.addEventListener('focus',function(){render();refreshScores(false);});
 window.addEventListener('pageshow',function(){refreshScores(false);});
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible'){render();refreshScores(false);}});

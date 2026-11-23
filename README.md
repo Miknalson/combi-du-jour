@@ -268,3 +268,14 @@ même avec un ROI positif. Les probabilités de marché ne sont pas une rentabil
 validée. L’export complet contient aussi le journal, ses versions et résultats locaux.
 
 Vérifications : `node tests/paper.test.cjs` et `node tests/paper-browser.cjs`.
+
+## Scores en direct
+
+- **Dans l’appli** (`live-scores.js`) : pendant les matchs, les pages Analyse, Tickets et Tableau de bord lisent les
+  tableaux publics d’ESPN (gratuits, sans clé ni crédit) toutes les minutes. Le score en cours s’affiche avec la minute ;
+  dès la fin du temps réglementaire, le score final est pris en compte et les tickets se règlent tout de suite
+  (un pari perdu suffit pour perdre le ticket). Prolongations et tirs au but attendent le relevé publié.
+- **Dans les données publiées** : le workflow tourne aussi toutes les 15 min de 12 h à minuit (Paris) en mode « scores
+  seulement » (`scripts/update_scores.py` puis règlement des tickets fictifs). Aucun crédit de cotes ni d’IA n’est utilisé ;
+  le site n’est republié que s’il y a un nouveau score.
+- Pologne, Serbie et Ukraine ne sont pas couvertes par ESPN : leurs scores restent relevés par la tâche de nuit.

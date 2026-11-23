@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=tidy5">
+<link rel="stylesheet" href="style.css?v=live1">
 </head>
 <body><nav aria-label="Alertes" style="max-width:1120px;margin:auto;padding:12px 20px"><a href="notifications.html">🔔 Mes alertes Algo / Safe</a></nav>
 <div class="wrap">
@@ -159,7 +159,8 @@
 <script src="paper-engine.js"></script><script src="safe-multi-engine.js"></script><script src="tres-sur-engine.js?v=1"></script>
 <script src="model.js"></script>
 <script src="model-view.js"></script>
-<script src="today-tickets.js?v=6"></script>
+<script src="live-scores.js?v=1"></script>
+<script src="today-tickets.js?v=7"></script>
 <script>
 (function(){
 "use strict";
@@ -476,7 +477,7 @@ function comboResult(c){
   return lost ? 'lost' : (allDone ? 'won' : 'wait');
 }
 function legBadge(l){
-  var sc=scoreOf(l.match); if(sc===null) return '';
+  var sc=scoreOf(l.match); if(sc===null) return window.LiveScores?LiveScores.badge(l.match):'';
   var ok=l.win(sc[0],sc[1]);
   return '<span class="res '+(ok?'won':'lost')+'">'+esc(l.match.score)+(ok?' ✓':' ✗')+'</span>';
 }
@@ -599,7 +600,7 @@ function renderMatches(dayMatches, combo){
     var leagueOff = settings.offLeagues.indexOf(m.league)>-1;
     return '<tr class="'+(inCombo[m.id]?'in-combo':'')+(off?' off':'')+'">' +
       '<td class="num">'+hhmm(m.kickoff)+'</td>' +
-      '<td><span class="lg">'+esc(m.league)+'</span>'+esc(m.home)+' – '+esc(m.away)+(m.score?' <span class="mono">('+esc(m.score)+')</span>':'')+'</td>' +
+      '<td><span class="lg">'+esc(m.league)+'</span>'+esc(m.home)+' – '+esc(m.away)+(m.score?' <span class="mono">('+esc(m.score)+')</span>':(window.LiveScores?LiveScores.badge(m):''))+'</td>' +
       '<td><div class="split" title="'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'"><span style="width:'+(p[0]*100)+'%;background:var(--home)"></span><span style="width:'+(p[1]*100)+'%;background:var(--draw)"></span><span style="width:'+(p[2]*100)+'%;background:var(--away)"></span></div>' +
         '<div class="mono" style="font-size:11.5px;color:var(--ink-2);margin-top:3px">'+pct(p[0])+' · '+pct(p[1])+' · '+pct(p[2])+'</div>' +
         (function(){ var gm=goalsModel(m,p,m.ou); return '<div class="mono" style="font-size:11.5px;color:var(--ink-3)">+1,5 : '+pct(gm.over[1.5])+' · +2,5 : '+pct(gm.over[2.5])+'</div>'; })() + '</td>' +
@@ -826,6 +827,8 @@ TicketReference.bindCopy(document.getElementById('ticketArea'),function(id){retu
     state.days=UefaCalendar.mergeDays(days,pair[2],Date.now()); state.loaded=true;
     statusEl.innerHTML = idx.updatedAt ? 'Cotes mises à jour<br><b>'+esc(new Date(idx.updatedAt).toLocaleString('fr-FR',{timeZone:TZ,weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}))+'</b>' : 'Aucune donnée';
     render();
+    // Scores en direct : matchs d'hier et d'aujourd'hui, re-rendu dès qu'un score change.
+    if(window.LiveScores)LiveScores.watch(function(){var today=parisDate(new Date()),yest=parisDate(new Date(Date.now()-86400000));return [].concat(((state.days[yest]||{}).matches)||[],((state.days[today]||{}).matches)||[]);},function(){render();});
   }catch(e){
     statusEl.textContent='Données indisponibles';
     document.getElementById('ticketArea').innerHTML='<div class="empty">Impossible de charger les matchs. Recharge la page dans quelques instants.</div>';
