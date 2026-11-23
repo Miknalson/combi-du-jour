@@ -1,7 +1,7 @@
 {
  "date": "2026-11-26",
- "updatedAt": "2026-11-18T07:49:06Z",
- "source": "The Odds API (moyenne des bookmakers européens)",
+ "updatedAt": "2026-11-22T07:51:20Z",
+ "source": "The Odds API (moyenne des bookmakers européens) + Oddsportal (secours)",
  "matches": [
   {
    "id": "uecl-fc-kairat-mjallby-aif",
@@ -54,9 +54,9 @@
    "kickoff": "2026-11-26T17:45Z",
    "home": "Salzburg",
    "away": "FC Ararat-Armenia",
-   "o1": 1.2,
-   "oX": 7.75,
-   "o2": 13.0
+   "o1": 1.18,
+   "oX": 8.25,
+   "o2": 15.0
   },
   {
    "id": "uel-dinamo-zagreb-bayer-leverkusen",
@@ -65,8 +65,8 @@
    "home": "Dinamo Zagreb",
    "away": "Bayer Leverkusen",
    "o1": 4.33,
-   "oX": 4.33,
-   "o2": 1.68
+   "oX": 4.2,
+   "o2": 1.7
   },
   {
    "id": "uel-viktoria-plzen-benfica",
@@ -76,7 +76,7 @@
    "away": "Benfica",
    "o1": 5.5,
    "oX": 4.8,
-   "o2": 1.5
+   "o2": 1.51
   },
   {
    "id": "uel-besiktas-jk-hapoel-be-er-sheva",
@@ -86,7 +86,7 @@
    "away": "Hapoel Be'er Sheva",
    "o1": 1.23,
    "oX": 7.0,
-   "o2": 11.0
+   "o2": 11.5
   },
   {
    "id": "uel-celta-vigo-bournemouth",
@@ -105,8 +105,8 @@
    "home": "Union Saint-Gilloise",
    "away": "Lech Poznań",
    "o1": 1.38,
-   "oX": 5.25,
-   "o2": 7.0
+   "oX": 5.5,
+   "o2": 7.5
   },
   {
    "id": "uel-marseille-pfc-levski-sofia",
@@ -115,7 +115,7 @@
    "home": "Marseille",
    "away": "PFC Levski Sofia",
    "o1": 1.44,
-   "oX": 4.75,
+   "oX": 4.8,
    "o2": 7.0
   },
   {
@@ -439,9 +439,9 @@
    "kickoff": "2026-11-26T20:00Z",
    "home": "OFI Crete",
    "away": "Anderlecht",
-   "o1": 4.1,
+   "o1": 4.3,
    "oX": 3.8,
-   "o2": 1.87
+   "o2": 1.8
   },
   {
    "id": "uel-sparta-prague-az-alkmaar",
@@ -469,8 +469,8 @@
    "kickoff": "2026-11-26T20:00Z",
    "home": "Torreense",
    "away": "Celtic",
-   "o1": 4.3,
-   "oX": 4.0,
+   "o1": 4.5,
+   "oX": 4.2,
    "o2": 1.71
   },
   {
@@ -499,9 +499,9 @@
    "kickoff": "2026-11-26T20:00Z",
    "home": "Sunderland",
    "away": "Jagiellonia Białystok",
-   "o1": 1.28,
-   "oX": 5.75,
-   "o2": 10.5
+   "o1": 1.27,
+   "oX": 6.25,
+   "o2": 11.0
   },
   {
    "id": "uel-juventus-omonoia-fc",
@@ -530,7 +530,7 @@
    "home": "NEC Nijmegen",
    "away": "Rennes",
    "o1": 3.0,
-   "oX": 3.8,
+   "oX": 3.85,
    "o2": 2.15
   },
   {

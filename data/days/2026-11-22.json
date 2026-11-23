@@ -1,6 +1,6 @@
 {
  "date": "2026-11-22",
- "updatedAt": "2026-11-21T07:50:54Z",
+ "updatedAt": "2026-11-22T07:51:20Z",
  "source": "The Odds API (moyenne des bookmakers européens) + Oddsportal (secours)",
  "matches": [
   {
@@ -9,9 +9,10 @@
    "kickoff": "2026-11-22T10:30Z",
    "home": "Erzurumspor",
    "away": "Goztepe",
-   "o1": 2.9,
-   "oX": 3.4,
-   "o2": 2.4
+   "o1": 2.75,
+   "oX": 3.3,
+   "o2": 2.7,
+   "score": "0-1"
   },
   {
    "id": "ukr-dynamo-kyiv-obolon",
@@ -19,9 +20,10 @@
    "kickoff": "2026-11-22T11:00Z",
    "home": "Dynamo Kyiv",
    "away": "Obolon",
-   "o1": 1.22,
-   "oX": 6.0,
-   "o2": 11.5
+   "o1": 1.23,
+   "oX": 5.5,
+   "o2": 11.5,
+   "score": "4-2"
   },
   {
    "id": "ukr-veres-rivne-bukovyna",
@@ -29,9 +31,10 @@
    "kickoff": "2026-11-22T11:00Z",
    "home": "Veres-Rivne",
    "away": "Bukovyna",
-   "o1": 3.8,
+   "o1": 3.7,
    "oX": 3.7,
-   "o2": 1.87
+   "o2": 1.9,
+   "score": "1-3"
   },
   {
    "id": "ere-fc-twente-enschede-willem-ii",
@@ -39,9 +42,10 @@
    "kickoff": "2026-11-22T11:15Z",
    "home": "FC Twente Enschede",
    "away": "Willem II",
-   "o1": 1.11,
+   "o1": 1.1,
    "oX": 12.0,
-   "o2": 21.0
+   "o2": 23.0,
+   "score": "2-1"
   },
   {
    "id": "pol-rakow-czestochowa-widzew-lodz",
@@ -50,8 +54,9 @@
    "home": "Raków Częstochowa",
    "away": "Widzew Łódź",
    "o1": 2.05,
-   "oX": 3.6,
-   "o2": 3.3
+   "oX": 3.65,
+   "o2": 3.6,
+   "score": "3-1"
   },
   {
    "id": "sa-juventus-venezia",
@@ -111,51 +116,13 @@
     "o2": 8.0,
     "ou": {}
    },
-   "leagueTitle": "SA"
-  },
-  {
-   "id": "cha-burnley-blackburn-rovers",
-   "league": "CHA",
-   "kickoff": "2026-11-22T12:00Z",
-   "home": "Burnley",
-   "away": "Blackburn Rovers",
-   "o1": 1.849,
-   "oX": 3.62,
-   "o2": 3.803,
-   "best": {
-    "2": {
-     "odds": 4.1,
-     "book": "LeoVegas (SE)"
-    },
-    "1": {
-     "odds": 1.93,
-     "book": "LeoVegas (SE)"
-    },
-    "X": {
-     "odds": 3.85,
-     "book": "BetOnline.ag"
-    }
-   },
-   "books": 18,
-   "referenceAt": "2026-11-21T07:44:56Z",
-   "sharp": {
-    "book": "Pinnacle",
-    "bookKey": "pinnacle",
-    "asOf": "2026-11-21T07:48:04Z",
-    "o1": 1.89,
-    "oX": 3.82,
-    "o2": 3.85,
-    "ou": {}
-   },
-   "mine": {
-    "book": "Winamax (FR)",
-    "bookKey": "winamax_fr",
-    "asOf": "2026-11-21T07:47:49Z",
-    "o1": 1.74,
-    "oX": 3.45,
-    "o2": 3.3,
-    "ou": {}
-   }
+   "leagueTitle": "SA",
+   "score": "4-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-22T14:28:04.569466+00:00"
   },
   {
    "id": "srb-radnicki-1923-cukaricki",
@@ -163,9 +130,60 @@
    "kickoff": "2026-11-22T12:00Z",
    "home": "Radnicki 1923",
    "away": "Cukaricki",
-   "o1": 1.95,
+   "o1": 2.0,
    "oX": 3.7,
-   "o2": 3.4
+   "o2": 3.4,
+   "score": "1-3"
+  },
+  {
+   "id": "cha-burnley-blackburn-rovers",
+   "league": "CHA",
+   "kickoff": "2026-11-22T12:00Z",
+   "home": "Burnley",
+   "away": "Blackburn Rovers",
+   "o1": 1.86,
+   "oX": 3.608,
+   "o2": 3.803,
+   "best": {
+    "2": {
+     "odds": 4.03,
+     "book": "Pinnacle"
+    },
+    "1": {
+     "odds": 1.95,
+     "book": "Codere (IT)"
+    },
+    "X": {
+     "odds": 3.85,
+     "book": "BetOnline.ag"
+    }
+   },
+   "books": 18,
+   "referenceAt": "2026-11-22T07:47:34Z",
+   "sharp": {
+    "book": "Pinnacle",
+    "bookKey": "pinnacle",
+    "asOf": "2026-11-22T07:48:07Z",
+    "o1": 1.93,
+    "oX": 3.79,
+    "o2": 4.03,
+    "ou": {}
+   },
+   "mine": {
+    "book": "Winamax (FR)",
+    "bookKey": "winamax_fr",
+    "asOf": "2026-11-22T07:47:50Z",
+    "o1": 1.84,
+    "oX": 3.6,
+    "o2": 3.4,
+    "ou": {}
+   },
+   "score": "2-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-22T14:28:04.569466+00:00"
   },
   {
    "id": "bel-sk-beveren-gent",
@@ -173,9 +191,10 @@
    "kickoff": "2026-11-22T12:30Z",
    "home": "SK Beveren",
    "away": "Gent",
-   "o1": 3.6,
-   "oX": 3.55,
-   "o2": 2.0
+   "o1": 4.1,
+   "oX": 3.7,
+   "o2": 1.9,
+   "score": "1-0"
   },
   {
    "id": "bl2-1-fc-kaiserslautern-dynamo-dresden",
@@ -219,7 +238,8 @@
     "oX": 3.3,
     "o2": 2.7,
     "ou": {}
-   }
+   },
+   "score": "2-2"
   },
   {
    "id": "bl2-fc-energie-cottbus-hertha-berlin",
@@ -263,7 +283,8 @@
     "oX": 4.1,
     "o2": 1.5,
     "ou": {}
-   }
+   },
+   "score": "0-4"
   },
   {
    "id": "bl2-karlsruher-sc-vfl-osnabruck",
@@ -307,7 +328,8 @@
     "oX": 3.45,
     "o2": 2.6,
     "ou": {}
-   }
+   },
+   "score": "0-0"
   },
   {
    "id": "den-ac-horsens-silkeborg-if",
@@ -315,9 +337,10 @@
    "kickoff": "2026-11-22T13:00Z",
    "home": "AC Horsens",
    "away": "Silkeborg IF",
-   "o1": 2.25,
-   "oX": 3.8,
-   "o2": 2.95
+   "o1": 2.3,
+   "oX": 3.75,
+   "o2": 2.95,
+   "score": "3-1"
   },
   {
    "id": "den-viborg-ff-randers-fc",
@@ -325,9 +348,10 @@
    "kickoff": "2026-11-22T13:00Z",
    "home": "Viborg FF",
    "away": "Randers FC",
-   "o1": 1.58,
-   "oX": 4.4,
-   "o2": 5.0
+   "o1": 1.55,
+   "oX": 4.6,
+   "o2": 5.25,
+   "score": "0-0"
   },
   {
    "id": "liga-barcelona-villarreal",
@@ -391,7 +415,8 @@
     "o2": 9.0,
     "ou": {}
    },
-   "leagueTitle": "LIGA"
+   "leagueTitle": "LIGA",
+   "score": "3-2"
   },
   {
    "id": "liga2-cordoba-oviedo",
@@ -435,7 +460,8 @@
     "oX": 3.45,
     "o2": 3.3,
     "ou": {}
-   }
+   },
+   "score": "3-0"
   },
   {
    "id": "swe-bk-hacken-if-elfsborg",
@@ -445,7 +471,8 @@
    "away": "IF Elfsborg",
    "o1": 1.9,
    "oX": 4.0,
-   "o2": 3.8
+   "o2": 3.8,
+   "score": "2-1"
   },
   {
    "id": "swe-ik-sirius-djurgardens-if",
@@ -455,7 +482,8 @@
    "away": "Djurgardens IF",
    "o1": 2.3,
    "oX": 3.65,
-   "o2": 2.87
+   "o2": 2.87,
+   "score": "1-0"
   },
   {
    "id": "tur-kasimpasa-sk-alanyaspor",
@@ -463,9 +491,10 @@
    "kickoff": "2026-11-22T13:00Z",
    "home": "Kasimpasa SK",
    "away": "Alanyaspor",
-   "o1": 2.0,
-   "oX": 3.5,
-   "o2": 3.7
+   "o1": 1.87,
+   "oX": 3.6,
+   "o2": 4.1,
+   "score": "2-1"
   },
   {
    "id": "tur-konyaspor-besiktas-jk",
@@ -473,9 +502,10 @@
    "kickoff": "2026-11-22T13:00Z",
    "home": "Konyaspor",
    "away": "Besiktas JK",
-   "o1": 5.0,
-   "oX": 4.1,
-   "o2": 1.62
+   "o1": 5.5,
+   "oX": 4.2,
+   "o2": 1.6,
+   "score": "2-4"
   },
   {
    "id": "ere-ajax-ado-den-haag",
@@ -483,9 +513,10 @@
    "kickoff": "2026-11-22T13:30Z",
    "home": "Ajax",
    "away": "ADO Den Haag",
-   "o1": 1.19,
-   "oX": 8.25,
-   "o2": 15.0
+   "o1": 1.18,
+   "oX": 8.5,
+   "o2": 13.0,
+   "score": "3-0"
   },
   {
    "id": "ere-sparta-rotterdam-az-alkmaar",
@@ -495,7 +526,8 @@
    "away": "AZ Alkmaar",
    "o1": 4.33,
    "oX": 4.2,
-   "o2": 1.77
+   "o2": 1.8,
+   "score": "1-5"
   },
   {
    "id": "pol-gks-katowice-lech-poznan",
@@ -503,9 +535,10 @@
    "kickoff": "2026-11-22T13:45Z",
    "home": "GKS Katowice",
    "away": "Lech Poznań",
-   "o1": 3.1,
-   "oX": 3.9,
-   "o2": 2.05
+   "o1": 2.9,
+   "oX": 3.95,
+   "o2": 2.15,
+   "score": "0-1"
   },
   {
    "id": "l1-paris-fc-angers",
@@ -513,9 +546,10 @@
    "kickoff": "2026-11-22T14:00Z",
    "home": "Paris FC",
    "away": "Angers",
-   "o1": 1.35,
-   "oX": 5.5,
-   "o2": 9.0
+   "o1": 1.32,
+   "oX": 5.75,
+   "o2": 9.0,
+   "score": "4-0"
   },
   {
    "id": "pl-hull-city-brighton-and-hove-albion",
@@ -576,7 +610,8 @@
     "ou": {}
    },
    "leagueTitle": "PL",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-0"
   },
   {
    "id": "por2-vizela-feirense",
@@ -585,8 +620,9 @@
    "home": "Vizela",
    "away": "Feirense",
    "o1": 1.95,
-   "oX": 3.35,
-   "o2": 3.9
+   "oX": 3.4,
+   "o2": 4.0,
+   "score": "2-2"
   },
   {
    "id": "sa-bologna-udinese",
@@ -642,7 +678,8 @@
     "o2": 4.1,
     "ou": {}
    },
-   "leagueTitle": "SA"
+   "leagueTitle": "SA",
+   "score": "1-1"
   },
   {
    "id": "sa-sassuolo-genoa",
@@ -698,7 +735,8 @@
     "o2": 2.4,
     "ou": {}
    },
-   "leagueTitle": "SA"
+   "leagueTitle": "SA",
+   "score": "0-2"
   },
   {
    "id": "srb-imt-novi-beograd-partizan",
@@ -706,9 +744,10 @@
    "kickoff": "2026-11-22T14:00Z",
    "home": "IMT Novi Beograd",
    "away": "Partizan",
-   "o1": 2.7,
-   "oX": 3.55,
-   "o2": 2.4
+   "o1": 2.6,
+   "oX": 3.45,
+   "o2": 2.5,
+   "score": "2-1"
   },
   {
    "id": "bl-augsburg-fsv-mainz-05",
@@ -716,9 +755,10 @@
    "kickoff": "2026-11-22T14:30Z",
    "home": "Augsburg",
    "away": "FSV Mainz 05",
-   "o1": 2.65,
+   "o1": 2.7,
    "oX": 4.0,
-   "o2": 2.45
+   "o2": 2.45,
+   "score": "3-1"
   },
   {
    "id": "bel-kv-kortrijk-union-saint-gilloise",
@@ -726,9 +766,10 @@
    "kickoff": "2026-11-22T15:00Z",
    "home": "KV Kortrijk",
    "away": "Union Saint-Gilloise",
-   "o1": 7.5,
-   "oX": 5.0,
-   "o2": 1.41
+   "o1": 8.0,
+   "oX": 5.25,
+   "o2": 1.38,
+   "score": "0-1"
   },
   {
    "id": "den-sonderjyske-odense-bk",
@@ -736,9 +777,10 @@
    "kickoff": "2026-11-22T15:00Z",
    "home": "SonderjyskE",
    "away": "Odense BK",
-   "o1": 2.8,
+   "o1": 2.9,
    "oX": 3.9,
-   "o2": 2.3
+   "o2": 2.25,
+   "score": "1-2"
   },
   {
    "id": "liga-real-racing-club-de-santander-real-sociedad",
@@ -798,7 +840,8 @@
     "o2": 1.96,
     "ou": {}
    },
-   "leagueTitle": "LIGA"
+   "leagueTitle": "LIGA",
+   "score": "3-2"
   },
   {
    "id": "liga2-sporting-gijon-las-palmas",
@@ -842,7 +885,8 @@
     "oX": 3.25,
     "o2": 3.35,
     "ou": {}
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "rou-uta-arad-univ-craiova",
@@ -850,9 +894,10 @@
    "kickoff": "2026-11-22T15:30Z",
    "home": "UTA Arad",
    "away": "Univ. Craiova",
-   "o1": 4.6,
-   "oX": 3.65,
-   "o2": 1.76
+   "o1": 4.5,
+   "oX": 3.75,
+   "o2": 1.76,
+   "score": "2-6"
   },
   {
    "id": "swe-if-brommapojkarna-halmstads-bk",
@@ -862,7 +907,8 @@
    "away": "Halmstads BK",
    "o1": 2.15,
    "oX": 3.75,
-   "o2": 3.1
+   "o2": 3.1,
+   "score": "0-3"
   },
   {
    "id": "ere-go-ahead-eagles-fortuna-sittard",
@@ -870,9 +916,10 @@
    "kickoff": "2026-11-22T15:45Z",
    "home": "Go Ahead Eagles",
    "away": "Fortuna Sittard",
-   "o1": 1.66,
-   "oX": 4.33,
-   "o2": 5.0
+   "o1": 1.85,
+   "oX": 4.0,
+   "o2": 4.0,
+   "score": "0-1"
   },
   {
    "id": "srb-macva-vojvodina",
@@ -881,8 +928,9 @@
    "home": "Macva",
    "away": "Vojvodina",
    "o1": 5.75,
-   "oX": 4.3,
-   "o2": 1.5
+   "oX": 4.1,
+   "o2": 1.5,
+   "score": "1-5"
   },
   {
    "id": "tur-trabzonspor-eyupspor",
@@ -890,9 +938,10 @@
    "kickoff": "2026-11-22T16:00Z",
    "home": "Trabzonspor",
    "away": "Eyüpspor",
-   "o1": 1.16,
-   "oX": 8.5,
-   "o2": 16.0
+   "o1": 1.14,
+   "oX": 9.5,
+   "o2": 18.0,
+   "score": "1-0"
   },
   {
    "id": "l1-lorient-rennes",
@@ -900,9 +949,10 @@
    "kickoff": "2026-11-22T16:15Z",
    "home": "Lorient",
    "away": "Rennes",
-   "o1": 2.85,
-   "oX": 3.5,
-   "o2": 2.45
+   "o1": 3.0,
+   "oX": 3.3,
+   "o2": 2.45,
+   "score": "1-1"
   },
   {
    "id": "bl-werder-bremen-hamburger-sv",
@@ -910,9 +960,10 @@
    "kickoff": "2026-11-22T16:30Z",
    "home": "Werder Bremen",
    "away": "Hamburger SV",
-   "o1": 1.68,
-   "oX": 4.2,
-   "o2": 4.8
+   "o1": 1.57,
+   "oX": 4.5,
+   "o2": 5.25,
+   "score": "4-0"
   },
   {
    "id": "pl-liverpool-manchester-united",
@@ -977,7 +1028,8 @@
     "ou": {}
    },
    "leagueTitle": "PL",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "4-0"
   },
   {
    "id": "pol-wisla-plock-legia-warszawa",
@@ -985,9 +1037,10 @@
    "kickoff": "2026-11-22T16:30Z",
    "home": "Wisła Płock",
    "away": "Legia Warszawa",
-   "o1": 3.0,
-   "oX": 3.5,
-   "o2": 2.25
+   "o1": 3.05,
+   "oX": 3.45,
+   "o2": 2.25,
+   "score": "0-1"
   },
   {
    "id": "den-fc-nordsjaelland-fc-copenhagen",
@@ -995,9 +1048,10 @@
    "kickoff": "2026-11-22T17:00Z",
    "home": "FC Nordsjaelland",
    "away": "FC Copenhagen",
-   "o1": 2.65,
+   "o1": 2.45,
    "oX": 3.75,
-   "o2": 2.55
+   "o2": 2.75,
+   "score": "5-0"
   },
   {
    "id": "sa-ac-milan-frosinone",
@@ -1057,7 +1111,8 @@
     "o2": 4.5,
     "ou": {}
    },
-   "leagueTitle": "SA"
+   "leagueTitle": "SA",
+   "score": "5-1"
   },
   {
    "id": "bel-anderlecht-leuven",
@@ -1067,7 +1122,8 @@
    "away": "Leuven",
    "o1": 1.49,
    "oX": 4.75,
-   "o2": 6.25
+   "o2": 6.0,
+   "score": "1-0"
   },
   {
    "id": "liga-ca-osasuna-malaga",
@@ -1123,7 +1179,8 @@
     "o2": 4.1,
     "ou": {}
    },
-   "leagueTitle": "LIGA"
+   "leagueTitle": "LIGA",
+   "score": "1-0"
   },
   {
    "id": "liga2-celta-fortuna-real-valladolid-cf",
@@ -1158,7 +1215,8 @@
     "oX": 3.25,
     "o2": 1.9,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "liga2-girona-fc-sd-eibar",
@@ -1202,7 +1260,8 @@
     "oX": 3.4,
     "o2": 3.85,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "bel-lommel-sk-standard-liege",
@@ -1210,9 +1269,10 @@
    "kickoff": "2026-11-22T18:15Z",
    "home": "Lommel SK",
    "away": "Standard Liege",
-   "o1": 3.2,
-   "oX": 3.8,
-   "o2": 2.1
+   "o1": 3.25,
+   "oX": 3.75,
+   "o2": 2.1,
+   "score": "1-2"
   },
   {
    "id": "rou-fc-arges-fcsb",
@@ -1220,9 +1280,10 @@
    "kickoff": "2026-11-22T18:30Z",
    "home": "FC Arges",
    "away": "FCSB",
-   "o1": 3.5,
-   "oX": 3.5,
-   "o2": 2.05
+   "o1": 4.1,
+   "oX": 3.6,
+   "o2": 1.93,
+   "score": "0-0"
   },
   {
    "id": "l1-marseille-le-mans-fc",
@@ -1231,8 +1292,9 @@
    "home": "Marseille",
    "away": "Le Mans FC",
    "o1": 1.47,
-   "oX": 4.8,
-   "o2": 6.5
+   "oX": 5.0,
+   "o2": 6.5,
+   "score": "2-3"
   },
   {
    "id": "sa-atalanta-bc-inter-milan",
@@ -1292,7 +1354,8 @@
     "o2": 1.48,
     "ou": {}
    },
-   "leagueTitle": "SA"
+   "leagueTitle": "SA",
+   "score": "4-4"
   },
   {
    "id": "liga-getafe-atletico-madrid",
@@ -1348,7 +1411,8 @@
     "o2": 1.52,
     "ou": {}
    },
-   "leagueTitle": "LIGA"
+   "leagueTitle": "LIGA",
+   "score": "0-3"
   },
   {
    "id": "liga2-burgos-cf-albacete",
@@ -1383,8 +1447,10 @@
     "oX": 3.1,
     "o2": 3.2,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   }
  ],
- "marketsUpdatedAt": "2026-11-22T05:45:26.586500+00:00"
+ "marketsUpdatedAt": "2026-11-22T05:45:26.586500+00:00",
+ "scoresUpdatedAt": "2026-11-22T14:28:04.569466+00:00"
 }

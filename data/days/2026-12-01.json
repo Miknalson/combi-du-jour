@@ -1,0 +1,17 @@
+{
+ "date": "2026-12-01",
+ "updatedAt": "2026-11-22T07:51:20Z",
+ "source": "Oddsportal (secours)",
+ "matches": [
+  {
+   "id": "pl-coventry-city-ipswich",
+   "league": "PL",
+   "kickoff": "2026-12-01T20:00Z",
+   "home": "Coventry City",
+   "away": "Ipswich",
+   "o1": 2.3,
+   "oX": 3.6,
+   "o2": 2.9
+  }
+ ]
+}
