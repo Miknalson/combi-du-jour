@@ -46,6 +46,31 @@
           "matches": 55
         }
       ]
+    },
+    {
+      "id": "safe-but-v1|2026-11-23|football",
+      "day": "2026-11-23",
+      "method": "safe_but",
+      "sport": "football",
+      "version": "safe-but-v1",
+      "createdAt": "2026-11-23T07:53:18.987Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "oddsNote": "cote marché −5 %, à vérifier chez Winamax",
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "updatedAt": "2026-11-23T07:50:57Z",
+          "source": "The Odds API (moyenne des bookmakers européens) + oddsportal + Oddsportal (secours)",
+          "matches": 14
+        }
+      ]
     }
   ]
 }
