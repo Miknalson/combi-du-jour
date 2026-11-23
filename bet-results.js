@@ -17,6 +17,7 @@ function lineValid(value){return Number.isFinite(value)&&Math.abs(value*2-Math.r
 function settleCode(code,h,a,leg){
  if(typeof code!=='string')return null;leg=leg||{};
  if(code.includes('&')){var parts=code.split('&').map(function(c){return settleCode(c,h,a,leg);});return parts.includes(false)?false:parts.every(function(x){return x===true;})?true:null;}
+ if(code==='BTTS_Y')return h>0&&a>0;if(code==='BTTS_N')return h===0||a===0;
  if(code==='1')return h>a;if(code==='2')return a>h;if(code==='X')return h===a;if(code==='1X')return h>=a;if(code==='X2')return a>=h;if(code==='12')return h!==a;
  var exact=/^CS(\d+)-(\d+)$/.exec(code);if(exact)return h===Number(exact[1])&&a===Number(exact[2]);
  var total=/^([OU])(\d+(?:\.\d+)?)$/.exec(code);if(total){var line=Number(total[2]);return lineValid(line)?compare(total[1]==='O'?h+a-line:line-h-a):null;}

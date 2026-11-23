@@ -41,6 +41,10 @@ on:
       - 'combi23-engine.js'
       - 'scripts/combi23.cjs'
       - 'tests/combi23.test.cjs'
+      - 'algo-mix-engine.js'
+      - 'scripts/algo_mix.cjs'
+      - 'tests/algo-mix.test.cjs'
+      - 'tests/test_oddspapi_football.py'
       - 'tests/safe-but.test.cjs'
       - 'news-filter.js'
       - 'scripts/news_filter.cjs'
@@ -96,8 +100,10 @@ jobs:
           node tests/football-markets.test.cjs
           node tests/tres-sur.test.cjs
           node tests/news-filter.test.cjs
+          node tests/algo-mix.test.cjs
           python -m unittest discover -s tests -p 'test_football_markets.py'
           python -m unittest discover -s tests -p 'test_scores.py'
+          python -m unittest discover -s tests -p 'test_oddspapi_football.py'
           python -m unittest discover -s tests -p 'test_collection_health.py'
       - name: Détecter une modification du collecteur
         id: quote_changes
@@ -134,7 +140,7 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/collect_quotes.py --max-credits 18
-      - name: Relever basket et tennis Winamax via OddsPapi (une fois par jour)
+      - name: Relever via OddsPapi les buts Winamax du foot (chaque jour), basket et tennis (un jour sur deux)
         if: github.event.schedule != '25 23 * * *'
         continue-on-error: true
         env:
@@ -166,6 +172,9 @@ jobs:
       - name: Consigner le ticket Combiné 2 à 3 fictif
         continue-on-error: true
         run: node scripts/combi23.cjs
+      - name: Consigner le ticket Algo fictif (victoires + buts + les deux marquent)
+        continue-on-error: true
+        run: node scripts/algo_mix.cjs
       - name: Notifier les propositions sans passer de pari
         if: github.event.schedule != '25 23 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         id: notifications
@@ -189,6 +198,7 @@ jobs:
           if [ -f data/tres-sur-tests.json ]; then git add data/tres-sur-tests.json; fi
           if [ -f data/safe-but-tests.json ]; then git add data/safe-but-tests.json; fi
           if [ -f data/combi23-tests.json ]; then git add data/combi23-tests.json; fi
+          if [ -f data/algo-mix-tests.json ]; then git add data/algo-mix-tests.json; fi
           if [ -f data/oddspapi-budget.json ]; then git add data/oddspapi-budget.json; fi
           if [ -d data/oddspapi ]; then git add data/oddspapi; fi
           if [ -f data/news-checks.json ]; then git add data/news-checks.json; fi
