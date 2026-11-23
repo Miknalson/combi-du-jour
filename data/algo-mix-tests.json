@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "rules": {
+      "version": "algo-mix-v1",
+      "sport": "football",
+      "mode": "paper",
+      "realMoneyEnabled": false,
+      "stake": 50,
+      "currency": "EUR",
+      "minOdds": 3,
+      "maxOdds": 5,
+      "minLegs": 2,
+      "maxLegs": 5,
+      "minLegProbability": 0.5,
+      "minLegOdds": 1.1,
+      "maxPool": 14,
+      "families": [
+        "h2h",
+        "totals",
+        "btts"
+      ],
+      "codes": [
+        "1",
+        "2",
+        "O2.5",
+        "U2.5",
+        "BTTS_Y",
+        "BTTS_N"
+      ],
+      "quoteMaxAgeMinutes": 60,
+      "quotes": "cotes Winamax France relevées par API : victoires, plus/moins 2,5 buts, les deux équipes marquent"
+    },
+    "startedAt": "2026-11-23T06:43:02.548Z"
+  },
+  "records": []
+}

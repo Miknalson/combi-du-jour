@@ -2,9 +2,8 @@
   "month": "2026-11",
   "used": 15,
   "lastDay": "2026-11-23",
-  "updatedAt": "2026-11-23T06:19:10.459622+00:00",
+  "updatedAt": "2026-11-23T06:43:00.277522+00:00",
   "summary": {
-    "basket": "3 matchs avec cotes Winamax (3 programmés)",
-    "tennis": "échec : fixtures : HTTP 404 {\"error\":{\"message\":\"No fixtures found for the specified criteria.\",\"code\":\"FIXTURE_NOT_FOUND\",\"deta"
+    "football": "en attente du relevé football du jour"
   }
 }
