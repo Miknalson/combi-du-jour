@@ -19,6 +19,7 @@ on:
       - 'tests/test_scores.py'
       - 'scripts/check_quotes.py'
       - 'scripts/collect_quotes.py'
+      - 'scripts/collect_oddspapi.py'
       - 'feed-health.js'
       - 'tests/test_collection_health.py'
       - 'tests/feed-health-browser.cjs'
@@ -133,6 +134,12 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/collect_quotes.py --max-credits 18
+      - name: Relever basket et tennis Winamax via OddsPapi (une fois par jour)
+        if: github.event.schedule != '25 23 * * *'
+        continue-on-error: true
+        env:
+          ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
+        run: python scripts/collect_oddspapi.py
       - name: Actualiser les scores de football terminés
         id: scores
         continue-on-error: true
@@ -182,6 +189,8 @@ jobs:
           if [ -f data/tres-sur-tests.json ]; then git add data/tres-sur-tests.json; fi
           if [ -f data/safe-but-tests.json ]; then git add data/safe-but-tests.json; fi
           if [ -f data/combi23-tests.json ]; then git add data/combi23-tests.json; fi
+          if [ -f data/oddspapi-budget.json ]; then git add data/oddspapi-budget.json; fi
+          if [ -d data/oddspapi ]; then git add data/oddspapi; fi
           if [ -f data/news-checks.json ]; then git add data/news-checks.json; fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Cotes Winamax multisports et mises fictives"

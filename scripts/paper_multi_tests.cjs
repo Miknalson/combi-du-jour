@@ -5,7 +5,16 @@ const names=['sport-catalog.js','safe-engine.js','paper-engine.js','safe-multi-e
 function hash(name){return crypto.createHash('sha256').update(fs.readFileSync(path.join(root,name))).digest('hex');}function save(name,data){fs.writeFileSync(name,JSON.stringify(data,null,2)+'\n');}
 const hashes=Object.fromEntries(names.map(n=>[n,hash(n)]));
 const old=fs.existsSync(file)?JSON.parse(fs.readFileSync(file,'utf8')):{schemaVersion:2,manifest:{rules:P.rules,sourceHashes:hashes,startedAt:new Date(now).toISOString()},records:[]};
-if(JSON.stringify(old.manifest.rules)!==JSON.stringify(P.rules)||JSON.stringify(old.manifest.sourceHashes)!==JSON.stringify(hashes)){save(statusFile,{status:'suspended',updatedAt:new Date(now).toISOString(),message:'Version ou collecte modifiée. Journal v2 conservé ; aucune nouvelle mise fictive enregistrée.'});process.exit(1);}
+// Modifications reconnues sans effet sur les tickets (affichage seulement) : le journal continue avec les nouvelles empreintes.
+const AMENDMENTS=[{id:'2026-11-23-affichage-sports',files:['sport-catalog.js','scripts/paper_multi_tests.cjs'],reason:'Rugby, football américain et hockey masqués dans l’interface ; règlement des tickets en attente même si le journal est suspendu. Règles et collecte inchangées.'}];
+function changed(){return names.filter(n=>(old.manifest.sourceHashes||{})[n]!==hashes[n]);}
+if(JSON.stringify(old.manifest.rules)===JSON.stringify(P.rules)&&changed().length){const done=old.manifest.amendments||[],a=AMENDMENTS.find(a=>!done.some(d=>d.id===a.id)&&changed().every(n=>a.files.includes(n)));
+ if(a){old.manifest.amendments=done.concat([{id:a.id,appliedAt:new Date(now).toISOString(),files:changed(),reason:a.reason}]);old.manifest.sourceHashes=hashes;}}
+function scoresFor(j){const out=[];for(const day of new Set(j.records.map(r=>r.day))){try{out.push(...JSON.parse(fs.readFileSync(path.join(root,'data/days',day+'.json'),'utf8')).matches);}catch(e){}}return out;}
+if(JSON.stringify(old.manifest.rules)!==JSON.stringify(P.rules)||JSON.stringify(old.manifest.sourceHashes)!==JSON.stringify(hashes)){
+ // Pas de nouveau ticket, mais les tickets déjà enregistrés sont quand même réglés avec les scores.
+ const sc=scoresFor(old);old.records=old.records.map(r=>P.settle(r,sc,Safe.paris(now)));save(file,old);
+ save(statusFile,{status:'suspended',updatedAt:new Date(now).toISOString(),message:'Version ou collecte modifiée. Journal v2 conservé et tickets en attente réglés ; aucune nouvelle mise fictive enregistrée.'});process.exit(1);}
 const docs=Safe.SPORTS.map(s=>{try{return JSON.parse(fs.readFileSync(path.join(root,'data/sports',s+'.json'),'utf8'));}catch(e){return null;}});
 const available=docs.filter(d=>d&&d.status==='ok'&&Safe.SPORTS.includes(d.sport)&&now-Date.parse(d.updatedAt)>=0&&now-Date.parse(d.updatedAt)<=3600000&&(!d.partial||(d.matches||[]).some(m=>Safe.paris(m.kickoff)===Safe.paris(now)&&now-Date.parse(m.asOf)>=0&&now-Date.parse(m.asOf)<=3600000))).map(d=>d.sport);
 let journal=P.append(old,P.build(docs.map(d=>d&&available.includes(d.sport)?d:null),now),now,available),scores=[];
