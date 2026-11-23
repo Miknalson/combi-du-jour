@@ -1,6 +1,6 @@
 {
  "date": "2026-11-23",
- "updatedAt": "2026-11-22T07:51:20Z",
+ "updatedAt": "2026-11-23T07:50:57Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal + Oddsportal (secours)",
  "matches": [
   {
@@ -9,7 +9,7 @@
    "kickoff": "2026-11-23T11:00Z",
    "home": "Chornomorets Odesa",
    "away": "Epitsentr",
-   "o1": 2.85,
+   "o1": 2.75,
    "oX": 3.2,
    "o2": 2.5
   },
@@ -19,9 +19,9 @@
    "kickoff": "2026-11-23T11:00Z",
    "home": "LNZ Cherkasy",
    "away": "Polissya Zhytomyr",
-   "o1": 3.7,
+   "o1": 3.8,
    "oX": 3.1,
-   "o2": 2.1
+   "o2": 2.05
   },
   {
    "id": "tur-basaksehir-corum-fk",
@@ -31,7 +31,7 @@
    "away": "Corum FK",
    "o1": 1.9,
    "oX": 3.8,
-   "o2": 3.8
+   "o2": 3.6
   },
   {
    "id": "den-brondby-if-fc-midtjylland",
@@ -39,9 +39,9 @@
    "kickoff": "2026-11-23T18:00Z",
    "home": "Brondby IF",
    "away": "FC Midtjylland",
-   "o1": 2.45,
+   "o1": 2.5,
    "oX": 4.0,
-   "o2": 2.65
+   "o2": 2.6
   },
   {
    "id": "pol-wieczysta-krakow-motor-lublin",
@@ -49,9 +49,9 @@
    "kickoff": "2026-11-23T18:00Z",
    "home": "Wieczysta Kraków",
    "away": "Motor Lublin",
-   "o1": 2.35,
-   "oX": 3.9,
-   "o2": 2.65
+   "o1": 2.5,
+   "oX": 3.95,
+   "o2": 2.55
   },
   {
    "id": "rou-sepsi-sf-gheorghe-fc-rapid-bucuresti",
@@ -59,9 +59,9 @@
    "kickoff": "2026-11-23T18:00Z",
    "home": "Sepsi Sf. Gheorghe",
    "away": "FC Rapid Bucuresti",
-   "o1": 3.75,
-   "oX": 3.45,
-   "o2": 1.98
+   "o1": 4.1,
+   "oX": 3.65,
+   "o2": 1.86
   },
   {
    "id": "swe-hammarby-if-ifk-goteborg",
@@ -69,8 +69,8 @@
    "kickoff": "2026-11-23T18:00Z",
    "home": "Hammarby IF",
    "away": "IFK Goteborg",
-   "o1": 1.24,
-   "oX": 7.0,
+   "o1": 1.22,
+   "oX": 7.5,
    "o2": 11.0
   },
   {
@@ -79,9 +79,9 @@
    "kickoff": "2026-11-23T18:00Z",
    "home": "Örgryte IS",
    "away": "Kalmar FF",
-   "o1": 3.3,
+   "o1": 3.35,
    "oX": 3.6,
-   "o2": 2.05
+   "o2": 2.1
   },
   {
    "id": "liga2-ad-ceuta-fc-almeria",
@@ -133,8 +133,8 @@
    "kickoff": "2026-11-23T19:45Z",
    "home": "Nantes",
    "away": "Grenoble",
-   "o1": 1.47,
-   "oX": 4.2,
+   "o1": 1.46,
+   "oX": 4.33,
    "o2": 7.5
   },
   {
@@ -143,7 +143,7 @@
    "kickoff": "2026-11-23T19:45Z",
    "home": "Sochaux",
    "away": "USL Dunkerque",
-   "o1": 2.35,
+   "o1": 2.4,
    "oX": 3.4,
    "o2": 2.95
   },

@@ -1,0 +1,107 @@
+{
+ "date": "2026-12-02",
+ "updatedAt": "2026-11-23T07:52:36Z",
+ "source": "oddsportal (secours)",
+ "matches": [
+  {
+   "id": "liga-real-sociedad-real-madrid",
+   "league": "LIGA",
+   "kickoff": "2026-12-02T18:00Z",
+   "home": "Real Sociedad",
+   "away": "Real Madrid",
+   "o1": 5.75,
+   "oX": 5.0,
+   "o2": 1.48
+  },
+  {
+   "id": "pl-chelsea-crystal-palace",
+   "league": "PL",
+   "kickoff": "2026-12-02T19:30Z",
+   "home": "Chelsea",
+   "away": "Crystal Palace",
+   "o1": 1.62,
+   "oX": 4.4,
+   "o2": 4.8
+  },
+  {
+   "id": "pl-hull-city-nottingham-forest",
+   "league": "PL",
+   "kickoff": "2026-12-02T19:30Z",
+   "home": "Hull City",
+   "away": "Nottingham Forest",
+   "o1": 3.7,
+   "oX": 3.5,
+   "o2": 2.0
+  },
+  {
+   "id": "pl-manchester-city-leeds-united",
+   "league": "PL",
+   "kickoff": "2026-12-02T19:30Z",
+   "home": "Manchester City",
+   "away": "Leeds United",
+   "o1": 1.53,
+   "oX": 4.5,
+   "o2": 5.5
+  },
+  {
+   "id": "pl-liverpool-sunderland",
+   "league": "PL",
+   "kickoff": "2026-12-02T19:30Z",
+   "home": "Liverpool",
+   "away": "Sunderland",
+   "o1": 1.5,
+   "oX": 4.75,
+   "o2": 6.5
+  },
+  {
+   "id": "pl-brentford-arsenal",
+   "league": "PL",
+   "kickoff": "2026-12-02T20:15Z",
+   "home": "Brentford",
+   "away": "Arsenal",
+   "o1": 4.5,
+   "oX": 3.8,
+   "o2": 1.8
+  },
+  {
+   "id": "pl-aston-villa-everton",
+   "league": "PL",
+   "kickoff": "2026-12-02T20:15Z",
+   "home": "Aston Villa",
+   "away": "Everton",
+   "o1": 2.0,
+   "oX": 3.6,
+   "o2": 3.6
+  },
+  {
+   "id": "pl-bournemouth-brighton-and-hove-albion",
+   "league": "PL",
+   "kickoff": "2026-12-02T20:15Z",
+   "home": "Bournemouth",
+   "away": "Brighton and Hove Albion",
+   "o1": 2.45,
+   "oX": 3.5,
+   "o2": 2.75
+  },
+  {
+   "id": "pl-newcastle-united-manchester-united",
+   "league": "PL",
+   "kickoff": "2026-12-02T20:15Z",
+   "home": "Newcastle United",
+   "away": "Manchester United",
+   "o1": 2.65,
+   "oX": 3.8,
+   "o2": 2.45
+  },
+  {
+   "id": "liga-barcelona-atletico-madrid",
+   "league": "LIGA",
+   "kickoff": "2026-12-02T20:30Z",
+   "home": "Barcelona",
+   "away": "Atlético Madrid",
+   "o1": 1.42,
+   "oX": 5.0,
+   "o2": 6.0
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "date": "2026-12-03",
+ "updatedAt": "2026-11-23T07:52:36Z",
+ "source": "oddsportal (secours)",
+ "matches": [
+  {
+   "id": "pl-tottenham-hotspur-fulham",
+   "league": "PL",
+   "kickoff": "2026-12-03T20:00Z",
+   "home": "Tottenham Hotspur",
+   "away": "Fulham",
+   "o1": 1.83,
+   "oX": 3.8,
+   "o2": 4.1
+  }
+ ]
+}

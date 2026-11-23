@@ -1,6 +1,6 @@
 {
  "date": "2026-11-26",
- "updatedAt": "2026-11-22T07:51:20Z",
+ "updatedAt": "2026-11-23T07:52:36Z",
  "source": "The Odds API (moyenne des bookmakers européens) + Oddsportal (secours)",
  "matches": [
   {
@@ -44,9 +44,9 @@
    "kickoff": "2026-11-26T17:45Z",
    "home": "Olympiakos Piraeus",
    "away": "AC Milan",
-   "o1": 2.45,
+   "o1": 2.7,
    "oX": 3.5,
-   "o2": 2.85
+   "o2": 2.65
   },
   {
    "id": "uel-salzburg-fc-ararat-armenia",
@@ -54,7 +54,7 @@
    "kickoff": "2026-11-26T17:45Z",
    "home": "Salzburg",
    "away": "FC Ararat-Armenia",
-   "o1": 1.18,
+   "o1": 1.19,
    "oX": 8.25,
    "o2": 15.0
   },
@@ -74,9 +74,9 @@
    "kickoff": "2026-11-26T17:45Z",
    "home": "Viktoria Plzeň",
    "away": "Benfica",
-   "o1": 5.5,
+   "o1": 5.75,
    "oX": 4.8,
-   "o2": 1.51
+   "o2": 1.5
   },
   {
    "id": "uel-besiktas-jk-hapoel-be-er-sheva",
@@ -96,7 +96,7 @@
    "away": "Bournemouth",
    "o1": 3.8,
    "oX": 3.6,
-   "o2": 1.98
+   "o2": 1.95
   },
   {
    "id": "uel-union-saint-gilloise-lech-poznan",
@@ -115,7 +115,7 @@
    "home": "Marseille",
    "away": "PFC Levski Sofia",
    "o1": 1.44,
-   "oX": 4.8,
+   "oX": 5.0,
    "o2": 7.0
   },
   {
@@ -449,9 +449,9 @@
    "kickoff": "2026-11-26T20:00Z",
    "home": "Sparta Prague",
    "away": "AZ Alkmaar",
-   "o1": 2.7,
+   "o1": 2.75,
    "oX": 3.6,
-   "o2": 2.5
+   "o2": 2.45
   },
   {
    "id": "uel-ferencvaros-tc-nk-celje",
@@ -490,7 +490,7 @@
    "home": "TSG Hoffenheim",
    "away": "SK Sturm Graz",
    "o1": 1.35,
-   "oX": 5.5,
+   "oX": 5.75,
    "o2": 7.5
   },
   {
@@ -500,7 +500,7 @@
    "home": "Sunderland",
    "away": "Jagiellonia Białystok",
    "o1": 1.27,
-   "oX": 6.25,
+   "oX": 6.0,
    "o2": 11.0
   },
   {
@@ -509,9 +509,9 @@
    "kickoff": "2026-11-26T20:00Z",
    "home": "Juventus",
    "away": "Omonoia FC",
-   "o1": 1.22,
-   "oX": 7.0,
-   "o2": 12.0
+   "o1": 1.21,
+   "oX": 7.25,
+   "o2": 13.0
   },
   {
    "id": "uel-lyon-lillestrom",
@@ -519,7 +519,7 @@
    "kickoff": "2026-11-26T20:00Z",
    "home": "Lyon",
    "away": "Lillestrom",
-   "o1": 1.22,
+   "o1": 1.21,
    "oX": 7.5,
    "o2": 13.0
   },

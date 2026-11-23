@@ -1,6 +1,6 @@
 {
  "date": "2026-12-01",
- "updatedAt": "2026-11-22T07:51:20Z",
+ "updatedAt": "2026-11-23T07:52:36Z",
  "source": "Oddsportal (secours)",
  "matches": [
   {
@@ -11,7 +11,7 @@
    "away": "Ipswich",
    "o1": 2.3,
    "oX": 3.6,
-   "o2": 2.9
+   "o2": 3.0
   }
  ]
 }
