@@ -41,7 +41,13 @@
    "away": "FC Midtjylland",
    "o1": 2.5,
    "oX": 4.0,
-   "o2": 2.6
+   "o2": 2.6,
+   "score": "0-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-23T22:17:36.449687+00:00"
   },
   {
    "id": "pol-wieczysta-krakow-motor-lublin",
@@ -71,7 +77,13 @@
    "away": "IFK Goteborg",
    "o1": 1.22,
    "oX": 7.5,
-   "o2": 11.0
+   "o2": 11.0,
+   "score": "3-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-23T22:17:36.449687+00:00"
   },
   {
    "id": "swe-orgryte-is-kalmar-ff",
@@ -81,7 +93,13 @@
    "away": "Kalmar FF",
    "o1": 3.35,
    "oX": 3.6,
-   "o2": 2.1
+   "o2": 2.1,
+   "score": "3-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-23T22:17:36.449687+00:00"
   },
   {
    "id": "liga2-ad-ceuta-fc-almeria",
@@ -135,7 +153,13 @@
    "away": "Grenoble",
    "o1": 1.46,
    "oX": 4.33,
-   "o2": 7.5
+   "o2": 7.5,
+   "score": "1-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-23T22:17:36.449687+00:00"
   },
   {
    "id": "l2-sochaux-usl-dunkerque",
@@ -201,7 +225,13 @@
     "o2": 1.9,
     "ou": {}
    },
-   "leagueTitle": "SA"
+   "leagueTitle": "SA",
+   "score": "3-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-23T22:17:36.449687+00:00"
   },
   {
    "id": "liga-levante-elche-cf",
@@ -314,7 +344,14 @@
     "ou": {}
    },
    "leagueTitle": "PL",
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "4-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-23T22:17:36.449687+00:00"
   }
- ]
+ ],
+ "scoresUpdatedAt": "2026-11-23T22:17:36.449687+00:00"
 }
