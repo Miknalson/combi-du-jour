@@ -1,7 +1,7 @@
 {
  "date": "2026-11-30",
- "updatedAt": "2026-11-23T07:52:36Z",
- "source": "Oddsportal (secours)",
+ "updatedAt": "2026-11-24T07:51:30Z",
+ "source": "Oddsportal (secours) + oddsportal (secours)",
  "matches": [
   {
    "id": "sa-lecce-atalanta",
@@ -29,9 +29,9 @@
    "kickoff": "2026-11-30T20:00Z",
    "home": "Espanyol",
    "away": "Getafe",
-   "o1": 2.15,
-   "oX": 3.2,
-   "o2": 3.7
+   "o1": 2.1,
+   "oX": 3.25,
+   "o2": 4.1
   },
   {
    "id": "por-benfica-famalicao",
@@ -39,7 +39,7 @@
    "kickoff": "2026-11-30T20:15Z",
    "home": "Benfica",
    "away": "Famalicao",
-   "o1": 1.2,
+   "o1": 1.19,
    "oX": 7.5,
    "o2": 13.0
   },
@@ -52,6 +52,76 @@
    "o1": 7.0,
    "oX": 4.5,
    "o2": 1.46
+  },
+  {
+   "id": "liga2-oviedo-celta-fortuna",
+   "league": "LIGA2",
+   "kickoff": "2026-11-30T19:30Z",
+   "home": "Oviedo",
+   "away": "Celta Fortuna",
+   "o1": 1.52,
+   "oX": 4.3,
+   "o2": 6.0
+  },
+  {
+   "id": "por2-academica-torreense",
+   "league": "POR2",
+   "kickoff": "2026-11-30T18:00Z",
+   "home": "Academica",
+   "away": "Torreense",
+   "o1": 2.6,
+   "oX": 3.2,
+   "o2": 2.6
+  },
+  {
+   "id": "tur-goztepe-trabzonspor",
+   "league": "TUR",
+   "kickoff": "2026-11-30T16:00Z",
+   "home": "Goztepe",
+   "away": "Trabzonspor",
+   "o1": 3.1,
+   "oX": 3.8,
+   "o2": 2.1
+  },
+  {
+   "id": "tur-besiktas-jk-galatasaray",
+   "league": "TUR",
+   "kickoff": "2026-11-30T18:00Z",
+   "home": "Besiktas JK",
+   "away": "Galatasaray",
+   "o1": 1.98,
+   "oX": 4.0,
+   "o2": 3.4
+  },
+  {
+   "id": "pol-korona-kielce-cracovia-krakow",
+   "league": "POL",
+   "kickoff": "2026-11-30T18:00Z",
+   "home": "Korona Kielce",
+   "away": "Cracovia Kraków",
+   "o1": 2.0,
+   "oX": 3.4,
+   "o2": 3.3
+  },
+  {
+   "id": "rou-univ-craiova-dinamo-bucuresti",
+   "league": "ROU",
+   "kickoff": "2026-11-30T18:00Z",
+   "home": "Univ. Craiova",
+   "away": "Dinamo Bucuresti",
+   "o1": 1.66,
+   "oX": 3.75,
+   "o2": 4.8
+  },
+  {
+   "id": "den-odense-bk-fc-nordsjaelland",
+   "league": "DEN",
+   "kickoff": "2026-11-30T18:00Z",
+   "home": "Odense BK",
+   "away": "FC Nordsjaelland",
+   "o1": 3.5,
+   "oX": 4.0,
+   "o2": 1.86
   }
  ]
 }
