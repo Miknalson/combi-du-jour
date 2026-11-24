@@ -1,98 +1,22 @@
 {
   "sport": "basket",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-23T06:19:10.459622+00:00",
+  "updatedAt": "2026-11-24T23:33:14.565618+00:00",
   "status": "ok",
   "matches": [
     {
-      "id": "basket-oddspapi-id1101455473113806",
-      "sport": "basket",
-      "league": "Greece · Womens Basketball League 1",
-      "kickoff": "2026-11-23T15:00:00Z",
-      "home": "Pas Giannina",
-      "away": "PAOK Thessaloniki",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-23T06:19:12Z",
-      "market": "h2h",
-      "o1": 1.28,
-      "o2": 2.75,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-23T06:19:12Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Pas Giannina",
-              "odds": 1.28,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire PAOK Thessaloniki",
-              "odds": 2.75,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||141.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "points",
-          "line": 141.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-23T06:19:12Z",
-          "outcomes": [
-            {
-              "code": "totals||141.5|over",
-              "side": "over",
-              "label": "Plus de 141,5 points",
-              "odds": 1.74,
-              "participant": ""
-            },
-            {
-              "code": "totals||141.5|under",
-              "side": "under",
-              "label": "Moins de 141,5 points",
-              "odds": 1.72,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "sportKey": "oddspapi_14554",
-      "eventId": "id1101455473113806",
-      "gender": "women",
-      "availableMarkets": [
-        "h2h",
-        "totals"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "basket-oddspapi-id1100013273719746",
+      "id": "basket-oddspapi-id1100013273697014",
       "sport": "basket",
       "league": "USA · NBA",
-      "kickoff": "2026-11-24T00:00:00Z",
-      "home": "Charlotte Hornets",
-      "away": "Memphis Grizzlies",
+      "kickoff": "2026-11-25T00:00:00Z",
+      "home": "Orlando Magic",
+      "away": "Detroit Pistons",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-23T06:19:12Z",
+      "asOf": "2026-11-24T23:33:16Z",
       "market": "h2h",
-      "o1": 2.1,
-      "o2": 1.48,
+      "o1": 1.96,
+      "o2": 1.7,
       "markets": [
         {
           "id": "h2h||None",
@@ -102,121 +26,45 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-23T06:19:12Z",
+          "asOf": "2026-11-24T23:33:16Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Charlotte Hornets",
-              "odds": 2.1,
+              "label": "Victoire Orlando Magic",
+              "odds": 1.96,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Memphis Grizzlies",
-              "odds": 1.48,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||216.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "points",
-          "line": 216.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-23T06:19:12Z",
-          "outcomes": [
-            {
-              "code": "totals||216.5|over",
-              "side": "over",
-              "label": "Plus de 216,5 points",
-              "odds": 1.76,
-              "participant": ""
-            },
-            {
-              "code": "totals||216.5|under",
-              "side": "under",
-              "label": "Moins de 216,5 points",
+              "label": "Victoire Detroit Pistons",
               "odds": 1.7,
               "participant": ""
             }
           ]
-        }
-      ],
-      "sportKey": "oddspapi_132",
-      "eventId": "id1100013273719746",
-      "gender": "unspecified",
-      "availableMarkets": [
-        "h2h",
-        "totals"
-      ],
-      "uncollectedMarkets": []
-    },
-    {
-      "id": "basket-oddspapi-id1100013273719748",
-      "sport": "basket",
-      "league": "USA · NBA",
-      "kickoff": "2026-11-24T00:00:00Z",
-      "home": "Philadelphia 76ers",
-      "away": "Portland Trail Blazers",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-23T06:19:12Z",
-      "market": "h2h",
-      "o1": 1.5,
-      "o2": 2.05,
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-23T06:19:12Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Philadelphia 76ers",
-              "odds": 1.5,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Portland Trail Blazers",
-              "odds": 2.05,
-              "participant": ""
-            }
-          ]
         },
         {
-          "id": "totals||231.5",
+          "id": "totals||212.5",
           "family": "totals",
           "key": "totals",
           "unit": "points",
-          "line": 231.5,
+          "line": 212.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-23T06:19:12Z",
+          "asOf": "2026-11-24T23:33:16Z",
           "outcomes": [
             {
-              "code": "totals||231.5|over",
+              "code": "totals||212.5|over",
               "side": "over",
-              "label": "Plus de 231,5 points",
+              "label": "Plus de 212,5 points",
               "odds": 1.74,
               "participant": ""
             },
             {
-              "code": "totals||231.5|under",
+              "code": "totals||212.5|under",
               "side": "under",
-              "label": "Moins de 231,5 points",
+              "label": "Moins de 212,5 points",
               "odds": 1.72,
               "participant": ""
             }
@@ -224,7 +72,7 @@
         }
       ],
       "sportKey": "oddspapi_132",
-      "eventId": "id1100013273719748",
+      "eventId": "id1100013273697014",
       "gender": "unspecified",
       "availableMarkets": [
         "h2h",
@@ -235,5 +83,5 @@
   ],
   "source": "OddsPapi (Winamax FR)",
   "partial": false,
-  "femaleMatches": 1
+  "femaleMatches": 0
 }

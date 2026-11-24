@@ -1,9 +1,11 @@
 {
   "month": "2026-11",
-  "used": 15,
-  "lastDay": "2026-11-23",
-  "updatedAt": "2026-11-24T17:31:07.134658+00:00",
+  "used": 18,
+  "lastDay": "2026-11-25",
+  "updatedAt": "2026-11-24T23:33:14.565618+00:00",
   "summary": {
-    "football": "en attente du relevé football du jour"
+    "football": "en attente du relevé football du jour",
+    "basket": "1 matchs avec cotes Winamax (1 programmés)",
+    "tennis": "0 matchs avec cotes Winamax (0 programmés)"
   }
 }

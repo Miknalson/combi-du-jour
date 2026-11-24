@@ -883,6 +883,33 @@
         }
       ],
       "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v2|2026-11-25|safe|basket",
+      "day": "2026-11-25",
+      "method": "safe",
+      "sport": "basket",
+      "version": "safe-multi-v2",
+      "createdAt": "2026-11-24T23:33:22.512Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "basket",
+          "status": "ok",
+          "updatedAt": "2026-11-24T23:33:14.565618+00:00",
+          "partial": false,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
     }
   ]
 }
