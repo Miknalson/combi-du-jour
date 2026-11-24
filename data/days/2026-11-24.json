@@ -22,7 +22,8 @@
     "o2": 2.15,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-0"
   },
   {
    "id": "football-50b80f3ebd38bf63663b11ae0afc575b",
@@ -45,7 +46,8 @@
     "o2": 4.5,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-0"
   },
   {
    "id": "cha-bristol-city-wrexham-afc",
@@ -89,7 +91,8 @@
     "oX": 3.15,
     "o2": 2.75,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "cha-cardiff-city-preston-north-end",
@@ -133,7 +136,8 @@
     "oX": 4.5,
     "o2": 4.8,
     "ou": {}
-   }
+   },
+   "score": "0-4"
   },
   {
    "id": "cha-charlton-athletic-lincoln-city",
@@ -177,7 +181,8 @@
     "oX": 3.1,
     "o2": 2.4,
     "ou": {}
-   }
+   },
+   "score": "4-0"
   },
   {
    "id": "cha-middlesbrough-swansea-city",
@@ -221,7 +226,8 @@
     "oX": 4.6,
     "o2": 5.3,
     "ou": {}
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "cha-norwich-city-queens-park-rangers",
@@ -265,7 +271,8 @@
     "oX": 3.55,
     "o2": 3.2,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "cha-portsmouth-west-ham-united",
@@ -309,7 +316,8 @@
     "oX": 3.65,
     "o2": 1.76,
     "ou": {}
-   }
+   },
+   "score": "1-0"
   },
   {
    "id": "cha-sheffield-united-southampton",
@@ -353,7 +361,8 @@
     "oX": 3.4,
     "o2": 2.4,
     "ou": {}
-   }
+   },
+   "score": "1-1"
   },
   {
    "id": "football-ba719e378ac366262013bdb51a06aa6f",
@@ -376,7 +385,8 @@
     "o2": 7.25,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-0"
   },
   {
    "id": "football-aee4e3c225603397ab52de3d066b566b",
@@ -399,7 +409,8 @@
     "o2": 7.0,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-1"
   },
   {
    "id": "football-9a2ebad454db4ab3d53b89e96c79847a",
@@ -422,7 +433,8 @@
     "o2": 2.15,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "0-1"
   },
   {
    "id": "football-b9f00a4d399ec661e733857c9d5fb2dc",
@@ -445,7 +457,8 @@
     "o2": 8.5,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-2"
   },
   {
    "id": "football-3fb5e4a792cf34a0459efcb79a11a785",
@@ -468,7 +481,8 @@
     "o2": 10.0,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "5-1"
   },
   {
    "id": "football-aea973c122c91837c15e066c757c747f",
@@ -491,7 +505,8 @@
     "o2": 5.1,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "3-1"
   },
   {
    "id": "football-8e93849b4c1ccbf1c207836d5c470150",
@@ -514,7 +529,8 @@
     "o2": 1.18,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "0-2"
   },
   {
    "id": "cha-wolverhampton-wanderers-derby-county",
@@ -558,7 +574,8 @@
     "oX": 5.1,
     "o2": 7.0,
     "ou": {}
-   }
+   },
+   "score": "3-0"
   }
  ],
  "updatedAt": "2026-11-24T07:49:04Z",
