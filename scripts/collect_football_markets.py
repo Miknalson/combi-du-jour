@@ -115,7 +115,9 @@ def run(now=None):
             ledger={'day':day,'spent':spent,'dailyAllowance':limit,'updatedAt':now.isoformat()}
             if allowance<1:report.update(status='daily_budget',message='Budget de cotes du jour déjà utilisé. Aucune requête supplémentaire facturée.')
             else:
-                selected=plan[0];markets='h2h,totals' if allowance>=2 else 'totals';expected=len(markets.split(','))
+                # Avec 1 seul crédit : les victoires (toujours proposées), pas les totaux que Winamax ne transmet pas ici (UCL 23-25/11 : 0 ligne, crédit perdu).
+                # Les buts viennent d'OddsPapi (scripts/collect_oddspapi.py).
+                selected=plan[0];markets='h2h,totals' if allowance>=2 else 'h2h';expected=len(markets.split(','))
                 before=remaining
                 events=retry_get(api.get,'/sports/'+selected['key']+'/odds',bookmakers='winamax_fr',markets=markets,oddsFormat='decimal',commenceTimeFrom=now.strftime('%Y-%m-%dT%H:%M:%SZ'),commenceTimeTo=(now+dt.timedelta(hours=36)).strftime('%Y-%m-%dT%H:%M:%SZ'))
                 cost=max(0,before-int(float(api.credits_left))) if api.credits_left is not None else expected
