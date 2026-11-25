@@ -1,10 +1,10 @@
 {
-  "status": "sent",
+  "status": "waiting_for_ticket",
   "topicConfigured": true,
-  "sentNow": 3,
+  "sentNow": 0,
   "dailyReportSent": false,
-  "eligible": 3,
+  "eligible": 0,
   "lastSentAt": "2026-11-25T08:09:59.715Z",
-  "message": "3 alerte(s) acceptée(s) par ntfy.",
-  "updatedAt": "2026-11-25T08:09:59.716Z"
+  "message": "Aucun nouveau ticket admissible avec des cotes de moins d’une heure. Le bilan quotidien a déjà été envoyé.",
+  "updatedAt": "2026-11-25T11:40:21.432Z"
 }

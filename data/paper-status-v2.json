@@ -1,9 +1,7 @@
 {
-  "status": "running",
-  "updatedAt": "2026-11-25T08:09:58.697Z",
-  "availableSports": [
-    "football"
-  ],
+  "status": "waiting_for_fresh_quotes",
+  "updatedAt": "2026-11-25T11:40:21.186Z",
+  "availableSports": [],
   "sourceStatus": [
     {
       "sport": "football",
