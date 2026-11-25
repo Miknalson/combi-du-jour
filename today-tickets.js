@@ -13,7 +13,7 @@ revealHash();window.addEventListener('hashchange',revealHash);
 var WINAMAX='https://www.winamax.fr/paris-sportifs';
 var SPORTS={football:'Foot',basket:'Basket',tennis:'Tennis',rugby_xv:'Rugby XV',rugby_xiii:'Rugby XIII',football_us:'Foot US',mixed:'Mix',hockey:'Hockey',volley:'Volley'};
 var KINDS={
-  tres_sur:{name:'Très sûr',range:'cote 1,10 à 1,25',tone:'k-sur'},
+  tres_sur:{name:'Très sûr',range:'cote 1,50 à 1,70',tone:'k-sur'},
   safe:{name:'Safe',range:'cote 1,50 à 2,00',tone:'k-safe'},
   safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
   combi23:{name:'Combiné 2 à 3',range:'victoires · cote 2 à 3',tone:'k-c23'},

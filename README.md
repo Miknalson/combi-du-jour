@@ -107,6 +107,15 @@ node tests/sports-markets-browser.cjs
 ```
 
 
+## Très sûr du jour
+
+Football uniquement, 1 ou 2 sélections, cotes Winamax relevées par API (jamais une
+moyenne ni une estimation). Depuis le 26/11/2026 (version `tres-sur-v2`) : cote totale
+**1,50 à 1,70**, au moins 60 % de chance par sélection et 55 % pour le ticket ; on garde
+le ticket le plus probable. L’ancienne fourchette 1,10–1,25 (v1) a été abandonnée : miser
+100 € pour gagner 10 à 25 € ne valait pas le risque. Les tickets v1 déjà enregistrés
+restent dans `data/tres-sur-tests.json` et un seul Très sûr est figé par jour.
+
 ## Safe du jour
 
 `safe.html` affiche au plus un ticket football, basket, tennis et un combiné avec
