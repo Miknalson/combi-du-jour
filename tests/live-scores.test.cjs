@@ -24,6 +24,10 @@ async function main(){
  await L.refresh([Object.assign(juve(),{league:'UKR'}),Object.assign(juve(),{kickoff:'2026-11-22T18:00Z'}),Object.assign(juve(),{score:'1-0',completed:true})],{now,fetch:f});assert.equal(called,0);
  // Réseau en panne : rien n'est effacé.
  m=Object.assign(juve(),{live:{score:'1-0',clock:"30'"}});r=await L.refresh([m],{now,fetch:async()=>{throw new Error('offline');}});assert.equal(r.failed,1);assert.equal(m.live.score,'1-0');
+ // Ligue non couverte (Ukraine) : badge « Pas de direct » après le coup d'envoi, rien avant ni une fois le score connu.
+ const ukr={league:'UKR',kickoff:'2026-11-22T11:00Z',home:'Kryvbas',away:'FC Kharkiv'};
+ assert.ok(L.noLive(ukr,now));assert.match(L.badge(Object.assign({},ukr,{kickoff:new Date(Date.now()-3600000).toISOString()})),/Pas de direct \(Ukraine\)/);
+ assert.ok(!L.noLive(Object.assign({},ukr,{kickoff:'2026-11-22T18:00Z'}),now));assert.ok(!L.noLive(Object.assign({},ukr,{score:'1-0'}),now));assert.ok(!L.noLive(juve(),now));
  // Noms un peu différents entre les deux sources.
  assert.ok(L.findEvent({home:'1. FC Heidenheim',away:'Bayern Munich',kickoff:'2026-11-22T14:30Z'},[{kickoff:'2026-11-22T14:30Z',home:['1. FC Heidenheim 1846'],away:['Bayern Munich']}]));
 

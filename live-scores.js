@@ -69,6 +69,10 @@ function watch(getMatches,onChange,opts){
  return {stop:function(){stopped=true;clearTimeout(timer);},now:function(){schedule(0);}};
 }
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-function badge(m){if(!m||!m.live||isFinal(m))return '';return '<span class="live-badge'+(m.live.ended?' ended':'')+'" title="Score en direct (ESPN)">'+(m.live.ended?'':'<i></i>')+esc(m.live.score.replace('-',' - '))+(m.live.clock?' <small>'+esc(m.live.clock)+'</small>':'')+'</span>';}
-return {LEAGUES:LEAGUES,norm:norm,wanted:wanted,readEvent:readEvent,findEvent:findEvent,apply:apply,refresh:refresh,watch:watch,badge:badge,isFinal:isFinal};
+// Ligue sans direct ESPN (Ukraine, Pologne, Serbie…) : on le dit au lieu de laisser la ligne vide pendant et après le match.
+var NO_LIVE_NAMES={UKR:'Ukraine',POL:'Pologne',SRB:'Serbie'};
+function noLive(m,now){if(!m||m.sport&&m.sport!=='football'||LEAGUES[m.league]||isFinal(m)||m.live)return false;var k=Date.parse(m.kickoff);now=now||Date.now();return Number.isFinite(k)&&k<=now&&k>=now-12*3600000;}
+function badge(m){if(noLive(m))return '<span class="live-badge ended" title="ESPN ne couvre pas ce championnat : le score final est relevé par la tâche de nuit (vers 0 h 30).">Pas de direct'+(NO_LIVE_NAMES[m.league]?' ('+NO_LIVE_NAMES[m.league]+')':'')+' · score cette nuit</span>';
+ if(!m||!m.live||isFinal(m))return '';return '<span class="live-badge'+(m.live.ended?' ended':'')+'" title="Score en direct (ESPN)">'+(m.live.ended?'':'<i></i>')+esc(m.live.score.replace('-',' - '))+(m.live.clock?' <small>'+esc(m.live.clock)+'</small>':'')+'</span>';}
+return {LEAGUES:LEAGUES,norm:norm,wanted:wanted,readEvent:readEvent,findEvent:findEvent,apply:apply,refresh:refresh,watch:watch,badge:badge,isFinal:isFinal,noLive:noLive};
 });

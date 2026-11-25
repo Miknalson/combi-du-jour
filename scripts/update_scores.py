@@ -26,6 +26,23 @@ def team(value, league):
         return aliases.get(value,value)
     return ''.join(tokens)
 
+# Suffixes de club ignorés hors UWCL (« Sabah FK » = « Sabah », « Viking FK » = « Viking », « ŠK Slovan Bratislava » = « Slovan Bratislava »).
+CLUB_WORDS={'fc','fk','cf','afc','sc','ac','sk','as','ssc','bk','if','ff','cd','ud','rc','sv','vfb','vfl','tsg'}
+
+def same_team(value, names, league):
+    """Mêmes équipes : nom identique, ou identique sans les sigles de club. Jamais de rapprochement approximatif en UWCL."""
+    wanted=team(value,league)
+    if not wanted:return False
+    known={team(n,league) for n in names if n}
+    if wanted in known:return True
+    if league=='UWCL':return False
+    def core(v):
+        v=str(v).translate(str.maketrans({'ø':'o','Ø':'O','ł':'l','Ł':'L','ß':'ss','æ':'ae','Æ':'Ae','œ':'oe','Œ':'Oe'}))
+        v=unicodedata.normalize('NFKD',v).encode('ascii','ignore').decode().lower()
+        return ''.join(t for t in re.findall(r'[a-z0-9]+',v) if t not in CLUB_WORDS)
+    c=core(value)
+    return len(c)>=4 and any(core(n)==c for n in names if n)
+
 def final_event(event):
     """Football scores including extra time or penalties are not 90-minute results."""
     if not isinstance(event,dict):return None
@@ -59,10 +76,11 @@ def matching_final(match, events):
         result=final_event(event)
         if not result:continue
         try:
-            if dt.datetime.fromisoformat(result['kickoff'].replace('Z','+00:00'))!=dt.datetime.fromisoformat(match['kickoff'].replace('Z','+00:00')):continue
+            # Coup d'envoi à 15 min près : ESPN décale parfois l'horaire publié de quelques minutes.
+            if abs(dt.datetime.fromisoformat(result['kickoff'].replace('Z','+00:00'))-dt.datetime.fromisoformat(match['kickoff'].replace('Z','+00:00')))>dt.timedelta(minutes=15):continue
         except (ValueError,KeyError,TypeError,AttributeError):continue
         league=match.get('league','')
-        if all(team(match.get(side,''),league) in {team(n,league) for n in result['names'][key] if n} for side,key in [('home','home'),('away','away')]):found.append(result)
+        if all(same_team(match.get(side,''),result['names'][key],league) for side,key in [('home','home'),('away','away')]):found.append(result)
     return found[0] if len(found)==1 else None
 
 def fetch(league,day):
@@ -110,6 +128,8 @@ def update(now=None,max_requests=8):
     report={'updatedAt':now.isoformat(),'status':state,'source':'ESPN public football scoreboards','queried':queried,'updatedMatches':updated,'pendingMatches':pending,'unmatchedFixtures':unmatched,'failures':failures,'message':str(updated)+' score(s) final(aux) de football récupéré(s).'+(' Certains résultats restent à vérifier : score absent, identité différente ou fin du temps réglementaire non confirmée.' if pending else '')}
     (ROOT/'scores-health.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(report['message'])
+    # Visible dans le journal GitHub même quand rien n'est publié (relevé de 15 min sans nouveau score).
+    print('Interrogés :',queried,'| en attente :',pending,'| non reconnus :',unmatched,'| échecs :',json.dumps(failures,ensure_ascii=False))
     return report
 
 if __name__=='__main__':
