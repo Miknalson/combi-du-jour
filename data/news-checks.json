@@ -27,10 +27,70 @@
       "updatedAt": "2026-11-24T17:31:09.704Z"
     },
     "2026-11-25": {
-      "checks": {},
-      "calls": [],
+      "checks": {
+        "football|2026-11-25|sabah fk|barcelona": {
+          "sport": "football",
+          "league": "UCL",
+          "home": "Sabah FK",
+          "away": "Barcelona",
+          "kickoff": "2026-11-25T17:45:00Z",
+          "pick": "Victoire Barcelona",
+          "checkedAt": "2026-11-25T08:09:36.432Z",
+          "verdict": "ok",
+          "reason": "Non vérifié (limite de recherche atteinte) : match confirmé, aucune info d'absence ou de rotation trouvée.",
+          "sources": [
+            "https://www.fotmob.com/matches/barcelona-vs-sabah-fk/5vx6ki4t"
+          ]
+        },
+        "football|2026-11-25|atletico madrid|viking fk": {
+          "sport": "football",
+          "league": "UCL",
+          "home": "Atlético Madrid",
+          "away": "Viking FK",
+          "kickoff": "2026-11-25T20:00:00Z",
+          "pick": "Victoire Atlético Madrid",
+          "checkedAt": "2026-11-25T08:09:36.432Z",
+          "verdict": "ok",
+          "reason": "Non vérifié (limite de recherche atteinte) : aucune info concrète trouvée.",
+          "sources": []
+        },
+        "football|2026-11-25|lille|bayern munich": {
+          "sport": "football",
+          "league": "UCL",
+          "home": "Lille",
+          "away": "Bayern Munich",
+          "kickoff": "2026-11-25T20:00:00Z",
+          "pick": "Victoire Bayern Munich",
+          "checkedAt": "2026-11-25T08:09:36.432Z",
+          "verdict": "ok",
+          "reason": "Non vérifié (limite de recherche atteinte) : aucune info concrète trouvée.",
+          "sources": []
+        },
+        "football|2026-11-25|paris saint germain|as roma": {
+          "sport": "football",
+          "league": "UCL",
+          "home": "Paris Saint Germain",
+          "away": "AS Roma",
+          "kickoff": "2026-11-25T20:00:00Z",
+          "pick": "Victoire Paris Saint Germain",
+          "checkedAt": "2026-11-25T08:09:36.432Z",
+          "verdict": "ok",
+          "reason": "Non vérifié (limite de recherche atteinte) : aucune info concrète trouvée.",
+          "sources": []
+        }
+      },
+      "calls": [
+        {
+          "at": "2026-11-25T08:09:36.432Z",
+          "model": "claude-opus-5-5",
+          "matches": 4,
+          "input": 29215,
+          "output": 1056,
+          "searches": 5
+        }
+      ],
       "status": "ok",
-      "updatedAt": "2026-11-25T07:51:59.544Z"
+      "updatedAt": "2026-11-25T08:09:36.432Z"
     }
   }
 }

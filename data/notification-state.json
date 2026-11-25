@@ -4,7 +4,10 @@
     "paper-multisport-v2|2026-11-21|safe|football",
     "paper-multisport-v2|2026-11-22|algo|football",
     "paper-multisport-v2|2026-11-22|safe|football",
-    "tres-sur-v1|2026-11-22|football"
+    "tres-sur-v1|2026-11-22|football",
+    "paper-multisport-v2|2026-11-25|algo|football",
+    "paper-multisport-v2|2026-11-25|safe|football",
+    "tres-sur-v1|2026-11-25|football"
   ],
   "dailyReports": [
     "2026-11-17",
@@ -17,5 +20,5 @@
     "2026-11-24",
     "2026-11-25"
   ],
-  "updatedAt": "2026-11-25T07:52:00.330Z"
+  "updatedAt": "2026-11-25T08:09:59.715Z"
 }

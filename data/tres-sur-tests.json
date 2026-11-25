@@ -99,6 +99,80 @@
           "matches": 19
         }
       ]
+    },
+    {
+      "id": "tres-sur-v1|2026-11-25|football",
+      "day": "2026-11-25",
+      "method": "tres_sur",
+      "sport": "football",
+      "version": "tres-sur-v1",
+      "createdAt": "2026-11-25T08:09:58.793Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 100,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 1.1232000000000002,
+      "probability": 0.8611544972182373,
+      "legs": [
+        {
+          "id": "football|football-e6fa007f93e0cef004be920f96ee95ba|2026-11-25T17:45:00Z|h2h||None|2",
+          "matchId": "football-e6fa007f93e0cef004be920f96ee95ba",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "UCL",
+          "home": "Sabah FK",
+          "away": "Barcelona",
+          "kickoff": "2026-11-25T17:45:00Z",
+          "date": "2026-11-25",
+          "code": "2",
+          "label": "Victoire Barcelona",
+          "o": 1.04,
+          "p": 0.9477133091477634,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-25T08:09:31Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        },
+        {
+          "id": "football|football-b1af6789fe6db7aab18a2945ce56f035|2026-11-25T20:00:00Z|h2h||None|1",
+          "matchId": "football-b1af6789fe6db7aab18a2945ce56f035",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "UCL",
+          "home": "Atlético Madrid",
+          "away": "Viking FK",
+          "kickoff": "2026-11-25T20:00:00Z",
+          "date": "2026-11-25",
+          "code": "1",
+          "label": "Victoire Atlético Madrid",
+          "o": 1.08,
+          "p": 0.9086656153353332,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-25T08:09:31Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-25T08:09:26.613028+00:00",
+          "partial": true,
+          "matches": 13
+        }
+      ]
     }
   ]
 }
