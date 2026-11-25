@@ -76,7 +76,7 @@ document.addEventListener('submit',function(e){var f=e.target.closest&&e.target.
  try{localStorage.setItem('cdj.bets',JSON.stringify(list));f.closest('details').outerHTML='<p class="tt-played">✓ Enregistré dans ton suivi (Tableau de bord).</p>';}catch(err){}
 });
 function card(r,res,today){
-  var k=KINDS[r.method]||{name:r.method,range:'',tone:''},st=STATUS[res.status]||STATUS.pending;
+  var k=KINDS[r.method]||{name:r.method,range:'',tone:''};if(r.method==='safe'&&r.sport==='football'&&r.version==='safe-multi-v3')k=Object.assign({},k,{range:'cote 1,70 à 2,00'});var st=STATUS[res.status]||STATUS.pending;
   var sport=r.method==='safe'&&r.sport!=='football'?' · '+(SPORTS[r.sport]||r.sport):'';
   var legs=r.legs.map(function(l){
     var d=parisDay(new Date(Date.parse(l.kickoff)));

@@ -118,6 +118,15 @@ restent dans `data/tres-sur-tests.json` et un seul Très sûr est figé par jour
 
 ## Safe du jour
 
+**Safe foot depuis le 26/11/2026 (`safe-multi-v3`, journal `paper-multisport-v3`) :**
+cote totale **1,70 à 2,00**, 60 % mini par sélection, **50 % mini** pour le ticket (à
+1,70 la chance hors marge plafonne vers 56 %). Ainsi il ne recouvre plus le Très sûr
+(1,50–1,70). Échelle : Très sûr 1,50–1,70 · Safe foot 1,70–2,00 · Combiné 2–3 · Algo 3–5.
+Les autres sports et le mix gardent 1,50–2,00 et 60 %. Le passage v2 → v3 est une
+migration prévue dans `scripts/paper_multi_tests.cjs` : l’ancien manifeste est archivé
+dans `manifest.previous`, les tickets v2 restent dans le journal (champ `version`), l’Algo
+continue sans interruption. Les paragraphes ci-dessous décrivent la règle d’origine.
+
 `safe.html` affiche au plus un ticket football, basket, tennis et un combiné avec
 exactement un match de chaque sport. Cote totale entre 1,50 et 2,00 ; probabilité
 indicative d’au moins 60 % par sélection et pour le ticket entier. Les simples, doubles et triples d’un sport sont
