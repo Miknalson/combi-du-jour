@@ -1,8 +1,11 @@
 {
-  "updatedAt": "2026-11-24T17:31:06.540173+00:00",
+  "updatedAt": "2026-11-25T07:51:55.664488+00:00",
   "stage": "provider",
   "status": "ok",
   "competitions": 187,
-  "creditsRemaining": 10,
-  "message": "Connexion au fournisseur de cotes disponible."
+  "creditsRemaining": 8,
+  "message": "Connexion au fournisseur de cotes disponible.",
+  "requestCredits": {
+    "football_markets": 1
+  }
 }
