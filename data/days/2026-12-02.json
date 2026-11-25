@@ -1,6 +1,6 @@
 {
  "date": "2026-12-02",
- "updatedAt": "2026-11-24T07:51:30Z",
+ "updatedAt": "2026-11-25T07:51:28Z",
  "source": "oddsportal (secours)",
  "matches": [
   {
@@ -10,7 +10,7 @@
    "home": "Real Sociedad",
    "away": "Real Madrid",
    "o1": 6.0,
-   "oX": 5.4,
+   "oX": 5.25,
    "o2": 1.45
   },
   {
@@ -19,7 +19,7 @@
    "kickoff": "2026-12-02T19:30Z",
    "home": "Chelsea",
    "away": "Crystal Palace",
-   "o1": 1.62,
+   "o1": 1.64,
    "oX": 4.4,
    "o2": 4.75
   },
@@ -29,7 +29,7 @@
    "kickoff": "2026-12-02T19:30Z",
    "home": "Hull City",
    "away": "Nottingham Forest",
-   "o1": 3.9,
+   "o1": 4.0,
    "oX": 3.6,
    "o2": 1.95
   },
@@ -39,8 +39,8 @@
    "kickoff": "2026-12-02T19:30Z",
    "home": "Manchester City",
    "away": "Leeds United",
-   "o1": 1.53,
-   "oX": 4.5,
+   "o1": 1.57,
+   "oX": 4.4,
    "o2": 5.5
   },
   {
@@ -80,7 +80,7 @@
    "home": "Bournemouth",
    "away": "Brighton and Hove Albion",
    "o1": 2.45,
-   "oX": 3.5,
+   "oX": 3.55,
    "o2": 2.75
   },
   {
@@ -91,7 +91,7 @@
    "away": "Manchester United",
    "o1": 2.55,
    "oX": 3.8,
-   "o2": 2.45
+   "o2": 2.5
   },
   {
    "id": "liga-barcelona-atletico-madrid",

@@ -390,11 +390,11 @@
    "kickoff": "2026-11-25T11:00Z",
    "home": "Kryvbas",
    "away": "FC Kharkiv",
-   "o1": 5.25,
-   "oX": 4.33,
-   "o2": 1.53
+   "o1": 5.75,
+   "oX": 4.2,
+   "o2": 1.52
   }
  ],
- "updatedAt": "2026-11-24T07:51:30Z",
+ "updatedAt": "2026-11-25T07:51:28Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)"
 }

@@ -1,6 +1,6 @@
 {
  "date": "2026-11-28",
- "updatedAt": "2026-11-24T07:51:55Z",
+ "updatedAt": "2026-11-25T07:51:28Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
   {
@@ -49,8 +49,8 @@
    "kickoff": "2026-11-28T12:30Z",
    "home": "FC Voluntari",
    "away": "CFR Cluj",
-   "o1": 2.5,
-   "oX": 3.25,
+   "o1": 2.63,
+   "oX": 3.4,
    "o2": 2.7
   },
   {
@@ -182,7 +182,7 @@
    "kickoff": "2026-11-28T13:00Z",
    "home": "Real Betis",
    "away": "Rayo Vallecano",
-   "o1": 1.57,
+   "o1": 1.59,
    "oX": 4.4,
    "o2": 5.25
   },
@@ -202,9 +202,9 @@
    "kickoff": "2026-11-28T13:00Z",
    "home": "Las Palmas",
    "away": "Andorra CF",
-   "o1": 2.25,
+   "o1": 2.1,
    "oX": 3.4,
-   "o2": 3.1
+   "o2": 3.4
   },
   {
    "id": "pol-widzew-lodz-zaglebie-lubin",
@@ -222,9 +222,9 @@
    "kickoff": "2026-11-28T14:00Z",
    "home": "Frosinone",
    "away": "Parma",
-   "o1": 1.55,
+   "o1": 1.5,
    "oX": 4.8,
-   "o2": 5.5
+   "o2": 6.5
   },
   {
    "id": "por2-chaves-tondela",
@@ -274,7 +274,7 @@
    "away": "FC Schalke 04",
    "o1": 2.4,
    "oX": 3.5,
-   "o2": 2.9
+   "o2": 2.88
   },
   {
    "id": "pl-leeds-united-coventry-city",
@@ -282,9 +282,9 @@
    "kickoff": "2026-11-28T15:00Z",
    "home": "Leeds United",
    "away": "Coventry City",
-   "o1": 1.52,
-   "oX": 4.5,
-   "o2": 6.0
+   "o1": 1.5,
+   "oX": 4.75,
+   "o2": 6.5
   },
   {
    "id": "pl-manchester-united-brentford",
@@ -294,7 +294,7 @@
    "away": "Brentford",
    "o1": 2.1,
    "oX": 3.8,
-   "o2": 3.4
+   "o2": 3.3
   },
   {
    "id": "bel-westerlo-raal-la-louviere",
@@ -313,7 +313,7 @@
    "home": "Corvinul",
    "away": "Farul Constanta",
    "o1": 2.1,
-   "oX": 3.3,
+   "oX": 3.4,
    "o2": 3.4
   },
   {
@@ -632,7 +632,7 @@
    "away": "Athletic Bilbao",
    "o1": 4.6,
    "oX": 3.8,
-   "o2": 1.78
+   "o2": 1.76
   },
   {
    "id": "liga2-albacete-tenerife",
@@ -660,9 +660,9 @@
    "kickoff": "2026-11-28T15:30Z",
    "home": "Excelsior",
    "away": "Telstar",
-   "o1": 2.05,
-   "oX": 3.75,
-   "o2": 3.6
+   "o1": 2.0,
+   "oX": 3.6,
+   "o2": 3.75
   },
   {
    "id": "por-arouca-rio-ave-fc",
@@ -680,9 +680,9 @@
    "kickoff": "2026-11-28T15:30Z",
    "home": "Moreirense FC",
    "away": "Santa Clara",
-   "o1": 3.6,
-   "oX": 3.1,
-   "o2": 2.15
+   "o1": 3.2,
+   "oX": 3.0,
+   "o2": 2.4
   },
   {
    "id": "por2-sc-farense-leiria",
@@ -691,8 +691,8 @@
    "home": "SC Farense",
    "away": "Leiria",
    "o1": 2.1,
-   "oX": 3.6,
-   "o2": 3.15
+   "oX": 3.55,
+   "o2": 3.2
   },
   {
    "id": "tur-gazisehir-gaziantep-amedspor",
@@ -710,7 +710,7 @@
    "kickoff": "2026-11-28T16:15Z",
    "home": "Angers",
    "away": "RC Lens",
-   "o1": 4.4,
+   "o1": 4.6,
    "oX": 4.1,
    "o2": 1.71
   },
@@ -720,7 +720,7 @@
    "kickoff": "2026-11-28T17:00Z",
    "home": "Torino",
    "away": "Lazio",
-   "o1": 3.4,
+   "o1": 3.5,
    "oX": 3.4,
    "o2": 2.1
   },
@@ -740,9 +740,9 @@
    "kickoff": "2026-11-28T17:30Z",
    "home": "VfB Stuttgart",
    "away": "Eintracht Frankfurt",
-   "o1": 1.73,
+   "o1": 1.74,
    "oX": 4.6,
-   "o2": 4.1
+   "o2": 3.9
   },
   {
    "id": "liga-elche-cf-atletico-madrid",
@@ -751,8 +751,8 @@
    "home": "Elche CF",
    "away": "Atlético Madrid",
    "o1": 6.25,
-   "oX": 4.7,
-   "o2": 1.53
+   "oX": 4.6,
+   "o2": 1.5
   },
   {
    "id": "pl-ipswich-town-aston-villa",
@@ -760,7 +760,7 @@
    "kickoff": "2026-11-28T17:30Z",
    "home": "Ipswich Town",
    "away": "Aston Villa",
-   "o1": 3.5,
+   "o1": 3.6,
    "oX": 4.0,
    "o2": 1.95
   },
@@ -770,9 +770,9 @@
    "kickoff": "2026-11-28T17:30Z",
    "home": "SD Eibar",
    "away": "Burgos CF",
-   "o1": 1.83,
+   "o1": 1.86,
    "oX": 3.4,
-   "o2": 4.75
+   "o2": 4.4
   },
   {
    "id": "ere-psv-eindhoven-go-ahead-eagles",
@@ -780,9 +780,9 @@
    "kickoff": "2026-11-28T17:45Z",
    "home": "PSV Eindhoven",
    "away": "Go Ahead Eagles",
-   "o1": 1.25,
-   "oX": 7.25,
-   "o2": 10.0
+   "o1": 1.27,
+   "oX": 7.0,
+   "o2": 9.5
   },
   {
    "id": "por-academico-de-viseu-alverca",
@@ -810,9 +810,9 @@
    "kickoff": "2026-11-28T18:00Z",
    "home": "FCSB",
    "away": "Csikszereda M. Ciuc",
-   "o1": 1.25,
-   "oX": 6.0,
-   "o2": 10.0
+   "o1": 1.27,
+   "oX": 5.75,
+   "o2": 9.5
   },
   {
    "id": "por2-lusitania-fc-vizela",
@@ -850,9 +850,9 @@
    "kickoff": "2026-11-28T19:45Z",
    "home": "Le Mans FC",
    "away": "Lille",
-   "o1": 4.0,
-   "oX": 3.5,
-   "o2": 2.0
+   "o1": 3.8,
+   "oX": 3.4,
+   "o2": 2.05
   },
   {
    "id": "l1-nice-troyes",
@@ -861,7 +861,7 @@
    "home": "Nice",
    "away": "Troyes",
    "o1": 1.68,
-   "oX": 4.1,
+   "oX": 4.2,
    "o2": 5.0
   },
   {
@@ -901,7 +901,7 @@
    "home": "Lommel SK",
    "away": "SV Zulte-Waregem",
    "o1": 2.65,
-   "oX": 3.75,
+   "oX": 3.7,
    "o2": 2.45
   },
   {
@@ -910,9 +910,9 @@
    "kickoff": "2026-11-28T20:00Z",
    "home": "SC Cambuur",
    "away": "Sparta Rotterdam",
-   "o1": 2.2,
-   "oX": 3.9,
-   "o2": 2.9
+   "o1": 2.15,
+   "oX": 4.0,
+   "o2": 3.0
   },
   {
    "id": "liga-real-madrid-alaves",
@@ -920,9 +920,9 @@
    "kickoff": "2026-11-28T20:00Z",
    "home": "Real Madrid",
    "away": "Alavés",
-   "o1": 1.18,
-   "oX": 8.5,
-   "o2": 15.0
+   "o1": 1.15,
+   "oX": 9.0,
+   "o2": 17.0
   },
   {
    "id": "liga2-real-valladolid-cf-real-sociedad-b",
@@ -932,7 +932,7 @@
    "away": "Real Sociedad B",
    "o1": 1.8,
    "oX": 4.0,
-   "o2": 4.1
+   "o2": 4.5
   },
   {
    "id": "por-vitoria-guimaraes-cf-estrela",
@@ -941,8 +941,8 @@
    "home": "Vitória Guimarães",
    "away": "CF Estrela",
    "o1": 1.71,
-   "oX": 3.8,
-   "o2": 4.75
+   "oX": 3.9,
+   "o2": 5.75
   },
   {
    "id": "pol-slask-wroclaw-gks-katowice",
@@ -951,8 +951,8 @@
    "home": "Śląsk Wrocław",
    "away": "GKS Katowice",
    "o1": 2.85,
-   "oX": 3.55,
-   "o2": 2.3
+   "oX": 3.6,
+   "o2": 2.25
   },
   {
    "id": "pol-wisla-krakow-motor-lublin",
@@ -960,9 +960,9 @@
    "kickoff": "2026-11-28T19:15Z",
    "home": "Wisła Kraków",
    "away": "Motor Lublin",
-   "o1": 1.74,
+   "o1": 1.83,
    "oX": 4.0,
-   "o2": 4.1
+   "o2": 3.65
   },
   {
    "id": "srb-zemun-radnicki-1923",

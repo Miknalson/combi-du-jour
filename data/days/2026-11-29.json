@@ -1,6 +1,6 @@
 {
  "date": "2026-11-29",
- "updatedAt": "2026-11-24T07:51:55Z",
+ "updatedAt": "2026-11-25T07:51:28Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
   {
@@ -9,9 +9,9 @@
    "kickoff": "2026-11-29T10:30Z",
    "home": "Corum",
    "away": "Kocaelispor",
-   "o1": 1.86,
+   "o1": 1.9,
    "oX": 3.5,
-   "o2": 4.2
+   "o2": 4.0
   },
   {
    "id": "por2-penafiel-benfica-b",
@@ -20,8 +20,8 @@
    "home": "Penafiel",
    "away": "Benfica B",
    "o1": 2.0,
-   "oX": 3.4,
-   "o2": 3.3
+   "oX": 3.55,
+   "o2": 3.5
   },
   {
    "id": "ere-ado-den-haag-fc-utrecht",
@@ -49,9 +49,9 @@
    "kickoff": "2026-11-29T12:00Z",
    "home": "Everton",
    "away": "Liverpool",
-   "o1": 4.1,
-   "oX": 3.6,
-   "o2": 1.95
+   "o1": 4.3,
+   "oX": 3.8,
+   "o2": 1.86
   },
   {
    "id": "cha-swansea-city-cardiff-city",
@@ -123,9 +123,9 @@
    "kickoff": "2026-11-29T12:30Z",
    "home": "Sint Truiden",
    "away": "Genk",
-   "o1": 2.4,
+   "o1": 2.45,
    "oX": 3.8,
-   "o2": 2.85
+   "o2": 2.75
   },
   {
    "id": "bl2-1-fc-magdeburg-fc-energie-cottbus",
@@ -134,8 +134,8 @@
    "home": "1. FC Magdeburg",
    "away": "FC Energie Cottbus",
    "o1": 1.65,
-   "oX": 4.5,
-   "o2": 4.5
+   "oX": 4.75,
+   "o2": 4.75
   },
   {
    "id": "liga-valencia-ca-osasuna",
@@ -143,9 +143,9 @@
    "kickoff": "2026-11-29T13:00Z",
    "home": "Valencia",
    "away": "CA Osasuna",
-   "o1": 2.1,
-   "oX": 3.4,
-   "o2": 3.6
+   "o1": 2.2,
+   "oX": 3.3,
+   "o2": 3.55
   },
   {
    "id": "rou-otelul-uta-arad",
@@ -194,8 +194,8 @@
    "home": "Feyenoord",
    "away": "Ajax",
    "o1": 2.15,
-   "oX": 4.1,
-   "o2": 3.1
+   "oX": 4.0,
+   "o2": 3.0
   },
   {
    "id": "ere-fortuna-sittard-heerenveen",
@@ -213,9 +213,9 @@
    "kickoff": "2026-11-29T14:00Z",
    "home": "Auxerre",
    "away": "Marseille",
-   "o1": 4.0,
+   "o1": 3.9,
    "oX": 4.0,
-   "o2": 1.85
+   "o2": 1.86
   },
   {
    "id": "sa-sassuolo-napoli",
@@ -223,7 +223,7 @@
    "kickoff": "2026-11-29T14:00Z",
    "home": "Sassuolo",
    "away": "Napoli",
-   "o1": 4.6,
+   "o1": 4.75,
    "oX": 4.4,
    "o2": 1.68
   },
@@ -273,9 +273,9 @@
    "kickoff": "2026-11-29T14:00Z",
    "home": "Halmstad",
    "away": "Mjällby AIF",
-   "o1": 1.77,
+   "o1": 1.71,
    "oX": 4.1,
-   "o2": 4.1
+   "o2": 4.5
   },
   {
    "id": "pl-brighton-and-hove-albion-newcastle-united",
@@ -283,7 +283,7 @@
    "kickoff": "2026-11-29T14:05Z",
    "home": "Brighton and Hove Albion",
    "away": "Newcastle United",
-   "o1": 1.57,
+   "o1": 1.58,
    "oX": 4.5,
    "o2": 5.5
   },
@@ -303,8 +303,8 @@
    "kickoff": "2026-11-29T14:05Z",
    "home": "Fulham",
    "away": "Bournemouth",
-   "o1": 2.6,
-   "oX": 3.45,
+   "o1": 2.65,
+   "oX": 3.5,
    "o2": 2.6
   },
   {
@@ -313,7 +313,7 @@
    "kickoff": "2026-11-29T14:05Z",
    "home": "Sunderland",
    "away": "Tottenham Hotspur",
-   "o1": 3.55,
+   "o1": 3.7,
    "oX": 3.4,
    "o2": 2.1
   },
@@ -323,8 +323,8 @@
    "kickoff": "2026-11-29T14:30Z",
    "home": "SC Freiburg",
    "away": "RB Leipzig",
-   "o1": 2.65,
-   "oX": 4.0,
+   "o1": 2.7,
+   "oX": 3.8,
    "o2": 2.4
   },
   {
@@ -333,7 +333,7 @@
    "kickoff": "2026-11-29T15:00Z",
    "home": "Royal Antwerp",
    "away": "Anderlecht",
-   "o1": 3.75,
+   "o1": 3.6,
    "oX": 3.9,
    "o2": 1.93
   },
@@ -353,9 +353,9 @@
    "kickoff": "2026-11-29T15:15Z",
    "home": "Mallorca",
    "away": "CD Castellón",
-   "o1": 2.3,
+   "o1": 2.25,
    "oX": 3.4,
-   "o2": 3.0
+   "o2": 3.1
   },
   {
    "id": "ere-fc-zwolle-az-alkmaar",
@@ -403,9 +403,9 @@
    "kickoff": "2026-11-29T16:30Z",
    "home": "Arsenal",
    "away": "Manchester City",
-   "o1": 1.95,
+   "o1": 1.98,
    "oX": 3.75,
-   "o2": 3.75
+   "o2": 3.6
   },
   {
    "id": "sa-as-roma-monza",
@@ -445,7 +445,7 @@
    "away": "Córdoba",
    "o1": 3.1,
    "oX": 3.8,
-   "o2": 2.1
+   "o2": 2.15
   },
   {
    "id": "bel-standard-liege-club-brugge",
@@ -483,9 +483,9 @@
    "kickoff": "2026-11-29T18:30Z",
    "home": "Borussia Dortmund",
    "away": "Bayer Leverkusen",
-   "o1": 2.1,
+   "o1": 2.15,
    "oX": 4.0,
-   "o2": 3.1
+   "o2": 3.0
   },
   {
    "id": "ere-nec-nijmegen-fc-twente-enschede",
@@ -503,9 +503,9 @@
    "kickoff": "2026-11-29T19:45Z",
    "home": "Lyon",
    "away": "AS Monaco",
-   "o1": 2.45,
-   "oX": 3.5,
-   "o2": 2.9
+   "o1": 2.4,
+   "oX": 3.4,
+   "o2": 3.0
   },
   {
    "id": "sa-como-juventus",
@@ -513,8 +513,8 @@
    "kickoff": "2026-11-29T19:45Z",
    "home": "Como",
    "away": "Juventus",
-   "o1": 2.15,
-   "oX": 3.6,
+   "o1": 2.1,
+   "oX": 3.5,
    "o2": 3.5
   },
   {
@@ -543,8 +543,8 @@
    "kickoff": "2026-11-29T13:00Z",
    "home": "Granada CF",
    "away": "AD Ceuta FC",
-   "o1": 1.51,
-   "oX": 4.5,
+   "o1": 1.55,
+   "oX": 4.3,
    "o2": 5.75
   },
   {
@@ -563,9 +563,9 @@
    "kickoff": "2026-11-29T13:45Z",
    "home": "Lech Poznań",
    "away": "Pogoń Szczecin",
-   "o1": 1.51,
-   "oX": 4.75,
-   "o2": 5.5
+   "o1": 1.6,
+   "oX": 4.33,
+   "o2": 4.8
   },
   {
    "id": "pol-legia-warszawa-wieczysta-krakow",
@@ -573,7 +573,7 @@
    "kickoff": "2026-11-29T16:30Z",
    "home": "Legia Warszawa",
    "away": "Wieczysta Kraków",
-   "o1": 1.64,
+   "o1": 1.68,
    "oX": 4.2,
    "o2": 4.5
   },
@@ -583,9 +583,9 @@
    "kickoff": "2026-11-29T19:15Z",
    "home": "Jagiellonia Białystok",
    "away": "Radomiak Radom",
-   "o1": 1.6,
+   "o1": 1.63,
    "oX": 4.3,
-   "o2": 4.75
+   "o2": 4.5
   },
   {
    "id": "rou-fc-rapid-bucuresti-fc-botosani",
@@ -594,7 +594,7 @@
    "home": "FC Rapid Bucuresti",
    "away": "FC Botosani",
    "o1": 1.55,
-   "oX": 4.1,
+   "oX": 4.3,
    "o2": 5.5
   },
   {
@@ -623,9 +623,9 @@
    "kickoff": "2026-11-29T15:00Z",
    "home": "FC Copenhagen",
    "away": "FC Midtjylland",
-   "o1": 2.05,
-   "oX": 3.7,
-   "o2": 3.45
+   "o1": 2.0,
+   "oX": 3.6,
+   "o2": 3.4
   },
   {
    "id": "swe-kalmar-ff-aik",
@@ -653,9 +653,9 @@
    "kickoff": "2026-11-29T14:00Z",
    "home": "Västerås SK",
    "away": "Hammarby IF",
-   "o1": 8.0,
+   "o1": 8.5,
    "oX": 5.5,
-   "o2": 1.35
+   "o2": 1.31
   },
   {
    "id": "swe-ifk-goteborg-ik-sirius",

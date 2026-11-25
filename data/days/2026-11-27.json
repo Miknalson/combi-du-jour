@@ -1,6 +1,6 @@
 {
  "date": "2026-11-27",
- "updatedAt": "2026-11-24T07:51:55Z",
+ "updatedAt": "2026-11-25T07:51:28Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
   {
@@ -19,7 +19,7 @@
    "kickoff": "2026-11-27T17:00Z",
    "home": "Alanyaspor",
    "away": "Konyaspor",
-   "o1": 2.5,
+   "o1": 2.55,
    "oX": 3.3,
    "o2": 2.75
   },
@@ -41,7 +41,7 @@
    "away": "Darmstadt",
    "o1": 1.77,
    "oX": 4.1,
-   "o2": 4.5
+   "o2": 4.3
   },
   {
    "id": "bl2-1-fc-heidenheim-1-fc-nurnberg",
@@ -49,9 +49,9 @@
    "kickoff": "2026-11-27T17:30Z",
    "home": "1. FC Heidenheim",
    "away": "1. FC Nürnberg",
-   "o1": 2.05,
-   "oX": 4.1,
-   "o2": 3.2
+   "o1": 2.1,
+   "oX": 4.0,
+   "o2": 3.1
   },
   {
    "id": "por2-feirense-portimonense",
@@ -60,7 +60,7 @@
    "home": "Feirense",
    "away": "Portimonense",
    "o1": 3.0,
-   "oX": 3.0,
+   "oX": 3.1,
    "o2": 2.4
   },
   {
@@ -69,9 +69,9 @@
    "kickoff": "2026-11-27T18:00Z",
    "home": "SonderjyskE",
    "away": "Brondby IF",
-   "o1": 4.33,
+   "o1": 4.2,
    "oX": 4.1,
-   "o2": 1.71
+   "o2": 1.74
   },
   {
    "id": "rou-petrolul-fc-arges",
@@ -80,7 +80,7 @@
    "home": "Petrolul",
    "away": "FC Arges",
    "o1": 2.15,
-   "oX": 3.25,
+   "oX": 3.3,
    "o2": 3.3
   },
   {
@@ -89,8 +89,8 @@
    "kickoff": "2026-11-27T19:00Z",
    "home": "Groningen",
    "away": "Willem II",
-   "o1": 1.4,
-   "oX": 5.25,
+   "o1": 1.42,
+   "oX": 5.0,
    "o2": 6.75
   },
   {
@@ -119,9 +119,9 @@
    "kickoff": "2026-11-27T19:30Z",
    "home": "Górnik Zabrze",
    "away": "Wisła Płock",
-   "o1": 1.52,
-   "oX": 4.4,
-   "o2": 5.5
+   "o1": 1.49,
+   "oX": 4.5,
+   "o2": 6.0
   },
   {
    "id": "l1-brest-paris-fc",
@@ -129,7 +129,7 @@
    "kickoff": "2026-11-27T19:45Z",
    "home": "Brest",
    "away": "Paris FC",
-   "o1": 3.25,
+   "o1": 3.3,
    "oX": 3.5,
    "o2": 2.2
   },
@@ -140,7 +140,7 @@
    "home": "Venezia",
    "away": "Bologna",
    "o1": 3.4,
-   "oX": 3.4,
+   "oX": 3.3,
    "o2": 2.2
   },
   {
@@ -169,9 +169,9 @@
    "kickoff": "2026-11-27T20:00Z",
    "home": "Nottingham Forest",
    "away": "Chelsea",
-   "o1": 2.65,
+   "o1": 2.6,
    "oX": 3.5,
-   "o2": 2.65
+   "o2": 2.75
   },
   {
    "id": "cha-southampton-middlesbrough",
@@ -225,7 +225,7 @@
    "away": "Nacional",
    "o1": 2.15,
    "oX": 3.3,
-   "o2": 3.5
+   "o2": 3.55
   },
   {
    "id": "pol-rakow-czestochowa-piast-gliwice",
@@ -233,9 +233,9 @@
    "kickoff": "2026-11-27T17:00Z",
    "home": "Raków Częstochowa",
    "away": "Piast Gliwice",
-   "o1": 1.8,
-   "oX": 3.9,
-   "o2": 3.8
+   "o1": 1.83,
+   "oX": 4.0,
+   "o2": 3.75
   },
   {
    "id": "rou-u-cluj-sepsi-sf-gheorghe",
@@ -244,7 +244,7 @@
    "home": "U. Cluj",
    "away": "Sepsi Sf. Gheorghe",
    "o1": 1.62,
-   "oX": 3.85,
+   "oX": 3.9,
    "o2": 5.25
   },
   {

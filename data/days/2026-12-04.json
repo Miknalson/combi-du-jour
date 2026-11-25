@@ -1,6 +1,6 @@
 {
  "date": "2026-12-04",
- "updatedAt": "2026-11-24T07:51:55Z",
+ "updatedAt": "2026-11-25T07:51:28Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
   {
@@ -19,7 +19,7 @@
    "kickoff": "2026-12-04T19:30Z",
    "home": "Bayern Munich",
    "away": "SC Paderborn",
-   "o1": 1.07,
+   "o1": 1.08,
    "oX": 16.0,
    "o2": 26.0
   },
@@ -29,9 +29,9 @@
    "kickoff": "2026-12-04T19:45Z",
    "home": "Toulouse",
    "away": "Paris Saint Germain",
-   "o1": 6.25,
+   "o1": 6.0,
    "oX": 5.0,
-   "o2": 1.44
+   "o2": 1.5
   },
   {
    "id": "ere-telstar-groningen",
@@ -99,9 +99,9 @@
    "kickoff": "2026-12-04T17:30Z",
    "home": "Arminia Bielefeld",
    "away": "Dynamo Dresden",
-   "o1": 1.91,
-   "oX": 3.6,
-   "o2": 3.5
+   "o1": 1.98,
+   "oX": 3.8,
+   "o2": 3.6
   },
   {
    "id": "bl2-fc-energie-cottbus-vfl-osnabruck",
@@ -110,8 +110,8 @@
    "home": "FC Energie Cottbus",
    "away": "VfL Osnabrück",
    "o1": 2.75,
-   "oX": 3.6,
-   "o2": 2.25
+   "oX": 3.7,
+   "o2": 2.3
   },
   {
    "id": "sa-bologna-as-roma",
