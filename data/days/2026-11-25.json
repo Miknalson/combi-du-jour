@@ -30,7 +30,8 @@
     },
     "quoteSource": "oddspapi"
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "1-4"
   },
   {
    "id": "football-a7c87fac9e9cbcfc02ad0e0b29ca89e2",
@@ -61,7 +62,8 @@
     },
     "quoteSource": "oddspapi"
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "0-1"
   },
   {
    "id": "cha-burnley-birmingham-city",
@@ -113,7 +115,8 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-2"
   },
   {
    "id": "cha-watford-blackburn-rovers",
@@ -165,7 +168,8 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-1"
   },
   {
    "id": "cha-bolton-wanderers-west-bromwich-albion",
@@ -217,7 +221,8 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-3"
   },
   {
    "id": "football-14007bc0605bce3bd164b132254ba24c",
@@ -248,7 +253,8 @@
     },
     "quoteSource": "oddspapi"
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-2"
   },
   {
    "id": "football-b1af6789fe6db7aab18a2945ce56f035",
@@ -279,7 +285,8 @@
     },
     "quoteSource": "oddspapi"
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-0"
   },
   {
    "id": "football-0ee2cfddf20153779cd2cc3e1f1f879f",
@@ -310,7 +317,8 @@
     },
     "quoteSource": "oddspapi"
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-1"
   },
   {
    "id": "football-99459b90f3e732106e09585bf94b36b4",
@@ -341,7 +349,8 @@
     },
     "quoteSource": "oddspapi"
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "0-3"
   },
   {
    "id": "football-49c66d76bc4085e63a181179cc47ef4d",
@@ -372,7 +381,8 @@
     },
     "quoteSource": "oddspapi"
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "0-1"
   },
   {
    "id": "football-e7e64568f6af00d395a3fdfc27de8ae3",
@@ -403,7 +413,8 @@
     },
     "quoteSource": "oddspapi"
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-0"
   },
   {
    "id": "football-01a61442fe04f8751b62eb251f234079",
@@ -426,7 +437,8 @@
     "o2": 2.4,
     "ou": {}
    },
-   "gender": "unspecified"
+   "gender": "unspecified",
+   "score": "2-2"
   },
   {
    "id": "cha-stoke-city-millwall",
@@ -478,7 +490,8 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-1"
   },
   {
    "id": "ukr-kryvbas-fc-kharkiv",
@@ -505,7 +518,8 @@
     "oX": 4.4,
     "o2": 1.34,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-2"
   }
  ],
  "updatedAt": "2026-11-25T07:51:28Z",
