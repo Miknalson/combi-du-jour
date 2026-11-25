@@ -64,7 +64,8 @@ on:
     - cron: '5 6 * * *'
     - cron: '25 23 * * *'
     # Scores seulement, toutes les 15 min de 12 h à minuit (Paris) : ESPN gratuit, aucun crédit de cotes ni d'IA.
-    - cron: '*/15 11-22 * * *'
+    # Minutes décalées (7, 22, 37, 52) : GitHub saute la plupart des relevés lancés à l'heure ronde ou au quart d'heure (2 relevés sur 48 le 24/11).
+    - cron: '7,22,37,52 11-22 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -130,12 +131,12 @@ jobs:
           fi
       - name: Vérifier l’accès au fournisseur sans exposer la clé
         id: provider
-        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '*/15 11-22 * * *' && (github.event_name != 'push' || steps.quote_changes.outputs.refresh == 'true')
+        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '7,22,37,52 11-22 * * *' && (github.event_name != 'push' || steps.quote_changes.outputs.refresh == 'true')
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/check_quotes.py
       - name: Relever les victoires et totaux de buts Winamax
-        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '*/15 11-22 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
+        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '7,22,37,52 11-22 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/collect_football_markets.py
@@ -147,7 +148,7 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/collect_quotes.py --max-credits 18
       - name: Relever via OddsPapi les buts Winamax du foot (chaque jour), basket et tennis (un jour sur deux)
-        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '*/15 11-22 * * *'
+        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '7,22,37,52 11-22 * * *'
         continue-on-error: true
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
@@ -157,11 +158,11 @@ jobs:
         continue-on-error: true
         run: python scripts/update_scores.py --max-requests 12
       - name: Installer le client Claude
-        if: github.event.schedule != '*/15 11-22 * * *'
+        if: github.event.schedule != '7,22,37,52 11-22 * * *'
         continue-on-error: true
         run: npm ci --omit=dev --no-audit --no-fund
       - name: Écarter les matchs douteux (actu de dernière minute, IA)
-        if: github.event.schedule != '*/15 11-22 * * *'
+        if: github.event.schedule != '7,22,37,52 11-22 * * *'
         # Lit les nouvelles des seuls matchs que les tickets du jour vont prendre. Sans clé ou en cas d'erreur, rien n'est écarté.
         continue-on-error: true
         timeout-minutes: 8
@@ -184,7 +185,7 @@ jobs:
         continue-on-error: true
         run: node scripts/algo_mix.cjs
       - name: Notifier les propositions sans passer de pari
-        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '*/15 11-22 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
+        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '7,22,37,52 11-22 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         id: notifications
         continue-on-error: true
         env:
@@ -194,7 +195,7 @@ jobs:
         id: publish
         if: always()
         env:
-          LIVE_RUN: ${{ github.event.schedule == '*/15 11-22 * * *' }}
+          LIVE_RUN: ${{ github.event.schedule == '7,22,37,52 11-22 * * *' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -234,7 +235,7 @@ jobs:
   publier:
     needs: actualiser
     # Relevé de scores sans nouveau score : rien à republier.
-    if: github.event.schedule != '*/15 11-22 * * *' || needs.actualiser.outputs.pushed == 'true'
+    if: github.event.schedule != '7,22,37,52 11-22 * * *' || needs.actualiser.outputs.pushed == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -245,7 +246,7 @@ jobs:
 
   signaler:
     needs: [actualiser, publier]
-    if: always() && needs.publier.result == 'success' && github.event.schedule != '*/15 11-22 * * *' && (needs.actualiser.outputs.provider_ready == 'false' || needs.actualiser.outputs.collection == 'failure' || needs.actualiser.outputs.notifications == 'failure' || needs.actualiser.outputs.scores == 'failure')
+    if: always() && needs.publier.result == 'success' && github.event.schedule != '7,22,37,52 11-22 * * *' && (needs.actualiser.outputs.provider_ready == 'false' || needs.actualiser.outputs.collection == 'failure' || needs.actualiser.outputs.notifications == 'failure' || needs.actualiser.outputs.scores == 'failure')
     runs-on: ubuntu-latest
     steps:
       - name: Signaler le blocage après publication du diagnostic

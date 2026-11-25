@@ -40,4 +40,13 @@ class ScoresTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as root,patch.object(s,'ROOT',Path(root)),patch.object(s,'fetch',side_effect=RuntimeError('private-token-in-error')):
    folder=Path(root)/'days';folder.mkdir();file=folder/'2026-11-19.json';value=json.dumps({'date':'2026-11-19','matches':[self.match,dict(self.match,id='known',score='1-0')]});file.write_text(value)
    report=s.update(self.now);self.assertEqual(report['status'],'unavailable');self.assertEqual(file.read_text(),value);self.assertNotIn('private-token',json.dumps(report))
+ def test_club_suffixes_and_small_kickoff_shift(self):
+  import copy
+  match={'league':'UCL','home':'Sabah FK','away':'Barcelona','kickoff':'2026-11-25T17:45:00Z'}
+  e=copy.deepcopy(self.event);e['date']='2026-11-25T17:50Z'
+  e['competitions'][0]['competitors'][0]['team']={'displayName':'Sabah'};e['competitions'][0]['competitors'][1]['team']={'displayName':'Barcelona'}
+  self.assertEqual(s.matching_final(match,[e])['score'],'2-1')
+  e['competitions'][0]['competitors'][1]['team']={'displayName':'Espanyol'};self.assertIsNone(s.matching_final(match,[e]))
+  e['competitions'][0]['competitors'][1]['team']={'displayName':'Barcelona'};e['date']='2026-11-25T18:15Z';self.assertIsNone(s.matching_final(match,[e]))
+  self.assertFalse(s.same_team('Servette',['Servette Geneve FC'],'L1'))
 if __name__=='__main__':unittest.main()
