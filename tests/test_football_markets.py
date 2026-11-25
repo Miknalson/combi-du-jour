@@ -28,13 +28,13 @@ class MarketCollectionTests(unittest.TestCase):
    calls.append(params);c.api.credits_left='20';return [self.event]
   with tempfile.TemporaryDirectory() as d,patch.object(c,'ROOT',Path(d)),patch.object(c.api,'get',side_effect=get),patch.dict(os.environ,{'ODDS_API_KEY':'private'}):
    self.prepare(Path(d));r=c.run(self.now);self.assertEqual(r['totalLines'],1);self.assertEqual(r['creditsUsed'],2);self.assertEqual(calls[0]['markets'],'h2h,totals');self.assertEqual(calls[0]['bookmakers'],'winamax_fr');c.run(self.now);self.assertEqual(len(calls),1)
- def test_one_credit_requests_totals_only_and_future_uefa_does_not_preempt_today(self):
+ def test_one_credit_requests_winners_only_and_future_uefa_does_not_preempt_today(self):
   calls=[]
   def get(path,**params):
    if path=='/sports':c.api.credits_left='22';return []
    calls.append(params);c.api.credits_left='21';return [self.event]
   with tempfile.TemporaryDirectory() as d,patch.object(c,'ROOT',Path(d)),patch.object(c.api,'get',side_effect=get),patch.dict(os.environ,{'ODDS_API_KEY':'private'}):
-   root=Path(d);self.prepare(root);(root/'collection-health.json').write_text(json.dumps({'updatedAt':self.now.isoformat(),'requestCredits':{'prices':1}}));(root/'days/2026-11-24.json').write_text(json.dumps({'date':'2026-11-24','matches':[{'home':'C','away':'D','league':'UCL','kickoff':'2026-11-24T20:00Z'}]}));r=c.run(self.now);self.assertEqual(r['totalLines'],1);self.assertEqual(calls[0]['markets'],'totals');self.assertEqual(r['league'],'soccer_epl')
+   root=Path(d);self.prepare(root);(root/'collection-health.json').write_text(json.dumps({'updatedAt':self.now.isoformat(),'requestCredits':{'prices':1}}));(root/'days/2026-11-24.json').write_text(json.dumps({'date':'2026-11-24','matches':[{'home':'C','away':'D','league':'UCL','kickoff':'2026-11-24T20:00Z'}]}));r=c.run(self.now);self.assertEqual(r['totalLines'],1);self.assertEqual(calls[0]['markets'],'h2h');self.assertEqual(r['league'],'soccer_epl')
  def test_rejects_foreign_incomplete_and_old_prices(self):
   import copy
   for kind in ['foreign','incomplete','old']:

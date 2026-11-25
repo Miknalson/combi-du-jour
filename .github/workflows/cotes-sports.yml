@@ -207,6 +207,7 @@ jobs:
           if [ -f data/collection-health.json ]; then git add data/collection-health.json; fi
           if [ -f data/notification-status.json ]; then git add data/notification-status.json; fi
           if [ -f data/notification-state.json ]; then git add data/notification-state.json; fi
+          if [ -f data/outage-status.json ]; then git add data/outage-status.json; fi
           git add data/paper-tests-v1.json data/paper-status-v1.json data/paper-tests-v2.json data/paper-status-v2.json 2>/dev/null || true
           if [ -f data/tres-sur-tests.json ]; then git add data/tres-sur-tests.json; fi
           if [ -f data/safe-but-tests.json ]; then git add data/safe-but-tests.json; fi

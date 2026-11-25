@@ -4,8 +4,18 @@ const fs=require('node:fs'),path=require('node:path'),A=require('../alerts-engin
 const root=path.resolve(__dirname,'..'),statusFile=path.join(root,'data/notification-status.json');
 function read(file,fallback){try{return JSON.parse(fs.readFileSync(path.join(root,'data',file),'utf8'));}catch(e){return fallback;}}
 function saveStatus(value){fs.writeFileSync(statusFile,JSON.stringify({...value,updatedAt:new Date().toISOString()},null,2)+'\n');}
+function checkOutage(now){
+ const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(now));
+ const previous=read('outage-status.json',null);
+ const result=A.outage({day:read('days/'+day+'.json',null),football:read('sports/football.json',null),goals:read('sports/football-goals.json',null),tresSur:read('tres-sur-tests.json',{records:[]}),paper:read('paper-tests-v2.json',{records:[]})},now);
+ result.since=result.status==='panne'?(previous&&previous.status==='panne'&&previous.since?previous.since:result.checkedAt):null;
+ result.alertedDay=previous&&previous.alertedDay||null;
+ return {result,previous};
+}
+function saveOutage(value){fs.writeFileSync(path.join(root,'data/outage-status.json'),JSON.stringify(value,null,2)+'\n');}
 async function main(){
  const topic=process.env.NTFY_TOPIC;
+ const outage=checkOutage(Date.now());saveOutage(outage.result);
  if(!topic){saveStatus({status:'unconfigured',topicConfigured:false,message:'Notifications automatiques non configurées : ajouter le secret GitHub NTFY_TOPIC.'});console.log('Notifications non configurées : ajouter le secret NTFY_TOPIC.');return;}
  if(!/^[a-zA-Z0-9_-]{32,64}$/.test(topic))throw Error('invalid_topic');
  const stateFile=path.join(root,'data/notification-state.json'),journal=read('paper-tests-v2.json',{records:[]}),extra=read('tres-sur-tests.json',{records:[]}),state=read('notification-state.json',{sent:[],dailyReports:[]}),sent=new Set(state.sent||[]),reports=new Set(state.dailyReports||[]),now=Date.now(),day=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(now));
@@ -14,6 +24,10 @@ async function main(){
  function persist(){state.updatedAt=new Date().toISOString();fs.writeFileSync(stateFile,JSON.stringify({...state,sent:[...sent],dailyReports:[...reports]},null,2)+'\n');}
  const eligible=journal.records.concat(extra.records||[]).filter(r=>A.eligible(r,now));
  for(const r of eligible){if(sent.has(r.id))continue;await send(A.payload(r,topic));sent.add(r.id);persist();count++;}
+ // Alerte panne : une fois par jour tant que ça dure, puis un message quand c'est réparé.
+ const o=outage.result,was=outage.previous&&outage.previous.status==='panne';
+ if(o.status==='panne'&&o.alertedDay!==day){await send({topic,title:'⚠️ Combiné du Jour en panne',message:o.message+' Le relevé repartira à la prochaine collecte ; rien à faire de ton côté si ça revient. Aucun pari placé.',priority:5,tags:['warning'],click:A.SITE+'#deliveryStatus'});o.alertedDay=day;saveOutage(o);}
+ else if(o.status==='ok'&&was&&outage.previous.alertedDay){await send({topic,title:'✅ Combiné du Jour réparé',message:o.message,tags:['white_check_mark'],click:A.SITE});o.alertedDay=null;saveOutage(o);}
  let digest=false;
  if(!eligible.length&&!reports.has(day)){
   const health=read('collection-health.json',null),noPick=journal.records.filter(r=>r.day===day&&r.status==='no_pick').length;

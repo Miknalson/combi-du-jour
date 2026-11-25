@@ -82,6 +82,26 @@ class FootballGoals(unittest.TestCase):
         self.assertIsNone(C.collect_football(api, NOW))
         self.assertEqual(api.calls, [])
 
+    def test_day_file_fallback_when_odds_api_is_stale(self):
+        # The Odds API bloqué (relevé de la veille) : les matchs du jour viennent de data/days/ et le 1N2 Winamax
+        # d'OddsPapi alimente football.json (Très sûr, Safe) et la fiche du jour (appli), sans crédit The Odds API.
+        (C.DATA / 'sports' / 'football.json').write_text(json.dumps({**REF, 'updatedAt': '2026-11-22T04:00:00+00:00'}))
+        (C.DATA / 'days').mkdir()
+        day = {'date': '2026-11-23', 'matches': [
+            {'id': 'football-a', 'league': 'EPL', 'kickoff': '2026-11-23T20:00Z', 'home': 'Manchester City', 'away': 'Leeds United', 'o1': 1.5, 'oX': 4, 'o2': 6},
+            {'id': 'football-z', 'league': 'EPL', 'kickoff': '2026-11-23T06:00Z', 'home': 'Old', 'away': 'Match'}]}
+        (C.DATA / 'days' / '2026-11-23.json').write_text(json.dumps(day, indent=1))
+        api = FakeApi(); goals, todo, paired = C.collect_football(api, NOW)
+        self.assertEqual((todo, paired), (1, 1))
+        self.assertEqual(C.publish_winners(goals, NOW), 1)
+        doc = json.loads((C.DATA / 'sports' / 'football.json').read_text())
+        self.assertEqual((doc['status'], doc['updatedAt'], len(doc['matches'])), ('ok', NOW.isoformat(), 1))
+        m = doc['matches'][0]
+        self.assertEqual((m['id'], m['o1'], m['oX'], m['o2'], m['bookKey']), ('football-a', 1.5, 4.2, 6.0, 'winamax_fr'))
+        self.assertEqual(sorted(g['family'] for g in m['markets']), ['h2h', 'totals'])
+        mine = json.loads((C.DATA / 'days' / '2026-11-23.json').read_text())['matches'][0]['mine']
+        self.assertEqual((mine['o1'], mine['oX'], mine['o2'], mine['ou']['2.5']['o']), (1.5, 4.2, 6.0, 1.7))
+
     def test_team_names(self):
         self.assertTrue(C.same_team('Atalanta BC', 'Atalanta'))
         self.assertTrue(C.same_team('Inter Milan', 'Inter'))

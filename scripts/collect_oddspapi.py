@@ -234,20 +234,46 @@ def goals_match(ref, fx, odds, defs, now, stamp):
         return None
     return {**{k: ref[k] for k in ('id', 'sport', 'league', 'kickoff', 'home', 'away') if k in ref}, 'leagueCode': ref.get('leagueCode'),
             'bookKey': BOOK, 'book': 'Winamax France', 'asOf': stamp, 'oddspapiFixtureId': fx['fixtureId'], 'gender': ref.get('gender', 'unspecified'),
-            'markets': groups, 'availableMarkets': sorted({g['family'] for g in groups})}
+            'markets': groups, 'availableMarkets': sorted({g['family'] for g in groups}), 'fromDayFile': bool(ref.get('fromDayFile'))}
+
+
+def day_refs(today, now, known):
+    """Matchs du jour de data/days/<jour>.json absents du relevé The Odds API frais (secours quand ce relevé est bloqué)."""
+    try:
+        doc = json.loads((DATA / 'days' / (today + '.json')).read_text())
+    except (OSError, ValueError):
+        return []
+    out = []
+    for m in doc.get('matches', []):
+        try:
+            t = dt.datetime.fromisoformat(str(m['kickoff']).replace('Z', '+00:00'))
+        except (KeyError, ValueError):
+            continue
+        if not m.get('id') or not m.get('home') or not m.get('away') or t <= now or paris_day(t) != today:
+            continue
+        if any(k['id'] == m['id'] or (k['kickoff'] == m['kickoff'] and same_team(k['home'], m['home']) and same_team(k['away'], m['away'])) for k in known):
+            continue
+        out.append({'id': m['id'], 'sport': 'football', 'league': m.get('leagueTitle') or m.get('league'), 'leagueCode': m.get('league'),
+                    'kickoff': m['kickoff'], 'home': m['home'], 'away': m['away'], 'gender': m.get('gender', 'unspecified'), 'fromDayFile': True})
+    return out
 
 
 def collect_football(api, now):
-    """Buts Winamax des matchs du jour du relevé football The Odds API. None si ce relevé n'est pas frais."""
+    """Cotes Winamax (1N2, buts, les deux marquent) des matchs du jour.
+
+    Matchs de référence : le relevé football The Odds API s'il a moins d'une heure, complété par les matchs du jour
+    de data/days/ (même identifiant, mêmes noms) : le football ne dépend plus des crédits The Odds API.
+    None s'il n'y a aucun match du jour à relever (aucune requête dépensée)."""
     try:
         ref = json.loads((DATA / 'sports' / 'football.json').read_text())
         fresh = ref.get('status') == 'ok' and 0 <= (now - dt.datetime.fromisoformat(ref['updatedAt'].replace('Z', '+00:00'))).total_seconds() <= 3600
     except (OSError, ValueError, KeyError):
-        return None
+        ref, fresh = {}, False
     today = paris_day(now)
     todo = [m for m in ref.get('matches', []) if fresh and m.get('sport') == 'football' and m.get('kickoff')
             and paris_day(dt.datetime.fromisoformat(m['kickoff'].replace('Z', '+00:00'))) == today
             and dt.datetime.fromisoformat(m['kickoff'].replace('Z', '+00:00')) > now]
+    todo += day_refs(today, now, todo)
     if not todo:
         return None
     defs = {m['marketId']: {**m, 'names': {o['outcomeId']: o['outcomeName'] for o in m['outcomes']}}
@@ -273,6 +299,63 @@ def collect_football(api, now):
             if m:
                 out.append(m)
     return out, len(todo), len(pairs)
+
+
+def publish_winners(goals, now):
+    """Cotes Winamax 1N2 relevées par OddsPapi -> data/sports/football.json (Très sûr, Safe) et data/days/ (appli).
+
+    Les matchs The Odds API de moins d'une heure sont gardés ; les autres sont remplacés par le relevé OddsPapi.
+    Retourne le nombre de matchs ajoutés au relevé football."""
+    rows = []
+    for g in goals:
+        h2h = next((x for x in g['markets'] if x['family'] == 'h2h'), None)
+        if not h2h:
+            continue
+        odds = {o['side']: o['odds'] for o in h2h['outcomes']}
+        rows.append({**{k: g[k] for k in ('id', 'league', 'leagueCode', 'kickoff', 'home', 'away', 'gender') if k in g},
+                     'eventId': g['oddspapiFixtureId'], 'sport': 'football', 'sportKey': 'oddspapi_football', 'asOf': g['asOf'],
+                     'bookKey': BOOK, 'book': 'Winamax France', 'market': 'h2h', 'quoteSource': 'oddspapi',
+                     'markets': [x for x in g['markets'] if x['family'] in ('h2h', 'totals')],
+                     'o1': odds['1'], 'oX': odds['X'], 'o2': odds['2']})
+    if not rows:
+        return 0
+    path = DATA / 'sports' / 'football.json'
+    try:
+        doc = json.loads(path.read_text())
+    except (OSError, ValueError):
+        doc = {'sport': 'football', 'bookKey': BOOK, 'matches': [], 'fixtures': []}
+    def recent(m):
+        try:
+            return 0 <= (now - dt.datetime.fromisoformat(str(m['asOf']).replace('Z', '+00:00'))).total_seconds() <= 3600
+        except (KeyError, ValueError):
+            return False
+    ids = {r['id'] for r in rows}
+    keep = [m for m in doc.get('matches', []) if recent(m) and m.get('id') not in ids]
+    doc.update(status='ok', updatedAt=now.isoformat(), bookKey=BOOK, partial=True, matches=keep + rows,
+               winnersSource='OddsPapi (Winamax FR)' if not keep else 'The Odds API + OddsPapi (Winamax FR)')
+    path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
+    file = DATA / 'days' / (paris_day(now) + '.json')
+    try:
+        day = json.loads(file.read_text())
+    except (OSError, ValueError):
+        return len(rows)
+    by_id = {r['id']: r for r in rows}
+    changed = False
+    for m in day.get('matches', []):
+        r = by_id.get(m.get('id'))
+        if not r:
+            continue
+        own = m.setdefault('mine', {'book': 'Winamax France', 'bookKey': BOOK, 'ou': {}})
+        own.update(asOf=r['asOf'], o1=r['o1'], oX=r['oX'], o2=r['o2'], quoteSource='oddspapi')
+        tot = next((x for x in r['markets'] if x['family'] == 'totals'), None)
+        if tot:
+            v = {o['side']: o['odds'] for o in tot['outcomes']}
+            own.setdefault('ou', {})[str(tot['line'])] = {'o': v['over'], 'u': v['under'], 'asOf': tot['asOf'], 'quoteSource': 'oddspapi'}
+        changed = True
+    if changed:
+        day['marketsUpdatedAt'] = now.isoformat()
+        file.write_text(json.dumps(day, ensure_ascii=False, indent=1))  # format des fichiers du jour : sans saut de ligne final
+    return len(rows)
 
 
 def main():
@@ -303,6 +386,9 @@ def main():
             doc = {'sport': 'football', 'bookKey': BOOK, 'updatedAt': now.isoformat(), 'status': 'ok' if goals else 'empty',
                    'matches': sorted(goals, key=lambda m: m['kickoff']), 'source': 'OddsPapi (Winamax FR)', 'day': today}
             (DATA / 'sports' / 'football-goals.json').write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
+            added = publish_winners(goals, now)
+            if added:
+                summary['football'] += f' · {added} matchs 1N2 Winamax pour Très sûr et Safe'
             ledger['lastFootballDay'] = today
         elif 'football' not in summary:
             summary['football'] = 'en attente du relevé football du jour'
