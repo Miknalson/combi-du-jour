@@ -13,7 +13,7 @@ revealHash();window.addEventListener('hashchange',revealHash);
 var WINAMAX='https://www.winamax.fr/paris-sportifs';
 var SPORTS={football:'Foot',basket:'Basket',tennis:'Tennis',rugby_xv:'Rugby XV',rugby_xiii:'Rugby XIII',football_us:'Foot US',mixed:'Mix',hockey:'Hockey',volley:'Volley'};
 var KINDS={
-  tres_sur:{name:'Très sûr',range:'cote 1,10 à 1,25',tone:'k-sur'},
+  tres_sur:{name:'Très sûr',range:'cote 1,50 à 1,70',tone:'k-sur'},
   safe:{name:'Safe',range:'cote 1,50 à 2,00',tone:'k-safe'},
   safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
   combi23:{name:'Combiné 2 à 3',range:'victoires · cote 2 à 3',tone:'k-c23'},
@@ -76,7 +76,7 @@ document.addEventListener('submit',function(e){var f=e.target.closest&&e.target.
  try{localStorage.setItem('cdj.bets',JSON.stringify(list));f.closest('details').outerHTML='<p class="tt-played">✓ Enregistré dans ton suivi (Tableau de bord).</p>';}catch(err){}
 });
 function card(r,res,today){
-  var k=KINDS[r.method]||{name:r.method,range:'',tone:''},st=STATUS[res.status]||STATUS.pending;
+  var k=KINDS[r.method]||{name:r.method,range:'',tone:''};if(r.method==='safe'&&r.sport==='football'&&r.version==='safe-multi-v3')k=Object.assign({},k,{range:'cote 1,70 à 2,00'});var st=STATUS[res.status]||STATUS.pending;
   var sport=r.method==='safe'&&r.sport!=='football'?' · '+(SPORTS[r.sport]||r.sport):'';
   var legs=r.legs.map(function(l){
     var d=parisDay(new Date(Date.parse(l.kickoff)));

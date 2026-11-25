@@ -10,6 +10,11 @@ const AMENDMENTS=[{id:'2026-11-23-affichage-sports',files:['sport-catalog.js','s
 function changed(){return names.filter(n=>(old.manifest.sourceHashes||{})[n]!==hashes[n]);}
 if(JSON.stringify(old.manifest.rules)===JSON.stringify(P.rules)&&changed().length){const done=old.manifest.amendments||[],a=AMENDMENTS.find(a=>!done.some(d=>d.id===a.id)&&changed().every(n=>a.files.includes(n)));
  if(a){old.manifest.amendments=done.concat([{id:a.id,appliedAt:new Date(now).toISOString(),files:changed(),reason:a.reason}]);old.manifest.sourceHashes=hashes;}}
+// Changement de règles voulu (pas une dérive) : Safe foot 1,50–2,00 → 1,70–2,00 le 25/11/2026 pour ne plus doubler le Très sûr.
+// Les tickets déjà enregistrés sont gardés (champ version = safe-multi-v2) ; l'ancien manifeste est archivé dans previous.
+const MIGRATIONS=[{id:'2026-11-25-safe-foot-1-70',from:'paper-multisport-v2',to:'paper-multisport-v3',reason:'Safe foot relevé à 1,70–2,00 (ticket 50 % mini, sélections 60 % mini) car le Très sûr passe à 1,50–1,70. Algo et Safe des autres sports inchangés.'}];
+{const m=MIGRATIONS.find(m=>old.manifest.rules&&old.manifest.rules.version===m.from&&P.rules.version===m.to);
+ if(m){const prev=old.manifest;old.manifest={rules:P.rules,sourceHashes:hashes,startedAt:new Date(now).toISOString(),migration:{id:m.id,appliedAt:new Date(now).toISOString(),reason:m.reason},previous:(prev.previous||[]).concat([{rules:prev.rules,sourceHashes:prev.sourceHashes,startedAt:prev.startedAt,amendments:prev.amendments||[],migration:prev.migration||null,endedAt:new Date(now).toISOString()}])};}}
 function scoresFor(j){const out=[];for(const day of new Set(j.records.map(r=>r.day))){try{out.push(...JSON.parse(fs.readFileSync(path.join(root,'data/days',day+'.json'),'utf8')).matches);}catch(e){}}return out;}
 if(JSON.stringify(old.manifest.rules)!==JSON.stringify(P.rules)||JSON.stringify(old.manifest.sourceHashes)!==JSON.stringify(hashes)){
  // Pas de nouveau ticket, mais les tickets déjà enregistrés sont quand même réglés avec les scores.
