@@ -1,21 +1,426 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-25T08:09:26.613028+00:00",
+  "updatedAt": "2026-11-26T08:02:49.819892+00:00",
   "status": "ok",
   "matches": [
     {
-      "id": "ukr-kryvbas-fc-kharkiv",
-      "league": "UKR",
-      "leagueCode": "UKR",
-      "kickoff": "2026-11-25T11:00Z",
-      "home": "Kryvbas",
-      "away": "FC Kharkiv",
+      "id": "uecl-fc-kairat-mjallby-aif",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T15:30Z",
+      "home": "FC Kairat",
+      "away": "Mjällby AIF",
       "gender": "unspecified",
-      "eventId": "id1000021876616896",
+      "eventId": "id1003448074173312",
       "sport": "football",
       "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire FC Kairat",
+              "odds": 2.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Mjällby AIF",
+              "odds": 3,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.35,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.76,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.7,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 2.1,
+      "oX": 3.35,
+      "o2": 3
+    },
+    {
+      "id": "uel-besiktas-jk-hapoel-be-er-sheva",
+      "league": "UEL",
+      "leagueCode": "UEL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "Besiktas JK",
+      "away": "Hapoel Be'er Sheva",
+      "gender": "unspecified",
+      "eventId": "id1000067974173060",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Besiktas JK",
+              "odds": 1.2,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Hapoel Be'er Sheva",
+              "odds": 8.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 6,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.29,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.6,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 1.2,
+      "oX": 6,
+      "o2": 8.5
+    },
+    {
+      "id": "uel-dinamo-zagreb-bayer-leverkusen",
+      "league": "UEL",
+      "leagueCode": "UEL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "Dinamo Zagreb",
+      "away": "Bayer Leverkusen",
+      "gender": "unspecified",
+      "eventId": "id1000067974173066",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Dinamo Zagreb",
+              "odds": 4,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Bayer Leverkusen",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.1,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.38,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 4,
+      "oX": 4.1,
+      "o2": 1.58
+    },
+    {
+      "id": "uel-olympiakos-piraeus-ac-milan",
+      "league": "UEL",
+      "leagueCode": "UEL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "Olympiakos Piraeus",
+      "away": "AC Milan",
+      "gender": "unspecified",
+      "eventId": "id1000067974173068",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Olympiakos Piraeus",
+              "odds": 2.8,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire AC Milan",
+              "odds": 2.2,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.35,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.7,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.74,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 2.8,
+      "oX": 3.35,
+      "o2": 2.2
+    },
+    {
+      "id": "uel-marseille-pfc-levski-sofia",
+      "league": "UEL",
+      "leagueCode": "UEL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "Marseille",
+      "away": "PFC Levski Sofia",
+      "gender": "unspecified",
+      "eventId": "id1000067974173070",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Marseille",
+              "odds": 1.28,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire PFC Levski Sofia",
+              "odds": 7.25,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.4,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.48,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 1.28,
+      "oX": 5.4,
+      "o2": 7.25
+    },
+    {
+      "id": "uecl-fk-jablonec-fc-lugano",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "FK Jablonec",
+      "away": "FC Lugano",
+      "gender": "unspecified",
+      "eventId": "id1003448074173320",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
       "market": "h2h",
@@ -29,155 +434,236 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "O2.5",
               "side": "over",
               "label": "Plus de 2,5 buts",
+              "odds": 1.6,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.84,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire FK Jablonec",
+              "odds": 3,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire FC Lugano",
+              "odds": 2,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.5,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 3,
+      "oX": 3.5,
+      "o2": 2
+    },
+    {
+      "id": "uecl-fk-kauno-zalgiris-riga-fc",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "FK Kauno Žalgiris",
+      "away": "Riga FC",
+      "gender": "unspecified",
+      "eventId": "id1003448074173322",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire FK Kauno Žalgiris",
+              "odds": 3.2,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Riga FC",
+              "odds": 2,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.25,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.76,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.7,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 3.2,
+      "oX": 3.25,
+      "o2": 2
+    },
+    {
+      "id": "uecl-kf-egnatia-lincoln-red-imps-fc",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "KF Egnatia",
+      "away": "Lincoln Red Imps FC",
+      "gender": "unspecified",
+      "eventId": "id1003448074173326",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.49,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire KF Egnatia",
               "odds": 1.54,
               "participant": ""
             },
             {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 1.94,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Kryvbas",
-              "odds": 5.9,
-              "participant": ""
-            },
-            {
               "code": "2",
               "side": "2",
-              "label": "Victoire FC Kharkiv",
-              "odds": 1.34,
+              "label": "Victoire Lincoln Red Imps FC",
+              "odds": 4.6,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 4.4,
+              "odds": 4.2,
               "participant": ""
             }
           ]
         }
       ],
-      "o1": 5.9,
-      "oX": 4.4,
-      "o2": 1.34
+      "o1": 1.54,
+      "oX": 4.2,
+      "o2": 4.6
     },
     {
-      "id": "football-e6fa007f93e0cef004be920f96ee95ba",
-      "league": "UCL",
-      "leagueCode": "UCL",
-      "kickoff": "2026-11-25T17:45:00Z",
-      "home": "Sabah FK",
-      "away": "Barcelona",
+      "id": "uecl-pafos-fc-fc-midtjylland",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "Pafos FC",
+      "away": "FC Midtjylland",
       "gender": "unspecified",
-      "eventId": "id1000000774166032",
+      "eventId": "id1003448074173328",
       "sport": "football",
       "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "market": "h2h",
-      "quoteSource": "oddspapi",
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Sabah FK",
-              "odds": 16.0,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Barcelona",
-              "odds": 1.04,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 13.0,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.14,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 5.0,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "o1": 16.0,
-      "oX": 13.0,
-      "o2": 1.04
-    },
-    {
-      "id": "football-a7c87fac9e9cbcfc02ad0e0b29ca89e2",
-      "league": "UCL",
-      "leagueCode": "UCL",
-      "kickoff": "2026-11-25T17:45:00Z",
-      "home": "Slavia Praha",
-      "away": "Villarreal",
-      "gender": "unspecified",
-      "eventId": "id1000000774166034",
-      "sport": "football",
-      "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
+      "asOf": "2026-11-26T08:02:51Z",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
       "market": "h2h",
@@ -191,20 +677,20 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "O2.5",
               "side": "over",
               "label": "Plus de 2,5 buts",
-              "odds": 1.56,
+              "odds": 1.46,
               "participant": ""
             },
             {
               "code": "U2.5",
               "side": "under",
               "label": "Moins de 2,5 buts",
-              "odds": 2.15,
+              "odds": 2,
               "participant": ""
             }
           ]
@@ -217,20 +703,20 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Slavia Praha",
-              "odds": 3.0,
+              "label": "Victoire Pafos FC",
+              "odds": 2.8,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Villarreal",
-              "odds": 2.0,
+              "label": "Victoire FC Midtjylland",
+              "odds": 2.1,
               "participant": ""
             },
             {
@@ -243,22 +729,22 @@
           ]
         }
       ],
-      "o1": 3.0,
+      "o1": 2.8,
       "oX": 3.55,
-      "o2": 2.0
+      "o2": 2.1
     },
     {
-      "id": "cha-bolton-wanderers-west-bromwich-albion",
-      "league": "CHA",
-      "leagueCode": "CHA",
-      "kickoff": "2026-11-25T19:45Z",
-      "home": "Bolton Wanderers",
-      "away": "West Bromwich Albion",
+      "id": "uecl-sk-brann-agf-aarhus",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T17:45Z",
+      "home": "SK Brann",
+      "away": "AGF Aarhus",
       "gender": "unspecified",
-      "eventId": "id1000001872340072",
+      "eventId": "id1003448074173330",
       "sport": "football",
       "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
+      "asOf": "2026-11-26T08:02:51Z",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
       "market": "h2h",
@@ -272,20 +758,101 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Bolton Wanderers",
-              "odds": 3.3,
+              "label": "Victoire SK Brann",
+              "odds": 2.05,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire West Bromwich Albion",
-              "odds": 1.9,
+              "label": "Victoire AGF Aarhus",
+              "odds": 2.75,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.75,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.42,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 2.05,
+      "oX": 3.75,
+      "o2": 2.75
+    },
+    {
+      "id": "uel-sparta-prague-az-alkmaar",
+      "league": "UEL",
+      "leagueCode": "UEL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "Sparta Prague",
+      "away": "AZ Alkmaar",
+      "gender": "unspecified",
+      "eventId": "id1000067974173076",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Sparta Prague",
+              "odds": 2.75,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire AZ Alkmaar",
+              "odds": 2.15,
               "participant": ""
             },
             {
@@ -305,46 +872,72 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "O2.5",
               "side": "over",
               "label": "Plus de 2,5 buts",
-              "odds": 1.6,
+              "odds": 1.52,
               "participant": ""
             },
             {
               "code": "U2.5",
               "side": "under",
               "label": "Moins de 2,5 buts",
-              "odds": 1.86,
+              "odds": 1.98,
               "participant": ""
             }
           ]
         }
       ],
-      "o1": 3.3,
+      "o1": 2.75,
       "oX": 3.5,
-      "o2": 1.9
+      "o2": 2.15
     },
     {
-      "id": "cha-burnley-birmingham-city",
-      "league": "CHA",
-      "leagueCode": "CHA",
-      "kickoff": "2026-11-25T19:45Z",
-      "home": "Burnley",
-      "away": "Birmingham City",
+      "id": "uel-crystal-palace-real-sociedad",
+      "league": "UEL",
+      "leagueCode": "UEL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "Crystal Palace",
+      "away": "Real Sociedad",
       "gender": "unspecified",
-      "eventId": "id1000001872340074",
+      "eventId": "id1000067974173078",
       "sport": "football",
       "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
+      "asOf": "2026-11-26T08:02:51Z",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
       "market": "h2h",
       "quoteSource": "oddspapi",
       "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.44,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        },
         {
           "id": "h2h||None",
           "family": "h2h",
@@ -353,74 +946,48 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Burnley",
-              "odds": 2.5,
+              "label": "Victoire Crystal Palace",
+              "odds": 1.94,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Birmingham City",
-              "odds": 2.25,
+              "label": "Victoire Real Sociedad",
+              "odds": 2.95,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.3,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.62,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 1.82,
+              "odds": 3.75,
               "participant": ""
             }
           ]
         }
       ],
-      "o1": 2.5,
-      "oX": 3.3,
-      "o2": 2.25
+      "o1": 1.94,
+      "oX": 3.75,
+      "o2": 2.95
     },
     {
-      "id": "cha-watford-blackburn-rovers",
-      "league": "CHA",
-      "leagueCode": "CHA",
-      "kickoff": "2026-11-25T19:45Z",
-      "home": "Watford",
-      "away": "Blackburn Rovers",
+      "id": "uel-ferencvaros-tc-nk-celje",
+      "league": "UEL",
+      "leagueCode": "UEL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "Ferencváros TC",
+      "away": "NK Celje",
       "gender": "unspecified",
-      "eventId": "id1000001872340078",
+      "eventId": "id1000067974173080",
       "sport": "football",
       "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
+      "asOf": "2026-11-26T08:02:51Z",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
       "market": "h2h",
@@ -434,20 +1001,20 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "O2.5",
               "side": "over",
               "label": "Plus de 2,5 buts",
-              "odds": 1.74,
+              "odds": 1.42,
               "participant": ""
             },
             {
               "code": "U2.5",
               "side": "under",
               "label": "Moins de 2,5 buts",
-              "odds": 1.7,
+              "odds": 2.1,
               "participant": ""
             }
           ]
@@ -460,19 +1027,74 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Watford",
-              "odds": 2.3,
+              "label": "Victoire Ferencváros TC",
+              "odds": 1.3,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Blackburn Rovers",
+              "label": "Victoire NK Celje",
+              "odds": 6.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 5.2,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 1.3,
+      "oX": 5.2,
+      "o2": 6.5
+    },
+    {
+      "id": "uecl-fc-nordsjaelland-panathinaikos-fc",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "FC Nordsjaelland",
+      "away": "Panathinaikos FC",
+      "gender": "unspecified",
+      "eventId": "id1003448074173332",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire FC Nordsjaelland",
+              "odds": 2.4,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Panathinaikos FC",
               "odds": 2.45,
               "participant": ""
             },
@@ -480,28 +1102,54 @@
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.2,
+              "odds": 3.5,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.54,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.96,
               "participant": ""
             }
           ]
         }
       ],
-      "o1": 2.3,
-      "oX": 3.2,
+      "o1": 2.4,
+      "oX": 3.5,
       "o2": 2.45
     },
     {
-      "id": "football-b1af6789fe6db7aab18a2945ce56f035",
-      "league": "UCL",
-      "leagueCode": "UCL",
-      "kickoff": "2026-11-25T20:00:00Z",
-      "home": "Atlético Madrid",
-      "away": "Viking FK",
+      "id": "uecl-hajduk-split-sint-truiden",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "Hajduk Split",
+      "away": "Sint Truiden",
       "gender": "unspecified",
-      "eventId": "id1000000774166036",
+      "eventId": "id1003448074173336",
       "sport": "football",
       "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
+      "asOf": "2026-11-26T08:02:51Z",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
       "market": "h2h",
@@ -515,27 +1163,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Atlético Madrid",
-              "odds": 1.08,
+              "label": "Victoire Hajduk Split",
+              "odds": 2,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Viking FK",
-              "odds": 15.0,
+              "label": "Victoire Sint Truiden",
+              "odds": 3.05,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 10.0,
+              "odds": 3.55,
               "participant": ""
             }
           ]
@@ -548,473 +1196,68 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "O2.5",
               "side": "over",
               "label": "Plus de 2,5 buts",
-              "odds": 1.26,
+              "odds": 1.58,
               "participant": ""
             },
             {
               "code": "U2.5",
               "side": "under",
               "label": "Moins de 2,5 buts",
-              "odds": 3.45,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "o1": 1.08,
-      "oX": 10.0,
-      "o2": 15.0
-    },
-    {
-      "id": "football-99459b90f3e732106e09585bf94b36b4",
-      "league": "UCL",
-      "leagueCode": "UCL",
-      "kickoff": "2026-11-25T20:00:00Z",
-      "home": "Club Brugge",
-      "away": "Liverpool",
-      "gender": "unspecified",
-      "eventId": "id1000000774166038",
-      "sport": "football",
-      "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "market": "h2h",
-      "quoteSource": "oddspapi",
-      "markets": [
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.3,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 3.15,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Club Brugge",
-              "odds": 4.1,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Liverpool",
-              "odds": 1.5,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.75,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "o1": 4.1,
-      "oX": 4.75,
-      "o2": 1.5
-    },
-    {
-      "id": "football-e7e64568f6af00d395a3fdfc27de8ae3",
-      "league": "UCL",
-      "leagueCode": "UCL",
-      "kickoff": "2026-11-25T20:00:00Z",
-      "home": "Inter Milan",
-      "away": "VfB Stuttgart",
-      "gender": "unspecified",
-      "eventId": "id1000000774166040",
-      "sport": "football",
-      "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "market": "h2h",
-      "quoteSource": "oddspapi",
-      "markets": [
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.26,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 3.45,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Inter Milan",
-              "odds": 1.33,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire VfB Stuttgart",
-              "odds": 5.5,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 5.5,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "o1": 1.33,
-      "oX": 5.5,
-      "o2": 5.5
-    },
-    {
-      "id": "football-49c66d76bc4085e63a181179cc47ef4d",
-      "league": "UCL",
-      "leagueCode": "UCL",
-      "kickoff": "2026-11-25T20:00:00Z",
-      "home": "Shakhtar Donetsk",
-      "away": "Fenerbahce",
-      "gender": "unspecified",
-      "eventId": "id1000000774166042",
-      "sport": "football",
-      "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "market": "h2h",
-      "quoteSource": "oddspapi",
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Shakhtar Donetsk",
-              "odds": 2.6,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Fenerbahce",
-              "odds": 2.3,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.3,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.7,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 1.9,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "o1": 2.6,
-      "oX": 3.3,
-      "o2": 2.3
-    },
-    {
-      "id": "football-0ee2cfddf20153779cd2cc3e1f1f879f",
-      "league": "UCL",
-      "leagueCode": "UCL",
-      "kickoff": "2026-11-25T20:00:00Z",
-      "home": "Lille",
-      "away": "Bayern Munich",
-      "gender": "unspecified",
-      "eventId": "id1000000774166044",
-      "sport": "football",
-      "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "market": "h2h",
-      "quoteSource": "oddspapi",
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Lille",
-              "odds": 5.25,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Bayern Munich",
-              "odds": 1.5,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.1,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.7,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 1.9,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "o1": 5.25,
-      "oX": 4.1,
-      "o2": 1.5
-    },
-    {
-      "id": "football-14007bc0605bce3bd164b132254ba24c",
-      "league": "UCL",
-      "leagueCode": "UCL",
-      "kickoff": "2026-11-25T20:00:00Z",
-      "home": "Paris Saint Germain",
-      "away": "AS Roma",
-      "gender": "unspecified",
-      "eventId": "id1000000774166046",
-      "sport": "football",
-      "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "market": "h2h",
-      "quoteSource": "oddspapi",
-      "markets": [
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.34,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 2.85,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Paris Saint Germain",
-              "odds": 1.4,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire AS Roma",
-              "odds": 5.25,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 5.0,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "o1": 1.4,
-      "oX": 5.0,
-      "o2": 5.25
-    },
-    {
-      "id": "cha-stoke-city-millwall",
-      "league": "CHA",
-      "leagueCode": "CHA",
-      "kickoff": "2026-11-25T20:00Z",
-      "home": "Stoke City",
-      "away": "Millwall",
-      "gender": "unspecified",
-      "eventId": "id1000001872340076",
-      "sport": "football",
-      "sportKey": "oddspapi_football",
-      "asOf": "2026-11-25T08:09:31Z",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "market": "h2h",
-      "quoteSource": "oddspapi",
-      "markets": [
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
               "odds": 1.86,
               "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 2,
+      "oX": 3.55,
+      "o2": 3.05
+    },
+    {
+      "id": "uecl-gent-red-star-belgrade",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "Gent",
+      "away": "Red Star Belgrade",
+      "gender": "unspecified",
+      "eventId": "id1003448074173340",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.64,
+              "participant": ""
             },
             {
               "code": "U2.5",
               "side": "under",
               "label": "Moins de 2,5 buts",
-              "odds": 1.6,
+              "odds": 1.8,
               "participant": ""
             }
           ]
@@ -1027,35 +1270,278 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-25T08:09:31Z",
+          "asOf": "2026-11-26T08:02:51Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Stoke City",
+              "label": "Victoire Gent",
               "odds": 2.05,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Millwall",
-              "odds": 2.85,
+              "label": "Victoire Red Star Belgrade",
+              "odds": 2.95,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.15,
+              "odds": 3.35,
               "participant": ""
             }
           ]
         }
       ],
       "o1": 2.05,
-      "oX": 3.15,
-      "o2": 2.85
+      "oX": 3.35,
+      "o2": 2.95
+    },
+    {
+      "id": "uecl-pfc-cska-sofia-trabzonspor",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "PFC CSKA Sofia",
+      "away": "Trabzonspor",
+      "gender": "unspecified",
+      "eventId": "id1003448074173342",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.46,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire PFC CSKA Sofia",
+              "odds": 4,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Trabzonspor",
+              "odds": 1.64,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.85,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 4,
+      "oX": 3.85,
+      "o2": 1.64
+    },
+    {
+      "id": "uecl-sc-braga-kups-kuopio",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "SC Braga",
+      "away": "KuPS Kuopio",
+      "gender": "unspecified",
+      "eventId": "id1003448074173344",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire SC Braga",
+              "odds": 1.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire KuPS Kuopio",
+              "odds": 13.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 7.5,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.36,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.35,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 1.1,
+      "oX": 7.5,
+      "o2": 13.5
+    },
+    {
+      "id": "uecl-sc-freiburg-fc-twente-enschede",
+      "league": "UECL",
+      "leagueCode": "UECL",
+      "kickoff": "2026-11-26T20:00Z",
+      "home": "SC Freiburg",
+      "away": "FC Twente Enschede",
+      "gender": "unspecified",
+      "eventId": "id1003448074173346",
+      "sport": "football",
+      "sportKey": "oddspapi_football",
+      "asOf": "2026-11-26T08:02:51Z",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "market": "h2h",
+      "quoteSource": "oddspapi",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire SC Freiburg",
+              "odds": 1.78,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire FC Twente Enschede",
+              "odds": 3.35,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.85,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.43,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "o1": 1.78,
+      "oX": 3.85,
+      "o2": 3.35
     }
   ],
   "leaguesQueried": 0,
@@ -1964,5 +2450,105 @@
   "calendarStatus": "ok",
   "horizonDays": 14,
   "ingestionVersion": "football-paired-markets-v1",
-  "winnersSource": "OddsPapi (Winamax FR)"
+  "winnersSource": "OddsPapi (Winamax FR)",
+  "newsExcluded": [
+    {
+      "id": "uel-salzburg-fc-ararat-armenia",
+      "home": "Salzburg",
+      "away": "FC Ararat-Armenia",
+      "kickoff": "2026-11-26T17:45Z",
+      "reason": "6 absents dont Tabaković, le meilleur buteur, plus Morgalla et Redžić incertains."
+    },
+    {
+      "id": "uel-viktoria-plzen-benfica",
+      "home": "Viktoria Plzeň",
+      "away": "Benfica",
+      "kickoff": "2026-11-26T17:45Z",
+      "reason": "Aursnes, Barreiro et Prestianni absents ; le coach reconnaît des options limitées."
+    },
+    {
+      "id": "uel-union-saint-gilloise-lech-poznan",
+      "home": "Union Saint-Gilloise",
+      "away": "Lech Poznań",
+      "kickoff": "2026-11-26T17:45Z",
+      "reason": "Cas limite : le capitaine Mac Allister et Havenaar sont absents, Biondić est incertain, soit 3 titulaires probables touchés."
+    },
+    {
+      "id": "uel-celta-vigo-bournemouth",
+      "home": "Celta Vigo",
+      "away": "Bournemouth",
+      "kickoff": "2026-11-26T17:45Z",
+      "reason": "3 blessés et rotation annoncée avant Fulham et Brighton : Evanilson, l'attaquant en forme, devrait commencer sur le banc."
+    },
+    {
+      "id": "uecl-ajax-fc-thun",
+      "home": "Ajax",
+      "away": "FC Thun",
+      "kickoff": "2026-11-26T17:45Z",
+      "reason": "6 absents dont Dolberg, Tsygankov, Henrique et Mokio, et rotation annoncée par Míchel (Brandt, Gaaei)."
+    },
+    {
+      "id": "uecl-brighton-and-hove-albion-universitatea-craiova",
+      "home": "Brighton and Hove Albion",
+      "away": "Universitatea Craiova",
+      "kickoff": "2026-11-26T17:45Z",
+      "reason": "Mitoma (star) et 4 autres joueurs blessés, Hadjam incertain ; rotation possible (débuts d'Azeez)."
+    },
+    {
+      "id": "uecl-fc-iberia-1999-getafe",
+      "home": "FC Iberia 1999",
+      "away": "Getafe",
+      "kickoff": "2026-11-26T17:45Z",
+      "reason": "5 absents dont les deux défenseurs centraux Abqar et Boselli ; série de 3 défaites sans marquer."
+    },
+    {
+      "id": "uecl-hearts-as-monaco",
+      "home": "Hearts",
+      "away": "AS Monaco",
+      "kickoff": "2026-11-26T17:45Z",
+      "reason": "Golovin, la star, est forfait, avec Fati, Idumbo et Biereth : 4 absents dans le groupe convoqué."
+    },
+    {
+      "id": "uel-ofi-crete-anderlecht",
+      "home": "OFI Crete",
+      "away": "Anderlecht",
+      "kickoff": "2026-11-26T20:00Z",
+      "reason": "Camara et Hey absents, gardien Coosemans et Sikan diminués : 4 joueurs touchés dont le gardien titulaire."
+    },
+    {
+      "id": "uel-torreense-celtic",
+      "home": "Torreense",
+      "away": "Celtic",
+      "kickoff": "2026-11-26T20:00Z",
+      "reason": "Nygren, milieu influent, n'a pas fait le voyage ; Johnston et Baur blessés ; Celtic fragile à l'extérieur."
+    },
+    {
+      "id": "uel-sunderland-jagiellonia-bialystok",
+      "home": "Sunderland",
+      "away": "Jagiellonia Białystok",
+      "kickoff": "2026-11-26T20:00Z",
+      "reason": "5 blessés dont Xhaka (joueur clé), Brobbey, Ballard et Diarra."
+    },
+    {
+      "id": "uel-tsg-hoffenheim-sk-sturm-graz",
+      "home": "TSG Hoffenheim",
+      "away": "SK Sturm Graz",
+      "kickoff": "2026-11-26T20:00Z",
+      "reason": "4 défenseurs blessés (Hajdari, Hranáč, Gendrey, De Cat), Wimmer et Conté incertains."
+    },
+    {
+      "id": "uecl-fk-borac-banja-luka-atalanta-bc",
+      "home": "FK Borac Banja Luka",
+      "away": "Atalanta BC",
+      "kickoff": "2026-11-26T20:00Z",
+      "reason": "Gardien titulaire Carnesecchi et défenseurs Hien et Kossounou absents, turnover partiel annoncé."
+    },
+    {
+      "id": "uecl-inter-club-d-escaldes-fc-copenhagen",
+      "home": "Inter Club d'Escaldes",
+      "away": "FC Copenhagen",
+      "kickoff": "2026-11-26T20:00Z",
+      "reason": "Gardien titulaire Ramaj blessé, 2 autres blessés, Maseko incertain ; Cornelius et Sørensen restés à Copenhague."
+    }
+  ]
 }

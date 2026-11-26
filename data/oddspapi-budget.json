@@ -1,8 +1,15 @@
 {
   "month": "2026-11",
-  "used": 22,
+  "used": 24,
   "lastDay": "2026-11-25",
-  "updatedAt": "2026-11-26T08:00:14.893340+00:00",
-  "summary": {},
-  "lastFootballDay": "2026-11-25"
+  "updatedAt": "2026-11-26T08:02:49.819892+00:00",
+  "summary": {
+    "football": "33 matchs avec buts Winamax (33 retrouvés sur 36 du jour) · 33 matchs 1N2 Winamax pour Très sûr et Safe"
+  },
+  "lastFootballDay": "2026-11-26",
+  "footballTries": {
+    "day": "2026-11-26",
+    "count": 1,
+    "at": "2026-11-26T08:02:49.819892+00:00"
+  }
 }

@@ -1,13 +1,15 @@
 {
-  "status": "waiting_for_fresh_quotes",
-  "updatedAt": "2026-11-26T08:00:16.693Z",
-  "availableSports": [],
+  "status": "running",
+  "updatedAt": "2026-11-26T08:06:48.553Z",
+  "availableSports": [
+    "football"
+  ],
   "sourceStatus": [
     {
       "sport": "football",
       "status": "ok",
       "partial": true,
-      "matches": 13,
+      "matches": 19,
       "femaleMatches": 0
     },
     {

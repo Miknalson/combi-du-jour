@@ -93,10 +93,500 @@
       "updatedAt": "2026-11-25T17:05:18.618Z"
     },
     "2026-11-26": {
-      "checks": {},
-      "calls": [],
+      "checks": {
+        "football|2026-11-26|hearts|as monaco": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "Hearts",
+          "away": "AS Monaco",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire AS Monaco",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Golovin, la star, est forfait, avec Fati, Idumbo et Biereth : 4 absents dans le groupe convoqué.",
+          "absents": [
+            "Aleksandr Golovin (blessé)",
+            "Ansu Fati (blessé)",
+            "Stanis Idumbo (blessé)",
+            "Mika Biereth (absent)"
+          ],
+          "sources": [
+            "https://madeinfoot.ouest-france.fr/infos/article-as-monaco-un-retour-important-et-quatre-absents-dans-le-groupe-monegasque-pour-affronter-hearts-546995.html",
+            "https://www.eurosport.fr/paris-sportifs/pronostics/hearts-monaco-pronostics-conseils-et-cotes-ligue-europa-conference-26-11-26/"
+          ]
+        },
+        "football|2026-11-26|celta vigo|bournemouth": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Celta Vigo",
+          "away": "Bournemouth",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Bournemouth",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "3 blessés et rotation annoncée avant Fulham et Brighton : Evanilson, l'attaquant en forme, devrait commencer sur le banc.",
+          "absents": [
+            "Alex Tóth (blessé)",
+            "Julián Araujo (blessé)",
+            "Juanlu Sánchez (blessé)",
+            "Evanilson (probablement remplaçant, rotation)"
+          ],
+          "sources": [
+            "https://sports.yahoo.com/soccer/articles/bournemouth-xi-vs-celta-vigo-061200385.html",
+            "https://www.whoscored.com/matches/2029607/preview/europe-europa-league-2026-2027-celta-vigo-bournemouth",
+            "https://www.uefa.com/uefaeuropaleague/match/2050141--celta-vs-bournemouth/"
+          ]
+        },
+        "football|2026-11-26|marseille|pfc levski sofia": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Marseille",
+          "away": "PFC Levski Sofia",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Marseille",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Seulement 2 absents confirmés par Genesio ; Højbjerg est de retour et aucune rotation majeure n'est annoncée.",
+          "absents": [
+            "Emerson Palmieri (blessé)",
+            "Derek Cornelius (blessé)"
+          ],
+          "sources": [
+            "https://www.lephoceen.fr/infos-om/saison/om-levski-sofia-un-retour-de-poids-et-deux-absents-a-l-entrainement-239774",
+            "https://madeinfoot.ouest-france.fr/infos/article-om-deux-joueurs-importants-absents-de-l-entrainement-avant-la-reception-du-levski-sofia-547008.html"
+          ]
+        },
+        "football|2026-11-26|union saint gilloise|lech poznan": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Union Saint-Gilloise",
+          "away": "Lech Poznań",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Union Saint-Gilloise",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Cas limite : le capitaine Mac Allister et Havenaar sont absents, Biondić est incertain, soit 3 titulaires probables touchés.",
+          "absents": [
+            "Kevin Mac Allister (blessé, capitaine)",
+            "Nikki Havenaar (absent)",
+            "Mateo Biondić (incertain)",
+            "Vic Chambaere (blessé, gardien n°2)"
+          ],
+          "sources": [
+            "https://www.dhnet.be/sports/football/europe/c4/2026/11/25/union-lech-poznan-en-europa-league-sylla-et-kricfalusi-de-retour-a-lentrainement-mais-quatre-absents-chez-les-bruxellois-O5SH6JBEFBGYTKMTSH7ATRIIX4/",
+            "https://www.fotmob.com/matches/lech-poznan-vs-union-stgilloise/uqirm"
+          ]
+        },
+        "football|2026-11-26|salzburg|fc ararat armenia": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Salzburg",
+          "away": "FC Ararat-Armenia",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Salzburg",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "6 absents dont Tabaković, le meilleur buteur, plus Morgalla et Redžić incertains.",
+          "absents": [
+            "Haris Tabaković (blessé)",
+            "Kévin Boma (blessé)",
+            "Sota Kitano (blessé)",
+            "John Mellberg (blessé)",
+            "Justin Omoregie (blessé)",
+            "Dominik Schmid (blessé)",
+            "Leandro Morgalla (incertain)",
+            "Damir Redžić (incertain)"
+          ],
+          "sources": [
+            "https://sportaran.com/en/post/zalcburg-podtverdil-shest-poter-pered-matchem-s-ararat-armeniej-v-lige-evropy/",
+            "https://abseits.at/fusball-international/europa-league/europa-league-salzburg-unter-zugzwang-sturm-trifft-auf-ilzer"
+          ]
+        },
+        "football|2026-11-26|kf egnatia|lincoln red imps fc": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "KF Egnatia",
+          "away": "Lincoln Red Imps FC",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire KF Egnatia",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Bitri suspendu ; les autres absents sont surtout des joueurs de complément (statut de Sota non confirmé).",
+          "absents": [
+            "Eneo Bitri (suspendu)",
+            "Soumaila Bakayoko (blessé)",
+            "Eljon Sota (blessé)",
+            "Ildi Gruda (non retenu)"
+          ],
+          "sources": [
+            "https://www.flashscore.com/match/football/kf-egnatia-CjYs7BO9/lincoln-red-imps-bHbMply6/",
+            "https://www.mynet.com/egnatia-lincoln-red-imps-2026-11-26-maci-oncesi-analiz-527444-myspor"
+          ]
+        },
+        "football|2026-11-26|brighton and hove albion|universitatea craiova": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "Brighton and Hove Albion",
+          "away": "Universitatea Craiova",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Brighton and Hove Albion",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Mitoma (star) et 4 autres joueurs blessés, Hadjam incertain ; rotation possible (débuts d'Azeez).",
+          "absents": [
+            "Kaoru Mitoma (blessé)",
+            "Evan Ferguson (blessé)",
+            "Malick Yalcouyé (blessé)",
+            "Stefanos Tzimas (blessé)",
+            "Zadok Yohanna (blessé)",
+            "Jaouen Hadjam (incertain)"
+          ],
+          "sources": [
+            "https://www.sussexexpress.co.uk/sport/football/brighton-and-hove-albion/brighton-confirm-major-injury-blow-ahead-of-conference-league-clash-9373900",
+            "https://thehardtackle.com/round-up/2026/11/25/brighton-vs-universitatea-craiova-preview-prediction-probable-lineups-tactics-team-news-key-stats/",
+            "https://mediaindonesia.com/sepak-bola/960645/preview-brighton-vs-cs-universitatea-craiova-duel-tim-tujuh-poin-di-liga-konferensi"
+          ]
+        },
+        "football|2026-11-26|viktoria plzen|benfica": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Viktoria Plzeň",
+          "away": "Benfica",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Benfica",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Aursnes, Barreiro et Prestianni absents ; le coach reconnaît des options limitées.",
+          "absents": [
+            "Fredrik Aursnes (blessé)",
+            "Leandro Barreiro (blessé)",
+            "Gianluca Prestianni (blessé)",
+            "Jaden Umeh (blessé)"
+          ],
+          "sources": [
+            "https://www.slbenfica.pt/pt-pt/agora/noticias/2026/11/25/futebol-marco-silva-antevisao-viktoria-plzen-benfica-5-jornada-fase-liga-liga-europa",
+            "https://www.ojogo.pt/futebol/artigo/prestianni-e-aursnes-nao-viajam-para-a-chequia-os-convocados-do-benfica-para-o-viktoria-plzen/18152155",
+            "https://www.noticiasaominuto.com/desporto/3089831/viktoria-plzen-benfica-ja-checa-de-pensar-em-contas"
+          ]
+        },
+        "football|2026-11-26|fc iberia 1999|getafe": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "FC Iberia 1999",
+          "away": "Getafe",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Getafe",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "5 absents dont les deux défenseurs centraux Abqar et Boselli ; série de 3 défaites sans marquer.",
+          "absents": [
+            "Abdel Abqar (blessé)",
+            "Sebastián Boselli (blessé)",
+            "Daniel Carvajal (non inscrit)",
+            "Christantus Uche (blessé)",
+            "Juanmi Jiménez (blessé)"
+          ],
+          "sources": [
+            "https://www.futbolfantasy.com/laliga/noticias/155524-posibles-alineaciones-y-previa-fantasy-del-iberia-1999-g",
+            "https://www.jornadaperfecta.com/blog/getafe-alineacion-probable-iberia-j4-conference/",
+            "https://www.futbolfantasy.com/laliga/noticias/155490-el-getafe-ejercita-mikheil-meskhi-preparar-duelo-iberia-1999"
+          ]
+        },
+        "football|2026-11-26|sc braga|kups kuopio": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "SC Braga",
+          "away": "KuPS Kuopio",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire SC Braga",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Seul Vítor Carvalho est un titulaire absent récent ; le coach promet l'équipe la plus forte, sans rotation.",
+          "absents": [
+            "Vítor Carvalho (blessé)",
+            "Sikou Niakaté (blessé)",
+            "Jonas Wind (incertain)"
+          ],
+          "sources": [
+            "https://www.dn.pt/desporto/braga-prepara-receo-ao-kups-com-o-objetivo-de-chegar-ao-top-8",
+            "https://www.record.pt/futebol/futebol-nacional/liga-betclic/sp--braga/detalhe/baixa-no-sp-braga-vitor-carvalho-falha-o-kups-devido-a-lesao"
+          ]
+        },
+        "football|2026-11-26|torreense|celtic": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Torreense",
+          "away": "Celtic",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire Celtic",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Nygren, milieu influent, n'a pas fait le voyage ; Johnston et Baur blessés ; Celtic fragile à l'extérieur.",
+          "absents": [
+            "Benjamin Nygren (blessé)",
+            "Alistair Johnston (blessé)",
+            "Mika Baur (blessé)"
+          ],
+          "sources": [
+            "https://www.celticway.co.uk/interviews/26763797.martin-oneill-backs-transformational-change-celtic-recruitment/",
+            "https://sports.yahoo.com/soccer/articles/oneill-terrific-jota-torreense-celtic-195316822.html",
+            "https://www.livescore.com/en/news/football/scottish-premiership/celtic-early-injury-news-for-torreense-clash-as-2-ruled-out-and-1-doubt-the-celtic-bhoys/"
+          ]
+        },
+        "football|2026-11-26|inter club d escaldes|fc copenhagen": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "Inter Club d'Escaldes",
+          "away": "FC Copenhagen",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire FC Copenhagen",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Gardien titulaire Ramaj blessé, 2 autres blessés, Maseko incertain ; Cornelius et Sørensen restés à Copenhague.",
+          "absents": [
+            "Diant Ramaj (blessé, gardien titulaire)",
+            "Magnus Mattsson (blessé)",
+            "Marvin Nasnas (blessé)",
+            "Thapelo Maseko (incertain)",
+            "Andreas Cornelius (non retenu)",
+            "Asger Sørensen (non retenu)"
+          ],
+          "sources": [
+            "https://fck.dk/nyhed/truppen-mod-inter-descaldes",
+            "https://www.tipsbladet.dk/nyhed/conference-league/inter-club-descaldes-fc-koebenhavn",
+            "https://bold.dk/fodbold/stillinger/superligaen/nyheder/historisk-nedtur-fcn-ydmygede-fcks-ti-mand"
+          ]
+        },
+        "football|2026-11-26|sc freiburg|fc twente enschede": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "SC Freiburg",
+          "away": "FC Twente Enschede",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire SC Freiburg",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Effectif quasi complet hormis Muslija (absent de longue date) ; noyau de l'équipe victorieuse à Elversberg attendu.",
+          "absents": [
+            "Florent Muslija (blessé, longue durée)",
+            "Berkay Yilmaz (suspension domestique, statut UECL non confir"
+          ],
+          "sources": [
+            "https://sports.yahoo.com/soccer/articles/sc-freiburg-vs-fc-twente-232400805.html",
+            "https://www.fussballnationalmannschaft.net/aufstellung-freiburg-twente-conference-league-123340874.html"
+          ]
+        },
+        "football|2026-11-26|ajax|fc thun": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "Ajax",
+          "away": "FC Thun",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Ajax",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "6 absents dont Dolberg, Tsygankov, Henrique et Mokio, et rotation annoncée par Míchel (Brandt, Gaaei).",
+          "absents": [
+            "Kasper Dolberg (blessé)",
+            "Viktor Tsygankov (blessé)",
+            "Simon Adingra (blessé)",
+            "Caio Henrique (blessé)",
+            "Jorthy Mokio (blessé)",
+            "Yves Bissouma (non qualifié)"
+          ],
+          "sources": [
+            "https://www.ajax.nl/artikelen/sanchez-en-amrabat-over-fc-thun-competitief-en-gefocust-zijn/",
+            "https://www.ajaxshowtime.com/hoofdnieuws/michel-gaat-rouleren-tegen-fc-thun-bekijken-wat-het-beste-is-voor-het-team",
+            "https://www.at5.nl/artikelen/241256/goed-ingepakte-ajax-spelers-bereiden-zich-voor-op-fc-thun-wil-geen-pijn-aan-de-handjes"
+          ]
+        },
+        "football|2026-11-26|sunderland|jagiellonia bia ystok": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Sunderland",
+          "away": "Jagiellonia Białystok",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire Sunderland",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "5 blessés dont Xhaka (joueur clé), Brobbey, Ballard et Diarra.",
+          "absents": [
+            "Granit Xhaka (blessé)",
+            "Brian Brobbey (blessé)",
+            "Daniel Ballard (blessé)",
+            "Habib Diarra (blessé)",
+            "Romaine Mundle (blessé)"
+          ],
+          "sources": [
+            "https://www.sportsmole.co.uk/football/sunderland/europa-league/preview/sunderland-vs-jagiellonia-prediction-team-news-lineups_609736.html",
+            "https://sports.yahoo.com/soccer/articles/sunderland-vs-jagiellonia-bialystok-predicted-061300581.html"
+          ]
+        },
+        "football|2026-11-26|besiktas jk|hapoel be er sheva": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Besiktas JK",
+          "away": "Hapoel Be'er Sheva",
+          "kickoff": "2026-11-26T17:45Z",
+          "pick": "Victoire Besiktas JK",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Seulement 2 à 3 absents, dont un seul titulaire probable (Agbadou) ; match à Batumi, déjà prévu.",
+          "absents": [
+            "Emmanuel Agbadou (blessé)",
+            "Ümit Akdağ (suspendu)",
+            "Milot Rashica (indisponible)"
+          ],
+          "sources": [
+            "https://www.sozcu.com.tr/besiktasin-hapoel-beersheva-maci-kadrosu-belli-oldu-2-eksik-var-p384335",
+            "https://ajansspor.com/haber/besiktas-hapoel-beer-sheva-maci-ne-zaman-hangi-kanalda-muhtemel-11ler-sakat-ve-cezalilar-739386"
+          ]
+        },
+        "football|2026-11-26|tsg hoffenheim|sk sturm graz": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "TSG Hoffenheim",
+          "away": "SK Sturm Graz",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire TSG Hoffenheim",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "4 défenseurs blessés (Hajdari, Hranáč, Gendrey, De Cat), Wimmer et Conté incertains.",
+          "absents": [
+            "Albian Hajdari (blessé)",
+            "Valentin Gendrey (blessé)",
+            "Robin Hranáč (blessé)",
+            "Nathan De Cat (blessé)",
+            "Patrick Wimmer (incertain)",
+            "Bambasé Conté (incertain)"
+          ],
+          "sources": [
+            "https://www.eurosport.de/wetten/prognosen/tsg-hoffenheim-vs-sturm-graz-prognose-wett-tipps-und-quoten/",
+            "https://www.whoscored.com/matches/2029615/preview/europe-europa-league-2026-2027-hoffenheim-sturm-graz"
+          ]
+        },
+        "football|2026-11-26|ferencvaros tc|nk celje": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "Ferencváros TC",
+          "away": "NK Celje",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire Ferencváros TC",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Yusuf (attaquant titulaire) suspendu et Ötvös absent de longue date ; pas d'autre titulaire absent confirmé.",
+          "absents": [
+            "Bamidele Yusuf (suspendu)",
+            "Bence Ötvös (blessé)",
+            "Dániel Radnóti (blessé)",
+            "Gergő Szécsi (non qualifié)"
+          ],
+          "sources": [
+            "https://www.eurosport.hu/labdarugas/uefa-europa-liga/2026-2027/ferencvaros-celje-sajtotajekoztato-borbely_sto23358707/story.shtml",
+            "https://www.sportsmole.co.uk/football/ferencvaros/europa-league/preview/ferencvaros-vs-celje-prediction-team-news-lineups_609760.html"
+          ]
+        },
+        "football|2026-11-26|ofi crete|anderlecht": {
+          "sport": "football",
+          "league": "UEL",
+          "home": "OFI Crete",
+          "away": "Anderlecht",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire Anderlecht",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Camara et Hey absents, gardien Coosemans et Sikan diminués : 4 joueurs touchés dont le gardien titulaire.",
+          "absents": [
+            "Ilay Camara (blessé/malade)",
+            "Lucas Hey (blessé)",
+            "Colin Coosemans (gardien, blessé au pied, joue diminué)",
+            "Danylo Sikan (diminué)"
+          ],
+          "sources": [
+            "https://www.sportsmole.co.uk/football/anderlecht/europa-league/preview/ofi-crete-vs-anderlecht-prediction-team-news-lineups_609757.html",
+            "https://www.walfoot.be/news/2026-11-23/deux-titulaires-danderlecht-etaient-blesses-contre-ohl",
+            "https://www.dhnet.be/sports/football/division-1a/anderlecht/2026/11/25/les-blesses-coosemans-et-sikan-du-voyage-en-crete-anderlecht-sentraine-exceptionnellement-en-terrain-hostile-IOEDRU7AUBCZFLFQBQNRA6VJI4/"
+          ]
+        },
+        "football|2026-11-26|fk borac banja luka|atalanta bc": {
+          "sport": "football",
+          "league": "UECL",
+          "home": "FK Borac Banja Luka",
+          "away": "Atalanta BC",
+          "kickoff": "2026-11-26T20:00Z",
+          "pick": "Victoire Atalanta BC",
+          "checkedAt": "2026-11-26T08:02:56.898Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Gardien titulaire Carnesecchi et défenseurs Hien et Kossounou absents, turnover partiel annoncé.",
+          "absents": [
+            "Marco Carnesecchi (blessé, gardien titulaire)",
+            "Isak Hien (blessé)",
+            "Odilon Kossounou (blessé)",
+            "Pompei (absent)"
+          ],
+          "sources": [
+            "https://www.pazzidifanta.com/news/atalanta-convocati-sarri-trasferta-bosnia-borac-assenze-pesanti-4a-giornata-conference-league-460930",
+            "https://sport.quotidiano.net/calcio/atalanta/conference-league-borac-banja-luk-atalanta-probabili-formazioni-e-dove-vederla-8fccba88",
+            "https://www.eurosport.it/scommesse/borac-atalanta-pronostico-scommesse-26-11-2026/"
+          ]
+        }
+      },
+      "calls": [
+        {
+          "at": "2026-11-26T08:02:56.898Z",
+          "model": "claude-opus-5-5",
+          "matches": 6,
+          "input": 190742,
+          "output": 5891,
+          "searches": 19
+        },
+        {
+          "at": "2026-11-26T08:02:56.898Z",
+          "model": "claude-opus-5-5",
+          "matches": 6,
+          "input": 113955,
+          "output": 6425,
+          "searches": 15
+        },
+        {
+          "at": "2026-11-26T08:02:56.898Z",
+          "model": "claude-opus-5-5",
+          "matches": 6,
+          "input": 159691,
+          "output": 6060,
+          "searches": 12
+        },
+        {
+          "at": "2026-11-26T08:02:56.898Z",
+          "model": "claude-opus-5-5",
+          "matches": 2,
+          "input": 92802,
+          "output": 2819,
+          "searches": 8
+        }
+      ],
       "status": "ok",
-      "updatedAt": "2026-11-26T08:00:16.640Z"
+      "updatedAt": "2026-11-26T08:02:56.898Z"
     }
   }
 }

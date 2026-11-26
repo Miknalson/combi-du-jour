@@ -175,6 +175,58 @@
       ],
       "resultSource": "application-football-score",
       "resultHistory": []
+    },
+    {
+      "id": "tres-sur-v2|2026-11-26|football",
+      "day": "2026-11-26",
+      "method": "tres_sur",
+      "sport": "football",
+      "version": "tres-sur-v2",
+      "createdAt": "2026-11-26T08:06:48.619Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 100,
+      "currency": "EUR",
+      "status": "pending",
+      "minOdds": 1.5,
+      "maxOdds": 1.7,
+      "odds": 1.54,
+      "probability": 0.617201402455217,
+      "legs": [
+        {
+          "id": "football|uecl-kf-egnatia-lincoln-red-imps-fc|2026-11-26T17:45Z|h2h||None|1",
+          "matchId": "uecl-kf-egnatia-lincoln-red-imps-fc",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "UECL",
+          "home": "KF Egnatia",
+          "away": "Lincoln Red Imps FC",
+          "kickoff": "2026-11-26T17:45Z",
+          "date": "2026-11-26",
+          "code": "1",
+          "label": "Victoire KF Egnatia",
+          "o": 1.54,
+          "p": 0.617201402455217,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-26T08:02:51Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-26T08:02:49.819892+00:00",
+          "partial": true,
+          "matches": 19
+        }
+      ]
     }
   ]
 }
