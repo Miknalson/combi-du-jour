@@ -1,12 +1,15 @@
 {
-  "day": "2026-11-25",
-  "checkedAt": "2026-11-25T17:05:18.928Z",
-  "matchesLeft": 13,
+  "day": "2026-11-26",
+  "checkedAt": "2026-11-26T07:51:49.815Z",
+  "matchesLeft": 36,
   "footballUpdatedAt": "2026-11-25T08:09:26.613028+00:00",
-  "goalsUpdatedAt": "2026-11-25T08:09:26.613028+00:00",
-  "status": "ok",
-  "reasons": [],
-  "message": "Tickets du jour créés avec des cotes Winamax récentes.",
-  "since": null,
-  "alertedDay": null
+  "goalsUpdatedAt": "2026-11-25T23:32:53.509151+00:00",
+  "status": "panne",
+  "reasons": [
+    "Très sûr non créé",
+    "Safe et Algo football non créés"
+  ],
+  "message": "Panne : Très sûr non créé, Safe et Algo football non créés. Dernier relevé Winamax football : 25 nov., 09:09 (victoires), 26 nov., 00:32 (buts). 36 match(s) restent aujourd’hui.",
+  "since": "2026-11-26T07:51:49.815Z",
+  "alertedDay": "2026-11-26"
 }
