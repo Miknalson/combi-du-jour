@@ -26,6 +26,11 @@ FOOT_ID, FOOT_ODDS_CALLS = 10, 2  # 2 appels de cotes au plus (10 championnats) 
 FEMALE = re.compile(r'women|woman|female|wta|wnba|billie jean|lfb|feminin|féminin|frauen|ladies|\(w\)', re.I)
 
 
+def paris_hour(t):
+    off = 2 if 3 < t.month < 11 else 1
+    return (t + dt.timedelta(hours=off)).hour
+
+
 def paris_day(t):
     # Europe/Paris ≈ UTC+1 en hiver, UTC+2 en été ; un jour « Paris » suffit pour le plafond quotidien.
     off = 2 if 3 < t.month < 11 else 1
@@ -373,8 +378,12 @@ def main():
     force = bool(os.environ.get('ODDSPAPI_FORCE'))
     api = Api(key, ledger)
     summary = {}
-    # Football (buts) : une fois par jour, dès qu'un relevé The Odds API frais existe.
-    if ledger.get('lastFootballDay') != today or force:
+    # Football : une fois par jour, à partir de 7 h (Paris). Avant, Winamax n'a souvent pas encore publié les cotes
+    # du jour : le relevé de 00:32 le 26/11 (lancé par le push « Scores du … ») n'a rien trouvé et a bloqué la journée.
+    # Le jour n'est marqué « fait » que si des cotes ont vraiment été trouvées ; sinon la collecte suivante réessaie.
+    if paris_hour(now) < 7 and not force:
+        summary['football'] = 'avant 7 h (Paris) : relevé football reporté à la collecte du matin'
+    elif ledger.get('lastFootballDay') != today or force:
         try:
             res = collect_football(api, now)
         except Exception as e:  # noqa: BLE001
@@ -385,11 +394,12 @@ def main():
             summary['football'] = f'{len(goals)} matchs avec buts Winamax ({paired} retrouvés sur {todo} du jour)'
             doc = {'sport': 'football', 'bookKey': BOOK, 'updatedAt': now.isoformat(), 'status': 'ok' if goals else 'empty',
                    'matches': sorted(goals, key=lambda m: m['kickoff']), 'source': 'OddsPapi (Winamax FR)', 'day': today}
-            (DATA / 'sports' / 'football-goals.json').write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
-            added = publish_winners(goals, now)
-            if added:
-                summary['football'] += f' · {added} matchs 1N2 Winamax pour Très sûr et Safe'
-            ledger['lastFootballDay'] = today
+            if goals:
+                (DATA / 'sports' / 'football-goals.json').write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
+                added = publish_winners(goals, now)
+                if added:
+                    summary['football'] += f' · {added} matchs 1N2 Winamax pour Très sûr et Safe'
+                ledger['lastFootballDay'] = today
         elif 'football' not in summary:
             summary['football'] = 'en attente du relevé football du jour'
     # Basket et tennis : un jour sur deux.

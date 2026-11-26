@@ -102,6 +102,25 @@ class FootballGoals(unittest.TestCase):
         mine = json.loads((C.DATA / 'days' / '2026-11-23.json').read_text())['matches'][0]['mine']
         self.assertEqual((mine['o1'], mine['oX'], mine['o2'], mine['ou']['2.5']['o']), (1.5, 4.2, 6.0, 1.7))
 
+    def test_night_run_and_empty_result_do_not_block_the_day(self):
+        # 26/11 : le relevé de 00:32 (Paris) n'a rien trouvé et a marqué la journée comme faite -> aucun ticket.
+        import os
+        from unittest import mock
+        calls = []
+        def fake(api, now):
+            calls.append(now); return [], 5, 0
+        C.LEDGER = C.DATA / 'oddspapi-budget.json'
+        C.LEDGER.write_text(json.dumps({'month': '2026-11', 'used': 0, 'lastDay': '2026-11-26'}))
+        with mock.patch.dict(os.environ, {'ODDSPAPI_KEY': 'k'}), mock.patch.object(C, 'collect_football', fake), \
+                mock.patch.object(C.dt, 'datetime', wraps=dt.datetime) as clock:
+            clock.now.return_value = dt.datetime(2026, 11, 25, 23, 32, tzinfo=dt.timezone.utc)  # 00:32 à Paris
+            C.main()
+            self.assertEqual(calls, [])
+            clock.now.return_value = dt.datetime(2026, 11, 26, 7, 50, tzinfo=dt.timezone.utc)  # 08:50 à Paris
+            C.main()
+            self.assertEqual(len(calls), 1)
+        self.assertNotIn('lastFootballDay', json.loads(C.LEDGER.read_text()))
+
     def test_team_names(self):
         self.assertTrue(C.same_team('Atalanta BC', 'Atalanta'))
         self.assertTrue(C.same_team('Inter Milan', 'Inter'))
