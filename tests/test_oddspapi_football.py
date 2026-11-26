@@ -108,7 +108,7 @@ class FootballGoals(unittest.TestCase):
         from unittest import mock
         calls = []
         def fake(api, now):
-            calls.append(now); return [], 5, 0
+            calls.append(now); api.ledger['used'] += 3; return [], 5, 0
         C.LEDGER = C.DATA / 'oddspapi-budget.json'
         C.LEDGER.write_text(json.dumps({'month': '2026-11', 'used': 0, 'lastDay': '2026-11-26'}))
         with mock.patch.dict(os.environ, {'ODDSPAPI_KEY': 'k'}), mock.patch.object(C, 'collect_football', fake), \
@@ -119,6 +119,11 @@ class FootballGoals(unittest.TestCase):
             clock.now.return_value = dt.datetime(2026, 11, 26, 7, 50, tzinfo=dt.timezone.utc)  # 08:50 à Paris
             C.main()
             self.assertEqual(len(calls), 1)
+            C.main()  # 15 min plus tard (même horloge) : pas de nouvel essai tout de suite
+            self.assertEqual(len(calls), 1)
+            clock.now.return_value = dt.datetime(2026, 11, 26, 8, 50, tzinfo=dt.timezone.utc)
+            C.main()  # une heure après : nouvel essai
+            self.assertEqual(len(calls), 2)
         self.assertNotIn('lastFootballDay', json.loads(C.LEDGER.read_text()))
 
     def test_team_names(self):

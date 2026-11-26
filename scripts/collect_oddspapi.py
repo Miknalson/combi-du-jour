@@ -363,6 +363,21 @@ def publish_winners(goals, now):
     return len(rows)
 
 
+FOOT_MAX_TRIES, FOOT_RETRY_MINUTES = 6, 55  # au plus ~18 requêtes par jour même si Winamax ne répond rien
+
+
+def retry_allowed(ledger, today, now):
+    tries = ledger.get('footballTries') or {}
+    if tries.get('day') != today:
+        return True
+    if tries.get('count', 0) >= FOOT_MAX_TRIES:
+        return False
+    try:
+        return (now - dt.datetime.fromisoformat(tries['at'])).total_seconds() >= FOOT_RETRY_MINUTES * 60
+    except (KeyError, ValueError, TypeError):
+        return True
+
+
 def main():
     key = os.environ.get('ODDSPAPI_KEY', '').strip()
     now = dt.datetime.now(dt.timezone.utc)
@@ -376,6 +391,7 @@ def main():
     if ledger.get('month') != month:
         ledger = {'month': month, 'used': 0}
     force = bool(os.environ.get('ODDSPAPI_FORCE'))
+    before_used, before_last = ledger.get('used'), ledger.get('lastDay')
     api = Api(key, ledger)
     summary = {}
     # Football : une fois par jour, à partir de 7 h (Paris). Avant, Winamax n'a souvent pas encore publié les cotes
@@ -383,7 +399,11 @@ def main():
     # Le jour n'est marqué « fait » que si des cotes ont vraiment été trouvées ; sinon la collecte suivante réessaie.
     if paris_hour(now) < 7 and not force:
         summary['football'] = 'avant 7 h (Paris) : relevé football reporté à la collecte du matin'
+    elif ledger.get('lastFootballDay') != today and not force and not retry_allowed(ledger, today, now):
+        summary['football'] = 'relevé football déjà tenté récemment : prochain essai dans moins d’une heure'
     elif ledger.get('lastFootballDay') != today or force:
+        tries = ledger.get('footballTries') if ledger.get('footballTries', {}).get('day') == today else {'day': today, 'count': 0}
+        ledger['footballTries'] = {'day': today, 'count': tries['count'] + 1, 'at': now.isoformat()}
         try:
             res = collect_football(api, now)
         except Exception as e:  # noqa: BLE001
@@ -421,8 +441,10 @@ def main():
             (DATA / 'sports' / f'{sport}.json').write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
     if due:
         ledger['lastDay'] = today
-    ledger.update({'updatedAt': now.isoformat(), 'summary': summary})
-    LEDGER.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + '\n')
+    # Fichier réécrit seulement si une requête a été faite : les relevés de 15 min ne publient pas pour rien.
+    if ledger.get('used') != before_used or ledger.get('lastDay') != before_last:
+        ledger.update({'updatedAt': now.isoformat(), 'summary': summary})
+        LEDGER.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + '\n')
     print('OddsPapi :', summary, '· requêtes ce mois-ci :', ledger['used'])
 
 
