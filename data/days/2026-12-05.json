@@ -1,0 +1,297 @@
+{
+ "date": "2026-12-05",
+ "updatedAt": "2026-11-26T07:50:57Z",
+ "source": "oddsportal (secours)",
+ "matches": [
+  {
+   "id": "bl2-1-fc-nurnberg-bochum",
+   "league": "BL2",
+   "kickoff": "2026-12-05T12:00Z",
+   "home": "1. FC Nürnberg",
+   "away": "Bochum",
+   "o1": 2.1,
+   "oX": 3.8,
+   "o2": 3.2
+  },
+  {
+   "id": "bl2-1-fc-kaiserslautern-greuther-furth",
+   "league": "BL2",
+   "kickoff": "2026-12-05T12:00Z",
+   "home": "1. FC Kaiserslautern",
+   "away": "Greuther Fürth",
+   "o1": 1.8,
+   "oX": 4.0,
+   "o2": 4.0
+  },
+  {
+   "id": "bl2-karlsruher-sc-holstein-kiel",
+   "league": "BL2",
+   "kickoff": "2026-12-05T12:00Z",
+   "home": "Karlsruher SC",
+   "away": "Holstein Kiel",
+   "o1": 2.7,
+   "oX": 3.75,
+   "o2": 2.37
+  },
+  {
+   "id": "l2-usl-dunkerque-red-star",
+   "league": "L2",
+   "kickoff": "2026-12-05T13:00Z",
+   "home": "USL Dunkerque",
+   "away": "Red Star",
+   "o1": 2.88,
+   "oX": 3.25,
+   "o2": 2.15
+  },
+  {
+   "id": "l2-montpellier-nantes",
+   "league": "L2",
+   "kickoff": "2026-12-05T13:00Z",
+   "home": "Montpellier",
+   "away": "Nantes",
+   "o1": 2.5,
+   "oX": 3.2,
+   "o2": 2.5
+  },
+  {
+   "id": "liga-real-racing-club-de-santander-deportivo-la-coruna",
+   "league": "LIGA",
+   "kickoff": "2026-12-05T13:00Z",
+   "home": "Real Racing Club de Santander",
+   "away": "Deportivo La Coruña",
+   "o1": 2.35,
+   "oX": 3.6,
+   "o2": 2.85
+  },
+  {
+   "id": "sa-monza-como",
+   "league": "SA",
+   "kickoff": "2026-12-05T14:00Z",
+   "home": "Monza",
+   "away": "Como",
+   "o1": 6.0,
+   "oX": 4.75,
+   "o2": 1.5
+  },
+  {
+   "id": "bl-augsburg-1-fc-koln",
+   "league": "BL",
+   "kickoff": "2026-12-05T14:30Z",
+   "home": "Augsburg",
+   "away": "1. FC Köln",
+   "o1": 2.15,
+   "oX": 4.0,
+   "o2": 2.9
+  },
+  {
+   "id": "bl-bayer-leverkusen-b-monchengladbach",
+   "league": "BL",
+   "kickoff": "2026-12-05T14:30Z",
+   "home": "Bayer Leverkusen",
+   "away": "B. Mönchengladbach",
+   "o1": 1.32,
+   "oX": 6.25,
+   "o2": 8.5
+  },
+  {
+   "id": "bl-sc-freiburg-tsg-hoffenheim",
+   "league": "BL",
+   "kickoff": "2026-12-05T14:30Z",
+   "home": "SC Freiburg",
+   "away": "TSG Hoffenheim",
+   "o1": 2.1,
+   "oX": 4.0,
+   "o2": 3.1
+  },
+  {
+   "id": "bl-union-berlin-hamburger-sv",
+   "league": "BL",
+   "kickoff": "2026-12-05T14:30Z",
+   "home": "Union Berlin",
+   "away": "Hamburger SV",
+   "o1": 2.45,
+   "oX": 3.6,
+   "o2": 2.65
+  },
+  {
+   "id": "bl-rb-leipzig-fsv-mainz-05",
+   "league": "BL",
+   "kickoff": "2026-12-05T14:30Z",
+   "home": "RB Leipzig",
+   "away": "FSV Mainz 05",
+   "o1": 1.6,
+   "oX": 4.75,
+   "o2": 4.8
+  },
+  {
+   "id": "liga-rayo-vallecano-levante",
+   "league": "LIGA",
+   "kickoff": "2026-12-05T15:15Z",
+   "home": "Rayo Vallecano",
+   "away": "Levante",
+   "o1": 1.83,
+   "oX": 3.8,
+   "o2": 4.1
+  },
+  {
+   "id": "ere-willem-ii-feyenoord",
+   "league": "ERE",
+   "kickoff": "2026-12-05T15:30Z",
+   "home": "Willem II",
+   "away": "Feyenoord",
+   "o1": 13.0,
+   "oX": 8.0,
+   "o2": 1.17
+  },
+  {
+   "id": "l1-lille-auxerre",
+   "league": "L1",
+   "kickoff": "2026-12-05T16:15Z",
+   "home": "Lille",
+   "away": "Auxerre",
+   "o1": 1.5,
+   "oX": 4.3,
+   "o2": 6.25
+  },
+  {
+   "id": "sa-frosinone-inter-milan",
+   "league": "SA",
+   "kickoff": "2026-12-05T17:00Z",
+   "home": "Frosinone",
+   "away": "Inter Milan",
+   "o1": 5.75,
+   "oX": 5.5,
+   "o2": 1.42
+  },
+  {
+   "id": "bl-eintracht-frankfurt-werder-bremen",
+   "league": "BL",
+   "kickoff": "2026-12-05T17:30Z",
+   "home": "Eintracht Frankfurt",
+   "away": "Werder Bremen",
+   "o1": 2.1,
+   "oX": 4.0,
+   "o2": 3.1
+  },
+  {
+   "id": "liga-villarreal-real-sociedad",
+   "league": "LIGA",
+   "kickoff": "2026-12-05T17:30Z",
+   "home": "Villarreal",
+   "away": "Real Sociedad",
+   "o1": 1.71,
+   "oX": 4.4,
+   "o2": 4.2
+  },
+  {
+   "id": "ere-sparta-rotterdam-nec-nijmegen",
+   "league": "ERE",
+   "kickoff": "2026-12-05T17:45Z",
+   "home": "Sparta Rotterdam",
+   "away": "NEC Nijmegen",
+   "o1": 2.55,
+   "oX": 4.0,
+   "o2": 2.45
+  },
+  {
+   "id": "ere-az-alkmaar-psv-eindhoven",
+   "league": "ERE",
+   "kickoff": "2026-12-05T19:00Z",
+   "home": "AZ Alkmaar",
+   "away": "PSV Eindhoven",
+   "o1": 3.2,
+   "oX": 4.1,
+   "o2": 1.95
+  },
+  {
+   "id": "bl2-hannover-96-hertha-berlin",
+   "league": "BL2",
+   "kickoff": "2026-12-05T19:30Z",
+   "home": "Hannover 96",
+   "away": "Hertha Berlin",
+   "o1": 3.0,
+   "oX": 4.0,
+   "o2": 2.15
+  },
+  {
+   "id": "l1-as-monaco-angers",
+   "league": "L1",
+   "kickoff": "2026-12-05T19:45Z",
+   "home": "AS Monaco",
+   "away": "Angers",
+   "o1": 1.3,
+   "oX": 5.8,
+   "o2": 9.0
+  },
+  {
+   "id": "l1-rc-lens-le-havre",
+   "league": "L1",
+   "kickoff": "2026-12-05T19:45Z",
+   "home": "RC Lens",
+   "away": "Le Havre",
+   "o1": 1.44,
+   "oX": 4.9,
+   "o2": 6.5
+  },
+  {
+   "id": "l1-paris-fc-le-mans-fc",
+   "league": "L1",
+   "kickoff": "2026-12-05T19:45Z",
+   "home": "Paris FC",
+   "away": "Le Mans FC",
+   "o1": 1.42,
+   "oX": 4.8,
+   "o2": 7.0
+  },
+  {
+   "id": "l1-strasbourg-lorient",
+   "league": "L1",
+   "kickoff": "2026-12-05T19:45Z",
+   "home": "Strasbourg",
+   "away": "Lorient",
+   "o1": 2.1,
+   "oX": 3.4,
+   "o2": 3.55
+  },
+  {
+   "id": "l2-saint-etienne-nancy",
+   "league": "L2",
+   "kickoff": "2026-12-05T19:45Z",
+   "home": "Saint Etienne",
+   "away": "Nancy",
+   "o1": 1.62,
+   "oX": 3.5,
+   "o2": 4.75
+  },
+  {
+   "id": "sa-napoli-lecce",
+   "league": "SA",
+   "kickoff": "2026-12-05T19:45Z",
+   "home": "Napoli",
+   "away": "Lecce",
+   "o1": 1.33,
+   "oX": 5.5,
+   "o2": 8.5
+  },
+  {
+   "id": "ere-fortuna-sittard-fc-zwolle",
+   "league": "ERE",
+   "kickoff": "2026-12-05T20:00Z",
+   "home": "Fortuna Sittard",
+   "away": "FC Zwolle",
+   "o1": 2.05,
+   "oX": 3.7,
+   "o2": 3.3
+  },
+  {
+   "id": "liga-barcelona-celta-vigo",
+   "league": "LIGA",
+   "kickoff": "2026-12-05T20:00Z",
+   "home": "Barcelona",
+   "away": "Celta Vigo",
+   "o1": 1.09,
+   "oX": 12.0,
+   "o2": 21.0
+  }
+ ]
+}

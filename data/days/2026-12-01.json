@@ -1,6 +1,6 @@
 {
  "date": "2026-12-01",
- "updatedAt": "2026-11-23T07:52:36Z",
+ "updatedAt": "2026-11-26T07:51:11Z",
  "source": "Oddsportal (secours)",
  "matches": [
   {
@@ -9,7 +9,7 @@
    "kickoff": "2026-12-01T20:00Z",
    "home": "Coventry City",
    "away": "Ipswich",
-   "o1": 2.3,
+   "o1": 2.25,
    "oX": 3.6,
    "o2": 3.0
   }

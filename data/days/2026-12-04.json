@@ -1,6 +1,6 @@
 {
  "date": "2026-12-04",
- "updatedAt": "2026-11-25T07:51:28Z",
+ "updatedAt": "2026-11-26T07:51:11Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
   {
@@ -9,7 +9,7 @@
    "kickoff": "2026-12-04T20:00Z",
    "home": "Alavés",
    "away": "Espanyol",
-   "o1": 1.9,
+   "o1": 1.91,
    "oX": 3.5,
    "o2": 4.1
   },
@@ -19,9 +19,9 @@
    "kickoff": "2026-12-04T19:30Z",
    "home": "Bayern Munich",
    "away": "SC Paderborn",
-   "o1": 1.08,
-   "oX": 16.0,
-   "o2": 26.0
+   "o1": 1.1,
+   "oX": 15.0,
+   "o2": 21.0
   },
   {
    "id": "l1-toulouse-paris-saint-germain",
@@ -29,7 +29,7 @@
    "kickoff": "2026-12-04T19:45Z",
    "home": "Toulouse",
    "away": "Paris Saint Germain",
-   "o1": 6.0,
+   "o1": 5.75,
    "oX": 5.0,
    "o2": 1.5
   },
@@ -49,8 +49,8 @@
    "kickoff": "2026-12-04T19:00Z",
    "home": "Annecy FC",
    "away": "Stade Lavallois",
-   "o1": 2.1,
-   "oX": 3.1,
+   "o1": 2.2,
+   "oX": 3.2,
    "o2": 3.1
   },
   {
