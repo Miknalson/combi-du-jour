@@ -63,6 +63,9 @@ on:
   schedule:
     - cron: '5 6 * * *'
     - cron: '25 23 * * *'
+    # Filets de sécurité du matin (8 h 41, 9 h 41, 10 h 41 à Paris) : refont tickets et relevé OddsPapi s'ils manquent,
+    # sans crédit The Odds API supplémentaire (budget du jour) ni nouvel appel à l'IA pour un match déjà vérifié.
+    - cron: '41 7-9 * * *'
     # Scores seulement, toutes les 15 min de 12 h à minuit (Paris) : ESPN gratuit, aucun crédit de cotes ni d'IA.
     # Minutes décalées (7, 22, 37, 52) : GitHub saute la plupart des relevés lancés à l'heure ronde ou au quart d'heure (2 relevés sur 48 le 24/11).
     - cron: '7,22,37,52 11-22 * * *'
@@ -148,7 +151,9 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_ || secrets.ODDS_API || secrets.ODDS_API_KEY }}
         run: python scripts/collect_quotes.py --max-credits 18
       - name: Relever via OddsPapi les buts Winamax du foot (chaque jour), basket et tennis (un jour sur deux)
-        if: github.event.schedule != '25 23 * * *' && github.event.schedule != '7,22,37,52 11-22 * * *'
+        # Aussi pendant les relevés de 15 min : si la collecte du matin a échoué, le football est réessayé
+        # (le script ne fait aucune requête quand le relevé du jour est déjà fait).
+        if: github.event.schedule != '25 23 * * *'
         continue-on-error: true
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
