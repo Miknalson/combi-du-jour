@@ -134,7 +134,13 @@
     "oX": 4.1,
     "o2": 1.58,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uel-viktoria-plzen-benfica",
@@ -161,7 +167,13 @@
     "oX": 4.9,
     "o2": 1.4,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "4-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uel-besiktas-jk-hapoel-be-er-sheva",
@@ -215,7 +227,13 @@
     "oX": 3.45,
     "o2": 1.84,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uel-union-saint-gilloise-lech-poznan",
@@ -373,7 +391,13 @@
     "oX": 4.3,
     "o2": 1.5,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-3",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uecl-ajax-fc-thun",
@@ -425,7 +449,13 @@
     "oX": 8.0,
     "o2": 10.0,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "4-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uecl-brighton-and-hove-albion-universitatea-craiova",
@@ -529,7 +559,13 @@
     "oX": 4.1,
     "o2": 1.4,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uecl-fk-jablonec-fc-lugano",
@@ -581,7 +617,13 @@
     "oX": 3.5,
     "o2": 2.0,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uecl-pafos-fc-fc-midtjylland",
@@ -633,7 +675,13 @@
     "oX": 3.55,
     "o2": 2.1,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uecl-fk-kauno-zalgiris-riga-fc",
@@ -685,7 +733,13 @@
     "oX": 3.25,
     "o2": 2.0,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
   },
   {
    "id": "uecl-kf-egnatia-lincoln-red-imps-fc",
@@ -1375,5 +1429,6 @@
    }
   }
  ],
- "marketsUpdatedAt": "2026-11-26T08:02:49.819892+00:00"
+ "marketsUpdatedAt": "2026-11-26T08:02:49.819892+00:00",
+ "scoresUpdatedAt": "2026-11-26T20:06:10.334191+00:00"
 }
