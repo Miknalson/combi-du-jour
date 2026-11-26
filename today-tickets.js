@@ -98,14 +98,14 @@ function card(r,res,today){
 
 // Filtre actu (data/news-checks.json) : matchs vérifiés par l'IA avant de figer les tickets, et ceux écartés.
 function newsBlock(day){var d=NEWS&&NEWS.days&&NEWS.days[day];if(!d)return '';
-  var all=Object.keys(d.checks||{}).map(function(k){return d.checks[k];}),bad=all.filter(function(c){return c.verdict==='douteux';});
+  var all=Object.keys(d.checks||{}).map(function(k){return d.checks[k];}),bad=all.filter(function(c){return c.verdict==='douteux'||c.verdict==='non_verifie'&&(c.tries||1)>=2;});
   if(!all.length)return d.status==='error'?'<p class="tt-empty tt-news">Vérification de l’actu par l’IA indisponible ce jour-là : aucun match écarté.</p>':'';
   function host(u){try{return new URL(u).hostname.replace(/^www\./,'');}catch(e){return '';}}
   return '<section class="tt-news"><h3>Actu de dernière minute</h3><p class="tt-empty">L’IA a lu les nouvelles de '+all.length+' match'+(all.length>1?'s':'')+' avant de faire les tickets. '+
     (bad.length?bad.length+' écarté'+(bad.length>1?'s':'')+' :':'Aucun match douteux.')+'</p>'+
-    (bad.length?'<ul>'+bad.map(function(c){return '<li><b>'+esc(c.home)+' – '+esc(c.away)+'</b> <small>'+esc(hour(c.kickoff))+'</small><br>'+esc(c.reason||'Actu défavorable')+
+    (bad.length?'<ul>'+bad.map(function(c){return '<li><b>'+esc(c.home)+' – '+esc(c.away)+'</b> <small>'+esc(hour(c.kickoff))+'</small><br>'+esc((c.verdict==='non_verifie'?'Non vérifié, écarté par prudence. ':'')+(c.reason||'Actu défavorable'))+((c.absents||[]).length?'<br><small>Absents : '+esc(c.absents.join(', '))+'</small>':'')+
       ((c.sources||[]).length?' <small>('+c.sources.map(function(u){var h=host(u);return h?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(h)+'</a>':'';}).filter(Boolean).join(', ')+')</small>':'')+'</li>';}).join('')+'</ul>':'')+
-    '<p class="tt-foot">Simple filtre : l’IA ne prédit pas le score, elle retire les matchs avec un blessé clé, une équipe B ou un report possible.</p></section>';}
+    '<p class="tt-foot">Simple filtre : l’IA ne prédit pas le score, elle retire les matchs avec des absents importants, une équipe B, un report possible, ou qu’elle n’a pas pu vérifier.</p></section>';}
 
 function renderToday(records,m){
   var today=parisDay(new Date());

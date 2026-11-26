@@ -16,8 +16,8 @@ async function ask(list){
   const messages=[{role:'user',content:N.prompt(list,now)}];let text='',usage={input:0,output:0,searches:0};
   for(let turn=0;turn<4;turn++){
     const r=await client.beta.messages.create({model:MODEL,max_tokens:16000,betas:['server-side-fallback-2026-07-01'],fallbacks:'default',
-      output_config:{effort:'low'},system:N.system,
-      tools:[{type:'web_search_20260209',name:'web_search',max_uses:N.rules.maxSearchesPerCall,user_location:{type:'approximate',country:'FR',timezone:'Europe/Paris'}}],
+      output_config:{effort:'medium'},system:N.system,
+      tools:[{type:'web_search_20260209',name:'web_search',max_uses:N.searches(list.length),user_location:{type:'approximate',country:'FR',timezone:'Europe/Paris'}}],
       messages});
     usage.input+=r.usage.input_tokens||0;usage.output+=r.usage.output_tokens||0;usage.searches+=(r.usage.server_tool_use&&r.usage.server_tool_use.web_search_requests)||0;
     if(r.stop_reason==='refusal')throw new Error('refus du modèle');
@@ -55,9 +55,12 @@ function pendingLegs(sports,dayDoc,list,journals){
     day.calls.push(Object.assign({at:new Date(now).toISOString(),model:MODEL,matches:list.length},res.usage));
     if(!res.verdicts){day.status='error';day.error='réponse illisible';console.log('Filtre actu : réponse illisible, aucun match écarté.');break;}
     let bad=0;
-    list.forEach(m=>{const v=res.verdicts[m.key];if(!v)return;day.checks[m.key]=Object.assign({sport:m.sport,league:m.league,home:m.home,away:m.away,kickoff:m.kickoff,pick:m.pick,checkedAt:new Date(now).toISOString()},v);if(v.verdict==='douteux')bad++;});
-    console.log('Filtre actu : '+list.length+' match(s) vérifié(s), '+bad+' écarté(s).');
-    day.status='ok';if(!bad)break;
+    let unsure=0;
+    list.forEach(m=>{const v=res.verdicts[m.key];if(!v)return;const old=day.checks[m.key],tries=(old&&old.verdict==='non_verifie'?old.tries||1:0)+1;
+      day.checks[m.key]=Object.assign({sport:m.sport,league:m.league,home:m.home,away:m.away,kickoff:m.kickoff,pick:m.pick,checkedAt:new Date(now).toISOString(),tries},v);
+      if(v.verdict==='douteux')bad++;else if(v.verdict==='non_verifie'){unsure++;if(N.final(day.checks[m.key]))bad++;}});
+    console.log('Filtre actu : '+list.length+' match(s) vérifié(s), '+bad+' écarté(s), '+unsure+' non vérifié(s).');
+    day.status='ok';if(!bad&&!unsure)break;
   }
   day.updatedAt=new Date(now).toISOString();
   // Écrire les données filtrées pour Très sûr, Safe et Algo (Safe but filtre data/days lui-même).
