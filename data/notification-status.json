@@ -1,10 +1,10 @@
 {
-  "status": "daily_report_sent",
+  "status": "waiting_for_ticket",
   "topicConfigured": true,
   "sentNow": 0,
-  "dailyReportSent": true,
+  "dailyReportSent": false,
   "eligible": 0,
   "lastSentAt": "2026-11-27T16:31:29.597Z",
-  "message": "Bilan de collecte accepté par ntfy. Aucun ticket admissible et récent à notifier.",
-  "updatedAt": "2026-11-27T16:31:29.598Z"
+  "message": "Aucun nouveau ticket admissible avec des cotes de moins d’une heure. Le bilan quotidien a déjà été envoyé.",
+  "updatedAt": "2026-11-27T17:38:32.696Z"
 }
