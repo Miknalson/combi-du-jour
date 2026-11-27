@@ -1351,6 +1351,124 @@
       "searchLimited": false,
       "resultSource": "application-football-score",
       "resultHistory": []
+    },
+    {
+      "id": "paper-multisport-v3|2026-11-27|algo|football",
+      "day": "2026-11-27",
+      "method": "algo",
+      "sport": "football",
+      "version": "algo-real-v1",
+      "createdAt": "2026-11-27T07:54:47.736Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 50,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 3.0412800000000004,
+      "probability": 0.26090255253892136,
+      "legs": [
+        {
+          "matchId": "ere-groningen-willem-ii",
+          "sport": "football",
+          "home": "Groningen",
+          "away": "Willem II",
+          "league": "ERE",
+          "kickoff": "2026-11-27T19:00Z",
+          "date": "2026-11-27",
+          "code": "1",
+          "label": "Victoire Groningen",
+          "o": 1.28,
+          "p": 0.7410847216425736,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-27T07:52:20Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        },
+        {
+          "matchId": "bel-leuven-kv-kortrijk",
+          "sport": "football",
+          "home": "Leuven",
+          "away": "KV Kortrijk",
+          "league": "BEL",
+          "kickoff": "2026-11-27T19:45Z",
+          "date": "2026-11-27",
+          "code": "1",
+          "label": "Victoire Leuven",
+          "o": 1.8,
+          "p": 0.5077621816480935,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-27T07:52:20Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        },
+        {
+          "matchId": "liga-levante-real-racing-club-de-santander",
+          "sport": "football",
+          "home": "Levante",
+          "away": "Real Racing Club de Santander",
+          "league": "LIGA",
+          "kickoff": "2026-11-27T20:00Z",
+          "date": "2026-11-27",
+          "code": "O2.5",
+          "label": "Plus de 2,5 buts",
+          "o": 1.32,
+          "p": 0.6933461636271739,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-27T07:52:17Z",
+          "marketId": "totals||2.5",
+          "marketFamily": "totals",
+          "marketLine": 2.5,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-27T07:52:15.947447+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v3|2026-11-27|safe|football",
+      "day": "2026-11-27",
+      "method": "safe",
+      "sport": "football",
+      "version": "safe-multi-v3",
+      "createdAt": "2026-11-27T07:54:47.736Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-27T07:52:15.947447+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
     }
   ]
 }

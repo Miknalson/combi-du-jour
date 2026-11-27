@@ -589,10 +589,179 @@
       "updatedAt": "2026-11-26T18:37:30.160Z"
     },
     "2026-11-27": {
-      "checks": {},
-      "calls": [],
-      "status": "ok",
-      "updatedAt": "2026-11-27T05:09:48.555Z"
+      "checks": {
+        "football|2026-11-27|u cluj|sepsi sf gheorghe": {
+          "sport": "football",
+          "league": "ROU",
+          "home": "U. Cluj",
+          "away": "Sepsi Sf. Gheorghe",
+          "kickoff": "2026-11-27T15:30Z",
+          "pick": "Victoire U. Cluj",
+          "checkedAt": "2026-11-27T07:52:25.270Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Deux titulaires absents depuis octobre ; Bic revient de suspension et Nistor de blessure. Pas de rotation signalée.",
+          "absents": [
+            "Elio Capradossi (blessé, longue durée)",
+            "Mouhamadou Drammeh (blessé, longue durée)",
+            "Loosli (blessé, pas encore utilisé)"
+          ],
+          "sources": [
+            "https://www.flashscore.ro/stiri/fotbal-superliga-live-superliga-u-cluj-sepsi-sepcile-rosii-cauta-al-saptelea-meci-la-rand-fara-infrangere/6kq6wlKc/",
+            "https://cluj24.ro/bergodi-saluta-transferul-lui-stanciu-la-u-cluj-italianul-s-a-suparat-pe-ziaristi-ce-tampenii-si-cu-asta-basta-312139.html"
+          ]
+        },
+        "football|2026-11-27|groningen|willem ii": {
+          "sport": "football",
+          "league": "ERE",
+          "home": "Groningen",
+          "away": "Willem II",
+          "kickoff": "2026-11-27T19:00Z",
+          "pick": "Victoire Groningen",
+          "checkedAt": "2026-11-27T07:52:25.270Z",
+          "tries": 2,
+          "verdict": "ok",
+          "reason": "Seuls 3 blessés de longue durée hors du XI ; Vaessen et Hateboer de retour de suspension, Lukkien de retour sur le banc.",
+          "absents": [
+            "Malcolm Jeng (blessé, longue durée)",
+            "Rijk Janse (blessé, longue durée)",
+            "Travis Hernes (blessé, longue durée)"
+          ],
+          "sources": [
+            "https://www.fcgroningen.nl/fcg-tv/lukkien-terug-op-de-bank-tegen-willem-ii/",
+            "https://www.voetbalzone.nl/nieuws/waar-je-FC%20Groningen-vs-Willem%20II-kunt-kijken-tv-zender-online-livestream-aanvangstijdstip-en-recente-vorm-van-beide-teams/blt83397aa939699c17"
+          ]
+        },
+        "football|2026-11-27|werder bremen|borussia monchengladbach": {
+          "sport": "football",
+          "league": "BL",
+          "home": "Werder Bremen",
+          "away": "Borussia Monchengladbach",
+          "kickoff": "2026-11-27T19:30Z",
+          "pick": "Victoire Werder Bremen",
+          "checkedAt": "2026-11-27T07:52:25.270Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Grüll (meilleur passeur) forfait, Njinmah très incertain, Stage et Agu aussi absents : plus de 3 titulaires touchés.",
+          "absents": [
+            "Marco Grüll (blessé)",
+            "Justin Njinmah (incertain)",
+            "Romano Schmid... non",
+            "Jens Stage (blessé)",
+            "Felix Agu (blessé)",
+            "Topp (blessé)",
+            "N'Diaye (blessé)",
+            "Musah (blessé)",
+            "Alvero (blessé)",
+            "Lynen (incertain, malade)"
+          ],
+          "sources": [
+            "https://www.butenunbinnen.de/sport/werder-bremen-borussia-moenchengladbach-bundesliga-vorschau-100.html",
+            "https://www.buli-tipphilfe.de/voraussichtliche-aufstellung/werder-bremen",
+            "https://www.weser-kurier.de/werder/profis/so-koennte-werders-aufstellung-gegen-gladbach-aussehen-doc88n48ir9da91286t3705"
+          ]
+        },
+        "football|2026-11-27|leuven|kv kortrijk": {
+          "sport": "football",
+          "league": "BEL",
+          "home": "Leuven",
+          "away": "KV Kortrijk",
+          "kickoff": "2026-11-27T19:45Z",
+          "pick": "Les deux équipes marquent",
+          "checkedAt": "2026-11-27T07:52:25.270Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Aucun attaquant clé absent ; le gardien titulaire de Courtrai est forfait, ce qui ne réduit pas les chances de buts.",
+          "absents": [
+            "Abdoul Traoré (Louvain, blessé)",
+            "Henok Teklab (Louvain, blessé)",
+            "Manuel Osifo (Louvain, blessé)",
+            "Thibaud Verlinden (Louvain, blessé)",
+            "Marko Ilic (Courtrai, gardien blessé)",
+            "Boris Lambert (Courtrai, suspendu)"
+          ],
+          "sources": [
+            "https://www.kvk.be/nieuws/persconferentie-ohlkvk/",
+            "https://www.fotmob.com/matches/oh-leuven-vs-kortrijk/vuytr",
+            "https://www.bet-experts.nl/nieuws/oh-leuven-kortrijk-voorspelling-wedtips"
+          ]
+        },
+        "football|2026-11-27|levante|real racing club de santander": {
+          "sport": "football",
+          "league": "LIGA",
+          "home": "Levante",
+          "away": "Real Racing Club de Santander",
+          "kickoff": "2026-11-27T20:00Z",
+          "pick": "Plus de 2,5 buts",
+          "checkedAt": "2026-11-27T07:52:25.270Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Levante sans ses 2 latéraux, Racing pire défense de Liga ; absence d'Andrés Martín compensée, pas de risque net pour l'over.",
+          "absents": [
+            "Jeremy Toljan (Levante, blessé)",
+            "Manu Sánchez (Levante, blessé)",
+            "Petar Ratkov (Levante, incertain)",
+            "Andrés Martín (Racing, blessé)",
+            "Maguette Gueye (Racing, blessé)",
+            "Álvaro Mantilla (Racing, blessé)"
+          ],
+          "sources": [
+            "https://www.whoscored.com/matches/1993985/preview/spain-laliga-2026-2027-levante-racing-santander",
+            "https://www.eldiarioalerta.com/articulo/racing-santander/racing-prepara-asalto-ciutat-valencia-tres-bajas-confirmadas/20261126094513586838.html",
+            "https://www.elgoldigital.com/futbol/levante-ud/levante-racing-de-santander-previa-luis-castro-laterales-jornada-14"
+          ]
+        },
+        "football|2026-11-27|rizespor|kasimpasa": {
+          "sport": "football",
+          "league": "TUR",
+          "home": "Rizespor",
+          "away": "Kasimpasa",
+          "kickoff": "2026-11-27T17:00Z",
+          "pick": "Plus de 2,5 buts",
+          "checkedAt": "2026-11-27T07:52:25.270Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Beaucoup d'absents, dont plusieurs offensifs des 2 côtés (Diabaté, Ben Ouanes, Mihaila, Fofana) ; cas limite, absences souvent anciennes.",
+          "absents": [
+            "Kamil Ahmet Çörekçi (Kasımpaşa, blessé)",
+            "Fousseni Diabaté (Kasımpaşa, blessé)",
+            "Godfried Frimpong (Kasımpaşa, blessé)",
+            "Kevin Mouanga (Kasımpaşa, incertain)",
+            "Ayberk Karapo (Kasımpaşa, suspendu)",
+            "Mortadha Ben Ouanes (Kasımpaşa, incertain)",
+            "Valentin Mihaila (Rizespor, blessé/incertain)",
+            "Fofana (Rizespor, blessé)",
+            "Can Bozdoğan (Rizespor, blessé)",
+            "Khusniddin Alikulov (Rizespor, blessé)"
+          ],
+          "sources": [
+            "https://www.mynet.com/caykur-rizespor-kasimpasa-2026-11-27-maci-oncesi-analiz-527609-myspor",
+            "https://ajansspor.com/haber/caykur-rizespor-kasimpasa-maci-ne-zaman-hangi-kanalda-muhtemel-11ler-sakat-ve-cezalilar-739467",
+            "https://karadenizgazete.com.tr/spor/futbol/kasimpasa-ile-caykur-rizespor-25-randevuda/634347"
+          ]
+        }
+      },
+      "calls": [
+        {
+          "at": "2026-11-27T07:52:25.270Z",
+          "model": "claude-opus-5-5",
+          "matches": 4,
+          "input": 130702,
+          "output": 5521,
+          "searches": 12
+        },
+        {
+          "at": "2026-11-27T07:52:25.270Z",
+          "model": "claude-opus-5-5",
+          "matches": 3,
+          "input": 140551,
+          "output": 6521,
+          "searches": 10
+        }
+      ],
+      "status": "error",
+      "updatedAt": "2026-11-27T07:52:25.270Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque"
     }
   }
 }

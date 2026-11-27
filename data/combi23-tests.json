@@ -204,6 +204,80 @@
       ],
       "resultSource": "application-football-score",
       "resultHistory": []
+    },
+    {
+      "id": "combi23-v1|2026-11-27|football",
+      "day": "2026-11-27",
+      "method": "combi23",
+      "sport": "football",
+      "version": "combi23-v1",
+      "createdAt": "2026-11-27T07:54:47.970Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 50,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 2.3040000000000003,
+      "probability": 0.37629479504730323,
+      "legs": [
+        {
+          "id": "football|ere-groningen-willem-ii|2026-11-27T19:00Z|h2h||None|1",
+          "matchId": "ere-groningen-willem-ii",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "ERE",
+          "home": "Groningen",
+          "away": "Willem II",
+          "kickoff": "2026-11-27T19:00Z",
+          "date": "2026-11-27",
+          "code": "1",
+          "label": "Victoire Groningen",
+          "o": 1.28,
+          "p": 0.7410847216425736,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-27T07:52:20Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        },
+        {
+          "id": "football|bel-leuven-kv-kortrijk|2026-11-27T19:45Z|h2h||None|1",
+          "matchId": "bel-leuven-kv-kortrijk",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "BEL",
+          "home": "Leuven",
+          "away": "KV Kortrijk",
+          "kickoff": "2026-11-27T19:45Z",
+          "date": "2026-11-27",
+          "code": "1",
+          "label": "Victoire Leuven",
+          "o": 1.8,
+          "p": 0.5077621816480935,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-27T07:52:20Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-27T07:52:15.947447+00:00",
+          "partial": true,
+          "matches": 21
+        }
+      ]
     }
   ]
 }

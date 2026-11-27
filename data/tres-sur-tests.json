@@ -229,6 +229,33 @@
       ],
       "resultSource": "application-football-score",
       "resultHistory": []
+    },
+    {
+      "id": "tres-sur-v2|2026-11-27|football",
+      "day": "2026-11-27",
+      "method": "tres_sur",
+      "sport": "football",
+      "version": "tres-sur-v2",
+      "createdAt": "2026-11-27T07:54:47.831Z",
+      "mode": "paper",
+      "unitStake": 0,
+      "simulatedStake": 0,
+      "currency": "EUR",
+      "status": "no_pick",
+      "minOdds": 1.5,
+      "maxOdds": 1.7,
+      "odds": null,
+      "probability": null,
+      "legs": [],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-27T07:52:15.947447+00:00",
+          "partial": true,
+          "matches": 21
+        }
+      ]
     }
   ]
 }

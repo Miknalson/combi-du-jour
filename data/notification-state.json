@@ -10,7 +10,8 @@
     "tres-sur-v1|2026-11-25|football",
     "paper-multisport-v3|2026-11-26|algo|football",
     "paper-multisport-v3|2026-11-26|safe|football",
-    "tres-sur-v2|2026-11-26|football"
+    "tres-sur-v2|2026-11-26|football",
+    "paper-multisport-v3|2026-11-27|algo|football"
   ],
   "dailyReports": [
     "2026-11-17",
@@ -24,5 +25,5 @@
     "2026-11-25",
     "2026-11-26"
   ],
-  "updatedAt": "2026-11-26T08:06:49.133Z"
+  "updatedAt": "2026-11-27T07:54:48.293Z"
 }

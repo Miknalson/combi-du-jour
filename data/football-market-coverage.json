@@ -1,19 +1,24 @@
 {
   "version": "football-paired-markets-v1",
-  "updatedAt": "2026-11-26T18:37:27.154190+00:00",
-  "day": "2026-11-26",
-  "status": "daily_budget",
-  "message": "Budget de cotes du jour déjà utilisé. Aucune requête supplémentaire facturée.",
-  "creditsRemaining": 7,
+  "updatedAt": "2026-11-27T07:52:15.545536+00:00",
+  "day": "2026-11-27",
+  "status": "provider_missing_totals",
+  "message": "Winamax ne fournit aucune paire de cotes de total de buts dans la réponse du fournisseur pour cette compétition. Aucun total inventé.",
+  "creditsRemaining": 6,
   "dailyAllowance": 1,
-  "alreadyUsedToday": 1,
+  "alreadyUsedToday": 0,
+  "league": "soccer_efl_champ",
+  "requestedMarkets": "h2h",
+  "matches": 11,
+  "totalLines": 0,
+  "creditsUsed": 1,
   "sourceResult": {
     "status": "provider_missing_totals",
     "message": "Winamax ne fournit aucune paire de cotes de total de buts dans la réponse du fournisseur pour cette compétition. Aucun total inventé.",
-    "updatedAt": "2026-11-26T07:51:47.592586+00:00",
-    "league": "soccer_uefa_europa_conference_league",
+    "updatedAt": "2026-11-27T07:52:15.545536+00:00",
+    "league": "soccer_efl_champ",
     "requestedMarkets": "h2h",
-    "matches": 0,
+    "matches": 11,
     "totalLines": 0
   }
 }

@@ -21,7 +21,24 @@
    "away": "Sepsi Sf. Gheorghe",
    "o1": 1.57,
    "oX": 4.2,
-   "o2": 5.5
+   "o2": 5.5,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.6,
+      "u": 1.86,
+      "asOf": "2026-11-27T07:52:17Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:17Z",
+    "o1": 1.47,
+    "oX": 3.9,
+    "o2": 4.8,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "srb-imt-novi-beograd-macva",
@@ -41,7 +58,24 @@
    "away": "Konyaspor",
    "o1": 2.75,
    "oX": 3.1,
-   "o2": 2.75
+   "o2": 2.75,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 2.0,
+      "u": 1.49,
+      "asOf": "2026-11-27T07:52:17Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:17Z",
+    "o1": 2.5,
+    "oX": 3.15,
+    "o2": 2.45,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "tur-rizespor-kasimpasa",
@@ -51,7 +85,24 @@
    "away": "Kasimpasa",
    "o1": 1.95,
    "oX": 3.8,
-   "o2": 3.7
+   "o2": 3.7,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.56,
+      "u": 1.92,
+      "asOf": "2026-11-27T07:52:17Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:17Z",
+    "o1": 1.88,
+    "oX": 3.55,
+    "o2": 3.3,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "pol-rakow-czestochowa-piast-gliwice",
@@ -111,7 +162,24 @@
    "away": "FC Arges",
    "o1": 2.35,
    "oX": 3.35,
-   "o2": 3.05
+   "o2": 3.05,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.84,
+      "u": 1.6,
+      "asOf": "2026-11-27T07:52:17Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:17Z",
+    "o1": 2.15,
+    "oX": 3.1,
+    "o2": 2.75,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "ere-groningen-willem-ii",
@@ -121,7 +189,24 @@
    "away": "Willem II",
    "o1": 1.38,
    "oX": 5.5,
-   "o2": 8.5
+   "o2": 8.5,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.37,
+      "u": 2.25,
+      "asOf": "2026-11-27T07:52:20Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:20Z",
+    "o1": 1.28,
+    "oX": 4.9,
+    "o2": 6.0,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bl-werder-bremen-borussia-monchengladbach",
@@ -131,7 +216,24 @@
    "away": "Borussia Monchengladbach",
    "o1": 1.68,
    "oX": 4.33,
-   "o2": 4.75
+   "o2": 4.75,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.41,
+      "u": 2.2,
+      "asOf": "2026-11-27T07:52:20Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:20Z",
+    "o1": 1.64,
+    "oX": 4.0,
+    "o2": 3.85,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga2-leganes-sabadell-fc",
@@ -161,7 +263,24 @@
    "away": "Paris FC",
    "o1": 3.4,
    "oX": 3.4,
-   "o2": 2.2
+   "o2": 2.2,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.74,
+      "u": 1.7,
+      "asOf": "2026-11-27T07:52:20Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:20Z",
+    "o1": 3.1,
+    "oX": 3.3,
+    "o2": 2.05,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "sa-venezia-bologna",
@@ -171,7 +290,24 @@
    "away": "Bologna",
    "o1": 3.1,
    "oX": 3.25,
-   "o2": 2.45
+   "o2": 2.45,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.9,
+      "u": 1.58,
+      "asOf": "2026-11-27T07:52:20Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:20Z",
+    "o1": 2.8,
+    "oX": 3.1,
+    "o2": 2.3,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bel-leuven-kv-kortrijk",
@@ -181,7 +317,24 @@
    "away": "KV Kortrijk",
    "o1": 2.0,
    "oX": 3.7,
-   "o2": 3.8
+   "o2": 3.8,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.5,
+      "u": 2.0,
+      "asOf": "2026-11-27T07:52:20Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:20Z",
+    "o1": 1.8,
+    "oX": 3.45,
+    "o2": 3.3,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga-levante-real-racing-club-de-santander",
@@ -191,7 +344,24 @@
    "away": "Real Racing Club de Santander",
    "o1": 2.0,
    "oX": 4.0,
-   "o2": 3.3
+   "o2": 3.3,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.32,
+      "u": 2.45,
+      "asOf": "2026-11-27T07:52:17Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:17Z",
+    "o1": 1.94,
+    "oX": 3.8,
+    "o2": 3.05,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "pl-nottingham-forest-chelsea",
@@ -201,7 +371,24 @@
    "away": "Chelsea",
    "o1": 2.6,
    "oX": 3.4,
-   "o2": 2.8
+   "o2": 2.8,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.64,
+      "u": 1.82,
+      "asOf": "2026-11-27T07:52:17Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-27T07:52:17Z",
+    "o1": 2.35,
+    "oX": 3.25,
+    "o2": 2.55,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "cha-southampton-middlesbrough",
@@ -240,11 +427,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-24T07:48:29Z",
-    "o1": 2.55,
-    "oX": 3.45,
-    "o2": 2.0,
-    "ou": {}
+    "asOf": "2026-11-27T07:52:17Z",
+    "o1": 2.6,
+    "oX": 3.5,
+    "o2": 2.1,
+    "ou": {
+     "2.5": {
+      "o": 1.47,
+      "u": 2.0,
+      "asOf": "2026-11-27T07:52:17Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -257,5 +452,6 @@
    "oX": 3.2,
    "o2": 3.45
   }
- ]
+ ],
+ "marketsUpdatedAt": "2026-11-27T07:52:15.947447+00:00"
 }
