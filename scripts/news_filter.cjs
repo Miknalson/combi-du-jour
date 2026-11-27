@@ -1,30 +1,41 @@
-// Avant de figer les tickets du jour : l'IA (Claude + recherche web) lit l'actu de dernière minute
+// Avant de figer les tickets du jour : l'IA (OpenAI + recherche web) lit l'actu de dernière minute
 // des seuls matchs que les tickets s'apprêtent à prendre, et écarte ceux qui sont douteux.
 // L'algorithme ne change pas : les matchs écartés sont retirés des données d'entrée, puis le ticket est recalculé.
-// Sans clé ANTHROPIC_API_KEY ou en cas d'erreur, rien n'est écarté et les tickets sont faits comme avant.
+// Sans clé OPENAI_API_KEY ou en cas d'erreur, rien n'est écarté et les tickets sont faits comme avant.
 const fs=require('node:fs'),path=require('node:path');
 const N=require('../news-filter'),T=require('../tres-sur-engine'),P=require('../paper-multi-engine'),B=require('../safe-but-engine'),Safe=require('../safe-multi-engine'),AM=require('../algo-mix-engine');
 const root=process.env.NEWS_ROOT||path.resolve(__dirname,'..'),now=Number(process.env.NEWS_NOW)||Date.now(),today=N.paris(now);
-const MODEL=process.env.NEWS_MODEL||'claude-opus-5-5';
 const storeFile=path.join(root,'data/news-checks.json');
 function read(f,fallback){try{return JSON.parse(fs.readFileSync(f,'utf8'));}catch(e){return fallback;}}
 function save(f,d){fs.writeFileSync(f,JSON.stringify(d,null,2)+'\n');}
 
+// Modèles essayés dans l'ordre : si OpenAI ne connaît pas l'un d'eux, on passe au suivant.
+const MODELS=[...new Set([process.env.NEWS_MODEL,'gpt-5.5','gpt-5.1','gpt-5'].filter(Boolean))];
+let MODEL=MODELS[0];
+
+async function callOpenAI(body){
+  const r=await fetch('https://api.openai.com/v1/responses',{method:'POST',signal:AbortSignal.timeout(7*60*1000),
+    headers:{'Content-Type':'application/json',Authorization:'Bearer '+process.env.OPENAI_API_KEY},body:JSON.stringify(body)});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok){const e=new Error('OpenAI '+r.status+' : '+((j.error&&j.error.message)||'erreur'));e.code=j.error&&j.error.code;e.status=r.status;throw e;}
+  return j;
+}
+
 async function ask(list){
   if(process.env.NEWS_FAKE_TEXT)return {verdicts:N.parse(process.env.NEWS_FAKE_TEXT,list),usage:{input:0,output:0,searches:0}}; // tests uniquement
-  const Anthropic=require('@anthropic-ai/sdk');const client=new (Anthropic.default||Anthropic)();
-  const messages=[{role:'user',content:N.prompt(list,now)}];let text='',usage={input:0,output:0,searches:0};
-  for(let turn=0;turn<4;turn++){
-    const r=await client.beta.messages.create({model:MODEL,max_tokens:16000,betas:['server-side-fallback-2026-07-01'],fallbacks:'default',
-      output_config:{effort:'medium'},system:N.system,
-      tools:[{type:'web_search_20260209',name:'web_search',max_uses:N.searches(list.length),user_location:{type:'approximate',country:'FR',timezone:'Europe/Paris'}}],
-      messages});
-    usage.input+=r.usage.input_tokens||0;usage.output+=r.usage.output_tokens||0;usage.searches+=(r.usage.server_tool_use&&r.usage.server_tool_use.web_search_requests)||0;
-    if(r.stop_reason==='refusal')throw new Error('refus du modèle');
-    text=r.content.filter(b=>b.type==='text').map(b=>b.text).join('');
-    if(r.stop_reason!=='pause_turn')break;
-    messages.push({role:'assistant',content:r.content});
+  const body={instructions:N.system,input:N.prompt(list,now),max_output_tokens:16000,reasoning:{effort:'medium'},
+    max_tool_calls:N.searches(list.length),
+    tools:[{type:'web_search',user_location:{type:'approximate',country:'FR',timezone:'Europe/Paris'}}]};
+  let r,lastErr;
+  for(const m of MODELS){
+    try{r=await callOpenAI(Object.assign({model:m},body));MODEL=m;break;}
+    catch(e){lastErr=e;if(e.code==='model_not_found'||e.status===404||/model/i.test(e.message)&&e.status===400)continue;throw e;}
   }
+  if(!r)throw lastErr;
+  const out=r.output||[],parts=out.filter(o=>o.type==='message').flatMap(o=>o.content||[]);
+  if(parts.some(c=>c.type==='refusal')&&!parts.some(c=>c.type==='output_text'))throw new Error('refus du modèle');
+  const text=parts.filter(c=>c.type==='output_text').map(c=>c.text).join('');
+  const usage={input:(r.usage&&r.usage.input_tokens)||0,output:(r.usage&&r.usage.output_tokens)||0,searches:out.filter(o=>o.type==='web_search_call').length};
   return {verdicts:N.parse(text,list),usage};
 }
 
@@ -45,11 +56,11 @@ function pendingLegs(sports,dayDoc,list,journals){
   const sports=Object.fromEntries(Safe.SPORTS.map(s=>[s,read(path.join(root,'data/sports',s+'.json'),null)]));
   const dayDoc=read(path.join(root,'data/days',today+'.json'),null);
   const journals={tres:read(path.join(root,'data/tres-sur-tests.json'),{records:[]}),v2:read(path.join(root,'data/paper-tests-v2.json'),{records:[]}),but:read(path.join(root,'data/safe-but-tests.json'),{records:[]}),mix:read(path.join(root,'data/algo-mix-tests.json'),{records:[]}),goals:read(path.join(root,'data/sports/football-goals.json'),null)};
-  const key=process.env.ANTHROPIC_API_KEY;
+  const key=process.env.OPENAI_API_KEY;
   for(let round=0;round<N.rules.maxRounds;round++){
     const list=N.toCheck(pendingLegs(sports,dayDoc,N.excluded(day),journals),day,now);
     if(!list.length){day.status='ok';break;}
-    if(!key){day.status='no_key';console.log('Filtre actu : pas de clé ANTHROPIC_API_KEY, aucun match écarté ('+list.length+' à vérifier).');break;}
+    if(!key){day.status='no_key';console.log('Filtre actu : pas de clé OPENAI_API_KEY, aucun match écarté ('+list.length+' à vérifier).');break;}
     let res;
     try{res=await ask(list);}catch(e){day.status='error';day.error=String(e&&e.message||e).slice(0,200);console.log('Filtre actu : erreur, aucun match écarté.',day.error);break;}
     day.calls.push(Object.assign({at:new Date(now).toISOString(),model:MODEL,matches:list.length},res.usage));
