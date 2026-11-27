@@ -760,7 +760,7 @@
         }
       ],
       "status": "ok",
-      "updatedAt": "2026-11-27T17:38:32.317Z",
+      "updatedAt": "2026-11-27T19:02:51.573Z",
       "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque"
     }
   }

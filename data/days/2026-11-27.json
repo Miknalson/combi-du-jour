@@ -75,7 +75,13 @@
     "oX": 3.15,
     "o2": 2.45,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-27T19:02:49.636145+00:00"
   },
   {
    "id": "tur-rizespor-kasimpasa",
@@ -453,5 +459,6 @@
    "o2": 3.45
   }
  ],
- "marketsUpdatedAt": "2026-11-27T07:52:15.947447+00:00"
+ "marketsUpdatedAt": "2026-11-27T07:52:15.947447+00:00",
+ "scoresUpdatedAt": "2026-11-27T19:02:49.636145+00:00"
 }
