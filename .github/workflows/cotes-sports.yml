@@ -162,7 +162,7 @@ jobs:
         id: scores
         continue-on-error: true
         run: python scripts/update_scores.py --max-requests 12
-      - name: Installer le client Claude
+      - name: Installer les dépendances
         if: github.event.schedule != '7,22,37,52 11-22 * * *'
         continue-on-error: true
         run: npm ci --omit=dev --no-audit --no-fund
@@ -172,7 +172,7 @@ jobs:
         continue-on-error: true
         timeout-minutes: 8
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/news_filter.cjs
       - name: Consigner les tests fictifs sans passer d’ordre
         continue-on-error: true

@@ -40,15 +40,15 @@ test('Script : sans clé rien n’est écarté ; avec un verdict douteux le matc
  const match=(id,home,away)=>({id,eventId:id,sport:'football',sportKey:'soccer_italy_serie_a',leagueCode:'SA',league:'SA',home,away,kickoff:'2026-11-22T15:00:00Z',asOf:at,bookKey:'winamax_fr',book:'Winamax France',market:'h2h',gender:'unspecified',o1:1.52,oX:4.2,o2:6,markets:[g(home,away,[1.52,4.2,6])]});
  fs.writeFileSync(path.join(root,'data/sports/football.json'),JSON.stringify({sport:'football',bookKey:'winamax_fr',status:'ok',updatedAt:at,matches:[match('a','Juventus','Venezia'),match('b','Bologna','Udinese')]}));
  const run=env=>execFileSync('node',[path.join(__dirname,'../scripts/news_filter.cjs')],{env:Object.assign({},process.env,{NEWS_ROOT:root,NEWS_NOW:String(now)},env),encoding:'utf8'});
- assert.match(run({ANTHROPIC_API_KEY:''}),/pas de clé/);
+ assert.match(run({OPENAI_API_KEY:''}),/pas de clé/);
  assert.equal(JSON.parse(fs.readFileSync(path.join(root,'data/sports/football.json'))).matches.length,2);
- run({ANTHROPIC_API_KEY:'test',NEWS_FAKE_TEXT:'{"matches":[{"id":"m1","verdict":"douteux","raison":"Équipe B annoncée"},{"id":"m2","verdict":"ok","raison":"RAS"}]}'});
+ run({OPENAI_API_KEY:'test',NEWS_FAKE_TEXT:'{"matches":[{"id":"m1","verdict":"douteux","raison":"Équipe B annoncée"},{"id":"m2","verdict":"ok","raison":"RAS"}]}'});
  const left=JSON.parse(fs.readFileSync(path.join(root,'data/sports/football.json')));
  // Le faux verdict écarte toujours le 1er match proposé : Juventus, puis le ticket est recalculé avec Bologna, écarté à son tour.
  assert.deepEqual(left.newsExcluded.map(x=>x.home),['Juventus','Bologna']);assert.equal(left.matches.length,0);assert.equal(left.newsExcluded[0].reason,'Équipe B annoncée');
  const store=JSON.parse(fs.readFileSync(path.join(root,'data/news-checks.json'))),day=store.days['2026-11-22'];
  assert.equal(N.excluded(day).length,2);assert.equal(day.calls.length,2);
- assert.match(run({ANTHROPIC_API_KEY:'test',NEWS_FAKE_TEXT:'invalide'}),/^(?!.*vérifié)/s,'rien de nouveau à vérifier : pas d’appel');});
+ assert.match(run({OPENAI_API_KEY:'test',NEWS_FAKE_TEXT:'invalide'}),/^(?!.*vérifié)/s,'rien de nouveau à vérifier : pas d’appel');});
 
 test('« Non vérifié » n’est jamais un ok : revérifié une fois, puis écarté par prudence (cas Lille – Bayern du 25/11)',()=>{
  const list=[{key:'k1'},{key:'k2'},{key:'k3'}];
@@ -65,7 +65,7 @@ test('Script : un match resté non vérifié après 2 essais sort des cotes du j
  const at='2026-11-22T06:55:00Z',g=(home,away,odds)=>({id:'h2h||None',family:'h2h',key:'h2h',unit:'match',line:null,participant:'',bookKey:'winamax_fr',asOf:at,outcomes:[{code:'1',side:'1',label:'Victoire '+home,odds:odds[0],participant:''},{code:'2',side:'2',label:'Victoire '+away,odds:odds[2],participant:''},{code:'X',side:'X',label:'Match nul',odds:odds[1],participant:''}]});
  const match=(id,home,away)=>({id,eventId:id,sport:'football',sportKey:'soccer_italy_serie_a',leagueCode:'SA',league:'SA',home,away,kickoff:'2026-11-22T15:00:00Z',asOf:at,bookKey:'winamax_fr',book:'Winamax France',market:'h2h',gender:'unspecified',o1:1.52,oX:4.2,o2:6,markets:[g(home,away,[1.52,4.2,6])]});
  fs.writeFileSync(path.join(root,'data/sports/football.json'),JSON.stringify({sport:'football',bookKey:'winamax_fr',status:'ok',updatedAt:at,matches:[match('a','Juventus','Venezia'),match('b','Bologna','Udinese')]}));
- const out=execFileSync('node',[path.join(__dirname,'../scripts/news_filter.cjs')],{env:Object.assign({},process.env,{NEWS_ROOT:root,NEWS_NOW:String(now),ANTHROPIC_API_KEY:'test',NEWS_FAKE_TEXT:'{"matches":[{"id":"m1","verdict":"non_verifie","raison":"Aucune source sur les absents"}]}'}),encoding:'utf8'});
+ const out=execFileSync('node',[path.join(__dirname,'../scripts/news_filter.cjs')],{env:Object.assign({},process.env,{NEWS_ROOT:root,NEWS_NOW:String(now),OPENAI_API_KEY:'test',NEWS_FAKE_TEXT:'{"matches":[{"id":"m1","verdict":"non_verifie","raison":"Aucune source sur les absents"}]}'}),encoding:'utf8'});
  assert.match(out,/non vérifié/);
  const day=JSON.parse(fs.readFileSync(path.join(root,'data/news-checks.json'))).days['2026-11-22'],juve=Object.values(day.checks).find(c=>c.home==='Juventus');
  assert.equal(juve.verdict,'non_verifie');assert.equal(juve.tries,2);
