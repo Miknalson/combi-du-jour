@@ -216,7 +216,7 @@
       "unitStake": 1,
       "simulatedStake": 50,
       "currency": "EUR",
-      "status": "pending",
+      "status": "lost",
       "odds": 2.3040000000000003,
       "probability": 0.37629479504730323,
       "legs": [
@@ -277,7 +277,9 @@
           "partial": true,
           "matches": 21
         }
-      ]
+      ],
+      "resultSource": "application-football-score",
+      "resultHistory": []
     }
   ]
 }
