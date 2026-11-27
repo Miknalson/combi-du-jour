@@ -128,7 +128,13 @@
    "away": "Darmstadt",
    "o1": 1.76,
    "oX": 4.0,
-   "o2": 4.33
+   "o2": 4.33,
+   "score": "2-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-27T19:54:11.373621+00:00"
   },
   {
    "id": "bl2-1-fc-heidenheim-1-fc-nurnberg",
@@ -460,5 +466,5 @@
   }
  ],
  "marketsUpdatedAt": "2026-11-27T07:52:15.947447+00:00",
- "scoresUpdatedAt": "2026-11-27T19:02:49.636145+00:00"
+ "scoresUpdatedAt": "2026-11-27T19:54:11.373621+00:00"
 }
