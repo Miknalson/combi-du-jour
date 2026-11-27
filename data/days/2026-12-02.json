@@ -1,6 +1,6 @@
 {
  "date": "2026-12-02",
- "updatedAt": "2026-11-26T07:51:11Z",
+ "updatedAt": "2026-11-27T07:51:32Z",
  "source": "oddsportal (secours)",
  "matches": [
   {
@@ -9,9 +9,9 @@
    "kickoff": "2026-12-02T18:00Z",
    "home": "Real Sociedad",
    "away": "Real Madrid",
-   "o1": 6.0,
-   "oX": 5.25,
-   "o2": 1.45
+   "o1": 6.5,
+   "oX": 5.3,
+   "o2": 1.41
   },
   {
    "id": "pl-chelsea-crystal-palace",
@@ -29,7 +29,7 @@
    "kickoff": "2026-12-02T19:30Z",
    "home": "Hull City",
    "away": "Nottingham Forest",
-   "o1": 4.0,
+   "o1": 4.1,
    "oX": 3.6,
    "o2": 1.95
   },
@@ -41,7 +41,7 @@
    "away": "Leeds United",
    "o1": 1.57,
    "oX": 4.4,
-   "o2": 5.5
+   "o2": 5.25
   },
   {
    "id": "pl-liverpool-sunderland",
@@ -99,8 +99,8 @@
    "kickoff": "2026-12-02T20:30Z",
    "home": "Barcelona",
    "away": "Atlético Madrid",
-   "o1": 1.38,
-   "oX": 5.6,
+   "o1": 1.4,
+   "oX": 5.7,
    "o2": 6.5
   }
  ]

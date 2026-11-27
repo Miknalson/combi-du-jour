@@ -1,6 +1,6 @@
 {
  "date": "2026-12-05",
- "updatedAt": "2026-11-26T07:50:57Z",
+ "updatedAt": "2026-11-27T07:51:32Z",
  "source": "oddsportal (secours)",
  "matches": [
   {
@@ -19,9 +19,9 @@
    "kickoff": "2026-12-05T12:00Z",
    "home": "1. FC Kaiserslautern",
    "away": "Greuther Fürth",
-   "o1": 1.8,
-   "oX": 4.0,
-   "o2": 4.0
+   "o1": 1.75,
+   "oX": 3.8,
+   "o2": 3.9
   },
   {
    "id": "bl2-karlsruher-sc-holstein-kiel",
@@ -30,8 +30,8 @@
    "home": "Karlsruher SC",
    "away": "Holstein Kiel",
    "o1": 2.7,
-   "oX": 3.75,
-   "o2": 2.37
+   "oX": 3.6,
+   "o2": 2.3
   },
   {
    "id": "l2-usl-dunkerque-red-star",
@@ -60,7 +60,7 @@
    "home": "Real Racing Club de Santander",
    "away": "Deportivo La Coruña",
    "o1": 2.35,
-   "oX": 3.6,
+   "oX": 3.7,
    "o2": 2.85
   },
   {
@@ -81,7 +81,7 @@
    "away": "1. FC Köln",
    "o1": 2.15,
    "oX": 4.0,
-   "o2": 2.9
+   "o2": 3.1
   },
   {
    "id": "bl-bayer-leverkusen-b-monchengladbach",
@@ -111,7 +111,7 @@
    "away": "Hamburger SV",
    "o1": 2.45,
    "oX": 3.6,
-   "o2": 2.65
+   "o2": 2.75
   },
   {
    "id": "bl-rb-leipzig-fsv-mainz-05",
@@ -139,7 +139,7 @@
    "kickoff": "2026-12-05T15:30Z",
    "home": "Willem II",
    "away": "Feyenoord",
-   "o1": 13.0,
+   "o1": 14.0,
    "oX": 8.0,
    "o2": 1.17
   },
@@ -201,7 +201,7 @@
    "away": "PSV Eindhoven",
    "o1": 3.2,
    "oX": 4.1,
-   "o2": 1.95
+   "o2": 2.05
   },
   {
    "id": "bl2-hannover-96-hertha-berlin",
@@ -211,7 +211,7 @@
    "away": "Hertha Berlin",
    "o1": 3.0,
    "oX": 4.0,
-   "o2": 2.15
+   "o2": 2.1
   },
   {
    "id": "l1-as-monaco-angers",

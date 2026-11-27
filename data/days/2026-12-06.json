@@ -1,0 +1,207 @@
+{
+ "date": "2026-12-06",
+ "matches": [
+  {
+   "id": "ere-heerenveen-sc-cambuur",
+   "league": "ERE",
+   "kickoff": "2026-12-06T11:15Z",
+   "home": "Heerenveen",
+   "away": "SC Cambuur",
+   "o1": 1.45,
+   "oX": 5.0,
+   "o2": 6.5
+  },
+  {
+   "id": "sa-genoa-torino",
+   "league": "SA",
+   "kickoff": "2026-12-06T11:30Z",
+   "home": "Genoa",
+   "away": "Torino",
+   "o1": 2.25,
+   "oX": 3.2,
+   "o2": 3.4
+  },
+  {
+   "id": "bl2-darmstadt-eintracht-braunschweig",
+   "league": "BL2",
+   "kickoff": "2026-12-06T12:30Z",
+   "home": "Darmstadt",
+   "away": "Eintracht Braunschweig",
+   "o1": 2.15,
+   "oX": 3.8,
+   "o2": 3.0
+  },
+  {
+   "id": "bl2-fc-st-pauli-1-fc-heidenheim",
+   "league": "BL2",
+   "kickoff": "2026-12-06T12:30Z",
+   "home": "FC St. Pauli",
+   "away": "1. FC Heidenheim",
+   "o1": 2.0,
+   "oX": 3.7,
+   "o2": 3.1
+  },
+  {
+   "id": "bl2-vfl-wolfsburg-1-fc-magdeburg",
+   "league": "BL2",
+   "kickoff": "2026-12-06T12:30Z",
+   "home": "VfL Wolfsburg",
+   "away": "1. FC Magdeburg",
+   "o1": 1.8,
+   "oX": 4.3,
+   "o2": 3.8
+  },
+  {
+   "id": "liga-ca-osasuna-elche-cf",
+   "league": "LIGA",
+   "kickoff": "2026-12-06T13:00Z",
+   "home": "CA Osasuna",
+   "away": "Elche CF",
+   "o1": 2.1,
+   "oX": 3.55,
+   "o2": 3.4
+  },
+  {
+   "id": "ere-ajax-fc-utrecht",
+   "league": "ERE",
+   "kickoff": "2026-12-06T13:30Z",
+   "home": "Ajax",
+   "away": "FC Utrecht",
+   "o1": 1.25,
+   "oX": 6.5,
+   "o2": 10.0
+  },
+  {
+   "id": "ere-go-ahead-eagles-fc-twente-enschede",
+   "league": "ERE",
+   "kickoff": "2026-12-06T13:30Z",
+   "home": "Go Ahead Eagles",
+   "away": "FC Twente Enschede",
+   "o1": 4.75,
+   "oX": 4.5,
+   "o2": 1.6
+  },
+  {
+   "id": "sa-lazio-atalanta",
+   "league": "SA",
+   "kickoff": "2026-12-06T14:00Z",
+   "home": "Lazio",
+   "away": "Atalanta",
+   "o1": 1.95,
+   "oX": 3.9,
+   "o2": 3.8
+  },
+  {
+   "id": "l1-troyes-lyon",
+   "league": "L1",
+   "kickoff": "2026-12-06T14:00Z",
+   "home": "Troyes",
+   "away": "Lyon",
+   "o1": 4.1,
+   "oX": 3.7,
+   "o2": 1.86
+  },
+  {
+   "id": "bl-fc-schalke-04-borussia-dortmund",
+   "league": "BL",
+   "kickoff": "2026-12-06T14:30Z",
+   "home": "FC Schalke 04",
+   "away": "Borussia Dortmund",
+   "o1": 4.33,
+   "oX": 4.0,
+   "o2": 1.75
+  },
+  {
+   "id": "liga-athletic-bilbao-real-madrid",
+   "league": "LIGA",
+   "kickoff": "2026-12-06T15:15Z",
+   "home": "Athletic Bilbao",
+   "away": "Real Madrid",
+   "o1": 4.75,
+   "oX": 4.3,
+   "o2": 1.66
+  },
+  {
+   "id": "ere-ado-den-haag-excelsior",
+   "league": "ERE",
+   "kickoff": "2026-12-06T15:45Z",
+   "home": "ADO Den Haag",
+   "away": "Excelsior",
+   "o1": 2.15,
+   "oX": 3.8,
+   "o2": 3.1
+  },
+  {
+   "id": "l1-rennes-brest",
+   "league": "L1",
+   "kickoff": "2026-12-06T16:15Z",
+   "home": "Rennes",
+   "away": "Brest",
+   "o1": 1.76,
+   "oX": 4.1,
+   "o2": 4.33
+  },
+  {
+   "id": "bl-elversberg-stuttgart",
+   "league": "BL",
+   "kickoff": "2026-12-06T16:30Z",
+   "home": "Elversberg",
+   "away": "Stuttgart",
+   "o1": 3.6,
+   "oX": 4.4,
+   "o2": 1.86
+  },
+  {
+   "id": "sa-juventus-udinese",
+   "league": "SA",
+   "kickoff": "2026-12-06T17:00Z",
+   "home": "Juventus",
+   "away": "Udinese",
+   "o1": 1.38,
+   "oX": 5.1,
+   "o2": 8.0
+  },
+  {
+   "id": "liga-getafe-valencia",
+   "league": "LIGA",
+   "kickoff": "2026-12-06T17:30Z",
+   "home": "Getafe",
+   "away": "Valencia",
+   "o1": 2.4,
+   "oX": 3.0,
+   "o2": 3.3
+  },
+  {
+   "id": "sa-ac-milan-parma",
+   "league": "SA",
+   "kickoff": "2026-12-06T19:45Z",
+   "home": "AC Milan",
+   "away": "Parma",
+   "o1": 1.22,
+   "oX": 6.5,
+   "o2": 11.5
+  },
+  {
+   "id": "l1-marseille-nice",
+   "league": "L1",
+   "kickoff": "2026-12-06T19:45Z",
+   "home": "Marseille",
+   "away": "Nice",
+   "o1": 1.91,
+   "oX": 4.0,
+   "o2": 3.6
+  },
+  {
+   "id": "liga-atletico-madrid-real-betis",
+   "league": "LIGA",
+   "kickoff": "2026-12-06T20:00Z",
+   "home": "Atlético Madrid",
+   "away": "Real Betis",
+   "o1": 1.66,
+   "oX": 4.3,
+   "o2": 4.75
+  }
+ ],
+ "updatedAt": "2026-11-27T07:51:32Z",
+ "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)"
+}

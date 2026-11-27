@@ -1,17 +1,87 @@
 {
  "date": "2026-12-04",
- "updatedAt": "2026-11-26T07:51:11Z",
+ "updatedAt": "2026-11-27T07:51:32Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
   {
-   "id": "liga-alaves-espanyol",
-   "league": "LIGA",
-   "kickoff": "2026-12-04T20:00Z",
-   "home": "Alavés",
-   "away": "Espanyol",
+   "id": "bl2-arminia-bielefeld-dynamo-dresden",
+   "league": "BL2",
+   "kickoff": "2026-12-04T17:30Z",
+   "home": "Arminia Bielefeld",
+   "away": "Dynamo Dresden",
    "o1": 1.91,
-   "oX": 3.5,
-   "o2": 4.1
+   "oX": 3.8,
+   "o2": 3.6
+  },
+  {
+   "id": "bl2-fc-energie-cottbus-vfl-osnabruck",
+   "league": "BL2",
+   "kickoff": "2026-12-04T17:30Z",
+   "home": "FC Energie Cottbus",
+   "away": "VfL Osnabrück",
+   "o1": 2.55,
+   "oX": 3.6,
+   "o2": 2.4
+  },
+  {
+   "id": "ere-telstar-groningen",
+   "league": "ERE",
+   "kickoff": "2026-12-04T19:00Z",
+   "home": "Telstar",
+   "away": "Groningen",
+   "o1": 2.75,
+   "oX": 3.7,
+   "o2": 2.3
+  },
+  {
+   "id": "l2-annecy-fc-stade-lavallois",
+   "league": "L2",
+   "kickoff": "2026-12-04T19:00Z",
+   "home": "Annecy FC",
+   "away": "Stade Lavallois",
+   "o1": 2.1,
+   "oX": 3.3,
+   "o2": 3.2
+  },
+  {
+   "id": "l2-boulogne-pau-fc",
+   "league": "L2",
+   "kickoff": "2026-12-04T19:00Z",
+   "home": "Boulogne",
+   "away": "Pau FC",
+   "o1": 2.3,
+   "oX": 3.2,
+   "o2": 2.9
+  },
+  {
+   "id": "l2-clermont-metz",
+   "league": "L2",
+   "kickoff": "2026-12-04T19:00Z",
+   "home": "Clermont",
+   "away": "Metz",
+   "o1": 3.1,
+   "oX": 3.4,
+   "o2": 2.15
+  },
+  {
+   "id": "l2-dijon-sochaux",
+   "league": "L2",
+   "kickoff": "2026-12-04T19:00Z",
+   "home": "Dijon",
+   "away": "Sochaux",
+   "o1": 1.9,
+   "oX": 3.4,
+   "o2": 3.7
+  },
+  {
+   "id": "l2-grenoble-guingamp",
+   "league": "L2",
+   "kickoff": "2026-12-04T19:00Z",
+   "home": "Grenoble",
+   "away": "Guingamp",
+   "o1": 3.0,
+   "oX": 3.3,
+   "o2": 2.2
   },
   {
    "id": "bl-bayern-munich-sc-paderborn",
@@ -34,86 +104,6 @@
    "o2": 1.5
   },
   {
-   "id": "ere-telstar-groningen",
-   "league": "ERE",
-   "kickoff": "2026-12-04T19:00Z",
-   "home": "Telstar",
-   "away": "Groningen",
-   "o1": 2.75,
-   "oX": 3.7,
-   "o2": 2.3
-  },
-  {
-   "id": "l2-annecy-fc-stade-lavallois",
-   "league": "L2",
-   "kickoff": "2026-12-04T19:00Z",
-   "home": "Annecy FC",
-   "away": "Stade Lavallois",
-   "o1": 2.2,
-   "oX": 3.2,
-   "o2": 3.1
-  },
-  {
-   "id": "l2-boulogne-pau-fc",
-   "league": "L2",
-   "kickoff": "2026-12-04T19:00Z",
-   "home": "Boulogne",
-   "away": "Pau FC",
-   "o1": 2.15,
-   "oX": 3.0,
-   "o2": 3.1
-  },
-  {
-   "id": "l2-clermont-metz",
-   "league": "L2",
-   "kickoff": "2026-12-04T19:00Z",
-   "home": "Clermont",
-   "away": "Metz",
-   "o1": 3.3,
-   "oX": 3.25,
-   "o2": 2.0
-  },
-  {
-   "id": "l2-dijon-sochaux",
-   "league": "L2",
-   "kickoff": "2026-12-04T19:00Z",
-   "home": "Dijon",
-   "away": "Sochaux",
-   "o1": 1.85,
-   "oX": 3.25,
-   "o2": 3.7
-  },
-  {
-   "id": "l2-grenoble-guingamp",
-   "league": "L2",
-   "kickoff": "2026-12-04T19:00Z",
-   "home": "Grenoble",
-   "away": "Guingamp",
-   "o1": 3.0,
-   "oX": 3.2,
-   "o2": 2.1
-  },
-  {
-   "id": "bl2-arminia-bielefeld-dynamo-dresden",
-   "league": "BL2",
-   "kickoff": "2026-12-04T17:30Z",
-   "home": "Arminia Bielefeld",
-   "away": "Dynamo Dresden",
-   "o1": 1.98,
-   "oX": 3.8,
-   "o2": 3.6
-  },
-  {
-   "id": "bl2-fc-energie-cottbus-vfl-osnabruck",
-   "league": "BL2",
-   "kickoff": "2026-12-04T17:30Z",
-   "home": "FC Energie Cottbus",
-   "away": "VfL Osnabrück",
-   "o1": 2.75,
-   "oX": 3.7,
-   "o2": 2.3
-  },
-  {
    "id": "sa-bologna-as-roma",
    "league": "SA",
    "kickoff": "2026-12-04T19:45Z",
@@ -122,6 +112,16 @@
    "o1": 4.0,
    "oX": 3.8,
    "o2": 1.86
+  },
+  {
+   "id": "liga-alaves-espanyol",
+   "league": "LIGA",
+   "kickoff": "2026-12-04T20:00Z",
+   "home": "Alavés",
+   "away": "Espanyol",
+   "o1": 1.91,
+   "oX": 3.5,
+   "o2": 4.1
   }
  ]
 }
