@@ -66,7 +66,7 @@ function scoreBadge(l){var s=legScore(l);if(!s){var m=findMatch(l);return m&&win
 // « J'ai joué ce ticket » : enregistre CE ticket (et pas une simulation) dans le suivi de l'appareil (cdj.bets).
 var BY_ID={};
 function bets(){try{return JSON.parse(localStorage.getItem('cdj.bets')||'[]')||[];}catch(e){return [];}}
-function playForm(r){BY_ID[r.id]=r;
+function playForm(r){BY_ID[r.id]=r;if(r.played)return '<p class="tt-played">✓ Tu as joué cette simulation (Tableau de bord).</p>';
  if(bets().some(function(b){return b.refId===r.id;}))return '<p class="tt-played">✓ Enregistré dans ton suivi (Tableau de bord).</p>';
  return '<details class="tt-play"><summary>J’ai joué ce ticket chez Winamax</summary><form data-play="'+esc(r.id)+'">'+
   '<label>Cote jouée<input name="o" inputmode="decimal" required value="'+num(r.odds)+'"></label>'+
@@ -206,12 +206,20 @@ function persoSimu(){if(!window.SimuPerso||!window.UefaCalendar)return Promise.r
  var today=parisDay(new Date()),settings=SimuPerso.loadSettings();
  return Promise.all([load('data/days/'+today+'.json'),load('data/sports/football.json')]).then(function(v){
   try{var days={};if(v[0]&&Array.isArray(v[0].matches))days[today]=v[0];var merged=UefaCalendar.mergeDays(days,v[1],Date.now());
-   var dm=merged[today]&&merged[today].matches;if(dm&&dm.length){var c=SimuPerso.make(settings,SimuPerso.excluded()).bestCombos(dm,1,true)[0];if(c)SimuPerso.saveProposal(today,c,settings);}}catch(e){}
-  var props=SimuPerso.proposals();
-  return Object.keys(props).sort().map(function(d){var pr=props[d];
+   var dm=merged[today]&&merged[today].matches;if(dm&&dm.length&&!SimuPerso.proposals()[today]){var c=SimuPerso.make(settings,SimuPerso.excluded()).bestCombos(dm,1,true)[0];if(c)SimuPerso.saveProposal(today,c,settings);}}catch(e){}
+  var props=SimuPerso.proposals(),out={};
+  Object.keys(props).sort().map(function(d){var pr=props[d];
    if(!/^\d{4}-\d{2}-\d{2}$/.test(d)||!pr||!Array.isArray(pr.legs)||!pr.legs.length||!pr.createdAt||!pr.legs.every(function(l){return Date.parse(pr.createdAt)<Date.parse(l.kickoff);}))return null;
    return {id:'perso|'+d,day:d,method:'simu',sport:'football',perso:true,status:'pending',odds:pr.odds,probability:pr.prob,simulatedStake:50,
-    legs:pr.legs.map(function(l){return {matchId:l.matchId,kickoff:l.kickoff,date:parisDay(new Date(Date.parse(l.kickoff))),home:l.home,away:l.away,league:l.league,code:l.code,label:l.label,o:l.o,p:l.p,est:!!l.est,sport:'football'};})};}).filter(Boolean);});}
+    legs:pr.legs.map(function(l){return {matchId:l.matchId,kickoff:l.kickoff,date:parisDay(new Date(Date.parse(l.kickoff))),home:l.home,away:l.away,league:l.league,code:l.code,label:l.label,o:l.o,p:l.p,est:!!l.est,sport:'football'};})};}).filter(Boolean).forEach(function(r){out[r.day]=r;});
+  // Priorité à la simulation que Nano a ajoutée à son ticket et jouée (Tableau de bord, « SIMULATION ») :
+  // c'est celle qui lui a été proposée ce jour-là, même si l'écran Analyse l'a recalculée ensuite avec des cotes plus récentes.
+  bets().filter(function(b){return b&&b.source==='algo'&&Array.isArray(b.legs)&&b.legs.length;}).sort(function(a,b){return String(a.createdAt).localeCompare(String(b.createdAt));}).forEach(function(b){
+   var first=b.legs.map(function(l){return Date.parse(l.kickoff);}).filter(Number.isFinite).sort()[0];if(!Number.isFinite(first))return;var d=parisDay(new Date(first));
+   if(out[d]&&out[d].played)return;
+   out[d]={id:'perso|'+d,day:d,method:'simu',sport:'football',perso:true,played:true,status:'pending',odds:b.odds,probability:b.estProb,simulatedStake:50,
+    legs:b.legs.map(function(l){return {matchId:l.matchId,kickoff:l.kickoff,date:l.date||parisDay(new Date(Date.parse(l.kickoff))),home:l.home,away:l.away,league:l.league,code:l.code,label:l.label,o:l.o,p:l.p,est:!!l.est,sport:'football'};})};});
+  return Object.keys(out).sort().map(function(d){return out[d];});});}
 // Anciennes simulations enregistrées sans le nom des équipes : complété avec les matchs du jour.
 function fillNames(records){records.forEach(function(r){if(!r.perso)return;r.legs.forEach(function(l){if(l.home)return;var m=(SCORES[l.date]||[]).concat(SCORES[r.day]||[]).find(function(x){return x.id===l.matchId;});if(m){l.home=m.home;l.away=m.away;l.league=m.league;}else{l.home='?';l.away='?';}});});}
 
