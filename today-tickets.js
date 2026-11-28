@@ -20,7 +20,7 @@ var KINDS={
   safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
   combi23:{name:'Combiné 2 à 3',range:'victoires · cote 2 à 3',tone:'k-c23'},
   algo_mix:{name:'Algo',range:'victoires + buts · cote 3 à 5',tone:'k-algo'},
-  simu:{name:'Simulation',range:'handicaps + victoires · cote ≈ 2 à 3',tone:'k-simu'},
+  simu:{name:'Simulation',range:'ta simulation personnelle · tes réglages',tone:'k-simu'},
   algo:{name:'Algo victoires (ancien)',range:'victoires seules · cote 3 à 5',tone:'k-algo'}
 };
 var ORDER=['reel','tres_sur','tres_sur_bas','safe','safe_but','combi23','algo_mix','simu','algo'];
@@ -60,6 +60,7 @@ function legScore(l){var m=findMatch(l);if(!m||!/^\d+\s*-\s*\d+$/.test(String(m.
  else if(/^H[12][+-]\d+(\.\d+)?$/.test(code)){var L=Number(code.slice(2));ok=code[1]==='1'?h+L>a:a+L>h;}
  else if(/^[OU]\d+(\.\d+)?$/.test(code))ok=code[0]==='O'?h+a>Number(code.slice(1)):h+a<Number(code.slice(1));
  else if(l.marketFamily==='totals'&&Number.isFinite(Number(l.marketLine))){var side=code.split('|').pop();ok=side==='over'?h+a>l.marketLine:side==='under'?h+a<l.marketLine:null;}
+ else if(window.SimuPerso&&(/^CS\d+-\d+$/.test(code)||code.indexOf('&')>-1)){var r=SimuPerso.make({},{}).settleCode(code,h,a);ok=r===null?null:!!r;}
  return {text:h+'-'+a,ok:ok,final:m.scoreStatus!=='live'};}
 function scoreBadge(l){var s=legScore(l);if(!s){var m=findMatch(l);return m&&window.LiveScores?LiveScores.badge(m):'';}return '<span class="tt-score '+(s.ok===true?'sc-ok':s.ok===false?'sc-ko':'')+'">'+esc(s.text)+(s.ok===true?' ✓':s.ok===false?' ✗':'')+'</span>';}
 // « J'ai joué ce ticket » : enregistre CE ticket (et pas une simulation) dans le suivi de l'appareil (cdj.bets).
@@ -198,14 +199,31 @@ function renderReal(){var el=document.getElementById('realBets');if(!el)return;v
   '<p class="tt-foot">Enregistrés sur cet appareil seulement. Détail, corrections et sauvegarde : <a href="tableau.html">Tableau de bord</a>.</p>';}
 document.addEventListener('submit',function(e){if(e.target.closest&&e.target.closest('form[data-play]'))setTimeout(renderReal,0);});
 
-Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json'),load('data/algo-mix-tests.json'),load('data/reel-tests.json'),load('data/simu-tests.json'),load('data/tres-sur-bas-tests.json')]).then(function(v){
-  NEWS=v[3];
+// Ticket « Simulation » = la simulation personnelle que l'appli propose sur CET appareil, avec ses réglages (demandé par Nano le 28/11/2026).
+// Même calcul et même enregistrement (cdj.proposals) que l'écran Analyse : figé dès que le premier match commence.
+// Sans simulation enregistrée sur l'appareil, le ticket Simulation automatique (data/simu-tests.json) reste affiché.
+function persoSimu(){if(!window.SimuPerso||!window.UefaCalendar)return Promise.resolve([]);
+ var today=parisDay(new Date()),settings=SimuPerso.loadSettings();
+ return Promise.all([load('data/days/'+today+'.json'),load('data/sports/football.json')]).then(function(v){
+  try{var days={};if(v[0]&&Array.isArray(v[0].matches))days[today]=v[0];var merged=UefaCalendar.mergeDays(days,v[1],Date.now());
+   var dm=merged[today]&&merged[today].matches;if(dm&&dm.length){var c=SimuPerso.make(settings,SimuPerso.excluded()).bestCombos(dm,1,true)[0];if(c)SimuPerso.saveProposal(today,c,settings);}}catch(e){}
+  var props=SimuPerso.proposals();
+  return Object.keys(props).sort().map(function(d){var pr=props[d];
+   if(!/^\d{4}-\d{2}-\d{2}$/.test(d)||!pr||!Array.isArray(pr.legs)||!pr.legs.length||!pr.createdAt||!pr.legs.every(function(l){return Date.parse(pr.createdAt)<Date.parse(l.kickoff);}))return null;
+   return {id:'perso|'+d,day:d,method:'simu',sport:'football',perso:true,status:'pending',odds:pr.odds,probability:pr.prob,simulatedStake:50,
+    legs:pr.legs.map(function(l){return {matchId:l.matchId,kickoff:l.kickoff,date:parisDay(new Date(Date.parse(l.kickoff))),home:l.home,away:l.away,league:l.league,code:l.code,label:l.label,o:l.o,p:l.p,est:!!l.est,sport:'football'};})};}).filter(Boolean);});}
+// Anciennes simulations enregistrées sans le nom des équipes : complété avec les matchs du jour.
+function fillNames(records){records.forEach(function(r){if(!r.perso)return;r.legs.forEach(function(l){if(l.home)return;var m=(SCORES[l.date]||[]).concat(SCORES[r.day]||[]).find(function(x){return x.id===l.matchId;});if(m){l.home=m.home;l.away=m.away;l.league=m.league;}else{l.home='?';l.away='?';}});});}
+
+Promise.all([persoSimu(),load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json'),load('data/algo-mix-tests.json'),load('data/reel-tests.json'),load('data/simu-tests.json'),load('data/tres-sur-bas-tests.json')]).then(function(v){
+  var perso=v.shift();NEWS=v[3];
   var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[],v[4]&&v[4].records||[],v[5]&&v[5].records||[],v[6]&&v[6].records||[],v[7]&&v[7].records||[],v[8]&&v[8].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
+  if(perso.length)records=records.filter(function(r){return r.method!=='simu';}).concat(perso);
   var m=manual();
   if(!records.length){box.innerHTML='<div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Tickets indisponibles pour le moment. Réessaie après actualisation.</p>';if(bilan)bilan.hidden=true;return;}
   var days={};records.forEach(function(r){if(r.status!=='no_pick')(r.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;days[r.day]=1;});});
   bets().forEach(function(b){(b.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;});});
-  Promise.all(Object.keys(days).map(function(d){return load('data/days/'+d+'.json').then(function(doc){SCORES[d]=doc&&doc.matches||[];});})).then(function(){renderToday(records,m);renderBilan(records,m);renderReal();
+  Promise.all(Object.keys(days).map(function(d){return load('data/days/'+d+'.json').then(function(doc){SCORES[d]=doc&&doc.matches||[];});})).then(function(){fillNames(records);renderToday(records,m);renderBilan(records,m);renderReal();
     // Scores en direct : les cartes et le bilan se mettent à jour pendant les matchs, sans recharger.
     if(window.LiveScores)LiveScores.watch(function(){return Object.keys(SCORES).reduce(function(a,k){return a.concat(SCORES[k]);},[]);},function(){renderToday(records,m);renderBilan(records,m);renderReal();});});
 });
