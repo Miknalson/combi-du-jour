@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "rules": {
+      "version": "reel-v1",
+      "sport": "football",
+      "mode": "paper",
+      "realMoneyEnabled": false,
+      "stake": 50,
+      "currency": "EUR",
+      "minOdds": 1.5,
+      "maxOdds": 3,
+      "minLegs": 1,
+      "maxLegs": 3,
+      "minLegOdds": 1.1,
+      "maxPool": 16,
+      "quoteMaxAgeMinutes": 60,
+      "steps": [
+        {
+          "families": [
+            "h2h"
+          ],
+          "codes": [
+            "1",
+            "2"
+          ],
+          "minLegProbability": 0.5
+        },
+        {
+          "families": [
+            "h2h",
+            "totals",
+            "btts"
+          ],
+          "codes": [
+            "1",
+            "2",
+            "O2.5",
+            "U2.5",
+            "BTTS_Y",
+            "BTTS_N"
+          ],
+          "minLegProbability": 0.5
+        },
+        {
+          "families": [
+            "h2h",
+            "totals",
+            "btts"
+          ],
+          "codes": [
+            "1",
+            "2",
+            "O2.5",
+            "U2.5",
+            "BTTS_Y",
+            "BTTS_N"
+          ],
+          "minLegProbability": 0.4
+        }
+      ],
+      "quotes": "cotes Winamax France relevées par API, jamais une moyenne ni une estimation"
+    },
+    "startedAt": "2026-11-28T06:21:35.893Z",
+    "note": "28/11 : ticket créé à la main avant fusion ; Charleroi gardé malgré le Très sûr (Betis, 2e choix, privé de Lo Celso et Ceballos)."
+  },
+  "records": [
+    {
+      "id": "reel-v1|2026-11-28|football",
+      "day": "2026-11-28",
+      "method": "reel",
+      "sport": "football",
+      "version": "reel-v1",
+      "createdAt": "2026-11-28T06:21:35.893Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 50,
+      "currency": "EUR",
+      "status": "pending",
+      "minOdds": 1.5,
+      "maxOdds": 3,
+      "odds": 1.5,
+      "probability": 0.6215021281028054,
+      "step": 0,
+      "legs": [
+        {
+          "id": "football|bel-charleroi-sk-beveren|2026-11-28T19:45Z|h2h||None|1",
+          "matchId": "bel-charleroi-sk-beveren",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "BEL",
+          "home": "Charleroi",
+          "away": "SK Beveren",
+          "kickoff": "2026-11-28T19:45Z",
+          "date": "2026-11-28",
+          "code": "1",
+          "label": "Victoire Charleroi",
+          "o": 1.5,
+          "p": 0.6215021281028054,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-28T06:13:16.041502+00:00",
+          "matches": 54,
+          "source": null
+        },
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-28T06:13:16.041502+00:00",
+          "matches": 47,
+          "source": "OddsPapi (Winamax FR)"
+        }
+      ]
+    }
+  ]
+}

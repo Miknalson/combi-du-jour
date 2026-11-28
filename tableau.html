@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=live1">
+<link rel="stylesheet" href="style.css?v=live2">
 <style>
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 @media (max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -227,7 +227,7 @@ function renderBets(rows){
       return '<div class="legline">'+esc(l.home)+' – '+esc(l.away)+' : <strong>'+esc(l.label)+'</strong>'+(st?' <span class="'+(st.ok?'ok':'ko')+'">'+esc(st.score)+(st.ok?' ✓':' ✗')+'</span>':liveBadge(l)?liveBadge(l):'<br><small class="status">'+esc(BetResults.reasons[BetResults.legResult(l,allMatches(),Date.now()).reason]||'Résultat à vérifier')+'</small>')+'</div>';
     }).join('');
     var badge = r.st==='won' ? '<span class="badge won">Gagné '+signed(r.net)+'</span>' : r.st==='lost' ? '<span class="badge lost">Perdu '+signed(r.net)+'</span>' : r.st==='void'?'<span class="badge wait">Annulé / remboursé</span>' : '<span class="badge wait">En attente</span>';
-    return '<tr data-bet-id="'+esc(b.id)+'"><td style="white-space:nowrap">'+esc(day(b.legs[0] ? b.legs[0].kickoff : b.createdAt))+'<br><span class="chip '+(String(b.source).indexOf('ticket-')===0?'algo':'perso')+'">'+(({'ticket-algo_mix':'ALGO','ticket-algo':'ALGO (ANCIEN)','ticket-safe':'SAFE','ticket-safe_but':'SAFE BUT','ticket-combi23':'COMBINÉ 2-3','ticket-tres_sur':'TRÈS SÛR'})[b.source]||(b.source==='algo'?'SIMULATION':b.source==='safe'?'SAFE DU JOUR':'PERSO'))+'</span></td>' +
+    return '<tr data-bet-id="'+esc(b.id)+'"><td style="white-space:nowrap">'+esc(day(b.legs[0] ? b.legs[0].kickoff : b.createdAt))+'<br><span class="chip '+(String(b.source).indexOf('ticket-')===0?'algo':'perso')+'">'+(({'ticket-algo_mix':'ALGO','ticket-algo':'ALGO (ANCIEN)','ticket-safe':'SAFE','ticket-safe_but':'SAFE BUT','ticket-combi23':'COMBINÉ 2-3','ticket-tres_sur':'TRÈS SÛR','ticket-reel':'RÉEL'})[b.source]||(b.source==='algo'?'SIMULATION':b.source==='safe'?'SAFE DU JOUR':'PERSO'))+'</span></td>' +
       '<td>'+legs+'</td><td class="num">'+odds(b.odds)+'<br><span class="status">'+(typeof b.estProb==='number'&&isFinite(b.estProb)?pct(b.estProb):'Non estimée')+'</span></td><td class="num">'+eur(b.stake)+'</td>' +
       '<td>'+badge+(b.manual?'<br><span class="status">fixé à la main</span>':'')+'</td>' +
       '<td><div class="acts" data-id="'+esc(b.id)+'">' +

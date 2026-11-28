@@ -175,6 +175,9 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/news_filter.cjs
       # Ordre = priorité : un match pris par un ticket est retiré des suivants (ticket-spread.js).
+      - name: Consigner le ticket Réel (le plus sûr, cote 1,50 à 3)
+        continue-on-error: true
+        run: node scripts/reel.cjs
       - name: Consigner le ticket Très sûr fictif
         continue-on-error: true
         run: node scripts/tres_sur.cjs
@@ -220,6 +223,7 @@ jobs:
           if [ -f data/safe-but-tests.json ]; then git add data/safe-but-tests.json; fi
           if [ -f data/combi23-tests.json ]; then git add data/combi23-tests.json; fi
           if [ -f data/algo-mix-tests.json ]; then git add data/algo-mix-tests.json; fi
+          if [ -f data/reel-tests.json ]; then git add data/reel-tests.json; fi
           if [ -f data/oddspapi-budget.json ]; then git add data/oddspapi-budget.json; fi
           if [ -d data/oddspapi ]; then git add data/oddspapi; fi
           if [ -f data/news-checks.json ]; then git add data/news-checks.json; fi
