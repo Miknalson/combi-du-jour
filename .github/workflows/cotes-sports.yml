@@ -44,6 +44,9 @@ on:
       - 'algo-mix-engine.js'
       - 'scripts/algo_mix.cjs'
       - 'tests/algo-mix.test.cjs'
+      - 'simu-engine.js'
+      - 'scripts/simu.cjs'
+      - 'tests/simu.test.cjs'
       - 'tests/test_oddspapi_football.py'
       - 'tests/safe-but.test.cjs'
       - 'news-filter.js'
@@ -193,6 +196,9 @@ jobs:
       - name: Consigner le ticket Safe but fictif
         continue-on-error: true
         run: node scripts/safe_but.cjs
+      - name: Consigner le ticket Simulation fictif (simulation personnelle, handicaps, cote 2 à 3)
+        continue-on-error: true
+        run: node scripts/simu.cjs
       - name: Notifier les propositions sans passer de pari
         if: github.event.schedule != '25 23 * * *' && github.event.schedule != '7,22,37,52 11-22 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         id: notifications
@@ -209,7 +215,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Relevé de 15 min : ne publier que s'il y a un nouveau score ou un ticket réglé (pas seulement des horodatages).
-          if [ "$LIVE_RUN" = "true" ] && git diff --quiet HEAD -- data/days data/oddspapi-budget.json data/tres-sur-tests.json data/safe-but-tests.json data/combi23-tests.json data/algo-mix-tests.json data/paper-tests-v2.json data/paper-tests-v1.json; then echo "pushed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "$LIVE_RUN" = "true" ] && git diff --quiet HEAD -- data/days data/oddspapi-budget.json data/tres-sur-tests.json data/safe-but-tests.json data/combi23-tests.json data/algo-mix-tests.json data/simu-tests.json data/paper-tests-v2.json data/paper-tests-v1.json; then echo "pushed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git add data/sports/ data/days/ data/index.json
           if [ -f data/football-market-coverage.json ]; then git add data/football-market-coverage.json; fi
           if [ -f data/quote-budget.json ]; then git add data/quote-budget.json; fi
@@ -224,6 +230,7 @@ jobs:
           if [ -f data/combi23-tests.json ]; then git add data/combi23-tests.json; fi
           if [ -f data/algo-mix-tests.json ]; then git add data/algo-mix-tests.json; fi
           if [ -f data/reel-tests.json ]; then git add data/reel-tests.json; fi
+          if [ -f data/simu-tests.json ]; then git add data/simu-tests.json; fi
           if [ -f data/oddspapi-budget.json ]; then git add data/oddspapi-budget.json; fi
           if [ -d data/oddspapi ]; then git add data/oddspapi; fi
           if [ -f data/news-checks.json ]; then git add data/news-checks.json; fi
