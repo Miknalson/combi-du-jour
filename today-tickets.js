@@ -17,7 +17,7 @@ var KINDS={
   tres_sur_bas:{name:'Très sûr 1,20',range:'cote 1,20 à 1,35',tone:'k-sur'},
   tres_sur:{name:'Très sûr',range:'cote 1,50 à 1,70',tone:'k-sur'},
   safe:{name:'Safe',range:'cote 1,50 à 2,00',tone:'k-safe'},
-  btts:{name:'BTTS Oui',range:'2 à 3 matchs · cote 1,50 à 2,00',tone:'k-but'},
+  btts:{name:'BTTS Oui',range:'2 à 3 matchs · cote 1,50 à 2,30',tone:'k-but'},
   safe_but:{name:'Safe but (ancien)',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
   combi23:{name:'Combiné 2 à 3',range:'victoires · cote 2 à 3',tone:'k-c23'},
   algo_mix:{name:'Algo',range:'victoires + buts · cote 3 à 5',tone:'k-algo'},

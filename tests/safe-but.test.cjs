@@ -44,3 +44,10 @@ test('affichage et workflow : nouvelle catégorie et bilan ancien séparés, vé
  assert.match(fs.readFileSync('scripts/safe_but.cjs','utf8'),/football-goals\.json/);
  assert.match(fs.readFileSync('scripts/news_filter.cjs','utf8'),/B\.build\(\[foot\(N\.apply\(goals/);
 });
+test('seuils réalistes : deux matchs BTTS à ~62 % (cotes 1,40 et 1,44) donnent un ticket, et BTTS passe avant l’Algo',()=>{
+ const d=fixture();d.matches[0].markets[0].outcomes=[{side:'yes',code:'BTTS_Y',odds:1.4},{side:'no',code:'BTTS_N',odds:2.6}];
+ d.matches[1].markets[0].outcomes=[{side:'yes',code:'BTTS_Y',odds:1.44},{side:'no',code:'BTTS_N',odds:2.5}];
+ const t=B.build(d,now).ticket;assert.ok(t);assert.equal(t.legs.length,2);assert.ok(t.odds>2&&t.odds<=2.3);assert.ok(t.p>=.38);
+ const wf=fs.readFileSync('.github/workflows/cotes-sports.yml','utf8');assert.ok(wf.indexOf('scripts/safe_but.cjs')<wf.indexOf('scripts/algo_mix.cjs'));
+ const nf=fs.readFileSync('scripts/news_filter.cjs','utf8');assert.ok(nf.indexOf('take(B.build(')<nf.indexOf('take(AM.build('));
+});

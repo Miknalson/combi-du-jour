@@ -194,12 +194,12 @@ jobs:
       - name: Consigner le ticket Combiné 2 à 3 fictif
         continue-on-error: true
         run: node scripts/combi23.cjs
+      - name: Consigner le ticket BTTS Oui fictif (2 matchs minimum, avant l’Algo qui prenait ses matchs)
+        continue-on-error: true
+        run: node scripts/safe_but.cjs
       - name: Consigner le ticket Algo fictif (victoires + buts + les deux marquent)
         continue-on-error: true
         run: node scripts/algo_mix.cjs
-      - name: Consigner le ticket BTTS Oui fictif (2 matchs minimum)
-        continue-on-error: true
-        run: node scripts/safe_but.cjs
       - name: Consigner le ticket Simulation fictif (simulation personnelle, handicaps, cote 2 à 3)
         continue-on-error: true
         run: node scripts/simu.cjs

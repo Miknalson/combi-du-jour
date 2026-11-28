@@ -53,8 +53,8 @@ function pendingLegs(sports,dayDoc,list,journals){
   const built=P.build(Safe.SPORTS.map(f),now,used);
   built.slots.forEach(slot=>{const id=P.rules.version+'|'+built.day+'|'+slot.method+'|'+slot.sport;if(slot.ticket&&!journals.v2.records.some(r=>r.id===id))take(slot.ticket);});
   if(!journals.c23.records.some(r=>r.id===C.rules.version+'|'+today+'|football'))take(C.build(foot(f('football')),now).ticket);
-  if(journals.mix&&!journals.mix.records.some(r=>r.id===AM.rules.version+'|'+today+'|football'))take(AM.build(foot(N.apply(goals,list,'football')),now).ticket);
   if(!journals.but.records.some(r=>r.id===B.rules.version+'|'+today+'|football'))take(B.build([foot(N.apply(goals,list,'football')),foot(f('football'))],now).ticket);
+  if(journals.mix&&!journals.mix.records.some(r=>r.id===AM.rules.version+'|'+today+'|football'))take(AM.build(foot(N.apply(goals,list,'football')),now).ticket);
   return legs;
 }
 
