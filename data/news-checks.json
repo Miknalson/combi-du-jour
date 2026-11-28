@@ -764,10 +764,346 @@
       "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque"
     },
     "2026-11-28": {
-      "checks": {},
-      "calls": [],
+      "checks": {
+        "football|2026-11-28|charleroi|sk beveren": {
+          "sport": "football",
+          "league": "BEL",
+          "home": "Charleroi",
+          "away": "SK Beveren",
+          "kickoff": "2026-11-28T19:45Z",
+          "pick": "Victoire Charleroi",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Au pire 1 absent signalé, pas de titulaire clé ni rotation B repérée.",
+          "absents": [
+            "Massamba Sow (blessé, signalé par une source; Betora indique"
+          ],
+          "sources": [
+            "https://betora.app/fr/equipe/charleroi/blesses",
+            "https://totalodds.co.uk/belgian-pro-league/injuries",
+            "https://www.sporting-charleroi.be/news/sporting-de-charleroi-sk-beveren-la-preface/"
+          ]
+        },
+        "football|2026-11-28|lincoln city|wolverhampton wanderers": {
+          "sport": "football",
+          "league": "CHA",
+          "home": "Lincoln City",
+          "away": "Wolverhampton Wanderers",
+          "kickoff": "2026-11-28T12:30Z",
+          "pick": "Victoire Wolverhampton Wanderers",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Absences listées mais pas 3 titulaires habituels; pas de rotation B trouvée.",
+          "absents": [
+            "Raúl Jiménez (genou)",
+            "Jean-Ricner Bellegarde (blessé/incertain)",
+            "Ghislain Konan (genou, selon Touchline)"
+          ],
+          "sources": [
+            "https://www.dailyil.com/en/games/eflchampionship-2026-11-28-wol-lin/",
+            "https://uktouchline.com/teams/wolves/injuries",
+            "https://www.fotmob.com/matches/lincoln-city-vs-wolverhampton-wanderers/2ed69q"
+          ]
+        },
+        "football|2026-11-28|fsv mainz 05|union berlin": {
+          "sport": "football",
+          "league": "BL",
+          "home": "FSV Mainz 05",
+          "away": "Union Berlin",
+          "kickoff": "2026-11-28T14:30Z",
+          "pick": "Victoire FSV Mainz 05",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Trois absences côté Mainz dont Kohr et Mwene habituels; risque effectif accru.",
+          "absents": [
+            "Dominik Kohr (cheville/pied)",
+            "Silas Katompa Mvumpa (reprise/forme)",
+            "Phillipp Mwene (cheville/non précisé)"
+          ],
+          "sources": [
+            "https://www.mainz05.de/news/vorbericht-sich-das-spielgluck-erarbeiten",
+            "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707",
+            "https://www.sportschau.de/regional/swr/swr-vor-duell-mit-dem-ex-club-mainz-05-und-urs-fischer-brauchen-dringend-einen-sieg-100.html"
+          ]
+        },
+        "football|2026-11-28|birmingham city|bolton wanderers": {
+          "sport": "football",
+          "league": "CHA",
+          "home": "Birmingham City",
+          "away": "Bolton Wanderers",
+          "kickoff": "2026-11-28T15:00Z",
+          "pick": "Victoire Birmingham City",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Cochrane suspendu; Leonard/Lund hors XI habituel, pas de rotation majeure annoncée.",
+          "absents": [
+            "Alex Cochrane (suspendu)",
+            "Marc Leonard (tendon d'Achille)",
+            "Kristoffer Lund (inactif)"
+          ],
+          "sources": [
+            "https://www.sportsmole.co.uk/football/birmingham-city/preview/birmingham-vs-bolton-prediction-team-news-lineups_609918.html",
+            "https://uktouchline.com/teams/birmingham/injuries",
+            "https://dugout.starting11.com/predicted-lineups/championship-2026-27/gameweek-18"
+          ]
+        },
+        "football|2026-11-28|hamburger sv|bayern munich": {
+          "sport": "football",
+          "league": "BL",
+          "home": "Hamburger SV",
+          "away": "Bayern Munich",
+          "kickoff": "2026-11-28T14:30Z",
+          "pick": "Victoire Bayern Munich",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Bayern privé de Kane et plusieurs cadres offensifs; jeunes/positions adaptées évoqués.",
+          "absents": [
+            "Harry Kane (cheville)",
+            "Michael Olise (pied)",
+            "Jamal Musiala (ischios)",
+            "Serge Gnabry (ischios)",
+            "Ismael Saibari (cheville)",
+            "Alphonso Davies (cuisse)"
+          ],
+          "sources": [
+            "https://ruledout.app/match/hamburger-sv-vs-fc-bayern-munich-2026-11-28/",
+            "https://www.reddit.com/r/fcbayern/comments/1y6pt57/press_conference_kompany_about_the_current_unrest/",
+            "https://www.lemonde.fr/sport/article/2026/11/25/ligue-des-champions-le-resume-de-l-exploit-des-lillois-face-au-bayern-munich-et-du-match-nul-du-psg-face-a-l-as-roma_6815176_3242.html"
+          ]
+        },
+        "football|2026-11-28|elche cf|atletico madrid": {
+          "sport": "football",
+          "league": "LIGA",
+          "home": "Elche CF",
+          "away": "Atlético Madrid",
+          "kickoff": "2026-11-28T17:30Z",
+          "pick": "Victoire Atlético Madrid",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Trois forfaits Atleti confirmés, dont Romero/Lookman; possible gestion offensive avant Barça.",
+          "absents": [
+            "Cristian Romero (muscle)",
+            "Ademola Lookman (genou)",
+            "Alexander Sørloth (muscle)"
+          ],
+          "sources": [
+            "https://www.telemadrid.es/noticias/deportes/atletico-viaja-elche-bajas-cuti_1_2844981.html",
+            "https://as.com/futbol/primera/posible-once-del-atletico-ante-el-elche-hoy-en-la-liga-ea-sports-f202611-n/",
+            "https://www.dailyil.com/en/games/laliga-2026-11-29-atm-elc/"
+          ]
+        },
+        "football|2026-11-28|preston north end|norwich city": {
+          "sport": "football",
+          "league": "CHA",
+          "home": "Preston North End",
+          "away": "Norwich City",
+          "kickoff": "2026-11-28T12:30Z",
+          "pick": "Victoire Norwich City",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Norwich a 1 forfait + 3 incertains, mais XI probable sans rotation majeure ni joueur clé signalé.",
+          "absents": [
+            "Mohamed Touré (blessé, forfait)",
+            "Ali Ahmed (incertain)",
+            "Papa Diallo (incertain)",
+            "Gabriel Forsyth (incertain)"
+          ],
+          "sources": [
+            "https://www.dailyil.com/en/games/eflchampionship-2026-11-28-nor-pne/",
+            "https://dugout.starting11.com/predicted-lineups/championship-2026-27/gameweek-18"
+          ]
+        },
+        "football|2026-11-28|radnik|vojvodina": {
+          "sport": "football",
+          "league": "SRB",
+          "home": "Radnik",
+          "away": "Vojvodina",
+          "kickoff": "2026-11-28T13:00Z",
+          "pick": "Victoire Vojvodina",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Vojvodina: aucune absence active relevée; compo basée sur les titulaires récents, pas de rotation signalée.",
+          "absents": [],
+          "sources": [
+            "https://m.dongqiudi.com/fr/injuries/50001693",
+            "https://m.dongqiudi.com/pl/lineups/54479043"
+          ]
+        },
+        "football|2026-11-28|partizan|radnicki nis": {
+          "sport": "football",
+          "league": "SRB",
+          "home": "Partizan",
+          "away": "Radnicki Nis",
+          "kickoff": "2026-11-28T17:30Z",
+          "pick": "Victoire Partizan",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Partizan annoncé sans blessure ni suspension; XI habituel disponible, pas de rotation majeure repérée.",
+          "absents": [],
+          "sources": [
+            "https://betora.app/team/fk-partizan/injuries",
+            "https://www.fotmob.com/fr/matches/radnicki-nis-vs-partizan-beograd/1pt0n6",
+            "https://partizan.rs/en/vesti/5581/konferencija-za-medije-pred-utakmicu-17-kola-mozzart-bet-sls-fk-partizan-fk-radnicki-nis"
+          ]
+        },
+        "football|2026-11-28|hertha berlin|karlsruher sc": {
+          "sport": "football",
+          "league": "BL2",
+          "home": "Hertha Berlin",
+          "away": "Karlsruher SC",
+          "kickoff": "2026-11-28T12:00Z",
+          "pick": "Victoire Hertha Berlin",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Hertha signalé sans blessés; aucune rotation majeure indiquée dans les compos probables.",
+          "absents": [],
+          "sources": [
+            "https://www.dailyil.com/en/games/bundesliga2-2026-11-28-ksc-bsc/",
+            "https://www.diebrandenburger.de/sport/hertha-bsc-vor-karlsruhe-spiel-ohne-verletzte-und-in-topform-3206010",
+            "https://www.buli-tipphilfe.de/voraussichtliche-aufstellung/hertha-bsc"
+          ]
+        },
+        "football|2026-11-28|cukaricki|mladost": {
+          "sport": "football",
+          "league": "SRB",
+          "home": "Cukaricki",
+          "away": "Mladost",
+          "kickoff": "2026-11-28T15:00Z",
+          "pick": "Victoire Cukaricki",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Seul Šehović est signalé touché; pas de 3 titulaires ni de joueur clé absent confirmés.",
+          "absents": [
+            "Stefan Šehović (incertain/blessure, gravité non publiée)"
+          ],
+          "sources": [
+            "https://www.svijetkladjenja.com/prognoze-srbija/cukaricki-mladost-lucani-prognoza-tip-superliga-srbije/",
+            "https://starting11.com/fixtures/cukaricki-vs-mladost-lucani",
+            "https://propsytypera.pl/en/match/1553920-cukaricki-mladost-lucani"
+          ]
+        },
+        "football|2026-11-28|paris saint germain|lorient": {
+          "sport": "football",
+          "league": "L1",
+          "home": "Paris Saint Germain",
+          "away": "Lorient",
+          "kickoff": "2026-11-28T19:45Z",
+          "pick": "Plus de 2,5 buts",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "douteux",
+          "reason": "Deux stars offensives du PSG absentes + Nuno Mendes; Lorient a 3 forfaits et Touré incertain.",
+          "absents": [
+            "Khvicha Kvaratskhelia (blessé)",
+            "Désiré Doué (blessé)",
+            "Nuno Mendes (blessé)",
+            "Panos Katseris (blessé)",
+            "Bandiougou Fadiga (blessé)",
+            "Mohamed Bamba (blessé/incertain selon sources)",
+            "Isaak Touré (incertain)"
+          ],
+          "sources": [
+            "https://ligue1.com/fr/articles/l1_article_5704-les-compositions-probables-l1-2026-2027",
+            "https://www.leparisien.fr/sports/football/psg/psg-lorient-la-composition-probable-eds-parisiens-avec-le-retour-de-marquinhos-derriere-et-de-dembele-en-pointe-27-11-2026-BXZCQWDLBJFOBFBL6PKPOZ745U.php",
+            "https://www.topmercato.com/2159126-pronostic-psg-vs-lorient-28-11-2026/"
+          ]
+        },
+        "football|2026-11-28|lommel sk|sv zulte waregem": {
+          "sport": "football",
+          "league": "BEL",
+          "home": "Lommel SK",
+          "away": "SV Zulte-Waregem",
+          "kickoff": "2026-11-28T19:45Z",
+          "pick": "Les deux équipes marquent",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Attaquants clés probables; pas de rotation signalée. Absences surtout hors XI, à revérifier aux compos officielles.",
+          "absents": [
+            "Lommel: Filip Krastev (blessé)",
+            "Lommel: Henry Oware (blessé)",
+            "Lommel: Jhon Banguera (blessé)",
+            "Lommel: Sam de Grand (blessé)",
+            "Lommel: Juho Talvitie (incertain/indisponible selon source)",
+            "Zulte-Waregem: Wilguens Paugain (blessé)",
+            "Zulte-Waregem: Dirk Asare (blessé selon source)",
+            "Zulte-Waregem: Salim Diakite (indisponible selon source)"
+          ],
+          "sources": [
+            "https://www.btfstats.com/match-preview,2026,lommel,zulte-waregem,2026-11-28",
+            "https://www.fotmob.com/matches/lommel-vs-zulte-waregem/2b1tu7",
+            "https://lineupstoday.com/pro-league/lommel-zulte-waregem-28-11-2026/"
+          ]
+        },
+        "football|2026-11-28|sc paderborn|fc schalke 04": {
+          "sport": "football",
+          "league": "BL",
+          "home": "SC Paderborn",
+          "away": "FC Schalke 04",
+          "kickoff": "2026-11-28T14:30Z",
+          "pick": "Les deux équipes marquent",
+          "checkedAt": "2026-11-28T06:13:24.091Z",
+          "tries": 1,
+          "verdict": "ok",
+          "reason": "Pas de rotation annoncée; Schalke récupère Bachmann/Gantenbein/Sylla, seul Lasme nouveau forfait officiel.",
+          "absents": [
+            "Paderborn: Timur Gayret (reprise)",
+            "Paderborn: Nyamekye Awortwie-Grant (retard entraînement/U21)",
+            "Paderborn: Tom Baack (incertain, syndrome grippal)",
+            "Paderborn: Laurin Ulrich (incertain, gastro)",
+            "Schalke: Bryan Lasme (cuisse)",
+            "Schalke: Maximilian Wöber (musculaire, selon source)",
+            "Schalke: Ron Schallenberg (jambe, selon source)",
+            "Schalke: Luca Vozar (retard/cuisse, selon source)",
+            "Schalke: Emil Höjlund (Achille, selon source)",
+            "Schalke: Timo Becker (incertain, pied)"
+          ],
+          "sources": [
+            "https://schalke04.de/en/bundesliga-en/paderborn-preview-away-2627/",
+            "https://medien.schalke04.de/news/miron-muslic-wir-verspueren-grosse-lust-das-spiel-zu-gewinnen-515483",
+            "https://magazin.comunio.de/sc-paderborn-fc-schalke-04-voraussichtliche-aufstellungen/"
+          ]
+        }
+      },
+      "calls": [
+        {
+          "at": "2026-11-28T06:13:24.091Z",
+          "model": "gpt-5.5",
+          "matches": 6,
+          "input": 82539,
+          "output": 4132,
+          "searches": 12
+        },
+        {
+          "at": "2026-11-28T06:13:24.091Z",
+          "model": "gpt-5.5",
+          "matches": 6,
+          "input": 68261,
+          "output": 3280,
+          "searches": 10
+        },
+        {
+          "at": "2026-11-28T06:13:24.091Z",
+          "model": "gpt-5.5",
+          "matches": 2,
+          "input": 38583,
+          "output": 3479,
+          "searches": 5
+        }
+      ],
       "status": "ok",
-      "updatedAt": "2026-11-28T04:47:14.179Z"
+      "updatedAt": "2026-11-28T06:13:24.091Z"
     }
   }
 }

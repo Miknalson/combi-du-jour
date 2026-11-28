@@ -1,8 +1,20 @@
 {
-  "updatedAt": "2026-11-27T17:38:29.500453+00:00",
+  "updatedAt": "2026-11-28T06:13:15.622947+00:00",
   "stage": "provider",
-  "status": "ok",
+  "status": "partial",
   "competitions": 187,
-  "creditsRemaining": 6,
-  "message": "Connexion au fournisseur de cotes disponible."
+  "creditsRemaining": 5,
+  "message": "Collecte football prioritaire : victoires et totaux demandés à Winamax ; les marchés réellement transmis sont affichés.",
+  "requestCredits": {
+    "football_markets": 1
+  },
+  "sports": [
+    {
+      "sport": "football",
+      "status": "ok",
+      "matches": 21,
+      "partial": true,
+      "updatedAt": "2026-11-28T06:13:15.622947+00:00"
+    }
+  ]
 }

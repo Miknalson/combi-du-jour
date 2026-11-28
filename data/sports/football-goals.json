@@ -1,21 +1,556 @@
 {
   "sport": "football",
   "bookKey": "winamax_fr",
-  "updatedAt": "2026-11-27T07:52:15.947447+00:00",
+  "updatedAt": "2026-11-28T06:13:16.041502+00:00",
   "status": "ok",
   "matches": [
     {
-      "id": "rou-u-cluj-sepsi-sf-gheorghe",
+      "id": "bl2-hertha-berlin-karlsruher-sc",
       "sport": "football",
-      "league": "ROU",
-      "kickoff": "2026-11-27T15:30Z",
-      "home": "U. Cluj",
-      "away": "Sepsi Sf. Gheorghe",
-      "leagueCode": "ROU",
+      "league": "BL2",
+      "kickoff": "2026-11-28T12:00Z",
+      "home": "Hertha Berlin",
+      "away": "Karlsruher SC",
+      "leagueCode": "BL2",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:17Z",
-      "oddspapiFixtureId": "id1000015272388116",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000004472513998",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Hertha Berlin",
+              "odds": 1.34,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Karlsruher SC",
+              "odds": 5.2,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.8,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.43,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.28,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.6,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bl2-dynamo-dresden-fc-st-pauli",
+      "sport": "football",
+      "league": "BL2",
+      "kickoff": "2026-11-28T12:00Z",
+      "home": "Dynamo Dresden",
+      "away": "FC St. Pauli",
+      "leagueCode": "BL2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000004472514002",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Dynamo Dresden",
+              "odds": 2.65,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire FC St. Pauli",
+              "odds": 2.1,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.35,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.54,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.92,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.47,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bl2-holstein-kiel-1-fc-kaiserslautern",
+      "sport": "football",
+      "league": "BL2",
+      "kickoff": "2026-11-28T12:00Z",
+      "home": "Holstein Kiel",
+      "away": "1. FC Kaiserslautern",
+      "leagueCode": "BL2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000004472514004",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.9,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.48,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Holstein Kiel",
+              "odds": 2.2,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire 1. FC Kaiserslautern",
+              "odds": 2.6,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.3,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-blackburn-rovers-charlton-athletic",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T12:30Z",
+      "home": "Blackburn Rovers",
+      "away": "Charlton Athletic",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340082",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.8,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.66,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Blackburn Rovers",
+              "odds": 2.0,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Charlton Athletic",
+              "odds": 3.15,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.3,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.66,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.8,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-lincoln-city-wolverhampton-wanderers",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T12:30Z",
+      "home": "Lincoln City",
+      "away": "Wolverhampton Wanderers",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340086",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Lincoln City",
+              "odds": 5.3,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Wolverhampton Wanderers",
+              "odds": 1.49,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.95,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.8,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.64,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.72,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.74,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-preston-north-end-norwich-city",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T12:30Z",
+      "home": "Preston North End",
+      "away": "Norwich City",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340090",
       "gender": "unspecified",
       "markets": [
         {
@@ -26,7 +561,542 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.5,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.5,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Preston North End",
+              "odds": 3.75,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Norwich City",
+              "odds": 1.72,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.75,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "liga-real-betis-rayo-vallecano",
+      "sport": "football",
+      "league": "LIGA",
+      "kickoff": "2026-11-28T13:00Z",
+      "home": "Real Betis",
+      "away": "Rayo Vallecano",
+      "leagueCode": "LIGA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000000872478726",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.48,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.52,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.98,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Real Betis",
+              "odds": 1.56,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Rayo Vallecano",
+              "odds": 4.3,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "liga2-las-palmas-andorra-cf",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-28T13:00Z",
+      "home": "Las Palmas",
+      "away": "Andorra CF",
+      "leagueCode": "LIGA2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000005472477640",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.49,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.56,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.9,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Las Palmas",
+              "odds": 1.94,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Andorra CF",
+              "odds": 3.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.35,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "srb-zemun-radnicki-1923",
+      "sport": "football",
+      "league": "SRB",
+      "kickoff": "2026-11-28T13:00Z",
+      "home": "Zemun",
+      "away": "Radnicki 1923",
+      "leagueCode": "SRB",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000021072083156",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.66,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.8,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.64,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.82,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Zemun",
+              "odds": 3.85,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Radnicki 1923",
+              "odds": 1.64,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.6,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "srb-radnik-vojvodina",
+      "sport": "football",
+      "league": "SRB",
+      "kickoff": "2026-11-28T13:00Z",
+      "home": "Radnik",
+      "away": "Vojvodina",
+      "leagueCode": "SRB",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000021072083164",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.49,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Radnik",
+              "odds": 3.35,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Vojvodina",
+              "odds": 1.78,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.5,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.45,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "por2-chaves-tondela",
+      "sport": "football",
+      "league": "POR2",
+      "kickoff": "2026-11-28T14:00Z",
+      "home": "Chaves",
+      "away": "Tondela",
+      "leagueCode": "POR2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000023972531686",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
               "code": "BTTS_Y",
@@ -45,6 +1115,32 @@
           ]
         },
         {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.84,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.62,
+              "participant": ""
+            }
+          ]
+        },
+        {
           "id": "h2h||None",
           "family": "h2h",
           "key": "h2h",
@@ -52,19 +1148,1277 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire U. Cluj",
+              "label": "Victoire Chaves",
+              "odds": 3.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Tondela",
+              "odds": 1.96,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.2,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bl-fsv-mainz-05-union-berlin",
+      "sport": "football",
+      "league": "BL",
+      "kickoff": "2026-11-28T14:30Z",
+      "home": "FSV Mainz 05",
+      "away": "Union Berlin",
+      "leagueCode": "BL",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003572513336",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.9,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.44,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire FSV Mainz 05",
+              "odds": 1.42,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Union Berlin",
+              "odds": 5.3,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.5,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bl-hamburger-sv-bayern-munich",
+      "sport": "football",
+      "league": "BL",
+      "kickoff": "2026-11-28T14:30Z",
+      "home": "Hamburger SV",
+      "away": "Bayern Munich",
+      "leagueCode": "BL",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003572513338",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.9,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Hamburger SV",
+              "odds": 7.5,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Bayern Munich",
+              "odds": 1.22,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 6.25,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.27,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.7,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bl-sc-paderborn-fc-schalke-04",
+      "sport": "football",
+      "league": "BL",
+      "kickoff": "2026-11-28T14:30Z",
+      "home": "SC Paderborn",
+      "away": "FC Schalke 04",
+      "leagueCode": "BL",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003572513344",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire SC Paderborn",
+              "odds": 2.45,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire FC Schalke 04",
+              "odds": 2.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.52,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.96,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.44,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-birmingham-city-bolton-wanderers",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "Birmingham City",
+      "away": "Bolton Wanderers",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340080",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.43,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Birmingham City",
+              "odds": 1.42,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Bolton Wanderers",
+              "odds": 5.2,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.5,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.56,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.9,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-derby-county-watford",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "Derby County",
+      "away": "Watford",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340084",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.62,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.84,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Derby County",
+              "odds": 2.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Watford",
+              "odds": 2.85,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.15,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.78,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.66,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-millwall-burnley",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "Millwall",
+      "away": "Burnley",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340088",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Millwall",
+              "odds": 2.0,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Burnley",
+              "odds": 2.85,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.35,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.54,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.94,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.46,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-queens-park-rangers-sheffield-united",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "Queens Park Rangers",
+      "away": "Sheffield United",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340092",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.68,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.78,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Queens Park Rangers",
+              "odds": 1.88,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Sheffield United",
+              "odds": 3.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.5,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-west-bromwich-albion-bristol-city",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "West Bromwich Albion",
+      "away": "Bristol City",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340098",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.72,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.74,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.72,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.74,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire West Bromwich Albion",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Bristol City",
+              "odds": 4.3,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.6,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-west-ham-united-stoke-city",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "West Ham United",
+      "away": "Stoke City",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340100",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire West Ham United",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Stoke City",
+              "odds": 4.3,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.95,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.62,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.84,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.9,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "cha-wrexham-afc-portsmouth",
+      "sport": "football",
+      "league": "CHA",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "Wrexham AFC",
+      "away": "Portsmouth",
+      "leagueCode": "CHA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000001872340102",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.84,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.62,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Wrexham AFC",
+              "odds": 2.0,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Portsmouth",
+              "odds": 3.1,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 2.0,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.48,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bel-westerlo-raal-la-louviere",
+      "sport": "football",
+      "league": "BEL",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "Westerlo",
+      "away": "RAAL La Louvière",
+      "leagueCode": "BEL",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000003872366486",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.54,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.94,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.62,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.84,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Westerlo",
+              "odds": 1.84,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire RAAL La Louvière",
+              "odds": 3.15,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "srb-cukaricki-mladost",
+      "sport": "football",
+      "league": "SRB",
+      "kickoff": "2026-11-28T15:00Z",
+      "home": "Cukaricki",
+      "away": "Mladost",
+      "leagueCode": "SRB",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000021072083158",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.74,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.7,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Cukaricki",
               "odds": 1.47,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Sepsi Sf. Gheorghe",
+              "label": "Victoire Mladost",
               "odds": 4.8,
               "participant": ""
             },
@@ -85,20 +2439,20 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
               "code": "O2.5",
               "side": "over",
               "label": "Plus de 2,5 buts",
-              "odds": 1.6,
+              "odds": 1.66,
               "participant": ""
             },
             {
               "code": "U2.5",
               "side": "under",
               "label": "Moins de 2,5 buts",
-              "odds": 1.86,
+              "odds": 1.8,
               "participant": ""
             }
           ]
@@ -112,41 +2466,41 @@
       "fromDayFile": true
     },
     {
-      "id": "tur-alanyaspor-konyaspor",
+      "id": "liga-malaga-athletic-bilbao",
       "sport": "football",
-      "league": "TUR",
-      "kickoff": "2026-11-27T17:00Z",
-      "home": "Alanyaspor",
-      "away": "Konyaspor",
-      "leagueCode": "TUR",
+      "league": "LIGA",
+      "kickoff": "2026-11-28T15:15Z",
+      "home": "Málaga",
+      "away": "Athletic Bilbao",
+      "leagueCode": "LIGA",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:17Z",
-      "oddspapiFixtureId": "id1000005272723344",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000000872478738",
       "gender": "unspecified",
       "markets": [
         {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:18Z",
           "outcomes": [
             {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 2.0,
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.66,
               "participant": ""
             },
             {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 1.49,
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.78,
               "participant": ""
             }
           ]
@@ -159,27 +2513,134 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:18Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Alanyaspor",
-              "odds": 2.5,
+              "label": "Victoire Málaga",
+              "odds": 4.3,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Konyaspor",
-              "odds": 2.45,
+              "label": "Victoire Athletic Bilbao",
+              "odds": 1.64,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.15,
+              "odds": 3.7,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.68,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.78,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "liga2-albacete-tenerife",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-28T15:15Z",
+      "home": "Albacete",
+      "away": "Tenerife",
+      "leagueCode": "LIGA2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000005472477626",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.92,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.56,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Albacete",
+              "odds": 1.96,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Tenerife",
+              "odds": 3.2,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.1,
               "participant": ""
             }
           ]
@@ -192,7 +2653,970 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.76,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.7,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "liga2-cd-eldense-girona",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-28T15:15Z",
+      "home": "CD Eldense",
+      "away": "Girona",
+      "leagueCode": "LIGA2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000005472477634",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire CD Eldense",
+              "odds": 2.8,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Girona",
+              "odds": 2.1,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.1,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.68,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.78,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.86,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.6,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "por-arouca-rio-ave-fc",
+      "sport": "football",
+      "league": "POR",
+      "kickoff": "2026-11-28T15:30Z",
+      "home": "Arouca",
+      "away": "Rio Ave FC",
+      "leagueCode": "POR",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000023872531020",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Arouca",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Rio Ave FC",
+              "odds": 4.3,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.6,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.7,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.76,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.7,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.76,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "por-moreirense-fc-santa-clara",
+      "sport": "football",
+      "league": "POR",
+      "kickoff": "2026-11-28T15:30Z",
+      "home": "Moreirense FC",
+      "away": "Santa Clara",
+      "leagueCode": "POR",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000023872531028",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.82,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.64,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Moreirense FC",
+              "odds": 2.65,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Santa Clara",
+              "odds": 2.35,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 2.95,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 2.0,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.46,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "por2-sc-farense-leiria",
+      "sport": "football",
+      "league": "POR2",
+      "kickoff": "2026-11-28T15:30Z",
+      "home": "SC Farense",
+      "away": "Leiria",
+      "leagueCode": "POR2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000023972531688",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.6,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.72,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.72,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire SC Farense",
+              "odds": 2.0,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Leiria",
+              "odds": 2.9,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.25,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "l1-angers-rc-lens",
+      "sport": "football",
+      "league": "L1",
+      "kickoff": "2026-11-28T16:15Z",
+      "home": "Angers",
+      "away": "RC Lens",
+      "leagueCode": "L1",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003472036310",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Angers",
+              "odds": 4.1,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire RC Lens",
+              "odds": 1.6,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.95,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.56,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.92,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bel-cercle-brugge-ksv-kv-mechelen",
+      "sport": "football",
+      "league": "BEL",
+      "kickoff": "2026-11-28T17:15Z",
+      "home": "Cercle Brugge KSV",
+      "away": "KV Mechelen",
+      "leagueCode": "BEL",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000003872366482",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.52,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.98,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Cercle Brugge KSV",
+              "odds": 1.9,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire KV Mechelen",
+              "odds": 3.05,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "liga-elche-cf-atletico-madrid",
+      "sport": "football",
+      "league": "LIGA",
+      "kickoff": "2026-11-28T17:30Z",
+      "home": "Elche CF",
+      "away": "Atlético Madrid",
+      "leagueCode": "LIGA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000000872478732",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Elche CF",
+              "odds": 5.4,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Atlético Madrid",
+              "odds": 1.41,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.5,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.5,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.66,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.8,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bl-vfb-stuttgart-eintracht-frankfurt",
+      "sport": "football",
+      "league": "BL",
+      "kickoff": "2026-11-28T17:30Z",
+      "home": "VfB Stuttgart",
+      "away": "Eintracht Frankfurt",
+      "leagueCode": "BL",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003572513330",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.21,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 3.0,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.25,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.75,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire VfB Stuttgart",
+              "odds": 1.72,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Eintracht Frankfurt",
+              "odds": 3.35,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.2,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "liga2-sd-eibar-burgos-cf",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-28T17:30Z",
+      "home": "SD Eibar",
+      "away": "Burgos CF",
+      "leagueCode": "LIGA2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000005472477632",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.9,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.56,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire SD Eibar",
+              "odds": 1.74,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Burgos CF",
+              "odds": 3.8,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.2,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
           "outcomes": [
             {
               "code": "BTTS_Y",
@@ -219,52 +3643,19 @@
       "fromDayFile": true
     },
     {
-      "id": "tur-rizespor-kasimpasa",
+      "id": "srb-partizan-radnicki-nis",
       "sport": "football",
-      "league": "TUR",
-      "kickoff": "2026-11-27T17:00Z",
-      "home": "Rizespor",
-      "away": "Kasimpasa",
-      "leagueCode": "TUR",
+      "league": "SRB",
+      "kickoff": "2026-11-28T17:30Z",
+      "home": "Partizan",
+      "away": "Radnicki Nis",
+      "leagueCode": "SRB",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:17Z",
-      "oddspapiFixtureId": "id1000005272723346",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000021072083154",
       "gender": "unspecified",
       "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Rizespor",
-              "odds": 1.88,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Kasimpasa",
-              "odds": 3.3,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.55,
-              "participant": ""
-            }
-          ]
-        },
         {
           "id": "totals||2.5",
           "family": "totals",
@@ -273,20 +3664,20 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
               "code": "O2.5",
               "side": "over",
               "label": "Plus de 2,5 buts",
-              "odds": 1.56,
+              "odds": 1.39,
               "participant": ""
             },
             {
               "code": "U2.5",
               "side": "under",
               "label": "Moins de 2,5 buts",
-              "odds": 1.92,
+              "odds": 2.25,
               "participant": ""
             }
           ]
@@ -299,7 +3690,468 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.64,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.82,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Partizan",
+              "odds": 1.28,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Radnicki Nis",
+              "odds": 6.25,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 4.8,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "por-academico-de-viseu-alverca",
+      "sport": "football",
+      "league": "POR",
+      "kickoff": "2026-11-28T18:00Z",
+      "home": "Académico de Viseu",
+      "away": "Alverca",
+      "leagueCode": "POR",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000023872531018",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Académico de Viseu",
+              "odds": 2.4,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Alverca",
+              "odds": 2.55,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.05,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.82,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.64,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.62,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.84,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "por2-sporting-cp-b-amarante",
+      "sport": "football",
+      "league": "POR2",
+      "kickoff": "2026-11-28T18:00Z",
+      "home": "Sporting CP B",
+      "away": "Amarante",
+      "leagueCode": "POR2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000023972531698",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.76,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.7,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.92,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.56,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Sporting CP B",
+              "odds": 1.9,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Amarante",
+              "odds": 3.3,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.2,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bl2-vfl-osnabruck-hannover-96",
+      "sport": "football",
+      "league": "BL2",
+      "kickoff": "2026-11-28T19:30Z",
+      "home": "VfL Osnabrück",
+      "away": "Hannover 96",
+      "leagueCode": "BL2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000004472514012",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.45,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 2.1,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire VfL Osnabrück",
+              "odds": 2.65,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Hannover 96",
+              "odds": 2.1,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.35,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.52,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.98,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "l1-le-havre-strasbourg",
+      "sport": "football",
+      "league": "L1",
+      "kickoff": "2026-11-28T19:45Z",
+      "home": "Le Havre",
+      "away": "Strasbourg",
+      "leagueCode": "L1",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003472036316",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Le Havre",
+              "odds": 2.95,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Strasbourg",
+              "odds": 2.05,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
           "outcomes": [
             {
               "code": "BTTS_Y",
@@ -326,45 +4178,19 @@
       "fromDayFile": true
     },
     {
-      "id": "rou-petrolul-fc-arges",
+      "id": "l1-le-mans-fc-lille",
       "sport": "football",
-      "league": "ROU",
-      "kickoff": "2026-11-27T18:30Z",
-      "home": "Petrolul",
-      "away": "FC Arges",
-      "leagueCode": "ROU",
+      "league": "L1",
+      "kickoff": "2026-11-28T19:45Z",
+      "home": "Le Mans FC",
+      "away": "Lille",
+      "leagueCode": "L1",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:17Z",
-      "oddspapiFixtureId": "id1000015272388126",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003472036318",
       "gender": "unspecified",
       "markets": [
-        {
-          "id": "btts||None",
-          "family": "btts",
-          "key": "btts",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "BTTS_Y",
-              "side": "yes",
-              "label": "Les deux équipes marquent",
-              "odds": 1.68,
-              "participant": ""
-            },
-            {
-              "code": "BTTS_N",
-              "side": "no",
-              "label": "Les deux équipes ne marquent pas toutes les deux",
-              "odds": 1.78,
-              "participant": ""
-            }
-          ]
-        },
         {
           "id": "totals||2.5",
           "family": "totals",
@@ -373,361 +4199,7 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.84,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 1.6,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Petrolul",
-              "odds": 2.15,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire FC Arges",
-              "odds": 2.75,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.1,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "availableMarkets": [
-        "btts",
-        "h2h",
-        "totals"
-      ],
-      "fromDayFile": true
-    },
-    {
-      "id": "ere-groningen-willem-ii",
-      "sport": "football",
-      "league": "ERE",
-      "kickoff": "2026-11-27T19:00Z",
-      "home": "Groningen",
-      "away": "Willem II",
-      "leagueCode": "ERE",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:20Z",
-      "oddspapiFixtureId": "id1000003772041270",
-      "gender": "unspecified",
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Groningen",
-              "odds": 1.28,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Willem II",
-              "odds": 6.0,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.9,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "btts||None",
-          "family": "btts",
-          "key": "btts",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "BTTS_Y",
-              "side": "yes",
-              "label": "Les deux équipes marquent",
-              "odds": 1.6,
-              "participant": ""
-            },
-            {
-              "code": "BTTS_N",
-              "side": "no",
-              "label": "Les deux équipes ne marquent pas toutes les deux",
-              "odds": 1.86,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.37,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 2.25,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "availableMarkets": [
-        "btts",
-        "h2h",
-        "totals"
-      ],
-      "fromDayFile": true
-    },
-    {
-      "id": "bl-werder-bremen-borussia-monchengladbach",
-      "sport": "football",
-      "league": "BL",
-      "kickoff": "2026-11-27T19:30Z",
-      "home": "Werder Bremen",
-      "away": "Borussia Monchengladbach",
-      "leagueCode": "BL",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:20Z",
-      "oddspapiFixtureId": "id1000003572513342",
-      "gender": "unspecified",
-      "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Werder Bremen",
-              "odds": 1.64,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Borussia Monchengladbach",
-              "odds": 3.85,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 4.0,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "btts||None",
-          "family": "btts",
-          "key": "btts",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "BTTS_Y",
-              "side": "yes",
-              "label": "Les deux équipes marquent",
-              "odds": 1.44,
-              "participant": ""
-            },
-            {
-              "code": "BTTS_N",
-              "side": "no",
-              "label": "Les deux équipes ne marquent pas toutes les deux",
-              "odds": 2.1,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.41,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 2.2,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "availableMarkets": [
-        "btts",
-        "h2h",
-        "totals"
-      ],
-      "fromDayFile": true
-    },
-    {
-      "id": "sa-venezia-bologna",
-      "sport": "football",
-      "league": "SA",
-      "kickoff": "2026-11-27T19:45Z",
-      "home": "Venezia",
-      "away": "Bologna",
-      "leagueCode": "SA",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:20Z",
-      "oddspapiFixtureId": "id1000002371945444",
-      "gender": "unspecified",
-      "markets": [
-        {
-          "id": "btts||None",
-          "family": "btts",
-          "key": "btts",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "BTTS_Y",
-              "side": "yes",
-              "label": "Les deux équipes marquent",
-              "odds": 1.7,
-              "participant": ""
-            },
-            {
-              "code": "BTTS_N",
-              "side": "no",
-              "label": "Les deux équipes ne marquent pas toutes les deux",
-              "odds": 1.76,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Venezia",
-              "odds": 2.8,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Bologna",
-              "odds": 2.3,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.1,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
+          "asOf": "2026-11-28T06:13:18Z",
           "outcomes": [
             {
               "code": "O2.5",
@@ -744,6 +4216,65 @@
               "participant": ""
             }
           ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.74,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.72,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Le Mans FC",
+              "odds": 3.45,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Lille",
+              "odds": 1.96,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.2,
+              "participant": ""
+            }
+          ]
         }
       ],
       "availableMarkets": [
@@ -754,19 +4285,45 @@
       "fromDayFile": true
     },
     {
-      "id": "l1-brest-paris-fc",
+      "id": "l1-nice-troyes",
       "sport": "football",
       "league": "L1",
-      "kickoff": "2026-11-27T19:45Z",
-      "home": "Brest",
-      "away": "Paris FC",
+      "kickoff": "2026-11-28T19:45Z",
+      "home": "Nice",
+      "away": "Troyes",
       "leagueCode": "L1",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:20Z",
-      "oddspapiFixtureId": "id1000003472036314",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003472036322",
       "gender": "unspecified",
       "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        },
         {
           "id": "h2h||None",
           "family": "h2h",
@@ -775,27 +4332,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
+          "asOf": "2026-11-28T06:13:18Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Brest",
-              "odds": 3.1,
+              "label": "Victoire Nice",
+              "odds": 1.62,
               "participant": ""
             },
             {
               "code": "2",
               "side": "2",
-              "label": "Victoire Paris FC",
-              "odds": 2.05,
+              "label": "Victoire Troyes",
+              "odds": 4.2,
               "participant": ""
             },
             {
               "code": "X",
               "side": "X",
               "label": "Match nul",
-              "odds": 3.3,
+              "odds": 3.85,
               "participant": ""
             }
           ]
@@ -808,7 +4365,188 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.6,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "l1-paris-saint-germain-lorient",
+      "sport": "football",
+      "league": "L1",
+      "kickoff": "2026-11-28T19:45Z",
+      "home": "Paris Saint Germain",
+      "away": "Lorient",
+      "leagueCode": "L1",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000003472036324",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.35,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.35,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.86,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.6,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Paris Saint Germain",
+              "odds": 1.14,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Lorient",
+              "odds": 10.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 7.5,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "bel-charleroi-sk-beveren",
+      "sport": "football",
+      "league": "BEL",
+      "kickoff": "2026-11-28T19:45Z",
+      "home": "Charleroi",
+      "away": "SK Beveren",
+      "leagueCode": "BEL",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000003872366472",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.54,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.96,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
               "code": "BTTS_Y",
@@ -827,27 +4565,34 @@
           ]
         },
         {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.74,
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Charleroi",
+              "odds": 1.5,
               "participant": ""
             },
             {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 1.7,
+              "code": "2",
+              "side": "2",
+              "label": "Victoire SK Beveren",
+              "odds": 4.4,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.9,
               "participant": ""
             }
           ]
@@ -861,52 +4606,19 @@
       "fromDayFile": true
     },
     {
-      "id": "bel-leuven-kv-kortrijk",
+      "id": "bel-lommel-sk-sv-zulte-waregem",
       "sport": "football",
       "league": "BEL",
-      "kickoff": "2026-11-27T19:45Z",
-      "home": "Leuven",
-      "away": "KV Kortrijk",
+      "kickoff": "2026-11-28T19:45Z",
+      "home": "Lommel SK",
+      "away": "SV Zulte-Waregem",
       "leagueCode": "BEL",
       "bookKey": "winamax_fr",
       "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:20Z",
-      "oddspapiFixtureId": "id1000003872366470",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000003872366474",
       "gender": "unspecified",
       "markets": [
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Leuven",
-              "odds": 1.8,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire KV Kortrijk",
-              "odds": 3.3,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.45,
-              "participant": ""
-            }
-          ]
-        },
         {
           "id": "totals||2.5",
           "family": "totals",
@@ -915,94 +4627,20 @@
           "line": 2.5,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
               "code": "O2.5",
               "side": "over",
               "label": "Plus de 2,5 buts",
-              "odds": 1.5,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 2.0,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "btts||None",
-          "family": "btts",
-          "key": "btts",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:20Z",
-          "outcomes": [
-            {
-              "code": "BTTS_Y",
-              "side": "yes",
-              "label": "Les deux équipes marquent",
               "odds": 1.46,
               "participant": ""
             },
             {
-              "code": "BTTS_N",
-              "side": "no",
-              "label": "Les deux équipes ne marquent pas toutes les deux",
-              "odds": 2.1,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "availableMarkets": [
-        "btts",
-        "h2h",
-        "totals"
-      ],
-      "fromDayFile": true
-    },
-    {
-      "id": "liga-levante-real-racing-club-de-santander",
-      "sport": "football",
-      "league": "LIGA",
-      "kickoff": "2026-11-27T20:00Z",
-      "home": "Levante",
-      "away": "Real Racing Club de Santander",
-      "leagueCode": "LIGA",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:17Z",
-      "oddspapiFixtureId": "id1000000872478736",
-      "gender": "unspecified",
-      "markets": [
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.32,
-              "participant": ""
-            },
-            {
               "code": "U2.5",
               "side": "under",
               "label": "Moins de 2,5 buts",
-              "odds": 2.45,
+              "odds": 2.0,
               "participant": ""
             }
           ]
@@ -1015,101 +4653,27 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
               "code": "1",
               "side": "1",
-              "label": "Victoire Levante",
-              "odds": 1.94,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Real Racing Club de Santander",
-              "odds": 3.05,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.8,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "btts||None",
-          "family": "btts",
-          "key": "btts",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "BTTS_Y",
-              "side": "yes",
-              "label": "Les deux équipes marquent",
-              "odds": 1.31,
-              "participant": ""
-            },
-            {
-              "code": "BTTS_N",
-              "side": "no",
-              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "label": "Victoire Lommel SK",
               "odds": 2.5,
               "participant": ""
-            }
-          ]
-        }
-      ],
-      "availableMarkets": [
-        "btts",
-        "h2h",
-        "totals"
-      ],
-      "fromDayFile": true
-    },
-    {
-      "id": "pl-nottingham-forest-chelsea",
-      "sport": "football",
-      "league": "PL",
-      "kickoff": "2026-11-27T20:00Z",
-      "home": "Nottingham Forest",
-      "away": "Chelsea",
-      "leagueCode": "PL",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:17Z",
-      "oddspapiFixtureId": "id1000001772221428",
-      "gender": "unspecified",
-      "markets": [
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
+            },
             {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.64,
+              "code": "2",
+              "side": "2",
+              "label": "Victoire SV Zulte-Waregem",
+              "odds": 2.15,
               "participant": ""
             },
             {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 1.82,
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.4,
               "participant": ""
             }
           ]
@@ -1122,153 +4686,13 @@
           "line": null,
           "participant": "",
           "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
+          "asOf": "2026-11-28T06:13:21Z",
           "outcomes": [
             {
               "code": "BTTS_Y",
               "side": "yes",
               "label": "Les deux équipes marquent",
-              "odds": 1.5,
-              "participant": ""
-            },
-            {
-              "code": "BTTS_N",
-              "side": "no",
-              "label": "Les deux équipes ne marquent pas toutes les deux",
-              "odds": 2.0,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Nottingham Forest",
-              "odds": 2.35,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Chelsea",
-              "odds": 2.55,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.25,
-              "participant": ""
-            }
-          ]
-        }
-      ],
-      "availableMarkets": [
-        "btts",
-        "h2h",
-        "totals"
-      ],
-      "fromDayFile": true
-    },
-    {
-      "id": "cha-southampton-middlesbrough",
-      "sport": "football",
-      "league": "CHA",
-      "kickoff": "2026-11-27T20:00Z",
-      "home": "Southampton",
-      "away": "Middlesbrough",
-      "leagueCode": "CHA",
-      "bookKey": "winamax_fr",
-      "book": "Winamax France",
-      "asOf": "2026-11-27T07:52:17Z",
-      "oddspapiFixtureId": "id1000001872340094",
-      "gender": "unspecified",
-      "markets": [
-        {
-          "id": "totals||2.5",
-          "family": "totals",
-          "key": "totals",
-          "unit": "goals",
-          "line": 2.5,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "O2.5",
-              "side": "over",
-              "label": "Plus de 2,5 buts",
-              "odds": 1.47,
-              "participant": ""
-            },
-            {
-              "code": "U2.5",
-              "side": "under",
-              "label": "Moins de 2,5 buts",
-              "odds": 2.0,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "h2h||None",
-          "family": "h2h",
-          "key": "h2h",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "1",
-              "side": "1",
-              "label": "Victoire Southampton",
-              "odds": 2.6,
-              "participant": ""
-            },
-            {
-              "code": "2",
-              "side": "2",
-              "label": "Victoire Middlesbrough",
-              "odds": 2.1,
-              "participant": ""
-            },
-            {
-              "code": "X",
-              "side": "X",
-              "label": "Match nul",
-              "odds": 3.5,
-              "participant": ""
-            }
-          ]
-        },
-        {
-          "id": "btts||None",
-          "family": "btts",
-          "key": "btts",
-          "unit": "match",
-          "line": null,
-          "participant": "",
-          "bookKey": "winamax_fr",
-          "asOf": "2026-11-27T07:52:17Z",
-          "outcomes": [
-            {
-              "code": "BTTS_Y",
-              "side": "yes",
-              "label": "Les deux équipes marquent",
-              "odds": 1.41,
+              "odds": 1.4,
               "participant": ""
             },
             {
@@ -1287,8 +4711,329 @@
         "totals"
       ],
       "fromDayFile": true
+    },
+    {
+      "id": "liga-real-madrid-alaves",
+      "sport": "football",
+      "league": "LIGA",
+      "kickoff": "2026-11-28T20:00Z",
+      "home": "Real Madrid",
+      "away": "Alavés",
+      "leagueCode": "LIGA",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000000872478740",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Real Madrid",
+              "odds": 1.08,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Alavés",
+              "odds": 13.5,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 9.5,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.23,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 2.95,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.8,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.66,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "liga2-real-valladolid-cf-real-sociedad-b",
+      "sport": "football",
+      "league": "LIGA2",
+      "kickoff": "2026-11-28T20:00Z",
+      "home": "Real Valladolid CF",
+      "away": "Real Sociedad B",
+      "leagueCode": "LIGA2",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:18Z",
+      "oddspapiFixtureId": "id1000005472477646",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.52,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.96,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Real Valladolid CF",
+              "odds": 1.66,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire Real Sociedad B",
+              "odds": 3.75,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.6,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.52,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.98,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
+    },
+    {
+      "id": "por-vitoria-guimaraes-cf-estrela",
+      "sport": "football",
+      "league": "POR",
+      "kickoff": "2026-11-28T20:30Z",
+      "home": "Vitória Guimarães",
+      "away": "CF Estrela",
+      "leagueCode": "POR",
+      "bookKey": "winamax_fr",
+      "book": "Winamax France",
+      "asOf": "2026-11-28T06:13:21Z",
+      "oddspapiFixtureId": "id1000023872531034",
+      "gender": "unspecified",
+      "markets": [
+        {
+          "id": "totals||2.5",
+          "family": "totals",
+          "key": "totals",
+          "unit": "goals",
+          "line": 2.5,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "O2.5",
+              "side": "over",
+              "label": "Plus de 2,5 buts",
+              "odds": 1.6,
+              "participant": ""
+            },
+            {
+              "code": "U2.5",
+              "side": "under",
+              "label": "Moins de 2,5 buts",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "btts||None",
+          "family": "btts",
+          "key": "btts",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "BTTS_Y",
+              "side": "yes",
+              "label": "Les deux équipes marquent",
+              "odds": 1.58,
+              "participant": ""
+            },
+            {
+              "code": "BTTS_N",
+              "side": "no",
+              "label": "Les deux équipes ne marquent pas toutes les deux",
+              "odds": 1.86,
+              "participant": ""
+            }
+          ]
+        },
+        {
+          "id": "h2h||None",
+          "family": "h2h",
+          "key": "h2h",
+          "unit": "match",
+          "line": null,
+          "participant": "",
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "outcomes": [
+            {
+              "code": "1",
+              "side": "1",
+              "label": "Victoire Vitória Guimarães",
+              "odds": 1.64,
+              "participant": ""
+            },
+            {
+              "code": "2",
+              "side": "2",
+              "label": "Victoire CF Estrela",
+              "odds": 4.0,
+              "participant": ""
+            },
+            {
+              "code": "X",
+              "side": "X",
+              "label": "Match nul",
+              "odds": 3.55,
+              "participant": ""
+            }
+          ]
+        }
+      ],
+      "availableMarkets": [
+        "btts",
+        "h2h",
+        "totals"
+      ],
+      "fromDayFile": true
     }
   ],
   "source": "OddsPapi (Winamax FR)",
-  "day": "2026-11-27"
+  "day": "2026-11-28"
 }

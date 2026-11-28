@@ -256,6 +256,58 @@
           "matches": 21
         }
       ]
+    },
+    {
+      "id": "tres-sur-v2|2026-11-28|football",
+      "day": "2026-11-28",
+      "method": "tres_sur",
+      "sport": "football",
+      "version": "tres-sur-v2",
+      "createdAt": "2026-11-28T06:16:58.866Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 100,
+      "currency": "EUR",
+      "status": "pending",
+      "minOdds": 1.5,
+      "maxOdds": 1.7,
+      "odds": 1.5,
+      "probability": 0.6215021281028054,
+      "legs": [
+        {
+          "id": "football|bel-charleroi-sk-beveren|2026-11-28T19:45Z|h2h||None|1",
+          "matchId": "bel-charleroi-sk-beveren",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "BEL",
+          "home": "Charleroi",
+          "away": "SK Beveren",
+          "kickoff": "2026-11-28T19:45Z",
+          "date": "2026-11-28",
+          "code": "1",
+          "label": "Victoire Charleroi",
+          "o": 1.5,
+          "p": 0.6215021281028054,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-28T06:13:16.041502+00:00",
+          "partial": true,
+          "matches": 54
+        }
+      ]
     }
   ]
 }

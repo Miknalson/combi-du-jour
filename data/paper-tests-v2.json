@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "manifest": {
     "rules": {
-      "version": "paper-multisport-v3",
+      "version": "paper-multisport-v4",
       "currency": "EUR",
       "mode": "paper",
       "realMoneyEnabled": false,
@@ -56,22 +56,24 @@
         "maxOptionsPerMatch": 6,
         "maxSearchNodes": 200000
       },
-      "ticketOdds": "product-of-recorded-leg-quotes-not-executed"
+      "ticketOdds": "product-of-recorded-leg-quotes-not-executed",
+      "spread": "aucun match en commun entre les tickets du jour : Safe sans les matchs déjà pris, puis Algo sans ceux du Safe"
     },
     "sourceHashes": {
       "sport-catalog.js": "1acf167af03f1b0930c57049ba3cedf634cc5f39914a14f8e63af9ca33e72781",
       "safe-engine.js": "aff0d71511cdd05b01a067df2ca8af73b789691781591fdb09f519b46ea76dc9",
       "paper-engine.js": "47e1c50b55b3a50efe9ee5f0e700aac8a3a07a8fc757815b1a6e07a4b7212e92",
       "safe-multi-engine.js": "d1cc0aa35535c25d91b7184408269fc885d4f57eff77f24a2afb54379cc54e07",
-      "paper-multi-engine.js": "b79bf83ef09e17a4fd9785228fb03ce6471395d678ba29870e35810cc78c013e",
-      "scripts/paper_multi_tests.cjs": "e1b2236f4b0db5e676116fe1d2f9e629e280c2d54aaee93c75badca47b466372",
+      "paper-multi-engine.js": "8f147c61fd4ca43388f80cbda5b132c494792c49eda21c263d7609527362c99b",
+      "ticket-spread.js": "c0b132a06f8000c7f965ba548d8d6dea1a0775e9655049b2e88982fc652f9392",
+      "scripts/paper_multi_tests.cjs": "8bd25c1feb226cd560085ea0384569f144ded43ab76b65160f59d1cc008700bb",
       "scripts/update_sports.py": "f44684c66fa1e71eb21d5df64132bcbe3200862036bd88dd7ede5ed3fb17966f"
     },
-    "startedAt": "2026-11-25T11:40:21.186Z",
+    "startedAt": "2026-11-28T06:16:58.923Z",
     "migration": {
-      "id": "2026-11-25-safe-foot-1-70",
-      "appliedAt": "2026-11-25T11:40:21.186Z",
-      "reason": "Safe foot relevé à 1,70–2,00 (ticket 50 % mini, sélections 60 % mini) car le Très sûr passe à 1,50–1,70. Algo et Safe des autres sports inchangés."
+      "id": "2026-11-28-tickets-sans-match-commun",
+      "appliedAt": "2026-11-28T06:16:58.923Z",
+      "reason": "Plus de match en commun entre les tickets du jour : le Safe écarte les matchs du Très sûr, l’Algo ceux du Très sûr et du Safe (Bayern 25/11, Ferencváros 26/11, Groningen 27/11 avaient fait perdre tous les tickets). Fourchettes, cotes et probabilités inchangées."
     },
     "previous": [
       {
@@ -158,6 +160,82 @@
         ],
         "migration": null,
         "endedAt": "2026-11-25T11:40:21.186Z"
+      },
+      {
+        "rules": {
+          "version": "paper-multisport-v3",
+          "currency": "EUR",
+          "mode": "paper",
+          "realMoneyEnabled": false,
+          "stakes": {
+            "algo": 50,
+            "safe": 100
+          },
+          "quoteMaxAgeMinutes": 60,
+          "checkpoints": [
+            100,
+            200
+          ],
+          "safeSports": [
+            "football",
+            "basket",
+            "tennis",
+            "rugby_xv",
+            "rugby_xiii",
+            "football_us",
+            "hockey",
+            "volley"
+          ],
+          "mixedSports": [
+            "football",
+            "basket",
+            "tennis"
+          ],
+          "safe": {
+            "version": "safe-multi-v3",
+            "minOdds": 1.5,
+            "maxOdds": 2,
+            "minimumProbability": 0.6,
+            "maxLegs": 3,
+            "football": {
+              "minOdds": 1.7,
+              "maxOdds": 2,
+              "minimumProbability": 0.5,
+              "minimumLegProbability": 0.6
+            }
+          },
+          "algo": {
+            "version": "algo-real-v1",
+            "sport": "football",
+            "minOdds": 3,
+            "maxOdds": 5,
+            "minLegs": 2,
+            "maxLegs": 5,
+            "minProbability": 0.5,
+            "minLegOdds": 1.1,
+            "maxMatches": 20,
+            "maxOptionsPerMatch": 6,
+            "maxSearchNodes": 200000
+          },
+          "ticketOdds": "product-of-recorded-leg-quotes-not-executed"
+        },
+        "sourceHashes": {
+          "sport-catalog.js": "1acf167af03f1b0930c57049ba3cedf634cc5f39914a14f8e63af9ca33e72781",
+          "safe-engine.js": "aff0d71511cdd05b01a067df2ca8af73b789691781591fdb09f519b46ea76dc9",
+          "paper-engine.js": "47e1c50b55b3a50efe9ee5f0e700aac8a3a07a8fc757815b1a6e07a4b7212e92",
+          "safe-multi-engine.js": "d1cc0aa35535c25d91b7184408269fc885d4f57eff77f24a2afb54379cc54e07",
+          "paper-multi-engine.js": "b79bf83ef09e17a4fd9785228fb03ce6471395d678ba29870e35810cc78c013e",
+          "scripts/paper_multi_tests.cjs": "e1b2236f4b0db5e676116fe1d2f9e629e280c2d54aaee93c75badca47b466372",
+          "scripts/update_sports.py": "f44684c66fa1e71eb21d5df64132bcbe3200862036bd88dd7ede5ed3fb17966f"
+        },
+        "startedAt": "2026-11-25T11:40:21.186Z",
+        "amendments": [],
+        "migration": {
+          "id": "2026-11-25-safe-foot-1-70",
+          "appliedAt": "2026-11-25T11:40:21.186Z",
+          "reason": "Safe foot relevé à 1,70–2,00 (ticket 50 % mini, sélections 60 % mini) car le Très sûr passe à 1,50–1,70. Algo et Safe des autres sports inchangés."
+        },
+        "endedAt": "2026-11-28T06:16:58.923Z"
       }
     ]
   },
@@ -1466,6 +1544,152 @@
           "sport": "football",
           "status": "ok",
           "updatedAt": "2026-11-27T07:52:15.947447+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v4|2026-11-28|algo|football",
+      "day": "2026-11-28",
+      "method": "algo",
+      "sport": "football",
+      "version": "algo-real-v1",
+      "createdAt": "2026-11-28T06:16:58.923Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 50,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 3.0616,
+      "probability": 0.280526746960822,
+      "legs": [
+        {
+          "matchId": "cha-preston-north-end-norwich-city",
+          "sport": "football",
+          "home": "Preston North End",
+          "away": "Norwich City",
+          "league": "CHA",
+          "kickoff": "2026-11-28T12:30Z",
+          "date": "2026-11-28",
+          "code": "2",
+          "label": "Victoire Norwich City",
+          "o": 1.72,
+          "p": 0.5448057638671108,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        },
+        {
+          "matchId": "srb-radnik-vojvodina",
+          "sport": "football",
+          "home": "Radnik",
+          "away": "Vojvodina",
+          "league": "SRB",
+          "kickoff": "2026-11-28T13:00Z",
+          "date": "2026-11-28",
+          "code": "2",
+          "label": "Victoire Vojvodina",
+          "o": 1.78,
+          "p": 0.514911488765468,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "quoteSource": "api",
+          "est": false
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-28T06:13:16.041502+00:00",
+          "partial": true,
+          "femaleMatches": 0
+        }
+      ],
+      "searchLimited": false
+    },
+    {
+      "id": "paper-multisport-v4|2026-11-28|safe|football",
+      "day": "2026-11-28",
+      "method": "safe",
+      "sport": "football",
+      "version": "safe-multi-v3",
+      "createdAt": "2026-11-28T06:16:58.923Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 100,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 1.7152,
+      "probability": 0.5232586177421447,
+      "legs": [
+        {
+          "id": "football|srb-partizan-radnicki-nis|2026-11-28T17:30Z|h2h||None|1",
+          "matchId": "srb-partizan-radnicki-nis",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "SRB",
+          "home": "Partizan",
+          "away": "Radnicki Nis",
+          "kickoff": "2026-11-28T17:30Z",
+          "date": "2026-11-28",
+          "code": "1",
+          "label": "Victoire Partizan",
+          "o": 1.28,
+          "p": 0.7416227494610538,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        },
+        {
+          "id": "football|bl2-hertha-berlin-karlsruher-sc|2026-11-28T12:00Z|h2h||None|1",
+          "matchId": "bl2-hertha-berlin-karlsruher-sc",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "BL2",
+          "home": "Hertha Berlin",
+          "away": "Karlsruher SC",
+          "kickoff": "2026-11-28T12:00Z",
+          "date": "2026-11-28",
+          "code": "1",
+          "label": "Victoire Hertha Berlin",
+          "o": 1.34,
+          "p": 0.7055590165247803,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:21Z",
+          "marketId": "h2h||None",
+          "marketFamily": "h2h",
+          "marketLine": null,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "sport": "football",
+          "status": "ok",
+          "updatedAt": "2026-11-28T06:13:16.041502+00:00",
           "partial": true,
           "femaleMatches": 0
         }

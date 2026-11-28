@@ -41,7 +41,24 @@
    "away": "FC St. Pauli",
    "o1": 2.75,
    "oX": 3.5,
-   "o2": 2.45
+   "o2": 2.45,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.54,
+      "u": 1.92,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 2.65,
+    "oX": 3.35,
+    "o2": 2.1,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bl2-hertha-berlin-karlsruher-sc",
@@ -51,7 +68,24 @@
    "away": "Karlsruher SC",
    "o1": 1.42,
    "oX": 5.25,
-   "o2": 6.0
+   "o2": 6.0,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.28,
+      "u": 2.6,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.34,
+    "oX": 4.8,
+    "o2": 5.2,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bl2-holstein-kiel-1-fc-kaiserslautern",
@@ -61,7 +95,24 @@
    "away": "1. FC Kaiserslautern",
    "o1": 2.35,
    "oX": 3.5,
-   "o2": 2.9
+   "o2": 2.9,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.58,
+      "u": 1.9,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 2.2,
+    "oX": 3.3,
+    "o2": 2.6,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "swe-varberg-ostersund",
@@ -110,11 +161,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
-    "o1": 1.9,
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 2.0,
     "oX": 3.3,
-    "o2": 3.2,
-    "ou": {}
+    "o2": 3.15,
+    "ou": {
+     "2.5": {
+      "o": 1.8,
+      "u": 1.66,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -145,11 +204,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
-    "o1": 4.8,
-    "oX": 3.85,
-    "o2": 1.47,
-    "ou": {}
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 5.3,
+    "oX": 3.95,
+    "o2": 1.49,
+    "ou": {
+     "2.5": {
+      "o": 1.72,
+      "u": 1.74,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -189,11 +256,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
-    "o1": 3.95,
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 3.75,
     "oX": 3.75,
-    "o2": 1.6,
-    "ou": {}
+    "o2": 1.72,
+    "ou": {
+     "2.5": {
+      "o": 1.5,
+      "u": 2.0,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -214,7 +289,24 @@
    "away": "Rayo Vallecano",
    "o1": 1.6,
    "oX": 4.4,
-   "o2": 5.4
+   "o2": 5.4,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.48,
+      "u": 2.0,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.56,
+    "oX": 4.0,
+    "o2": 4.3,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga2-las-palmas-andorra-cf",
@@ -224,7 +316,24 @@
    "away": "Andorra CF",
    "o1": 2.2,
    "oX": 3.5,
-   "o2": 3.1
+   "o2": 3.1,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.56,
+      "u": 1.9,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.94,
+    "oX": 3.35,
+    "o2": 3.0,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "srb-zemun-radnicki-1923",
@@ -234,7 +343,24 @@
    "away": "Radnicki 1923",
    "o1": 3.9,
    "oX": 3.9,
-   "o2": 1.83
+   "o2": 1.83,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.66,
+      "u": 1.8,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 3.85,
+    "oX": 3.6,
+    "o2": 1.64,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "srb-radnik-vojvodina",
@@ -244,7 +370,24 @@
    "away": "Vojvodina",
    "o1": 4.0,
    "oX": 3.9,
-   "o2": 1.8
+   "o2": 1.8,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.49,
+      "u": 2.0,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 3.35,
+    "oX": 3.5,
+    "o2": 1.78,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "tur-samsunspor-genclerbirligi-sk",
@@ -274,7 +417,24 @@
    "away": "Tondela",
    "o1": 3.5,
    "oX": 3.25,
-   "o2": 2.1
+   "o2": 2.1,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.84,
+      "u": 1.62,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 3.1,
+    "oX": 3.2,
+    "o2": 1.96,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "sa-frosinone-parma",
@@ -304,7 +464,24 @@
    "away": "Union Berlin",
    "o1": 1.51,
    "oX": 4.75,
-   "o2": 6.0
+   "o2": 6.0,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.44,
+      "u": 2.1,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.42,
+    "oX": 4.5,
+    "o2": 5.3,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bl-hamburger-sv-bayern-munich",
@@ -314,7 +491,24 @@
    "away": "Bayern Munich",
    "o1": 9.5,
    "oX": 7.0,
-   "o2": 1.27
+   "o2": 1.27,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.27,
+      "u": 2.7,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 7.5,
+    "oX": 6.25,
+    "o2": 1.22,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bl-sc-paderborn-fc-schalke-04",
@@ -324,7 +518,24 @@
    "away": "FC Schalke 04",
    "o1": 2.6,
    "oX": 3.5,
-   "o2": 2.75
+   "o2": 2.75,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.52,
+      "u": 1.96,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 2.45,
+    "oX": 3.4,
+    "o2": 2.4,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bel-westerlo-raal-la-louviere",
@@ -334,7 +545,24 @@
    "away": "RAAL La Louvière",
    "o1": 1.98,
    "oX": 3.75,
-   "o2": 3.6
+   "o2": 3.6,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.62,
+      "u": 1.84,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.84,
+    "oX": 3.4,
+    "o2": 3.15,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "cha-birmingham-city-bolton-wanderers",
@@ -373,11 +601,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
-    "o1": 1.44,
-    "oX": 4.1,
-    "o2": 4.7,
-    "ou": {}
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.42,
+    "oX": 4.5,
+    "o2": 5.2,
+    "ou": {
+     "2.5": {
+      "o": 1.43,
+      "u": 2.1,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -417,11 +653,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
+    "asOf": "2026-11-28T06:13:18Z",
     "o1": 1.58,
     "oX": 3.6,
     "o2": 4.3,
-    "ou": {}
+    "ou": {
+     "2.5": {
+      "o": 1.72,
+      "u": 1.74,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -461,11 +705,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
+    "asOf": "2026-11-28T06:13:18Z",
     "o1": 2.0,
     "oX": 3.35,
     "o2": 2.85,
-    "ou": {}
+    "ou": {
+     "2.5": {
+      "o": 1.54,
+      "u": 1.94,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -505,11 +757,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
-    "o1": 2.05,
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 2.1,
     "oX": 3.15,
-    "o2": 2.9,
-    "ou": {}
+    "o2": 2.85,
+    "ou": {
+     "2.5": {
+      "o": 1.78,
+      "u": 1.66,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -549,11 +809,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
-    "o1": 1.96,
-    "oX": 3.15,
-    "o2": 3.15,
-    "ou": {}
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 2.0,
+    "oX": 3.0,
+    "o2": 3.1,
+    "ou": {
+     "2.5": {
+      "o": 2.0,
+      "u": 1.48,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -593,11 +861,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
+    "asOf": "2026-11-28T06:13:18Z",
     "o1": 1.88,
-    "oX": 3.4,
-    "o2": 3.1,
-    "ou": {}
+    "oX": 3.5,
+    "o2": 3.4,
+    "ou": {
+     "2.5": {
+      "o": 1.68,
+      "u": 1.78,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -637,11 +913,19 @@
    "mine": {
     "book": "Winamax (FR)",
     "bookKey": "winamax_fr",
-    "asOf": "2026-11-27T07:51:22Z",
-    "o1": 1.54,
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.58,
     "oX": 3.95,
-    "o2": 4.1,
-    "ou": {}
+    "o2": 4.3,
+    "ou": {
+     "2.5": {
+      "o": 1.58,
+      "u": 1.9,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "quoteSource": "oddspapi"
    }
   },
   {
@@ -682,7 +966,24 @@
    "away": "Mladost",
    "o1": 1.52,
    "oX": 4.2,
-   "o2": 5.75
+   "o2": 5.75,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.66,
+      "u": 1.8,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.47,
+    "oX": 3.9,
+    "o2": 4.8,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga-malaga-athletic-bilbao",
@@ -692,7 +993,24 @@
    "away": "Athletic Bilbao",
    "o1": 4.75,
    "oX": 3.9,
-   "o2": 1.75
+   "o2": 1.75,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.68,
+      "u": 1.78,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 4.3,
+    "oX": 3.7,
+    "o2": 1.64,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga2-albacete-tenerife",
@@ -702,7 +1020,24 @@
    "away": "Tenerife",
    "o1": 2.1,
    "oX": 3.3,
-   "o2": 3.6
+   "o2": 3.6,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.92,
+      "u": 1.56,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.96,
+    "oX": 3.1,
+    "o2": 3.2,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga2-cd-eldense-girona",
@@ -712,7 +1047,24 @@
    "away": "Girona",
    "o1": 3.1,
    "oX": 3.3,
-   "o2": 2.3
+   "o2": 2.3,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.86,
+      "u": 1.6,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 2.8,
+    "oX": 3.1,
+    "o2": 2.1,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "ere-excelsior-telstar",
@@ -732,7 +1084,24 @@
    "away": "Rio Ave FC",
    "o1": 1.68,
    "oX": 3.8,
-   "o2": 5.25
+   "o2": 5.25,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.7,
+      "u": 1.76,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.58,
+    "oX": 3.6,
+    "o2": 4.3,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "por-moreirense-fc-santa-clara",
@@ -742,7 +1111,24 @@
    "away": "Santa Clara",
    "o1": 3.2,
    "oX": 3.1,
-   "o2": 2.4
+   "o2": 2.4,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 2.0,
+      "u": 1.46,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 2.65,
+    "oX": 2.95,
+    "o2": 2.35,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "por2-sc-farense-leiria",
@@ -752,7 +1138,24 @@
    "away": "Leiria",
    "o1": 2.1,
    "oX": 3.55,
-   "o2": 3.2
+   "o2": 3.2,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.72,
+      "u": 1.72,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 2.0,
+    "oX": 3.25,
+    "o2": 2.9,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "tur-gazisehir-gaziantep-amedspor",
@@ -772,7 +1175,24 @@
    "away": "RC Lens",
    "o1": 4.75,
    "oX": 4.2,
-   "o2": 1.7
+   "o2": 1.7,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.56,
+      "u": 1.92,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 4.1,
+    "oX": 3.95,
+    "o2": 1.6,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "pol-slask-wroclaw-gks-katowice",
@@ -802,7 +1222,24 @@
    "away": "KV Mechelen",
    "o1": 1.95,
    "oX": 3.75,
-   "o2": 3.7
+   "o2": 3.7,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.58,
+      "u": 1.86,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.9,
+    "oX": 3.4,
+    "o2": 3.05,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bl-vfb-stuttgart-eintracht-frankfurt",
@@ -812,7 +1249,24 @@
    "away": "Eintracht Frankfurt",
    "o1": 1.83,
    "oX": 4.5,
-   "o2": 3.7
+   "o2": 3.7,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.21,
+      "u": 3.0,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.72,
+    "oX": 4.2,
+    "o2": 3.35,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga-elche-cf-atletico-madrid",
@@ -822,7 +1276,24 @@
    "away": "Atlético Madrid",
    "o1": 6.5,
    "oX": 4.8,
-   "o2": 1.49
+   "o2": 1.49,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.5,
+      "u": 2.0,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 5.4,
+    "oX": 4.5,
+    "o2": 1.41,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga2-sd-eibar-burgos-cf",
@@ -832,7 +1303,24 @@
    "away": "Burgos CF",
    "o1": 1.86,
    "oX": 3.4,
-   "o2": 4.5
+   "o2": 4.5,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.9,
+      "u": 1.56,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.74,
+    "oX": 3.2,
+    "o2": 3.8,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "pl-ipswich-town-aston-villa",
@@ -852,7 +1340,24 @@
    "away": "Radnicki Nis",
    "o1": 1.38,
    "oX": 4.8,
-   "o2": 8.0
+   "o2": 8.0,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.39,
+      "u": 2.25,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.28,
+    "oX": 4.8,
+    "o2": 6.25,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "ere-psv-eindhoven-go-ahead-eagles",
@@ -872,7 +1377,24 @@
    "away": "Alverca",
    "o1": 2.65,
    "oX": 3.2,
-   "o2": 2.85
+   "o2": 2.85,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.82,
+      "u": 1.64,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 2.4,
+    "oX": 3.05,
+    "o2": 2.55,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "por2-sporting-cp-b-amarante",
@@ -882,7 +1404,24 @@
    "away": "Amarante",
    "o1": 2.0,
    "oX": 3.35,
-   "o2": 3.65
+   "o2": 3.65,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.92,
+      "u": 1.56,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.9,
+    "oX": 3.2,
+    "o2": 3.3,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "por2-lusitania-fc-vizela",
@@ -922,7 +1461,24 @@
    "away": "Hannover 96",
    "o1": 3.0,
    "oX": 3.55,
-   "o2": 2.2
+   "o2": 2.2,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.52,
+      "u": 1.98,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 2.65,
+    "oX": 3.35,
+    "o2": 2.1,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bel-charleroi-sk-beveren",
@@ -932,7 +1488,24 @@
    "away": "SK Beveren",
    "o1": 1.53,
    "oX": 4.5,
-   "o2": 5.75
+   "o2": 5.75,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.54,
+      "u": 1.96,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.5,
+    "oX": 3.9,
+    "o2": 4.4,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "bel-lommel-sk-sv-zulte-waregem",
@@ -942,7 +1515,24 @@
    "away": "SV Zulte-Waregem",
    "o1": 2.65,
    "oX": 3.65,
-   "o2": 2.45
+   "o2": 2.45,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.46,
+      "u": 2.0,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 2.5,
+    "oX": 3.4,
+    "o2": 2.15,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "l1-le-havre-strasbourg",
@@ -952,7 +1542,24 @@
    "away": "Strasbourg",
    "o1": 3.25,
    "oX": 3.6,
-   "o2": 2.2
+   "o2": 2.2,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.58,
+      "u": 1.86,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 2.95,
+    "oX": 3.4,
+    "o2": 2.05,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "l1-le-mans-fc-lille",
@@ -962,7 +1569,24 @@
    "away": "Lille",
    "o1": 3.7,
    "oX": 3.45,
-   "o2": 2.05
+   "o2": 2.05,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.9,
+      "u": 1.58,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 3.45,
+    "oX": 3.2,
+    "o2": 1.96,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "l1-nice-troyes",
@@ -972,7 +1596,24 @@
    "away": "Troyes",
    "o1": 1.7,
    "oX": 4.1,
-   "o2": 5.0
+   "o2": 5.0,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.58,
+      "u": 1.86,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.62,
+    "oX": 3.85,
+    "o2": 4.2,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "l1-paris-saint-germain-lorient",
@@ -982,7 +1623,24 @@
    "away": "Lorient",
    "o1": 1.23,
    "oX": 7.0,
-   "o2": 15.0
+   "o2": 15.0,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.35,
+      "u": 2.35,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.14,
+    "oX": 7.5,
+    "o2": 10.5,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "sa-inter-milan-genoa",
@@ -1012,7 +1670,24 @@
    "away": "Alavés",
    "o1": 1.13,
    "oX": 10.5,
-   "o2": 18.0
+   "o2": 18.0,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.23,
+      "u": 2.95,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.08,
+    "oX": 9.5,
+    "o2": 13.5,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "liga2-real-valladolid-cf-real-sociedad-b",
@@ -1022,7 +1697,24 @@
    "away": "Real Sociedad B",
    "o1": 1.8,
    "oX": 4.0,
-   "o2": 4.5
+   "o2": 4.5,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.52,
+      "u": 1.96,
+      "asOf": "2026-11-28T06:13:18Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:18Z",
+    "o1": 1.66,
+    "oX": 3.6,
+    "o2": 3.75,
+    "quoteSource": "oddspapi"
+   }
   },
   {
    "id": "por-vitoria-guimaraes-cf-estrela",
@@ -1032,8 +1724,25 @@
    "away": "CF Estrela",
    "o1": 1.71,
    "oX": 3.8,
-   "o2": 5.0
+   "o2": 5.0,
+   "mine": {
+    "book": "Winamax France",
+    "bookKey": "winamax_fr",
+    "ou": {
+     "2.5": {
+      "o": 1.6,
+      "u": 1.86,
+      "asOf": "2026-11-28T06:13:21Z",
+      "quoteSource": "oddspapi"
+     }
+    },
+    "asOf": "2026-11-28T06:13:21Z",
+    "o1": 1.64,
+    "oX": 3.55,
+    "o2": 4.0,
+    "quoteSource": "oddspapi"
+   }
   }
  ],
- "marketsUpdatedAt": "2026-11-27T07:52:15.545536+00:00"
+ "marketsUpdatedAt": "2026-11-28T06:13:16.041502+00:00"
 }
