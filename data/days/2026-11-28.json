@@ -1342,7 +1342,13 @@
     "oX": 3.95,
     "o2": 1.6,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-5",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:53:04.923962+00:00"
   },
   {
    "id": "pol-slask-wroclaw-gks-katowice",
@@ -1895,5 +1901,5 @@
   }
  ],
  "marketsUpdatedAt": "2026-11-28T06:13:16.041502+00:00",
- "scoresUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
+ "scoresUpdatedAt": "2026-11-28T18:53:04.923962+00:00"
 }
