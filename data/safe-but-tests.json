@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "manifest": {
     "rules": {
-      "version": "safe-but-v2",
+      "version": "btts-v1",
       "sport": "football",
       "mode": "paper",
       "realMoneyEnabled": false,
@@ -10,14 +10,13 @@
       "currency": "EUR",
       "minOdds": 1.5,
       "maxOdds": 2,
+      "minLegs": 2,
+      "maxLegs": 3,
       "minLegProbability": 0.6,
       "minTicketProbability": 0.5,
-      "maxLegs": 3,
-      "maxPool": 14,
-      "oddsHaircut": 0.05,
-      "quoteMaxAgeMinutes": 240,
-      "markets": "plus / moins de X,5 buts (lignes entières et quarts exclus)",
-      "quotes": "cote de buts Winamax relevée (OddsPapi) ; à défaut, cote moyenne des bookmakers européens moins 5 %"
+      "quoteMaxAgeMinutes": 60,
+      "markets": "les deux équipes marquent : oui, sur au moins deux matchs distincts",
+      "quotes": "cotes Winamax France collectées, aucune estimation"
     },
     "startedAt": "2026-11-22T06:33:53.379Z",
     "history": [
@@ -41,6 +40,27 @@
           "quotes": "cote moyenne des bookmakers européens moins 5 %, faute de cote de buts Winamax chez le fournisseur ; à vérifier dans l’appli Winamax"
         },
         "until": "2026-11-28T06:39:39.224Z"
+      },
+      {
+        "rules": {
+          "version": "safe-but-v2",
+          "sport": "football",
+          "mode": "paper",
+          "realMoneyEnabled": false,
+          "stake": 100,
+          "currency": "EUR",
+          "minOdds": 1.5,
+          "maxOdds": 2,
+          "minLegProbability": 0.6,
+          "minTicketProbability": 0.5,
+          "maxLegs": 3,
+          "maxPool": 14,
+          "oddsHaircut": 0.05,
+          "quoteMaxAgeMinutes": 240,
+          "markets": "plus / moins de X,5 buts (lignes entières et quarts exclus)",
+          "quotes": "cote de buts Winamax relevée (OddsPapi) ; à défaut, cote moyenne des bookmakers européens moins 5 %"
+        },
+        "until": "2026-11-28T19:37:17.443Z"
       }
     ]
   },

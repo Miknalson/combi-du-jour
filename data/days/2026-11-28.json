@@ -1401,7 +1401,13 @@
     "oX": 3.4,
     "o2": 3.05,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "3-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T19:37:14.171147+00:00"
   },
   {
    "id": "bl-vfb-stuttgart-eintracht-frankfurt",
@@ -1428,7 +1434,13 @@
     "oX": 4.2,
     "o2": 3.35,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T19:37:14.171147+00:00"
   },
   {
    "id": "liga-elche-cf-atletico-madrid",
@@ -1455,7 +1467,13 @@
     "oX": 4.5,
     "o2": 1.41,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-3",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T19:37:14.171147+00:00"
   },
   {
    "id": "liga2-sd-eibar-burgos-cf",
@@ -1492,7 +1510,13 @@
    "away": "Aston Villa",
    "o1": 3.6,
    "oX": 3.9,
-   "o2": 2.0
+   "o2": 2.0,
+   "score": "2-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T19:37:14.171147+00:00"
   },
   {
    "id": "srb-partizan-radnicki-nis",
@@ -1529,7 +1553,13 @@
    "away": "Go Ahead Eagles",
    "o1": 1.24,
    "oX": 7.25,
-   "o2": 11.0
+   "o2": 11.0,
+   "score": "4-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T19:37:14.171147+00:00"
   },
   {
    "id": "por-academico-de-viseu-alverca",
@@ -1907,5 +1937,5 @@
   }
  ],
  "marketsUpdatedAt": "2026-11-28T06:13:16.041502+00:00",
- "scoresUpdatedAt": "2026-11-28T19:03:44.380162+00:00"
+ "scoresUpdatedAt": "2026-11-28T19:37:14.171147+00:00"
 }

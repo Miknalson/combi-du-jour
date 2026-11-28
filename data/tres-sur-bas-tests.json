@@ -34,7 +34,7 @@
       "unitStake": 1,
       "simulatedStake": 50,
       "currency": "EUR",
-      "status": "pending",
+      "status": "won",
       "minOdds": 1.2,
       "maxOdds": 1.35,
       "odds": 1.21,
@@ -73,7 +73,9 @@
           "partial": true,
           "matches": 39
         }
-      ]
+      ],
+      "resultSource": "application-football-score",
+      "resultHistory": []
     }
   ]
 }
