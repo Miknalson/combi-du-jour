@@ -267,3 +267,5 @@ h1,h2,h3{text-transform:none;letter-spacing:-.035em;font-weight:700}h1{line-heig
 .live-badge.ended{background:var(--surface-2);color:var(--ink-2)}
 @keyframes livepulse{50%{opacity:.25}}
 @media (prefers-reduced-motion:reduce){.live-badge i{animation:none}}
+
+.tt-noreel{margin:8px 0 12px;padding:10px 12px;border-left:4px solid #f5b301;background:rgba(245,179,1,.08);border-radius:8px}

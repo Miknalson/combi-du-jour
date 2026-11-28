@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css?v=live3">
+<link rel="stylesheet" href="style.css?v=live4">
 </head>
 <body><nav aria-label="Alertes" style="max-width:1120px;margin:auto;padding:12px 20px"><a href="notifications.html">🔔 Mes alertes Algo / Safe</a></nav>
 <div class="wrap">
@@ -29,6 +29,7 @@
 <nav class="sport-tabs" aria-label="Choisir un sport"><a href="./" aria-current="page">Football</a><a href="sports.html?sport=basket">Basket</a><a href="sports.html?sport=tennis">Tennis</a><a href="safe.html">Safe du jour</a></nav>
 
   <section class="today-tickets" id="todayTickets" aria-label="Tickets du jour" aria-live="polite"><div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Chargement des tickets…</p></section>
+  <section class="today-bilan" id="realBets" aria-label="Mes vrais paris"></section>
   <section class="today-bilan" id="todayBilan" aria-label="Bilan des tickets"></section>
 
   <div class="more-label">Pour aller plus loin</div>
@@ -160,7 +161,8 @@
 <script src="model.js"></script>
 <script src="model-view.js"></script>
 <script src="live-scores.js?v=2"></script>
-<script src="today-tickets.js?v=9"></script>
+<script src="bet-results.js"></script>
+<script src="today-tickets.js?v=10"></script>
 <script>
 (function(){
 "use strict";
