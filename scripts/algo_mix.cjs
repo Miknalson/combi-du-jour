@@ -1,11 +1,12 @@
 // Ticket « Algo » mélangé fictif (victoires + buts + les deux marquent) : enregistré une fois par jour avant match, puis réglé avec les scores de l'appli.
-const fs=require('node:fs'),path=require('node:path'),A=require('../algo-mix-engine'),Safe=require('../safe-multi-engine'),News=require('../news-filter');
+const fs=require('node:fs'),path=require('node:path'),Spread=require('../ticket-spread'),A=require('../algo-mix-engine'),Safe=require('../safe-multi-engine'),News=require('../news-filter');
 const root=path.resolve(__dirname,'..'),file=path.join(root,'data/algo-mix-tests.json'),now=Number(process.env.ALGO_MIX_NOW)||Date.now();
 function read(f,fallback){try{return JSON.parse(fs.readFileSync(f,'utf8'));}catch(e){return fallback;}}
 let journal=read(file,{schemaVersion:1,manifest:{rules:A.rules,startedAt:new Date(now).toISOString()},records:[]});
 const today=Safe.paris(now),news=read(path.join(root,'data/news-checks.json'),{days:{}});
 // Matchs écartés par le filtre actu : retirés des données d'entrée seulement, comme pour les autres tickets.
-const doc=News.apply(read(path.join(root,'data/sports/football-goals.json'),null),News.excluded((news.days||{})[today]),'football');
+// Puis les matchs déjà pris par un ticket du jour : un favori raté ne fait plus tout perdre.
+const doc=Spread.apply(News.apply(read(path.join(root,'data/sports/football-goals.json'),null),News.excluded((news.days||{})[today]),'football'),Spread.usedToday(root,today));
 const fresh=doc&&doc.status==='ok'&&now-Date.parse(doc.updatedAt)>=0&&now-Date.parse(doc.updatedAt)<=3600000;
 let built=null;
 if(fresh){built=A.build(doc,now);journal=A.append(journal,built,now);}

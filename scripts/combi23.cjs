@@ -1,11 +1,12 @@
 // Ticket « Combiné 2 à 3 » fictif : enregistré une fois par jour avant match, puis réglé avec les scores de l'appli.
-const fs=require('node:fs'),path=require('node:path'),C=require('../combi23-engine'),Safe=require('../safe-multi-engine'),News=require('../news-filter');
+const fs=require('node:fs'),path=require('node:path'),Spread=require('../ticket-spread'),C=require('../combi23-engine'),Safe=require('../safe-multi-engine'),News=require('../news-filter');
 const root=path.resolve(__dirname,'..'),file=path.join(root,'data/combi23-tests.json'),now=Number(process.env.COMBI23_NOW)||Date.now();
 function read(f,fallback){try{return JSON.parse(fs.readFileSync(f,'utf8'));}catch(e){return fallback;}}
 let journal=read(file,{schemaVersion:1,manifest:{rules:C.rules,startedAt:new Date(now).toISOString()},records:[]});
 const today=Safe.paris(now),news=read(path.join(root,'data/news-checks.json'),{days:{}});
 // Matchs écartés par le filtre actu : retirés des données d'entrée seulement, comme pour le Safe but.
-const doc=News.apply(read(path.join(root,'data/sports/football.json'),null),News.excluded((news.days||{})[today]),'football');
+// Puis les matchs déjà pris par un ticket du jour (Très sûr, Safe, Algo) : un favori raté ne fait plus tout perdre.
+const doc=Spread.apply(News.apply(read(path.join(root,'data/sports/football.json'),null),News.excluded((news.days||{})[today]),'football'),Spread.usedToday(root,today));
 const fresh=doc&&doc.status==='ok'&&now-Date.parse(doc.updatedAt)>=0&&now-Date.parse(doc.updatedAt)<=3600000;
 let built=null;
 if(fresh){built=C.build(doc,now);journal=C.append(journal,built,now);}

@@ -174,21 +174,22 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/news_filter.cjs
-      - name: Consigner les tests fictifs sans passer d’ordre
-        continue-on-error: true
-        run: node scripts/paper_multi_tests.cjs
+      # Ordre = priorité : un match pris par un ticket est retiré des suivants (ticket-spread.js).
       - name: Consigner le ticket Très sûr fictif
         continue-on-error: true
         run: node scripts/tres_sur.cjs
-      - name: Consigner le ticket Safe but fictif
+      - name: Consigner les tests fictifs sans passer d’ordre
         continue-on-error: true
-        run: node scripts/safe_but.cjs
+        run: node scripts/paper_multi_tests.cjs
       - name: Consigner le ticket Combiné 2 à 3 fictif
         continue-on-error: true
         run: node scripts/combi23.cjs
       - name: Consigner le ticket Algo fictif (victoires + buts + les deux marquent)
         continue-on-error: true
         run: node scripts/algo_mix.cjs
+      - name: Consigner le ticket Safe but fictif
+        continue-on-error: true
+        run: node scripts/safe_but.cjs
       - name: Notifier les propositions sans passer de pari
         if: github.event.schedule != '25 23 * * *' && github.event.schedule != '7,22,37,52 11-22 * * *' && !(github.event_name == 'push' && startsWith(github.event.head_commit.message, 'Scores du '))
         id: notifications
