@@ -1368,7 +1368,13 @@
    "away": "Lazio",
    "o1": 3.5,
    "oX": 3.4,
-   "o2": 2.15
+   "o2": 2.15,
+   "score": "1-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T19:03:44.380162+00:00"
   },
   {
    "id": "bel-cercle-brugge-ksv-kv-mechelen",
@@ -1901,5 +1907,5 @@
   }
  ],
  "marketsUpdatedAt": "2026-11-28T06:13:16.041502+00:00",
- "scoresUpdatedAt": "2026-11-28T18:53:04.923962+00:00"
+ "scoresUpdatedAt": "2026-11-28T19:03:44.380162+00:00"
 }
