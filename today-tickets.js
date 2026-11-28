@@ -90,11 +90,11 @@ function card(r,res,today){
   var asOf=r.legs.map(function(l){return Date.parse(l.asOf);}).filter(Number.isFinite).sort()[0];
   return '<article class="tt-card '+k.tone+'">'+
     '<header class="tt-head"><div><span class="tt-kind">'+esc(k.name+sport)+'</span><span class="tt-range">'+esc(k.range)+'</span></div><span class="tt-status '+st[1]+'">'+st[0]+'</span></header>'+
-    '<div class="tt-figs"><div><span class="tt-lab">'+(r.method==='safe_but'||r.method==='simu'&&r.legs.some(function(l){return l.est;})?'Cote estimée':'Cote Winamax')+'</span><span class="tt-big mono">'+num(r.odds)+'</span></div>'+
+    '<div class="tt-figs"><div><span class="tt-lab">'+((r.method==='safe_but'||r.method==='simu')&&r.legs.some(function(l){return l.est;})?'Cote estimée':'Cote Winamax')+'</span><span class="tt-big mono">'+num(r.odds)+'</span></div>'+
     '<div><span class="tt-lab">Chance estimée</span><span class="tt-mid mono">'+Math.round(100*r.probability)+' %</span></div>'+
     '<div><span class="tt-lab">Mise fictive</span><span class="tt-mid mono">'+esc(r.simulatedStake)+' €</span></div></div>'+
     '<ul class="tt-legs">'+legs+'</ul>'+
-    (r.method==='simu'&&r.legs.some(function(l){return l.est;})?'<p class="tt-foot">Les cotes avec ≈ sont estimées : notre source ne donne pas les handicaps Winamax. Vérifie la cote dans l’appli Winamax avant de jouer.</p>':r.method==='safe_but'?'<p class="tt-foot">Cote moyenne du marché moins 5 % : notre source ne donne pas les cotes de buts Winamax. Vérifie la cote dans l’appli Winamax.</p>':asOf?'<p class="tt-foot">Cotes Winamax relevées à '+esc(hour(new Date(asOf).toISOString()))+'. Vérifie-les dans l’appli avant de jouer.</p>':'')+
+    (r.method==='simu'&&r.legs.some(function(l){return l.est;})?'<p class="tt-foot">Les cotes avec ≈ sont estimées : notre source ne donne pas les handicaps Winamax. Vérifie la cote dans l’appli Winamax avant de jouer.</p>':r.method==='safe_but'&&r.legs.some(function(l){return l.est;})?'<p class="tt-foot">Cote moyenne du marché moins 5 % : notre source ne donne pas les cotes de buts Winamax. Vérifie la cote dans l’appli Winamax.</p>':asOf?'<p class="tt-foot">Cotes Winamax relevées à '+esc(hour(new Date(asOf).toISOString()))+'. Vérifie-les dans l’appli avant de jouer.</p>':'')+
     (res.status==='pending'?playForm(r):'')+
     '</article>';
 }

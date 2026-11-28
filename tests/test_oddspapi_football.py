@@ -68,7 +68,8 @@ class FootballGoals(unittest.TestCase):
         a = next(m for m in goals if m['id'] == 'football-a')
         self.assertEqual((a['home'], a['away'], a['kickoff']), ('Manchester City', 'Leeds United', '2026-11-23T20:00:00Z'))
         fam = {g['family']: g for g in a['markets']}
-        self.assertEqual(sorted(fam), ['btts', 'h2h', 'totals'])  # la ligne 3,5 et la mi-temps sont ignorées
+        self.assertEqual(sorted(fam), ['btts', 'h2h', 'totals'])  # la ligne 3,5 et la mi-temps restent hors des marchés
+        self.assertEqual(a['extraTotals'], {'3.5': {'o': 2.9, 'u': 1.35}})  # 3,5 gardée à part pour le Safe but
         self.assertEqual([o['code'] for o in fam['totals']['outcomes']], ['O2.5', 'U2.5'])
         self.assertEqual(fam['totals']['line'], 2.5)
         self.assertEqual([(o['code'], o['odds']) for o in fam['btts']['outcomes']], [('BTTS_Y', 1.8), ('BTTS_N', 1.95)])
@@ -101,6 +102,7 @@ class FootballGoals(unittest.TestCase):
         self.assertEqual(sorted(g['family'] for g in m['markets']), ['h2h', 'totals'])
         mine = json.loads((C.DATA / 'days' / '2026-11-23.json').read_text())['matches'][0]['mine']
         self.assertEqual((mine['o1'], mine['oX'], mine['o2'], mine['ou']['2.5']['o']), (1.5, 4.2, 6.0, 1.7))
+        self.assertEqual((mine['ou']['3.5']['o'], mine['ou']['3.5']['u'], mine['ou']['3.5']['quoteSource']), (2.9, 1.35, 'oddspapi'))
 
     def test_night_run_and_empty_result_do_not_block_the_day(self):
         # 26/11 : le relevé de 00:32 (Paris) n'a rien trouvé et a marqué la journée comme faite -> aucun ticket.
