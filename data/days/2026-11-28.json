@@ -589,7 +589,13 @@
     "oX": 3.4,
     "o2": 2.4,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "8-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "bel-westerlo-raal-la-louviere",
@@ -616,7 +622,13 @@
     "oX": 3.4,
     "o2": 3.15,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "cha-birmingham-city-bolton-wanderers",
@@ -668,7 +680,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-4",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "cha-west-bromwich-albion-bristol-city",
@@ -720,7 +738,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "cha-millwall-burnley",
@@ -772,7 +796,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "cha-derby-county-watford",
@@ -824,7 +854,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "cha-wrexham-afc-portsmouth",
@@ -876,7 +912,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "cha-queens-park-rangers-sheffield-united",
@@ -928,7 +970,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "cha-west-ham-united-stoke-city",
@@ -980,7 +1028,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "pl-leeds-united-coventry-city",
@@ -990,7 +1044,13 @@
    "away": "Coventry City",
    "o1": 1.48,
    "oX": 4.75,
-   "o2": 6.5
+   "o2": 6.5,
+   "score": "3-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "pl-manchester-united-brentford",
@@ -1000,7 +1060,13 @@
    "away": "Brentford",
    "o1": 2.15,
    "oX": 3.8,
-   "o2": 3.25
+   "o2": 3.25,
+   "score": "0-4",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "rou-corvinul-farul-constanta",
@@ -1091,7 +1157,13 @@
     "oX": 3.1,
     "o2": 3.2,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "4-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "liga2-cd-eldense-girona",
@@ -1118,7 +1190,13 @@
     "oX": 3.1,
     "o2": 2.1,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "3-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "ere-excelsior-telstar",
@@ -1128,7 +1206,13 @@
    "away": "Telstar",
    "o1": 2.0,
    "oX": 3.65,
-   "o2": 3.9
+   "o2": 3.9,
+   "score": "1-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "por-arouca-rio-ave-fc",
@@ -1155,7 +1239,13 @@
     "oX": 3.6,
     "o2": 4.3,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "por-moreirense-fc-santa-clara",
@@ -1182,7 +1272,13 @@
     "oX": 2.95,
     "o2": 2.35,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-2",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
   },
   {
    "id": "por2-sc-farense-leiria",
@@ -1799,5 +1895,5 @@
   }
  ],
  "marketsUpdatedAt": "2026-11-28T06:13:16.041502+00:00",
- "scoresUpdatedAt": "2026-11-28T16:23:20.786863+00:00"
+ "scoresUpdatedAt": "2026-11-28T18:51:07.613572+00:00"
 }
