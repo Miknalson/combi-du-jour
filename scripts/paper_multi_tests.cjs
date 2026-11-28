@@ -1,7 +1,7 @@
 // Automatic simulated exposure only: never sends orders, credentials or personal bets.
-const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),P=require('../paper-multi-engine'),Safe=require('../safe-multi-engine'),Base=require('../paper-engine');
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),P=require('../paper-multi-engine'),Safe=require('../safe-multi-engine'),Base=require('../paper-engine'),Spread=require('../ticket-spread');
 const root=path.resolve(__dirname,'..'),file=path.join(root,'data/paper-tests-v2.json'),statusFile=path.join(root,'data/paper-status-v2.json'),now=Date.now();
-const names=['sport-catalog.js','safe-engine.js','paper-engine.js','safe-multi-engine.js','paper-multi-engine.js','scripts/paper_multi_tests.cjs','scripts/update_sports.py'];
+const names=['sport-catalog.js','safe-engine.js','paper-engine.js','safe-multi-engine.js','paper-multi-engine.js','ticket-spread.js','scripts/paper_multi_tests.cjs','scripts/update_sports.py'];
 function hash(name){return crypto.createHash('sha256').update(fs.readFileSync(path.join(root,name))).digest('hex');}function save(name,data){fs.writeFileSync(name,JSON.stringify(data,null,2)+'\n');}
 const hashes=Object.fromEntries(names.map(n=>[n,hash(n)]));
 const old=fs.existsSync(file)?JSON.parse(fs.readFileSync(file,'utf8')):{schemaVersion:2,manifest:{rules:P.rules,sourceHashes:hashes,startedAt:new Date(now).toISOString()},records:[]};
@@ -12,7 +12,8 @@ if(JSON.stringify(old.manifest.rules)===JSON.stringify(P.rules)&&changed().lengt
  if(a){old.manifest.amendments=done.concat([{id:a.id,appliedAt:new Date(now).toISOString(),files:changed(),reason:a.reason}]);old.manifest.sourceHashes=hashes;}}
 // Changement de règles voulu (pas une dérive) : Safe foot 1,50–2,00 → 1,70–2,00 le 25/11/2026 pour ne plus doubler le Très sûr.
 // Les tickets déjà enregistrés sont gardés (champ version = safe-multi-v2) ; l'ancien manifeste est archivé dans previous.
-const MIGRATIONS=[{id:'2026-11-25-safe-foot-1-70',from:'paper-multisport-v2',to:'paper-multisport-v3',reason:'Safe foot relevé à 1,70–2,00 (ticket 50 % mini, sélections 60 % mini) car le Très sûr passe à 1,50–1,70. Algo et Safe des autres sports inchangés.'}];
+const MIGRATIONS=[{id:'2026-11-25-safe-foot-1-70',from:'paper-multisport-v2',to:'paper-multisport-v3',reason:'Safe foot relevé à 1,70–2,00 (ticket 50 % mini, sélections 60 % mini) car le Très sûr passe à 1,50–1,70. Algo et Safe des autres sports inchangés.'},
+ {id:'2026-11-28-tickets-sans-match-commun',from:'paper-multisport-v3',to:'paper-multisport-v4',reason:'Plus de match en commun entre les tickets du jour : le Safe écarte les matchs du Très sûr, l’Algo ceux du Très sûr et du Safe (Bayern 25/11, Ferencváros 26/11, Groningen 27/11 avaient fait perdre tous les tickets). Fourchettes, cotes et probabilités inchangées.'}];
 {const m=MIGRATIONS.find(m=>old.manifest.rules&&old.manifest.rules.version===m.from&&P.rules.version===m.to);
  if(m){const prev=old.manifest;old.manifest={rules:P.rules,sourceHashes:hashes,startedAt:new Date(now).toISOString(),migration:{id:m.id,appliedAt:new Date(now).toISOString(),reason:m.reason},previous:(prev.previous||[]).concat([{rules:prev.rules,sourceHashes:prev.sourceHashes,startedAt:prev.startedAt,amendments:prev.amendments||[],migration:prev.migration||null,endedAt:new Date(now).toISOString()}])};}}
 function scoresFor(j){const out=[];for(const day of new Set(j.records.map(r=>r.day))){try{out.push(...JSON.parse(fs.readFileSync(path.join(root,'data/days',day+'.json'),'utf8')).matches);}catch(e){}}return out;}
@@ -22,7 +23,7 @@ if(JSON.stringify(old.manifest.rules)!==JSON.stringify(P.rules)||JSON.stringify(
  save(statusFile,{status:'suspended',updatedAt:new Date(now).toISOString(),message:'Version ou collecte modifiée. Journal v2 conservé et tickets en attente réglés ; aucune nouvelle mise fictive enregistrée.'});process.exit(1);}
 const docs=Safe.SPORTS.map(s=>{try{return JSON.parse(fs.readFileSync(path.join(root,'data/sports',s+'.json'),'utf8'));}catch(e){return null;}});
 const available=docs.filter(d=>d&&d.status==='ok'&&Safe.SPORTS.includes(d.sport)&&now-Date.parse(d.updatedAt)>=0&&now-Date.parse(d.updatedAt)<=3600000&&(!d.partial||(d.matches||[]).some(m=>Safe.paris(m.kickoff)===Safe.paris(now)&&now-Date.parse(m.asOf)>=0&&now-Date.parse(m.asOf)<=3600000))).map(d=>d.sport);
-let journal=P.append(old,P.build(docs.map(d=>d&&available.includes(d.sport)?d:null),now),now,available),scores=[];
+let journal=P.append(old,P.build(docs.map(d=>d&&available.includes(d.sport)?d:null),now,Spread.usedToday(root,Safe.paris(now))),now,available),scores=[];
 for(const day of new Set(journal.records.map(r=>r.day))){try{scores.push(...JSON.parse(fs.readFileSync(path.join(root,'data/days',day+'.json'),'utf8')).matches);}catch(e){}}
 journal.records=journal.records.map(r=>P.settle(r,scores,Safe.paris(now)));save(file,journal);
 save(statusFile,{status:available.length?'running':'waiting_for_fresh_quotes',updatedAt:new Date(now).toISOString(),availableSports:available,sourceStatus:docs.filter(Boolean).map(d=>({sport:d.sport,status:d.status,partial:!!d.partial,matches:(d.matches||[]).length,femaleMatches:d.femaleMatches||0})),message:'100 € fictifs par Safe, 50 € fictifs par Algo. Un seul premier ticket par catégorie et par jour. Aucun ordre réel ni reprise des mises anciennes.'});

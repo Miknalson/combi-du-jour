@@ -3,10 +3,11 @@
 // L'algorithme ne change pas : les matchs écartés sont retirés des données d'entrée, puis le ticket est recalculé.
 // Sans clé OPENAI_API_KEY ou en cas d'erreur, rien n'est écarté et les tickets sont faits comme avant.
 const fs=require('node:fs'),path=require('node:path');
-const N=require('../news-filter'),T=require('../tres-sur-engine'),P=require('../paper-multi-engine'),B=require('../safe-but-engine'),Safe=require('../safe-multi-engine'),AM=require('../algo-mix-engine');
+const N=require('../news-filter'),T=require('../tres-sur-engine'),P=require('../paper-multi-engine'),B=require('../safe-but-engine'),Safe=require('../safe-multi-engine'),AM=require('../algo-mix-engine'),C=require('../combi23-engine'),Spread=require('../ticket-spread');
 const root=process.env.NEWS_ROOT||path.resolve(__dirname,'..'),now=Number(process.env.NEWS_NOW)||Date.now(),today=N.paris(now);
 const storeFile=path.join(root,'data/news-checks.json');
 function read(f,fallback){try{return JSON.parse(fs.readFileSync(f,'utf8'));}catch(e){return fallback;}}
+let goals=null;
 function save(f,d){fs.writeFileSync(f,JSON.stringify(d,null,2)+'\n');}
 
 // Modèles essayés dans l'ordre : si OpenAI ne connaît pas l'un d'eux, on passe au suivant.
@@ -40,13 +41,18 @@ async function ask(list){
 }
 
 // Sélections que chaque ticket encore à figer aujourd'hui prendrait avec les données filtrées.
+// Même enchaînement que le workflow (ticket-spread.js) : chaque ticket écarte les matchs déjà pris par les précédents.
 function pendingLegs(sports,dayDoc,list,journals){
   const legs=[],f=s=>N.apply(sports[s],list,s);
-  if(!journals.tres.records.some(r=>r.id===T.rules.version+'|'+today+'|football')){const t=T.build(f('football'),now).ticket;if(t)legs.push(...t.legs);}
-  const built=P.build(Safe.SPORTS.map(f),now);
-  built.slots.forEach(slot=>{const id=P.rules.version+'|'+built.day+'|'+slot.method+'|'+slot.sport;if(slot.ticket&&!journals.v2.records.some(r=>r.id===id))legs.push(...slot.ticket.legs);});
-  if(!journals.but.records.some(r=>r.id===B.rules.version+'|'+today+'|football')){const t=B.build(N.apply(dayDoc,list,'football'),now).ticket;if(t)legs.push(...t.legs);}
-  if(journals.mix&&!journals.mix.records.some(r=>r.id===AM.rules.version+'|'+today+'|football')){const t=AM.build(N.apply(journals.goals,list,'football'),now).ticket;if(t)legs.push(...t.legs);}
+  let used=Spread.legsOf([].concat(...Object.values(journals).map(j=>j&&j.records||[])),today);
+  const take=t=>{if(t){legs.push(...t.legs);used=used.concat(Spread.ticketLegs(t));}};
+  const foot=d=>Spread.apply(d,used);
+  if(!journals.tres.records.some(r=>r.id===T.rules.version+'|'+today+'|football'))take(T.build(foot(f('football')),now).ticket);
+  const built=P.build(Safe.SPORTS.map(f),now,used);
+  built.slots.forEach(slot=>{const id=P.rules.version+'|'+built.day+'|'+slot.method+'|'+slot.sport;if(slot.ticket&&!journals.v2.records.some(r=>r.id===id))take(slot.ticket);});
+  if(!journals.c23.records.some(r=>r.id===C.rules.version+'|'+today+'|football'))take(C.build(foot(f('football')),now).ticket);
+  if(journals.mix&&!journals.mix.records.some(r=>r.id===AM.rules.version+'|'+today+'|football'))take(AM.build(foot(N.apply(goals,list,'football')),now).ticket);
+  if(!journals.but.records.some(r=>r.id===B.rules.version+'|'+today+'|football'))take(B.build(foot(N.apply(dayDoc,list,'football')),now).ticket);
   return legs;
 }
 
@@ -55,7 +61,8 @@ function pendingLegs(sports,dayDoc,list,journals){
   const day=store.days[today]=store.days[today]||{checks:{},calls:[]};
   const sports=Object.fromEntries(Safe.SPORTS.map(s=>[s,read(path.join(root,'data/sports',s+'.json'),null)]));
   const dayDoc=read(path.join(root,'data/days',today+'.json'),null);
-  const journals={tres:read(path.join(root,'data/tres-sur-tests.json'),{records:[]}),v2:read(path.join(root,'data/paper-tests-v2.json'),{records:[]}),but:read(path.join(root,'data/safe-but-tests.json'),{records:[]}),mix:read(path.join(root,'data/algo-mix-tests.json'),{records:[]}),goals:read(path.join(root,'data/sports/football-goals.json'),null)};
+  const journals={tres:read(path.join(root,'data/tres-sur-tests.json'),{records:[]}),v2:read(path.join(root,'data/paper-tests-v2.json'),{records:[]}),but:read(path.join(root,'data/safe-but-tests.json'),{records:[]}),mix:read(path.join(root,'data/algo-mix-tests.json'),{records:[]}),c23:read(path.join(root,'data/combi23-tests.json'),{records:[]})};
+  goals=read(path.join(root,'data/sports/football-goals.json'),null);
   const key=process.env.OPENAI_API_KEY;
   for(let round=0;round<N.rules.maxRounds;round++){
     const list=N.toCheck(pendingLegs(sports,dayDoc,N.excluded(day),journals),day,now);
