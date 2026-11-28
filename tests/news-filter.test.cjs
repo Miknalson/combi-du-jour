@@ -44,10 +44,10 @@ test('Script : sans clé rien n’est écarté ; avec un verdict douteux le matc
  assert.equal(JSON.parse(fs.readFileSync(path.join(root,'data/sports/football.json'))).matches.length,2);
  run({OPENAI_API_KEY:'test',NEWS_FAKE_TEXT:'{"matches":[{"id":"m1","verdict":"douteux","raison":"Équipe B annoncée"},{"id":"m2","verdict":"ok","raison":"RAS"}]}'});
  const left=JSON.parse(fs.readFileSync(path.join(root,'data/sports/football.json')));
- // Le faux verdict écarte toujours le 1er match proposé : Juventus, puis le ticket est recalculé avec Bologna, écarté à son tour.
- assert.deepEqual(left.newsExcluded.map(x=>x.home),['Juventus','Bologna']);assert.equal(left.matches.length,0);assert.equal(left.newsExcluded[0].reason,'Équipe B annoncée');
+ // Tickets sans match commun (ticket-spread.js) : les deux matchs sont proposés dès le 1er appel ; le faux verdict écarte le 1er (Juventus), Bologna est ok.
+ assert.deepEqual(left.newsExcluded.map(x=>x.home),['Juventus']);assert.equal(left.matches.length,1);assert.equal(left.newsExcluded[0].reason,'Équipe B annoncée');
  const store=JSON.parse(fs.readFileSync(path.join(root,'data/news-checks.json'))),day=store.days['2026-11-22'];
- assert.equal(N.excluded(day).length,2);assert.equal(day.calls.length,2);
+ assert.equal(N.excluded(day).length,1);assert.equal(day.calls.length,1);assert.equal(day.calls[0].matches,2);
  assert.match(run({OPENAI_API_KEY:'test',NEWS_FAKE_TEXT:'invalide'}),/^(?!.*vérifié)/s,'rien de nouveau à vérifier : pas d’appel');});
 
 test('« Non vérifié » n’est jamais un ok : revérifié une fois, puis écarté par prudence (cas Lille – Bayern du 25/11)',()=>{
