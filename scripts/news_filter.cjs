@@ -47,7 +47,7 @@ function pendingLegs(sports,dayDoc,list,journals){
   let used=Spread.legsOf([].concat(...Object.values(journals).map(j=>j&&j.records||[])),today);
   const take=t=>{if(t){legs.push(...t.legs);used=used.concat(Spread.ticketLegs(t));}};
   const foot=d=>Spread.apply(d,used);
-  if(!journals.jour.records.some(r=>r.id===J.rules.version+'|'+today+'|football'))take(J.build([foot(f('football')),foot(N.apply(goals,list,'football'))],now).ticket);
+  if(!journals.jour.records.some(r=>r.day===today&&r.method==='reel'))take(J.build([foot(f('football')),foot(N.apply(goals,list,'football'))],now).ticket);
   if(!journals.tres.records.some(r=>r.id===T.rules.version+'|'+today+'|football'))take(T.build(foot(f('football')),now).ticket);
   const built=P.build(Safe.SPORTS.map(f),now,used);
   built.slots.forEach(slot=>{const id=P.rules.version+'|'+built.day+'|'+slot.method+'|'+slot.sport;if(slot.ticket&&!journals.v2.records.some(r=>r.id===id))take(slot.ticket);});

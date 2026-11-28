@@ -13,7 +13,7 @@ revealHash();window.addEventListener('hashchange',revealHash);
 var WINAMAX='https://www.winamax.fr/paris-sportifs';
 var SPORTS={football:'Foot',basket:'Basket',tennis:'Tennis',rugby_xv:'Rugby XV',rugby_xiii:'Rugby XIII',football_us:'Foot US',mixed:'Mix',hockey:'Hockey',volley:'Volley'};
 var KINDS={
-  reel:{name:'Réel',range:'le plus sûr · cote Winamax 1,50 à 3',tone:'k-reel'},
+  reel:{name:'Réel',range:'le plus sûr · cote Winamax 1,50 à 3 · 58 % mini',tone:'k-reel'},
   tres_sur:{name:'Très sûr',range:'cote 1,50 à 1,70',tone:'k-sur'},
   safe:{name:'Safe',range:'cote 1,50 à 2,00',tone:'k-safe'},
   safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
@@ -118,6 +118,10 @@ function renderToday(records,m){
   var list=real.filter(function(r){return r.day===day;}).sort(function(a,b){return ORDER.indexOf(a.method)-ORDER.indexOf(b.method)||(a.sport==='football'?-1:1);});
   var missing=ORDER.filter(function(k){return records.some(function(r){return r.method===k;})&&!list.some(function(r){return r.method===k;});});
   var head='<div class="tt-title"><h2>Tickets du jour</h2><span class="tt-date">'+esc(day?longDay(day):'')+(day&&day!==today?' · pas encore de ticket aujourd’hui':'')+'</span></div>';
+  // Réel v2 : pas de pari forcé. Le dire clairement les jours sans match assez sûr.
+  var reelNo=records.some(function(r){return r.method==='reel'&&r.day===day&&r.status==='no_pick';});
+  missing=missing.filter(function(k){return !(k==='reel'&&reelNo);});
+  head+=reelNo?'<p class="tt-noreel"><b>Pas de Réel aujourd’hui.</b> Aucun ticket entre 1,50 et 3 n’atteint 58 % de chances chez Winamax. Mieux vaut ne pas miser que forcer un pari.</p>':'';
   if(!list.length){box.innerHTML=head+'<p class="tt-empty">Pas encore de ticket figé. Les tickets apparaissent après la collecte du matin.</p>';return;}
   box.innerHTML=head+'<div class="tt-grid">'+list.map(function(r){return card(r,outcome(r,m),day);}).join('')+'</div>'+
     newsBlock(day)+
@@ -176,14 +180,32 @@ function renderHistory(records,m,money){
   el.onclick=function(e){var b=e.target.closest('[data-hist]');if(!b)return;el.dataset.filter=b.dataset.hist;renderHistory(records,m,money);};
 }
 
+// « Mes vrais paris » : les paris enregistrés avec « J'ai joué ce ticket » (cdj.bets, sur cet appareil), à part des mises fictives.
+// Mise et cote réellement obtenues chez Winamax ; réglés avec les mêmes scores (bet-results.js) que le Tableau de bord.
+function renderReal(){var el=document.getElementById('realBets');if(!el)return;var list=bets();
+ function money(x){return (x>0?'+':x<0?'−':'')+num(Math.abs(x))+' €';}
+ var all=Object.keys(SCORES).reduce(function(a,k){return a.concat(SCORES[k]);},[]),now=Date.now(),t={n:0,won:0,lost:0,wait:0,staked:0,net:0};
+ var rows=list.slice().sort(function(a,b){return String(b.createdAt).localeCompare(String(a.createdAt));}).map(function(b){
+  var st=window.BetResults?BetResults.betState(b,all,now):(b.manual||'wait');t.n++;
+  if(st==='won'){t.won++;t.staked+=b.stake;t.net+=b.stake*(b.odds-1);}else if(st==='lost'){t.lost++;t.staked+=b.stake;t.net-=b.stake;}else if(st!=='void')t.wait++;
+  var k=String(b.source||'').indexOf('ticket-')===0&&KINDS[b.source.slice(7)]?KINDS[b.source.slice(7)].name:'Perso',s=STATUS[st==='wait'?'pending':st]||STATUS.pending;
+  return '<li><div class="hist-top"><span class="mono">'+esc(shortDay((b.legs[0]||{}).kickoff||b.createdAt))+'</span><strong>'+esc(k)+'</strong><span class="mono">'+num(b.stake)+' € à '+num(b.odds)+'</span><span class="tt-status '+s[1]+'">'+s[0]+(st==='won'?' '+money(b.stake*(b.odds-1)):st==='lost'?' '+money(-b.stake):'')+'</span></div>'+
+   '<ul class="hist-legs">'+(b.legs||[]).map(function(l){return '<li>'+esc(l.home+' – '+l.away+' : '+l.label)+' '+scoreBadge(l)+'</li>';}).join('')+'</ul></li>';}).slice(0,10);
+ el.innerHTML='<div class="tt-title"><h2>Mes vrais paris</h2><span class="tt-date">argent réel · séparé des mises fictives</span></div>'+
+  (t.n?'<p class="status"><b class="'+(t.net>0?'bl-won':t.net<0?'bl-lost':'')+'">'+money(t.net)+'</b> sur '+num(t.staked)+' € misés · '+t.won+' gagné(s), '+t.lost+' perdu(s)'+(t.wait?', '+t.wait+' en attente':'')+(t.won+t.lost?' · réussite '+Math.round(100*t.won/(t.won+t.lost))+' %':'')+'</p><ul class="hist-list">'+rows.join('')+'</ul>':
+   '<p class="tt-empty">Aucun vrai pari enregistré. Après avoir misé chez Winamax, touche « J’ai joué ce ticket » sur le ticket et entre ta mise et la cote obtenue.</p>')+
+  '<p class="tt-foot">Enregistrés sur cet appareil seulement. Détail, corrections et sauvegarde : <a href="tableau.html">Tableau de bord</a>.</p>';}
+document.addEventListener('submit',function(e){if(e.target.closest&&e.target.closest('form[data-play]'))setTimeout(renderReal,0);});
+
 Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json'),load('data/algo-mix-tests.json'),load('data/reel-tests.json'),load('data/simu-tests.json')]).then(function(v){
   NEWS=v[3];
   var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[],v[4]&&v[4].records||[],v[5]&&v[5].records||[],v[6]&&v[6].records||[],v[7]&&v[7].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
   var m=manual();
   if(!records.length){box.innerHTML='<div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Tickets indisponibles pour le moment. Réessaie après actualisation.</p>';if(bilan)bilan.hidden=true;return;}
   var days={};records.forEach(function(r){if(r.status!=='no_pick')(r.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;days[r.day]=1;});});
-  Promise.all(Object.keys(days).map(function(d){return load('data/days/'+d+'.json').then(function(doc){SCORES[d]=doc&&doc.matches||[];});})).then(function(){renderToday(records,m);renderBilan(records,m);
+  bets().forEach(function(b){(b.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;});});
+  Promise.all(Object.keys(days).map(function(d){return load('data/days/'+d+'.json').then(function(doc){SCORES[d]=doc&&doc.matches||[];});})).then(function(){renderToday(records,m);renderBilan(records,m);renderReal();
     // Scores en direct : les cartes et le bilan se mettent à jour pendant les matchs, sans recharger.
-    if(window.LiveScores)LiveScores.watch(function(){return Object.keys(SCORES).reduce(function(a,k){return a.concat(SCORES[k]);},[]);},function(){renderToday(records,m);renderBilan(records,m);});});
+    if(window.LiveScores)LiveScores.watch(function(){return Object.keys(SCORES).reduce(function(a,k){return a.concat(SCORES[k]);},[]);},function(){renderToday(records,m);renderBilan(records,m);renderReal();});});
 });
 })();

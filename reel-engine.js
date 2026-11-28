@@ -3,15 +3,16 @@
    Choix : la combinaison la plus probable dans la fourchette, 1 à 3 sélections, un seul pari par match.
    Marchés : d'abord les victoires seules, car Winamax y prend le moins de marge (~6 % sur les favoris, contre ~12 %
    sur plus/moins 2,5 buts et « les deux équipes marquent », relevé du 28/11). Les buts ne servent que si aucune
-   combinaison de victoires ne tombe dans la fourchette. En dernier recours, sélections à 40 % mini au lieu de 50 %,
-   pour qu'il y ait un ticket chaque jour où Winamax propose des matchs. Cotes Winamax réelles uniquement. */
+   combinaison de victoires ne tombe dans la fourchette.
+   v2 (28/11, validé par Nano) : plus de pari forcé. Le Réel ne sort que si le ticket atteint 58 % (sélections 60 % mini) ;
+   sinon « pas de Réel aujourd'hui ». Rétro-test 32 jours (cotes moyennes −4 % ≈ Winamax) : Réel ~19 jours sur 32,
+   gagné 14 fois. Cotes Winamax réelles uniquement. */
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./safe-multi-engine'),require('./paper-engine'),require('./algo-mix-engine'));else root.TicketReel=factory(root.SafeMulti,root.PaperTests,root.AlgoMix);})(typeof globalThis!=='undefined'?globalThis:this,function(Safe,Paper,AlgoMix){
 'use strict';
-var RULES={version:'reel-v1',sport:'football',mode:'paper',realMoneyEnabled:false,stake:50,currency:'EUR',
- minOdds:1.50,maxOdds:3.00,minLegs:1,maxLegs:3,minLegOdds:1.10,maxPool:16,quoteMaxAgeMinutes:60,
- steps:[{families:['h2h'],codes:['1','2'],minLegProbability:.50},
-        {families:['h2h','totals','btts'],codes:['1','2','O2.5','U2.5','BTTS_Y','BTTS_N'],minLegProbability:.50},
-        {families:['h2h','totals','btts'],codes:['1','2','O2.5','U2.5','BTTS_Y','BTTS_N'],minLegProbability:.40}],
+var RULES={version:'reel-v2',sport:'football',mode:'paper',realMoneyEnabled:false,stake:50,currency:'EUR',
+ minOdds:1.50,maxOdds:3.00,minLegs:1,maxLegs:3,minLegOdds:1.10,maxPool:16,quoteMaxAgeMinutes:60,minTicketProbability:.58,
+ steps:[{families:['h2h'],codes:['1','2'],minLegProbability:.60},
+        {families:['h2h','totals','btts'],codes:['1','2','O2.5','U2.5','BTTS_Y','BTTS_N'],minLegProbability:.60}],
  quotes:'cotes Winamax France relevées par API, jamais une moyenne ni une estimation'};
 var SIDES={h2h:'1,2,X',totals:'over,under',btts:'no,yes'};
 function clone(v){return JSON.parse(JSON.stringify(v));}
@@ -33,7 +34,7 @@ function same(a,b){function k(s){return String(s||'').trim().toLowerCase();}retu
 // Combinaison la plus probable dans la fourchette ; à égalité, moins de sélections.
 function choose(pool){var best=null;
  function consider(legs){var odds=legs.reduce(function(x,l){return x*l.o;},1),p=legs.reduce(function(x,l){return x*l.p;},1);
-  if(legs.length<RULES.minLegs||odds<RULES.minOdds-1e-9||odds>RULES.maxOdds+1e-9)return;var sig=legs.map(function(l){return l.id;}).sort().join('|');
+  if(legs.length<RULES.minLegs||odds<RULES.minOdds-1e-9||odds>RULES.maxOdds+1e-9||p+1e-12<RULES.minTicketProbability)return;var sig=legs.map(function(l){return l.id;}).sort().join('|');
   if(!best||p>best.p+1e-12||Math.abs(p-best.p)<1e-12&&(legs.length<best.legs.length||legs.length===best.legs.length&&sig<best.signature))best={legs:clone(legs),odds:odds,p:p,signature:sig};}
  (function walk(start,legs){if(legs.length)consider(legs);if(legs.length>=RULES.maxLegs)return;
   for(var i=start;i<pool.length;i++){if(i>=RULES.maxPool&&legs.length)break;if(legs.some(function(l){return same(l,pool[i]);}))continue;walk(i+1,legs.concat([pool[i]]));}})(0,[]);
@@ -44,7 +45,7 @@ function build(docs,now){var day=Safe.paris(now),ok=(docs||[]).filter(function(d
  if(ticket)ticket.step=step;
  return {day:day,ticket:ticket,candidates:count,source:ok.length?ok.map(function(d){return {status:d.status,updatedAt:d.updatedAt,matches:(d.matches||[]).length,source:d.source||null};}):null};}
 function append(journal,built,now){var out=clone(journal||{records:[]});out.records=out.records||[];var id=RULES.version+'|'+built.day+'|football';
- if(out.records.some(function(r){return r.id===id;}))return out;var t=built.ticket;if(t&&!Paper.verified(t,now))return out;
+ if(out.records.some(function(r){return r.id===id||r.day===built.day&&r.method==='reel';}))return out;var t=built.ticket;if(t&&!Paper.verified(t,now))return out;
  out.records.push({id:id,day:built.day,method:'reel',sport:'football',version:RULES.version,createdAt:new Date(now).toISOString(),mode:'paper',unitStake:t?1:0,simulatedStake:t?RULES.stake:0,currency:'EUR',status:t?'pending':'no_pick',minOdds:RULES.minOdds,maxOdds:RULES.maxOdds,odds:t?t.odds:null,probability:t?t.p:null,step:t?t.step:null,legs:t?clone(t.legs).map(function(l){return l;}):[],executionVerified:false,sourceSnapshots:built.source?clone(built.source):[]});return out;}
 return {rules:clone(RULES),candidates:candidates,choose:choose,build:build,append:append,settle:AlgoMix.settle};
 });
