@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "rules": {
+      "version": "simu-v1",
+      "sport": "football",
+      "mode": "paper",
+      "realMoneyEnabled": false,
+      "stake": 50,
+      "currency": "EUR",
+      "minOdds": 2,
+      "maxOdds": 3,
+      "minLegs": 2,
+      "maxLegs": 5,
+      "minLegProbability": 0.5,
+      "minLegOdds": 1.1,
+      "handicaps": [
+        -2.5,
+        -1.5,
+        1.5,
+        2.5
+      ],
+      "estMargin": 0.05,
+      "estHaircut": 1.03,
+      "quoteMaxAgeMinutes": 60,
+      "quotes": "victoires et 2,5 buts : cotes Winamax France relevées par API ; handicaps : cotes estimées (≈) à vérifier chez Winamax"
+    },
+    "startedAt": "2026-11-28T06:32:28.563Z"
+  },
+  "records": [
+    {
+      "id": "simu-v1|2026-11-28|football",
+      "day": "2026-11-28",
+      "method": "simu",
+      "sport": "football",
+      "version": "simu-v1",
+      "createdAt": "2026-11-28T06:32:28.563Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 50,
+      "currency": "EUR",
+      "status": "pending",
+      "odds": 2.0022,
+      "probability": 0.45444713125321906,
+      "legs": [
+        {
+          "matchId": "liga2-real-valladolid-cf-real-sociedad-b",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "LIGA2",
+          "home": "Real Valladolid CF",
+          "away": "Real Sociedad B",
+          "kickoff": "2026-11-28T20:00Z",
+          "date": "2026-11-28",
+          "bookKey": "winamax_fr",
+          "id": "football|liga2-real-valladolid-cf-real-sociedad-b|2026-11-28T20:00Z|H2+1.5",
+          "code": "H2+1.5",
+          "label": "Handicap Real Sociedad B +1,5",
+          "o": 1.41,
+          "p": 0.6759625611734241,
+          "est": true,
+          "asOf": "2026-11-28T06:13:18Z",
+          "marketFamily": "handicap",
+          "marketLine": 1.5,
+          "quoteSource": "estimate",
+          "probabilityMethod": "poisson-grid-from-winamax"
+        },
+        {
+          "matchId": "por-vitoria-guimaraes-cf-estrela",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "POR",
+          "home": "Vitória Guimarães",
+          "away": "CF Estrela",
+          "kickoff": "2026-11-28T20:30Z",
+          "date": "2026-11-28",
+          "bookKey": "winamax_fr",
+          "id": "football|por-vitoria-guimaraes-cf-estrela|2026-11-28T20:30Z|H2+1.5",
+          "code": "H2+1.5",
+          "label": "Handicap CF Estrela +1,5",
+          "o": 1.42,
+          "p": 0.6722963036064162,
+          "est": true,
+          "asOf": "2026-11-28T06:13:21Z",
+          "marketFamily": "handicap",
+          "marketLine": 1.5,
+          "quoteSource": "estimate",
+          "probabilityMethod": "poisson-grid-from-winamax"
+        }
+      ],
+      "oddsNote": "handicaps à cote estimée (≈), à vérifier chez Winamax",
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-28T06:13:16.041502+00:00",
+          "partial": true,
+          "matches": 41
+        },
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-28T06:13:16.041502+00:00",
+          "partial": false,
+          "matches": 33
+        }
+      ]
+    }
+  ]
+}
