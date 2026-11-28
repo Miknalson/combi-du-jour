@@ -206,6 +206,9 @@ def goals_match(ref, fx, odds, defs, now, stamp):
         return None
     home, away = ref['home'], ref['away']
     groups = []
+    # Autres lignes de buts X,5 (1,5 ; 3,5…) : déjà dans la même réponse, sans crédit en plus. Elles vont seulement
+    # dans la fiche du jour (mine.ou) pour le ticket Safe but ; les autres tickets gardent la seule ligne 2,5.
+    extra = {}
     # Chez OddsPapi, presque tous les marchés football Winamax sont « marketActive: false » alors que les cotes
     # sont actives et récentes : on se fie à l'état de chaque cote (active, prix > 1).
     for mid, mk in (book.get('markets') or {}).items():
@@ -231,6 +234,9 @@ def goals_match(ref, fx, odds, defs, now, stamp):
             groups.append({'id': 'totals||2.5', 'family': 'totals', 'key': 'totals', 'unit': 'goals', 'line': 2.5, 'participant': '', 'bookKey': BOOK, 'asOf': stamp, 'outcomes': [
                 {'code': 'O2.5', 'side': 'over', 'label': 'Plus de 2,5 buts', 'odds': prices['Over'], 'participant': ''},
                 {'code': 'U2.5', 'side': 'under', 'label': 'Moins de 2,5 buts', 'odds': prices['Under'], 'participant': ''}]})
+        elif (d['marketType'] == 'totals' and set(prices) == {'Over', 'Under'}
+              and 0 < float(d.get('handicap') or 0) <= 5 and abs(float(d.get('handicap') or 0) % 1 - .5) < 1e-9):
+            extra[str(float(d['handicap']))] = {'o': prices['Over'], 'u': prices['Under']}
         elif d['marketType'] == 'bothteamsscore' and set(prices) == {'Yes', 'No'}:
             groups.append({'id': 'btts||None', 'family': 'btts', 'key': 'btts', 'unit': 'match', 'line': None, 'participant': '', 'bookKey': BOOK, 'asOf': stamp, 'outcomes': [
                 {'code': 'BTTS_Y', 'side': 'yes', 'label': 'Les deux équipes marquent', 'odds': prices['Yes'], 'participant': ''},
@@ -239,7 +245,7 @@ def goals_match(ref, fx, odds, defs, now, stamp):
         return None
     return {**{k: ref[k] for k in ('id', 'sport', 'league', 'kickoff', 'home', 'away') if k in ref}, 'leagueCode': ref.get('leagueCode'),
             'bookKey': BOOK, 'book': 'Winamax France', 'asOf': stamp, 'oddspapiFixtureId': fx['fixtureId'], 'gender': ref.get('gender', 'unspecified'),
-            'markets': groups, 'availableMarkets': sorted({g['family'] for g in groups}), 'fromDayFile': bool(ref.get('fromDayFile'))}
+            'markets': groups, 'extraTotals': extra, 'availableMarkets': sorted({g['family'] for g in groups}), 'fromDayFile': bool(ref.get('fromDayFile'))}
 
 
 def day_refs(today, now, known):
@@ -345,6 +351,7 @@ def publish_winners(goals, now):
     except (OSError, ValueError):
         return len(rows)
     by_id = {r['id']: r for r in rows}
+    by_extra = {g['id']: g.get('extraTotals') or {} for g in goals}
     changed = False
     for m in day.get('matches', []):
         r = by_id.get(m.get('id'))
@@ -352,6 +359,8 @@ def publish_winners(goals, now):
             continue
         own = m.setdefault('mine', {'book': 'Winamax France', 'bookKey': BOOK, 'ou': {}})
         own.update(asOf=r['asOf'], o1=r['o1'], oX=r['oX'], o2=r['o2'], quoteSource='oddspapi')
+        for line, v in (by_extra.get(m.get('id')) or {}).items():
+            own.setdefault('ou', {})[line] = {**v, 'asOf': r['asOf'], 'quoteSource': 'oddspapi'}
         tot = next((x for x in r['markets'] if x['family'] == 'totals'), None)
         if tot:
             v = {o['side']: o['odds'] for o in tot['outcomes']}

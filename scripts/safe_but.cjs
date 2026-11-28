@@ -4,6 +4,8 @@ const root=path.resolve(__dirname,'..'),file=path.join(root,'data/safe-but-tests
 function read(f,fallback){try{return JSON.parse(fs.readFileSync(f,'utf8'));}catch(e){return fallback;}}
 function paris(t){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t));}
 let journal=read(file,{schemaVersion:1,manifest:{rules:B.rules,startedAt:new Date(now).toISOString()},records:[]});
+// Changement de règles (v1 -> v2 le 28/11/2026) : on garde l'ancienne version dans l'historique du journal.
+if(journal.manifest&&journal.manifest.rules&&journal.manifest.rules.version!==B.rules.version){journal.manifest.history=(journal.manifest.history||[]).concat([{rules:journal.manifest.rules,until:new Date(now).toISOString()}]);journal.manifest.rules=B.rules;}
 const today=paris(now),news=read(path.join(root,'data/news-checks.json'),{days:{}});
 // Matchs écartés par le filtre actu (scripts/news_filter.cjs) : retirés des données d'entrée seulement.
 // Puis les matchs déjà pris par un ticket du jour : un favori raté ne fait plus tout perdre.
