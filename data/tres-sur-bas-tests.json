@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "rules": {
+      "version": "tres-sur-bas-v1",
+      "sport": "football",
+      "mode": "paper",
+      "realMoneyEnabled": false,
+      "stake": 50,
+      "currency": "EUR",
+      "minOdds": 1.2,
+      "maxOdds": 1.35,
+      "minLegProbability": 0.75,
+      "minTicketProbability": 0.7,
+      "maxLegs": 2,
+      "families": [
+        "h2h",
+        "totals"
+      ],
+      "quoteMaxAgeMinutes": 60,
+      "quotes": "cotes Winamax France relevées par API, jamais une moyenne de bookmakers ni une cote estimée"
+    },
+    "startedAt": "2026-11-28T06:57:07.648Z"
+  },
+  "records": [
+    {
+      "id": "tres-sur-bas-v1|2026-11-28|football",
+      "day": "2026-11-28",
+      "method": "tres_sur_bas",
+      "sport": "football",
+      "version": "tres-sur-bas-v1",
+      "createdAt": "2026-11-28T06:57:07.648Z",
+      "mode": "paper",
+      "unitStake": 1,
+      "simulatedStake": 50,
+      "currency": "EUR",
+      "status": "pending",
+      "minOdds": 1.2,
+      "maxOdds": 1.35,
+      "odds": 1.21,
+      "probability": 0.7730945038349112,
+      "legs": [
+        {
+          "id": "football|bl-vfb-stuttgart-eintracht-frankfurt|2026-11-28T17:30Z|totals||2.5|O2.5",
+          "matchId": "bl-vfb-stuttgart-eintracht-frankfurt",
+          "sport": "football",
+          "gender": "unspecified",
+          "league": "BL",
+          "home": "VfB Stuttgart",
+          "away": "Eintracht Frankfurt",
+          "kickoff": "2026-11-28T17:30Z",
+          "date": "2026-11-28",
+          "code": "O2.5",
+          "label": "Plus de 2,5 buts",
+          "o": 1.21,
+          "p": 0.7730945038349112,
+          "bookKey": "winamax_fr",
+          "asOf": "2026-11-28T06:13:18Z",
+          "marketId": "totals||2.5",
+          "marketFamily": "totals",
+          "marketLine": 2.5,
+          "marketParticipant": "",
+          "est": false,
+          "quoteSource": "api",
+          "probabilityMethod": "winamax-power-devig"
+        }
+      ],
+      "executionVerified": false,
+      "sourceSnapshots": [
+        {
+          "status": "ok",
+          "updatedAt": "2026-11-28T06:13:16.041502+00:00",
+          "partial": true,
+          "matches": 39
+        }
+      ]
+    }
+  ]
+}

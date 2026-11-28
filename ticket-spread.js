@@ -3,11 +3,11 @@
    donc tous reprenaient les mêmes gros favoris. Un seul favori raté faisait perdre tous les tickets du jour
    (Bayern le 25/11 : 4 tickets ; Ferencváros le 26/11 : 3 ; Groningen le 27/11 : 3).
    Maintenant un match déjà pris par un ticket du jour est retiré des données des tickets suivants.
-   Ordre de priorité = ordre des étapes du workflow : Réel (1,50–3, depuis le 28/11), Très sûr, Safe, Algo, Combiné 2 à 3, Algo buts, Safe but, Simulation (28/11).
+   Ordre de priorité = ordre des étapes du workflow : Réel (1,50–3, depuis le 28/11), Très sûr, Très sûr 1,20, Safe, Algo, Combiné 2 à 3, Algo buts, Safe but, Simulation (28/11).
    Les cotes, les probabilités et les règles de chaque ticket ne changent pas. */
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.TicketSpread=factory();})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
-var JOURNALS=['reel-tests.json','tres-sur-tests.json','paper-tests-v2.json','combi23-tests.json','algo-mix-tests.json','safe-but-tests.json','simu-tests.json'];
+var JOURNALS=['reel-tests.json','tres-sur-tests.json','tres-sur-bas-tests.json','paper-tests-v2.json','combi23-tests.json','algo-mix-tests.json','safe-but-tests.json','simu-tests.json'];
 function k(s){return String(s||'').trim().toLowerCase();}
 function football(l){return l&&(!l.sport||l.sport==='football');}
 // Sélections football des tickets (enregistrés ou calculés) d'un jour.

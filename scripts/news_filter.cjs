@@ -3,7 +3,7 @@
 // L'algorithme ne change pas : les matchs écartés sont retirés des données d'entrée, puis le ticket est recalculé.
 // Sans clé OPENAI_API_KEY ou en cas d'erreur, rien n'est écarté et les tickets sont faits comme avant.
 const fs=require('node:fs'),path=require('node:path');
-const N=require('../news-filter'),T=require('../tres-sur-engine'),P=require('../paper-multi-engine'),B=require('../safe-but-engine'),Safe=require('../safe-multi-engine'),AM=require('../algo-mix-engine'),C=require('../combi23-engine'),J=require('../reel-engine'),Spread=require('../ticket-spread');
+const N=require('../news-filter'),T=require('../tres-sur-engine'),P=require('../paper-multi-engine'),B=require('../safe-but-engine'),Safe=require('../safe-multi-engine'),AM=require('../algo-mix-engine'),C=require('../combi23-engine'),J=require('../reel-engine'),TB=require('../tres-sur-bas-engine'),Spread=require('../ticket-spread');
 const root=process.env.NEWS_ROOT||path.resolve(__dirname,'..'),now=Number(process.env.NEWS_NOW)||Date.now(),today=N.paris(now);
 const storeFile=path.join(root,'data/news-checks.json');
 function read(f,fallback){try{return JSON.parse(fs.readFileSync(f,'utf8'));}catch(e){return fallback;}}
@@ -49,6 +49,7 @@ function pendingLegs(sports,dayDoc,list,journals){
   const foot=d=>Spread.apply(d,used);
   if(!journals.jour.records.some(r=>r.day===today&&r.method==='reel'))take(J.build([foot(f('football')),foot(N.apply(goals,list,'football'))],now).ticket);
   if(!journals.tres.records.some(r=>r.id===T.rules.version+'|'+today+'|football'))take(T.build(foot(f('football')),now).ticket);
+  if(!journals.bas.records.some(r=>r.day===today&&r.method==='tres_sur_bas'))take(TB.build(foot(f('football')),now).ticket);
   const built=P.build(Safe.SPORTS.map(f),now,used);
   built.slots.forEach(slot=>{const id=P.rules.version+'|'+built.day+'|'+slot.method+'|'+slot.sport;if(slot.ticket&&!journals.v2.records.some(r=>r.id===id))take(slot.ticket);});
   if(!journals.c23.records.some(r=>r.id===C.rules.version+'|'+today+'|football'))take(C.build(foot(f('football')),now).ticket);
@@ -62,7 +63,7 @@ function pendingLegs(sports,dayDoc,list,journals){
   const day=store.days[today]=store.days[today]||{checks:{},calls:[]};
   const sports=Object.fromEntries(Safe.SPORTS.map(s=>[s,read(path.join(root,'data/sports',s+'.json'),null)]));
   const dayDoc=read(path.join(root,'data/days',today+'.json'),null);
-  const journals={tres:read(path.join(root,'data/tres-sur-tests.json'),{records:[]}),v2:read(path.join(root,'data/paper-tests-v2.json'),{records:[]}),but:read(path.join(root,'data/safe-but-tests.json'),{records:[]}),mix:read(path.join(root,'data/algo-mix-tests.json'),{records:[]}),c23:read(path.join(root,'data/combi23-tests.json'),{records:[]}),jour:read(path.join(root,'data/reel-tests.json'),{records:[]})};
+  const journals={tres:read(path.join(root,'data/tres-sur-tests.json'),{records:[]}),v2:read(path.join(root,'data/paper-tests-v2.json'),{records:[]}),but:read(path.join(root,'data/safe-but-tests.json'),{records:[]}),mix:read(path.join(root,'data/algo-mix-tests.json'),{records:[]}),c23:read(path.join(root,'data/combi23-tests.json'),{records:[]}),jour:read(path.join(root,'data/reel-tests.json'),{records:[]}),bas:read(path.join(root,'data/tres-sur-bas-tests.json'),{records:[]})};
   goals=read(path.join(root,'data/sports/football-goals.json'),null);
   const key=process.env.OPENAI_API_KEY;
   for(let round=0;round<N.rules.maxRounds;round++){
