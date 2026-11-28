@@ -1561,7 +1561,7 @@
       "unitStake": 1,
       "simulatedStake": 50,
       "currency": "EUR",
-      "status": "pending",
+      "status": "lost",
       "odds": 3.0616,
       "probability": 0.280526746960822,
       "legs": [
@@ -1618,7 +1618,9 @@
           "femaleMatches": 0
         }
       ],
-      "searchLimited": false
+      "searchLimited": false,
+      "resultSource": "application-football-score",
+      "resultHistory": []
     },
     {
       "id": "paper-multisport-v4|2026-11-28|safe|football",

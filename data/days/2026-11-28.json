@@ -58,7 +58,13 @@
     "oX": 3.35,
     "o2": 2.1,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "2-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
   },
   {
    "id": "bl2-hertha-berlin-karlsruher-sc",
@@ -85,7 +91,13 @@
     "oX": 4.8,
     "o2": 5.2,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "4-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
   },
   {
    "id": "bl2-holstein-kiel-1-fc-kaiserslautern",
@@ -174,7 +186,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
   },
   {
    "id": "cha-lincoln-city-wolverhampton-wanderers",
@@ -217,7 +235,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-0",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
   },
   {
    "id": "cha-preston-north-end-norwich-city",
@@ -269,7 +293,13 @@
      }
     },
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "1-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
   },
   {
    "id": "rou-fc-voluntari-cfr-cluj",
@@ -306,7 +336,13 @@
     "oX": 4.0,
     "o2": 4.3,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "0-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
   },
   {
    "id": "liga2-las-palmas-andorra-cf",
@@ -333,7 +369,13 @@
     "oX": 3.35,
     "o2": 3.0,
     "quoteSource": "oddspapi"
-   }
+   },
+   "score": "4-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
   },
   {
    "id": "srb-zemun-radnicki-1923",
@@ -397,7 +439,13 @@
    "away": "Genclerbirligi SK",
    "o1": 1.9,
    "oX": 3.6,
-   "o2": 4.0
+   "o2": 4.0,
+   "score": "3-1",
+   "scoreStatus": "final",
+   "scoreScope": "regulation",
+   "completed": true,
+   "scoreSource": "ESPN",
+   "scoreUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
   },
   {
    "id": "pol-widzew-lodz-zaglebie-lubin",
@@ -1744,5 +1792,6 @@
    }
   }
  ],
- "marketsUpdatedAt": "2026-11-28T06:13:16.041502+00:00"
+ "marketsUpdatedAt": "2026-11-28T06:13:16.041502+00:00",
+ "scoresUpdatedAt": "2026-11-28T15:24:26.790087+00:00"
 }

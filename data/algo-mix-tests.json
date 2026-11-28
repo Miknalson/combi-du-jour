@@ -414,7 +414,7 @@
       "unitStake": 1,
       "simulatedStake": 50,
       "currency": "EUR",
-      "status": "pending",
+      "status": "lost",
       "odds": 3.00384,
       "probability": 0.25457221476096425,
       "legs": [
@@ -499,7 +499,8 @@
           "matches": 36,
           "source": "OddsPapi (Winamax FR)"
         }
-      ]
+      ],
+      "resultSource": "application-football-score"
     }
   ]
 }
