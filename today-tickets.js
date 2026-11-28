@@ -1,6 +1,6 @@
 /* Tickets du jour + bilan, en haut de l'écran Analyse.
    Lecture seule : affiche les tickets fictifs déjà figés par les tâches automatiques
-   (data/tres-sur-tests.json, data/paper-tests-v2.json, data/safe-but-tests.json, data/combi23-tests.json, data/algo-mix-tests.json, data/reel-tests.json). Ne recalcule rien. */
+   (data/tres-sur-tests.json, data/paper-tests-v2.json, data/safe-but-tests.json, data/combi23-tests.json, data/algo-mix-tests.json, data/reel-tests.json, data/simu-tests.json). Ne recalcule rien. */
 (function(){
 'use strict';
 var box=document.getElementById('todayTickets'),bilan=document.getElementById('todayBilan');
@@ -19,9 +19,10 @@ var KINDS={
   safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
   combi23:{name:'Combiné 2 à 3',range:'victoires · cote 2 à 3',tone:'k-c23'},
   algo_mix:{name:'Algo',range:'victoires + buts · cote 3 à 5',tone:'k-algo'},
+  simu:{name:'Simulation',range:'handicaps + victoires · cote ≈ 2 à 3',tone:'k-simu'},
   algo:{name:'Algo victoires (ancien)',range:'victoires seules · cote 3 à 5',tone:'k-algo'}
 };
-var ORDER=['reel','tres_sur','safe','safe_but','combi23','algo_mix','algo'];
+var ORDER=['reel','tres_sur','safe','safe_but','combi23','algo_mix','simu','algo'];
 var STATUS={won:['Gagné','st-won'],lost:['Perdu','st-lost'],pending:['En attente','st-wait'],void:['Annulé','st-void']};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function num(x,d){return Number(x).toFixed(d==null?2:d).replace('.',',');}
@@ -55,6 +56,7 @@ function legScore(l){var m=findMatch(l);if(!m||!/^\d+\s*-\s*\d+$/.test(String(m.
  var s=m.score.split('-').map(Number),h=s[0],a=s[1],ok=null,code=String(l.code||'');
  if(code==='1')ok=h>a;else if(code==='2')ok=a>h;else if(code==='X')ok=h===a;else if(code==='1X')ok=h>=a;else if(code==='X2')ok=a>=h;else if(code==='12')ok=h!==a;
  else if(code==='BTTS_Y')ok=h>0&&a>0;else if(code==='BTTS_N')ok=h===0||a===0;
+ else if(/^H[12][+-]\d+(\.\d+)?$/.test(code)){var L=Number(code.slice(2));ok=code[1]==='1'?h+L>a:a+L>h;}
  else if(/^[OU]\d+(\.\d+)?$/.test(code))ok=code[0]==='O'?h+a>Number(code.slice(1)):h+a<Number(code.slice(1));
  else if(l.marketFamily==='totals'&&Number.isFinite(Number(l.marketLine))){var side=code.split('|').pop();ok=side==='over'?h+a>l.marketLine:side==='under'?h+a<l.marketLine:null;}
  return {text:h+'-'+a,ok:ok,final:m.scoreStatus!=='live'};}
@@ -88,11 +90,11 @@ function card(r,res,today){
   var asOf=r.legs.map(function(l){return Date.parse(l.asOf);}).filter(Number.isFinite).sort()[0];
   return '<article class="tt-card '+k.tone+'">'+
     '<header class="tt-head"><div><span class="tt-kind">'+esc(k.name+sport)+'</span><span class="tt-range">'+esc(k.range)+'</span></div><span class="tt-status '+st[1]+'">'+st[0]+'</span></header>'+
-    '<div class="tt-figs"><div><span class="tt-lab">'+(r.method==='safe_but'?'Cote estimée':'Cote Winamax')+'</span><span class="tt-big mono">'+num(r.odds)+'</span></div>'+
+    '<div class="tt-figs"><div><span class="tt-lab">'+(r.method==='safe_but'||r.method==='simu'&&r.legs.some(function(l){return l.est;})?'Cote estimée':'Cote Winamax')+'</span><span class="tt-big mono">'+num(r.odds)+'</span></div>'+
     '<div><span class="tt-lab">Chance estimée</span><span class="tt-mid mono">'+Math.round(100*r.probability)+' %</span></div>'+
     '<div><span class="tt-lab">Mise fictive</span><span class="tt-mid mono">'+esc(r.simulatedStake)+' €</span></div></div>'+
     '<ul class="tt-legs">'+legs+'</ul>'+
-    (r.method==='safe_but'?'<p class="tt-foot">Cote moyenne du marché moins 5 % : notre source ne donne pas les cotes de buts Winamax. Vérifie la cote dans l’appli Winamax.</p>':asOf?'<p class="tt-foot">Cotes Winamax relevées à '+esc(hour(new Date(asOf).toISOString()))+'. Vérifie-les dans l’appli avant de jouer.</p>':'')+
+    (r.method==='simu'&&r.legs.some(function(l){return l.est;})?'<p class="tt-foot">Les cotes avec ≈ sont estimées : notre source ne donne pas les handicaps Winamax. Vérifie la cote dans l’appli Winamax avant de jouer.</p>':r.method==='safe_but'?'<p class="tt-foot">Cote moyenne du marché moins 5 % : notre source ne donne pas les cotes de buts Winamax. Vérifie la cote dans l’appli Winamax.</p>':asOf?'<p class="tt-foot">Cotes Winamax relevées à '+esc(hour(new Date(asOf).toISOString()))+'. Vérifie-les dans l’appli avant de jouer.</p>':'')+
     (res.status==='pending'?playForm(r):'')+
     '</article>';
 }
@@ -147,12 +149,12 @@ function renderBilan(records,m){
   bilan.innerHTML='<div class="tt-title"><h2>Bilan</h2><span class="tt-date">Mises fictives placées automatiquement</span></div>'+
     '<div class="bl-kpis"><div><span class="mono bl-won">'+tot.won+'</span><small>gagnés</small></div><div><span class="mono bl-lost">'+tot.lost+'</span><small>perdus</small></div><div><span class="mono">'+rate(tot)+'</span><small>réussite</small></div><div><span class="mono '+tone(tot.net)+'">'+money(tot.net,0)+'</span><small>net fictif</small></div></div>'+
     '<div class="bl-types">'+rows.map(function(r){return '<article class="bl-type '+KINDS[r.k].tone+'"><strong>'+esc(KINDS[r.k].name)+'</strong>'+
-      '<dl><div><dt>Gagnés / perdus</dt><dd class="mono">'+r.won+' / '+r.lost+(r.wait?' <small>· '+r.wait+' en cours</small>':'')+'</dd></div>'+
+      '<dl><div><dt>Gagné</dt><dd class="mono">'+r.won+' fois sur '+(r.won+r.lost)+(r.wait?' <small>· '+r.wait+' en cours</small>':'')+'</dd></div>'+
       '<div><dt>Réussite</dt><dd class="mono">'+rate(r)+'</dd></div>'+
       '<div><dt>Total misé</dt><dd class="mono">'+num(r.staked,0)+' €</dd></div>'+
       '<div><dt>Net fictif</dt><dd class="mono '+tone(r.net)+'">'+money(r.net)+'</dd></div>'+
       '<div><dt>Rentabilité</dt><dd class="mono '+tone(r.net)+'">'+roi(r)+'</dd></div></dl></article>';}).join('')+'</div>'+
-    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, Safe but 100 €, Combiné 2 à 3 50 €, Algo 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
+    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, Safe but 100 €, Combiné 2 à 3 50 €, Algo 50 €, Simulation 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
     (!full&&settled.length?'<h3 class="bl-sub">Derniers résultats</h3><ul class="bl-last">'+settled.map(function(x){var st=STATUS[x.o.status];return '<li><span class="mono">'+esc(x.r.day.slice(8)+'/'+x.r.day.slice(5,7))+'</span><span>'+esc(KINDS[x.r.method].name)+' · cote '+num(x.r.odds)+'</span><span class="tt-status '+st[1]+'">'+st[0]+'</span></li>';}).join('')+'</ul>':'')+
     (full?'':'<a class="bl-more" href="tickets.html">Tout l’historique sur la page Tickets →</a>');
   if(full)renderHistory(records,m,money);
@@ -174,9 +176,9 @@ function renderHistory(records,m,money){
   el.onclick=function(e){var b=e.target.closest('[data-hist]');if(!b)return;el.dataset.filter=b.dataset.hist;renderHistory(records,m,money);};
 }
 
-Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json'),load('data/algo-mix-tests.json'),load('data/reel-tests.json')]).then(function(v){
+Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json'),load('data/algo-mix-tests.json'),load('data/reel-tests.json'),load('data/simu-tests.json')]).then(function(v){
   NEWS=v[3];
-  var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[],v[4]&&v[4].records||[],v[5]&&v[5].records||[],v[6]&&v[6].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
+  var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[],v[4]&&v[4].records||[],v[5]&&v[5].records||[],v[6]&&v[6].records||[],v[7]&&v[7].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
   var m=manual();
   if(!records.length){box.innerHTML='<div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Tickets indisponibles pour le moment. Réessaie après actualisation.</p>';if(bilan)bilan.hidden=true;return;}
   var days={};records.forEach(function(r){if(r.status!=='no_pick')(r.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;days[r.day]=1;});});
