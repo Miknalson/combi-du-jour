@@ -14,6 +14,7 @@ var WINAMAX='https://www.winamax.fr/paris-sportifs';
 var SPORTS={football:'Foot',basket:'Basket',tennis:'Tennis',rugby_xv:'Rugby XV',rugby_xiii:'Rugby XIII',football_us:'Foot US',mixed:'Mix',hockey:'Hockey',volley:'Volley'};
 var KINDS={
   reel:{name:'Réel',range:'le plus sûr · cote Winamax 1,50 à 3 · 58 % mini',tone:'k-reel'},
+  tres_sur_bas:{name:'Très sûr 1,20',range:'cote 1,20 à 1,35',tone:'k-sur'},
   tres_sur:{name:'Très sûr',range:'cote 1,50 à 1,70',tone:'k-sur'},
   safe:{name:'Safe',range:'cote 1,50 à 2,00',tone:'k-safe'},
   safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
@@ -22,7 +23,7 @@ var KINDS={
   simu:{name:'Simulation',range:'handicaps + victoires · cote ≈ 2 à 3',tone:'k-simu'},
   algo:{name:'Algo victoires (ancien)',range:'victoires seules · cote 3 à 5',tone:'k-algo'}
 };
-var ORDER=['reel','tres_sur','safe','safe_but','combi23','algo_mix','simu','algo'];
+var ORDER=['reel','tres_sur','tres_sur_bas','safe','safe_but','combi23','algo_mix','simu','algo'];
 var STATUS={won:['Gagné','st-won'],lost:['Perdu','st-lost'],pending:['En attente','st-wait'],void:['Annulé','st-void']};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function num(x,d){return Number(x).toFixed(d==null?2:d).replace('.',',');}
@@ -197,9 +198,9 @@ function renderReal(){var el=document.getElementById('realBets');if(!el)return;v
   '<p class="tt-foot">Enregistrés sur cet appareil seulement. Détail, corrections et sauvegarde : <a href="tableau.html">Tableau de bord</a>.</p>';}
 document.addEventListener('submit',function(e){if(e.target.closest&&e.target.closest('form[data-play]'))setTimeout(renderReal,0);});
 
-Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json'),load('data/algo-mix-tests.json'),load('data/reel-tests.json'),load('data/simu-tests.json')]).then(function(v){
+Promise.all([load('data/tres-sur-tests.json'),load('data/paper-tests-v2.json'),load('data/safe-but-tests.json'),load('data/news-checks.json'),load('data/combi23-tests.json'),load('data/algo-mix-tests.json'),load('data/reel-tests.json'),load('data/simu-tests.json'),load('data/tres-sur-bas-tests.json')]).then(function(v){
   NEWS=v[3];
-  var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[],v[4]&&v[4].records||[],v[5]&&v[5].records||[],v[6]&&v[6].records||[],v[7]&&v[7].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
+  var records=[].concat(v[0]&&v[0].records||[],v[1]&&v[1].records||[],v[2]&&v[2].records||[],v[4]&&v[4].records||[],v[5]&&v[5].records||[],v[6]&&v[6].records||[],v[7]&&v[7].records||[],v[8]&&v[8].records||[]).filter(function(r){return KINDS[r.method]&&(!window.SportCatalog||!SportCatalog.isShown||r.sport==='mixed'||SportCatalog.isShown(r.sport));});
   var m=manual();
   if(!records.length){box.innerHTML='<div class="tt-title"><h2>Tickets du jour</h2></div><p class="tt-empty">Tickets indisponibles pour le moment. Réessaie après actualisation.</p>';if(bilan)bilan.hidden=true;return;}
   var days={};records.forEach(function(r){if(r.status!=='no_pick')(r.legs||[]).forEach(function(l){days[l.date||String(l.kickoff).slice(0,10)]=1;days[r.day]=1;});});
