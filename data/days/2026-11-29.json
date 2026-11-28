@@ -1,6 +1,6 @@
 {
  "date": "2026-11-29",
- "updatedAt": "2026-11-27T07:51:32Z",
+ "updatedAt": "2026-11-28T07:51:23Z",
  "source": "The Odds API (moyenne des bookmakers européens) + oddsportal (secours)",
  "matches": [
   {
@@ -32,6 +32,16 @@
    "o1": 4.3,
    "oX": 3.2,
    "o2": 1.9
+  },
+  {
+   "id": "ukr-kryvbas-veres-rivne",
+   "league": "UKR",
+   "kickoff": "2026-11-29T11:00Z",
+   "home": "Kryvbas",
+   "away": "Veres-Rivne",
+   "o1": 2.2,
+   "oX": 3.4,
+   "o2": 3.0
   },
   {
    "id": "ere-ado-den-haag-fc-utrecht",

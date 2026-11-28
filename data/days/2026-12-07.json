@@ -1,0 +1,47 @@
+{
+ "date": "2026-12-07",
+ "updatedAt": "2026-11-28T07:51:23Z",
+ "source": "oddsportal",
+ "matches": [
+  {
+   "id": "sa-venezia-sassuolo",
+   "league": "SA",
+   "kickoff": "2026-12-07T17:30Z",
+   "home": "Venezia",
+   "away": "Sassuolo",
+   "o1": 2.15,
+   "oX": 3.6,
+   "o2": 3.1
+  },
+  {
+   "id": "l2-rodez-af-stade-de-reims",
+   "league": "L2",
+   "kickoff": "2026-12-07T19:45Z",
+   "home": "Rodez AF",
+   "away": "Stade de Reims",
+   "o1": 3.0,
+   "oX": 3.4,
+   "o2": 2.05
+  },
+  {
+   "id": "sa-fiorentina-cagliari",
+   "league": "SA",
+   "kickoff": "2026-12-07T19:45Z",
+   "home": "Fiorentina",
+   "away": "Cagliari",
+   "o1": 1.62,
+   "oX": 4.1,
+   "o2": 5.5
+  },
+  {
+   "id": "liga-sevilla-malaga",
+   "league": "LIGA",
+   "kickoff": "2026-12-07T20:00Z",
+   "home": "Sevilla",
+   "away": "Málaga",
+   "o1": 1.45,
+   "oX": 4.5,
+   "o2": 6.5
+  }
+ ]
+}
