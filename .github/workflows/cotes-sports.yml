@@ -110,6 +110,7 @@ jobs:
           node tests/ticket-reference.test.cjs
           node tests/bet-results.test.cjs
           node tests/football-markets.test.cjs
+          node tests/safe-but.test.cjs
           node tests/tres-sur.test.cjs
           node tests/news-filter.test.cjs
           node tests/algo-mix.test.cjs
@@ -196,7 +197,7 @@ jobs:
       - name: Consigner le ticket Algo fictif (victoires + buts + les deux marquent)
         continue-on-error: true
         run: node scripts/algo_mix.cjs
-      - name: Consigner le ticket Safe but fictif
+      - name: Consigner le ticket BTTS Oui fictif (2 matchs minimum)
         continue-on-error: true
         run: node scripts/safe_but.cjs
       - name: Consigner le ticket Simulation fictif (simulation personnelle, handicaps, cote 2 à 3)
@@ -274,3 +275,4 @@ jobs:
         run: |
           echo "::error::La collecte ou l’envoi des alertes est bloqué. Le site a été publié avec le diagnostic dans Collecte et notifications."
           exit 1
+

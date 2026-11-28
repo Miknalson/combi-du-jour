@@ -17,11 +17,15 @@ test('Retire seulement les matchs douteux, sans toucher au document d’origine'
  assert.equal(out.newsExcluded[0].reason,'Vlahović blessé');
  assert.equal(N.apply(doc,[],'football'),doc,'rien à écarter : document inchangé');});
 
-test('Un match écarté disparaît du ticket Safe but, l’algorithme choisit parmi les autres',()=>{
- const mine={bookKey:'winamax_fr',o1:1.9,oX:3.3,o2:3.5,ou:{}},at='2026-11-22T06:50:00Z';
- const doc={updatedAt:at,source:'test',matches:[m('a','Juventus','Venezia',{ou:{'2.5':{o:1.58,u:2.45}},mine}),m('b','Bologna','Udinese',{ou:{'2.5':{o:1.59,u:2.42}},mine})]};
- assert.equal(B.build(doc,now).ticket.legs[0].matchId,'a');
- assert.equal(B.build(N.apply(doc,[doubt],'football'),now).ticket.legs[0].matchId,'b');});
+test('Un match écarté disparaît du combiné BTTS et deux autres matchs restent nécessaires',()=>{
+ const at='2026-11-22T06:50:00Z';
+ const match=(id,home,away)=>m(id,home,away,{sport:'football',bookKey:'winamax_fr',asOf:at,markets:[{id:'btts',family:'btts',bookKey:'winamax_fr',asOf:at,outcomes:[{side:'yes',code:'BTTS_Y',odds:1.3},{side:'no',code:'BTTS_N',odds:3.2}]}]});
+ const doc={status:'ok',bookKey:'winamax_fr',updatedAt:at,matches:[match('a','Juventus','Venezia'),match('b','Bologna','Udinese'),match('c','Roma','Lazio')]};
+ assert.ok(B.build(doc,now).ticket.legs.some(l=>l.matchId==='a'));
+ const filtered=N.apply(doc,[doubt],'football'),t=B.build(filtered,now).ticket;
+ assert.deepEqual(t.legs.map(l=>l.matchId).sort(),['b','c']);
+ assert.equal(B.build({...filtered,matches:filtered.matches.slice(0,1)},now).ticket,null);
+});
 
 test('Vérifie chaque rencontre une seule fois, jamais un match commencé',()=>{
  const legs=[m('a','Juventus','Venezia',{label:'Victoire Juventus'}),m('a','Juventus','Venezia',{label:'Plus de 1,5 buts'}),m('c','Roma','Lazio',{kickoff:'2026-11-22T06:00:00Z'})];
@@ -70,3 +74,4 @@ test('Script : un match resté non vérifié après 2 essais sort des cotes du j
  const day=JSON.parse(fs.readFileSync(path.join(root,'data/news-checks.json'))).days['2026-11-22'],juve=Object.values(day.checks).find(c=>c.home==='Juventus');
  assert.equal(juve.verdict,'non_verifie');assert.equal(juve.tries,2);
  assert.ok(JSON.parse(fs.readFileSync(path.join(root,'data/sports/football.json'))).newsExcluded.some(x=>x.home==='Juventus'));});
+

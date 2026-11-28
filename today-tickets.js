@@ -17,13 +17,14 @@ var KINDS={
   tres_sur_bas:{name:'Très sûr 1,20',range:'cote 1,20 à 1,35',tone:'k-sur'},
   tres_sur:{name:'Très sûr',range:'cote 1,50 à 1,70',tone:'k-sur'},
   safe:{name:'Safe',range:'cote 1,50 à 2,00',tone:'k-safe'},
-  safe_but:{name:'Safe but',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
+  btts:{name:'BTTS Oui',range:'2 à 3 matchs · cote 1,50 à 2,00',tone:'k-but'},
+  safe_but:{name:'Safe but (ancien)',range:'buts · cote 1,50 à 2,00',tone:'k-but'},
   combi23:{name:'Combiné 2 à 3',range:'victoires · cote 2 à 3',tone:'k-c23'},
   algo_mix:{name:'Algo',range:'victoires + buts · cote 3 à 5',tone:'k-algo'},
   simu:{name:'Simulation',range:'ta simulation personnelle · tes réglages',tone:'k-simu'},
   algo:{name:'Algo victoires (ancien)',range:'victoires seules · cote 3 à 5',tone:'k-algo'}
 };
-var ORDER=['reel','tres_sur','tres_sur_bas','safe','safe_but','combi23','algo_mix','simu','algo'];
+var ORDER=['reel','tres_sur','tres_sur_bas','safe','btts','safe_but','combi23','algo_mix','simu','algo'];
 var STATUS={won:['Gagné','st-won'],lost:['Perdu','st-lost'],pending:['En attente','st-wait'],void:['Annulé','st-void']};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function num(x,d){return Number(x).toFixed(d==null?2:d).replace('.',',');}
@@ -118,7 +119,7 @@ function renderToday(records,m){
   var days=real.map(function(r){return r.day;}).sort();
   var day=days.indexOf(today)>=0?today:(days.filter(function(d){return d<=today;}).pop()||days.pop());
   var list=real.filter(function(r){return r.day===day;}).sort(function(a,b){return ORDER.indexOf(a.method)-ORDER.indexOf(b.method)||(a.sport==='football'?-1:1);});
-  var missing=ORDER.filter(function(k){return records.some(function(r){return r.method===k;})&&!list.some(function(r){return r.method===k;});});
+  var missing=ORDER.filter(function(k){return k!=='safe_but'&&records.some(function(r){return r.method===k;})&&!list.some(function(r){return r.method===k;});});
   var head='<div class="tt-title"><h2>Tickets du jour</h2><span class="tt-date">'+esc(day?longDay(day):'')+(day&&day!==today?' · pas encore de ticket aujourd’hui':'')+'</span></div>';
   // Réel v2 : pas de pari forcé. Le dire clairement les jours sans match assez sûr.
   var reelNo=records.some(function(r){return r.method==='reel'&&r.day===day&&r.status==='no_pick';});
@@ -160,7 +161,7 @@ function renderBilan(records,m){
       '<div><dt>Total misé</dt><dd class="mono">'+num(r.staked,0)+' €</dd></div>'+
       '<div><dt>Net fictif</dt><dd class="mono '+tone(r.net)+'">'+money(r.net)+'</dd></div>'+
       '<div><dt>Rentabilité</dt><dd class="mono '+tone(r.net)+'">'+roi(r)+'</dd></div></dl></article>';}).join('')+'</div>'+
-    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, Safe but 100 €, Combiné 2 à 3 50 €, Algo 50 €, Simulation 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
+    '<p class="tt-empty">Chaque ticket est joué tout seul avec de l’argent fictif (Très sûr 100 €, Safe 100 €, BTTS Oui 100 €, ancien Safe but 100 €, Combiné 2 à 3 50 €, Algo 50 €, Simulation 50 €), puis réglé avec le score final. Rentabilité = gain net ÷ total misé. Aucun pari réel.</p>'+
     (!full&&settled.length?'<h3 class="bl-sub">Derniers résultats</h3><ul class="bl-last">'+settled.map(function(x){var st=STATUS[x.o.status];return '<li><span class="mono">'+esc(x.r.day.slice(8)+'/'+x.r.day.slice(5,7))+'</span><span>'+esc(KINDS[x.r.method].name)+' · cote '+num(x.r.odds)+'</span><span class="tt-status '+st[1]+'">'+st[0]+'</span></li>';}).join('')+'</ul>':'')+
     (full?'':'<a class="bl-more" href="tickets.html">Tout l’historique sur la page Tickets →</a>');
   if(full)renderHistory(records,m,money);
@@ -236,3 +237,4 @@ Promise.all([persoSimu(),load('data/tres-sur-tests.json'),load('data/paper-tests
     if(window.LiveScores)LiveScores.watch(function(){return Object.keys(SCORES).reduce(function(a,k){return a.concat(SCORES[k]);},[]);},function(){renderToday(records,m);renderBilan(records,m);renderReal();});});
 });
 })();
+

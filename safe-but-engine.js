@@ -1,55 +1,38 @@
-/* Ticket « Safe but » : 1 à 3 paris « plus / moins de X,5 buts », cote totale 1,50 à 2,00, mise fictive 100 €.
-   v2 (28/11/2026) : le ticket n'était jamais sorti. Trois raisons :
-   - il ne lisait que la cote moyenne du marché (m.ou), absente depuis la panne de crédits du 24/11, alors que
-     les vraies cotes de buts Winamax sont maintenant relevées (m.mine.ou, via OddsPapi) ;
-   - la fraîcheur se mesurait à l'heure du fichier (updatedAt), restée bloquée, et non à l'heure des cotes ;
-   - 60 % de réussite pour une cote d'au moins 1,50 est quasi impossible avec la marge de Winamax sur les buts
-     (1 ticket possible en 30 jours) : seuil du ticket ramené à 50 %, comme le Safe foot. Sélections toujours ≥ 60 %.
-   Priorité aux cotes Winamax réelles ; à défaut, cote moyenne du marché moins 5 %. Aucune mise réelle. */
-(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./paper-engine'));else root.SafeBut=factory(root.PaperTests);})(typeof globalThis!=='undefined'?globalThis:this,function(Paper){
+/* Remplacement de Safe but : BTTS Oui sur 2 à 3 rencontres distinctes.
+   Cotes Winamax collectées uniquement ; journal fictif, anciennes versions conservées. */
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./paper-engine'),require('./bet-results'));else root.SafeBut=factory(root.PaperTests,root.BetResults);})(typeof globalThis!=='undefined'?globalThis:this,function(Paper,Results){
 'use strict';
-var RULES={version:'safe-but-v2',sport:'football',mode:'paper',realMoneyEnabled:false,stake:100,currency:'EUR',
- minOdds:1.50,maxOdds:2.00,minLegProbability:.60,minTicketProbability:.50,maxLegs:3,maxPool:14,oddsHaircut:.05,quoteMaxAgeMinutes:240,
- markets:'plus / moins de X,5 buts (lignes entières et quarts exclus)',
- quotes:'cote de buts Winamax relevée (OddsPapi) ; à défaut, cote moyenne des bookmakers européens moins 5 %'};
-function recent(t,now){var age=now-Date.parse(t);return Number.isFinite(age)&&age>=0&&age<=RULES.quoteMaxAgeMinutes*60000;}
+var RULES={version:'btts-v1',sport:'football',mode:'paper',realMoneyEnabled:false,stake:100,currency:'EUR',
+ minOdds:1.50,maxOdds:2.00,minLegs:2,maxLegs:3,minLegProbability:.60,minTicketProbability:.50,quoteMaxAgeMinutes:60,
+ markets:'les deux équipes marquent : oui, sur au moins deux matchs distincts',quotes:'cotes Winamax France collectées, aucune estimation'};
 function clone(v){return JSON.parse(JSON.stringify(v));}
 function paris(t){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t));}
-// Probabilités hors marge par la méthode puissance : (1/oA)^k + (1/oB)^k = 1.
-function power(a,b){if(!(a>1&&b>1))return null;var lo=.3,hi=3;for(var i=0;i<80;i++){var k=(lo+hi)/2,s=Math.pow(1/a,k)+Math.pow(1/b,k);if(s>1)lo=k;else hi=k;}var k2=(lo+hi)/2;return [Math.pow(1/a,k2),Math.pow(1/b,k2)];}
-function line(l){return String(l).replace('.',',');}
-// Cotes de buts d'un match : Winamax réelles si récentes, sinon moyenne du marché moins 5 % si le fichier est récent.
-function quotes(m,doc,now){var own=m.mine&&m.mine.ou||{},out={};
- Object.keys(own).forEach(function(k){var q=own[k],at=q&&(q.asOf||m.mine.asOf);if(q&&Number(q.o)>1&&Number(q.u)>1&&recent(at,now))out[k]={o:Number(q.o),u:Number(q.u),asOf:at,winamax:true};});
- if(Object.keys(out).length||!recent(doc.updatedAt,now))return out;
- Object.keys(m.ou||{}).forEach(function(k){var q=m.ou[k];if(q&&Number(q.o)>1&&Number(q.u)>1)out[k]={o:Number(q.o),u:Number(q.u),asOf:doc.updatedAt,winamax:false};});
- return out;}
-function candidates(doc,now){var out=[],day=paris(now);
- (doc&&doc.matches||[]).forEach(function(m){
-  var t=Date.parse(m&&m.kickoff);if(!m||!m.mine||!Number.isFinite(t)||t<=now||paris(t)!==day||m.score)return;var ou=quotes(m,doc,now);
-  Object.keys(ou).forEach(function(k){var n=Number(k),q=ou[k];if(!Number.isFinite(n)||Math.abs(n%1-.5)>1e-9)return;
-   var p=power(q.o,q.u);if(!p)return;
-   [['O',q.o,p[0],'Plus de '+line(k)+' buts'],['U',q.u,p[1],'Moins de '+line(k)+' buts']].forEach(function(s){
-    var o=q.winamax?s[1]:Math.round(s[1]*(1-RULES.oddsHaircut)*100)/100;if(s[2]+1e-12<RULES.minLegProbability||!(o>1)||o>RULES.maxOdds+1e-9)return;
-    out.push({id:'football|'+m.id+'|'+m.kickoff+'|totals|'+s[0]+k,matchId:m.id,sport:'football',league:m.league,home:m.home,away:m.away,kickoff:m.kickoff,date:paris(t),
-     code:s[0]+k,label:s[3],o:o,marketOdds:s[1],p:s[2],bookKey:q.winamax?'winamax_fr':'market_avg',asOf:q.asOf,marketFamily:'totals',marketLine:n,est:!q.winamax,
-     quoteSource:q.winamax?'winamax':'market-average-minus-5pct',probabilityMethod:q.winamax?'winamax-power-devig':'market-power-devig'});});});});
- return out.sort(function(a,b){return b.p-a.p||a.o-b.o||a.id.localeCompare(b.id);}).slice(0,RULES.maxPool);}
-// Ticket le plus probable dans la fourchette, une sélection par match ; à égalité, moins de sélections.
+function recent(t,now){var age=now-Date.parse(t);return Number.isFinite(age)&&age>=0&&age<=RULES.quoteMaxAgeMinutes*60000;}
+function power(a,b){if(!Number.isFinite(a)||!Number.isFinite(b)||a<=1||b<=1)return null;var lo=0,hi=1;while(Math.pow(1/a,hi)+Math.pow(1/b,hi)>1&&hi<1024)hi*=2;for(var i=0;i<80;i++){var k=(lo+hi)/2;if(Math.pow(1/a,k)+Math.pow(1/b,k)>1)lo=k;else hi=k;}var k2=(lo+hi)/2;return [Math.pow(1/a,k2),Math.pow(1/b,k2)];}
+function documents(docs){return Array.isArray(docs)?docs:[docs];}
+function candidates(docs,now){var day=paris(now),by={};documents(docs).forEach(function(doc){
+ if(!doc||doc.status!=='ok'||doc.bookKey!=='winamax_fr')return;
+ (doc.matches||[]).forEach(function(m){var t=Date.parse(m&&m.kickoff);
+ if(!m||m.sport!=='football'||!m.id||!m.home||!m.away||m.home===m.away||m.bookKey!=='winamax_fr'||!Number.isFinite(t)||t<=now||paris(t)!==day||m.score||!recent(m.asOf,now))return;
+ (m.markets||[]).forEach(function(g){if(!g||g.family!=='btts'||g.bookKey!=='winamax_fr'||g.est||g.quoteSource==='user'||!recent(g.asOf,now)||!Array.isArray(g.outcomes)||g.outcomes.length!==2)return;
+ var y=g.outcomes.find(function(o){return o.side==='yes'&&o.code==='BTTS_Y';}),n=g.outcomes.find(function(o){return o.side==='no'&&o.code==='BTTS_N';});
+ if(!y||!n)return;var p=power(y.odds,n.odds);if(!p||p[0]+1e-12<RULES.minLegProbability||y.odds>RULES.maxOdds)return;
+ var l={id:'football|'+m.id+'|'+m.kickoff+'|btts|BTTS_Y',matchId:m.id,sport:'football',league:m.league,home:m.home,away:m.away,kickoff:m.kickoff,date:day,
+ code:'BTTS_Y',label:'Les deux équipes marquent : Oui',o:y.odds,p:p[0],bookKey:'winamax_fr',asOf:g.asOf,marketId:g.id,marketFamily:'btts',marketLine:null,est:false,quoteSource:'api',probabilityMethod:'winamax-power-devig'};
+ var key=m.home.trim().toLowerCase()+'|'+m.away.trim().toLowerCase()+'|'+t,prev=by[key];if(!prev||Date.parse(l.asOf)>Date.parse(prev.asOf))by[key]=l;
+ });});});return Object.keys(by).map(function(k){return by[k];}).sort(function(a,b){return b.p-a.p||a.id.localeCompare(b.id);});}
+function same(a,b){function k(s){return String(s||'').trim().toLowerCase();}return a.matchId===b.matchId||[k(a.home),k(a.away)].some(function(n){return [k(b.home),k(b.away)].includes(n);});}
 function choose(pool){var best=null;
- function consider(legs){var odds=legs.reduce(function(x,l){return x*l.o;},1),p=legs.reduce(function(x,l){return x*l.p;},1);
-  if(odds<RULES.minOdds-1e-9||odds>RULES.maxOdds+1e-9||p+1e-12<RULES.minTicketProbability)return;var sig=legs.map(function(l){return l.id;}).sort().join('|');
-  if(!best||p>best.p+1e-12||Math.abs(p-best.p)<1e-12&&(legs.length<best.legs.length||legs.length===best.legs.length&&sig<best.signature))best={legs:clone(legs),odds:odds,p:p,signature:sig};}
- (function walk(start,legs){if(legs.length)consider(legs);if(legs.length>=RULES.maxLegs)return;
-  for(var i=start;i<pool.length;i++){if(legs.some(function(l){return l.matchId===pool[i].matchId;}))continue;walk(i+1,legs.concat([pool[i]]));}})(0,[]);
- return best;}
-// « Frais » = au moins une cote de buts récente (Winamax, ou moyenne du marché d'un fichier récent).
-function fresh(doc,now){return !!(doc&&(doc.matches||[]).some(function(m){return m&&m.mine&&Object.keys(quotes(m,doc,now)).length;}));}
-function build(doc,now){var ok=fresh(doc,now),pool=ok?candidates(doc,now):[];return {day:paris(now),ticket:choose(pool),candidates:pool.length,fresh:ok,source:doc?{updatedAt:doc.updatedAt,source:doc.source,matches:(doc.matches||[]).length}:null};}
-function append(journal,built,now){var out=clone(journal||{records:[]});out.records=out.records||[];var id=RULES.version+'|'+built.day+'|football';
- if(!built.fresh||out.records.some(function(r){return r.id===id;}))return out;var t=built.ticket;
- if(t&&!t.legs.every(function(l){return Date.parse(l.kickoff)>now&&l.o>1;}))return out;
- out.records.push({id:id,day:built.day,method:'safe_but',sport:'football',version:RULES.version,createdAt:new Date(now).toISOString(),mode:'paper',unitStake:t?1:0,simulatedStake:t?RULES.stake:0,currency:'EUR',status:t?'pending':'no_pick',odds:t?Math.round(t.odds*1e4)/1e4:null,probability:t?t.p:null,legs:t?clone(t.legs):[],oddsNote:t&&t.legs.every(function(l){return !l.est;})?'cotes Winamax relevées, à vérifier avant de miser':'cote marché −5 %, à vérifier chez Winamax',executionVerified:false,sourceSnapshots:built.source?[clone(built.source)]:[]});
- return out;}
-return {rules:clone(RULES),power:power,candidates:candidates,choose:choose,build:build,append:append,settle:Paper.settle};
+ function walk(start,legs,odds,p){if(odds>RULES.maxOdds+1e-9||p+1e-12<RULES.minTicketProbability||best&&p<best.p-1e-12)return;
+ if(legs.length>=RULES.minLegs&&odds>=RULES.minOdds-1e-9){var sig=legs.map(function(l){return l.id;}).sort().join('|');if(!best||p>best.p+1e-12||Math.abs(p-best.p)<1e-12&&(legs.length<best.legs.length||legs.length===best.legs.length&&sig<best.signature))best={legs:clone(legs),odds:odds,p:p,signature:sig};}
+ if(legs.length===RULES.maxLegs)return;for(var i=start;i<pool.length;i++){var l=pool[i];if(l.code!=='BTTS_Y'||l.est||l.bookKey!=='winamax_fr'||l.p+1e-12<RULES.minLegProbability||legs.some(function(x){return same(x,l);}))continue;walk(i+1,legs.concat([l]),odds*l.o,p*l.p);}}
+ walk(0,[],1,1);return best;}
+function build(docs,now){var pool=candidates(docs,now),src=documents(docs).filter(Boolean);return {day:paris(now),ticket:choose(pool),candidates:pool.length,fresh:src.some(function(d){return d.status==='ok'&&d.bookKey==='winamax_fr'&&recent(d.updatedAt,now);})||pool.length>0,source:src.map(function(d){return {status:d.status,updatedAt:d.updatedAt,matches:(d.matches||[]).length};})};}
+function append(journal,built,now){var out=clone(journal||{records:[]});out.records=out.records||[];var id=RULES.version+'|'+built.day+'|football';if(!built.fresh||out.records.some(function(r){return r.id===id;}))return out;var t=built.ticket;
+ if(t&&(!Paper.verified(t,now)||t.legs.length<RULES.minLegs||t.legs.length>RULES.maxLegs||t.legs.some(function(l,i){return l.code!=='BTTS_Y'||t.legs.slice(0,i).some(function(x){return same(x,l);});})))return out;
+ out.records.push({id:id,day:built.day,method:'btts',sport:'football',version:RULES.version,createdAt:new Date(now).toISOString(),mode:'paper',unitStake:t?1:0,simulatedStake:t?RULES.stake:0,currency:'EUR',status:t?'pending':'no_pick',odds:t?t.odds:null,probability:t?t.p:null,legs:t?clone(t.legs):[],executionVerified:false,sourceSnapshots:clone(built.source||[])});return out;}
+function settle(record,matches,today){if(record.method!=='btts')return Paper.settle(record,matches,today);if((record.status!=='pending'&&record.resultSource!=='application-football-score')||record.day>today)return record;
+ var done=true,lost=false;record.legs.forEach(function(l){var m=Results.findMatch(l,matches);if(!m||!Paper.finalFor(m,record.day,today)||m.scoreScope&&m.scoreScope!=='regulation'){done=false;return;}var s=m.score.split('-').map(Number);if(l.code!=='BTTS_Y')done=false;else if(s[0]===0||s[1]===0)lost=true;});
+ if(!done&&!lost)return record;var status=lost?'lost':'won';if(status===record.status&&record.resultSource==='application-football-score')return record;return Object.assign({},record,{status:status,resultSource:'application-football-score'});}
+return {rules:clone(RULES),power:power,candidates:candidates,choose:choose,build:build,append:append,settle:settle};
 });

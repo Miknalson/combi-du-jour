@@ -54,7 +54,7 @@ function pendingLegs(sports,dayDoc,list,journals){
   built.slots.forEach(slot=>{const id=P.rules.version+'|'+built.day+'|'+slot.method+'|'+slot.sport;if(slot.ticket&&!journals.v2.records.some(r=>r.id===id))take(slot.ticket);});
   if(!journals.c23.records.some(r=>r.id===C.rules.version+'|'+today+'|football'))take(C.build(foot(f('football')),now).ticket);
   if(journals.mix&&!journals.mix.records.some(r=>r.id===AM.rules.version+'|'+today+'|football'))take(AM.build(foot(N.apply(goals,list,'football')),now).ticket);
-  if(!journals.but.records.some(r=>r.id===B.rules.version+'|'+today+'|football'))take(B.build(foot(N.apply(dayDoc,list,'football')),now).ticket);
+  if(!journals.but.records.some(r=>r.id===B.rules.version+'|'+today+'|football'))take(B.build([foot(N.apply(goals,list,'football')),foot(f('football'))],now).ticket);
   return legs;
 }
 
@@ -83,10 +83,11 @@ function pendingLegs(sports,dayDoc,list,journals){
     day.status='ok';if(!bad&&!unsure)break;
   }
   day.updatedAt=new Date(now).toISOString();
-  // Écrire les données filtrées pour Très sûr, Safe et Algo (Safe but filtre data/days lui-même).
+  // Écrire les données filtrées pour Très sûr, Safe et Algo (BTTS filtre les relevés football lui-même).
   const list=N.excluded(day);
   Safe.SPORTS.forEach(s=>{const doc=sports[s];if(!doc)return;const out=N.apply(doc,list,s);if(out!==doc&&out.newsExcluded)save(path.join(root,'data/sports',s+'.json'),out);});
   Object.keys(store.days).sort().slice(0,-N.rules.keepDays).forEach(d=>delete store.days[d]);
   save(storeFile,store);
   list.forEach(c=>console.log('  écarté : '+c.home+' – '+c.away+' · '+c.reason));
 })();
+

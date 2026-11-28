@@ -1,36 +1,46 @@
-const test=require('node:test'),assert=require('node:assert/strict'),B=require('../safe-but-engine');
-const now=Date.parse('2026-11-22T07:00:00Z'),updatedAt='2026-11-22T06:50:00Z';
-function m(id,ou,extra){return Object.assign({id,league:'SA',home:'H'+id,away:'A'+id,kickoff:'2026-11-22T15:00:00Z',o1:2,oX:3.4,o2:3.6,ou,mine:{bookKey:'winamax_fr',o1:1.9,oX:3.3,o2:3.5,ou:{}}},extra||{});}
-function doc(ms,at){return {updatedAt:at||updatedAt,source:'test',matches:ms};}
-test('Probabilités hors marge par la méthode puissance',()=>{const p=B.power(1.5,2.6);assert.ok(Math.abs(p[0]+p[1]-1)<1e-9);assert.ok(p[0]>.6);});
-test('Choisit le pari buts le plus probable entre 1,50 et 2,00 avec la cote marché moins 5 %',()=>{
- const b=B.build(doc([m('a',{'2.5':{o:1.58,u:2.45}}),m('b',{'2.5':{o:1.9,u:1.9}})]),now);
- assert.equal(b.ticket.legs.length,1);const l=b.ticket.legs[0];
- assert.equal(l.code,'O2.5');assert.equal(l.o,Math.round(1.58*.95*100)/100);assert.equal(l.label,'Plus de 2,5 buts');
- assert.ok(b.ticket.odds>=1.5&&b.ticket.odds<=2&&b.ticket.p>=.6);assert.equal(l.est,true);});
-test('Combine deux sélections quand une seule ne suffit pas, jamais deux fois le même match',()=>{
- const t=B.choose([{id:'a1',matchId:'a',o:1.3,p:.8},{id:'a2',matchId:'a',o:1.3,p:.8},{id:'b1',matchId:'b',o:1.25,p:.78}]);
- assert.deepEqual(t.legs.map(l=>l.id).sort(),['a1','b1']);assert.ok(Math.abs(t.odds-1.625)<1e-9);});
-test('Ignore lignes entières, matchs commencés, absents de Winamax, et cotes trop anciennes',()=>{
- assert.equal(B.build(doc([m('a',{'3.0':{o:1.58,u:2.45}})]),now).ticket,null);
- assert.equal(B.build(doc([m('a',{'2.5':{o:1.58,u:2.45}},{kickoff:'2026-11-22T06:00:00Z'})]),now).ticket,null);
- assert.equal(B.build(doc([m('a',{'2.5':{o:1.58,u:2.45}},{mine:null})]),now).ticket,null);
- assert.equal(B.build(doc([m('a',{'2.5':{o:1.58,u:2.45}})],'2026-11-21T07:00:00Z'),now).ticket,null);});
-test('Un seul ticket par jour, réglé avec le score final',()=>{
- const d=doc([m('a',{'2.5':{o:1.58,u:2.45}})]);let j=B.append({records:[]},B.build(d,now),now);j=B.append(j,B.build(d,now+60000),now+60000);
- assert.equal(j.records.length,1);assert.equal(j.records[0].method,'safe_but');assert.equal(j.records[0].simulatedStake,100);
- const won=B.settle(j.records[0],[Object.assign({},d.matches[0],{score:'2-1'})],'2026-11-23');assert.equal(won.status,'won');
- const lost=B.settle(j.records[0],[Object.assign({},d.matches[0],{score:'1-0'})],'2026-11-23');assert.equal(lost.status,'lost');});
-test('v2 : utilise les vraies cotes de buts Winamax même sans moyenne du marché ni fichier récent',()=>{
- const w=m('w',undefined,{mine:{bookKey:'winamax_fr',asOf:'2026-11-22T06:40:00Z',o1:1.9,oX:3.3,o2:3.5,ou:{'2.5':{o:1.25,u:3.6,asOf:'2026-11-22T06:40:00Z'}}}});
- const v=m('v',undefined,{mine:{bookKey:'winamax_fr',asOf:'2026-11-22T06:40:00Z',o1:1.9,oX:3.3,o2:3.5,ou:{'2.5':{o:1.3,u:3.2,asOf:'2026-11-22T06:40:00Z'}}}});
- const b=B.build(doc([w,v],'2026-11-20T07:00:00Z'),now);
- assert.equal(b.fresh,true);assert.ok(b.ticket);assert.equal(b.ticket.legs.length,2);
- b.ticket.legs.forEach(l=>{assert.equal(l.est,false);assert.equal(l.bookKey,'winamax_fr');});
- assert.ok(Math.abs(b.ticket.odds-1.625)<1e-9);assert.ok(b.ticket.p>=.5);
- const j=B.append({records:[]},b,now);assert.equal(j.records[0].version,'safe-but-v2');assert.match(j.records[0].oddsNote,/Winamax relevées/);});
-test('v2 : cotes Winamax trop anciennes = rien enregistré (on réessaie plus tard)',()=>{
- const w=m('w',undefined,{mine:{bookKey:'winamax_fr',ou:{'2.5':{o:1.25,u:3.6,asOf:'2026-11-21T06:40:00Z'}}}});
- const b=B.build(doc([w],'2026-11-21T07:00:00Z'),now);assert.equal(b.fresh,false);assert.equal(B.append({records:[]},b,now).records.length,0);});
-test('v2 : un ticket à 50–60 % est maintenant accepté, pas en dessous de 50 %',()=>{
- assert.ok(B.choose([{id:'a',matchId:'a',o:1.55,p:.55}]));assert.equal(B.choose([{id:'a',matchId:'a',o:1.55,p:.49}]),null);});
+const test=require('node:test'),assert=require('node:assert/strict'),B=require('../safe-but-engine'),fs=require('node:fs'),vm=require('node:vm');
+const now=Date.parse('2026-11-28T08:00Z'),at='2026-11-28T07:50Z';
+function match(id,extra={}){return Object.assign({id,sport:'football',league:'test',home:'Home '+id,away:'Away '+id,kickoff:'2026-11-28T15:00Z',bookKey:'winamax_fr',asOf:at,markets:[{id:'btts||None',family:'btts',bookKey:'winamax_fr',asOf:at,outcomes:[{side:'yes',code:'BTTS_Y',odds:1.3},{side:'no',code:'BTTS_N',odds:3.2}]}]},extra);}
+function doc(matches,extra={}){return Object.assign({status:'ok',sport:'football',bookKey:'winamax_fr',updatedAt:at,matches},extra);}
+function fixture(){return doc([match('a'),match('b')]);}
+test('BTTS Oui : deux rencontres minimum, jamais un pari seul ni un marché de buts',()=>{
+ assert.equal(B.build(doc([match('a')]),now).ticket,null);
+ const t=B.build(fixture(),now).ticket;assert.equal(t.legs.length,2);assert.ok(t.legs.every(l=>l.code==='BTTS_Y'&&l.est===false&&l.bookKey==='winamax_fr'));assert.ok(Math.abs(t.odds-1.69)<1e-9);
+ const other=match('tot');other.markets[0].family='totals';assert.equal(B.build(doc([other,match('b')]),now).ticket,null);
+});
+test('données réelles uniquement : refuse source différente, paire absente, estimation et cote périmée',()=>{
+ for(const mutate of [m=>{m.markets[0].outcomes.pop();},m=>{m.markets[0].est=true;},m=>{m.bookKey='other';},m=>{m.markets[0].bookKey='other';},m=>{m.markets[0].asOf='2026-11-27T07:50Z';},m=>{m.markets[0].asOf='2026-11-28T08:01Z';},m=>{m.markets[0].outcomes[0].odds='1.3';},m=>{m.kickoff='invalid';},m=>{m.kickoff='2026-11-28T07:00Z';}]){const m=match('a');mutate(m);assert.equal(B.build(doc([m,match('b')]),now).ticket,null);}
+});
+test('fusion des relevés sans doublons, ni deux paris sur la même équipe',()=>{
+ assert.equal(B.candidates([fixture(),fixture()],now).length,2);
+ assert.equal(B.build(doc([match('a'),match('b',{home:'Away a'})]),now).ticket,null);
+});
+test('sans paire admissible : no_pick, pas de relâchement des seuils',()=>{
+ const d=fixture();d.matches.forEach(m=>{m.markets[0].outcomes=[{side:'yes',code:'BTTS_Y',odds:1.8},{side:'no',code:'BTTS_N',odds:1.9}];});
+ assert.equal(B.build(d,now).ticket,null);
+ const j=B.append({records:[]},B.build(d,now),now);assert.equal(j.records[0].status,'no_pick');assert.equal(j.records[0].simulatedStake,0);
+});
+test('journal prospectif distinct : anciens tickets conservés, un seul nouveau ticket par jour',()=>{
+ const old={id:'safe-but-v2|2026-11-28|football',method:'safe_but',legs:[],status:'no_pick'};
+ const before={records:[old]},b=B.build(fixture(),now);let j=B.append(before,b,now);j=B.append(j,b,now+60000);
+ assert.deepEqual(before,{records:[old]});assert.deepEqual(j.records[0],old);assert.equal(j.records.length,2);assert.equal(j.records[1].method,'btts');assert.equal(j.records[1].version,'btts-v1');assert.equal(j.records[1].executionVerified,false);
+ const single=JSON.parse(JSON.stringify(b));single.ticket.legs.pop();assert.equal(B.append({records:[]},single,now).records.length,0);
+ assert.equal(B.append({records:[]},b,Date.parse('2026-11-28T16:00Z')).records.length,0);
+});
+test('règlement : les deux équipes marquent sur TOUS les matchs ; score final uniquement',()=>{
+ const r=B.append({records:[]},B.build(fixture(),now),now).records[0];
+ const scores=[match('a',{score:'1-1',completed:true}),match('b',{score:'2-1',completed:true})];
+ assert.equal(B.settle(r,scores,r.day).status,'won');scores[1].score='2-0';assert.equal(B.settle(r,scores,r.day).status,'lost');
+ scores[1].completed=false;scores[1].scoreStatus='live';assert.equal(B.settle(r,scores,r.day).status,'pending');
+ scores[1].completed=true;scores[1].scoreStatus='final';scores[1].scoreScope='including_extra_time';assert.equal(B.settle(r,scores,r.day).status,'pending');
+});
+test('anciens tickets plus/moins : règlement historique préservé',()=>{
+ const old={day:'2026-11-28',method:'safe_but',status:'pending',legs:[{matchId:'a',sport:'football',kickoff:'2026-11-28T15:00Z',code:'O2.5'}]};
+ assert.equal(B.settle(old,[match('a',{score:'2-1',completed:true})],old.day).status,'won');
+});
+test('affichage et workflow : nouvelle catégorie et bilan ancien séparés, vérification sur flux BTTS',()=>{
+ const ui=fs.readFileSync('today-tickets.js','utf8');new vm.Script(ui);
+ assert.match(ui,/btts:\{name:'BTTS Oui'/);assert.match(ui,/safe_but:\{name:'Safe but \(ancien\)'/);
+ assert.match(fs.readFileSync('scripts/safe_but.cjs','utf8'),/football-goals\.json/);
+ assert.match(fs.readFileSync('scripts/news_filter.cjs','utf8'),/B\.build\(\[foot\(N\.apply\(goals/);
+});
