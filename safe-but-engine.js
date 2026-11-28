@@ -1,9 +1,13 @@
 /* Remplacement de Safe but : BTTS Oui sur 2 à 3 rencontres distinctes.
-   Cotes Winamax collectées uniquement ; journal fictif, anciennes versions conservées. */
+   Cotes Winamax collectées uniquement ; journal fictif, anciennes versions conservées.
+   28/11/2026 soir : les premiers seuils (cote 1,50–2,00, ticket 50 %) ne pouvaient presque jamais sortir.
+   « Les deux marquent » dépasse rarement 65 % chez Winamax : deux matchs à 62 % donnent 38 % et une cote ~2,05.
+   Le samedi 28/11 (47 matchs BTTS relevés), aucun ticket possible. Nouveaux seuils : cote 1,50–2,30,
+   sélections 58 % mini, ticket 38 % mini. */
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./paper-engine'),require('./bet-results'));else root.SafeBut=factory(root.PaperTests,root.BetResults);})(typeof globalThis!=='undefined'?globalThis:this,function(Paper,Results){
 'use strict';
 var RULES={version:'btts-v1',sport:'football',mode:'paper',realMoneyEnabled:false,stake:100,currency:'EUR',
- minOdds:1.50,maxOdds:2.00,minLegs:2,maxLegs:3,minLegProbability:.60,minTicketProbability:.50,quoteMaxAgeMinutes:60,
+ minOdds:1.50,maxOdds:2.30,minLegs:2,maxLegs:3,minLegProbability:.58,minTicketProbability:.38,quoteMaxAgeMinutes:60,
  markets:'les deux équipes marquent : oui, sur au moins deux matchs distincts',quotes:'cotes Winamax France collectées, aucune estimation'};
 function clone(v){return JSON.parse(JSON.stringify(v));}
 function paris(t){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t));}
